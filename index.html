@@ -1,0 +1,1885 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nakala Digital | Company Profile</title>
+  <style>
+    :root {
+      --sky: #51b2d1;
+      --deep: #061a46;
+      --cyan: #00c8ff;
+      --ink: #1a1a1a;
+      --muted: #667487;
+      --soft: #f8fcff;
+      --line: #e5eef5;
+      --white: #ffffff;
+      --green: #20b486;
+      --amber: #f5a524;
+      --shadow: 0 18px 60px rgba(6, 26, 70, 0.11);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--soft);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(229, 238, 245, 0.85);
+      background: rgba(248, 252, 255, 0.9);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--deep);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark,
+    .hero-mark {
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(81, 178, 209, 0.45);
+      color: var(--deep);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(81, 178, 209, 0.18)),
+        var(--white);
+      box-shadow: 0 10px 28px rgba(81, 178, 209, 0.22);
+      font-weight: 900;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #425069;
+    }
+
+    .nav-links a {
+      transition: color 160ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--deep);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 750;
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--deep);
+      box-shadow: 0 14px 30px rgba(6, 26, 70, 0.24);
+    }
+
+    .btn-primary:hover {
+      background: #09235e;
+      border-color: rgba(0, 200, 255, 0.45);
+    }
+
+    .btn-soft {
+      color: var(--deep);
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(81, 178, 209, 0.35);
+    }
+
+    .section {
+      padding: 92px 0;
+      position: relative;
+    }
+
+    .section-tight {
+      padding: 72px 0;
+    }
+
+    .section-deep {
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(6, 26, 70, 0.98), rgba(9, 39, 97, 0.96)),
+        var(--deep);
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--sky);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-deep .eyebrow {
+      color: #8be4ff;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      color: var(--deep);
+      font-size: clamp(48px, 8vw, 98px);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      color: var(--deep);
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      color: var(--deep);
+      font-size: 20px;
+      line-height: 1.22;
+      letter-spacing: 0;
+    }
+
+    .section-deep h2,
+    .section-deep h3 {
+      color: var(--white);
+    }
+
+    .lead {
+      max-width: 720px;
+      color: #4e5d73;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .section-deep .lead,
+    .section-deep p,
+    .section-deep li {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .hero {
+      min-height: calc(100vh - 120px);
+      padding: 64px 0 42px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(120deg, rgba(248, 252, 255, 0.98) 0%, rgba(248, 252, 255, 0.78) 46%, rgba(81, 178, 209, 0.16) 100%),
+        radial-gradient(circle at 78% 24%, rgba(0, 200, 255, 0.16), transparent 34%),
+        var(--soft);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+      align-items: center;
+      gap: 54px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-mark {
+      width: 92px;
+      height: 92px;
+      margin-bottom: 24px;
+      border-radius: 18px;
+      font-size: 28px;
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin-bottom: 18px;
+      color: #314158;
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.24;
+      font-weight: 650;
+    }
+
+    .tagline {
+      margin-bottom: 34px;
+      color: #607087;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 500px;
+    }
+
+    .network-map {
+      position: absolute;
+      inset: 0;
+      border-radius: 28px;
+      background:
+        linear-gradient(90deg, rgba(6, 26, 70, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(6, 26, 70, 0.08) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(135deg, transparent 3%, black 28%, black 78%, transparent 100%);
+    }
+
+    .node {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 8px rgba(0, 200, 255, 0.13), 0 0 28px rgba(0, 200, 255, 0.38);
+    }
+
+    .node::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 8px;
+      width: 118px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(0, 200, 255, 0.7), transparent);
+      transform-origin: left center;
+    }
+
+    .node-a {
+      top: 80px;
+      right: 188px;
+    }
+
+    .node-a::after {
+      transform: rotate(38deg);
+    }
+
+    .node-b {
+      top: 228px;
+      right: 64px;
+    }
+
+    .node-b::after {
+      width: 150px;
+      transform: rotate(146deg);
+    }
+
+    .node-c {
+      bottom: 115px;
+      right: 210px;
+    }
+
+    .node-c::after {
+      width: 128px;
+      transform: rotate(-30deg);
+    }
+
+    .dashboard {
+      position: absolute;
+      right: 0;
+      bottom: 32px;
+      width: min(520px, 100%);
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+    }
+
+    .dashboard-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .status-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green);
+      font-size: 12px;
+    }
+
+    .status-dot::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding-top: 14px;
+    }
+
+    .metric {
+      min-height: 112px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(248, 252, 255, 0.9);
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 9px;
+      color: var(--deep);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .bars {
+      display: flex;
+      align-items: end;
+      gap: 8px;
+      height: 54px;
+      margin-top: 12px;
+    }
+
+    .bars i {
+      flex: 1;
+      min-width: 10px;
+      border-radius: 4px 4px 0 0;
+      background: linear-gradient(180deg, var(--cyan), var(--sky));
+    }
+
+    .bars i:nth-child(1) {
+      height: 42%;
+    }
+
+    .bars i:nth-child(2) {
+      height: 72%;
+    }
+
+    .bars i:nth-child(3) {
+      height: 56%;
+    }
+
+    .bars i:nth-child(4) {
+      height: 88%;
+    }
+
+    .bars i:nth-child(5) {
+      height: 64%;
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .workflow-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .workflow-strip i {
+      height: 9px;
+      border-radius: 999px;
+      background: var(--line);
+    }
+
+    .workflow-strip i:nth-child(1),
+    .workflow-strip i:nth-child(2),
+    .workflow-strip i:nth-child(3) {
+      background: var(--sky);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .section-deep .section-heading p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+      align-items: start;
+      gap: 42px;
+    }
+
+    .copy-stack p:last-child {
+      margin-bottom: 0;
+    }
+
+    .capability-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .card,
+    .glass-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 10px 28px rgba(6, 26, 70, 0.06);
+    }
+
+    .card {
+      padding: 24px;
+    }
+
+    .glass-card {
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(16px);
+    }
+
+    .section-deep .glass-card,
+    .section-deep .card {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: none;
+    }
+
+    .card p,
+    .glass-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .section-deep .card p,
+    .section-deep .glass-card p {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(81, 178, 209, 0.38);
+      border-radius: 8px;
+      color: var(--deep);
+      background: linear-gradient(145deg, rgba(81, 178, 209, 0.18), rgba(0, 200, 255, 0.08));
+      font-weight: 900;
+    }
+
+    .section-deep .icon {
+      color: var(--white);
+      border-color: rgba(139, 228, 255, 0.32);
+      background: rgba(139, 228, 255, 0.1);
+    }
+
+    .pyramid-wrap {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 56px;
+    }
+
+    .pyramid {
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+    }
+
+    .pyramid-level {
+      min-height: 86px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      color: var(--deep);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(81, 178, 209, 0.24));
+      box-shadow: 0 12px 36px rgba(81, 178, 209, 0.16);
+      text-align: center;
+      font-weight: 850;
+    }
+
+    .pyramid-level:nth-child(1) {
+      width: 46%;
+      border-radius: 8px 8px 4px 4px;
+    }
+
+    .pyramid-level:nth-child(2) {
+      width: 72%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 200, 255, 0.22));
+    }
+
+    .pyramid-level:nth-child(3) {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(6, 26, 70, 0.12));
+    }
+
+    .definition-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .definition {
+      padding-left: 18px;
+      border-left: 3px solid var(--sky);
+    }
+
+    .definition strong {
+      display: block;
+      color: var(--deep);
+      font-size: 18px;
+    }
+
+    .definition p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+      gap: 42px;
+    }
+
+    .mission-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mission-list li,
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .mission-list li::before,
+    .check-item::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 10px;
+      height: 10px;
+      margin-top: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(32, 180, 134, 0.12);
+    }
+
+    .grid-3,
+    .grid-2,
+    .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service-ecosystem {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .ecosystem-visual {
+      position: relative;
+      min-height: 470px;
+      display: grid;
+      place-items: center;
+    }
+
+    .ecosystem-ring {
+      position: absolute;
+      width: min(410px, 84vw);
+      aspect-ratio: 1;
+      border: 1px solid rgba(81, 178, 209, 0.26);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 24%, rgba(81, 178, 209, 0.08) 25% 26%, transparent 27%),
+        conic-gradient(from 30deg, rgba(81, 178, 209, 0.16), rgba(0, 200, 255, 0.08), rgba(32, 180, 134, 0.1), rgba(81, 178, 209, 0.16));
+      box-shadow: var(--shadow);
+    }
+
+    .ecosystem-core {
+      position: relative;
+      z-index: 2;
+      width: 172px;
+      min-height: 120px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      border-radius: 18px;
+      color: var(--white);
+      background: var(--deep);
+      text-align: center;
+      font-weight: 850;
+      box-shadow: 0 20px 50px rgba(6, 26, 70, 0.24);
+    }
+
+    .orbit {
+      position: absolute;
+      z-index: 3;
+      width: 144px;
+      min-height: 62px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      border: 1px solid rgba(81, 178, 209, 0.32);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+      color: var(--deep);
+      box-shadow: 0 12px 34px rgba(6, 26, 70, 0.1);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .orbit:nth-child(3) {
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .orbit:nth-child(4) {
+      top: 112px;
+      right: 12px;
+    }
+
+    .orbit:nth-child(5) {
+      bottom: 72px;
+      right: 28px;
+    }
+
+    .orbit:nth-child(6) {
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .orbit:nth-child(7) {
+      bottom: 72px;
+      left: 28px;
+    }
+
+    .orbit:nth-child(8) {
+      top: 112px;
+      left: 12px;
+    }
+
+    .capability-card {
+      min-height: 190px;
+    }
+
+    .solution-showcase {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
+      gap: 46px;
+      align-items: center;
+    }
+
+    .mockup-stack {
+      position: relative;
+      min-height: 420px;
+    }
+
+    .mockup {
+      position: absolute;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .mockup-main {
+      top: 24px;
+      right: 0;
+      width: 86%;
+      min-height: 320px;
+    }
+
+    .mockup-side {
+      left: 0;
+      bottom: 20px;
+      width: 48%;
+      min-height: 220px;
+    }
+
+    .mockup-head {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(248, 252, 255, 0.88);
+    }
+
+    .mockup-head i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sky);
+    }
+
+    .mockup-body {
+      padding: 16px;
+    }
+
+    .line {
+      height: 11px;
+      margin-bottom: 11px;
+      border-radius: 999px;
+      background: var(--line);
+    }
+
+    .line.short {
+      width: 56%;
+    }
+
+    .line.blue {
+      background: rgba(81, 178, 209, 0.42);
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .mini-tile {
+      min-height: 76px;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(81, 178, 209, 0.16), rgba(255, 255, 255, 0.84));
+      border: 1px solid var(--line);
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      counter-reset: model;
+    }
+
+    .model-card {
+      position: relative;
+      padding-top: 58px;
+    }
+
+    .model-card::before {
+      counter-increment: model;
+      content: "0" counter(model);
+      position: absolute;
+      top: 22px;
+      left: 24px;
+      color: var(--sky);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .model-card ul,
+    .portfolio-card ul {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .model-card li,
+    .portfolio-card li {
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .model-card li::before,
+    .portfolio-card li::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sky);
+      transform: translateY(-1px);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(120px, 1fr));
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 0 12px;
+      scrollbar-color: var(--sky) transparent;
+    }
+
+    .step {
+      min-height: 150px;
+      position: relative;
+      padding: 22px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .step::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 0 7px rgba(0, 200, 255, 0.1);
+    }
+
+    .step strong {
+      color: var(--deep);
+    }
+
+    .step span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .qa-flow {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(120px, 1fr));
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+
+    .qa-node {
+      min-height: 110px;
+      display: grid;
+      align-content: center;
+      justify-items: start;
+      gap: 8px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .qa-node span {
+      color: #8be4ff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .portfolio-card {
+      min-height: 260px;
+    }
+
+    .portfolio-card h3 {
+      min-height: 50px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .profile {
+      min-height: 330px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .portrait {
+      min-height: 190px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, rgba(81, 178, 209, 0.18), rgba(6, 26, 70, 0.1)),
+        var(--soft);
+    }
+
+    .portrait span {
+      display: grid;
+      place-items: center;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      color: var(--deep);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(81, 178, 209, 0.34);
+      font-size: 34px;
+      font-weight: 900;
+      box-shadow: 0 18px 46px rgba(81, 178, 209, 0.18);
+    }
+
+    .profile-body {
+      padding: 24px;
+    }
+
+    .profile-body p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .engagement {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+      gap: 44px;
+      align-items: start;
+    }
+
+    .roadmap {
+      display: grid;
+      gap: 12px;
+      counter-reset: road;
+    }
+
+    .road-item {
+      position: relative;
+      padding: 20px 20px 20px 64px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .road-item::before {
+      counter-increment: road;
+      content: counter(road);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--deep);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .road-item strong {
+      color: var(--deep);
+    }
+
+    .road-item p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .contact-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+      gap: 44px;
+      align-items: center;
+    }
+
+    .partner-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .partner {
+      padding: 11px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.07);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-card dl {
+      margin: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-card dt {
+      color: #8be4ff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .contact-card dd {
+      margin: 5px 0 0;
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 760;
+    }
+
+    .footer {
+      padding: 26px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.68);
+      background: var(--deep);
+      font-size: 14px;
+    }
+
+    .footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .split,
+      .section-heading,
+      .pyramid-wrap,
+      .mission-grid,
+      .service-ecosystem,
+      .solution-showcase,
+      .engagement,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .grid-3,
+      .grid-4,
+      .team-grid,
+      .model-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        min-height: 64px;
+        gap: 12px;
+      }
+
+      .topbar .btn {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-tight {
+        padding: 58px 0;
+      }
+
+      .hero {
+        padding: 36px 0 22px;
+      }
+
+      .hero-grid {
+        gap: 20px;
+      }
+
+      .hero-mark {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 14px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 12vw, 54px);
+      }
+
+      .hero-subtitle {
+        font-size: 19px;
+      }
+
+      .tagline {
+        margin-bottom: 22px;
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-actions .btn-soft {
+        display: none;
+      }
+
+      .hero-visual {
+        min-height: 175px;
+      }
+
+      .dashboard {
+        bottom: 0;
+        padding: 14px;
+        border-radius: 14px;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .team-grid,
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .dashboard-top {
+        padding-bottom: 10px;
+        font-size: 12px;
+      }
+
+      .metric {
+        min-height: 78px;
+        padding: 10px;
+      }
+
+      .metric span {
+        font-size: 10px;
+      }
+
+      .metric strong {
+        font-size: 24px;
+      }
+
+      .metric.wide {
+        display: none;
+      }
+
+      .bars {
+        height: 28px;
+      }
+
+      .workflow-strip {
+        grid-template-columns: repeat(5, minmax(28px, 1fr));
+      }
+
+      .pyramid-level:nth-child(1) {
+        width: 62%;
+      }
+
+      .pyramid-level:nth-child(2) {
+        width: 82%;
+      }
+
+      .ecosystem-visual {
+        min-height: 540px;
+      }
+
+      .ecosystem-ring {
+        width: min(340px, 86vw);
+      }
+
+      .orbit {
+        width: 132px;
+        font-size: 12px;
+      }
+
+      .mockup-stack {
+        min-height: 380px;
+      }
+
+      .mockup-main {
+        width: 100%;
+      }
+
+      .mockup-side {
+        width: 58%;
+      }
+
+      .mini-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand span:last-child {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#cover" aria-label="Nakala Digital home">
+          <span class="brand-mark">ND</span>
+          <span>Nakala Digital</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Let's Build Together</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="cover">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-mark">ND</div>
+            <p class="eyebrow">Company Profile</p>
+            <h1>NAKALA DIGITAL</h1>
+            <p class="hero-subtitle">Indonesia AI Technology, Software Development &amp; Digital Solutions Partner</p>
+            <p class="tagline">Professional Delivery. Meaningful Solutions. Impactful Growth.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Let's Build Together</a>
+              <a class="btn btn-soft" href="#services">Explore Services</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="AI network and enterprise dashboard illustration">
+            <div class="network-map"></div>
+            <span class="node node-a"></span>
+            <span class="node node-b"></span>
+            <span class="node node-c"></span>
+            <div class="dashboard">
+              <div class="dashboard-top">
+                <span>Enterprise Delivery Console</span>
+                <span class="status-dot">Live</span>
+              </div>
+              <div class="dashboard-grid">
+                <div class="metric">
+                  <span>AI Workflow</span>
+                  <strong>86%</strong>
+                  <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="metric">
+                  <span>Release Quality</span>
+                  <strong>QA+</strong>
+                  <div class="workflow-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="metric wide">
+                  <span>Delivery Pipeline</span>
+                  <div class="line blue"></div>
+                  <div class="line"></div>
+                  <div class="line short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="about">
+        <div class="container split">
+          <div class="copy-stack">
+            <p class="eyebrow">About Nakala Digital</p>
+            <h2>Local delivery partner for practical AI and digital transformation.</h2>
+            <p class="lead">Nakala Digital is an Indonesia-based technology company delivering AI technology, custom software development, and digital solutions.</p>
+            <p>Nakala Digital serves as a local delivery and client-facing technology partner for organizations across Indonesia, backed by the regional capabilities of Romulus Digital.</p>
+          </div>
+          <div class="capability-list">
+            <article class="glass-card">
+              <span class="icon">01</span>
+              <h3>Technology Consulting</h3>
+              <p>Business-first advisory for roadmap, architecture, digital maturity, and implementation direction.</p>
+            </article>
+            <article class="glass-card">
+              <span class="icon">02</span>
+              <h3>Software Development</h3>
+              <p>Custom platforms, portals, integrations, operational systems, and enterprise-ready web applications.</p>
+            </article>
+            <article class="glass-card">
+              <span class="icon">03</span>
+              <h3>AI Technology</h3>
+              <p>Generative AI applications, automation, analytics integration, and AI-enabled product development.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="philosophy">
+        <div class="container pyramid-wrap">
+          <div>
+            <p class="eyebrow">Our Brand Philosophy</p>
+            <h2>From disciplined delivery to measurable growth.</h2>
+            <p class="lead">The Nakala Digital approach connects strong execution habits with solutions that matter to users and organizations.</p>
+          </div>
+          <div class="pyramid" aria-label="Brand philosophy pyramid">
+            <div class="pyramid-level">Impactful Growth</div>
+            <div class="pyramid-level">Meaningful Solutions</div>
+            <div class="pyramid-level">Professional Delivery</div>
+          </div>
+        </div>
+        <div class="container definition-list" style="margin-top: 38px;">
+          <div class="definition">
+            <strong>Professional Delivery</strong>
+            <p>Clear process, governance, documentation, QA discipline, and execution accountability.</p>
+          </div>
+          <div class="definition">
+            <strong>Meaningful Solutions</strong>
+            <p>Solving real user and business problems through usable digital products.</p>
+          </div>
+          <div class="definition">
+            <strong>Impactful Growth</strong>
+            <p>Delivering measurable value, operational efficiency, and sustainable growth.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="vision">
+        <div class="container mission-grid">
+          <div>
+            <p class="eyebrow">Vision &amp; Mission</p>
+            <h2>Strategic partnership for organizational growth.</h2>
+            <p class="lead">To become a strategic technology partner that delivers professional, meaningful, and impactful digital solutions for organizational growth in Indonesia and the regional market.</p>
+          </div>
+          <ul class="mission-list">
+            <li>Deliver solutions with strong governance</li>
+            <li>Build meaningful digital products</li>
+            <li>Enable AI-powered automation</li>
+            <li>Create long-term partnerships</li>
+            <li>Grow digital maturity across organizations</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">Why Work With Us</p>
+            <h2>Enterprise-grade execution with a practical AI mindset.</h2>
+          </div>
+          <p>Nakala Digital combines local client proximity, regional capability, agile delivery, and an impact-driven approach to digital solutions.</p>
+        </div>
+        <div class="container grid-3">
+          <article class="glass-card">
+            <span class="icon">LR</span>
+            <h3>Local Delivery, Regional Reach</h3>
+            <p>Indonesia-based engagement supported by broader regional capability and partnership access.</p>
+          </article>
+          <article class="glass-card">
+            <span class="icon">AI</span>
+            <h3>AI-Enabled Mindset</h3>
+            <p>AI is treated as a practical capability for automation, decisions, and better product experiences.</p>
+          </article>
+          <article class="glass-card">
+            <span class="icon">QA</span>
+            <h3>Agile Delivery &amp; QA Governance</h3>
+            <p>Sprint-based delivery, review rituals, SIT/UAT discipline, and accountable handover.</p>
+          </article>
+          <article class="glass-card">
+            <span class="icon">UX</span>
+            <h3>Experience-Led Design</h3>
+            <p>Usable products shaped around business goals, stakeholder needs, and user behavior.</p>
+          </article>
+          <article class="glass-card">
+            <span class="icon">IG</span>
+            <h3>Practical &amp; Impact-Driven</h3>
+            <p>Every solution is oriented toward measurable value, operational efficiency, and adoption.</p>
+          </article>
+          <article class="glass-card">
+            <span class="icon">PN</span>
+            <h3>Strategic Partner Network</h3>
+            <p>Partnership access through Romulus Digital, NCS Group, CloudMile, and technology ecosystems.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-white" id="services">
+        <div class="container service-ecosystem">
+          <div>
+            <p class="eyebrow">Our Service Pillars</p>
+            <h2>Connected service architecture for transformation programs.</h2>
+            <p class="lead">From AI advisory to managed support, Nakala Digital organizes delivery around service pillars that can stand alone or work as one connected ecosystem.</p>
+          </div>
+          <div class="ecosystem-visual" aria-label="Service ecosystem diagram">
+            <div class="ecosystem-ring"></div>
+            <div class="ecosystem-core">Nakala Digital Ecosystem</div>
+            <div class="orbit">AI Technology &amp; GenAI</div>
+            <div class="orbit">Custom Software</div>
+            <div class="orbit">Web &amp; Portal</div>
+            <div class="orbit">Operational Systems</div>
+            <div class="orbit">QA Governance</div>
+            <div class="orbit">Managed Support &amp; D365</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-deep" id="ai">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">AI Technology Capabilities</p>
+            <h2>AI capabilities designed for real operating environments.</h2>
+          </div>
+          <p>Nakala Digital helps organizations identify, design, build, and govern AI-enabled products and automation workflows.</p>
+        </div>
+        <div class="container grid-4">
+          <article class="glass-card capability-card">
+            <span class="icon">G</span>
+            <h3>GenAI Applications</h3>
+            <p>Assistant, knowledge, and workflow applications tailored to organizational use cases.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">H</span>
+            <h3>AI Hiring &amp; Recruitment</h3>
+            <p>Screening, matching, interview support, and structured hiring intelligence.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">C</span>
+            <h3>AI Coaching Platforms</h3>
+            <p>Digital coaching experiences that support learning, growth, and guidance at scale.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">A</span>
+            <h3>Intelligent Automation</h3>
+            <p>Process automation with AI-assisted decisions, routing, and operational support.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">S</span>
+            <h3>AI SaaS Platform Development</h3>
+            <p>Product-grade AI platforms with scalable architecture and maintainable delivery.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">D</span>
+            <h3>Data &amp; Analytics Integration</h3>
+            <p>Connecting AI workflows with the data, reports, and systems that teams already use.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">P</span>
+            <h3>Microsoft Power Platform</h3>
+            <p>Power Apps, workflow automation, and business process enablement.</p>
+          </article>
+          <article class="glass-card capability-card">
+            <span class="icon">V</span>
+            <h3>Strategic AI Advisory</h3>
+            <p>AI readiness, use case prioritization, governance, and implementation roadmap.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-white" id="solutions">
+        <div class="container solution-showcase">
+          <div>
+            <p class="eyebrow">Software &amp; Digital Solutions</p>
+            <h2>Custom systems built around business operations.</h2>
+            <div class="grid-2">
+              <div class="check-item">Web Application Development</div>
+              <div class="check-item">HRIS / HSE Platforms</div>
+              <div class="check-item">School &amp; Education Portals</div>
+              <div class="check-item">API &amp; System Integration</div>
+            </div>
+          </div>
+          <div class="mockup-stack" aria-label="Dashboard mockups and architecture preview">
+            <div class="mockup mockup-main">
+              <div class="mockup-head"><i></i><i></i><i></i></div>
+              <div class="mockup-body">
+                <div class="line blue"></div>
+                <div class="line short"></div>
+                <div class="mini-grid">
+                  <div class="mini-tile"></div>
+                  <div class="mini-tile"></div>
+                  <div class="mini-tile"></div>
+                </div>
+                <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="mockup mockup-side">
+              <div class="mockup-head"><i></i><i></i><i></i></div>
+              <div class="mockup-body">
+                <div class="line blue"></div>
+                <div class="line"></div>
+                <div class="line short"></div>
+                <div class="workflow-strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="model">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">Product &amp; Solution Model</p>
+            <h2>Consult, build, run, and improve.</h2>
+          </div>
+          <p>A connected three-stage workflow keeps strategy, delivery, and support aligned from the first conversation to long-term digital growth.</p>
+        </div>
+        <div class="container model-grid">
+          <article class="card model-card">
+            <h3>Consulting &amp; Strategy</h3>
+            <ul>
+              <li>Technology Consulting</li>
+              <li>Experience-Led Design</li>
+              <li>AI Readiness Assessment</li>
+            </ul>
+          </article>
+          <article class="card model-card">
+            <h3>Build &amp; Develop</h3>
+            <ul>
+              <li>Custom Software Development</li>
+              <li>AI &amp; GenAI Platforms</li>
+              <li>Operational Systems</li>
+            </ul>
+          </article>
+          <article class="card model-card">
+            <h3>Run &amp; Support</h3>
+            <ul>
+              <li>QA Governance</li>
+              <li>Managed Support</li>
+              <li>D365 &amp; Power Platform</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-white" id="delivery">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">Experience-Led Agile Delivery</p>
+            <h2>Clear delivery rhythm from discovery to continuous improvement.</h2>
+          </div>
+          <p>Agile Scrum, sprint review, SIT/UAT, documentation, and BAST are built into the delivery operating model.</p>
+        </div>
+        <div class="container timeline" aria-label="Agile delivery timeline">
+          <div class="step"><strong>Discovery</strong><span>Understand context, users, goals, and constraints.</span></div>
+          <div class="step"><strong>Planning</strong><span>Scope priorities, milestones, governance, and risks.</span></div>
+          <div class="step"><strong>Design</strong><span>Create experience flows, architecture, and usable product direction.</span></div>
+          <div class="step"><strong>Development</strong><span>Build iteratively through sprint-based engineering delivery.</span></div>
+          <div class="step"><strong>Testing</strong><span>Execute QA, SIT, UAT, bug tracking, and release readiness.</span></div>
+          <div class="step"><strong>Deployment</strong><span>Release, handover, document, and align stakeholders.</span></div>
+          <div class="step"><strong>Improvement</strong><span>Measure value, maintain quality, and grow the solution.</span></div>
+        </div>
+      </section>
+
+      <section class="section section-deep" id="qa">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">QA Governance</p>
+            <h2>Delivery quality managed through visible checkpoints.</h2>
+          </div>
+          <p>Quality is treated as an operating habit, with structured review, test planning, and accountable release handover.</p>
+        </div>
+        <div class="container qa-flow" aria-label="Quality assurance workflow">
+          <div class="qa-node"><span>01</span><strong>Requirement Review</strong></div>
+          <div class="qa-node"><span>02</span><strong>Test Planning</strong></div>
+          <div class="qa-node"><span>03</span><strong>SIT/UAT</strong></div>
+          <div class="qa-node"><span>04</span><strong>Release Readiness</strong></div>
+          <div class="qa-node"><span>05</span><strong>Bug Tracking</strong></div>
+          <div class="qa-node"><span>06</span><strong>Handover</strong></div>
+          <div class="qa-node"><span>07</span><strong>Warranty Support</strong></div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="portfolio">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">Portfolio &amp; Case Studies</p>
+            <h2>Selected project experience across web, operations, HR, AI, and support.</h2>
+          </div>
+          <p>Each project can be framed around the challenge, solution, key features, and business impact for client-facing presentations.</p>
+        </div>
+        <div class="container grid-3">
+          <article class="card portfolio-card">
+            <h3>Website PPDB &amp; School Portal</h3>
+            <ul>
+              <li>Admissions journey and school information portal</li>
+              <li>Structured content, registration flow, and admin support</li>
+              <li>Improved access for students, parents, and school teams</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>Mahya HRMS Platform</h3>
+            <ul>
+              <li>HR operations and employee data management</li>
+              <li>Attendance, records, approvals, and HR reporting</li>
+              <li>Better operational visibility and HR efficiency</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>HSE Operations Platform</h3>
+            <ul>
+              <li>Health, safety, and environment workflow support</li>
+              <li>Incident tracking, forms, approvals, and dashboards</li>
+              <li>Stronger compliance and operational control</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>WargaKas</h3>
+            <ul>
+              <li>Community financial management and transparency</li>
+              <li>Cash flow recording, reporting, and member access</li>
+              <li>Clearer financial operations for local communities</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>AI Hiring Platform</h3>
+            <ul>
+              <li>Recruitment screening and candidate matching</li>
+              <li>AI-assisted evaluation, workflows, and recruitment insights</li>
+              <li>Faster hiring process with structured decision support</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>Digital Coaching / AI Coach Platform</h3>
+            <ul>
+              <li>Coaching journeys supported by intelligent guidance</li>
+              <li>Personalized prompts, progress tracking, and content flows</li>
+              <li>Scalable development support for users and organizations</li>
+            </ul>
+          </article>
+          <article class="card portfolio-card">
+            <h3>D365 Finance Support &amp; Managed Services</h3>
+            <ul>
+              <li>Operational support for finance and platform users</li>
+              <li>Issue handling, improvement requests, and managed continuity</li>
+              <li>Reliable support for enterprise finance operations</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="team">
+        <div class="container section-heading">
+          <div>
+            <p class="eyebrow">Our Core Team</p>
+            <h2>Leadership for strategy, technology, and delivery operations.</h2>
+          </div>
+          <p>Nakala Digital is led by a core team focused on professional delivery, technical excellence, and long-term client outcomes.</p>
+        </div>
+        <div class="container team-grid">
+          <article class="card profile">
+            <div class="portrait"><span>MZ</span></div>
+            <div class="profile-body">
+              <h3>Milzam Zihni</h3>
+              <p>Founder &amp; CEO</p>
+            </div>
+          </article>
+          <article class="card profile">
+            <div class="portrait"><span>RP</span></div>
+            <div class="profile-body">
+              <h3>Rinaldy Pasya</h3>
+              <p>Chief Technology Officer</p>
+            </div>
+          </article>
+          <article class="card profile">
+            <div class="portrait"><span>RK</span></div>
+            <div class="profile-body">
+              <h3>Raul Mahya Komaran</h3>
+              <p>Chief Operating Officer</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-white" id="engagement">
+        <div class="container engagement">
+          <div>
+            <p class="eyebrow">Our Engagement Model</p>
+            <h2>A client journey built for clarity and continuity.</h2>
+            <div class="roadmap">
+              <div class="road-item"><strong>Discovery &amp; Scoping</strong><p>Clarify needs, context, constraints, and success measures.</p></div>
+              <div class="road-item"><strong>Design &amp; Architecture</strong><p>Shape the product experience, system architecture, and delivery approach.</p></div>
+              <div class="road-item"><strong>Agile Development &amp; QA</strong><p>Build iteratively with transparent progress and controlled quality.</p></div>
+              <div class="road-item"><strong>Handover, Support &amp; Growth</strong><p>Release with documentation, support readiness, and improvement planning.</p></div>
+            </div>
+          </div>
+          <div>
+            <p class="lead">Engagement Types</p>
+            <div class="grid-2">
+              <div class="check-item">Fixed Scope Project</div>
+              <div class="check-item">Retainer Support</div>
+              <div class="check-item">Managed Services</div>
+              <div class="check-item">Resource as a Service (RaaS)</div>
+              <div class="check-item">Strategic Advisory</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-deep" id="contact">
+        <div class="container contact-band">
+          <div>
+            <p class="eyebrow">Partnership &amp; Contact</p>
+            <h2>Let's Build The Future Together</h2>
+            <p class="lead">Nakala Digital is ready to be your trusted Indonesia-based technology partner, from first conversation to long-term digital growth.</p>
+            <div class="partner-row" aria-label="Partners">
+              <span class="partner">Romulus Digital</span>
+              <span class="partner">NCS Group</span>
+              <span class="partner">CloudMile</span>
+            </div>
+          </div>
+          <aside class="contact-card">
+            <dl>
+              <div>
+                <dt>Location</dt>
+                <dd>Bandung, Indonesia</dd>
+              </div>
+              <div>
+                <dt>Contact Person</dt>
+                <dd>Milzam Zihni, Founder &amp; CEO</dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd>+62 822 9570 6304</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>Nakala Digital</span>
+        <span>Professional Delivery. Meaningful Solutions. Impactful Growth.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
