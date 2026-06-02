@@ -30,6 +30,15 @@ class ExampleTest extends TestCase
             ->assertRedirect(route('home', ['locale' => config('site.default_locale')], false));
     }
 
+    public function test_secondary_pages_use_shared_navigation_shell(): void
+    {
+        $this->get(route('contact', ['locale' => 'id'], false))
+            ->assertOk()
+            ->assertSee('05 KONTAK', false)
+            ->assertSee('mobile-nav', false)
+            ->assertDontSee('class="site-header"', false);
+    }
+
     public function test_robots_and_sitemap_are_available(): void
     {
         $this->get('/robots.txt')

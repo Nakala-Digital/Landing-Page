@@ -22,8 +22,9 @@
     <meta name="twitter:title" content="{{ $page['title'] }}">
     <meta name="twitter:description" content="{{ $page['description'] }}">
     <link rel="icon" type="image/svg+xml" href="{{ asset($site['brand']['logo']) }}">
-    <link rel="alternate icon" href="{{ asset($site['brand']['logo_png']) }}">
+    <link rel="alternate icon" type="image/png" href="{{ asset($site['brand']['logo_png']) }}">
 
+    @include('partials.stitch-theme')
     <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 
     @php
@@ -44,66 +45,13 @@
     <script type="application/ld+json">{!! json_encode($organizationSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
     @stack('schema')
 </head>
-<body>
-    <header class="site-header">
-        <div class="container nav">
-            <a class="brand" href="{{ route('home', ['locale' => $locale]) }}" aria-label="{{ $site['brand']['name'] }} home">
-                @include('partials.logo')
-            </a>
-            <div class="nav-shell">
-                <nav class="nav-links" aria-label="Main navigation">
-                    @foreach ($site['navigation'] as $item)
-                        <a href="{{ route($item['route'], ['locale' => $locale]) }}" @class(['active' => request()->routeIs($item['route'])])>
-                            @include('partials.icon', ['name' => $item['icon']])
-                            <span>{{ $item['labels'][$locale] }}</span>
-                        </a>
-                    @endforeach
-                </nav>
-            </div>
-            <div class="nav-actions">
-                <div class="language-switch" aria-label="{{ $content['ui']['language'] }}">
-                    @foreach ($site['locales'] as $code => $language)
-                        <a href="{{ route($page['route'], ['locale' => $code]) }}" @class(['active' => $locale === $code])>{{ $language['label'] }}</a>
-                    @endforeach
-                </div>
-                <a class="nav-cta" href="{{ route('contact', ['locale' => $locale]) }}">
-                    @include('partials.icon', ['name' => 'phone'])
-                    <span>{{ $content['ui']['contact'] }}</span>
-                </a>
-                <details class="mobile-menu">
-                    <summary aria-label="Open navigation menu">
-                        @include('partials.icon', ['name' => 'menu'])
-                    </summary>
-                    <div class="mobile-panel">
-                        <nav class="mobile-links" aria-label="Mobile navigation">
-                            @foreach ($site['navigation'] as $item)
-                                <a href="{{ route($item['route'], ['locale' => $locale]) }}" @class(['active' => request()->routeIs($item['route'])])>
-                                    @include('partials.icon', ['name' => $item['icon']])
-                                    <span>{{ $item['labels'][$locale] }}</span>
-                                </a>
-                            @endforeach
-                        </nav>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </header>
+<body class="bg-background text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md overflow-x-hidden">
+    @include('partials.stitch-header')
 
-    <main>
+    <main class="pt-20">
         @yield('content')
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <strong>{{ $site['brand']['name'] }}</strong>
-                <p>{{ $content['brand']['tagline'] }}</p>
-            </div>
-            <div>
-                <span>{{ $site['brand']['location'] }}</span>
-                <a href="tel:+6282295706304">{{ $site['brand']['phone'] }}</a>
-            </div>
-        </div>
-    </footer>
+    @include('partials.stitch-footer')
 </body>
 </html>
