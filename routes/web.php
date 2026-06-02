@@ -15,7 +15,10 @@ $renderPage = static function (string $locale, string $key) {
         'pageKey' => $key,
         'page' => array_merge($page, $page['meta'][$locale]),
         'site' => config('site'),
-        'content' => config("site.content.$locale"),
+        'content' => array_replace_recursive(
+            config("site.content.$locale"),
+            config("site_details.$locale", []),
+        ),
     ]);
 };
 

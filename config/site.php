@@ -13,6 +13,8 @@ return [
         'logo' => 'assets/logo.svg',
         'logo_png' => 'assets/logo.png',
         'phone' => '+62 822 9570 6304',
+        'email' => 'milzam.zihni@romulus.digital',
+        'website' => 'romulus.digital',
         'location' => 'Bandung, Indonesia',
         'contact_person' => 'Milzam Zihni',
         'contact_role' => 'Founder & CEO',

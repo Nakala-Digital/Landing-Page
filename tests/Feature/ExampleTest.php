@@ -36,7 +36,22 @@ class ExampleTest extends TestCase
             ->assertOk()
             ->assertSee('05 KONTAK', false)
             ->assertSee('mobile-nav', false)
+            ->assertSee('src="'.asset('assets/logo.png').'"', false)
+            ->assertSee('rel="icon" type="image/svg+xml" href="'.asset('assets/logo.svg').'"', false)
             ->assertDontSee('class="site-header"', false);
+    }
+
+    public function test_pdf_capability_details_are_rendered(): void
+    {
+        $this->get(route('portfolio', ['locale' => 'id'], false))
+            ->assertOk()
+            ->assertSee('Waktu CV screening dapat berkurang hingga 80%', false)
+            ->assertSee('D365 Finance module support', false);
+
+        $this->get(route('contact', ['locale' => 'en'], false))
+            ->assertOk()
+            ->assertSee('milzam.zihni@romulus.digital', false)
+            ->assertSee('Output: project brief, scope document, and solution proposal.', false);
     }
 
     public function test_robots_and_sitemap_are_available(): void

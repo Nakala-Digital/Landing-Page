@@ -25,7 +25,6 @@
     <link rel="alternate icon" type="image/png" href="{{ asset($site['brand']['logo_png']) }}">
 
     @include('partials.stitch-theme')
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
 
     @php
         $organizationSchema = [
