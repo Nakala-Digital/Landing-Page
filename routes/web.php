@@ -37,10 +37,12 @@ Route::prefix('{locale}')
     });
 
 Route::get('/robots.txt', function () {
+    $publicUrl = rtrim(config('site.public_url'), '/');
+
     $body = implode("\n", [
         'User-agent: *',
         'Allow: /',
-        'Sitemap: '.url('/sitemap.xml'),
+        'Sitemap: '.$publicUrl.'/sitemap.xml',
         '',
     ]);
 

@@ -142,39 +142,46 @@
         </div>
     </section>
 
-    <section class="px-margin-mobile md:px-margin-desktop py-xl relative overflow-hidden" id="service-pillars">
-        <div class="mb-lg inline-block bg-secondary-fixed text-on-secondary-fixed px-sm py-1 font-label-sticker text-headline-md rotate-label">
-            06 SERVICE PILLARS
-        </div>
-        <div class="relative w-full min-h-[620px] md:min-h-[520px] flex items-center justify-center halftone-bg border-4 border-outline-variant p-md">
-            <div class="relative w-full h-full max-w-4xl min-h-[560px] md:min-h-[460px] flex items-center justify-center">
-                <div class="z-10 bg-primary text-on-primary font-display text-headline-md p-lg rounded-full border-4 border-background hard-shadow-secondary flex flex-col items-center justify-center text-center">
-                    <span class="material-symbols-outlined text-display">hub</span>
-                    CORE_OS
+    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface border-y-4 border-surface-variant" id="services-overview">
+        <div class="grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-xl items-start">
+            <div class="lg:sticky lg:top-28">
+                <div class="mb-md inline-flex items-center gap-xs bg-secondary-fixed text-on-secondary-fixed px-sm py-1 border-2 border-on-secondary-fixed font-label-sticker text-headline-md rotate-label">
+                    <span class="material-symbols-outlined text-[28px]">design_services</span>
+                    <span>06 SERVICE PILLARS</span>
                 </div>
-                <svg class="absolute inset-0 w-full h-full pointer-events-none hidden md:block" viewBox="0 0 1000 600">
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="200" y1="300" y2="100"></line>
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="800" y1="300" y2="100"></line>
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="150" y1="300" y2="450"></line>
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="850" y1="300" y2="450"></line>
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="500" y1="300" y2="550"></line>
-                    <line stroke="#87929b" stroke-dasharray="8,8" stroke-width="4" x1="500" x2="500" y1="300" y2="50"></line>
-                </svg>
-                @foreach ($content['service_pillars'] as $pillar)
+                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white mb-md">
+                    {{ $content['services']['pillars_title'] }}
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                    {{ $content['services']['lead'] }}
+                </p>
+                <a class="inline-flex items-center gap-xs bg-primary text-on-primary border-2 border-on-primary px-md py-sm font-label-sticker text-label-sticker hover:-translate-y-1 transition-transform" href="{{ route('services', ['locale' => $locale]) }}">
+                    <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+                    <span>{{ $locale === 'id' ? 'LIHAT DETAIL LAYANAN' : 'VIEW SERVICE DETAILS' }}</span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+                @foreach ($content['service_pillar_details'] as $pillar)
                     @php
-                        $positions = [
-                            'top-[10%] left-[8%] md:left-[20%] -rotate-2 border-primary-fixed hard-shadow-primary text-primary-fixed',
-                            'top-[6%] right-[8%] md:right-[20%] rotate-3 border-secondary-fixed hard-shadow-secondary text-secondary-fixed',
-                            'bottom-[24%] left-[4%] md:left-[10%] -rotate-6 border-tertiary-container hard-shadow-tertiary text-tertiary-container',
-                            'bottom-[24%] right-[4%] md:right-[10%] rotate-2 border-outline hard-shadow-primary text-outline',
-                            'bottom-[6%] left-[36%] md:left-[45%] -rotate-1 border-primary hard-shadow-secondary text-primary',
-                            'top-[44%] md:top-[6%] left-[2%] md:left-[45%] rotate-1 border-error hard-shadow-tertiary text-error',
+                        $icons = ['psychology', 'code_blocks', 'language', 'settings_suggest', 'verified_user', 'support_agent'];
+                        $accents = [
+                            'border-primary hard-shadow-primary text-primary',
+                            'border-secondary-fixed hard-shadow-secondary text-secondary-fixed',
+                            'border-tertiary hard-shadow-tertiary text-tertiary',
+                            'border-primary-fixed hard-shadow-primary text-primary-fixed',
+                            'border-outline hard-shadow-secondary text-outline',
+                            'border-primary-container hard-shadow-primary text-primary',
                         ];
                     @endphp
-                    <div class="absolute p-xs bg-surface-container border-2 {{ $positions[$loop->index] }}">
-                        <span class="bg-background text-on-surface px-2 py-0.5 font-label-code block mb-1">{{ strtoupper(str_replace([' ', '&', '/'], ['_', '', '_'], $pillar)) }}</span>
-                        <span class="material-symbols-outlined">{{ ['bolt', 'terminal', 'language', 'settings_suggest', 'verified', 'support_agent'][$loop->index] }}</span>
-                    </div>
+                    <article class="min-h-[220px] bg-background border-4 p-md flex flex-col {{ $accents[$loop->index] }}">
+                        <div class="flex items-start justify-between gap-sm mb-md">
+                            <span class="material-symbols-outlined text-[42px] leading-none">{{ $icons[$loop->index] }}</span>
+                            <span class="font-label-code text-label-code text-on-surface-variant">0{{ $loop->iteration }}</span>
+                        </div>
+                        <h3 class="font-display text-headline-md text-white mb-sm">{{ $pillar['title'] }}</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mt-auto">{{ $pillar['body'] }}</p>
+                    </article>
                 @endforeach
             </div>
         </div>

@@ -2,6 +2,7 @@
 
 return [
     'default_locale' => 'id',
+    'public_url' => env('SITE_PUBLIC_URL', 'https://nakala.digital'),
 
     'locales' => [
         'id' => ['label' => 'ID', 'name' => 'Indonesia'],
@@ -14,7 +15,7 @@ return [
         'logo_png' => 'assets/logo.png',
         'phone' => '+62 822 9570 6304',
         'email' => 'milzam.zihni@romulus.digital',
-        'website' => 'romulus.digital',
+        'website' => 'nakala.digital',
         'location' => 'Bandung, Indonesia',
         'contact_person' => 'Milzam Zihni',
         'contact_role' => 'Founder & CEO',
@@ -58,12 +59,12 @@ return [
                 'id' => [
                     'title' => 'Tentang Nakala Digital | Mitra Delivery Digital Profesional',
                     'description' => 'Kenali Nakala Digital, filosofi brand, visi, misi, dan perannya sebagai mitra teknologi lokal dengan dukungan kapabilitas regional.',
-                    'keywords' => 'tentang Nakala Digital, konsultan teknologi Indonesia, mitra digital',
+                    'keywords' => 'tentang Nakala Digital, konsultan teknologi Indonesia, mitra digital, layanan AI Indonesia, pengembangan perangkat lunak, solusi digital, GenAI Indonesia, pengembangan web, portal sekolah, HRMS, layanan D365, QA governance, otomatisasi cerdas, transformasi digital, konsultan TI Bandung, software house Indonesia, pengembangan aplikasi kustom, integrasi API, layanan konsultasi teknologi, implementasi D365, dukungan terkelola',
                 ],
                 'en' => [
                     'title' => 'About Nakala Digital | Professional Digital Delivery Partner',
                     'description' => 'Learn about Nakala Digital, its brand philosophy, vision, mission, and role as a local technology delivery partner.',
-                    'keywords' => 'about Nakala Digital, technology consulting Indonesia, digital delivery partner',
+                    'keywords' => 'about Nakala Digital, technology consulting Indonesia, digital delivery partner, AI services Indonesia, software development Indonesia, digital solutions, GenAI services, web portal development, HRMS, D365 managed services, QA governance, intelligent automation, digital transformation partner, Bandung software company, custom software development, API integration, technology consulting, enterprise web applications, managed support, product engineering',
                 ],
             ],
         ],
