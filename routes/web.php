@@ -1,7 +1,20 @@
 <?php
 
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Illuminate\Cookie\Middleware\EncryptCookies;
+use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Illuminate\Session\Middleware\StartSession;
+
+$crawlerSafeMiddleware = [
+    AddQueuedCookiesToResponse::class,
+    EncryptCookies::class,
+    ShareErrorsFromSession::class,
+    StartSession::class,
+    ValidateCsrfToken::class,
+];
 
 $renderPage = static function (string $locale, string $key) {
     abort_unless(array_key_exists($locale, config('site.locales')), 404);
@@ -46,8 +59,11 @@ Route::get('/robots.txt', function () {
         '',
     ]);
 
-    return Response::make($body, 200, ['Content-Type' => 'text/plain']);
-})->name('robots');
+    return Response::make($body, 200, [
+        'Content-Type' => 'text/plain; charset=utf-8',
+        'Cache-Control' => 'public, max-age=3600',
+    ]);
+})->withoutMiddleware($crawlerSafeMiddleware)->name('robots');
 
 Route::get('/sitemap.xml', function () {
     return response()
@@ -56,5 +72,6 @@ Route::get('/sitemap.xml', function () {
             'locales' => array_keys(config('site.locales')),
             'lastmod' => now()->toAtomString(),
         ], 200)
-        ->header('Content-Type', 'application/xml');
-})->name('sitemap');
+        ->header('Content-Type', 'application/xml; charset=UTF-8')
+        ->header('Cache-Control', 'public, max-age=3600');
+})->withoutMiddleware($crawlerSafeMiddleware)->name('sitemap');

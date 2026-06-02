@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nakala.digital/sitemap.xml
