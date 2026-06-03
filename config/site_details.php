@@ -22,8 +22,8 @@ return [
         'service_pillar_details' => [
             ['title' => 'AI Technology & GenAI', 'body' => 'Intelligent automation, GenAI applications, AI-powered recruitment, coaching, dan decision support system.'],
             ['title' => 'Custom Software Development', 'body' => 'Web apps, mobile apps, SaaS platforms, dan enterprise systems yang dibangun sesuai kebutuhan.'],
+            ['title' => 'Technology Consulting', 'body' => 'Business and technology alignment, solution roadmap, requirements, governance, dan strategic advisory.'],
             ['title' => 'Web & Portal Development', 'body' => 'Corporate website, CMS, e-commerce, public-facing portal, dan platform edukasi.'],
-            ['title' => 'Operational Systems', 'body' => 'HRMS, HSE, cash management, dan platform operasional khusus industri.'],
             ['title' => 'QA Governance & Testing', 'body' => 'End-to-end QA, SIT/UAT, test planning, release governance, dan dokumentasi acceptance.'],
             ['title' => 'Managed Support & D365', 'body' => 'Post-launch support, Microsoft D365 Finance assistance, Power Platform, dan managed services.'],
         ],
@@ -42,6 +42,20 @@ return [
             ['title' => 'HRIS / HSE / Operational Platforms', 'body' => 'Platform HR, safety, dan operations management untuk lingkungan bisnis Indonesia.'],
             ['title' => 'School & Education Portals', 'body' => 'PPDB system, academic portal, dan digital school platform untuk yayasan serta institusi pendidikan.'],
             ['title' => 'API & System Integration', 'body' => 'Integrasi secure API untuk menghubungkan tools, third-party services, dan legacy systems.'],
+        ],
+        'solution_highlights' => [
+            'Customer Engagement & Customer Profiling',
+            'Omnichannel Commerce: POS, WMS, OMS, Loyalty, and SAP Integration',
+            'LMS & Parent Experience with AI Support',
+            'MoneyKu - Accounting and Small Business Management',
+            'VMS - Vendor Management System',
+            'OSMS - Operational Security Management System',
+            'Digital Cooperative and Local Government Solutions',
+            'BGN / SPPG Operational Support',
+            'HRMS and HSE Platforms',
+            'Web Portal and WargaKas',
+            'AI Hiring and Recruitment',
+            'Digital Coaching and AI Coach Platform',
         ],
         'model_details' => [
             [
@@ -197,8 +211,8 @@ return [
         'service_pillar_details' => [
             ['title' => 'AI Technology & GenAI', 'body' => 'Intelligent automation, GenAI applications, AI-powered recruitment, coaching, and decision support systems.'],
             ['title' => 'Custom Software Development', 'body' => 'Web apps, mobile apps, SaaS platforms, and enterprise systems built to specification.'],
+            ['title' => 'Technology Consulting', 'body' => 'Business and technology alignment, solution roadmaps, requirements, governance, and strategic advisory.'],
             ['title' => 'Web & Portal Development', 'body' => 'Corporate websites, CMS, e-commerce, public-facing portals, and education platforms.'],
-            ['title' => 'Operational Systems', 'body' => 'HRMS, HSE, cash management, and industry-specific operational platforms.'],
             ['title' => 'QA Governance & Testing', 'body' => 'End-to-end QA, SIT/UAT, test planning, release governance, and acceptance documentation.'],
             ['title' => 'Managed Support & D365', 'body' => 'Post-launch support, Microsoft D365 Finance assistance, Power Platform, and managed services.'],
         ],
@@ -217,6 +231,20 @@ return [
             ['title' => 'HRIS / HSE / Operational Platforms', 'body' => 'Custom HR, safety, and operations management platforms for Indonesian business environments.'],
             ['title' => 'School & Education Portals', 'body' => 'PPDB systems, academic portals, and digital school platforms for foundations and educational institutions.'],
             ['title' => 'API & System Integration', 'body' => 'Secure API integration layers connecting existing tools, third-party services, and legacy systems.'],
+        ],
+        'solution_highlights' => [
+            'Customer Engagement & Customer Profiling',
+            'Omnichannel Commerce: POS, WMS, OMS, Loyalty, and SAP Integration',
+            'LMS & Parent Experience with AI Support',
+            'MoneyKu - Accounting and Small Business Management',
+            'VMS - Vendor Management System',
+            'OSMS - Operational Security Management System',
+            'Digital Cooperative and Local Government Solutions',
+            'BGN / SPPG Operational Support',
+            'HRMS and HSE Platforms',
+            'Web Portal and WargaKas',
+            'AI Hiring and Recruitment',
+            'Digital Coaching and AI Coach Platform',
         ],
         'model_details' => [
             [

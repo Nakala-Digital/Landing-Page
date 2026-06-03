@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="dark" lang="{{ $locale }}">
+<html lang="{{ $locale }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +34,7 @@
     @include('partials.stitch-theme')
     @include('partials.seo-schema')
 </head>
-<body class="bg-background text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md overflow-x-hidden">
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden">
     @include('partials.stitch-header')
 
     @yield('content')

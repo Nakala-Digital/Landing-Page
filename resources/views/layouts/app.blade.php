@@ -36,7 +36,7 @@
     @include('partials.seo-schema')
     @stack('schema')
 </head>
-<body class="bg-background text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md overflow-x-hidden">
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary font-body-md overflow-x-hidden">
     @include('partials.stitch-header')
 
     <main class="pt-20">

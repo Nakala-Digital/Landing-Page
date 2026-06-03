@@ -1,21 +1,45 @@
-<footer class="w-full relative overflow-hidden bg-surface-container-lowest border-t-4 border-surface-variant flex flex-col items-center p-margin-mobile pb-xl text-center space-y-md">
-    <h2 class="font-display text-headline-md text-primary">NAKALA DIGITAL</h2>
-    <div class="flex gap-lg flex-wrap justify-center font-label-code text-label-code text-outline">
-        <a class="hover:text-secondary-fixed-dim transition-all" href="{{ route('about', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'TENTANG' : 'ABOUT' }}</a>
-        <a class="hover:text-secondary-fixed-dim transition-all" href="{{ route('services', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'LAYANAN' : 'SERVICES' }}</a>
-        <a class="hover:text-secondary-fixed-dim transition-all" href="{{ route('portfolio', ['locale' => $locale]) }}">PORTFOLIO</a>
-        <a class="hover:text-secondary-fixed-dim transition-all" href="{{ route('contact', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'KONTAK' : 'CONTACT' }}</a>
+<footer class="w-full bg-secondary-fixed text-on-secondary-fixed">
+    <div class="px-margin-mobile md:px-margin-desktop py-xl grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-xl">
+        <div>
+            <a class="inline-flex h-14 w-52 bg-white rounded-card p-2 mb-md" href="{{ route('home', ['locale' => $locale]) }}" aria-label="{{ $site['brand']['name'] }} home">
+                @include('partials.logo')
+            </a>
+            <p class="font-body-lg text-body-lg text-white/80 max-w-2xl mb-md">
+                {{ $content['brand']['tagline'] }}
+            </p>
+            <p class="font-body-md text-body-md text-white/65 max-w-2xl">
+                {{ $locale === 'id'
+                    ? 'AI technology, software development, dan digital solutions partner berbasis Indonesia dengan dukungan strategic partner Romulus Digital.'
+                    : 'Indonesia-based AI technology, software development, and digital solutions partner backed by Romulus Digital strategic partnership.' }}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-lg">
+            <div>
+                <h2 class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $locale === 'id' ? 'Navigasi' : 'Navigation' }}</h2>
+                <nav class="grid gap-xs font-body-md text-body-md text-white/75">
+                    <a class="hover:text-primary transition-colors" href="{{ route('about', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'Tentang' : 'About' }}</a>
+                    <a class="hover:text-primary transition-colors" href="{{ route('services', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'Layanan' : 'Services' }}</a>
+                    <a class="hover:text-primary transition-colors" href="{{ route('delivery', ['locale' => $locale]) }}">Delivery</a>
+                    <a class="hover:text-primary transition-colors" href="{{ route('portfolio', ['locale' => $locale]) }}">Portfolio</a>
+                    <a class="hover:text-primary transition-colors" href="{{ route('contact', ['locale' => $locale]) }}">{{ $locale === 'id' ? 'Kontak' : 'Contact' }}</a>
+                </nav>
+            </div>
+
+            <div>
+                <h2 class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $locale === 'id' ? 'Kontak' : 'Contact' }}</h2>
+                <div class="grid gap-xs font-body-md text-body-md text-white/75">
+                    <a class="hover:text-primary transition-colors break-words" href="mailto:{{ $site['brand']['email'] }}">{{ $site['brand']['email'] }}</a>
+                    <a class="hover:text-primary transition-colors" href="tel:+6282295706304">{{ $site['brand']['phone'] }}</a>
+                    <a class="hover:text-primary transition-colors" href="https://{{ $site['brand']['website'] }}">{{ $site['brand']['website'] }}</a>
+                    <span>{{ $site['brand']['location'] }}</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <p class="font-label-code text-label-code text-tertiary">&copy;{{ date('Y') }} NAKALA DIGITAL // ARCHIPELAGO_OS</p>
-    <div class="absolute bottom-4 left-4 flex gap-1">
-        <div class="w-2 h-2 bg-primary"></div>
-        <div class="w-2 h-2 bg-secondary-fixed"></div>
-        <div class="w-2 h-2 bg-tertiary"></div>
+
+    <div class="border-t border-white/10 px-margin-mobile md:px-margin-desktop py-sm flex flex-col md:flex-row gap-xs md:items-center md:justify-between text-white/55 font-label-code text-label-code">
+        <span>&copy;{{ date('Y') }} Nakala Digital</span>
+        <span>{{ $locale === 'id' ? 'Strategic Partner of Romulus Digital' : 'Strategic Partner of Romulus Digital' }}</span>
     </div>
 </footer>
-
-<div class="fixed bottom-10 right-10 z-50 pointer-events-none hidden md:block">
-    <div class="bg-tertiary-container text-on-tertiary-container px-3 py-1 font-label-sticker border-2 border-on-tertiary-container rotate-[15deg] shadow-lg">
-        HIGH VOLTAGE TECH
-    </div>
-</div>

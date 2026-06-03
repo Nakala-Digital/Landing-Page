@@ -16,6 +16,7 @@ return [
         'phone' => '+62 822 9570 6304',
         'email' => 'milzam.zihni@romulus.digital',
         'website' => 'nakala.digital',
+        'instagram' => '@nakala.digital',
         'location' => 'Bandung, Indonesia',
         'contact_person' => 'Milzam Zihni',
         'contact_role' => 'Founder & CEO',
@@ -173,7 +174,7 @@ return [
             'home' => [
                 'eyebrow' => 'Mitra Teknologi AI Indonesia',
                 'title' => 'Nakala Digital',
-                'lead' => 'Kami membantu organisasi membangun produk digital, sistem operasional, dan solusi AI yang sederhana, rapi, dan siap digunakan.',
+                'lead' => 'Kami membantu organisasi membangun solusi digital profesional, bermakna, dan berdampak melalui technology consulting, AI, software development, QA governance, dan delivery excellence.',
                 'sticker' => 'INDONESIA TECH PARTNER',
                 'small_label' => 'NO BORING DIGITAL SOLUTIONS',
                 'cta_primary' => 'Mulai Diskusi',
@@ -203,7 +204,7 @@ return [
             'services' => [
                 'eyebrow' => 'Layanan',
                 'title' => 'AI, software, portal web, operasional, QA, dan support.',
-                'lead' => 'Layanan Nakala Digital dirancang modular, sehingga bisa berdiri sendiri atau digabungkan sebagai program transformasi lengkap.',
+                'lead' => 'Layanan Nakala Digital dirancang agar mudah dipahami decision maker: dari konsultasi teknologi, AI, software development, portal, QA governance, sampai managed support.',
                 'pillars_label' => 'Service Pillars',
                 'pillars_title' => 'Kapabilitas yang saling terhubung.',
                 'ai_label' => 'Kapabilitas AI',
@@ -277,8 +278,8 @@ return [
             'service_pillars' => [
                 'AI Technology & GenAI',
                 'Custom Software Development',
+                'Technology Consulting',
                 'Web & Portal Development',
-                'Operational Systems',
                 'QA Governance & Testing',
                 'Managed Support & D365',
             ],
@@ -336,7 +337,7 @@ return [
             'home' => [
                 'eyebrow' => 'Indonesia AI Technology Partner',
                 'title' => 'Nakala Digital',
-                'lead' => 'We help organizations build digital products, operational systems, and AI solutions that are simple, clean, and ready to use.',
+                'lead' => 'We help organizations build professional, meaningful, and impactful digital solutions through technology consulting, AI, software development, QA governance, and delivery excellence.',
                 'sticker' => 'INDONESIA TECH PARTNER',
                 'small_label' => 'NO BORING DIGITAL SOLUTIONS',
                 'cta_primary' => 'Start a Conversation',
@@ -366,7 +367,7 @@ return [
             'services' => [
                 'eyebrow' => 'Services',
                 'title' => 'AI, software, web portals, operations, QA, and support.',
-                'lead' => 'Nakala Digital services are modular, so they can stand alone or work together as a complete transformation program.',
+                'lead' => 'Nakala Digital services are designed for clear business decision-making: from technology consulting, AI, software development, portals, QA governance, to managed support.',
                 'pillars_label' => 'Service Pillars',
                 'pillars_title' => 'Connected capability for enterprise needs.',
                 'ai_label' => 'AI Capabilities',
@@ -440,8 +441,8 @@ return [
             'service_pillars' => [
                 'AI Technology & GenAI',
                 'Custom Software Development',
+                'Technology Consulting',
                 'Web & Portal Development',
-                'Operational Systems',
                 'QA Governance & Testing',
                 'Managed Support & D365',
             ],

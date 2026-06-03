@@ -81,7 +81,7 @@ class ExampleTest extends TestCase
     {
         $this->get(route('contact', ['locale' => 'id'], false))
             ->assertOk()
-            ->assertSee('06 KONTAK', false)
+            ->assertSee('Kontak', false)
             ->assertSee('mobile-nav', false)
             ->assertSee('src="'.asset('assets/logo.png').'"', false)
             ->assertSee('rel="icon" type="image/svg+xml" href="'.asset('assets/logo.svg').'"', false)
@@ -97,9 +97,13 @@ class ExampleTest extends TestCase
             ->assertSee('href="'.route('delivery', ['locale' => 'id']).'"', false)
             ->assertSee('href="'.route('portfolio', ['locale' => 'id']).'"', false)
             ->assertSee('id="services-overview"', false)
+            ->assertSee('Strategic Partner of Romulus Digital', false)
+            ->assertSee('Technology Consulting', false)
             ->assertDontSee('#service-pillars', false)
             ->assertDontSee('#mission', false)
-            ->assertDontSee('#agile-delivery', false);
+            ->assertDontSee('#agile-delivery', false)
+            ->assertDontSee('HIGH VOLTAGE TECH', false)
+            ->assertDontSee('NKLA_OS', false);
 
         $content = $response->getContent();
 
