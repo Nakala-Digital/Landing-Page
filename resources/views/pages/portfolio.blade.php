@@ -27,6 +27,20 @@
                         </div>
                     </div>
 
+                    @if(isset($project['images']) && is_array($project['images']))
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-md mb-md">
+                            @foreach($project['images'] as $img)
+                                <div class="rounded-card overflow-hidden border border-outline-variant aspect-video bg-surface-container-low flex items-center justify-center p-sm">
+                                    <img src="{{ asset($img) }}" alt="{{ $project['name'] }}" class="max-w-full max-h-full object-contain">
+                                </div>
+                            @endforeach
+                        </div>
+                    @elseif(isset($project['image']))
+                        <div class="mb-md rounded-card overflow-hidden border border-outline-variant aspect-[21/9] md:aspect-[21/9] bg-surface-container-low flex items-center justify-center p-sm md:p-md">
+                            <img src="{{ asset($project['image']) }}" alt="{{ $project['name'] }}" class="max-w-full max-h-full object-contain">
+                        </div>
+                    @endif
+
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-md mb-md">
                         <div class="bg-surface-container-low p-md rounded-card border border-outline-variant">
                             <p class="font-label-sticker text-label-sticker text-primary mb-xs">{{ $content['portfolio']['challenge'] }}</p>

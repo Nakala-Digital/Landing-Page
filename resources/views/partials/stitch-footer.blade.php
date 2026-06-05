@@ -28,11 +28,23 @@
 
             <div>
                 <h2 class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $locale === 'id' ? 'Kontak' : 'Contact' }}</h2>
-                <div class="grid gap-xs font-body-md text-body-md text-white/75">
-                    <a class="hover:text-primary transition-colors break-words" href="mailto:{{ $site['brand']['email'] }}">{{ $site['brand']['email'] }}</a>
-                    <a class="hover:text-primary transition-colors" href="tel:+6282295706304">{{ $site['brand']['phone'] }}</a>
-                    <a class="hover:text-primary transition-colors" href="https://{{ $site['brand']['website'] }}">{{ $site['brand']['website'] }}</a>
-                    <span>{{ $site['brand']['location'] }}</span>
+                <div class="grid gap-md font-body-md text-body-md text-white/75">
+                    <a class="flex items-start gap-sm hover:text-primary transition-colors break-words group" href="mailto:{{ $site['brand']['email'] }}">
+                        <span class="material-symbols-outlined text-[20px] text-primary group-hover:text-white transition-colors">mail</span>
+                        <span class="mt-0.5">{{ $site['brand']['email'] }}</span>
+                    </a>
+                    <a class="flex items-start gap-sm hover:text-primary transition-colors group" href="tel:+6282295706304">
+                        <span class="material-symbols-outlined text-[20px] text-primary group-hover:text-white transition-colors">phone</span>
+                        <span class="mt-0.5">{{ $site['brand']['phone'] }}</span>
+                    </a>
+                    <a class="flex items-start gap-sm hover:text-primary transition-colors group" href="https://{{ $site['brand']['website'] }}" target="_blank">
+                        <span class="material-symbols-outlined text-[20px] text-primary group-hover:text-white transition-colors">language</span>
+                        <span class="mt-0.5">{{ $site['brand']['website'] }}</span>
+                    </a>
+                    <div class="flex items-start gap-sm">
+                        <span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+                        <span class="leading-relaxed mt-0.5">{{ $site['brand']['location'] }}</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -159,6 +159,14 @@ return [
                 'relevant_capability' => ['Microsoft D365 & Power Platform', 'Managed Support', 'Technology Consulting'],
                 'business_impact' => ['Response time lebih cepat dengan managed service model', 'Support lokal dengan backing Romulus Digital', 'Reporting dan automation lebih terhubung lewat Power Platform', 'Engagement fleksibel untuk project atau retainer support'],
             ],
+            [
+                'subtitle' => 'Omnichannel Commerce & CRM System',
+                'challenge' => 'Enterprise membutuhkan modernisasi sistem operasional selama masa pandemi untuk memungkinkan interaksi pelanggan yang seamless di seluruh saluran online dan offline.',
+                'solution' => 'Platform digital terintegrasi yang mencakup sistem Point-of-Sale (POS), self-service kiosk, portal e-commerce web, layanan front desk, serta modul CRM dan Keuangan.',
+                'key_features' => ['Omnichannel Commerce (POS, kiosk, e-commerce)', 'CRM System untuk interaksi pelanggan', 'Financial Module untuk tracking transaksi', 'Scalable Framework dengan Microsoft D365'],
+                'relevant_capability' => ['Microsoft D365 & Power Platform', 'Web & Portal Development', 'Custom Software Development'],
+                'business_impact' => ['Visibilitas 360° interaksi pelanggan', 'Manajemen transaksi keuangan terpusat', 'Skalabilitas operasional dan efisiensi jangka panjang', 'Interaksi seamless di channel online dan offline'],
+            ],
         ],
         'team' => [
             'model_label' => 'Scalable Team Model',
@@ -347,6 +355,14 @@ return [
                 'key_features' => ['D365 Finance module support', 'Power BI reporting integration', 'Power Automate workflow automation', 'AI Builder integration', 'User training & adoption support'],
                 'relevant_capability' => ['Microsoft D365 & Power Platform', 'Managed Support', 'Technology Consulting'],
                 'business_impact' => ['Faster response times through a managed service model', 'Local support backed by Romulus Digital', 'Reporting and automation connected through Power Platform', 'Flexible project-based or retainer support engagement'],
+            ],
+            [
+                'subtitle' => 'Omnichannel Commerce & CRM System',
+                'challenge' => 'An enterprise needed to modernize systems and enable seamless user engagement across online and offline channels during the pandemic.',
+                'solution' => 'An integrated digital platform featuring POS systems, self-service kiosks, web e-commerce, front desk services, and complete CRM and Finance modules.',
+                'key_features' => ['Omnichannel Commerce (POS, kiosks, e-commerce)', 'CRM System for customer interactions', 'Financial Module for transaction tracking', 'Scalable Framework with Microsoft D365'],
+                'relevant_capability' => ['Microsoft D365 & Power Platform', 'Web & Portal Development', 'Custom Software Development'],
+                'business_impact' => ['360° visibility into customer interactions', 'Centralized financial transaction management', 'Operational scalability and long-term efficiency', 'Seamless engagement across online and offline channels'],
             ],
         ],
         'team' => [
