@@ -146,7 +146,7 @@ class ExampleTest extends TestCase
 
         $this->get(route('contact', ['locale' => 'en'], false))
             ->assertOk()
-            ->assertSee('milzam.zihni@romulus.digital', false)
+            ->assertSee('contact@nakala.digital', false)
             ->assertSee('nakala.digital', false)
             ->assertSee('Output: project brief, scope document, and solution proposal.', false);
     }

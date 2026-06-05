@@ -9,11 +9,10 @@
 @endphp
 
 <main class="pt-20">
-    <section class="px-margin-mobile md:px-margin-desktop py-lg bg-primary-fixed" id="cover">
+    <section class="home-hero px-margin-mobile md:px-margin-desktop py-lg bg-primary-fixed" id="cover">
         <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-xl items-center">
-            <div>
-                <div class="inline-flex items-center gap-xs rounded-pill bg-white border border-outline px-sm py-xs text-secondary-fixed font-label-sticker text-label-sticker mb-md shadow-soft">
-                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+            <div class="hero-copy">
+                <div class="section-kicker inline-flex items-center gap-xs rounded-pill bg-white border border-outline px-sm py-xs text-secondary-fixed font-label-sticker text-label-sticker mb-md shadow-soft">
                     <span>{{ $content['home']['eyebrow'] }}</span>
                 </div>
 
@@ -47,20 +46,48 @@
                 </p>
             </div>
 
-            <div class="corporate-card p-md md:p-lg">
+            <div class="hero-product-preview corporate-card p-sm md:p-md">
                 <div class="flex items-center justify-between gap-sm border-b border-outline-variant pb-sm mb-md">
                     <div>
                         <p class="font-label-sticker text-label-sticker text-primary mb-xs">
-                            {{ $locale === 'id' ? 'Capability Overview' : 'Capability Overview' }}
+                            {{ $locale === 'id' ? 'Delivery Snapshot' : 'Delivery Snapshot' }}
                         </p>
                         <h2 class="font-headline-md text-headline-md text-secondary-fixed">
-                            {{ $locale === 'id' ? 'Teknologi yang siap dipakai bisnis.' : 'Technology built for business use.' }}
+                            {{ $locale === 'id' ? 'Produk digital yang siap dipakai bisnis.' : 'Digital products ready for business use.' }}
                         </h2>
                     </div>
-                    <span class="material-symbols-outlined text-primary text-[42px]">hub</span>
+                    <span class="material-symbols-outlined text-primary text-[42px]">monitoring</span>
                 </div>
 
-                <div class="grid gap-sm">
+                <div class="hero-window hero-window-main overflow-hidden mb-sm">
+                    <img src="{{ asset('assets/portfolio/mahya-hrms.png') }}" alt="Mahya HRMS dashboard preview">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-[1fr_0.82fr] gap-sm mb-sm">
+                    <div class="hero-window hero-window-mini overflow-hidden">
+                        <img src="{{ asset('assets/portfolio/360-customer-engagement.png') }}" alt="Customer engagement platform preview">
+                    </div>
+                    <div class="grid grid-cols-2 gap-xs">
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">AI</p>
+                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">GenAI</p>
+                        </div>
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">QA</p>
+                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">SIT/UAT</p>
+                        </div>
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">D365</p>
+                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">Support</p>
+                        </div>
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">Build</p>
+                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">Web App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid gap-xs">
                     @foreach ($content['capabilities'] as $capability)
                         <article class="rounded-card border border-outline-variant bg-surface-container-low p-sm">
                             <div class="flex gap-sm">
@@ -222,7 +249,7 @@
             <div>
                 <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['contact']['eyebrow'] }}</p>
                 <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white mb-sm">
-                    {{ $locale === 'id' ? 'Diskusikan kebutuhan digital organisasi Anda.' : 'Discuss your organization’s digital needs.' }}
+                    {{ $locale === 'id' ? 'Diskusikan kebutuhan digital organisasi Anda.' : "Discuss your organization's digital needs." }}
                 </h2>
                 <p class="font-body-lg text-body-lg text-white/75 max-w-3xl">{{ $content['contact']['lead'] }}</p>
             </div>

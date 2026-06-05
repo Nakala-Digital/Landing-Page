@@ -1,4 +1,4 @@
-<footer class="w-full bg-secondary-fixed text-on-secondary-fixed">
+<footer class="site-footer w-full bg-secondary-fixed text-on-secondary-fixed">
     <div class="px-margin-mobile md:px-margin-desktop py-xl grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-xl">
         <div>
             <a class="inline-flex h-14 w-52 bg-white rounded-card p-2 mb-md" href="{{ route('home', ['locale' => $locale]) }}" aria-label="{{ $site['brand']['name'] }} home">

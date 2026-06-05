@@ -1,20 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
-        <div class="max-w-5xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['eyebrow'] }}</p>
-            <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['delivery']['title'] }}</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['delivery']['lead'] }}</p>
+    <section class="page-hero px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
+        <div class="page-hero-grid">
+            <div class="page-hero-copy">
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['eyebrow'] }}</p>
+                <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['delivery']['title'] }}</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['delivery']['lead'] }}</p>
+            </div>
+            <aside class="page-hero-panel corporate-card p-md md:p-lg">
+                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['agile_label'] }}</p>
+                <div class="hero-signal-list">
+                    @foreach (array_slice($content['delivery_steps'], 0, 4) as $step)
+                        <div class="hero-signal">
+                            <span class="number-badge font-label-code text-label-code">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                            <h2 class="font-label-sticker text-label-sticker text-secondary-fixed self-center">{{ $step }}</h2>
+                        </div>
+                    @endforeach
+                </div>
+            </aside>
         </div>
     </section>
 
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white">
-        <div class="mb-lg max-w-4xl">
-            <span class="inline-flex rounded-pill bg-primary-fixed text-primary px-sm py-xs font-label-sticker text-label-sticker mb-md">
+        <div class="section-heading-panel">
+            <div class="max-w-4xl">
+            <span class="soft-chip font-label-sticker text-label-sticker mb-md">
                 {{ $content['delivery']['agile_label'] }}
             </span>
             <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['delivery']['agile_title'] }}</h2>
+            </div>
+            <span class="soft-chip font-label-code text-label-code">{{ $locale === 'id' ? '7 tahap delivery' : '7 delivery steps' }}</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
             @foreach ($content['delivery_steps'] as $step)
@@ -40,9 +56,12 @@
     </section>
 
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface-container-low border-y border-outline-variant">
-        <div class="mb-lg max-w-4xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['qa_label'] }}</p>
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['delivery']['qa_title'] }}</h2>
+        <div class="section-heading-panel">
+            <div class="max-w-4xl">
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['qa_label'] }}</p>
+                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['delivery']['qa_title'] }}</h2>
+            </div>
+            <span class="soft-chip font-label-code text-label-code">SIT / UAT / BAST</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
             @foreach ($content['qa_governance'] as $step)

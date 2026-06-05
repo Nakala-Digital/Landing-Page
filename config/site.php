@@ -14,7 +14,7 @@ return [
         'logo' => 'assets/logo.svg',
         'logo_png' => 'assets/logo.png',
         'phone' => '+62 822 9570 6304',
-        'email' => 'milzam.zihni@romulus.digital',
+        'email' => 'contact@nakala.digital',
         'website' => 'nakala.digital',
         'instagram' => '@nakala.digital',
         'location' => 'Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum, Bandung Wetan, Bandung City, West Java 40115',

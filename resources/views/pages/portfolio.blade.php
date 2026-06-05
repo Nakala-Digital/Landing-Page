@@ -1,12 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
-        <div class="max-w-5xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['portfolio']['eyebrow'] }}</p>
-            <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['portfolio']['title'] }}</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['portfolio']['lead'] }}</p>
-            <p class="font-label-code text-label-code text-primary mt-sm">{{ $content['portfolio']['subtitle'] }}</p>
+    <section class="page-hero px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
+        <div class="page-hero-grid">
+            <div class="page-hero-copy">
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['portfolio']['eyebrow'] }}</p>
+                <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['portfolio']['title'] }}</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['portfolio']['lead'] }}</p>
+                <p class="font-label-code text-label-code text-primary mt-sm">{{ $content['portfolio']['subtitle'] }}</p>
+            </div>
+            <aside class="page-hero-panel corporate-card p-sm md:p-md">
+                <div class="grid gap-sm">
+                    <div class="portfolio-media rounded-card overflow-hidden border border-outline-variant aspect-video flex items-center justify-center p-sm">
+                        <img src="{{ asset('assets/portfolio/360-customer-engagement.png') }}" alt="Customer engagement portfolio preview" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="grid grid-cols-2 gap-xs">
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">{{ $locale === 'id' ? 'Case' : 'Cases' }}</p>
+                            <p class="font-headline-md text-headline-md text-secondary-fixed">{{ count($content['portfolio_items']) }}</p>
+                        </div>
+                        <div class="metric-pill rounded-card p-sm">
+                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">{{ $locale === 'id' ? 'Area' : 'Areas' }}</p>
+                            <p class="font-headline-md text-headline-md text-secondary-fixed">AI + Web</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
     </section>
 
@@ -16,13 +35,13 @@
                 <article class="corporate-card p-md md:p-lg">
                     <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-md border-b border-outline-variant pb-md mb-md">
                         <div>
-                            <p class="font-label-code text-label-code text-primary mb-xs">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</p>
+                            <p class="soft-chip font-label-code text-label-code mb-sm">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</p>
                             <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-xs">{{ $project['name'] }}</h2>
                             <p class="font-label-code text-label-code text-on-surface-variant">{{ $project['subtitle'] }}</p>
                         </div>
                         <div class="flex flex-wrap gap-xs lg:justify-end max-w-xl">
                             @foreach ($project['relevant_capability'] as $capability)
-                                <span class="rounded-pill border border-primary text-primary px-3 py-1 font-label-code text-xs">{{ $capability }}</span>
+                                <span class="soft-chip font-label-code text-xs">{{ $capability }}</span>
                             @endforeach
                         </div>
                     </div>
@@ -30,13 +49,13 @@
                     @if(isset($project['images']) && is_array($project['images']))
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-md mb-md">
                             @foreach($project['images'] as $img)
-                                <div class="rounded-card overflow-hidden border border-outline-variant aspect-video bg-surface-container-low flex items-center justify-center p-sm">
+                                <div class="portfolio-media rounded-card overflow-hidden border border-outline-variant aspect-video bg-surface-container-low flex items-center justify-center p-sm">
                                     <img src="{{ asset($img) }}" alt="{{ $project['name'] }}" class="max-w-full max-h-full object-contain">
                                 </div>
                             @endforeach
                         </div>
                     @elseif(isset($project['image']))
-                        <div class="mb-md rounded-card overflow-hidden border border-outline-variant aspect-[21/9] md:aspect-[21/9] bg-surface-container-low flex items-center justify-center p-sm md:p-md">
+                        <div class="portfolio-media mb-md rounded-card overflow-hidden border border-outline-variant aspect-[21/9] md:aspect-[21/9] bg-surface-container-low flex items-center justify-center p-sm md:p-md">
                             <img src="{{ asset($project['image']) }}" alt="{{ $project['name'] }}" class="max-w-full max-h-full object-contain">
                         </div>
                     @endif

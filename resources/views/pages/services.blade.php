@@ -6,18 +6,34 @@
     $aiIcons = ['psychology', 'person_search', 'school', 'precision_manufacturing', 'cloud_sync', 'analytics', 'bolt', 'forum'];
 @endphp
 
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
-        <div class="max-w-5xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['eyebrow'] }}</p>
-            <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['services']['title'] }}</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['services']['lead'] }}</p>
+    <section class="page-hero px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed border-b border-outline-variant">
+        <div class="page-hero-grid">
+            <div class="page-hero-copy">
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['eyebrow'] }}</p>
+                <h1 class="font-display text-headline-lg-mobile md:text-display text-secondary-fixed mb-md">{{ $content['services']['title'] }}</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">{{ $content['services']['lead'] }}</p>
+            </div>
+            <aside class="page-hero-panel corporate-card p-md md:p-lg">
+                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['pillars_label'] }}</p>
+                <div class="grid gap-xs">
+                    @foreach (array_slice($content['service_pillars'], 0, 6) as $pillar)
+                        <div class="hero-signal">
+                            <span class="icon-badge"><span class="material-symbols-outlined">{{ $serviceIcons[$loop->index] }}</span></span>
+                            <h2 class="font-label-sticker text-label-sticker text-secondary-fixed self-center">{{ $pillar }}</h2>
+                        </div>
+                    @endforeach
+                </div>
+            </aside>
         </div>
     </section>
 
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white">
-        <div class="mb-lg max-w-4xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['pillars_label'] }}</p>
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['services']['pillars_title'] }}</h2>
+        <div class="section-heading-panel">
+            <div class="max-w-4xl">
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['pillars_label'] }}</p>
+                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['services']['pillars_title'] }}</h2>
+            </div>
+            <span class="soft-chip font-label-code text-label-code">{{ $locale === 'id' ? 'End-to-end capability' : 'End-to-end capability' }}</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
             @foreach ($content['service_pillar_details'] as $pillar)
@@ -35,7 +51,7 @@
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface-container-low border-y border-outline-variant">
         <div class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-xl">
             <div>
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['ai_label'] }}</p>
+                <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['ai_label'] }}</p>
                 <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-md">{{ $content['services']['ai_title'] }}</h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">{{ $content['services']['ai_body'] }}</p>
             </div>
@@ -53,7 +69,7 @@
 
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white">
         <div class="mb-lg max-w-4xl">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['solutions_label'] }}</p>
+            <p class="section-kicker font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['solutions_label'] }}</p>
             <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['services']['solutions_title'] }}</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
@@ -66,14 +82,14 @@
         </div>
     </section>
 
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-secondary-fixed text-on-secondary-fixed">
+    <section class="px-margin-mobile md:px-margin-desktop py-xl dark-band text-on-secondary-fixed">
         <div class="mb-lg max-w-4xl">
             <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['model_label'] }}</p>
             <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white">{{ $content['services']['model_title'] }}</h2>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
             @foreach ($content['model_details'] as $model)
-                <article class="rounded-card border border-white/15 bg-white/5 p-md">
+                <article class="dark-card p-md">
                     <h3 class="font-headline-md text-headline-md text-white mb-sm">{{ $model['title'] }}</h3>
                     <p class="font-body-md text-body-md text-white/70 mb-md">{{ $model['body'] }}</p>
                     <ul class="grid gap-xs">

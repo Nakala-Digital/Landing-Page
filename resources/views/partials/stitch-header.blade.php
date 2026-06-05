@@ -15,7 +15,7 @@
     ];
 @endphp
 
-<header class="fixed top-0 w-full z-50 bg-white/95 text-on-primary-fixed border-b border-outline-variant shadow-soft backdrop-blur flex items-center justify-between gap-xs md:gap-sm px-margin-mobile md:px-margin-desktop h-20">
+<header class="site-header fixed top-0 w-full z-50 bg-white/95 text-on-primary-fixed border-b border-outline-variant shadow-soft backdrop-blur flex items-center justify-between gap-xs md:gap-sm px-margin-mobile md:px-margin-desktop h-20">
     <a class="header-logo inline-logo flex-shrink-0" href="{{ $homeUrl }}" aria-label="{{ $site['brand']['name'] }} home">
         @include('partials.logo')
     </a>
