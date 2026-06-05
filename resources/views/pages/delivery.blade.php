@@ -25,10 +25,10 @@
     <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white">
         <div class="section-heading-panel">
             <div class="max-w-4xl">
-            <span class="soft-chip font-label-sticker text-label-sticker mb-md">
-                {{ $content['delivery']['agile_label'] }}
-            </span>
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['delivery']['agile_title'] }}</h2>
+                <span class="soft-chip font-label-sticker text-label-sticker mb-md">
+                    {{ $content['delivery']['agile_label'] }}
+                </span>
+                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed">{{ $content['delivery']['agile_title'] }}</h2>
             </div>
             <span class="soft-chip font-label-code text-label-code">{{ $locale === 'id' ? '7 tahap delivery' : '7 delivery steps' }}</span>
         </div>
