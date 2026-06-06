@@ -312,6 +312,7 @@
                             {{ app()->getLocale() === 'en'
                                 ? 'Grow people, capability, and sustainable digital maturity across organizations.'
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
+                                : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
                         </p>
                     </div>
                 </div>
@@ -330,15 +331,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                     <!-- Reason 1 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'On-the-ground support with deep understanding of the Indonesian market landscape.'
                                 : 'Dukungan langsung di lapangan dengan pemahaman mendalam tentang lanskap pasar Indonesia.' }}
@@ -346,15 +349,17 @@
                     </div>
                     <!-- Reason 2 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'Every solution we build is future-proofed with AI-readiness from the architectural level.'
                                 : 'Setiap solusi yang kami bangun terjamin masa depannya dengan kesiapan AI sejak tingkat arsitektur.' }}
@@ -362,15 +367,17 @@
                     </div>
                     <!-- Reason 3 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'Iterative development with rigorous automated testing to ensure rock-solid stability.'
                                 : 'Pengembangan iteratif dengan pengujian otomatis yang ketat untuk memastikan stabilitas yang kokoh.' }}
@@ -378,15 +385,17 @@
                     </div>
                     <!-- Reason 4 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.'
                                 : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
@@ -394,15 +403,17 @@
                     </div>
                     <!-- Reason 5 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.'
                                 : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
@@ -410,15 +421,17 @@
                     </div>
                     <!-- Reason 6 -->
                     <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
-                        <div
-                            class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
+                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        <div class="flex items-center gap-4 mb-unit-md">
+                            <div
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
+                            </div>
+                            <h4 class="font-headline-h3 text-headline-h3 m-0">
+                                {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
                         </div>
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">
-                            {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
-                        <p class="text-on-surface-variant font-body-md text-body-md">
+                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'Proprietary frameworks that allow us to launch MVPs 30% faster than industry standards.'
                                 : 'Kerangka kerja kepemilikan yang memungkinkan kami meluncurkan MVP 30% lebih cepat daripada standar industri.' }}

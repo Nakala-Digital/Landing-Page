@@ -217,11 +217,11 @@
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
+                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
                             {{ __('messages.cta_button') }}
                         </a>
                         <a href="{{ route('portfolio' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
+                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
                             {{ __('messages.portfolio_button') }}
                         </a>
                     </div>
@@ -238,15 +238,31 @@
             </div>
         </section>
         <!-- Partner Badge Section -->
-        <section class="bg-on-secondary-fixed py-unit-lg border-y border-outline">
+        <section class="bg-[#021943] py-unit-lg border-y border-white/10 relative overflow-hidden">
+            <!-- Decorative gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
+            
             <div
-                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-unit-md">
-                <span
-                    class="font-label-sm text-secondary-fixed tracking-[0.2em] uppercase text-center md:text-left">{{ app()->getLocale() === 'en' ? 'Representative & Strategic Delivery Partner' : 'Perwakilan & Mitra Delivery Strategis' }}</span>
-                <div
-                    class="bg-surface-container-lowest/10 p-unit-md rounded-xl border border-white/10 hover:border-primary-fixed-dim transition-colors group">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
+                
+                <!-- Text Area -->
+                <div class="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
+                     <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
+                         {{ app()->getLocale() === 'en' ? 'Official Representative &' : 'Perwakilan Resmi &' }}
+                     </span>
+                     <span class="text-white/80 font-body-md text-sm">
+                         {{ app()->getLocale() === 'en' ? 'Strategic Delivery Partner' : 'Mitra Delivery Strategis' }}
+                     </span>
+                </div>
+                
+                <!-- Desktop Divider Line -->
+                <div class="hidden md:block w-px h-14 md:h-16 bg-white/20"></div>
+                
+                <!-- Logo Area -->
+                <div class="flex items-center justify-center group">
                     <img alt="Romulus Digital Logo"
-                        class="h-12 object-contain opacity-90 group-hover:opacity-100 transition-opacity bg-white rounded-md p-2"
+                        class="h-14 md:h-16 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                        style="filter: brightness(0) invert(1);"
                         src="{{ asset('assets/romulus-hitam.png') }}" />
                 </div>
             </div>
@@ -332,11 +348,11 @@
                     </div>
                     <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-surface-container-highest p-unit-lg rounded-lg border border-outline-variant group hover:bg-surface-container-lowest transition-all">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-unit-md">query_stats</span>
+                        class="md:col-span-4 bg-[#A7F432] text-[#021943] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-[#021943] text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
-                        <p class="font-body-md text-on-surface-variant">{{ __('messages.cap_consulting_desc') }}</p>
+                        <p class="font-body-md opacity-90">{{ __('messages.cap_consulting_desc') }}</p>
                     </div>
                     <!-- Bento Item 4 -->
                     <div

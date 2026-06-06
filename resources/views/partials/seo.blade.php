@@ -23,8 +23,8 @@
 <link rel="canonical" href="{{ $currentUrl }}">
 
 <!-- Favicons -->
-<link rel="icon" type="image/png" href="{{ asset('assets/logo-nakala.png') }}?v=3">
-<link rel="apple-touch-icon" href="{{ asset('assets/logo-nakala.png') }}?v=3">
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v=4">
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}?v=4">
 
 <!-- Alternate Languages -->
 <link rel="alternate" hreflang="id" href="{{ $alternateIdUrl }}">
