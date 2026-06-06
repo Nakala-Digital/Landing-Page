@@ -204,9 +204,10 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
+                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis'; @endphp
                         {!! str_replace(
-                            'Business Growth',
-                            '<span class="text-primary">Business Growth</span>',
+                            $heroHighlight,
+                            '<span class="text-primary">' . $heroHighlight . '</span>',
                             __('messages.hero_title'),
                         ) !!}
                     </h1>
@@ -241,8 +242,7 @@
             <div
                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-unit-md">
                 <span
-                    class="font-label-sm text-secondary-fixed tracking-[0.2em] uppercase text-center md:text-left">Representative
-                    &amp; Strategic Delivery Partner</span>
+                    class="font-label-sm text-secondary-fixed tracking-[0.2em] uppercase text-center md:text-left">{{ app()->getLocale() === 'en' ? 'Representative & Strategic Delivery Partner' : 'Perwakilan & Mitra Delivery Strategis' }}</span>
                 <div
                     class="bg-surface-container-lowest/10 p-unit-md rounded-xl border border-white/10 hover:border-primary-fixed-dim transition-colors group">
                     <img alt="Romulus Digital Logo"

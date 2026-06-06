@@ -194,15 +194,16 @@
                 <div
                     class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-md">
                     <span class="material-symbols-outlined text-[16px]">bolt</span>
-                    Global Reach
+                    {{ app()->getLocale() === 'en' ? 'Global Reach' : 'Jangkauan Global' }}
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md">
-                    Mari bangun masa depan digital bersama.
+                    {{ app()->getLocale() === 'en' ? 'Let us build the digital future together.' : 'Mari bangun masa depan digital bersama.' }}
                 </h1>
                 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
-                    Let us build the digital future together. Nakala Digital provides regional capability with a local
-                    touch.
+                    {{ app()->getLocale() === 'en'
+                        ? 'Nakala Digital provides regional capability with a local touch.'
+                        : 'Nakala Digital menghadirkan kapabilitas regional dengan sentuhan lokal.' }}
                 </p>
             </div>
         </section>
@@ -212,7 +213,8 @@
                 <!-- Info Panel (Left) -->
                 <div class="lg:col-span-4 space-y-unit-lg">
                     <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Contact Information</h3>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Contact Information' : 'Informasi Kontak' }}</h3>
                         <div class="space-y-unit-md">
                             <div class="flex items-start gap-unit-md">
                                 <span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
@@ -225,7 +227,8 @@
                                 <span class="material-symbols-outlined text-electric-cyan"
                                     data-icon="phone">phone</span>
                                 <div>
-                                    <p class="font-label-sm uppercase text-on-surface-variant">Phone</p>
+                                    <p class="font-label-sm uppercase text-on-surface-variant">
+                                        {{ app()->getLocale() === 'en' ? 'Phone' : 'Telepon' }}</p>
                                     <p class="font-body-lg">0822-9570-6304</p>
                                 </div>
                             </div>
@@ -233,7 +236,8 @@
                                 <span class="material-symbols-outlined text-electric-cyan"
                                     data-icon="location_on">location_on</span>
                                 <div>
-                                    <p class="font-label-sm uppercase text-on-surface-variant">Office</p>
+                                    <p class="font-label-sm uppercase text-on-surface-variant">
+                                        {{ app()->getLocale() === 'en' ? 'Office' : 'Kantor' }}</p>
                                     <p class="font-body-lg">Pointlab Coworking Space, Graha Pos Indonesia,<br />Jl.
                                         Banda No.30 Lantai 2 Blok C,<br />Citarum, Bandung Wetan, Bandung
                                         City,<br />West Java 40115</p>
@@ -243,34 +247,46 @@
                     </div>
                     <!-- Engagement Model -->
                     <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
-                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">Our Model</h4>
+                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Our Model' : 'Model Kerja Kami' }}</h4>
                         <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
                                 <p class="font-button text-button text-primary">01. Discovery</p>
-                                <p class="text-on-surface-variant text-sm">Defining goals and scope.</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Defining goals and scope.' : 'Menentukan tujuan dan ruang lingkup.' }}
+                                </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">02. Design</p>
-                                <p class="text-on-surface-variant text-sm">UX research and UI drafting.</p>
+                                <p class="font-button text-button text-primary">
+                                    {{ app()->getLocale() === 'en' ? '02. Design' : '02. Desain' }}</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'UX research and UI drafting.' : 'Riset UX dan rancangan UI.' }}
+                                </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
                                 <p class="font-button text-button text-primary">03. Agile Dev</p>
-                                <p class="text-on-surface-variant text-sm">Sprint-based high-quality code.</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Sprint-based high-quality code.' : 'Kode berkualitas tinggi berbasis sprint.' }}
+                                </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">04. Handover</p>
-                                <p class="text-on-surface-variant text-sm">Deployment and maintenance.</p>
+                                <p class="font-button text-button text-primary">
+                                    {{ app()->getLocale() === 'en' ? '04. Handover' : '04. Serah Terima' }}</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Deployment and maintenance.' : 'Deployment dan pemeliharaan.' }}
+                                </p>
                             </div>
                         </div>
                     </div>
                     <!-- Strategic Partner Badge -->
                     <div class="p-unit-md bg-midnight-navy text-white rounded-lg flex items-center justify-between">
                         <div>
-                            <p class="text-[10px] uppercase tracking-widest text-surface-variant">Strategic Partner</p>
+                            <p class="text-[10px] uppercase tracking-widest text-surface-variant">
+                                {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</p>
                             <p class="font-bold text-lg">Romulus Digital</p>
                         </div>
                         <img class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-putih.png') }}"
@@ -283,27 +299,34 @@
                         <form class="space-y-unit-md" id="contactForm">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Full Name</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Full Name' : 'Nama Lengkap' }}</label>
                                     <input
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
-                                        placeholder="e.g. John Doe" type="text" />
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. John Doe' : 'contoh: Budi Santoso' }}"
+                                        type="text" />
                                 </div>
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Company</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Company' : 'Perusahaan' }}</label>
                                     <input
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
-                                        placeholder="e.g. Acme Corp" type="text" />
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. Acme Corp' : 'contoh: PT Contoh Digital' }}"
+                                        type="text" />
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Position</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Position' : 'Jabatan' }}</label>
                                     <input
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
-                                        placeholder="e.g. CTO" type="text" />
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. CTO' : 'contoh: CTO' }}"
+                                        type="text" />
                                 </div>
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Email Address</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Email Address' : 'Alamat Email' }}</label>
                                     <input
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
                                         placeholder="john@company.com" type="email" />
@@ -311,55 +334,72 @@
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Phone Number</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Phone Number' : 'Nomor Telepon' }}</label>
                                     <input
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
                                         placeholder="+62..." type="tel" />
                                 </div>
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Project Type</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Project Type' : 'Jenis Proyek' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>Enterprise Web App</option>
-                                        <option>Mobile App (iOS/Android)</option>
-                                        <option>Cloud Infrastructure</option>
-                                        <option>AI/ML Solutions</option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Enterprise Web App' : 'Aplikasi Web Enterprise' }}
+                                        </option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Mobile App (iOS/Android)' : 'Aplikasi Mobile (iOS/Android)' }}
+                                        </option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}
+                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'AI/ML Solutions' : 'Solusi AI/ML' }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Budget Range</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Budget Range' : 'Rentang Budget' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
                                         <option>$10k - $25k</option>
                                         <option>$25k - $50k</option>
                                         <option>$50k+</option>
-                                        <option>Not sure yet</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Not sure yet' : 'Belum yakin' }}
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="space-y-1">
-                                    <label class="font-label-sm text-on-surface-variant uppercase">Timeline</label>
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Timeline' : 'Timeline' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>ASAP (Within 1 mo)</option>
-                                        <option>1-3 Months</option>
-                                        <option>3-6 Months</option>
-                                        <option>Ongoing partnership</option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'ASAP (Within 1 mo)' : 'Secepatnya (dalam 1 bulan)' }}
+                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? '1-3 Months' : '1-3 Bulan' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? '3-6 Months' : '3-6 Bulan' }}</option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Ongoing partnership' : 'Kerja sama berkelanjutan' }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label class="font-label-sm text-on-surface-variant uppercase">Message / Project
-                                    Details</label>
+                                <label class="font-label-sm text-on-surface-variant uppercase">
+                                    {{ app()->getLocale() === 'en' ? 'Message / Project Details' : 'Pesan / Detail Proyek' }}</label>
                                 <textarea class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
-                                    placeholder="Tell us about your technical challenges..." rows="4"></textarea>
+                                    placeholder="{{ app()->getLocale() === 'en' ? 'Tell us about your technical challenges...' : 'Ceritakan tantangan teknis Anda...' }}"
+                                    rows="4"></textarea>
                             </div>
                             <div class="pt-unit-md">
                                 <button
                                     class="w-full md:w-auto bg-electric-cyan text-white font-button text-button uppercase px-12 py-4 rounded hover:bg-primary transition-all shadow-md"
                                     type="submit">
-                                    Submit Inquiry
+                                    {{ app()->getLocale() === 'en' ? 'Submit Inquiry' : 'Kirim Inquiry' }}
                                 </button>
                             </div>
                         </form>
@@ -375,13 +415,15 @@
         // Micro-interactions
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
+            const sendingText = @json(app()->getLocale() === 'en' ? 'Sending...' : 'Mengirim...');
+            const sentText = @json(app()->getLocale() === 'en' ? 'Message Sent' : 'Pesan Terkirim');
             const btn = e.target.querySelector('button');
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Sending...';
+            btn.innerHTML = sendingText;
             btn.disabled = true;
 
             setTimeout(() => {
-                btn.innerHTML = 'Message Sent';
+                btn.innerHTML = sentText;
                 btn.classList.replace('bg-electric-cyan', 'bg-impact-lime');
                 btn.classList.replace('text-white', 'text-midnight-navy');
                 setTimeout(() => {

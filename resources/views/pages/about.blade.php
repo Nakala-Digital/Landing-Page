@@ -188,7 +188,7 @@
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
-                        About Us
+                        {{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
@@ -238,7 +238,7 @@
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
                 <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
-                    {{ app()->getLocale() === 'en' ? 'Our Vision & Mission' : 'Visi & Misi Kami' }}</h2>
+                    {{ app()->getLocale() === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}</h2>
                 <div class="h-1.5 w-24 bg-primary-container mt-unit-sm"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
@@ -249,71 +249,70 @@
                         <span class="material-symbols-outlined text-4xl"
                             style="font-variation-settings: 'FILL' 1;">visibility</span>
                         <h3 class="font-headline-h3 text-headline-h3">
-                            {{ app()->getLocale() === 'en' ? 'Vision' : 'Visi' }}
+                            {{ app()->getLocale() === 'en' ? 'Our Vision' : 'Visi Kami' }}
                         </h3>
                         <p class="font-body-md text-body-md opacity-90">
-                            {{ app()->getLocale() === 'en'
-                                ? 'To be the leading catalyst of digital transformation in Indonesia by integrating artificial intelligence into every business solution.'
-                                : 'Menjadi katalisator transformasi digital terdepan di Indonesia dengan mengintegrasikan kecerdasan buatan dalam setiap solusi bisnis.' }}
+                            @if (app()->getLocale() === 'en')
+                                To become a strategic technology partner that delivers
+                                <strong>professional, meaningful, and impactful</strong> digital solutions for
+                                organizational growth in Indonesia and the regional market.
+                            @else
+                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital yang
+                                <strong>profesional, bermakna, dan berdampak</strong> untuk pertumbuhan organisasi di
+                                Indonesia dan pasar regional.
+                            @endif
                         </p>
                     </div>
                 </div>
                 <!-- Mission Points -->
-                <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
+                <div class="md:col-span-8 space-y-unit-md">
+                    <h3 class="font-headline-h3 text-headline-h3 text-on-surface">
+                        {{ app()->getLocale() === 'en' ? 'Our Mission' : 'Misi Kami' }}
+                    </h3>
                     <div
                         class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
-                        <div class="text-primary font-bold text-headline-h3 shrink-0">01</div>
-                        <div>
-                            <p class="font-body-md text-body-md font-bold">
-                                {{ app()->getLocale() === 'en' ? 'Innovation First' : 'Inovasi Utama' }}</p>
-                            <p class="text-on-surface-variant text-label-sm">
-                                {{ app()->getLocale() === 'en' ? 'Delivering AI-powered solutions that redefine efficiency.' : 'Memberikan solusi bertenaga AI yang mendefinisikan ulang efisiensi.' }}
-                            </p>
-                        </div>
+                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
+                        <p class="text-on-surface-variant text-body-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Deliver solutions with strong governance, Agile/Scrum delivery, QA discipline, and transparent communication.'
+                                : 'Menghadirkan solusi dengan tata kelola yang kuat, delivery Agile/Scrum, disiplin QA, dan komunikasi yang transparan.' }}
+                        </p>
                     </div>
                     <div
                         class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
-                        <div class="text-primary font-bold text-headline-h3 shrink-0">02</div>
-                        <div>
-                            <p class="font-body-md text-body-md font-bold">
-                                {{ app()->getLocale() === 'en' ? 'Local Expertise' : 'Keahlian Lokal' }}</p>
-                            <p class="text-on-surface-variant text-label-sm">
-                                {{ app()->getLocale() === 'en' ? 'Empowering local industries with deep regional context.' : 'Memberdayakan industri lokal dengan konteks regional yang mendalam.' }}
-                            </p>
-                        </div>
+                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
+                        <p class="text-on-surface-variant text-body-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Build meaningful digital products that solve real operational and business pain points.'
+                                : 'Membangun produk digital bermakna yang menyelesaikan pain point operasional dan bisnis yang nyata.' }}
+                        </p>
                     </div>
                     <div
                         class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
-                        <div class="text-primary font-bold text-headline-h3 shrink-0">03</div>
-                        <div>
-                            <p class="font-body-md text-body-md font-bold">
-                                {{ app()->getLocale() === 'en' ? 'Scalable Growth' : 'Pertumbuhan Terukur' }}</p>
-                            <p class="text-on-surface-variant text-label-sm">
-                                {{ app()->getLocale() === 'en' ? 'Building software that grows with your business needs.' : 'Membangun perangkat lunak yang berkembang sesuai kebutuhan bisnis Anda.' }}
-                            </p>
-                        </div>
+                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
+                        <p class="text-on-surface-variant text-body-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Enable AI-powered automation and data-driven workflows for measurable business impact.'
+                                : 'Mengaktifkan otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
+                        </p>
                     </div>
                     <div
                         class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
-                        <div class="text-primary font-bold text-headline-h3 shrink-0">04</div>
-                        <div>
-                            <p class="font-body-md text-body-md font-bold">
-                                {{ app()->getLocale() === 'en' ? 'Human Centric' : 'Berpusat pada Manusia' }}</p>
-                            <p class="text-on-surface-variant text-label-sm">
-                                {{ app()->getLocale() === 'en' ? 'Designing digital experiences that prioritize people.' : 'Merancang pengalaman digital yang memprioritaskan manusia.' }}
-                            </p>
-                        </div>
+                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
+                        <p class="text-on-surface-variant text-body-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Create long-term partnerships within clients, partners, and technology ecosystems.'
+                                : 'Menciptakan kemitraan jangka panjang dengan klien, partner, dan ekosistem teknologi.' }}
+                        </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md sm:col-span-2">
-                        <div class="text-primary font-bold text-headline-h3 shrink-0">05</div>
-                        <div>
-                            <p class="font-body-md text-body-md font-bold">
-                                {{ app()->getLocale() === 'en' ? 'Strategic Partnership' : 'Kemitraan Strategis' }}</p>
-                            <p class="text-on-surface-variant text-label-sm">
-                                {{ app()->getLocale() === 'en' ? 'Strengthening the bond with Romulus Digital for world-class standards.' : 'Memperkuat hubungan dengan Romulus Digital untuk standar kelas dunia.' }}
-                            </p>
-                        </div>
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
+                        <p class="text-on-surface-variant text-body-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Grow people, capability, and sustainable digital maturity across organizations.'
+                                : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
+                        </p>
                     </div>
                 </div>
             </div>

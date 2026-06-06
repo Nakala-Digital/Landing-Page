@@ -10,7 +10,7 @@
                 <p class="font-body-md text-surface-variant leading-relaxed text-sm pl-11 md:pl-0">
                     {{ app()->getLocale() === 'en'
                         ? 'Local Delivery, Regional Capability. Your strategic bridge to high-tier digital excellence across Indonesia.'
-                        : 'Local Delivery, Regional Capability. Jembatan strategis Anda menuju keunggulan digital tingkat tinggi di seluruh Indonesia.' }}
+                        : 'Delivery Lokal, Kapabilitas Regional. Jembatan strategis Anda menuju keunggulan digital tingkat tinggi di seluruh Indonesia.' }}
                 </p>
 
                 {{-- Contact Info --}}
@@ -63,7 +63,8 @@
                 $localeSuffix = app()->getLocale() === 'en' ? '.en' : '';
             @endphp
             <div class="lg:col-span-2 space-y-4">
-                <h4 class="font-label-sm text-white uppercase tracking-widest">Sitemap</h4>
+                <h4 class="font-label-sm text-white uppercase tracking-widest">
+                    {{ app()->getLocale() === 'en' ? 'Sitemap' : 'Peta Situs' }}</h4>
                 <ul class="space-y-3">
                     <li><a class="font-body-md text-surface-variant hover:text-white transition-colors text-sm"
                             href="{{ route('home' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Home' : 'Beranda' }}</a>
@@ -85,33 +86,41 @@
 
             {{-- Capabilities --}}
             <div class="lg:col-span-2 space-y-4">
-                <h4 class="font-label-sm text-white uppercase tracking-widest">Capabilities</h4>
+                <h4 class="font-label-sm text-white uppercase tracking-widest">
+                    {{ app()->getLocale() === 'en' ? 'Capabilities' : 'Kapabilitas' }}</h4>
                 <ul class="space-y-3">
                     <li><a class="font-body-md text-surface-variant hover:text-white transition-colors text-sm"
-                            href="#">Software Development</a></li>
+                            href="#">{{ app()->getLocale() === 'en' ? 'Software Development' : 'Pengembangan Software' }}</a>
+                    </li>
                     <li><a class="font-body-md text-surface-variant hover:text-white transition-colors text-sm"
-                            href="#">AI &amp; Data Analytics</a></li>
+                            href="#">{{ app()->getLocale() === 'en' ? 'AI & Data Analytics' : 'AI & Analitik Data' }}</a>
+                    </li>
                     <li><a class="font-body-md text-surface-variant hover:text-white transition-colors text-sm"
-                            href="#">Tech Advisory</a></li>
+                            href="#">{{ app()->getLocale() === 'en' ? 'Tech Advisory' : 'Konsultasi Teknologi' }}</a>
+                    </li>
                     <li><a class="font-body-md text-surface-variant hover:text-white transition-colors text-sm"
-                            href="#">Cloud Infrastructure</a></li>
+                            href="#">{{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}</a>
+                    </li>
                 </ul>
             </div>
 
             {{-- Strategic Partner --}}
             <div class="lg:col-span-2 space-y-4">
-                <h4 class="font-label-sm text-white uppercase tracking-widest">Strategic Partner</h4>
+                <h4 class="font-label-sm text-white uppercase tracking-widest">
+                    {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</h4>
                 <div class="bg-white/5 p-4 rounded-xl border border-white/10 inline-block">
                     <img alt="Romulus Digital" class="h-10 w-auto object-contain"
                         src="{{ asset('assets/romulus-putih.png') }}" />
-                    <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">Official Regional Partner
+                    <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">
+                        {{ app()->getLocale() === 'en' ? 'Official Regional Partner' : 'Mitra Regional Resmi' }}
                     </p>
                 </div>
             </div>
 
             {{-- Maps Column --}}
             <div class="lg:col-span-3 flex flex-col gap-4">
-                <h4 class="font-label-sm text-white uppercase tracking-widest">Find Us</h4>
+                <h4 class="font-label-sm text-white uppercase tracking-widest">
+                    {{ app()->getLocale() === 'en' ? 'Find Us' : 'Temukan Kami' }}</h4>
                 <div class="h-[180px] rounded-xl overflow-hidden border border-white/10 ring-1 ring-white/5">
                     <iframe
                         src="https://maps.google.com/maps?q=Pointlab+Coworking+Space,+Graha+Pos+Indonesia,+Jl.+Banda+No.30+Lantai+2+Blok+C,+Citarum,+Bandung+Wetan,+Bandung+City,+West+Java+40115&output=embed&hl=id&z=16"
@@ -126,15 +135,15 @@
 
         {{-- Bottom: Copyright --}}
         <div class="py-6 flex flex-row justify-between gap-4 items-center">
-            <span class="font-body-md text-surface-variant text-sm">© {{ date('Y') }} Nakala Digital. All Rights
-                Reserved.</span>
+            <span class="font-body-md text-surface-variant text-sm">© {{ date('Y') }} Nakala Digital.
+                {{ app()->getLocale() === 'en' ? 'All Rights Reserved.' : 'Hak Cipta Dilindungi.' }}</span>
             <div class="flex gap-6">
                 <a class="font-body-md text-surface-variant hover:text-white text-sm transition-colors"
-                    href="#">Privacy Policy</a>
+                    href="#">{{ app()->getLocale() === 'en' ? 'Privacy Policy' : 'Kebijakan Privasi' }}</a>
                 <a class="font-body-md text-surface-variant hover:text-white text-sm transition-colors"
-                    href="#">Terms of Service</a>
+                    href="#">{{ app()->getLocale() === 'en' ? 'Terms of Service' : 'Ketentuan Layanan' }}</a>
                 <a class="font-body-md text-surface-variant hover:text-white text-sm transition-colors"
-                    href="#">Cookie Policy</a>
+                    href="#">{{ app()->getLocale() === 'en' ? 'Cookie Policy' : 'Kebijakan Cookie' }}</a>
             </div>
         </div>
 

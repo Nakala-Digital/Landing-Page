@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfolio | Nakala Digital</title>
+    <title>{{ app()->getLocale() === 'en' ? 'Portfolio | Nakala Digital' : 'Portofolio | Nakala Digital' }}</title>
+    @include('partials.seo', [
+        'title' => app()->getLocale() === 'en' ? 'Portfolio | Nakala Digital' : 'Portofolio | Nakala Digital',
+        'description' =>
+            app()->getLocale() === 'en'
+                ? 'Explore Nakala Digital portfolio and case studies across public sector, HRMS, safety, fintech, AI hiring, and engagement solutions.'
+                : 'Jelajahi portofolio dan studi kasus Nakala Digital di sektor publik, HRMS, safety, fintech, AI hiring, dan solusi engagement.',
+    ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -184,16 +191,18 @@
                 class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
                 <div
                     class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
-                    <span>Selected Works</span>
+                    <span>{{ app()->getLocale() === 'en' ? 'Selected Works' : 'Karya Pilihan' }}</span>
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
-                    Portfolio dan studi kasus <span class="text-primary">solusi digital.</span>
+                    {{ app()->getLocale() === 'en' ? 'Portfolio and case studies for' : 'Portfolio dan studi kasus' }}
+                    <span
+                        class="text-primary">{{ app()->getLocale() === 'en' ? 'digital solutions.' : 'solusi digital.' }}</span>
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Nakala Digital bridging local delivery with regional capability. Explore how we've empowered
-                    institutions and enterprises across Indonesia with technical rigor and high-impact software
-                    solutions.
+                    {{ app()->getLocale() === 'en'
+                        ? 'Nakala Digital bridges local delivery with regional capability. Explore how we have empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.'
+                        : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami mendukung institusi dan enterprise di Indonesia melalui ketelitian teknis dan solusi software berdampak tinggi.' }}
                 </p>
             </div>
             <!-- Decorative Elements -->
@@ -217,20 +226,26 @@
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
                                 <span
-                                    class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Public
-                                    Sector</span>
-                                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">PPDB Online System</h3>
-                                <p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Scaling for
-                                    millions of simultaneous applications while ensuring zero-data loss and fair
-                                    admission logic.</p>
+                                    class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Public Sector' : 'Sektor Publik' }}</span>
+                                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                                    {{ app()->getLocale() === 'en' ? 'PPDB Online System' : 'Sistem PPDB Online' }}</h3>
+                                <p class="text-on-surface-variant text-body-md mb-unit-lg">
+                                    {{ app()->getLocale() === 'en'
+                                        ? 'Challenge: Scaling for millions of simultaneous applications while ensuring zero-data loss and fair admission logic.'
+                                        : 'Tantangan: Menangani jutaan pendaftaran bersamaan sambil memastikan tidak ada data hilang dan logika penerimaan tetap adil.' }}
+                                </p>
                                 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-                                    <p class="text-label-sm uppercase font-bold text-outline">Impact</p>
-                                    <p class="text-primary font-bold">99.9% Uptime | 2M+ Students Enrolled</p>
+                                    <p class="text-label-sm uppercase font-bold text-outline">
+                                        {{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}</p>
+                                    <p class="text-primary font-bold">
+                                        {{ app()->getLocale() === 'en' ? '99.9% Uptime | 2M+ Students Enrolled' : '99,9% Uptime | 2Jt+ Siswa Terdaftar' }}
+                                    </p>
                                 </div>
                             </div>
                             <button
-                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View
-                                Details <span class="material-symbols-outlined">arrow_forward</span></button>
+                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">
+                                {{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }} <span
+                                    class="material-symbols-outlined">arrow_forward</span></button>
                         </div>
                         <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
                             <img class="absolute inset-0 w-full h-full object-cover"
@@ -244,26 +259,37 @@
                     class="md:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
                     <div>
                         <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Enterprise</span>
+                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Enterprise' : 'Korporasi' }}</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">Centralizing payroll, attendance, and
-                            performance for distributed workforces in SE Asia.</p>
+                        <p class="text-on-surface-variant text-body-md mb-unit-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.'
+                                : 'Memusatkan payroll, absensi, dan performa untuk tenaga kerja tersebar di Asia Tenggara.' }}
+                        </p>
                     </div>
                     <div class="bg-surface p-unit-md border-t-4 border-primary">
-                        <p class="font-label-sm text-outline uppercase mb-1">Solution</p>
-                        <p class="text-body-md">Automated compliance &amp; tax localization.</p>
+                        <p class="font-label-sm text-outline uppercase mb-1">
+                            {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
+                        <p class="text-body-md">
+                            {{ app()->getLocale() === 'en' ? 'Automated compliance & tax localization.' : 'Otomasi kepatuhan dan lokalisasi pajak.' }}
+                        </p>
                     </div>
                 </div>
                 <!-- 3. HSE -->
                 <div
                     class="md:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
-                    <span class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">Industrial</span>
+                    <span
+                        class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
                     <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
-                    <p class="text-surface-variant text-body-md">Digitizing workplace safety reports and real-time
-                        hazard monitoring for mining operations.</p>
+                    <p class="text-surface-variant text-body-md">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Digitizing workplace safety reports and real-time hazard monitoring for mining operations.'
+                            : 'Digitalisasi laporan keselamatan kerja dan monitoring hazard real-time untuk operasi tambang.' }}
+                    </p>
                     <div class="flex items-center gap-unit-sm mt-auto">
                         <span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
-                        <span class="font-bold">Zero Accident Milestone</span>
+                        <span
+                            class="font-bold">{{ app()->getLocale() === 'en' ? 'Zero Accident Milestone' : 'Milestone Zero Accident' }}</span>
                     </div>
                 </div>
                 <!-- 4. WargaKas -->
@@ -273,19 +299,25 @@
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
                                 <span
-                                    class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">Community
-                                    Fintech</span>
+                                    class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Community Fintech' : 'Fintech Komunitas' }}</span>
                                 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">WargaKas Mobile</h3>
-                                <p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Building financial
-                                    trust in neighborhood communities through transparent cash management.</p>
+                                <p class="text-on-surface-variant text-body-md mb-unit-lg">
+                                    {{ app()->getLocale() === 'en'
+                                        ? 'Challenge: Building financial trust in neighborhood communities through transparent cash management.'
+                                        : 'Tantangan: Membangun kepercayaan finansial komunitas warga melalui pengelolaan kas yang transparan.' }}
+                                </p>
                                 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-                                    <p class="text-label-sm uppercase font-bold text-outline">Solution</p>
-                                    <p class="text-on-surface">Integrated QRIS payments &amp; real-time ledger.</p>
+                                    <p class="text-label-sm uppercase font-bold text-outline">
+                                        {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
+                                    <p class="text-on-surface">
+                                        {{ app()->getLocale() === 'en' ? 'Integrated QRIS payments & real-time ledger.' : 'Pembayaran QRIS terintegrasi dan ledger real-time.' }}
+                                    </p>
                                 </div>
                             </div>
                             <button
-                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">Case
-                                Study <span class="material-symbols-outlined">chevron_right</span></button>
+                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">
+                                {{ app()->getLocale() === 'en' ? 'Case Study' : 'Studi Kasus' }} <span
+                                    class="material-symbols-outlined">chevron_right</span></button>
                         </div>
                         <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
                             <img class="absolute inset-0 w-full h-full object-cover"
@@ -300,18 +332,24 @@
                     <div class="flex justify-between items-start mb-unit-lg">
                         <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
                         <span
-                            class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-full font-label-sm uppercase">AI
-                            Powered</span>
+                            class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-full font-label-sm uppercase">
+                            {{ app()->getLocale() === 'en' ? 'AI Powered' : 'Bertenaga AI' }}</span>
                     </div>
-                    <p class="text-on-surface-variant text-body-md mb-unit-lg">Revolutionizing recruitment by automating
-                        screening of 10,000+ CVs with custom NLP models trained on regional professional context.</p>
+                    <p class="text-on-surface-variant text-body-md mb-unit-lg">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Revolutionizing recruitment by automating screening of 10,000+ CVs with custom NLP models trained on regional professional context.'
+                            : 'Merevolusi rekrutmen dengan mengotomatisasi screening 10.000+ CV memakai model NLP kustom yang dilatih untuk konteks profesional regional.' }}
+                    </p>
                     <div class="grid grid-cols-2 gap-unit-md">
                         <div class="border-l-2 border-primary pl-unit-md">
-                            <p class="text-label-sm text-outline">Time Saved</p>
+                            <p class="text-label-sm text-outline">
+                                {{ app()->getLocale() === 'en' ? 'Time Saved' : 'Waktu Dihemat' }}</p>
                             <p class="font-headline-h3 text-primary">70%</p>
                         </div>
                         <div class="border-l-2 border-primary pl-unit-md">
-                            <p class="text-label-sm text-outline">Accuracy</p>
+                            <p class="text-label-sm text-outline">
+                                {{ app()->getLocale() === 'en' ? 'Accuracy' : 'Akurasi' }}
+                            </p>
                             <p class="font-headline-h3 text-primary">94%</p>
                         </div>
                     </div>
@@ -321,15 +359,21 @@
                     class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
                     <div class="relative z-10">
                         <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">EdTech</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Personalized AI Coach</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">Adaptive learning pathways for
-                            corporate reskilling, leveraging LLMs for real-time feedback.</p>
+                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'EdTech' : 'Teknologi Pendidikan' }}</span>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Personalized AI Coach' : 'AI Coach Personal' }}</h3>
+                        <p class="text-on-surface-variant text-body-md mb-unit-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.'
+                                : 'Jalur belajar adaptif untuk reskilling perusahaan dengan LLM untuk feedback real-time.' }}
+                        </p>
                         <div class="flex gap-unit-sm">
                             <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">smart_toy</span></div>
+                                <span class="material-symbols-outlined text-sm">smart_toy</span>
+                            </div>
                             <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">school</span></div>
+                                <span class="material-symbols-outlined text-sm">school</span>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -345,11 +389,17 @@
                         <span class="material-symbols-outlined text-primary">hub</span>
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
                     </div>
-                    <p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Integrating complex legacy
-                        data into a modern MS Dynamics ecosystem for a regional conglomerate.</p>
+                    <p class="text-on-surface-variant text-body-md mb-unit-lg">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.'
+                            : 'Tantangan: Mengintegrasikan data legacy yang kompleks ke ekosistem MS Dynamics modern untuk konglomerasi regional.' }}
+                    </p>
                     <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
-                        <p class="font-label-sm uppercase">Regional Capability</p>
-                        <p class="text-body-md font-bold">Zero downtime migration achieved.</p>
+                        <p class="font-label-sm uppercase">
+                            {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kapabilitas Regional' }}</p>
+                        <p class="text-body-md font-bold">
+                            {{ app()->getLocale() === 'en' ? 'Zero downtime migration achieved.' : 'Migrasi tanpa downtime tercapai.' }}
+                        </p>
                     </div>
                 </div>
                 <!-- 8. 360 Customer Engagement -->
@@ -357,21 +407,20 @@
                     class="md:col-span-8 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
                     <div class="flex-1">
                         <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Retail
-                            &amp; Commerce</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360° Customer Engagement</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">A unified dashboard connecting
-                            online sales, social media sentiment, and physical store traffic for data-driven marketing.
+                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Commerce' }}</span>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360&deg; Customer Engagement</h3>
+                        <p class="text-on-surface-variant text-body-md mb-unit-md">
+                            {{ app()->getLocale() === 'en'
+                                ? 'A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.'
+                                : 'Dashboard terpadu yang menghubungkan penjualan online, sentimen media sosial, dan trafik toko fisik untuk marketing berbasis data.' }}
                         </p>
                         <div class="flex flex-wrap gap-unit-sm">
                             <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Omnichannel</span>
+                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Omnichannel' : 'Omnichannel' }}</span>
                             <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Sentiment
-                                Analysis</span>
+                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Sentiment Analysis' : 'Analisis Sentimen' }}</span>
                             <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Predictive
-                                Analytics</span>
+                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</span>
                         </div>
                     </div>
                     <div
@@ -388,9 +437,12 @@
             <div
                 class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-unit-lg">
                 <div class="text-center md:text-left">
-                    <p class="text-surface-variant font-label-sm uppercase tracking-widest">Strategic Regional Partner
+                    <p class="text-surface-variant font-label-sm uppercase tracking-widest">
+                        {{ app()->getLocale() === 'en' ? 'Strategic Regional Partner' : 'Mitra Regional Strategis' }}
                     </p>
-                    <p class="text-white font-headline-h3">Romulus Digital Partnership</p>
+                    <p class="text-white font-headline-h3">
+                        {{ app()->getLocale() === 'en' ? 'Romulus Digital Partnership' : 'Kemitraan Romulus Digital' }}
+                    </p>
                 </div>
                 <div class="bg-white/10 p-unit-lg rounded-xl border border-white/20 backdrop-blur-sm">
                     <div class="flex items-center gap-unit-md">
@@ -404,14 +456,16 @@
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
             <h2
                 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">
-                Ready to build your <span class="text-primary">next success story?</span></h2>
+                {{ app()->getLocale() === 'en' ? 'Ready to build your' : 'Siap membangun' }} <span
+                    class="text-primary">{{ app()->getLocale() === 'en' ? 'next success story?' : 'kisah sukses berikutnya?' }}</span>
+            </h2>
             <div class="flex flex-col md:flex-row gap-unit-md justify-center">
                 <button
-                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform">Start
-                    a Project</button>
+                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform">
+                    {{ app()->getLocale() === 'en' ? 'Start a Project' : 'Mulai Proyek' }}</button>
                 <button
-                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors">Download
-                    Case Studies</button>
+                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors">
+                    {{ app()->getLocale() === 'en' ? 'Download Case Studies' : 'Unduh Studi Kasus' }}</button>
             </div>
         </section>
     </main>

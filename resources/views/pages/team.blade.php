@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Team &amp; Leadership | Nakala Digital</title>
+    <title>
+        {{ app()->getLocale() === 'en' ? 'Team & Leadership | Nakala Digital' : 'Tim & Kepemimpinan | Nakala Digital' }}
+    </title>
+    @include('partials.seo', [
+        'title' =>
+            app()->getLocale() === 'en'
+                ? 'Team & Leadership | Nakala Digital'
+                : 'Tim & Kepemimpinan | Nakala Digital',
+        'description' =>
+            app()->getLocale() === 'en'
+                ? 'Meet Nakala Digital leadership and our scalable local core team backed by regional capability.'
+                : 'Kenali pemimpin Nakala Digital dan model tim inti lokal yang didukung kapabilitas regional.',
+    ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
     <link
@@ -122,14 +134,16 @@
             <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
                 <div class="max-w-3xl">
                     <span
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-md">Leadership</span>
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-md">{{ app()->getLocale() === 'en' ? 'Leadership' : 'Kepemimpinan' }}</span>
                     <h1 class="font-headline-h1 text-headline-h1 text-on-primary mb-unit-lg leading-tight">
-                        Led by a core team focused on <span class="text-primary-fixed-dim">delivery and client
-                            success.</span>
+                        {{ app()->getLocale() === 'en' ? 'Led by a core team focused on' : 'Dipimpin oleh tim inti yang fokus pada' }}
+                        <span
+                            class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'delivery and client success.' : 'delivery dan keberhasilan klien.' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
-                        Our leadership bridges the gap between ambitious Indonesian digital transformations and regional
-                        excellence through technical rigor.
+                        {{ app()->getLocale() === 'en'
+                            ? 'Our leadership bridges the gap between ambitious Indonesian digital transformations and regional excellence through technical rigor.'
+                            : 'Kepemimpinan kami menjembatani transformasi digital Indonesia yang ambisius dengan standar keunggulan regional melalui ketelitian teknis.' }}
                     </p>
                 </div>
             </div>
@@ -154,19 +168,19 @@
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">handshake</span>
-                                <span>Client Engagement</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Client Engagement' : 'Engagement Klien' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">verified</span>
-                                <span>Quality Assurance</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Quality Assurance' : 'Quality Assurance' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">task_alt</span>
-                                <span>Project Delivery</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Project Delivery' : 'Delivery Proyek' }}</span>
                             </div>
                         </div>
                     </div>
@@ -188,19 +202,19 @@
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">architecture</span>
-                                <span>Tech Architecture</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Tech Architecture' : 'Arsitektur Teknologi' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">terminal</span>
-                                <span>Engineering Excellence</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Engineering Excellence' : 'Keunggulan Engineering' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">speed</span>
-                                <span>System Scalability</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'System Scalability' : 'Skalabilitas Sistem' }}</span>
                             </div>
                         </div>
                     </div>
@@ -223,19 +237,19 @@
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
-                                <span>Operational Strategy</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Operational Strategy' : 'Strategi Operasional' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">groups_2</span>
-                                <span>Stakeholder follow-up</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Stakeholder Follow-up' : 'Tindak Lanjut Stakeholder' }}</span>
                             </div>
                             <div
                                 class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
                                 <span class="material-symbols-outlined text-primary"
                                     style="font-variation-settings: 'FILL' 1;">description</span>
-                                <span>Documentation &amp; Compliance</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Documentation & Compliance' : 'Dokumentasi & Kepatuhan' }}</span>
                             </div>
                         </div>
                     </div>
@@ -250,24 +264,27 @@
                         <div
                             class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-xl backdrop-blur-sm">
                             <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-primary-fixed-dim">
-                                Local core team with regional resource activation.
+                                {{ app()->getLocale() === 'en' ? 'Local core team with regional resource activation.' : 'Tim inti lokal dengan aktivasi resource regional.' }}
                             </h2>
                             <p class="font-body-lg text-body-lg text-surface-variant mb-unit-lg">
-                                We combine the deep cultural context of a local Indonesian presence with the immense
-                                scalability of a regional resource network. Our model ensures you get personalized
-                                attention from the core leadership while having access to a specialized talent pool for
-                                complex deployments.
+                                {{ app()->getLocale() === 'en'
+                                    ? 'We combine the deep cultural context of a local Indonesian presence with the immense scalability of a regional resource network. Our model ensures you get personalized attention from the core leadership while having access to a specialized talent pool for complex deployments.'
+                                    : 'Kami menggabungkan konteks lokal Indonesia yang kuat dengan skalabilitas jaringan resource regional. Model ini memastikan Anda mendapat perhatian langsung dari leadership inti sekaligus akses ke talenta spesialis untuk deployment yang kompleks.' }}
                             </p>
                             <div class="grid grid-cols-2 gap-unit-md">
                                 <div class="bg-surface/5 p-unit-md border-l-4 border-tertiary">
                                     <p class="font-headline-h3 text-headline-h3 text-white">100%</p>
-                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">Local Core
-                                        Focus</p>
+                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">
+                                        {{ app()->getLocale() === 'en' ? 'Local Core Focus' : 'Fokus Tim Inti Lokal' }}
+                                    </p>
                                 </div>
                                 <div class="bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <p class="font-headline-h3 text-headline-h3 text-white">∞ Scale</p>
-                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">Regional
-                                        Network</p>
+                                    <p class="font-headline-h3 text-headline-h3 text-white">
+                                        {{ app()->getLocale() === 'en' ? 'Flexible Scale' : 'Skala Fleksibel' }}
+                                    </p>
+                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">
+                                        {{ app()->getLocale() === 'en' ? 'Regional Network' : 'Jaringan Regional' }}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -286,8 +303,7 @@
         <section class="py-unit-lg bg-surface-container-low border-y border-outline-variant">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center">
                 <span
-                    class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-unit-sm tracking-widest">Our
-                    Strategic Regional Partner</span>
+                    class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-unit-sm tracking-widest">{{ app()->getLocale() === 'en' ? 'Our Strategic Regional Partner' : 'Mitra Regional Strategis Kami' }}</span>
                 <div class="flex items-center justify-center bg-inverse-surface p-unit-md rounded-xl">
                     <img alt="Romulus Digital Logo" class="h-12 w-auto object-contain bg-white rounded-md p-2"
                         src="{{ asset('assets/romulus-hitam.png') }}" />
