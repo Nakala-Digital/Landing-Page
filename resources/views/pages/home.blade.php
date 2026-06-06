@@ -193,7 +193,7 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section
-            class="relative overflow-hidden bg-surface-container-lowest py-unit-xl lg:py-32 border-b border-outline-variant">
+            class="relative overflow-hidden bg-surface-container-lowest pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 border-b border-outline-variant">
             <div
                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
                 <div class="space-y-unit-lg z-10">

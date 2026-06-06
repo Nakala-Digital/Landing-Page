@@ -193,7 +193,8 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- FAQ Section -->
-        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <section
+            class="pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-xl flex flex-col md:flex-row md:items-end justify-between gap-unit-md">
                 <div class="max-w-2xl">
                     <span

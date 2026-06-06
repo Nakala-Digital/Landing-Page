@@ -184,7 +184,8 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative bg-midnight-navy text-white py-unit-xl overflow-hidden">
+        <section
+            class="relative bg-midnight-navy text-white pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 overflow-hidden">
             <div class="absolute inset-0 opacity-10">
                 <img class="w-full h-full object-cover"
                     data-alt="A sophisticated architectural photograph of a modern high-tech office building at dusk with sharp glass lines and cool blue lighting. The atmosphere is professional and authoritative, reflecting the corporate identity of a premium digital partner. Deep navy shadows contrast with illuminated office windows, creating a sense of scale and technical precision in a minimalist urban setting."

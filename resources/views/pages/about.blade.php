@@ -181,9 +181,9 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <header class="py-unit-xl relative bg-surface overflow-hidden">
+        <header class="relative bg-surface overflow-hidden">
             <div
-                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-unit-xl grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
                 <div class="space-y-unit-md z-10">
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">

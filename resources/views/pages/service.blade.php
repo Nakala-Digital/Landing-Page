@@ -180,7 +180,7 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <header class="relative py-unit-xl overflow-hidden">
+        <header class="relative pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 overflow-hidden">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="grid lg:grid-cols-2 gap-gutter items-center">
                     <div class="z-10">

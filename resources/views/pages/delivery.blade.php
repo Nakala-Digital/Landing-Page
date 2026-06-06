@@ -193,7 +193,7 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative overflow-hidden bg-on-background py-unit-xl lg:py-32">
+        <section class="relative overflow-hidden bg-on-background pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32">
             <div
                 class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent">
             </div>

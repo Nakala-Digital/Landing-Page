@@ -143,7 +143,7 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative overflow-hidden bg-midnight-navy py-unit-xl lg:py-32">
+        <section class="relative overflow-hidden bg-midnight-navy pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32">
             <div class="absolute inset-0 opacity-10 pointer-events-none">
                 <div class="h-full w-full"
                     style="background-image: radial-gradient(circle, #12AED0 1px, transparent 1px); background-size: 40px 40px;">

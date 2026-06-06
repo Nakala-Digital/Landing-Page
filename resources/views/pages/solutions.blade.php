@@ -174,7 +174,8 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
+        <section
+            class="pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
             <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
                 <div class="relative z-10">
                     <div

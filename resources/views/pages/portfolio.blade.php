@@ -186,7 +186,7 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section
-            class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
+            class="relative bg-surface-container-lowest overflow-hidden pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 border-b border-outline-variant">
             <div
                 class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
                 <div
