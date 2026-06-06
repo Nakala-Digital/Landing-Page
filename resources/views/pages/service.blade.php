@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="{{ app()->getLocale() }}"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services | Nakala Digital</title>
+<title>{{ app()->getLocale() === 'en' ? 'Services | Nakala Digital' : 'Layanan | Nakala Digital' }}</title>
+@include('partials.seo', [
+    'title' => app()->getLocale() === 'en' ? 'Services | Nakala Digital' : 'Layanan | Nakala Digital',
+    'description' => app()->getLocale() === 'en' 
+        ? 'Discover our high-tier software development, custom AI models, cloud infrastructure, and tech advisory services.' 
+        : 'Temukan pengembangan perangkat lunak tingkat tinggi, model AI kustom, infrastruktur cloud, dan layanan penasihat teknologi kami.'
+])
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -132,19 +138,22 @@
 <div class="z-10">
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-Regional Excellence
+{{ app()->getLocale() === 'en' ? 'Regional Excellence' : 'Keunggulan Regional' }}
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
-                        Layanan teknologi untuk <span class="text-primary">kebutuhan bisnis modern.</span>
+                        {{ app()->getLocale() === 'en' ? 'Technology services for' : 'Layanan teknologi untuk' }} <span class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs.' : 'kebutuhan bisnis modern.' }}</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
-                        Bridging local Indonesian context with regional software development expertise to accelerate your digital transformation journey.
+                        {{ app()->getLocale() === 'en'
+                            ? 'Bridging local Indonesian context with regional software development expertise to accelerate your digital transformation journey.'
+                            : 'Menjembatani konteks lokal Indonesia dengan keahlian pengembangan perangkat lunak regional untuk mempercepat perjalanan transformasi digital Anda.' }}
                     </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest flex items-center gap-2">
-                            Explore Solutions
+@php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
+<a href="{{ route('solutions' . $localeSuffix) }}" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest gap-2">
+                            {{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}
                             <span class="material-symbols-outlined">arrow_forward</span>
-</button>
+</a>
 </div>
 </div>
 <div class="relative mt-12 lg:mt-0">
@@ -160,9 +169,13 @@ Regional Excellence
 <section class="py-unit-xl bg-surface-container-lowest">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center mb-unit-xl">
-<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-4">Our Service Pillars</h2>
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-4">{{ app()->getLocale() === 'en' ? 'Our Service Pillars' : 'Pilar Layanan Kami' }}</h2>
 <div class="w-24 h-1.5 bg-primary mx-auto mb-6"></div>
-<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">Comprehensive technical capabilities designed for enterprise scale and local agility.</p>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+    {{ app()->getLocale() === 'en' 
+        ? 'Comprehensive technical capabilities designed for enterprise scale and local agility.' 
+        : 'Kemampuan teknis komprehensif yang dirancang untuk skala perusahaan dan kelincahan lokal.' }}
+</p>
 </div>
 <!-- Bento Grid Services -->
 <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">

@@ -146,21 +146,22 @@
 <div class="space-y-unit-lg z-10">
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-Regional Tech Capability
+{{ __('messages.hero_badge') }}
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
-                        AI, Software Development &amp; Digital Solutions Partner for <span class="text-primary">Business Growth</span>
+                        {!! str_replace('Business Growth', '<span class="text-primary">Business Growth</span>', __('messages.hero_title')) !!}
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                        Local delivery with enterprise standards and regional backing. We bridge Indonesian business needs with world-class technical execution.
+                        {{ __('messages.hero_desc') }}
                     </p>
 <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
-<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            Siap Membangun Solusi?
-                        </button>
-<button class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
-                            Lihat Portofolio
-                        </button>
+@php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
+<a href="{{ route('contact' . $localeSuffix) }}" class="inline-flex items-center justify-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
+                            {{ __('messages.cta_button') }}
+                        </a>
+<a href="{{ route('portfolio' . $localeSuffix) }}" class="inline-flex items-center justify-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
+                            {{ __('messages.portfolio_button') }}
+                        </a>
 </div>
 </div>
 <div class="relative group">
@@ -184,19 +185,19 @@ Regional Tech Capability
 <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
 <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
 <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">8+</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Enterprise Projects</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">{{ __('messages.metric_projects') }}</div>
 </div>
 <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
 <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3+</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Years Expertise</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">{{ __('messages.metric_expertise') }}</div>
 </div>
 <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
 <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Leadership Hubs</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">{{ __('messages.metric_hubs') }}</div>
 </div>
 <div class="text-center p-unit-lg">
 <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">24/7</div>
-<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Regional Support</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">{{ __('messages.metric_support') }}</div>
 </div>
 </div>
 </div>
@@ -205,23 +206,23 @@ Regional Tech Capability
 <section class="py-unit-xl bg-surface-container-low">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="mb-unit-xl max-w-2xl">
-<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">Capabilities that Empower</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">We deliver technical rigor through a diverse range of specialized digital services.</p>
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">{{ __('messages.cap_title') }}</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">{{ __('messages.cap_desc') }}</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Bento Item 1 -->
 <div class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-lg border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
 <div class="space-y-unit-md">
 <span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">settings_suggest</span>
-<h3 class="font-headline-h3 text-headline-h3">Software Development</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">Custom enterprise solutions, mobile applications, and scalable web platforms built with modern architectures like Microservices and Serverless.</p>
+<h3 class="font-headline-h3 text-headline-h3">{{ __('messages.cap_software') }}</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">{{ __('messages.cap_software_desc') }}</p>
 </div>
 <div class="mt-unit-lg">
 <ul class="grid grid-cols-2 gap-unit-sm">
-<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Web Apps</li>
-<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Mobile Native</li>
-<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> API Integration</li>
-<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Legacy Migration</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> {{ app()->getLocale() === 'en' ? 'Web Apps' : 'Aplikasi Web' }}</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> {{ app()->getLocale() === 'en' ? 'Mobile Native' : 'Mobile Native' }}</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> {{ app()->getLocale() === 'en' ? 'API Integration' : 'Integrasi API' }}</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> {{ app()->getLocale() === 'en' ? 'Legacy Migration' : 'Migrasi Sistem' }}</li>
 </ul>
 </div>
 </div>
@@ -230,25 +231,25 @@ Regional Tech Capability
 <div class="h-full flex flex-col justify-between">
 <div class="space-y-unit-md">
 <span class="material-symbols-outlined text-tertiary-fixed text-4xl">psychology</span>
-<h3 class="font-headline-h3 text-headline-h3">AI Tech</h3>
-<p class="font-body-md text-secondary-fixed">Integrating Generative AI and Machine Learning to automate complex workflows and drive intelligent decision making.</p>
+<h3 class="font-headline-h3 text-headline-h3">{{ __('messages.cap_ai') }}</h3>
+<p class="font-body-md text-secondary-fixed">{{ __('messages.cap_ai_desc') }}</p>
 </div>
 <div class="bg-surface-container-lowest/10 p-unit-md rounded mt-unit-lg">
-<span class="font-label-sm text-tertiary-fixed uppercase">Strategic Focus</span>
+<span class="font-label-sm text-tertiary-fixed uppercase">{{ app()->getLocale() === 'en' ? 'Strategic Focus' : 'Fokus Strategis' }}</span>
 </div>
 </div>
 </div>
 <!-- Bento Item 3 -->
 <div class="md:col-span-4 bg-surface-container-highest p-unit-lg rounded-lg border border-outline-variant group hover:bg-surface-container-lowest transition-all">
 <span class="material-symbols-outlined text-primary text-4xl mb-unit-md">query_stats</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">Tech Consulting</h3>
-<p class="font-body-md text-on-surface-variant">Strategic roadmap development and digital transformation advisory for growing regional enterprises.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}</h3>
+<p class="font-body-md text-on-surface-variant">{{ __('messages.cap_consulting_desc') }}</p>
 </div>
 <!-- Bento Item 4 -->
 <div class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
 <div class="z-10 space-y-unit-md">
-<h3 class="font-headline-h2-mobile text-white">Local Delivery, Enterprise Standards.</h3>
-<p class="font-body-lg text-primary-fixed max-w-lg">We provide the stability of a regional powerhouse with the agility and context of a local partner.</p>
+<h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
+<p class="font-body-lg text-primary-fixed max-w-lg">{{ __('messages.cap_local_desc') }}</p>
 </div>
 <div class="absolute right-[-10%] top-[-10%] opacity-10">
 <span class="material-symbols-outlined text-[300px]">language</span>
@@ -264,22 +265,22 @@ Regional Tech Capability
 <img alt="Nakala Digital Team Collaboration" class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O"/>
 </div>
 <div class="order-1 lg:order-2 space-y-unit-lg">
-<span class="font-label-sm text-primary uppercase tracking-[0.3em]">Who We Are</span>
-<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">Bridging the Gap in Regional Tech Execution</h2>
+<span class="font-label-sm text-primary uppercase tracking-[0.3em]">{{ __('messages.who_badge') }}</span>
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">{{ __('messages.who_title') }}</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Nakala Digital was born from the need for a software partner that understands the nuances of the Indonesian market while operating with the precision of regional leaders. 
+                        {{ __('messages.who_desc1') }}
                     </p>
 <p class="font-body-md text-body-md text-on-surface-variant">
-                        As the strategic delivery partner of Romulus Digital, we bring world-class engineering processes, security standards, and technical innovation directly to your doorstep.
+                        {{ __('messages.who_desc2') }}
                     </p>
 <div class="grid grid-cols-2 gap-unit-md border-l-4 border-primary pl-unit-md">
 <div>
 <span class="block font-headline-h3 text-on-background">100%</span>
-<span class="font-label-sm text-on-surface-variant uppercase">Local Commitment</span>
+<span class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_local_commit') }}</span>
 </div>
 <div>
 <span class="block font-headline-h3 text-on-background">ISO</span>
-<span class="font-label-sm text-on-surface-variant uppercase">Aligned Standards</span>
+<span class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_iso') }}</span>
 </div>
 </div>
 </div>
@@ -298,12 +299,12 @@ Regional Tech Capability
 </div>
 </div>
 <div class="max-w-2xl mx-auto px-margin-mobile relative z-10 space-y-unit-lg">
-<h2 class="font-headline-h1-mobile text-headline-h1-mobile text-white">Siap membangun solusi digital yang lebih rapi, cepat, dan berdampak?</h2>
-<p class="font-body-lg text-secondary-fixed">Mulai konsultasi gratis hari ini dan temukan potensi digital bisnis Anda.</p>
+<h2 class="font-headline-h1-mobile text-headline-h1-mobile text-white">{{ __('messages.final_cta_title') }}</h2>
+<p class="font-body-lg text-secondary-fixed">{{ __('messages.final_cta_desc') }}</p>
 <div class="pt-unit-md">
-<button class="bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        Discuss Your Project
-                    </button>
+<a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        {{ __('messages.final_cta_btn') }}
+                    </a>
 </div>
 </div>
 </section>

@@ -132,18 +132,22 @@
 About Us
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
-                    Mitra lokal untuk AI, software, dan solusi digital.
+                    {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions.' : 'Mitra lokal untuk AI, software, dan solusi digital.' }}
                 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                    Local partner for AI, software, and digital solutions. Bridging local expertise with Romulus Digital's regional capability to empower your enterprise.
+                    {{ app()->getLocale() === 'en'
+                        ? 'Bridging local expertise with Romulus Digital\'s regional capability to empower your enterprise.'
+                        : 'Menghubungkan keahlian lokal dengan kemampuan regional Romulus Digital untuk memberdayakan bisnis Anda.' }}
                 </p>
 <div class="pt-unit-md">
-<button class="bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">Work With Us</button>
+<a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
+    {{ app()->getLocale() === 'en' ? 'Work With Us' : 'Bekerja Bersama Kami' }}
+</a>
 </div>
 </div>
 <div class="relative mt-unit-lg md:mt-0">
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl"></div>
-<img alt="Software Development Workflow" class="rounded-xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]" data-alt="A group of professional software engineers and AI specialists collaborating in a high-tech Indonesian office. Large screens show complex code and data visualizations. The environment is filled with soft, warm morning light, emphasizing a productive and modern workplace. The visual style is clean, corporate, and high-contrast, featuring Nakala Digital's signature cyan and navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO"/>
+<img alt="Software Development Workflow" class="rounded-xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]" data-alt="A group of professional software engineers..." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO"/>
 </div>
 </div>
 </header>
@@ -151,13 +155,13 @@ About Us
 <section class="bg-on-background py-unit-lg border-y border-outline-variant">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-unit-md">
 <div class="text-surface-variant font-body-md text-body-md italic opacity-80">
-                Official Strategic Partner
+                {{ app()->getLocale() === 'en' ? 'Official Strategic Partner' : 'Mitra Strategis Resmi' }}
             </div>
 <div class="flex items-center space-x-unit-lg">
-<img alt="Romulus Digital Logo" class="h-12 w-auto object-contain bg-white rounded-md p-2 opacity-90" data-alt="The Romulus Digital logo rendered as a sleek, professional badge in a monochromatic white on a dark navy background. The design is minimalist and authoritative, symbolizing a strong regional partnership. The lighting is flat and modern, focusing on the clarity of the typography and the stability of the brand." src="{{ asset('assets/romulus-hitam.png') }}"/>
+<img alt="Romulus Digital Logo" class="h-12 w-auto object-contain bg-white rounded-md p-2 opacity-90" src="{{ asset('assets/romulus-hitam.png') }}"/>
 <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
 <p class="text-surface-container-highest font-label-sm text-label-sm max-w-[200px]">
-                    Local Delivery, Regional Capability
+                    {{ app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional' }}
                 </p>
 </div>
 </div>
@@ -165,7 +169,7 @@ About Us
 <!-- Mission & Vision Bento Grid -->
 <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-unit-lg">
-<h2 class="font-headline-h2 text-headline-h2 text-on-surface">Visi &amp; Misi Kami</h2>
+<h2 class="font-headline-h2 text-headline-h2 text-on-surface">{{ app()->getLocale() === 'en' ? 'Our Vision & Mission' : 'Visi & Misi Kami' }}</h2>
 <div class="h-1.5 w-24 bg-primary-container mt-unit-sm"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
@@ -173,9 +177,11 @@ About Us
 <div class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-xl flex flex-col justify-between border-t-4 border-primary-fixed">
 <div class="space-y-unit-md">
 <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">visibility</span>
-<h3 class="font-headline-h3 text-headline-h3">Visi / Vision</h3>
+<h3 class="font-headline-h3 text-headline-h3">{{ app()->getLocale() === 'en' ? 'Vision' : 'Visi' }}</h3>
 <p class="font-body-md text-body-md opacity-90">
-                        Menjadi katalisator transformasi digital terdepan di Indonesia dengan mengintegrasikan kecerdasan buatan dalam setiap solusi bisnis.
+                        {{ app()->getLocale() === 'en'
+                            ? 'To be the leading catalyst of digital transformation in Indonesia by integrating artificial intelligence into every business solution.'
+                            : 'Menjadi katalisator transformasi digital terdepan di Indonesia dengan mengintegrasikan kecerdasan buatan dalam setiap solusi bisnis.' }}
                     </p>
 </div>
 </div>
@@ -184,36 +190,36 @@ About Us
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">01</div>
 <div>
-<p class="font-body-md text-body-md font-bold">Innovation First</p>
-<p class="text-on-surface-variant text-label-sm">Delivering AI-powered solutions that redefine efficiency.</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Innovation First' : 'Inovasi Utama' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Delivering AI-powered solutions that redefine efficiency.' : 'Memberikan solusi bertenaga AI yang mendefinisikan ulang efisiensi.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">02</div>
 <div>
-<p class="font-body-md text-body-md font-bold">Local Expertise</p>
-<p class="text-on-surface-variant text-label-sm">Empowering local industries with deep regional context.</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Local Expertise' : 'Keahlian Lokal' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Empowering local industries with deep regional context.' : 'Memberdayakan industri lokal dengan konteks regional yang mendalam.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">03</div>
 <div>
-<p class="font-body-md text-body-md font-bold">Scalable Growth</p>
-<p class="text-on-surface-variant text-label-sm">Building software that grows with your business needs.</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Scalable Growth' : 'Pertumbuhan Terukur' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Building software that grows with your business needs.' : 'Membangun perangkat lunak yang berkembang sesuai kebutuhan bisnis Anda.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">04</div>
 <div>
-<p class="font-body-md text-body-md font-bold">Human Centric</p>
-<p class="text-on-surface-variant text-label-sm">Designing digital experiences that prioritize people.</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Human Centric' : 'Berpusat pada Manusia' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Designing digital experiences that prioritize people.' : 'Merancang pengalaman digital yang memprioritaskan manusia.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md sm:col-span-2">
 <div class="text-primary font-bold text-headline-h3 shrink-0">05</div>
 <div>
-<p class="font-body-md text-body-md font-bold">Strategic Partnership</p>
-<p class="text-on-surface-variant text-label-sm">Strengthening the bond with Romulus Digital for world-class standards.</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Strategic Partnership' : 'Kemitraan Strategis' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Strengthening the bond with Romulus Digital for world-class standards.' : 'Memperkuat hubungan dengan Romulus Digital untuk standar kelas dunia.' }}</p>
 </div>
 </div>
 </div>
@@ -223,8 +229,8 @@ About Us
 <section class="bg-surface-container-highest py-unit-xl">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center mb-unit-xl">
-<h2 class="font-headline-h2 text-headline-h2 text-on-surface">Mengapa Nakala Digital?</h2>
-<p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">Why Nakala: Delivering Excellence through 6 Core Pillars</p>
+<h2 class="font-headline-h2 text-headline-h2 text-on-surface">{{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">{{ app()->getLocale() === 'en' ? 'Why Nakala: Delivering Excellence through 6 Core Pillars' : 'Mengapa Nakala: Memberikan Keunggulan melalui 6 Pilar Utama' }}</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Reason 1 -->
@@ -232,48 +238,72 @@ About Us
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">Local Delivery</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">On-the-ground support with deep understanding of the Indonesian market landscape.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'On-the-ground support with deep understanding of the Indonesian market landscape.' 
+        : 'Dukungan langsung di lapangan dengan pemahaman mendalam tentang lanskap pasar Indonesia.' }}
+</p>
 </div>
 <!-- Reason 2 -->
 <div class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">AI Mindset</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">Every solution we build is future-proofed with AI-readiness from the architectural level.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'Every solution we build is future-proofed with AI-readiness from the architectural level.' 
+        : 'Setiap solusi yang kami bangun terjamin masa depannya dengan kesiapan AI sejak tingkat arsitektur.' }}
+</p>
 </div>
 <!-- Reason 3 -->
 <div class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">Agile/QA Focused</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">Iterative development with rigorous automated testing to ensure rock-solid stability.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'Iterative development with rigorous automated testing to ensure rock-solid stability.' 
+        : 'Pengembangan iteratif dengan pengujian otomatis yang ketat untuk memastikan stabilitas yang kokoh.' }}
+</p>
 </div>
 <!-- Reason 4 -->
 <div class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">Regional Capability</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.' 
+        : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
+</p>
 </div>
 <!-- Reason 5 -->
 <div class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">Enterprise Security</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">Adhering to international security standards (ISO/IEC 27001) for all data handling.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.' 
+        : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
+</p>
 </div>
 <!-- Reason 6 -->
 <div class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all">
 <div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-sm mb-unit-md group-hover:bg-primary-container transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
 </div>
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">Rapid Deployment</h4>
-<p class="text-on-surface-variant font-body-md text-body-md">Proprietary frameworks that allow us to launch MVPs 30% faster than industry standards.</p>
+<h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">
+    {{ app()->getLocale() === 'en' 
+        ? 'Proprietary frameworks that allow us to launch MVPs 30% faster than industry standards.' 
+        : 'Kerangka kerja kepemilikan yang memungkinkan kami meluncurkan MVP 30% lebih cepat daripada standar industri.' }}
+</p>
 </div>
 </div>
 </div>
