@@ -16,15 +16,15 @@
                 <div class="space-y-3">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">location_on</span>
-                        <span class="font-body-md text-surface-variant text-sm">Balikpapan, Kalimantan Timur, Indonesia</span>
+                        <span class="font-body-md text-surface-variant text-sm">Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum, Bandung Wetan, Bandung City, West Java 40115</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary text-[18px]">mail</span>
-                        <span class="font-body-md text-surface-variant text-sm">hello@nakala.digital</span>
+                        <span class="font-body-md text-surface-variant text-sm">contact@nakala.digital</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary text-[18px]">phone</span>
-                        <span class="font-body-md text-surface-variant text-sm">+62 xxx xxxx xxxx</span>
+                        <span class="font-body-md text-surface-variant text-sm">0822-9570-6304</span>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
             <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-label-sm text-white uppercase tracking-widest">Strategic Partner</h4>
                 <div class="bg-white/5 p-4 rounded-xl border border-white/10 inline-block">
-                    <img alt="Romulus Digital" class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}"/>
+                    <img alt="Romulus Digital" class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-putih.png') }}"/>
                     <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">Official Regional Partner</p>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                 <h4 class="font-label-sm text-white uppercase tracking-widest">Find Us</h4>
                 <div class="h-[180px] rounded-xl overflow-hidden border border-white/10 ring-1 ring-white/5">
                     <iframe
-                        src="https://maps.google.com/maps?q=Balikpapan,+Kalimantan+Timur,+Indonesia&output=embed&hl=id&z=13"
+                        src="https://maps.google.com/maps?q=Pointlab+Coworking+Space,+Graha+Pos+Indonesia,+Jl.+Banda+No.30+Lantai+2+Blok+C,+Citarum,+Bandung+Wetan,+Bandung+City,+West+Java+40115&output=embed&hl=id&z=16"
                         width="100%"
                         height="100%"
                         style="border:0; filter:invert(90%) hue-rotate(180deg) saturate(0.8);"
