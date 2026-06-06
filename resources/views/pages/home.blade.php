@@ -1,267 +1,326 @@
-@extends('layouts.stitch')
+<!DOCTYPE html>
 
-@section('content')
-@php
-    $serviceIcons = ['psychology', 'code_blocks', 'handshake', 'language', 'verified_user', 'support_agent'];
-    $solutionIcons = ['groups', 'storefront', 'school', 'account_balance_wallet', 'inventory_2', 'security', 'account_balance', 'restaurant', 'badge', 'health_and_safety', 'web', 'record_voice_over'];
-    $deliveryIcons = ['search', 'fact_check', 'draw', 'code', 'bug_report', 'rocket_launch', 'support_agent'];
-    $solutionHighlights = $content['solution_highlights'] ?? array_map(fn ($item) => $item['name'], $content['portfolio_items'] ?? []);
-@endphp
-
+<html class="scroll-smooth" lang="{{ app()->getLocale() }}"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{ app()->getLocale() === 'en' ? 'Nakala Digital | Local Delivery, Regional Capability' : 'Nakala Digital | Layanan Lokal, Kemampuan Regional' }}</title>
+@include('partials.seo', [
+    'title' => app()->getLocale() === 'en' ? 'Nakala Digital | Local Delivery, Regional Capability' : 'Nakala Digital | Layanan Lokal, Kemampuan Regional',
+    'description' => app()->getLocale() === 'en' 
+        ? 'AI, Software Development & Digital Solutions Partner for Business Growth. Your strategic partner in Indonesia with regional expertise.' 
+        : 'Mitra Solusi Digital, Pengembangan Perangkat Lunak & AI untuk Pertumbuhan Bisnis Anda.'
+])
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#00677d",
+                "on-error": "#ffffff",
+                "outline-variant": "#bcc8ce",
+                "on-tertiary-fixed": "#112000",
+                "on-secondary-fixed": "#021943",
+                "surface-dim": "#d5dbdd",
+                "secondary-container": "#b9cbff",
+                "primary-fixed-dim": "#56d6f9",
+                "tertiary-fixed": "#abf837",
+                "error": "#ba1a1a",
+                "on-secondary-container": "#435582",
+                "background": "#f5fafd",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#eff4f7",
+                "on-tertiary-container": "#253e00",
+                "on-primary-fixed": "#001f27",
+                "on-primary": "#ffffff",
+                "outline": "#6d797e",
+                "inverse-primary": "#56d6f9",
+                "surface-container": "#e9eff1",
+                "on-error-container": "#93000a",
+                "secondary-fixed-dim": "#b3c6f9",
+                "surface-bright": "#f5fafd",
+                "surface-container-highest": "#dee3e6",
+                "primary-fixed": "#b2ebff",
+                "primary-container": "#12aed0",
+                "primary": "#00677d",
+                "on-primary-container": "#003c4a",
+                "on-surface-variant": "#3d494d",
+                "on-primary-fixed-variant": "#004e5f",
+                "on-tertiary-fixed-variant": "#314f00",
+                "on-background": "#171c1f",
+                "on-secondary-fixed-variant": "#334671",
+                "tertiary-container": "#73b100",
+                "on-surface": "#171c1f",
+                "tertiary": "#426900",
+                "surface": "#f5fafd",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "surface-container-high": "#e4e9ec",
+                "secondary-fixed": "#d9e2ff",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#2c3133",
+                "tertiary-fixed-dim": "#90db0e",
+                "secondary": "#4b5d8a",
+                "inverse-on-surface": "#ecf1f4",
+                "surface-variant": "#dee3e6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "unit-xl": "64px",
+                "unit-lg": "32px",
+                "margin-mobile": "20px",
+                "margin-desktop": "80px",
+                "unit-xs": "4px",
+                "container-max": "1280px",
+                "unit-md": "16px",
+                "unit-sm": "8px"
+            },
+            "fontFamily": {
+                "display-lg-mobile": ["Poppins"],
+                "body-md": ["Poppins"],
+                "button": ["Poppins"],
+                "headline-h1-mobile": ["Poppins"],
+                "headline-h2": ["Poppins"],
+                "body-lg": ["Poppins"],
+                "headline-h2-mobile": ["Poppins"],
+                "headline-h1": ["Poppins"],
+                "headline-h3": ["Poppins"],
+                "display-lg": ["Poppins"],
+                "label-sm": ["Poppins"]
+            },
+            "fontSize": {
+                "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "button": ["15px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-h1-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-h2": ["40px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-h2-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "headline-h1": ["56px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "headline-h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item {
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+        .bento-item:hover {
+            border-color: #12AED0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+@include('partials.navbar')
 <main class="pt-20">
-    <section class="home-hero px-margin-mobile md:px-margin-desktop py-lg bg-primary-fixed" id="cover">
-        <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-xl items-center">
-            <div class="hero-copy">
-                <div class="section-kicker inline-flex items-center gap-xs rounded-pill bg-white border border-outline px-sm py-xs text-secondary-fixed font-label-sticker text-label-sticker mb-md shadow-soft">
-                    <span>{{ $content['home']['eyebrow'] }}</span>
-                </div>
-
-                <div class="w-56 max-w-full h-16 mb-md">
-                    @include('partials.logo')
-                </div>
-
-                <h1 class="font-display text-[42px] leading-[48px] md:text-[58px] md:leading-[64px] xl:text-[64px] xl:leading-[70px] text-secondary-fixed max-w-5xl mb-md">
-                    {{ $locale === 'id'
-                        ? 'Mitra AI, Software Development & Digital Solutions'
-                        : 'AI Technology, Software Development & Digital Solutions Partner' }}
-                </h1>
-
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-lg">
-                    {{ $content['home']['lead'] }}
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-sm mb-lg">
-                    <a class="inline-flex min-h-12 items-center justify-center gap-xs rounded-pill bg-primary text-on-primary px-md py-sm font-label-sticker text-label-sticker shadow-soft hover:bg-tertiary transition-colors" href="{{ route('contact', ['locale' => $locale]) }}">
-                        <span class="material-symbols-outlined text-[20px]">forum</span>
-                        <span>{{ $locale === 'id' ? 'Mulai Diskusi' : 'Get in Touch' }}</span>
-                    </a>
-                    <a class="inline-flex min-h-12 items-center justify-center gap-xs rounded-pill bg-white text-secondary-fixed border border-outline px-md py-sm font-label-sticker text-label-sticker hover:border-primary hover:text-primary transition-colors" href="{{ route('services', ['locale' => $locale]) }}">
-                        <span class="material-symbols-outlined text-[20px]">design_services</span>
-                        <span>{{ $locale === 'id' ? 'Lihat Layanan' : 'Explore Services' }}</span>
-                    </a>
-                </div>
-
-                <p class="font-label-code text-label-code text-secondary-fixed/70">
-                    Strategic Partner of Romulus Digital
-                </p>
-            </div>
-
-            <div class="hero-product-preview corporate-card p-sm md:p-md">
-                <div class="flex items-center justify-between gap-sm border-b border-outline-variant pb-sm mb-md">
-                    <div>
-                        <p class="font-label-sticker text-label-sticker text-primary mb-xs">
-                            {{ $locale === 'id' ? 'Delivery Snapshot' : 'Delivery Snapshot' }}
-                        </p>
-                        <h2 class="font-headline-md text-headline-md text-secondary-fixed">
-                            {{ $locale === 'id' ? 'Produk digital yang siap dipakai bisnis.' : 'Digital products ready for business use.' }}
-                        </h2>
-                    </div>
-                    <span class="material-symbols-outlined text-primary text-[42px]">monitoring</span>
-                </div>
-
-                <div class="hero-window hero-window-main overflow-hidden mb-sm">
-                    <img src="{{ asset('assets/portfolio/mahya-hrms.png') }}" alt="Mahya HRMS dashboard preview">
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-[1fr_0.82fr] gap-sm mb-sm">
-                    <div class="hero-window hero-window-mini overflow-hidden">
-                        <img src="{{ asset('assets/portfolio/360-customer-engagement.png') }}" alt="Customer engagement platform preview">
-                    </div>
-                    <div class="grid grid-cols-2 gap-xs">
-                        <div class="metric-pill rounded-card p-sm">
-                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">AI</p>
-                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">GenAI</p>
-                        </div>
-                        <div class="metric-pill rounded-card p-sm">
-                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">QA</p>
-                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">SIT/UAT</p>
-                        </div>
-                        <div class="metric-pill rounded-card p-sm">
-                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">D365</p>
-                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">Support</p>
-                        </div>
-                        <div class="metric-pill rounded-card p-sm">
-                            <p class="font-label-code text-label-code text-on-surface-variant mb-xs">Build</p>
-                            <p class="font-label-sticker text-label-sticker text-secondary-fixed">Web App</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid gap-xs">
-                    @foreach ($content['capabilities'] as $capability)
-                        <article class="rounded-card border border-outline-variant bg-surface-container-low p-sm">
-                            <div class="flex gap-sm">
-                                <span class="material-symbols-outlined text-primary text-[28px] flex-shrink-0">{{ ['architecture', 'code_blocks', 'psychology'][$loop->index] }}</span>
-                                <div>
-                                    <h3 class="font-label-sticker text-label-sticker text-secondary-fixed mb-xs">{{ $capability['title'] }}</h3>
-                                    <p class="font-body-md text-body-md text-on-surface-variant">{{ $capability['body'] }}</p>
-                                </div>
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white" id="about">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-xl items-start">
-            <div>
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['about']['eyebrow'] }}</p>
-                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-md">
-                    {{ $content['about_detail']['positioning_title'] }}
-                </h2>
-                <div class="space-y-sm font-body-lg text-body-lg text-on-surface-variant">
-                    @foreach ($content['about_detail']['positioning_body'] as $paragraph)
-                        <p>{{ $paragraph }}</p>
-                    @endforeach
-                </div>
-            </div>
-
-            <div class="grid gap-md">
-                @foreach ($content['philosophy'] as $pillar)
-                    <article class="corporate-card p-md">
-                        <div class="flex items-start gap-sm">
-                            <span class="w-12 h-12 rounded-card bg-primary-fixed text-primary grid place-items-center flex-shrink-0">
-                                <span class="material-symbols-outlined">{{ ['workspace_premium', 'tips_and_updates', 'trending_up'][$loop->index] }}</span>
-                            </span>
-                            <div>
-                                <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-xs">{{ $pillar['title'] }}</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">{{ $pillar['body'] }}</p>
-                            </div>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-surface-container-low" id="services-overview">
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-md mb-lg">
-            <div class="max-w-4xl">
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['pillars_label'] }}</p>
-                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-sm">
-                    {{ $content['services']['pillars_title'] }}
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant">{{ $content['services']['lead'] }}</p>
-            </div>
-            <a class="inline-flex min-h-12 items-center justify-center gap-xs rounded-pill bg-primary text-on-primary px-md py-sm font-label-sticker text-label-sticker hover:bg-tertiary transition-colors" href="{{ route('services', ['locale' => $locale]) }}">
-                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-                <span>{{ $locale === 'id' ? 'Detail Layanan' : 'Service Details' }}</span>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-            @foreach ($content['service_pillar_details'] as $pillar)
-                <article class="corporate-card p-md h-full">
-                    <div class="flex items-start justify-between gap-sm mb-md">
-                        <span class="w-12 h-12 rounded-card bg-primary-fixed text-primary grid place-items-center">
-                            <span class="material-symbols-outlined text-[28px]">{{ $serviceIcons[$loop->index] }}</span>
-                        </span>
-                        <span class="font-label-code text-label-code text-on-surface-variant">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-                    </div>
-                    <h3 class="font-headline-md text-headline-md text-secondary-fixed mb-sm">{{ $pillar['title'] }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">{{ $pillar['body'] }}</p>
-                </article>
-            @endforeach
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white" id="solutions">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-xl items-start">
-            <div class="lg:sticky lg:top-28">
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['services']['solutions_label'] }}</p>
-                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-md">
-                    {{ $locale === 'id' ? 'Capability konkret untuk kebutuhan market Indonesia.' : 'Concrete capabilities for real market needs.' }}
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">
-                    {{ $locale === 'id'
-                        ? 'Area solusi ditampilkan sebagai capability dan direction, sehingga tetap informatif tanpa klaim client berlebihan.'
-                        : 'Solution areas are presented as capabilities and market directions, keeping the portfolio informative without overstated client claims.' }}
-                </p>
-                <a class="inline-flex items-center gap-xs text-primary font-label-sticker text-label-sticker hover:text-tertiary transition-colors" href="{{ route('portfolio', ['locale' => $locale]) }}">
-                    <span>{{ $locale === 'id' ? 'Lihat Portfolio' : 'View Portfolio' }}</span>
-                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-                </a>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
-                @foreach ($solutionHighlights as $solution)
-                    <article class="rounded-card border border-outline-variant bg-surface-container-low p-sm">
-                        <div class="flex gap-sm">
-                            <span class="w-10 h-10 rounded-card bg-white text-primary grid place-items-center flex-shrink-0 border border-outline-variant">
-                                <span class="material-symbols-outlined text-[22px]">{{ $solutionIcons[$loop->index % count($solutionIcons)] }}</span>
-                            </span>
-                            <h3 class="font-label-sticker text-label-sticker text-secondary-fixed">{{ $solution }}</h3>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl dark-band" id="delivery-process">
-        <div class="max-w-4xl mb-lg">
-            <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['delivery']['agile_label'] }}</p>
-            <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white mb-sm">
-                {{ $content['delivery']['agile_title'] }}
-            </h2>
-            <p class="font-body-lg text-body-lg text-white/75">{{ $content['delivery']['lead'] }}</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-7 gap-sm">
-            @foreach ($content['delivery_steps'] as $step)
-                <article class="rounded-card border border-white/15 bg-white/5 p-sm">
-                    <span class="w-11 h-11 rounded-card bg-primary text-on-primary grid place-items-center mb-sm">
-                        <span class="material-symbols-outlined text-[24px]">{{ $deliveryIcons[$loop->index] }}</span>
-                    </span>
-                    <p class="font-label-code text-label-code text-white/50 mb-xs">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</p>
-                    <h3 class="font-label-sticker text-label-sticker text-white">{{ $step }}</h3>
-                </article>
-            @endforeach
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-primary-fixed" id="partnership">
-        <div class="corporate-card p-md md:p-lg grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-lg items-center">
-            <div>
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">Strategic Partnership</p>
-                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-secondary-fixed mb-md">
-                    Strategic Partner of Romulus Digital
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant">
-                    {{ $content['about_detail']['romulus_note'] }}
-                </p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-sm">
-                @foreach (array_slice($content['partners'], 0, 3) as $partner)
-                    <div class="rounded-card border border-outline-variant bg-surface-container-low p-md text-center">
-                        <span class="material-symbols-outlined text-primary text-[32px] mb-sm block">{{ ['handshake', 'public', 'cloud'][$loop->index] }}</span>
-                        <h3 class="font-label-sticker text-label-sticker text-secondary-fixed">{{ $partner }}</h3>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section class="px-margin-mobile md:px-margin-desktop py-xl bg-white" id="contact-cta">
-        <div class="dark-band rounded-card p-md md:p-lg grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-lg items-center">
-            <div>
-                <p class="font-label-sticker text-label-sticker text-primary mb-sm">{{ $content['contact']['eyebrow'] }}</p>
-                <h2 class="font-display text-headline-lg-mobile md:text-headline-lg text-white mb-sm">
-                    {{ $locale === 'id' ? 'Diskusikan kebutuhan digital organisasi Anda.' : "Discuss your organization's digital needs." }}
-                </h2>
-                <p class="font-body-lg text-body-lg text-white/75 max-w-3xl">{{ $content['contact']['lead'] }}</p>
-            </div>
-            <div class="grid gap-xs">
-                <a class="inline-flex min-h-12 items-center justify-center gap-xs rounded-pill bg-primary text-on-primary px-md py-sm font-label-sticker text-label-sticker hover:bg-tertiary transition-colors" href="{{ route('contact', ['locale' => $locale]) }}">
-                    <span class="material-symbols-outlined text-[20px]">forum</span>
-                    <span>{{ $locale === 'id' ? 'Hubungi Tim' : 'Discuss Your Project' }}</span>
-                </a>
-                <p class="font-label-code text-label-code text-white/60 text-center">{{ $site['brand']['email'] }}</p>
-                <p class="font-label-code text-label-code text-white/60 text-center">{{ $site['brand']['location'] }}</p>
-            </div>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface-container-lowest py-unit-xl lg:py-32 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
+<div class="space-y-unit-lg z-10">
+<div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+Regional Tech Capability
+</div>
+<h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
+                        AI, Software Development &amp; Digital Solutions Partner for <span class="text-primary">Business Growth</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Local delivery with enterprise standards and regional backing. We bridge Indonesian business needs with world-class technical execution.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
+                            Siap Membangun Solusi?
+                        </button>
+<button class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
+                            Lihat Portofolio
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 rounded-xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+<img alt="AI Dashboard Visualization" class="relative rounded-lg shadow-2xl border-4 border-surface-container-high w-full" data-alt="A sophisticated dark-themed AI technology dashboard with complex data visualizations, glowing cyan line graphs, and hexagonal grid patterns. The UI is clean and modern, representing enterprise-level analytics. Soft volumetric lighting highlights the depth of the interface against a deep midnight navy background, conveying precision and high-tier technical capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAJsV3r7YbZ2WLV8HysYxDcgC09shBxz2HJ-L9ziBmit0_beLik2uLipeqEcSm9h5oRtYrp81qEN_Ihx3sqMZADJzKvtHVNv0gwnsDYOnW4nBjc_-sTG4TVEJCTAlXHoJsQV3QrgUh8sBOeWXG09W_itrv5BDyw2rdaHr9mRe8JORt7XcJ6e0gZQBFvbLPG09QhqnaRAvX1m85IW87-9UQUK60uuGFvPTkf7qufJinQhj0LLnucDKM7bkS1DbWzrEDTjwN9agOJnZ"/>
+</div>
+</div>
+</section>
+<!-- Partner Badge Section -->
+<section class="bg-on-secondary-fixed py-unit-lg border-y border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-unit-md">
+<span class="font-label-sm text-secondary-fixed tracking-[0.2em] uppercase text-center md:text-left">Representative &amp; Strategic Delivery Partner</span>
+<div class="bg-surface-container-lowest/10 p-unit-md rounded-xl border border-white/10 hover:border-primary-fixed-dim transition-colors group">
+<img alt="Romulus Digital Logo" class="h-12 object-contain opacity-90 group-hover:opacity-100 transition-opacity bg-white rounded-md p-2" src="{{ asset('assets/romulus-hitam.png') }}"/>
+</div>
+</div>
+</section>
+<!-- Social Proof Metrics -->
+<section class="py-unit-xl bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
+<div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">8+</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Enterprise Projects</div>
+</div>
+<div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
+<div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3+</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Years Expertise</div>
+</div>
+<div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
+<div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Leadership Hubs</div>
+</div>
+<div class="text-center p-unit-lg">
+<div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">24/7</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Regional Support</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Bento Grid -->
+<section class="py-unit-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-unit-xl max-w-2xl">
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">Capabilities that Empower</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We deliver technical rigor through a diverse range of specialized digital services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Bento Item 1 -->
+<div class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-lg border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
+<div class="space-y-unit-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">settings_suggest</span>
+<h3 class="font-headline-h3 text-headline-h3">Software Development</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Custom enterprise solutions, mobile applications, and scalable web platforms built with modern architectures like Microservices and Serverless.</p>
+</div>
+<div class="mt-unit-lg">
+<ul class="grid grid-cols-2 gap-unit-sm">
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Web Apps</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Mobile Native</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> API Integration</li>
+<li class="flex items-center gap-unit-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Legacy Migration</li>
+</ul>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-lg text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
+<div class="h-full flex flex-col justify-between">
+<div class="space-y-unit-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl">psychology</span>
+<h3 class="font-headline-h3 text-headline-h3">AI Tech</h3>
+<p class="font-body-md text-secondary-fixed">Integrating Generative AI and Machine Learning to automate complex workflows and drive intelligent decision making.</p>
+</div>
+<div class="bg-surface-container-lowest/10 p-unit-md rounded mt-unit-lg">
+<span class="font-label-sm text-tertiary-fixed uppercase">Strategic Focus</span>
+</div>
+</div>
+</div>
+<!-- Bento Item 3 -->
+<div class="md:col-span-4 bg-surface-container-highest p-unit-lg rounded-lg border border-outline-variant group hover:bg-surface-container-lowest transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-unit-md">query_stats</span>
+<h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">Tech Consulting</h3>
+<p class="font-body-md text-on-surface-variant">Strategic roadmap development and digital transformation advisory for growing regional enterprises.</p>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
+<div class="z-10 space-y-unit-md">
+<h3 class="font-headline-h2-mobile text-white">Local Delivery, Enterprise Standards.</h3>
+<p class="font-body-lg text-primary-fixed max-w-lg">We provide the stability of a regional powerhouse with the agility and context of a local partner.</p>
+</div>
+<div class="absolute right-[-10%] top-[-10%] opacity-10">
+<span class="material-symbols-outlined text-[300px]">language</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Narrative Section -->
+<section class="py-unit-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
+<div class="order-2 lg:order-1">
+<img alt="Nakala Digital Team Collaboration" class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O"/>
+</div>
+<div class="order-1 lg:order-2 space-y-unit-lg">
+<span class="font-label-sm text-primary uppercase tracking-[0.3em]">Who We Are</span>
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">Bridging the Gap in Regional Tech Execution</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Nakala Digital was born from the need for a software partner that understands the nuances of the Indonesian market while operating with the precision of regional leaders. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        As the strategic delivery partner of Romulus Digital, we bring world-class engineering processes, security standards, and technical innovation directly to your doorstep.
+                    </p>
+<div class="grid grid-cols-2 gap-unit-md border-l-4 border-primary pl-unit-md">
+<div>
+<span class="block font-headline-h3 text-on-background">100%</span>
+<span class="font-label-sm text-on-surface-variant uppercase">Local Commitment</span>
+</div>
+<div>
+<span class="block font-headline-h3 text-on-background">ISO</span>
+<span class="font-label-sm text-on-surface-variant uppercase">Aligned Standards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-unit-xl bg-on-secondary-fixed text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-5">
+<div class="grid grid-cols-6 h-full">
+<div class="border-r border-white"></div>
+<div class="border-r border-white"></div>
+<div class="border-r border-white"></div>
+<div class="border-r border-white"></div>
+<div class="border-r border-white"></div>
+<div></div>
+</div>
+</div>
+<div class="max-w-2xl mx-auto px-margin-mobile relative z-10 space-y-unit-lg">
+<h2 class="font-headline-h1-mobile text-headline-h1-mobile text-white">Siap membangun solusi digital yang lebih rapi, cepat, dan berdampak?</h2>
+<p class="font-body-lg text-secondary-fixed">Mulai konsultasi gratis hari ini dan temukan potensi digital bisnis Anda.</p>
+<div class="pt-unit-md">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        Discuss Your Project
+                    </button>
+</div>
+</div>
+</section>
 </main>
-@endsection
+<!-- Footer -->
+@include('partials.footer')
+<script>
+        // Simple scroll header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 20) {
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('h-16');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>

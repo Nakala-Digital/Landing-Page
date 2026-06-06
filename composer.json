@@ -1,9 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "nakala-digital/company-profile",
+    "name": "laravel/laravel",
     "type": "project",
-    "description": "Nakala Digital company profile website built with Laravel.",
-    "keywords": ["nakala-digital", "company-profile", "laravel", "ai-technology", "software-development"],
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
         "php": "^8.2",

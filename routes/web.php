@@ -1,77 +1,31 @@
 <?php
 
-use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;
-use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
-use Illuminate\View\Middleware\ShareErrorsFromSession;
-use Illuminate\Session\Middleware\StartSession;
 
-$crawlerSafeMiddleware = [
-    AddQueuedCookiesToResponse::class,
-    EncryptCookies::class,
-    ShareErrorsFromSession::class,
-    StartSession::class,
-    ValidateCsrfToken::class,
-];
+function registerCompanyProfileRoutes($suffix = '')
+{
+    Route::view('/', 'pages.home')->name('home' . $suffix);
+    Route::view('/home', 'pages.home')->name('home.page' . $suffix);
+    Route::view('/about', 'pages.about')->name('about' . $suffix);
+    Route::view('/services', 'pages.service')->name('services' . $suffix);
+    Route::view('/service', 'pages.service')->name('service' . $suffix);
+    Route::view('/solutions', 'pages.solutions')->name('solutions' . $suffix);
+    Route::view('/delivery', 'pages.delivery')->name('delivery' . $suffix);
+    Route::view('/portfolio', 'pages.portfolio')->name('portfolio' . $suffix);
+    Route::view('/portopolio', 'pages.portfolio')->name('portopolio' . $suffix);
+    Route::view('/partnership', 'pages.partnership')->name('partnership' . $suffix);
+    Route::view('/patnership', 'pages.partnership')->name('patnership' . $suffix);
+    Route::view('/team', 'pages.team')->name('team' . $suffix);
+    Route::view('/team-leadership', 'pages.team')->name('team.leadership' . $suffix);
+    Route::view('/faq', 'pages.faq')->name('faq' . $suffix);
+    Route::view('/contact', 'pages.contact')->name('contact' . $suffix);
+}
 
-$renderPage = static function (string $locale, string $key) {
-    abort_unless(array_key_exists($locale, config('site.locales')), 404);
+// English prefix
+Route::prefix('en')->group(function () {
+    registerCompanyProfileRoutes('.en');
+});
 
-    app()->setLocale($locale);
+// Default (Indonesian)
+registerCompanyProfileRoutes();
 
-    $page = config("site.pages.$key");
-
-    return view($page['view'], [
-        'locale' => $locale,
-        'pageKey' => $key,
-        'page' => array_merge($page, $page['meta'][$locale]),
-        'site' => config('site'),
-        'content' => array_replace_recursive(
-            config("site.content.$locale"),
-            config("site_details.$locale", []),
-        ),
-    ]);
-};
-
-Route::get('/', fn () => redirect()->route('home', ['locale' => config('site.default_locale')]));
-
-Route::prefix('{locale}')
-    ->whereIn('locale', array_keys(config('site.locales')))
-    ->group(function () use ($renderPage) {
-        Route::get('/', fn (string $locale) => $renderPage($locale, 'home'))->name('home');
-        Route::get('/about', fn (string $locale) => $renderPage($locale, 'about'))->name('about');
-        Route::get('/services', fn (string $locale) => $renderPage($locale, 'services'))->name('services');
-        Route::get('/delivery', fn (string $locale) => $renderPage($locale, 'delivery'))->name('delivery');
-        Route::get('/portfolio', fn (string $locale) => $renderPage($locale, 'portfolio'))->name('portfolio');
-        Route::get('/team', fn (string $locale) => $renderPage($locale, 'team'))->name('team');
-        Route::get('/contact', fn (string $locale) => $renderPage($locale, 'contact'))->name('contact');
-    });
-
-Route::get('/robots.txt', function () {
-    $publicUrl = rtrim(config('site.public_url'), '/');
-
-    $body = implode("\n", [
-        'User-agent: *',
-        'Allow: /',
-        'Sitemap: '.$publicUrl.'/sitemap.xml',
-        '',
-    ]);
-
-    return Response::make($body, 200, [
-        'Content-Type' => 'text/plain; charset=utf-8',
-        'Cache-Control' => 'public, max-age=3600',
-    ]);
-})->withoutMiddleware($crawlerSafeMiddleware)->name('robots');
-
-Route::get('/sitemap.xml', function () {
-    return response()
-        ->view('sitemap', [
-            'pages' => config('site.pages'),
-            'locales' => array_keys(config('site.locales')),
-            'lastmod' => now()->toAtomString(),
-        ], 200)
-        ->header('Content-Type', 'application/xml; charset=UTF-8')
-        ->header('Cache-Control', 'public, max-age=3600');
-})->withoutMiddleware($crawlerSafeMiddleware)->name('sitemap');
