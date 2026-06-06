@@ -105,10 +105,10 @@
             </div>
 
             {{-- Strategic Partner --}}
-            <div class="lg:col-span-2 space-y-4">
-                <h4 class="font-label-sm text-white uppercase tracking-widest">
+            <div class="lg:col-span-2 space-y-4 flex flex-col items-start lg:items-center">
+                <h4 class="font-label-sm text-white uppercase tracking-widest lg:text-center">
                     {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</h4>
-                <div class="bg-white/5 p-4 rounded-xl border border-white/10 inline-block">
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10 inline-flex flex-col items-center text-center">
                     <img alt="Romulus Digital" class="h-10 w-auto object-contain"
                         src="{{ asset('assets/romulus-putih.png') }}" />
                     <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">
