@@ -23,9 +23,8 @@
 <link rel="canonical" href="{{ $currentUrl }}">
 
 <!-- Favicons -->
-<link rel="icon" href="{{ asset('favicon.ico') }}?v=2" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}?v=2">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}?v=2">
+<link rel="icon" type="image/png" href="{{ asset('assets/logo-nakala.png') }}?v=3">
+<link rel="apple-touch-icon" href="{{ asset('assets/logo-nakala.png') }}?v=3">
 
 <!-- Alternate Languages -->
 <link rel="alternate" hreflang="id" href="{{ $alternateIdUrl }}">
