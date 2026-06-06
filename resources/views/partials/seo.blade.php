@@ -1,11 +1,11 @@
 @php
     $locale = app()->getLocale();
     $currentUrl = request()->url();
-    
+
     // Construct alternate URLs
     $currentRouteName = request()->route() ? request()->route()->getName() : null;
     $currentParams = request()->route() ? request()->route()->parameters() : [];
-    
+
     if ($locale === 'en') {
         $idRouteName = str_replace('.en', '', $currentRouteName);
         $alternateIdUrl = $idRouteName && Route::has($idRouteName) ? route($idRouteName, $currentParams) : url('/');
