@@ -291,20 +291,22 @@
                                     ? 'This partnership model keeps accountability clear: Nakala is the primary team your project works with day to day, while Romulus Digital acts as a strategic partner behind the scenes for regional insight, technical confidence, and additional specialist access.'
                                     : 'Model kemitraan ini menjaga akuntabilitas tetap jelas: Nakala adalah tim utama yang bekerja langsung dengan proyek Anda setiap hari, sementara Romulus Digital berperan sebagai mitra strategis di belakang layar untuk insight regional, keyakinan teknis, dan akses spesialis tambahan.' }}
                             </p>
-                            <div class="grid grid-cols-2 gap-unit-md">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
                                 <div
-                                    class="flex min-h-[120px] items-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
-                                    <div class="rounded-lg bg-white px-4 py-3 ring-1 ring-white/20">
+                                    class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
+                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
                                         <img alt="Nakala Digital"
-                                            class="h-10 md:h-12 w-auto object-contain"
+                                            class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
                                 <div
-                                    class="flex min-h-[120px] items-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <img alt="Romulus Digital"
-                                        class="h-10 md:h-12 w-auto object-contain"
-                                        src="{{ asset('assets/romulus-putih.png') }}" />
+                                    class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-5">
+                                        <img alt="Romulus Digital"
+                                            class="h-[56px] w-auto max-w-full object-contain"
+                                            src="{{ asset('assets/romulus-putih.png') }}" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
