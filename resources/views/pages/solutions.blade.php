@@ -211,11 +211,16 @@
                         data-alt="A high-fidelity digital dashboard mockup shown on a clean white laptop screen, positioned at an elegant angle. The interface features complex data visualizations, sleek navigation menus, and clean enterprise aesthetics in a professional light-mode setting. Soft daylight illuminates the scene from the side, creating subtle shadows and a premium, corporate tech-focused atmosphere. The overall composition is minimalist and authoritative."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFPWsSqZB8hiKpSGVy_jWZ7eEnJr7EoYxNuzzHplwocf1eYr5cwAoKX5T-P5RJtbVCsEMouFek11870Wr_jvct94bNTnwXnvYLGXjZdX9oFZlppC0yur0ddxU6aTXprqINg9_hiu_opgd9Z8APaLpqliC3kHbpZUK9TWErcf_Br2WV8h6XCOaNfwHxNbTe6Vds4dyKn5bO4IetclTUlApRCpMNNAWu6wFswHjcwQts3eZ4ejMzcP0dEnrHXbYrhYQlDOsTIE-5cIJA" />
                     <div
-                        class="absolute -bottom-8 -left-8 bg-surface-container-highest p-unit-md rounded-lg border border-outline-variant shadow-lg hidden md:block">
-                        <div class="flex items-center gap-unit-sm text-primary">
-                            <span class="material-symbols-outlined">trending_up</span>
+                        class="absolute bottom-unit-md left-unit-md z-20 hidden md:flex items-center gap-unit-sm rounded-lg border border-primary/40 bg-midnight-navy/95 px-unit-md py-unit-sm shadow-xl backdrop-blur">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-tertiary-fixed text-on-tertiary-fixed">
+                            <span class="material-symbols-outlined text-[22px]">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-tertiary-fixed">
+                                {{ app()->getLocale() === 'en' ? 'Operational Lift' : 'Peningkatan Operasi' }}
+                            </p>
                             <span
-                                class="font-bold">{{ app()->getLocale() === 'en' ? '+45% Efficiency' : '+45% Efisiensi' }}</span>
+                                class="font-bold text-white">{{ app()->getLocale() === 'en' ? '+45% Efficiency' : '+45% Efisiensi' }}</span>
                         </div>
                     </div>
                 </div>
