@@ -20,7 +20,7 @@
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary text-[18px]">mail</span>
-                        <span class="font-body-md text-surface-variant text-sm">hello@nakala.digital</span>
+                        <span class="font-body-md text-surface-variant text-sm">contact@nakala.digital</span>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-primary text-[18px]">phone</span>
@@ -69,11 +69,11 @@
             </div>
 
             {{-- Strategic Partner --}}
-            <div class="lg:col-span-2 space-y-4">
+            <div class="lg:col-span-3 space-y-4">
                 <h4 class="font-label-sm text-white uppercase tracking-widest">Strategic Partner</h4>
                 <div class="bg-white/5 p-4 rounded-xl border border-white/10 inline-block">
-                    <img alt="Romulus Digital" class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}"/>
-                    <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">Official Regional Partner</p>
+                    <img alt="Romulus Digital" class="h-8 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}"/>
+                    <p class="text-[10px] text-surface-variant mt-2 uppercase tracking-wider">Representative &amp; Strategic Delivery Partner</p>
                 </div>
             </div>
 

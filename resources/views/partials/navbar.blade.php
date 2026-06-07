@@ -25,7 +25,7 @@
     }
 @endphp
 
-<header class="fixed top-0 inset-x-0 z-50 h-20 bg-white/95 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.06)] transition-all duration-300">
+<header class="fixed top-0 inset-x-0 z-50 h-20 bg-white shadow-sm transition-all duration-300">
     <nav class="max-w-container-max mx-auto h-full px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-6">
 
         {{-- Logo --}}
@@ -60,14 +60,14 @@
                 <a href="{{ $locale === 'en' ? '#' : $targetUrl }}" class="{{ $locale === 'en' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary' }}">EN</a>
             </div>
 
-            <a class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity" href="{{ route('contact' . $localeSuffix) }}">
+            <a class="inline-flex items-center justify-center bg-electric-cyan text-white px-5 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:bg-electric-cyan/90 transition-colors" href="{{ route('contact' . $localeSuffix) }}">
                 {{ $locale === 'en' ? 'Discuss Project' : 'Konsultasi' }}
             </a>
         </div>
 
         {{-- Mobile Hamburger --}}
         <details class="lg:hidden relative">
-            <summary class="list-none cursor-pointer inline-flex h-10 w-10 items-center justify-center rounded-lg text-primary hover:bg-slate-100 transition-colors">
+            <summary class="list-none cursor-pointer inline-flex h-10 w-10 items-center justify-center rounded-lg text-electric-cyan hover:bg-slate-100 transition-colors">
                 <span class="material-symbols-outlined">menu</span>
             </summary>
             <div class="absolute right-0 mt-3 w-56 rounded-xl bg-white shadow-lg ring-1 ring-black/5 p-2">
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="mt-2 pt-2 border-t border-slate-100">
-                    <a class="block text-center rounded-lg px-4 py-2.5 bg-primary text-white font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity" href="{{ route('contact' . $localeSuffix) }}">
+                    <a class="block text-center rounded-lg px-4 py-2.5 bg-electric-cyan text-white font-button text-button uppercase tracking-wider hover:bg-electric-cyan/90 transition-colors" href="{{ route('contact' . $localeSuffix) }}">
                         {{ $locale === 'en' ? 'Discuss Project' : 'Konsultasi' }}
                     </a>
                 </div>

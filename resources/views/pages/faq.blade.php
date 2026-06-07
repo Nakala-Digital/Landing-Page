@@ -14,59 +14,63 @@
         theme: {
           extend: {
             "colors": {
-                    "surface-tint": "#00677d",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#bcc8ce",
-                    "on-tertiary-fixed": "#112000",
-                    "on-secondary-fixed": "#021943",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#b9cbff",
-                    "primary-fixed-dim": "#56d6f9",
-                    "tertiary-fixed": "#abf837",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#435582",
-                    "background": "#f5fafd",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#253e00",
-                    "on-primary-fixed": "#001f27",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432",
+                    "primary": "#12AED0",
+                    "primary-container": "#12AED0",
                     "on-primary": "#ffffff",
-                    "outline": "#6d797e",
-                    "inverse-primary": "#56d6f9",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#93000a",
-                    "secondary-fixed-dim": "#b3c6f9",
-                    "surface-bright": "#f5fafd",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#b2ebff",
-                    "primary-container": "#12aed0",
-                    "primary": "#00677d",
-                    "on-primary-container": "#003c4a",
-                    "on-surface-variant": "#3d494d",
-                    "on-primary-fixed-variant": "#004e5f",
-                    "on-tertiary-fixed-variant": "#314f00",
-                    "on-background": "#171c1f",
-                    "on-secondary-fixed-variant": "#334671",
-                    "tertiary-container": "#73b100",
-                    "on-surface": "#171c1f",
-                    "tertiary": "#426900",
-                    "surface": "#f5fafd",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed": "#031A44",
+                    "tertiary-fixed": "#A7F432",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-background": "#334155",
+                    "on-surface-variant": "#64748b",
+                    "inverse-surface": "#031A44",
+                    "background": "#F7FAFC",
+                    "surface": "#F7FAFC",
                     "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-low": "#f1f5f9",
+                    "surface-container": "#e2e8f0",
+                    "surface-container-high": "#e2e8f0",
+                    "surface-container-highest": "#cbd5e1",
+                    "outline": "#94a3b8",
+                    "outline-variant": "#e2e8f0",
+                    "primary-fixed-dim": "#56d6f9",
+                    "on-surface": "#334155",
+                    "surface-variant": "#e2e8f0",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
                     "error-container": "#ffdad6",
-                    "inverse-surface": "#2c3133",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#426900",
                     "tertiary-fixed-dim": "#90db0e",
                     "secondary": "#4b5d8a",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#b9cbff",
+                    "on-secondary-container": "#435582",
+                    "secondary-fixed": "#d9e2ff",
+                    "secondary-fixed-dim": "#b3c6f9",
+                    "on-secondary-fixed-variant": "#334671",
+                    "surface-tint": "#12AED0",
+                    "surface-dim": "#d5dbdd",
+                    "surface-bright": "#f5fafd",
+                    "inverse-primary": "#56d6f9",
                     "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6"
+                    "on-primary-fixed": "#001f27",
+                    "on-primary-fixed-variant": "#004e5f",
+                    "primary-fixed": "#b2ebff",
+                    "on-tertiary-fixed-variant": "#314f00",
+                    "on-tertiary-container": "#253e00",
+                    "tertiary-container": "#73b100"
             },
             "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+                    "DEFAULT": "4px",
+                    "lg": "8px",
+                    "xl": "12px",
+                    "2xl": "24px",
+                    "full": "9999px"
             },
             "spacing": {
                     "gutter": "24px",
@@ -110,7 +114,7 @@
       }
     </script>
 <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f5fafd; color: #171c1f; }
+        body { font-family: 'Poppins', sans-serif; background-color: #F7FAFC; color: #334155; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .accordion-item.active .accordion-content { max-height: 500px; }
@@ -124,7 +128,7 @@
 <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-unit-xl flex flex-col md:flex-row md:items-end justify-between gap-unit-md">
 <div class="max-w-2xl">
-<span class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-sm inline-block">Support &amp; Logistics</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-sm inline-block">INDONESIA TECH PARTNER</span>
 <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-sm">Common Queries</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">Everything you need to know about partnering with Nakala Digital for your next enterprise venture.</p>
 </div>
@@ -299,3 +303,5 @@
         });
     </script>
 </body></html>
+
+

@@ -19,60 +19,64 @@
             darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "surface-tint": "#00677d",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#bcc8ce",
-                        "on-tertiary-fixed": "#112000",
-                        "on-secondary-fixed": "#021943",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#b9cbff",
-                        "primary-fixed-dim": "#56d6f9",
-                        "tertiary-fixed": "#abf837",
-                        "error": "#ba1a1a",
-                        "on-secondary-container": "#435582",
-                        "background": "#f5fafd",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#253e00",
-                        "on-primary-fixed": "#001f27",
+                    colors: {
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432",
+                        "primary": "#12AED0",
+                        "primary-container": "#12AED0",
                         "on-primary": "#ffffff",
-                        "outline": "#6d797e",
-                        "inverse-primary": "#56d6f9",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#b3c6f9",
-                        "surface-bright": "#f5fafd",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#b2ebff",
-                        "primary-container": "#12aed0",
-                        "primary": "#00677d",
-                        "on-primary-container": "#003c4a",
-                        "on-surface-variant": "#3d494d",
-                        "on-primary-fixed-variant": "#004e5f",
-                        "on-tertiary-fixed-variant": "#314f00",
-                        "on-background": "#171c1f",
-                        "on-secondary-fixed-variant": "#334671",
-                        "tertiary-container": "#73b100",
-                        "on-surface": "#171c1f",
-                        "tertiary": "#426900",
-                        "surface": "#f5fafd",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed": "#031A44",
+                        "tertiary-fixed": "#A7F432",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-background": "#334155",
+                        "on-surface-variant": "#64748b",
+                        "inverse-surface": "#031A44",
+                        "background": "#F7FAFC",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#d9e2ff",
+                        "surface-container-low": "#f1f5f9",
+                        "surface-container": "#e2e8f0",
+                        "surface-container-high": "#e2e8f0",
+                        "surface-container-highest": "#cbd5e1",
+                        "outline": "#94a3b8",
+                        "outline-variant": "#e2e8f0",
+                        "primary-fixed-dim": "#56d6f9",
+                        "on-surface": "#334155",
+                        "surface-variant": "#e2e8f0",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
                         "error-container": "#ffdad6",
-                        "inverse-surface": "#2c3133",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#426900",
                         "tertiary-fixed-dim": "#90db0e",
                         "secondary": "#4b5d8a",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#b9cbff",
+                        "on-secondary-container": "#435582",
+                        "secondary-fixed": "#d9e2ff",
+                        "secondary-fixed-dim": "#b3c6f9",
+                        "on-secondary-fixed-variant": "#334671",
+                        "surface-tint": "#12AED0",
+                        "surface-dim": "#d5dbdd",
+                        "surface-bright": "#f5fafd",
+                        "inverse-primary": "#56d6f9",
                         "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6"
+                        "on-primary-fixed": "#001f27",
+                        "on-primary-fixed-variant": "#004e5f",
+                        "primary-fixed": "#b2ebff",
+                        "on-tertiary-fixed-variant": "#314f00",
+                        "on-tertiary-container": "#253e00",
+                        "tertiary-container": "#73b100"
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                    borderRadius: {
+                        DEFAULT: "4px",
+                        lg: "8px",
+                        xl: "12px",
+                        "2xl": "24px",
+                        full: "9999px"
                     },
                     "spacing": {
                         "gutter": "24px",
@@ -138,7 +142,7 @@
 <div class="z-10">
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-{{ app()->getLocale() === 'en' ? 'Regional Excellence' : 'Keunggulan Regional' }}
+{{ app()->getLocale() === 'en' ? 'INDONESIA TECH PARTNER' : 'MITRA TEKNOLOGI INDONESIA' }}
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ app()->getLocale() === 'en' ? 'Technology services for' : 'Layanan teknologi untuk' }} <span class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs.' : 'kebutuhan bisnis modern.' }}</span>
@@ -329,3 +333,5 @@
         });
     </script>
 </body></html>
+
+

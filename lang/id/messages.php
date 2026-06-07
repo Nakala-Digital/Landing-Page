@@ -18,11 +18,11 @@ return [
     'cap_desc' => 'Kami memberikan ketelitian teknis melalui berbagai layanan digital khusus yang terspesialisasi.',
     'cap_software' => 'Pengembangan Perangkat Lunak',
     'cap_software_desc' => 'Solusi kustom perusahaan, aplikasi seluler, dan platform web terukur yang dibangun dengan arsitektur modern seperti Microservices dan Serverless.',
-    'cap_ai' => 'Teknologi AI',
+    'cap_ai' => 'AI & GenAI',
     'cap_ai_desc' => 'Mengintegrasikan AI Generatif dan Machine Learning untuk mengotomatisasi alur kerja yang kompleks dan mendorong pengambilan keputusan yang cerdas.',
     'cap_consulting' => 'Konsultasi Teknologi',
     'cap_consulting_desc' => 'Pengembangan peta jalan strategis dan penasihat transformasi digital untuk perusahaan regional yang sedang berkembang.',
-    'cap_local_title' => 'Pengiriman Lokal, Standar Perusahaan.',
+    'cap_local_title' => 'Pengiriman Lokal, Kemampuan Regional.',
     'cap_local_desc' => 'Kami menyediakan stabilitas kekuatan regional dengan kelincahan dan konteks mitra lokal.',
     
     // Who we are
@@ -34,7 +34,7 @@ return [
     'who_iso' => 'Standar Selaras ISO',
     
     // Final CTA
-    'final_cta_title' => 'Siap membangun solusi digital yang lebih rapi, cepat, dan berdampak?',
+    'final_cta_title' => 'Siap membangun solusi digital yang profesional, bermakna, dan berdampak?',
     'final_cta_desc' => 'Mulai konsultasi gratis hari ini dan temukan potensi digital bisnis Anda.',
     'final_cta_btn' => 'Diskusikan Proyek Anda',
 ];

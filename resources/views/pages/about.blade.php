@@ -19,61 +19,65 @@
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface-tint": "#00677d",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#bcc8ce",
-                    "on-tertiary-fixed": "#112000",
-                    "on-secondary-fixed": "#021943",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#b9cbff",
-                    "primary-fixed-dim": "#56d6f9",
-                    "tertiary-fixed": "#abf837",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#435582",
-                    "background": "#f5fafd",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#253e00",
-                    "on-primary-fixed": "#001f27",
-                    "on-primary": "#ffffff",
-                    "outline": "#6d797e",
-                    "inverse-primary": "#56d6f9",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#93000a",
-                    "secondary-fixed-dim": "#b3c6f9",
-                    "surface-bright": "#f5fafd",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#b2ebff",
-                    "primary-container": "#12aed0",
-                    "primary": "#00677d",
-                    "on-primary-container": "#003c4a",
-                    "on-surface-variant": "#3d494d",
-                    "on-primary-fixed-variant": "#004e5f",
-                    "on-tertiary-fixed-variant": "#314f00",
-                    "on-background": "#171c1f",
-                    "on-secondary-fixed-variant": "#334671",
-                    "tertiary-container": "#73b100",
-                    "on-surface": "#171c1f",
-                    "tertiary": "#426900",
-                    "surface": "#f5fafd",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#d9e2ff",
-                    "error-container": "#ffdad6",
-                    "inverse-surface": "#2c3133",
-                    "tertiary-fixed-dim": "#90db0e",
-                    "secondary": "#4b5d8a",
-                    "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
+          colors: {
+            "electric-cyan": "#12AED0",
+            "midnight-navy": "#031A44",
+            "impact-lime": "#A7F432",
+            "primary": "#12AED0",
+            "primary-container": "#12AED0",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#ffffff",
+            "on-secondary-fixed": "#031A44",
+            "tertiary-fixed": "#A7F432",
+            "on-tertiary-fixed": "#031A44",
+            "on-background": "#334155",
+            "on-surface-variant": "#64748b",
+            "inverse-surface": "#031A44",
+            "background": "#F7FAFC",
+            "surface": "#F7FAFC",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f1f5f9",
+            "surface-container": "#e2e8f0",
+            "surface-container-high": "#e2e8f0",
+            "surface-container-highest": "#cbd5e1",
+            "outline": "#94a3b8",
+            "outline-variant": "#e2e8f0",
+            "primary-fixed-dim": "#56d6f9",
+            "on-surface": "#334155",
+            "surface-variant": "#e2e8f0",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#426900",
+            "tertiary-fixed-dim": "#90db0e",
+            "secondary": "#4b5d8a",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#b9cbff",
+            "on-secondary-container": "#435582",
+            "secondary-fixed": "#d9e2ff",
+            "secondary-fixed-dim": "#b3c6f9",
+            "on-secondary-fixed-variant": "#334671",
+            "surface-tint": "#12AED0",
+            "surface-dim": "#d5dbdd",
+            "surface-bright": "#f5fafd",
+            "inverse-primary": "#56d6f9",
+            "inverse-on-surface": "#ecf1f4",
+            "on-primary-fixed": "#001f27",
+            "on-primary-fixed-variant": "#004e5f",
+            "primary-fixed": "#b2ebff",
+            "on-tertiary-fixed-variant": "#314f00",
+            "on-tertiary-container": "#253e00",
+            "tertiary-container": "#73b100"
+          },
+          borderRadius: {
+            DEFAULT: "4px",
+            lg: "8px",
+            xl: "12px",
+            "2xl": "24px",
+            full: "9999px"
+          },
             "spacing": {
                     "gutter": "24px",
                     "unit-xl": "64px",
@@ -116,7 +120,7 @@
       }
     </script>
 <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f5fafd; color: #171c1f; }
+        body { font-family: 'Poppins', sans-serif; background-color: #F7FAFC; color: #334155; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .active-nav { border-bottom: 2px solid #00677d; padding-bottom: 4px; color: #00677d; }
     </style>
@@ -152,7 +156,7 @@ About Us
 </div>
 </header>
 <!-- Strategic Partner Section -->
-<section class="bg-on-background py-unit-lg border-y border-outline-variant">
+<section class="bg-midnight-navy py-unit-lg border-y border-outline-variant">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-unit-md">
 <div class="text-surface-variant font-body-md text-body-md italic opacity-80">
                 {{ app()->getLocale() === 'en' ? 'Official Strategic Partner' : 'Mitra Strategis Resmi' }}
@@ -180,8 +184,8 @@ About Us
 <h3 class="font-headline-h3 text-headline-h3">{{ app()->getLocale() === 'en' ? 'Vision' : 'Visi' }}</h3>
 <p class="font-body-md text-body-md opacity-90">
                         {{ app()->getLocale() === 'en'
-                            ? 'To be the leading catalyst of digital transformation in Indonesia by integrating artificial intelligence into every business solution.'
-                            : 'Menjadi katalisator transformasi digital terdepan di Indonesia dengan mengintegrasikan kecerdasan buatan dalam setiap solusi bisnis.' }}
+                            ? 'To be a strategic technology partner that delivers professional, meaningful, and impactful digital solutions for organizational growth in Indonesia and the regional market.'
+                            : 'Menjadi mitra teknologi strategis yang menghadirkan solusi digital profesional, bermakna, dan berdampak nyata bagi pertumbuhan organisasi di Indonesia dan pasar regional.' }}
                     </p>
 </div>
 </div>
@@ -190,36 +194,36 @@ About Us
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">01</div>
 <div>
-<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Innovation First' : 'Inovasi Utama' }}</p>
-<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Delivering AI-powered solutions that redefine efficiency.' : 'Memberikan solusi bertenaga AI yang mendefinisikan ulang efisiensi.' }}</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Governance & Agility' : 'Tata Kelola & Kelincahan' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Deliver solutions with strong governance, Agile/Scrum delivery, QA discipline, and transparent communication.' : 'Memberikan solusi dengan tata kelola yang kuat, pengiriman Agile/Scrum, disiplin QA, dan komunikasi yang transparan.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">02</div>
 <div>
-<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Local Expertise' : 'Keahlian Lokal' }}</p>
-<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Empowering local industries with deep regional context.' : 'Memberdayakan industri lokal dengan konteks regional yang mendalam.' }}</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Meaningful Products' : 'Produk Bermakna' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Build meaningful digital products that solve real operational and business pain points.' : 'Membangun produk digital bermakna yang menyelesaikan masalah operasional dan bisnis nyata.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">03</div>
 <div>
-<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Scalable Growth' : 'Pertumbuhan Terukur' }}</p>
-<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Building software that grows with your business needs.' : 'Membangun perangkat lunak yang berkembang sesuai kebutuhan bisnis Anda.' }}</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'AI Automation' : 'Otomatisasi AI' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Enable AI-powered automation and data-driven workflows for measurable business impact.' : 'Mengaktifkan otomatisasi berbasis AI dan alur kerja berbasis data untuk dampak bisnis yang terukur.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
 <div class="text-primary font-bold text-headline-h3 shrink-0">04</div>
 <div>
-<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Human Centric' : 'Berpusat pada Manusia' }}</p>
-<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Designing digital experiences that prioritize people.' : 'Merancang pengalaman digital yang memprioritaskan manusia.' }}</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Long-term Partnership' : 'Kemitraan Jangka Panjang' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Create long-term partnerships with clients, partners, and technology ecosystems.' : 'Menciptakan kemitraan jangka panjang dengan klien, mitra, dan ekosistem teknologi.' }}</p>
 </div>
 </div>
 <div class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md sm:col-span-2">
 <div class="text-primary font-bold text-headline-h3 shrink-0">05</div>
 <div>
-<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Strategic Partnership' : 'Kemitraan Strategis' }}</p>
-<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Strengthening the bond with Romulus Digital for world-class standards.' : 'Memperkuat hubungan dengan Romulus Digital untuk standar kelas dunia.' }}</p>
+<p class="font-body-md text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'People Growth' : 'Pengembangan SDM' }}</p>
+<p class="text-on-surface-variant text-label-sm">{{ app()->getLocale() === 'en' ? 'Grow people, capability, and sustainable digital maturity across organizations.' : 'Mengembangkan sumber daya manusia, kapabilitas, dan kematangan digital berkelanjutan di seluruh organisasi.' }}</p>
 </div>
 </div>
 </div>
@@ -230,7 +234,7 @@ About Us
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="text-center mb-unit-xl">
 <h2 class="font-headline-h2 text-headline-h2 text-on-surface">{{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
-<p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">{{ app()->getLocale() === 'en' ? 'Why Nakala: Delivering Excellence through 6 Core Pillars' : 'Mengapa Nakala: Memberikan Keunggulan melalui 6 Pilar Utama' }}</p>
+<p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">{{ app()->getLocale() === 'en' ? '6 reasons to partner with Nakala Digital' : '6 alasan bermitra dengan Nakala Digital' }}</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Reason 1 -->
@@ -241,8 +245,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'On-the-ground support with deep understanding of the Indonesian market landscape.' 
-        : 'Dukungan langsung di lapangan dengan pemahaman mendalam tentang lanskap pasar Indonesia.' }}
+        ? 'Indonesia-based delivery team with regional technology support through our Romulus Digital partnership network.' 
+        : 'Tim pengiriman berbasis Indonesia dengan dukungan teknologi regional melalui jaringan kemitraan Romulus Digital.' }}
 </p>
 </div>
 <!-- Reason 2 -->
@@ -253,8 +257,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'Every solution we build is future-proofed with AI-readiness from the architectural level.' 
-        : 'Setiap solusi yang kami bangun terjamin masa depannya dengan kesiapan AI sejak tingkat arsitektur.' }}
+        ? 'We embed AI automation and intelligent workflows where they create real operational value.' 
+        : 'Kami menanamkan otomatisasi AI dan alur kerja cerdas di tempat yang menciptakan nilai operasional nyata.' }}
 </p>
 </div>
 <!-- Reason 3 -->
@@ -265,8 +269,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'Iterative development with rigorous automated testing to ensure rock-solid stability.' 
-        : 'Pengembangan iteratif dengan pengujian otomatis yang ketat untuk memastikan stabilitas yang kokoh.' }}
+        ? 'Structured sprint delivery, backlog control, SIT/UAT testing, and clear documentation at every release.' 
+        : 'Pengiriman sprint terstruktur, kontrol backlog, pengujian SIT/UAT, dan dokumentasi yang jelas di setiap rilis.' }}
 </p>
 </div>
 <!-- Reason 4 -->
@@ -277,8 +281,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.' 
-        : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
+        ? 'We design around real user journeys and business processes, not only technical features.' 
+        : 'Kami mendesain berdasarkan perjalanan pengguna nyata dan proses bisnis, bukan hanya fitur teknis.' }}
 </p>
 </div>
 <!-- Reason 5 -->
@@ -289,8 +293,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.' 
-        : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
+        ? 'Every solution is designed to be practical, scalable, and measurable.' 
+        : 'Setiap solusi dirancang untuk menjadi praktis, terukur, dan dapat diukur dampaknya.' }}
 </p>
 </div>
 <!-- Reason 6 -->
@@ -301,8 +305,8 @@ About Us
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-xs">{{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
 <p class="text-on-surface-variant font-body-md text-body-md">
     {{ app()->getLocale() === 'en' 
-        ? 'Proprietary frameworks that allow us to launch MVPs 30% faster than industry standards.' 
-        : 'Kerangka kerja kepemilikan yang memungkinkan kami meluncurkan MVP 30% lebih cepat daripada standar industri.' }}
+        ? 'Backed by Romulus Digital regional capability to scale expertise based on project needs.' 
+        : 'Didukung oleh kemampuan regional Romulus Digital untuk menyesuaikan skala keahlian berdasarkan kebutuhan proyek.' }}
 </p>
 </div>
 </div>
@@ -324,3 +328,5 @@ About Us
         });
     </script>
 </body></html>
+
+

@@ -13,60 +13,64 @@
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "surface-tint": "#00677d",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#bcc8ce",
-                    "on-tertiary-fixed": "#112000",
-                    "on-secondary-fixed": "#021943",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#b9cbff",
-                    "primary-fixed-dim": "#56d6f9",
-                    "tertiary-fixed": "#abf837",
-                    "error": "#ba1a1a",
-                    "on-secondary-container": "#435582",
-                    "background": "#f5fafd",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#253e00",
-                    "on-primary-fixed": "#001f27",
+            colors: {
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432",
+                    "primary": "#12AED0",
+                    "primary-container": "#12AED0",
                     "on-primary": "#ffffff",
-                    "outline": "#6d797e",
-                    "inverse-primary": "#56d6f9",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#93000a",
-                    "secondary-fixed-dim": "#b3c6f9",
-                    "surface-bright": "#f5fafd",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#b2ebff",
-                    "primary-container": "#12aed0",
-                    "primary": "#00677d",
-                    "on-primary-container": "#003c4a",
-                    "on-surface-variant": "#3d494d",
-                    "on-primary-fixed-variant": "#004e5f",
-                    "on-tertiary-fixed-variant": "#314f00",
-                    "on-background": "#171c1f",
-                    "on-secondary-fixed-variant": "#334671",
-                    "tertiary-container": "#73b100",
-                    "on-surface": "#171c1f",
-                    "tertiary": "#426900",
-                    "surface": "#f5fafd",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed": "#031A44",
+                    "tertiary-fixed": "#A7F432",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-background": "#334155",
+                    "on-surface-variant": "#64748b",
+                    "inverse-surface": "#031A44",
+                    "background": "#F7FAFC",
+                    "surface": "#F7FAFC",
                     "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#d9e2ff",
+                    "surface-container-low": "#f1f5f9",
+                    "surface-container": "#e2e8f0",
+                    "surface-container-high": "#e2e8f0",
+                    "surface-container-highest": "#cbd5e1",
+                    "outline": "#94a3b8",
+                    "outline-variant": "#e2e8f0",
+                    "primary-fixed-dim": "#56d6f9",
+                    "on-surface": "#334155",
+                    "surface-variant": "#e2e8f0",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
                     "error-container": "#ffdad6",
-                    "inverse-surface": "#2c3133",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#426900",
                     "tertiary-fixed-dim": "#90db0e",
                     "secondary": "#4b5d8a",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#b9cbff",
+                    "on-secondary-container": "#435582",
+                    "secondary-fixed": "#d9e2ff",
+                    "secondary-fixed-dim": "#b3c6f9",
+                    "on-secondary-fixed-variant": "#334671",
+                    "surface-tint": "#12AED0",
+                    "surface-dim": "#d5dbdd",
+                    "surface-bright": "#f5fafd",
+                    "inverse-primary": "#56d6f9",
                     "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6"
+                    "on-primary-fixed": "#001f27",
+                    "on-primary-fixed-variant": "#004e5f",
+                    "primary-fixed": "#b2ebff",
+                    "on-tertiary-fixed-variant": "#314f00",
+                    "on-tertiary-container": "#253e00",
+                    "tertiary-container": "#73b100"
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+            borderRadius: {
+                    DEFAULT: "4px",
+                    lg: "8px",
+                    xl: "12px",
+                    "2xl": "24px",
+                    full: "9999px"
             },
             "spacing": {
                     "gutter": "24px",
@@ -110,7 +114,7 @@
       }
     </script>
 <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f5fafd; color: #171c1f; }
+        body { font-family: 'Poppins', sans-serif; background-color: #F7FAFC; color: #334155; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -122,17 +126,17 @@
 @include('partials.navbar')
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative overflow-hidden bg-on-background py-unit-xl lg:py-32">
+<section class="relative overflow-hidden bg-midnight-navy py-unit-xl lg:py-32">
 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-unit-lg items-center">
 <div>
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-md">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-Efficiency Redefined
+INDONESIA TECH PARTNER
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-unit-md">
-                            Agile delivery dengan quality control yang jelas.
+                            {{ app()->getLocale() === 'en' ? 'Structured delivery with clear quality governance.' : 'Pengiriman terstruktur dengan tata kelola kualitas yang jelas.' }}
                         </h1>
 <p class="font-body-lg text-body-lg text-outline-variant mb-unit-lg max-w-xl">
                             Our systematic approach bridges local responsiveness with regional quality standards, ensuring every technical milestone is backed by rigorous QA governance.
@@ -264,7 +268,7 @@ Efficiency Redefined
 </div>
 </div>
 <!-- Artifacts List -->
-<div class="bg-on-background p-unit-md rounded-lg text-white">
+<div class="bg-midnight-navy p-unit-md rounded-lg text-white">
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-md text-primary-fixed-dim">Project Artifacts</h4>
 <ul class="space-y-4">
 <li class="flex items-center gap-4 border-b border-white/10 pb-4">
@@ -309,7 +313,7 @@ Efficiency Redefined
 <span class="text-on-surface-variant font-label-sm uppercase tracking-widest">Our Strategic Partner</span>
 <div class="h-8 w-px bg-outline-variant hidden md:block"></div>
 </div>
-<div class="flex items-center bg-on-background px-6 py-4 rounded-lg">
+<div class="flex items-center bg-midnight-navy px-6 py-4 rounded-lg">
 <div class="bg-white px-4 py-2 rounded-md"><img class="h-9 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital"></div>
 <span class="text-outline-variant ml-4 font-body-md">Regional Excellence Alliance</span>
 </div>
@@ -345,3 +349,5 @@ Efficiency Redefined
         });
     </script>
 </body></html>
+
+
