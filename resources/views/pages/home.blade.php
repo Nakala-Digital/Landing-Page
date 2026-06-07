@@ -34,53 +34,56 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-tint": "#00677d",
+                        "surface-tint": "#12AED0",
                         "on-error": "#ffffff",
-                        "outline-variant": "#bcc8ce",
-                        "on-tertiary-fixed": "#112000",
-                        "on-secondary-fixed": "#021943",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
                         "surface-dim": "#d5dbdd",
-                        "secondary-container": "#b9cbff",
-                        "primary-fixed-dim": "#56d6f9",
-                        "tertiary-fixed": "#abf837",
-                        "error": "#ba1a1a",
-                        "on-secondary-container": "#435582",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
                         "background": "#f5fafd",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#253e00",
-                        "on-primary-fixed": "#001f27",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
                         "on-primary": "#ffffff",
-                        "outline": "#6d797e",
-                        "inverse-primary": "#56d6f9",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
                         "surface-container": "#e9eff1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#b3c6f9",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
                         "surface-bright": "#f5fafd",
                         "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#b2ebff",
-                        "primary-container": "#12aed0",
-                        "primary": "#00677d",
-                        "on-primary-container": "#003c4a",
-                        "on-surface-variant": "#3d494d",
-                        "on-primary-fixed-variant": "#004e5f",
-                        "on-tertiary-fixed-variant": "#314f00",
-                        "on-background": "#171c1f",
-                        "on-secondary-fixed-variant": "#334671",
-                        "tertiary-container": "#73b100",
-                        "on-surface": "#171c1f",
-                        "tertiary": "#426900",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
                         "surface": "#f5fafd",
                         "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#ffffff",
+                        "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#d9e2ff",
-                        "error-container": "#ffdad6",
-                        "inverse-surface": "#2c3133",
-                        "tertiary-fixed-dim": "#90db0e",
-                        "secondary": "#4b5d8a",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
                         "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6"
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -178,7 +181,7 @@
         }
 
         .bento-item {
-            border: 1px solid #E5E7EB;
+            border: 1px solid #12AED0;
             transition: all 0.3s ease;
         }
 
@@ -238,7 +241,7 @@
             </div>
         </section>
         <!-- Partner Badge Section -->
-        <section class="bg-[#021943] py-unit-lg border-y border-white/10 relative overflow-hidden">
+        <section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
             <!-- Decorative gradient -->
             <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
             
@@ -348,8 +351,8 @@
                     </div>
                     <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-[#A7F432] text-[#021943] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
-                        <span class="material-symbols-outlined text-[#021943] text-4xl mb-unit-md">query_stats</span>
+                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-[#031A44] text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
                         <p class="font-body-md opacity-90">{{ __('messages.cap_consulting_desc') }}</p>

@@ -28,53 +28,56 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-tint": "#00677d",
+                        "surface-tint": "#12AED0",
                         "on-error": "#ffffff",
-                        "outline-variant": "#bcc8ce",
-                        "on-tertiary-fixed": "#112000",
-                        "on-secondary-fixed": "#021943",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
                         "surface-dim": "#d5dbdd",
-                        "secondary-container": "#b9cbff",
-                        "primary-fixed-dim": "#56d6f9",
-                        "tertiary-fixed": "#abf837",
-                        "error": "#ba1a1a",
-                        "on-secondary-container": "#435582",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
                         "background": "#f5fafd",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#253e00",
-                        "on-primary-fixed": "#001f27",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
                         "on-primary": "#ffffff",
-                        "outline": "#6d797e",
-                        "inverse-primary": "#56d6f9",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
                         "surface-container": "#e9eff1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#b3c6f9",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
                         "surface-bright": "#f5fafd",
                         "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#b2ebff",
-                        "primary-container": "#12aed0",
-                        "primary": "#00677d",
-                        "on-primary-container": "#003c4a",
-                        "on-surface-variant": "#3d494d",
-                        "on-primary-fixed-variant": "#004e5f",
-                        "on-tertiary-fixed-variant": "#314f00",
-                        "on-background": "#171c1f",
-                        "on-secondary-fixed-variant": "#334671",
-                        "tertiary-container": "#73b100",
-                        "on-surface": "#171c1f",
-                        "tertiary": "#426900",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
                         "surface": "#f5fafd",
                         "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#ffffff",
+                        "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#d9e2ff",
-                        "error-container": "#ffdad6",
-                        "inverse-surface": "#2c3133",
-                        "tertiary-fixed-dim": "#90db0e",
-                        "secondary": "#4b5d8a",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
                         "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6"
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -218,198 +221,336 @@
                 </div>
             </div>
         </section>
+        @php
+            $locale = app()->getLocale();
+            $detailRoute = $locale === 'en' ? 'solutions.detail.en' : 'solutions.detail';
+            $solutionCases = [
+                [
+                    'id' => 'ai-hiring',
+                    'icon' => 'psychology',
+                    'span' => 'md:col-span-8',
+                    'featured' => true,
+                    'title' => [
+                        'en' => 'AI Hiring / GenAI Recruitment',
+                        'id' => 'AI Hiring / Rekrutmen GenAI',
+                    ],
+                    'category' => [
+                        'en' => 'Intelligent Talent Acquisition',
+                        'id' => 'Akuisisi Talenta Cerdas',
+                    ],
+                    'summary' => [
+                        'en' => 'AI-powered recruitment platform for CV parsing, candidate scoring, automated shortlisting, scheduling, and hiring analytics.',
+                        'id' => 'Platform rekrutmen berbasis AI untuk parsing CV, scoring kandidat, shortlisting otomatis, penjadwalan, dan analitik rekrutmen.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Recruitment teams face high CV volume, inconsistent screening, and slow time-to-hire, creating poor candidate experience and missed talent.',
+                        'id' => 'Tim rekrutmen menghadapi volume CV tinggi, screening tidak konsisten, dan time-to-hire lambat sehingga pengalaman kandidat menurun dan talenta potensial terlewat.',
+                    ],
+                    'solution' => [
+                        'en' => 'Automate CV screening, score candidates against job criteria, and streamline end-to-end hiring workflows.',
+                        'id' => 'Mengotomasi screening CV, menilai kandidat berdasarkan kriteria posisi, dan merapikan workflow rekrutmen end-to-end.',
+                    ],
+                    'features' => [
+                        'en' => ['AI CV parsing and scoring', 'Job-fit ranking and automated shortlisting', 'Interview scheduling and recruiter dashboard', 'Candidate status portal and analytics'],
+                        'id' => ['Parsing dan scoring CV berbasis AI', 'Ranking job-fit dan shortlisting otomatis', 'Penjadwalan interview dan dashboard recruiter', 'Portal status kandidat dan analitik'],
+                    ],
+                    'impact' => [
+                        'en' => ['Reduced CV screening time by up to 80%', 'More consistent, bias-reduced evaluation', 'Faster time-to-hire and better candidate experience', 'Scalable for high-volume hiring across roles'],
+                        'id' => ['Waktu screening CV berkurang hingga 80%', 'Evaluasi lebih konsisten dan minim bias', 'Time-to-hire lebih cepat dan pengalaman kandidat membaik', 'Skalabel untuk rekrutmen volume tinggi lintas posisi'],
+                    ],
+                    'capability' => 'AI Technology & GenAI, Custom Software Development, SaaS Platform',
+                ],
+                [
+                    'id' => 'hrms-mahya',
+                    'icon' => 'badge',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'HRMS / Mahya Platform',
+                        'id' => 'HRMS / Platform Mahya',
+                    ],
+                    'category' => [
+                        'en' => 'Employee Self-Service & HR Operations',
+                        'id' => 'Employee Self-Service & Operasional HR',
+                    ],
+                    'summary' => [
+                        'en' => 'Custom HRMS platform for attendance, leave, payroll, employee profiles, manager approvals, and HR reporting.',
+                        'id' => 'Platform HRMS custom untuk absensi, cuti, payroll, profil karyawan, approval manager, dan pelaporan HR.',
+                    ],
+                    'challenge' => [
+                        'en' => 'HR teams manage attendance, leave, payroll, and employee data manually across spreadsheets without a centralized system.',
+                        'id' => 'Tim HR mengelola absensi, cuti, payroll, dan data karyawan secara manual di banyak spreadsheet tanpa sistem terpusat.',
+                    ],
+                    'solution' => [
+                        'en' => 'Mahya centralizes HR operations with self-service access, approval workflows, and an HR admin dashboard.',
+                        'id' => 'Mahya memusatkan operasional HR dengan akses self-service, approval workflow, dan dashboard admin HR.',
+                    ],
+                    'features' => [
+                        'en' => ['Attendance and leave management', 'Payroll processing and employee profiles', 'Approval workflows and reporting dashboard', 'Mobile-friendly interface'],
+                        'id' => ['Manajemen absensi dan cuti', 'Proses payroll dan profil karyawan', 'Approval workflow dan dashboard reporting', 'Interface mobile-friendly'],
+                    ],
+                    'impact' => [
+                        'en' => ['Centralized HR data with real-time visibility', 'Significantly reduced manual HR processing', 'Improved employee self-service experience', 'Ready for multi-entity deployment'],
+                        'id' => ['Data HR terpusat dengan visibilitas real-time', 'Proses manual HR berkurang signifikan', 'Pengalaman self-service karyawan meningkat', 'Siap untuk deployment multi-entitas'],
+                    ],
+                    'capability' => 'Custom Software Development, SaaS Platform, Operational Systems',
+                ],
+                [
+                    'id' => 'hse-operations',
+                    'icon' => 'health_and_safety',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'HSE / Operations Platform',
+                        'id' => 'Platform HSE / Operasional',
+                    ],
+                    'category' => [
+                        'en' => 'Health, Safety & Environment Digitalization',
+                        'id' => 'Digitalisasi Health, Safety & Environment',
+                    ],
+                    'summary' => [
+                        'en' => 'Digital platform for incident reporting, safety checklists, compliance dashboards, alerts, audit trails, and role-based access.',
+                        'id' => 'Platform digital untuk pelaporan insiden, safety checklist, dashboard kepatuhan, alert, audit trail, dan akses berbasis role.',
+                    ],
+                    'challenge' => [
+                        'en' => 'HSE compliance and safety reporting rely on manual forms, spreadsheets, and disconnected communication channels.',
+                        'id' => 'Kepatuhan HSE dan pelaporan keselamatan masih bergantung pada form manual, spreadsheet, dan kanal komunikasi yang terpisah.',
+                    ],
+                    'solution' => [
+                        'en' => 'A dedicated HSE operations platform enabling digital incident reporting, safety checklist management, and compliance tracking.',
+                        'id' => 'Platform operasional HSE khusus untuk pelaporan insiden digital, manajemen safety checklist, dan tracking kepatuhan.',
+                    ],
+                    'features' => [
+                        'en' => ['Incident reporting and tracking', 'Safety checklist management', 'Compliance dashboard and real-time alerts', 'Audit trail and role-based access'],
+                        'id' => ['Pelaporan dan tracking insiden', 'Manajemen safety checklist', 'Dashboard kepatuhan dan alert real-time', 'Audit trail dan akses berbasis role'],
+                    ],
+                    'impact' => [
+                        'en' => ['Faster incident response through real-time reporting', 'Improved HSE compliance visibility for management', 'Reduced risk of unreported safety incidents', 'Audit-ready documentation and reporting trail'],
+                        'id' => ['Respons insiden lebih cepat lewat pelaporan real-time', 'Visibilitas kepatuhan HSE lebih baik untuk manajemen', 'Risiko insiden keselamatan tidak terlapor berkurang', 'Dokumentasi dan reporting trail siap audit'],
+                    ],
+                    'capability' => 'Operational Systems, Custom Software Development, QA Governance',
+                ],
+                [
+                    'id' => 'wargakas',
+                    'icon' => 'payments',
+                    'span' => 'md:col-span-4',
+                    'dark' => true,
+                    'title' => [
+                        'en' => 'Wargakas',
+                        'id' => 'Wargakas',
+                    ],
+                    'category' => [
+                        'en' => 'Residential Cash Management Platform',
+                        'id' => 'Platform Manajemen Kas Lingkungan',
+                    ],
+                    'summary' => [
+                        'en' => 'Digital cash management platform for residential communities covering billing, payment tracking, finance dashboards, and resident portals.',
+                        'id' => 'Platform manajemen kas digital untuk lingkungan hunian dengan billing, tracking pembayaran, dashboard finansial, dan portal warga.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Residential communities manage monthly dues, facility fees, and cash flow through manual collection and informal records.',
+                        'id' => 'Komunitas hunian mengelola iuran bulanan, biaya fasilitas, dan arus kas lewat penagihan manual dan catatan informal.',
+                    ],
+                    'solution' => [
+                        'en' => 'Wargakas enables transparent billing, payment tracking, financial reporting, and resident-facing visibility.',
+                        'id' => 'Wargakas menghadirkan billing transparan, tracking pembayaran, laporan finansial, dan visibilitas untuk warga.',
+                    ],
+                    'features' => [
+                        'en' => ['Resident billing and invoicing', 'Payment tracking and expense management', 'Financial dashboard', 'Resident portal and admin reporting'],
+                        'id' => ['Billing dan invoice warga', 'Tracking pembayaran dan manajemen pengeluaran', 'Dashboard finansial', 'Portal warga dan laporan admin'],
+                    ],
+                    'impact' => [
+                        'en' => ['Transparent and auditable community finance', 'Reduced manual collection effort', 'Improved resident trust through real-time visibility', 'Scalable for multiple residential clusters'],
+                        'id' => ['Keuangan komunitas lebih transparan dan auditable', 'Beban penagihan manual berkurang', 'Kepercayaan warga naik lewat visibilitas real-time', 'Skalabel untuk banyak cluster hunian'],
+                    ],
+                    'capability' => 'Custom Software Development, Web & Portal Development, SaaS Platform',
+                ],
+                [
+                    'id' => 'ppdb-school',
+                    'icon' => 'school',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'PPDB Website & School Portal',
+                        'id' => 'Website PPDB & Portal Sekolah',
+                    ],
+                    'category' => [
+                        'en' => 'Education Digital Transformation',
+                        'id' => 'Transformasi Digital Pendidikan',
+                    ],
+                    'summary' => [
+                        'en' => 'End-to-end school admission and portal solution with online registration, document upload, verification workflow, and parent portal.',
+                        'id' => 'Solusi penerimaan siswa dan portal sekolah end-to-end dengan registrasi online, upload dokumen, workflow verifikasi, dan portal orang tua.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Educational institutions still rely on manual paper-based admission processes, reducing transparency and parent experience during PPDB season.',
+                        'id' => 'Institusi pendidikan masih mengandalkan proses penerimaan manual berbasis kertas, sehingga transparansi dan pengalaman orang tua menurun saat PPDB.',
+                    ],
+                    'solution' => [
+                        'en' => 'A digital PPDB platform for online registration, document handling, real-time status tracking, and school website presence.',
+                        'id' => 'Platform PPDB digital untuk registrasi online, pengelolaan dokumen, tracking status real-time, dan website sekolah.',
+                    ],
+                    'features' => [
+                        'en' => ['Online registration forms', 'Document verification workflow', 'Admin dashboard and parent portal', 'Public school website'],
+                        'id' => ['Form registrasi online', 'Workflow verifikasi dokumen', 'Dashboard admin dan portal orang tua', 'Website publik sekolah'],
+                    ],
+                    'impact' => [
+                        'en' => ['More structured and auditable admission process', 'Improved parent experience with transparency', 'Reduced admin workload through automated workflows', 'SIT/UAT documentation and BAST handover delivered'],
+                        'id' => ['Proses penerimaan lebih terstruktur dan auditable', 'Pengalaman orang tua membaik lewat transparansi', 'Beban admin berkurang lewat workflow otomatis', 'Dokumentasi SIT/UAT dan BAST handover tersedia'],
+                    ],
+                    'capability' => 'Web & Portal Development, QA Governance, Agile Delivery',
+                ],
+                [
+                    'id' => 'ai-coach',
+                    'icon' => 'smart_toy',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'Digital Coaching / AI Coach',
+                        'id' => 'Digital Coaching / AI Coach',
+                    ],
+                    'category' => [
+                        'en' => 'Personalized Learning & Performance Development',
+                        'id' => 'Pembelajaran Personal & Pengembangan Performa',
+                    ],
+                    'summary' => [
+                        'en' => 'AI-powered coaching platform for personalized learning journeys, goal tracking, progress dashboards, and on-demand conversational coaching.',
+                        'id' => 'Platform coaching berbasis AI untuk learning journey personal, tracking target, dashboard progres, dan coaching percakapan on-demand.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Organizations struggle to deliver consistent and scalable coaching for distributed teams where human coach access is limited or costly.',
+                        'id' => 'Organisasi sulit menghadirkan coaching yang konsisten dan skalabel untuk tim tersebar saat akses coach manusia terbatas atau mahal.',
+                    ],
+                    'solution' => [
+                        'en' => 'Deliver personalized learning journeys and coaching interactions through conversational AI and performance tracking.',
+                        'id' => 'Menghadirkan learning journey personal dan interaksi coaching melalui conversational AI serta tracking performa.',
+                    ],
+                    'features' => [
+                        'en' => ['AI coaching chatbot', 'Personalized learning paths', 'Goal setting and progress dashboards', 'Manager visibility, content library, and reminders'],
+                        'id' => ['AI coaching chatbot', 'Learning path personal', 'Goal setting dan dashboard progres', 'Visibilitas manager, content library, dan reminder'],
+                    ],
+                    'impact' => [
+                        'en' => ['Scalable coaching without proportional cost increase', 'Personalized development for each employee', 'Improved learning engagement through AI nudges', 'Real-time performance visibility for managers and HR'],
+                        'id' => ['Coaching skalabel tanpa kenaikan biaya proporsional', 'Pengembangan personal untuk tiap karyawan', 'Engagement belajar meningkat lewat nudges AI', 'Visibilitas performa real-time untuk manager dan HR'],
+                    ],
+                    'capability' => 'AI Technology & GenAI, SaaS Platform Development, Custom Software Development',
+                ],
+                [
+                    'id' => 'd365-support',
+                    'icon' => 'account_balance',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'D365 Finance Support',
+                        'id' => 'D365 Finance Support',
+                    ],
+                    'category' => [
+                        'en' => 'Microsoft Dynamics 365 Capability Reference',
+                        'id' => 'Referensi Kapabilitas Microsoft Dynamics 365',
+                    ],
+                    'summary' => [
+                        'en' => 'Local Indonesia-based support for Microsoft D365 Finance backed by Romulus Digital regional capability.',
+                        'id' => 'Dukungan lokal Indonesia untuk Microsoft D365 Finance dengan dukungan kapabilitas regional Romulus Digital.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Enterprise clients running Microsoft ERP need local response, configuration support, reporting automation, and user adoption assistance.',
+                        'id' => 'Klien enterprise yang menjalankan Microsoft ERP membutuhkan respons lokal, dukungan konfigurasi, otomasi reporting, dan bantuan adopsi user.',
+                    ],
+                    'solution' => [
+                        'en' => 'D365 Finance configuration, customization support, module implementation assistance, and managed services.',
+                        'id' => 'Konfigurasi D365 Finance, dukungan kustomisasi, asistensi implementasi modul, dan managed services.',
+                    ],
+                    'features' => [
+                        'en' => ['D365 Finance module support', 'Power BI reporting integration', 'Power Automate workflow automation', 'AI Builder integration and user training'],
+                        'id' => ['Dukungan modul D365 Finance', 'Integrasi reporting Power BI', 'Otomasi workflow Power Automate', 'Integrasi AI Builder dan training user'],
+                    ],
+                    'impact' => [
+                        'en' => ['Faster response through dedicated managed service model', 'Bridge between Microsoft enterprise capability and local business needs', 'Flexible project-based or retainer engagement', 'Delivered with Romulus Digital certified Microsoft expertise'],
+                        'id' => ['Respons lebih cepat lewat model managed service khusus', 'Menjembatani kapabilitas Microsoft enterprise dengan kebutuhan bisnis lokal', 'Fleksibel untuk project-based atau retainer', 'Didukung expertise Microsoft tersertifikasi dari Romulus Digital'],
+                    ],
+                    'capability' => 'Microsoft D365 & Power Platform, Managed Support, Technology Consulting',
+                ],
+                [
+                    'id' => 'ai-automation',
+                    'icon' => 'hub',
+                    'span' => 'md:col-span-4',
+                    'title' => [
+                        'en' => 'AI Automation & SaaS Platform',
+                        'id' => 'AI Automation & Platform SaaS',
+                    ],
+                    'category' => [
+                        'en' => 'AI Technology Capabilities',
+                        'id' => 'Kapabilitas Teknologi AI',
+                    ],
+                    'summary' => [
+                        'en' => 'AI-enabled solutions for GenAI applications, document intelligence, intelligent automation, dashboard analytics, and AI SaaS products.',
+                        'id' => 'Solusi berbasis AI untuk aplikasi GenAI, document intelligence, intelligent automation, dashboard analytics, dan produk AI SaaS.',
+                    ],
+                    'challenge' => [
+                        'en' => 'Organizations need to automate repetitive tasks, enhance decision-making, and embed intelligence into daily operations.',
+                        'id' => 'Organisasi perlu mengotomasi pekerjaan repetitif, meningkatkan pengambilan keputusan, dan menanamkan intelligence ke operasional harian.',
+                    ],
+                    'solution' => [
+                        'en' => 'Design and deploy GenAI workflows, AI-assisted operations, data pipelines, dashboards, and B2B AI SaaS platforms.',
+                        'id' => 'Merancang dan membangun workflow GenAI, operasi berbantuan AI, data pipeline, dashboard, dan platform AI SaaS B2B.',
+                    ],
+                    'features' => [
+                        'en' => ['Conversational AI and document intelligence', 'Intelligent automation and smart notifications', 'AI SaaS platform development', 'Data analytics and Microsoft Power Platform integration'],
+                        'id' => ['Conversational AI dan document intelligence', 'Intelligent automation dan smart notification', 'Pengembangan platform AI SaaS', 'Analitik data dan integrasi Microsoft Power Platform'],
+                    ],
+                    'impact' => [
+                        'en' => ['Reduced repetitive manual work', 'Better operational decision support', 'Automation opportunities mapped through AI readiness assessment', 'Scalable AI capability for enterprise workflows'],
+                        'id' => ['Pekerjaan manual repetitif berkurang', 'Decision support operasional lebih baik', 'Peluang otomasi dipetakan lewat AI readiness assessment', 'Kapabilitas AI skalabel untuk workflow enterprise'],
+                    ],
+                    'capability' => 'GenAI Applications, Intelligent Automation, Data & Analytics, AI SaaS',
+                ],
+            ];
+        @endphp
+
         <!-- Solutions Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="text-center mb-unit-xl">
                 <h2
                     class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-sm">
-                    {{ app()->getLocale() === 'en' ? 'Core Enterprise Ecosystem' : 'Ekosistem Enterprise Inti' }}</h2>
+                    {{ $locale === 'en' ? 'Portfolio-Backed Solution Ecosystem' : 'Ekosistem Solusi Berbasis Portofolio' }}</h2>
                 <p class="text-on-surface-variant max-w-2xl mx-auto">
-                    {{ app()->getLocale() === 'en'
-                        ? 'From AI-driven hiring to local community management, we provide a spectrum of capabilities designed for regional scalability.'
-                        : 'Dari rekrutmen berbasis AI hingga pengelolaan komunitas lokal, kami menyediakan kapabilitas yang dirancang untuk skalabilitas regional.' }}
+                    {{ $locale === 'en'
+                        ? 'Each solution below is mapped from Nakala Digital x Romulus Digital portfolio and capability references, so every detail links to real delivery areas.'
+                        : 'Setiap solusi di bawah ini dipetakan dari portofolio dan kapabilitas Nakala Digital x Romulus Digital, sehingga detailnya mengarah ke area delivery yang nyata.' }}
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                <!-- 1. AI Hiring (Large Card) -->
-                <div
-                    class="md:col-span-8 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all border-t-4 border-t-primary">
-                    <div class="flex flex-col md:flex-row gap-unit-lg h-full">
-                        <div class="md:w-1/2">
-                            <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                                data-icon="psychology">psychology</span>
-                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm text-on-background">
-                                {{ app()->getLocale() === 'en' ? 'AI Hiring Platform' : 'Platform AI Hiring' }}
-                            </h3>
-                            <p class="text-on-surface-variant mb-unit-md text-sm">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'Automating talent acquisition with bias-free screening and predictive performance modeling.'
-                                    : 'Mengotomatisasi akuisisi talenta dengan screening bebas bias dan pemodelan performa prediktif.' }}
+                @foreach ($solutionCases as $case)
+                    @php
+                        $isDark = $case['dark'] ?? false;
+                        $cardClass = $isDark
+                            ? 'bg-on-background text-surface border border-outline'
+                            : 'bg-surface border border-outline-variant';
+                        $bodyTextClass = $isDark ? 'text-surface-variant' : 'text-on-surface-variant';
+                        $linkClass = $isDark ? 'text-tertiary-fixed' : 'text-primary';
+                    @endphp
+                    <article
+                        class="{{ $case['span'] }} {{ $cardClass }} rounded-xl p-unit-lg solution-card transition-all {{ ($case['featured'] ?? false) ? 'border-t-4 border-t-primary' : '' }}">
+                        <div class="flex h-full flex-col">
+                            <span class="material-symbols-outlined {{ $linkClass }} text-4xl mb-unit-sm">{{ $case['icon'] }}</span>
+                            <p class="font-label-sm text-label-sm uppercase tracking-widest {{ $linkClass }} mb-unit-xs">
+                                {{ $case['category'][$locale] }}
                             </p>
-                            <div class="space-y-2 mb-unit-lg">
-                                <div class="flex items-start gap-unit-sm">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <p class="text-sm">
-                                        <strong>{{ app()->getLocale() === 'en' ? 'Problem' : 'Masalah' }}:</strong>
-                                        {{ app()->getLocale() === 'en' ? 'Slow candidate screening cycles.' : 'Siklus screening kandidat terlalu lambat.' }}
-                                    </p>
-                                </div>
-                                <div class="flex items-start gap-unit-sm">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <p class="text-sm">
-                                        <strong>{{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}:</strong>
-                                        {{ app()->getLocale() === 'en' ? 'NLP-based resume parsing & scoring.' : 'Parsing dan scoring CV berbasis NLP.' }}
-                                    </p>
-                                </div>
-                                <div class="flex items-start gap-unit-sm">
-                                    <span
-                                        class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
-                                    <p class="text-sm">
-                                        <strong>{{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}:</strong>
-                                        {{ app()->getLocale() === 'en' ? '60% reduction in time-to-hire.' : 'Time-to-hire berkurang 60%.' }}
-                                    </p>
-                                </div>
+                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm {{ $isDark ? 'text-white' : 'text-on-background' }}">
+                                {{ $case['title'][$locale] }}
+                            </h3>
+                            <p class="{{ $bodyTextClass }} text-sm mb-unit-md">
+                                {{ $case['summary'][$locale] }}
+                            </p>
+                            <div class="{{ $isDark ? 'bg-white/10 border-white/20' : 'bg-surface-container-highest/30 border-outline-variant/50' }} p-unit-sm rounded border mb-unit-md">
+                                <p class="text-xs">
+                                    <strong>{{ $locale === 'en' ? 'Capability' : 'Kapabilitas' }}:</strong>
+                                    {{ $case['capability'] }}
+                                </p>
                             </div>
-                            <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                                {{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }} <span
-                                    class="material-symbols-outlined text-xs">arrow_forward</span></a>
+                            <a class="{{ $linkClass }} font-bold text-sm inline-flex items-center gap-1 mt-auto"
+                                href="{{ route($detailRoute, $case['id']) }}">
+                                {{ $locale === 'en' ? 'View Details' : 'Lihat Detail' }}
+                                <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                            </a>
                         </div>
-                        <div
-                            class="md:w-1/2 bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/30 flex items-center justify-center">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A sophisticated AI hiring dashboard interface showing candidate matching percentages, heatmaps of skills, and automated interview scheduling tools. The UI is clean, using a light mode palette with electric cyan accents and midnight navy text. High-contrast outlines define the various data widgets, conveying technical rigor and modern software excellence."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Df_CytLZx8Hfke85ZmdVdvxDVz9n6xF39xLUwmaC4fXIfA3JSp1f-yQ41MrdaZRwnWl2gGOteMVocGRZeHBm8sYtBgZNdFj9AEnk98fPAr6Wqt_Djvq1jx4pzu8wEZEW8jttTsw6vie33CysSvhjH1NMTYzJb0UkiNv1N305AumrgnYbwcsN4HhYbUQs962WPqqfsnsdHgCh7hJ7gRUcskJPNDRdpeBi6QZbQ-nEmbo85HCAoEu02tu_2O3mAGk_gYciaWbvzLLc" />
-                        </div>
-                    </div>
-                </div>
-                <!-- 2. HRMS (Compact Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="badge">badge</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">Next-Gen HRMS</h3>
-                    <p class="text-on-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Unified workforce management from payroll to performance.'
-                            : 'Manajemen tenaga kerja terpadu dari payroll hingga performa.' }}
-                    </p>
-                    <div
-                        class="bg-surface-container-highest/30 p-unit-sm rounded border border-outline-variant/50 mb-unit-md">
-                        <p class="text-xs font-bold text-primary-container">
-                            {{ app()->getLocale() === 'en' ? 'IMPACT: +40% retention rate' : 'DAMPAK: +40% retensi' }}
-                        </p>
-                    </div>
-                    <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                        {{ app()->getLocale() === 'en' ? 'Details' : 'Detail' }}
-                        <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
-                </div>
-                <!-- 3. HSE Operations (Medium Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="health_and_safety">health_and_safety</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
-                        {{ app()->getLocale() === 'en' ? 'HSE Operations' : 'Operasional HSE' }}</h3>
-                    <p class="text-on-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Safety compliance and incident reporting for industrial scale.'
-                            : 'Kepatuhan keselamatan dan pelaporan insiden untuk skala industri.' }}
-                    </p>
-                    <p class="text-xs mb-unit-sm">
-                        <strong>{{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}:</strong>
-                        {{ app()->getLocale() === 'en' ? 'Real-time field reporting app.' : 'Aplikasi pelaporan lapangan real-time.' }}
-                    </p>
-                    <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                        {{ app()->getLocale() === 'en' ? 'Details' : 'Detail' }}
-                        <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
-                </div>
-                <!-- 4. VMS (Medium Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="local_shipping">local_shipping</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">VMS Portal</h3>
-                    <p class="text-on-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Vendor Management System to optimize regional supply chains.'
-                            : 'Vendor Management System untuk mengoptimalkan supply chain regional.' }}
-                    </p>
-                    <p class="text-xs mb-unit-sm">
-                        <strong>{{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}:</strong>
-                        {{ app()->getLocale() === 'en' ? '25% cost saving in procurement.' : 'Penghematan biaya procurement 25%.' }}
-                    </p>
-                    <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                        {{ app()->getLocale() === 'en' ? 'Details' : 'Detail' }}
-                        <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
-                </div>
-                <!-- 5. Customer Engagement (Medium Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all border-t-4 border-t-primary">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="forum">forum</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
-                        {{ app()->getLocale() === 'en' ? 'Omni-Channel Engagement' : 'Engagement Omni-Channel' }}</h3>
-                    <p class="text-on-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Consolidating customer touchpoints into a single narrative.'
-                            : 'Mengonsolidasikan touchpoint pelanggan ke dalam satu narasi terpadu.' }}
-                    </p>
-                    <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                        {{ app()->getLocale() === 'en' ? 'Details' : 'Detail' }}
-                        <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
-                </div>
-                <!-- 6. Education Portal (Compact Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="school">school</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
-                        {{ app()->getLocale() === 'en' ? 'Education Hub' : 'Hub Edukasi' }}</h3>
-                    <p class="text-on-surface-variant text-sm">
-                        {{ app()->getLocale() === 'en'
-                            ? 'LMS and student portals for regional capability development.'
-                            : 'LMS dan portal siswa untuk pengembangan kapabilitas regional.' }}
-                    </p>
-                </div>
-                <!-- 7. WargaKas (Medium Card - Highlight) -->
-                <div
-                    class="md:col-span-4 bg-on-background text-surface border border-outline rounded-xl p-unit-lg solution-card transition-all">
-                    <div
-                        class="inline-block bg-tertiary text-on-tertiary px-unit-sm py-unit-xs rounded text-[10px] font-bold mb-unit-sm uppercase tracking-widest">
-                        {{ app()->getLocale() === 'en' ? 'Local Focus' : 'Fokus Lokal' }}</div>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">WargaKas</h3>
-                    <p class="text-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Community financial tracking and local governance automation.'
-                            : 'Pelacakan keuangan komunitas dan otomasi tata kelola lokal.' }}
-                    </p>
-                    <div class="flex items-center gap-unit-sm text-tertiary-fixed">
-                        <span class="material-symbols-outlined">payments</span>
-                        <span
-                            class="text-xs">{{ app()->getLocale() === 'en' ? 'Digitalizing local community treasury' : 'Digitalisasi kas komunitas lokal' }}</span>
-                    </div>
-                </div>
-                <!-- 8. AI Coach (Medium Card) -->
-                <div
-                    class="md:col-span-4 bg-surface border border-outline-variant rounded-xl p-unit-lg solution-card transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-unit-sm"
-                        data-icon="smart_toy">smart_toy</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">AI Performance Coach</h3>
-                    <p class="text-on-surface-variant text-sm mb-unit-md">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Real-time coaching insights for regional leadership teams.'
-                            : 'Insight coaching real-time untuk tim leadership regional.' }}
-                    </p>
-                    <p class="text-xs mb-unit-sm">
-                        <strong>{{ app()->getLocale() === 'en' ? 'Problem' : 'Masalah' }}:</strong>
-                        {{ app()->getLocale() === 'en' ? 'Fragmented training feedback.' : 'Feedback pelatihan terfragmentasi.' }}
-                    </p>
-                    <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">
-                        {{ app()->getLocale() === 'en' ? 'Details' : 'Detail' }}
-                        <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
-                </div>
+                    </article>
+                @endforeach
             </div>
         </section>
         <!-- Strategic Partner Section -->
@@ -447,69 +588,6 @@
                             {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</div>
                         <img alt="Romulus Digital Logo" class="h-16 w-auto object-contain opacity-90"
                             src="{{ asset('assets/romulus-hitam.png') }}" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Detailed Solution Breakdown (Problem/Solution/Impact) -->
-        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-xl items-center mb-unit-xl">
-                <div class="order-2 md:order-1">
-                    <div class="flex items-center gap-unit-sm mb-unit-sm">
-                        <span class="w-8 h-1 bg-primary"></span>
-                        <span
-                            class="font-label-sm text-label-sm uppercase tracking-tighter text-primary">{{ app()->getLocale() === 'en' ? 'Case Spotlight' : 'Sorotan Kasus' }}</span>
-                    </div>
-                    <h2 class="font-headline-h2 text-headline-h2 mb-unit-md text-on-background">Enterprise HSE
-                        {{ app()->getLocale() === 'en' ? 'Operations' : 'Operations' }}
-                    </h2>
-                    <div class="space-y-unit-md mb-unit-lg">
-                        <div class="p-unit-md bg-surface-container-low border border-outline-variant rounded-lg">
-                            <h4 class="font-bold text-on-background flex items-center gap-2 mb-1">
-                                <span class="material-symbols-outlined text-error text-[20px]">warning</span>
-                                {{ app()->getLocale() === 'en' ? 'Problem' : 'Masalah' }}
-                            </h4>
-                            <p class="text-sm text-on-surface-variant">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'Industrial safety audits were performed manually on paper, leading to 72-hour lag times in reporting hazards and significant non-compliance risks.'
-                                    : 'Audit keselamatan industri masih dilakukan manual di kertas, menyebabkan jeda laporan hazard hingga 72 jam dan risiko ketidakpatuhan yang signifikan.' }}
-                            </p>
-                        </div>
-                        <div class="p-unit-md bg-surface-container border border-primary/20 rounded-lg">
-                            <h4 class="font-bold text-primary flex items-center gap-2 mb-1">
-                                <span class="material-symbols-outlined text-[20px]">lightbulb</span>
-                                {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}
-                            </h4>
-                            <p class="text-sm text-on-surface-variant">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'Digitized inspection workflows with real-time photo evidence, geo-tagging, and automated escalation protocols for critical safety breaches.'
-                                    : 'Workflow inspeksi digital dengan bukti foto real-time, geo-tagging, dan protokol eskalasi otomatis untuk pelanggaran keselamatan kritis.' }}
-                            </p>
-                        </div>
-                        <div class="p-unit-md bg-tertiary-container/10 border border-tertiary/20 rounded-lg">
-                            <h4 class="font-bold text-tertiary flex items-center gap-2 mb-1">
-                                <span class="material-symbols-outlined text-[20px]">bolt</span>
-                                {{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}
-                            </h4>
-                            <p class="text-sm text-on-surface-variant">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'Zero reporting lag, 100% compliance record maintained across 12 regional sites, and a 30% drop in preventable workplace incidents.'
-                                    : 'Lag pelaporan menjadi nol, catatan kepatuhan 100% di 12 site regional, dan insiden kerja yang dapat dicegah turun 30%.' }}
-                            </p>
-                        </div>
-                    </div>
-                    <button
-                        class="bg-primary text-on-primary px-unit-lg py-unit-md rounded-lg font-button text-button shadow-lg">
-                        {{ app()->getLocale() === 'en' ? 'Request Solution Demo' : 'Minta Demo Solusi' }}</button>
-                </div>
-                <div class="order-1 md:order-2">
-                    <div class="relative group">
-                        <div
-                            class="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-xl -z-10 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
-                        </div>
-                        <img alt="HSE App Mockup" class="rounded-xl border-2 border-on-background shadow-xl w-full"
-                            data-alt="A detailed view of a mobile safety inspection application. The screen shows high-contrast forms, photo upload widgets with metadata, and a live status tracking bar in lime green. The phone is held by a professional in a clean industrial setting. The photography style is sharp, focused, and highlights the software's functional clarity against a softly blurred background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEMuMhs4oA9eK9UbmQnQRytSDCqQfD1XGwZs7_yRkCj31bAjyfIAolc4At7yr7tLI7WbRp53DCCsOR4pUvBPph0fTs9ewOaYD5IOiBSaCIlI6Yiny8gLYT1vxbaILxZCunlybwokv-Qw8DiCR1T9c4OehVU0h9e7PWZyoLhwW4npdDV1GcTLZu18P50hOB2er6TPuNSrRyOrdk2tGgXX7PUrirwxOiAt2710F5JxpdOI3gt66QkNvxll8y5Hz4ExD7DKFXJ-nLZsH_" />
                     </div>
                 </div>
             </div>

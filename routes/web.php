@@ -10,6 +10,15 @@ function registerCompanyProfileRoutes($suffix = '')
     Route::view('/services', 'pages.service')->name('services' . $suffix);
     Route::view('/service', 'pages.service')->name('service' . $suffix);
     Route::view('/solutions', 'pages.solutions')->name('solutions' . $suffix);
+    Route::get('/solutions/{solution}', function (string $solution) {
+        $solutionCase = collect(config('solutions.cases'))->firstWhere('id', $solution);
+
+        abort_unless($solutionCase, 404);
+
+        return view('pages.solution-detail', [
+            'solutionCase' => $solutionCase,
+        ]);
+    })->name('solutions.detail' . $suffix);
     Route::view('/delivery', 'pages.delivery')->name('delivery' . $suffix);
     Route::view('/portfolio', 'pages.portfolio')->name('portfolio' . $suffix);
     Route::view('/portopolio', 'pages.portfolio')->name('portopolio' . $suffix);
@@ -28,4 +37,3 @@ Route::prefix('en')->group(function () {
 
 // Default (Indonesian)
 registerCompanyProfileRoutes();
-

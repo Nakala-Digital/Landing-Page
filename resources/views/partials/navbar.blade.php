@@ -5,6 +5,7 @@
     $navItems = [
         ['label' => $locale === 'en' ? 'Home' : 'Beranda', 'route' => 'home'],
         ['label' => $locale === 'en' ? 'About' : 'Tentang Kami', 'route' => 'about'],
+        ['label' => $locale === 'en' ? 'Team' : 'Tim', 'route' => 'team'],
         ['label' => $locale === 'en' ? 'Services' : 'Layanan', 'route' => 'services'],
         ['label' => $locale === 'en' ? 'Solutions' : 'Solusi', 'route' => 'solutions'],
         ['label' => $locale === 'en' ? 'Delivery' : 'Metodologi', 'route' => 'delivery'],
@@ -45,6 +46,7 @@
                 @php
                     $active =
                         request()->routeIs($item['route'] . $localeSuffix) ||
+                        ($item['route'] === 'solutions' && request()->routeIs('solutions.detail' . $localeSuffix)) ||
                         ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix));
                 @endphp
                 <a class="relative whitespace-nowrap font-button text-button uppercase tracking-wide xl:tracking-wider transition-colors pb-0.5
@@ -60,7 +62,7 @@
         {{-- Right: CTA, Language Switcher, and Mobile Hamburger --}}
         <div class="flex items-center justify-end gap-3 xl:gap-4 shrink-0">
             {{-- Language Switcher (Desktop/Tablet) --}}
-            <div class="hidden md:flex items-center bg-[#A7F432] text-[#021943] rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
+            <div class="hidden md:flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
                 <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                     class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                 <span class="mx-2 opacity-40">|</span>
@@ -85,6 +87,7 @@
                         @php
                             $active =
                                 request()->routeIs($item['route'] . $localeSuffix) ||
+                                ($item['route'] === 'solutions' && request()->routeIs('solutions.detail' . $localeSuffix)) ||
                                 ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix));
                         @endphp
                         <a class="block rounded-lg px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
@@ -96,7 +99,7 @@
                     {{-- Mobile Language Switcher --}}
                     <div class="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between p-2">
                         <span class="text-on-surface-variant font-normal text-sm">{{ app()->getLocale() === 'en' ? 'Language:' : 'Bahasa:' }}</span>
-                        <div class="flex items-center bg-[#A7F432] text-[#021943] rounded-lg px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
+                        <div class="flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
                             <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                                 class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                             <span class="mx-2 opacity-40">|</span>

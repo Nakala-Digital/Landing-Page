@@ -28,53 +28,56 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-tint": "#00677d",
+                        "surface-tint": "#12AED0",
                         "on-error": "#ffffff",
-                        "outline-variant": "#bcc8ce",
-                        "on-tertiary-fixed": "#112000",
-                        "on-secondary-fixed": "#021943",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
                         "surface-dim": "#d5dbdd",
-                        "secondary-container": "#b9cbff",
-                        "primary-fixed-dim": "#56d6f9",
-                        "tertiary-fixed": "#abf837",
-                        "error": "#ba1a1a",
-                        "on-secondary-container": "#435582",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
                         "background": "#f5fafd",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#253e00",
-                        "on-primary-fixed": "#001f27",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
                         "on-primary": "#ffffff",
-                        "outline": "#6d797e",
-                        "inverse-primary": "#56d6f9",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
                         "surface-container": "#e9eff1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#b3c6f9",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
                         "surface-bright": "#f5fafd",
                         "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#b2ebff",
-                        "primary-container": "#12aed0",
-                        "primary": "#00677d",
-                        "on-primary-container": "#003c4a",
-                        "on-surface-variant": "#3d494d",
-                        "on-primary-fixed-variant": "#004e5f",
-                        "on-tertiary-fixed-variant": "#314f00",
-                        "on-background": "#171c1f",
-                        "on-secondary-fixed-variant": "#334671",
-                        "tertiary-container": "#73b100",
-                        "on-surface": "#171c1f",
-                        "tertiary": "#426900",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
                         "surface": "#f5fafd",
                         "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#ffffff",
+                        "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#d9e2ff",
-                        "error-container": "#ffdad6",
-                        "inverse-surface": "#2c3133",
-                        "tertiary-fixed-dim": "#90db0e",
-                        "secondary": "#4b5d8a",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
                         "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6"
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -162,7 +165,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f5fafd;
-            color: #171c1f;
+            color: #031A44;
         }
 
         .material-symbols-outlined {
@@ -170,9 +173,9 @@
         }
 
         .active-nav {
-            border-bottom: 2px solid #00677d;
+            border-bottom: 2px solid #12AED0;
             padding-bottom: 4px;
-            color: #00677d;
+            color: #12AED0;
         }
     </style>
 </head>
@@ -217,20 +220,32 @@
             </div>
         </header>
         <!-- Strategic Partner Section -->
-        <section class="bg-on-background py-unit-lg border-y border-outline-variant">
+        <section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
+            <!-- Decorative gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
+
             <div
-                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-unit-md">
-                <div class="text-surface-variant font-body-md text-body-md italic opacity-80">
-                    {{ app()->getLocale() === 'en' ? 'Official Strategic Partner' : 'Mitra Strategis Resmi' }}
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
+
+                <!-- Text Area -->
+                <div class="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
+                     <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
+                         {{ app()->getLocale() === 'en' ? 'Official Strategic Partner' : 'Mitra Strategis Resmi' }}
+                     </span>
+                     <span class="text-white/80 font-body-md text-sm">
+                         {{ app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional' }}
+                     </span>
                 </div>
-                <div class="flex items-center space-x-unit-lg">
+
+                <!-- Desktop Divider Line -->
+                <div class="hidden md:block w-px h-14 md:h-16 bg-white/20"></div>
+
+                <!-- Logo Area -->
+                <div class="flex items-center justify-center group">
                     <img alt="Romulus Digital Logo"
-                        class="h-12 w-auto object-contain bg-white rounded-md p-2 opacity-90"
+                        class="h-14 md:h-16 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                        style="filter: brightness(0) invert(1);"
                         src="{{ asset('assets/romulus-hitam.png') }}" />
-                    <div class="h-8 w-px bg-outline-variant/30 hidden md:block"></div>
-                    <p class="text-surface-container-highest font-label-sm text-label-sm max-w-[200px]">
-                        {{ app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional' }}
-                    </p>
                 </div>
             </div>
         </section>

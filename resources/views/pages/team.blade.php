@@ -6,17 +6,17 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        {{ app()->getLocale() === 'en' ? 'Team & Leadership | Nakala Digital' : 'Tim & Kepemimpinan | Nakala Digital' }}
+        {{ app()->getLocale() === 'en' ? 'Team & Partnership | Nakala Digital' : 'Tim & Kemitraan | Nakala Digital' }}
     </title>
     @include('partials.seo', [
         'title' =>
             app()->getLocale() === 'en'
-                ? 'Team & Leadership | Nakala Digital'
-                : 'Tim & Kepemimpinan | Nakala Digital',
+                ? 'Team & Partnership | Nakala Digital'
+                : 'Tim & Kemitraan | Nakala Digital',
         'description' =>
             app()->getLocale() === 'en'
-                ? 'Meet Nakala Digital leadership and our scalable local core team backed by regional capability.'
-                : 'Kenali pemimpin Nakala Digital dan model tim inti lokal yang didukung kapabilitas regional.',
+                ? "Meet Nakala Digital's core team, with Romulus Digital as a strategic partner and trust layer for regional capability."
+                : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas regional.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -32,53 +32,56 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-tint": "#00677d",
+                        "surface-tint": "#12AED0",
                         "on-error": "#ffffff",
-                        "outline-variant": "#bcc8ce",
-                        "on-tertiary-fixed": "#112000",
-                        "on-secondary-fixed": "#021943",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
                         "surface-dim": "#d5dbdd",
-                        "secondary-container": "#b9cbff",
-                        "primary-fixed-dim": "#56d6f9",
-                        "tertiary-fixed": "#abf837",
-                        "error": "#ba1a1a",
-                        "on-secondary-container": "#435582",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
                         "background": "#f5fafd",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#253e00",
-                        "on-primary-fixed": "#001f27",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
                         "on-primary": "#ffffff",
-                        "outline": "#6d797e",
-                        "inverse-primary": "#56d6f9",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
                         "surface-container": "#e9eff1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#b3c6f9",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
                         "surface-bright": "#f5fafd",
                         "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#b2ebff",
-                        "primary-container": "#12aed0",
-                        "primary": "#00677d",
-                        "on-primary-container": "#003c4a",
-                        "on-surface-variant": "#3d494d",
-                        "on-primary-fixed-variant": "#004e5f",
-                        "on-tertiary-fixed-variant": "#314f00",
-                        "on-background": "#171c1f",
-                        "on-secondary-fixed-variant": "#334671",
-                        "tertiary-container": "#73b100",
-                        "on-surface": "#171c1f",
-                        "tertiary": "#426900",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
                         "surface": "#f5fafd",
                         "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#ffffff",
+                        "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#d9e2ff",
-                        "error-container": "#ffdad6",
-                        "inverse-surface": "#2c3133",
-                        "tertiary-fixed-dim": "#90db0e",
-                        "secondary": "#4b5d8a",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
                         "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6"
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -134,22 +137,35 @@
             <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
                 <div class="max-w-3xl">
                     <span
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-md">{{ app()->getLocale() === 'en' ? 'Leadership' : 'Kepemimpinan' }}</span>
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-md">{{ app()->getLocale() === 'en' ? 'Team & Partnership' : 'Tim & Kemitraan' }}</span>
                     <h1 class="font-headline-h1 text-headline-h1 text-on-primary mb-unit-lg leading-tight">
-                        {{ app()->getLocale() === 'en' ? 'Led by a core team focused on' : 'Dipimpin oleh tim inti yang fokus pada' }}
+                        {{ app()->getLocale() === 'en' ? 'Core Team Nakala,' : 'Tim inti Nakala,' }}
                         <span
-                            class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'delivery and client success.' : 'delivery dan keberhasilan klien.' }}</span>
+                            class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'strengthened by Romulus Digital.' : 'diperkuat oleh Romulus Digital.' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
                         {{ app()->getLocale() === 'en'
-                            ? 'Our leadership bridges the gap between ambitious Indonesian digital transformations and regional excellence through technical rigor.'
-                            : 'Kepemimpinan kami menjembatani transformasi digital Indonesia yang ambisius dengan standar keunggulan regional melalui ketelitian teknis.' }}
+                            ? 'Nakala remains the primary delivery partner for every client engagement. Romulus Digital supports as a strategic trust layer, bringing regional credibility, reference, and capability when the work needs additional scale.'
+                            : 'Nakala tetap menjadi partner utama dalam setiap engagement klien. Romulus Digital mendukung sebagai trust layer strategis yang memberi kredibilitas, referensi, dan kapabilitas regional saat pekerjaan membutuhkan skala tambahan.' }}
                     </p>
                 </div>
             </div>
         </section>
         <!-- Team Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="max-w-3xl mb-unit-lg">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">
+                    {{ app()->getLocale() === 'en' ? 'Nakala Primary' : 'Nakala Primary' }}
+                </span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-background mt-unit-sm mb-unit-md">
+                    {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    {{ app()->getLocale() === 'en'
+                        ? 'Every project is led by Nakala Digital as the accountable, client-facing team. Our strategic partner strengthens confidence in the background without changing who owns the relationship.'
+                        : 'Setiap proyek dipimpin oleh Nakala Digital sebagai tim utama yang akuntabel dan berhadapan langsung dengan klien. Mitra strategis kami memperkuat keyakinan di belakang layar tanpa mengubah siapa yang memegang relasi utama.' }}
+                </p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 <!-- CEO -->
                 <div
@@ -157,7 +173,7 @@
                     <div class="aspect-square relative overflow-hidden">
                         <img alt="Milzam Zihni"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFAsfsa6P1YYclmp7aF-GpRB-04AotnuSYhuc9f1J2G-aLKx9XO9m4YKmUn6sFhoinSGTCN-8p8tl4zcJ-ouW6vrgx2iK27KUV5nsr9Schd-E8sR_pu3GicLs3wCPluIT1Lp6g-17MbFONWNpFQLBOaMBwThZuXkZcXRX7reRhWbrRKXe81eESGSdNlWTI8wj_rPvJ_NywnEaUB43yoWMcjY7cE-UJv7F7EgY6NSZ_nHcilCGHxZsjHvz-cqrL_G_QmwHF7NZW9GG7" />
+                            src="{{ asset('assets/team/milzam.jpeg') }}" />
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
@@ -189,9 +205,13 @@
                 <div
                     class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
                     <div class="aspect-square relative overflow-hidden">
-                        <img alt="Rinaldy Pasya"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiFKP1OJ8jf5cPc5w3S1VUe3cuCgYIXOSNJP6KdNjWFaC-UWj2MhmO-H1nRVWW4PxEjgj-BcoziYiJjj1eMM4hJcN7cYcuNi42ycmznAcLGd3txgp2FavENE2zNwP9oK3fI0pKI1IsqND0mcTwZjP0KI94_ltLp_Ns5YD-S9Ixbv2l1AIan3NnpiM5HRRQctk0ahLB4IpBNP7LKuwJDlKm9zj7ZVpCEmPO6o5m_R1NuPn_wd1D2e93Ca2fD_N2w6H3LG8vwIs7tpoW" />
+                        <div
+                            class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
+                            <div
+                                class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
+                                <span class="material-symbols-outlined text-5xl">person</span>
+                            </div>
+                        </div>
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
@@ -225,7 +245,7 @@
                     <div class="aspect-square relative overflow-hidden">
                         <img alt="Raul Mahya Komaran"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDImAaxRi9mPzOXVVCwBbXw7hk8WpHOqYuPYwBcrOKm7r5tBwOoKDOLkHZ7I88EzGIcoPgalcuB5qwtkWIH4sQCabFwHx1xjVHhQC5YpXeqNc5CjJH_n6xwV7IC-kvujctxgGzOAjOYehlGzJaISbItDsrXKjKKjTBV79Sh20VQM5_gSrDVd9pptkz_3NPb26fZbiLVIcQNYhhAbdOET0PRXaBWOyFUnAI_UN3AMX8nya_fBioyjTWhyRacIyZAwy0aJ7ouc6i3HzSc" />
+                            src="{{ asset('assets/team/raul.jpeg') }}" />
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
@@ -264,27 +284,27 @@
                         <div
                             class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-xl backdrop-blur-sm">
                             <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-primary-fixed-dim">
-                                {{ app()->getLocale() === 'en' ? 'Local core team with regional resource activation.' : 'Tim inti lokal dengan aktivasi resource regional.' }}
+                                {{ app()->getLocale() === 'en' ? 'Nakala leads delivery. Romulus strengthens trust.' : 'Nakala memimpin delivery. Romulus memperkuat trust.' }}
                             </h2>
                             <p class="font-body-lg text-body-lg text-surface-variant mb-unit-lg">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'We combine the deep cultural context of a local Indonesian presence with the immense scalability of a regional resource network. Our model ensures you get personalized attention from the core leadership while having access to a specialized talent pool for complex deployments.'
-                                    : 'Kami menggabungkan konteks lokal Indonesia yang kuat dengan skalabilitas jaringan resource regional. Model ini memastikan Anda mendapat perhatian langsung dari leadership inti sekaligus akses ke talenta spesialis untuk deployment yang kompleks.' }}
+                                    ? 'This partnership model keeps accountability clear: Nakala is the primary team your project works with day to day, while Romulus Digital acts as a strategic partner behind the scenes for regional insight, technical confidence, and additional specialist access.'
+                                    : 'Model kemitraan ini menjaga akuntabilitas tetap jelas: Nakala adalah tim utama yang bekerja langsung dengan proyek Anda setiap hari, sementara Romulus Digital berperan sebagai mitra strategis di belakang layar untuk insight regional, keyakinan teknis, dan akses spesialis tambahan.' }}
                             </p>
                             <div class="grid grid-cols-2 gap-unit-md">
-                                <div class="bg-surface/5 p-unit-md border-l-4 border-tertiary">
-                                    <p class="font-headline-h3 text-headline-h3 text-white">100%</p>
-                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Local Core Focus' : 'Fokus Tim Inti Lokal' }}
-                                    </p>
+                                <div
+                                    class="flex min-h-[120px] items-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
+                                    <div class="rounded-lg bg-white px-4 py-3 ring-1 ring-white/20">
+                                        <img alt="Nakala Digital"
+                                            class="h-10 md:h-12 w-auto object-contain"
+                                            src="{{ asset('assets/logo-nakala.png') }}" />
+                                    </div>
                                 </div>
-                                <div class="bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <p class="font-headline-h3 text-headline-h3 text-white">
-                                        {{ app()->getLocale() === 'en' ? 'Flexible Scale' : 'Skala Fleksibel' }}
-                                    </p>
-                                    <p class="font-label-sm text-label-sm uppercase text-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Regional Network' : 'Jaringan Regional' }}
-                                    </p>
+                                <div
+                                    class="flex min-h-[120px] items-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <img alt="Romulus Digital"
+                                        class="h-10 md:h-12 w-auto object-contain"
+                                        src="{{ asset('assets/romulus-putih.png') }}" />
                                 </div>
                             </div>
                         </div>
@@ -300,12 +320,30 @@
             </div>
         </section>
         <!-- Romulus Strategic Partner Badge -->
-        <section class="py-unit-lg bg-surface-container-low border-y border-outline-variant">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center">
-                <span
-                    class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-unit-sm tracking-widest">{{ app()->getLocale() === 'en' ? 'Our Strategic Regional Partner' : 'Mitra Regional Strategis Kami' }}</span>
-                <div class="flex items-center justify-center bg-inverse-surface p-unit-md rounded-xl">
-                    <img alt="Romulus Digital Logo" class="h-12 w-auto object-contain bg-white rounded-md p-2"
+        <section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
+            <!-- Decorative gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
+
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
+                <div class="text-center md:text-right">
+                    <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
+                        {{ app()->getLocale() === 'en' ? 'Strategic Partner & Trust Layer' : 'Mitra Strategis & Trust Layer' }}
+                    </span>
+                    <p class="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Nakala Digital remains primary. Romulus Digital reinforces regional confidence.'
+                            : 'Nakala Digital tetap primary. Romulus Digital memperkuat kepercayaan regional.' }}
+                    </p>
+                </div>
+
+                <!-- Desktop Divider Line -->
+                <div class="hidden md:block w-px h-10 md:h-12 bg-white/20"></div>
+
+                <!-- Logo Area -->
+                <div class="flex items-center justify-center group">
+                    <img alt="Romulus Digital Logo"
+                        class="h-12 md:h-14 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                        style="filter: brightness(0) invert(1);"
                         src="{{ asset('assets/romulus-hitam.png') }}" />
                 </div>
             </div>
