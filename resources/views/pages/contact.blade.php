@@ -174,7 +174,7 @@ Global Reach
 <span class="material-symbols-outlined text-electric-cyan" data-icon="phone">phone</span>
 <div>
 <p class="font-label-sm uppercase text-on-surface-variant">Phone</p>
-<p class="font-body-lg">+62 22 1234 5678</p>
+<p class="font-body-lg">+6282295706304</p>
 </div>
 </div>
 <div class="flex items-start gap-unit-md">
