@@ -167,7 +167,7 @@ Global Reach
 <span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
 <div>
 <p class="font-label-sm uppercase text-on-surface-variant">Email</p>
-<p class="font-body-lg">hello@nakaladigital.com</p>
+<p class="font-body-lg">contact@nakala.digital</p>
 </div>
 </div>
 <div class="flex items-start gap-unit-md">
@@ -181,7 +181,7 @@ Global Reach
 <span class="material-symbols-outlined text-electric-cyan" data-icon="location_on">location_on</span>
 <div>
 <p class="font-label-sm uppercase text-on-surface-variant">Office</p>
-<p class="font-body-lg">Jl. Asia Afrika No. 123<br/>Bandung, Indonesia 40111</p>
+<p class="font-body-lg">Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum,<br/>Bandung Wetan, Bandung City, West Java 40115</p>
 </div>
 </div>
 </div>
