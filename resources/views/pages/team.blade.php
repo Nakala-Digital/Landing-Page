@@ -153,11 +153,9 @@
         </section>
         <!-- Team Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="max-w-3xl mb-unit-lg">
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">
-                    {{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}
-                </span>
-                <h2 class="font-headline-h2 text-headline-h2 text-on-background mt-unit-sm mb-unit-md">
+                <div class="mb-unit-xl">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
                     {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">

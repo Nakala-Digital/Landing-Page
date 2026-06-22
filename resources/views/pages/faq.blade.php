@@ -321,9 +321,9 @@
         <!-- Blog Section (Bento Grid) -->
         <section class="py-unit-xl bg-surface-container-low">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="text-center mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Solution Highlight</span>
-                    <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-sm">
+                <div class="mb-unit-xl">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Engineering Insights' : 'Insight Engineering' }}
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">

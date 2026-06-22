@@ -187,9 +187,9 @@
         <!-- Draft Topics Grid -->
         <section class="py-unit-xl bg-surface-container-low">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="mb-unit-lg">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Topics' : 'Topik' }}</span>
-                    <h2 class="font-headline-h2 text-headline-h2 text-on-background">
+                <div class="mb-unit-xl max-w-3xl">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Explore by Topic' : 'Jelajahi berdasarkan Topik' }}
                     </h2>
                 </div>

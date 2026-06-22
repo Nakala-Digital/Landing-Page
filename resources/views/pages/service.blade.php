@@ -185,8 +185,8 @@
 <!-- 1. AI & GenAI -->
 <div class="md:col-span-3 lg:col-span-4 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary">
 <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">AI &amp; GenAI</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'AI & GenAI' : 'AI & GenAI' }}</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ app()->getLocale() === 'en' ? 'Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.' : 'Menerapkan AI Generatif canggih untuk efisiensi operasional dan keterlibatan pelanggan otomatis.' }}</p>
 <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
 <li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Custom AI Model Development' : 'Kustomisasi Model AI' }}</li>
 <li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Business Process Automation' : 'Otomasi Proses Bisnis' }}</li>
@@ -197,8 +197,8 @@
 <div class="md:col-span-3 lg:col-span-8 bg-on-secondary-fixed text-white p-unit-lg service-card flex flex-col md:flex-row gap-gutter">
 <div class="flex-1">
 <span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6" data-icon="code">code</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">Custom Software Dev</h3>
-<p class="font-body-md text-body-md text-surface-variant mb-6">Bespoke software solutions crafted for unique business processes and high-performance requirements.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'Custom Software Dev' : 'Pengembangan Software Kustom' }}</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">{{ app()->getLocale() === 'en' ? 'Bespoke software solutions crafted for unique business processes and high-performance requirements.' : 'Solusi perangkat lunak khusus yang dirancang untuk proses bisnis unik dan persyaratan performa tinggi.' }}</p>
 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
 <li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Enterprise Applications' : 'Aplikasi Enterprise' }}</li>
 <li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Scalable Platform Architecture' : 'Sistem Terukur' }}</li>
@@ -214,44 +214,44 @@
 <div class="md:col-span-6 lg:col-span-6 bg-white border border-outline-variant p-unit-lg service-card">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-primary text-5xl" data-icon="query_stats">query_stats</span>
-<span class="bg-primary-container/10 text-primary px-3 py-1 rounded font-label-sm text-label-sm">CONSULTANCY</span>
+<span class="bg-primary-container/10 text-primary px-3 py-1 rounded font-label-sm text-label-sm">{{ app()->getLocale() === 'en' ? 'CONSULTANCY' : 'KONSULTANSI' }}</span>
 </div>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">Tech Consulting</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">Strategic advice to align technology investment with business growth and regional market expansion.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'Tech Consulting' : 'Konsultasi Teknologi' }}</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ app()->getLocale() === 'en' ? 'Strategic advice to align technology investment with business growth and regional market expansion.' : 'Nasihat strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar regional.' }}</p>
 <div class="grid grid-cols-2 gap-4">
 <div class="p-4 bg-surface-container rounded-lg">
-<h4 class="font-bold text-on-surface mb-1">Architecture Review</h4>
-<p class="text-xs text-on-surface-variant">System audits and scalability assessments.</p>
+<h4 class="font-bold text-on-surface mb-1">{{ app()->getLocale() === 'en' ? 'Architecture Review' : 'Tinjauan Arsitektur' }}</h4>
+<p class="text-xs text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'System audits and scalability assessments.' : 'Audit sistem dan penilaian skalabilitas.' }}</p>
 </div>
 <div class="p-4 bg-surface-container rounded-lg">
-<h4 class="font-bold text-on-surface mb-1">Digital Roadmap</h4>
-<p class="text-xs text-on-surface-variant">Phased transformation strategy.</p>
+<h4 class="font-bold text-on-surface mb-1">{{ app()->getLocale() === 'en' ? 'Digital Roadmap' : 'Peta Jalan Digital' }}</h4>
+<p class="text-xs text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Phased transformation strategy.' : 'Strategi transformasi bertahap.' }}</p>
 </div>
 </div>
 </div>
 <!-- 4. Web & Portal -->
 <div class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-tertiary">
 <span class="material-symbols-outlined text-tertiary text-5xl mb-6" data-icon="web">web</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">Web &amp; Portal</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Engaging digital interfaces and high-traffic portals for B2B and B2C segments.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'Web & Portal' : 'Web & Portal' }}</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Engaging digital interfaces and high-traffic portals for B2B and B2C segments.' : 'Antarmuka digital yang menarik dan portal trafik tinggi untuk segmen B2B dan B2C.' }}</p>
 </div>
 <!-- 5. QA Governance -->
 <div class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary">
 <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">QA Governance</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Ensuring zero-defect deployment with automated testing frameworks and standards.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Ensuring zero-defect deployment with automated testing frameworks and standards.' : 'Memastikan penerapan tanpa cacat dengan kerangka pengujian dan standar otomatis.' }}</p>
 </div>
 <!-- 6. Managed Support & D365 -->
 <div class="md:col-span-6 lg:col-span-12 bg-surface-container-highest border border-outline-variant p-unit-lg service-card flex flex-col md:flex-row items-center gap-unit-lg">
 <div class="flex-1">
 <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="support_agent">support_agent</span>
-<h3 class="font-headline-h3 text-headline-h3 mb-4">Managed Support &amp; Dynamics 365</h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">End-to-end management of Microsoft D365 ecosystems and 24/7 technical support operations.</p>
+<h3 class="font-headline-h3 text-headline-h3 mb-4">{{ app()->getLocale() === 'en' ? 'Managed Support & Dynamics 365' : 'Managed Support & Dynamics 365' }}</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">{{ app()->getLocale() === 'en' ? 'End-to-end management of Microsoft D365 ecosystems and 24/7 technical support operations.' : 'Manajemen ujung-ke-ujung ekosistem Microsoft D365 dan operasi dukungan teknis 24/7.' }}</p>
 <div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">L1/L2/L3 Support</span>
-<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">D365 Implementation</span>
-<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">Cloud Migration</span>
-<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">24/7 Monitoring</span>
+<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'L1/L2/L3 Support' : 'Dukungan L1/L2/L3' }}</span>
+<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'D365 Implementation' : 'Implementasi D365' }}</span>
+<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'Cloud Migration' : 'Migrasi Cloud' }}</span>
+<span class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? '24/7 Monitoring' : 'Pemantauan 24/7' }}</span>
 </div>
 </div>
 <div class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-xl flex flex-col justify-center items-center text-center text-white">
@@ -267,21 +267,21 @@
 <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
 <section class="py-unit-xl overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<h2 class="font-headline-h2 mb-unit-lg">Regional Service Excellence</h2>
+<h2 class="font-headline-h2 mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Regional Service Excellence' : 'Keunggulan Layanan Regional' }}</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 <div class="space-y-6">
-<h4 class="font-headline-h3 border-l-4 border-primary pl-4">Custom AI Models</h4>
-<p class="text-on-surface-variant">Building proprietary neural networks tailored to Indonesian linguistic nuances and consumer behavior patterns.</p>
+<h4 class="font-headline-h3 border-l-4 border-primary pl-4">{{ app()->getLocale() === 'en' ? 'Custom AI Models' : 'Model AI Kustom' }}</h4>
+<p class="text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Building proprietary neural networks tailored to Indonesian linguistic nuances and consumer behavior patterns.' : 'Membangun jaringan saraf tiruan proprietary yang disesuaikan dengan nuansa linguistik Indonesia dan pola perilaku konsumen.' }}</p>
 <img class="w-full rounded-lg" data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines. The background is a crisp, sterile white, reflecting a light-mode modern aesthetic. Tiny particles of impact lime energy orbit the brain, symbolizing active generative AI and neural processing. The overall mood is sophisticated, technical, and visionary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq"/>
 </div>
 <div class="space-y-6">
-<h4 class="font-headline-h3 border-l-4 border-tertiary pl-4">Enterprise Portals</h4>
-<p class="text-on-surface-variant">Secure, scalable, and localized portals for regional logistics and distribution networks across Southeast Asia.</p>
+<h4 class="font-headline-h3 border-l-4 border-tertiary pl-4">{{ app()->getLocale() === 'en' ? 'Enterprise Portals' : 'Portal Perusahaan' }}</h4>
+<p class="text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Secure, scalable, and localized portals for regional logistics and distribution networks across Southeast Asia.' : 'Portal yang aman, skalabel, dan terlokalisasi untuk jaringan logistik dan distribusi regional di seluruh Asia Tenggara.' }}</p>
 <img class="w-full rounded-lg" data-alt="An isometric technical illustration of a global logistics network with interconnected shipping nodes and digital data streams. The design uses a bold, high-contrast palette of impact lime and midnight navy. Glowing lines connect various stylized cityscapes, representing regional delivery capabilities and digital connectivity in a professional corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-AXleTxxk8ZxGeWyDmtGbin_jeBfaYYtL7Wcn_Sed-H_MlzBcd0nfRfkVN1tLvUXOj259b0w__xuNiznSt5qU2HrVuv-5wkvki-blo_4dadmHDZkw8mAo0QJW59snMpIcWYRp49NWYI2zX-vjpP0YDf03Huzn9lWfNGa84P7CZO05bq4d6HdD2PClw54CU1LYpG2btXA7zZ7Jwn6J7CiQMW0BVdbhzJyPX9TlTmw0n9LPDImoXXFYhxtLkfDlYPWefMAaJagYDVX"/>
 </div>
 <div class="space-y-6">
-<h4 class="font-headline-h3 border-l-4 border-secondary pl-4">Legacy Overhaul</h4>
-<p class="text-on-surface-variant">Seamlessly transitioning monolithic systems to agile microservices without disrupting local operations.</p>
+<h4 class="font-headline-h3 border-l-4 border-secondary pl-4">{{ app()->getLocale() === 'en' ? 'Legacy Overhaul' : 'Perombakan Sistem Lama' }}</h4>
+<p class="text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Seamlessly transitioning monolithic systems to agile microservices without disrupting local operations.' : 'Transisi mulus dari sistem monolitik ke microservices yang lincah tanpa mengganggu operasi lokal.' }}</p>
 <img class="w-full rounded-lg" data-alt="A conceptual visualization of digital transformation showing a crumbling grey stone structure being replaced by vibrant, glowing cyan geometric cubes. The lighting is high-key with soft shadows on a light grey background. The image represents the transition from legacy systems to modern, cloud-native architecture with a focus on technical reliability and modern corporate aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOKFDTr6_voBBypZAFlVCxl67lbWO_ePQbX9a5bzWzPiT4fArb1YcGWOAIRZ6bKLN4lphcP0pYATRd6GTPm15fU31NqK04GavdGbvXYPwg6m7lEAldkmFPPrmLBMOFp3KZSpZClOMQdFdhCNK3iXoQb6OPXxXNwiaIVm-xo5IgrVMWJSlw5zzFfu4h5ixORnphUHULOTnyOF5TLHT5Ahp_1i0ky1gqOU5aVDFftYMNqdQIM11yROe0oVCY0PBazdhzkjWveX3deKd"/>
 </div>
 </div>

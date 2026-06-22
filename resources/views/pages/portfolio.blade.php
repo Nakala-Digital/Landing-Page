@@ -137,13 +137,14 @@
 <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
 <div class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
-<span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}</span>
+<span class="material-symbols-outlined text-xs">book</span>
+<span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
-                    Portfolio dan studi kasus <span class="text-primary">solusi digital.</span>
+                    {!! app()->getLocale() === 'en' ? 'Portfolio and case studies of <span class="text-primary">digital solutions.</span>' : 'Portofolio dan studi kasus <span class="text-primary">solusi digital.</span>' !!}
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Nakala Digital bridging local delivery with regional capability. Explore how we've empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.
+                    {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
                 </p>
 </div>
 <!-- Decorative Elements -->
@@ -163,15 +164,15 @@
 <div class="flex flex-col md:flex-row h-full">
 <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
 <div>
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Public Sector</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Public Sector' : 'Sektor Publik' }}</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">PPDB Online System</h3>
 <p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Building a reliable digital admission system that handles high-volume registration, document verification, and transparent selection processes.' : 'Membangun sistem penerimaan digital yang andal untuk menangani registrasi volume tinggi, verifikasi dokumen, dan proses seleksi yang transparan.' }}</p>
 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-<p class="text-label-sm uppercase font-bold text-outline">Impact</p>
+<p class="text-label-sm uppercase font-bold text-outline">{{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}</p>
 <p class="text-primary font-bold">{{ app()->getLocale() === 'en' ? 'High-availability platform with scalable admission processing.' : 'Platform dengan ketersediaan tinggi dan pemrosesan pendaftaran yang skalabel.' }}</p>
 </div>
 </div>
-<a href="https://slategray-manatee-487981.hostingersite.com/" target="_blank" rel="noopener noreferrer" class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="https://slategray-manatee-487981.hostingersite.com/" target="_blank" rel="noopener noreferrer" class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }} <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
 <img class="absolute inset-0 w-full h-full object-cover" data-alt="A high-fidelity software mockup of a modern Indonesian public school admission dashboard. The UI is clean, using Nakala Digital's brand blue and white palette. In the background, a soft-focused modern school building is visible under bright daylight. The lighting is high-key, communicating transparency and institutional trust. Professional corporate high-contrast style with sharp edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs"/>
@@ -180,24 +181,24 @@
 </div>
 <!-- 2. HRMS -->
 <div class="md:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Capability Reference</span>
+<div class="mb-unit-xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
-<p class="text-on-surface-variant text-body-md mb-unit-md">Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-md">{{ app()->getLocale() === 'en' ? 'Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.' : 'Memsentralisasi penggajian, kehadiran, dan kinerja untuk tenaga kerja terdistribusi di Asia Tenggara.' }}</p>
 </div>
 <div>
 <div class="bg-surface p-unit-md border-t-4 border-primary mb-unit-md">
-<p class="font-label-sm text-outline uppercase mb-1">Solution</p>
-<p class="text-body-md">Automated compliance &amp; tax localization.</p>
+<p class="font-label-sm text-outline uppercase mb-1">{{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
+<p class="text-body-md">{{ app()->getLocale() === 'en' ? 'Automated compliance & tax localization.' : 'Kepatuhan & lokalisasi pajak otomatis.' }}</p>
 </div>
-<a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank" rel="noopener noreferrer" class="text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
+<a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank" rel="noopener noreferrer" class="text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }} <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 </div>
 <!-- 3. HSE -->
 <div class="md:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
-<span class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">Industrial</span>
+<span class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
 <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
-<p class="text-surface-variant text-body-md">Digitizing workplace safety reports and real-time hazard monitoring for mining operations.</p>
+<p class="text-surface-variant text-body-md">{{ app()->getLocale() === 'en' ? 'Digitizing workplace safety reports and real-time hazard monitoring for mining operations.' : 'Mendigitalisasi laporan keselamatan kerja dan pemantauan bahaya secara real-time untuk operasi pertambangan.' }}</p>
 <div class="flex items-center gap-unit-sm mt-auto">
 <span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
 <span class="font-bold">{{ app()->getLocale() === 'en' ? 'Proactive Safety Management' : 'Manajemen Keselamatan Proaktif' }}</span>
@@ -208,15 +209,15 @@
 <div class="flex flex-col md:flex-row-reverse h-full">
 <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
 <div>
-<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">Community Fintech</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Community Fintech' : 'Fintech Komunitas' }}</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">WargaKas Mobile</h3>
 <p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Enabling transparent financial management for community-based organizations with digital payment integration.' : 'Memungkinkan pengelolaan keuangan yang transparan untuk organisasi berbasis komunitas dengan integrasi pembayaran digital.' }}</p>
 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-<p class="text-label-sm uppercase font-bold text-outline">Solution</p>
-<p class="text-on-surface">Integrated QRIS payments &amp; real-time ledger.</p>
+<p class="text-label-sm uppercase font-bold text-outline">{{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
+<p class="text-on-surface">{{ app()->getLocale() === 'en' ? 'Integrated QRIS payments & real-time ledger.' : 'Pembayaran QRIS terintegrasi & buku besar real-time.' }}</p>
 </div>
 </div>
-<button class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">Case Study <span class="material-symbols-outlined">chevron_right</span></button>
+<button class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'Case Study' : 'Studi Kasus' }} <span class="material-symbols-outlined">chevron_right</span></button>
 </div>
 <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
 <img class="absolute inset-0 w-full h-full object-cover" data-alt="A close-up shot of a smartphone displaying a sleek fintech application interface with bright lime green accents. The phone is held by a person in a modern urban workspace in Jakarta, with city lights blurred in the background. The lighting is vibrant and energetic, reflecting a tech-forward society. The UI design follows a rigid grid system and high-contrast color blocks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm2M0616JH6aYKMatKLlBn00XRFjy4muiu-AVHkmEZ4mquHBJyzTCnQv2hU8dpPeQy5zaZNyvF-cdieQKwEP-94c7rEDufUZ2V4UpOgBaSoSz-Uhzl77W8KZddcIgMsuRvxigMf-6eUAh2Bl7I9W_1pHTebLZIuPnf_TBOnz5I3AZJTd9IIw10cDh-RZD4Z5jgBiw2psnyRQHORyLQ63m97Fp3aIIFvzqCDQFwRcv7Mo3lPB-YWwYVDI2jZzLGSUMR6axa51Nr_cQa"/>
@@ -237,10 +238,10 @@
 </div>
 <!-- 6. AI Coach -->
 <div class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
-<div class="relative z-10">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Solution Highlight</span>
+<div class="mb-unit-xl text-center md:text-left">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Personalized AI Coach</h3>
-<p class="text-on-surface-variant text-body-md mb-unit-md">Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-md">{{ app()->getLocale() === 'en' ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.' : 'Jalur pembelajaran adaptif untuk reskilling perusahaan, memanfaatkan LLM untuk umpan balik real-time.' }}</p>
 <div class="flex gap-unit-sm">
 <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">smart_toy</span></div>
 <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">school</span></div>
@@ -256,22 +257,22 @@
 <span class="material-symbols-outlined text-primary">hub</span>
 <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
 </div>
-<p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.' : 'Tantangan: Mengintegrasikan data legacy kompleks ke dalam ekosistem MS Dynamics modern untuk konglomerat regional.' }}</p>
 <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
-<p class="font-label-sm uppercase">Regional Capability</p>
+<p class="font-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kapabilitas Regional' }}</p>
 <p class="text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Managed D365 support with regional capability.' : 'Dukungan D365 terkelola dengan kapabilitas regional.' }}</p>
 </div>
 </div>
 <!-- 8. 360 Customer Engagement -->
 <div class="md:col-span-8 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
 <div class="flex-1">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Retail &amp; Commerce</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360° Customer Engagement</h3>
-<p class="text-on-surface-variant text-body-md mb-unit-md">A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-md">{{ app()->getLocale() === 'en' ? 'A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.' : 'Dasbor terpadu yang menghubungkan penjualan online, sentimen media sosial, dan lalu lintas toko fisik untuk pemasaran berbasis data.' }}</p>
 <div class="flex flex-wrap gap-unit-sm">
-<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Omnichannel</span>
-<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Sentiment Analysis</span>
-<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">Predictive Analytics</span>
+<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Omnichannel' : 'Omnichannel' }}</span>
+<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Sentiment Analysis' : 'Analisis Sentimen' }}</span>
+<span class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</span>
 </div>
 </div>
 <div class="w-full md:w-64 h-48 bg-surface rounded-xl border border-outline-variant overflow-hidden">
@@ -284,7 +285,7 @@
 @include('partials.partner-badge')
 <!-- CTA Section -->
 <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">Ready to build your <span class="text-primary">next success story?</span></h2>
+<h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">{!! app()->getLocale() === 'en' ? 'Ready to build your <span class="text-primary">next success story?</span>' : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>' !!}</h2>
 <div class="flex flex-col md:flex-row gap-unit-md justify-center">
         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}</a>
                 <a href="{{ route('services' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>

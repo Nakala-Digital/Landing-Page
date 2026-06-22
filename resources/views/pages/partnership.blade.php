@@ -282,7 +282,7 @@
 </div>
 <div class="lg:col-span-7 order-1 lg:order-2">
 <div class="pl-0 lg:pl-12">
-<span class="text-electric-cyan font-bold uppercase tracking-widest text-label-sm mb-4 block">Case Study</span>
+<span class="text-electric-cyan font-bold uppercase tracking-widest text-label-sm mb-4 block">{{ app()->getLocale() === 'en' ? 'Case Study' : 'Studi Kasus' }}</span>
 <h2 class="font-headline-h2 text-headline-h2 text-midnight-navy mb-6">Regional Power, Locally Applied</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
                                 Our flagship collaboration: An AI-Powered Recruitment Platform built on Romulus's core engine and localized by Nakala for Indonesia's unique human capital landscape.

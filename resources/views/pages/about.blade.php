@@ -224,7 +224,7 @@
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
-                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Solution Highlight</span>
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                 <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                     {{ app()->getLocale() === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}</h2>
                 <div class="h-1.5 w-24 bg-primary-container mt-unit-sm"></div>
@@ -309,8 +309,9 @@
         <!-- Why Nakala Section -->
         <section class="bg-surface-container-highest py-unit-xl">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="text-center mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Capability Reference</span>
+                <!-- Value Proposition -->
+                <div class="mb-unit-lg text-center max-w-3xl mx-auto">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
                     <p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">
