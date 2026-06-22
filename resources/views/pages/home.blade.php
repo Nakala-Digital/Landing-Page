@@ -365,7 +365,7 @@
                         class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
                         <div class="z-10 space-y-unit-md">
                             <h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
-                            <p class="font-body-lg text-primary-fixed max-w-lg">{{ __('messages.cap_local_desc') }}</p>
+                            <p class="font-body-lg text-white/90 max-w-lg">{{ __('messages.cap_local_desc') }}</p>
                         </div>
                         <div class="absolute right-[-10%] top-[-10%] opacity-10">
                             <span class="material-symbols-outlined text-[300px]">language</span>
@@ -411,8 +411,8 @@
             </div>
         </section>
         <!-- Final CTA -->
-        <section class="py-unit-xl bg-on-secondary-fixed text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-5">
+        <section class="py-unit-xl bg-primary text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
                 <div class="grid grid-cols-6 h-full">
                     <div class="border-r border-white"></div>
                     <div class="border-r border-white"></div>
@@ -425,7 +425,7 @@
             <div class="max-w-2xl mx-auto px-margin-mobile relative z-10 space-y-unit-lg">
                 <h2 class="font-headline-h1-mobile text-headline-h1-mobile text-white">
                     {{ __('messages.final_cta_title') }}</h2>
-                <p class="font-body-lg text-secondary-fixed">{{ __('messages.final_cta_desc') }}</p>
+                <p class="font-body-lg text-white/90">{{ __('messages.final_cta_desc') }}</p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
