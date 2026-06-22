@@ -158,32 +158,32 @@ Global Reach
 <!-- Content & Form Section -->
 <section class="py-unit-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Info Panel (Left) -->
-<div class="lg:col-span-4 space-y-unit-lg">
-<div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
-<h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Contact Information</h3>
-<div class="space-y-unit-md">
-<div class="flex items-start gap-unit-md">
-<span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
-<div>
-<p class="font-label-sm uppercase text-on-surface-variant">Email</p>
-<p class="font-body-lg">contact@nakala.digital</p>
-</div>
-</div>
-<div class="flex items-start gap-unit-md">
-<span class="material-symbols-outlined text-electric-cyan" data-icon="phone">phone</span>
-<div>
-<p class="font-label-sm uppercase text-on-surface-variant">Phone</p>
-<p class="font-body-lg">+6282295706304</p>
-</div>
-</div>
-<div class="flex items-start gap-unit-md">
-<span class="material-symbols-outlined text-electric-cyan" data-icon="location_on">location_on</span>
-<div>
-<p class="font-label-sm uppercase text-on-surface-variant">Office</p>
-<p class="font-body-lg">Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum,<br/>Bandung Wetan, Bandung City, West Java 40115</p>
+        <!-- Info Panel (Left) -->
+        <div class="lg:col-span-4 space-y-unit-lg">
+            <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
+                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Contact Information</h3>
+                <div class="space-y-unit-md">
+                    <div class="flex items-start gap-unit-md">
+                        <span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
+                        <div>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Email</p>
+                            <p class="font-body-lg">contact@nakala.digital</p>
+                        </div>
                     </div>
-                </div>
+                    <div class="flex items-start gap-unit-md">
+                        <span class="material-symbols-outlined text-electric-cyan" data-icon="phone">phone</span>
+                        <div>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Phone</p>
+                            <p class="font-body-lg">+6282295706304</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-unit-md">
+                        <span class="material-symbols-outlined text-electric-cyan" data-icon="location_on">location_on</span>
+                        <div>
+                            <p class="font-label-sm uppercase text-on-surface-variant">Office</p>
+                            <p class="font-body-lg">Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum,<br>Bandung Wetan, Bandung City, West Java 40115</p>
+                        </div>
+                    </div>
                     <div class="flex items-start gap-unit-md">
                         <span class="material-symbols-outlined text-electric-cyan" data-icon="calendar_month">calendar_month</span>
                         <div>
@@ -191,49 +191,56 @@ Global Reach
                             <p class="font-body-lg">{{ app()->getLocale() === 'en' ? 'Schedule a free consultation' : 'Jadwalkan konsultasi gratis' }}</p>
                         </div>
                     </div>
-            </div>
-        </div>
-<!-- Engagement Model -->
-<div class="p-unit-lg bg-surface-container-low border border-outline-variant">
-<h4 class="font-headline-h3 text-headline-h3 mb-unit-md">Our Model</h4>
-<div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
-<div class="relative">
-<span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-<p class="font-button text-button text-primary">01. Discovery</p>
-<p class="text-on-surface-variant text-sm">Defining goals and scope.</p>
-</div>
-<div class="relative">
-<span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-<p class="font-button text-button text-primary">02. Design</p>
-<p class="text-on-surface-variant text-sm">UX research and UI drafting.</p>
-</div>
-<div class="relative">
-<span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-<p class="font-button text-button text-primary">03. Agile Dev</p>
-<p class="text-on-surface-variant text-sm">Sprint-based high-quality code.</p>
-</div>
-<div class="relative">
-<span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-<p class="font-button text-button text-primary">04. Handover</p>
-<p class="text-on-surface-variant text-sm">Deployment and maintenance.</p>
-</div>
-</div>
-</div>
-
-                <!-- WhatsApp CTA -->
-                <div class="p-unit-md bg-tertiary-fixed text-on-tertiary-fixed rounded-lg flex items-center justify-between">
-                    <div>
-                        <p class="font-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Quick Response' : 'Respons Cepat' }}</p>
-                        <p class="font-bold text-lg">{{ app()->getLocale() === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp' }}</p>
-                    </div>
-                    <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer" class="bg-on-tertiary-fixed text-tertiary-fixed px-4 py-2 rounded-lg font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
-                        {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
-                    </a>
                 </div>
             </div>
-            <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block lg:col-span-8">Contact Form</span>
+
+            <!-- WhatsApp CTA -->
+            <div class="p-unit-lg bg-white border border-outline-variant shadow-sm border-l-4 border-l-primary flex flex-col gap-unit-md">
+                <div class="flex items-center gap-unit-md">
+                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[24px]">forum</span>
+                    </div>
+                    <div>
+                        <p class="font-label-sm uppercase tracking-widest text-on-surface-variant mb-1">{{ app()->getLocale() === 'en' ? 'Quick Response' : 'Respons Cepat' }}</p>
+                        <p class="font-headline-h3 text-xl font-bold text-on-surface">{{ app()->getLocale() === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp' }}</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer" class="mt-2 w-full flex items-center justify-center gap-2 text-center bg-primary text-white px-6 py-3 rounded font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
+                    {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Engagement Model -->
+            <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
+                <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">Our Model</h4>
+                <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                        <p class="font-button text-button text-primary">01. Discovery</p>
+                        <p class="text-on-surface-variant text-sm">Defining goals and scope.</p>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                        <p class="font-button text-button text-primary">02. Design</p>
+                        <p class="text-on-surface-variant text-sm">UX research and UI drafting.</p>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                        <p class="font-button text-button text-primary">03. Agile Dev</p>
+                        <p class="text-on-surface-variant text-sm">Sprint-based high-quality code.</p>
+                    </div>
+                    <div class="relative">
+                        <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                        <p class="font-button text-button text-primary">04. Handover</p>
+                        <p class="text-on-surface-variant text-sm">Deployment and maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
             <!-- Contact Form (Right) -->
-            <div class="lg:col-span-8">
+            <div class="lg:col-span-8 flex flex-col gap-unit-xs">
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] block">Contact Form</span>
 <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm">
 <form class="space-y-unit-md" id="contactForm">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
