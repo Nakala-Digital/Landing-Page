@@ -171,7 +171,7 @@
 <p class="text-primary font-bold">{{ app()->getLocale() === 'en' ? 'High-availability platform with scalable admission processing.' : 'Platform dengan ketersediaan tinggi dan pemrosesan pendaftaran yang skalabel.' }}</p>
 </div>
 </div>
-<button class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></button>
+<a href="https://slategray-manatee-487981.hostingersite.com/" target="_blank" rel="noopener noreferrer" class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
 <img class="absolute inset-0 w-full h-full object-cover" data-alt="A high-fidelity software mockup of a modern Indonesian public school admission dashboard. The UI is clean, using Nakala Digital's brand blue and white palette. In the background, a soft-focused modern school building is visible under bright daylight. The lighting is high-key, communicating transparency and institutional trust. Professional corporate high-contrast style with sharp edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs"/>
@@ -179,15 +179,18 @@
 </div>
 </div>
 <!-- 2. HRMS -->
-<div class="md:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
+<div class="md:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
 <div>
 <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Capability Reference</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
 <p class="text-on-surface-variant text-body-md mb-unit-md">Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.</p>
 </div>
-<div class="bg-surface p-unit-md border-t-4 border-primary">
+<div>
+<div class="bg-surface p-unit-md border-t-4 border-primary mb-unit-md">
 <p class="font-label-sm text-outline uppercase mb-1">Solution</p>
 <p class="text-body-md">Automated compliance &amp; tax localization.</p>
+</div>
+<a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank" rel="noopener noreferrer" class="text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 </div>
 <!-- 3. HSE -->
