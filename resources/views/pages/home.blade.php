@@ -218,7 +218,6 @@
                         {{ __('messages.hero_desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <span class="h-px w-10 bg-primary"></span>
                         <span class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
