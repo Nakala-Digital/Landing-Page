@@ -558,45 +558,8 @@
                 @endforeach
             </div>
         </section>
-        <!-- Strategic Partner Section -->
-        <section class="py-unit-xl bg-inverse-surface text-surface overflow-hidden">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-unit-xl">
-                    <div class="max-w-xl">
-                        <h2 class="font-headline-h2 text-headline-h2 mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Global Standard,' : 'Standar Global,' }} <span
-                                class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'Local Knowledge.' : 'Pengetahuan Lokal.' }}</span>
-                        </h2>
-                        <p class="text-surface-variant font-body-lg mb-unit-lg">
-                            {{ app()->getLocale() === 'en'
-                                ? 'Our strategic alliance with Romulus Digital empowers us to deliver regional capability with unparalleled technical depth while maintaining Indonesian delivery excellence.'
-                                : 'Aliansi strategis kami bersama Romulus Digital memungkinkan kami menghadirkan kapabilitas regional dengan kedalaman teknis tinggi sambil menjaga keunggulan delivery Indonesia.' }}
-                        </p>
-                        <div class="flex gap-unit-lg">
-                            <div class="flex flex-col">
-                                <span class="text-3xl font-bold text-tertiary-fixed">150+</span>
-                                <span
-                                    class="text-xs uppercase tracking-widest text-surface-variant">{{ app()->getLocale() === 'en' ? 'Experts Regionally' : 'Ahli Regional' }}</span>
-                            </div>
-                            <div class="w-px h-12 bg-outline opacity-30"></div>
-                            <div class="flex flex-col">
-                                <span class="text-3xl font-bold text-tertiary-fixed">24/7</span>
-                                <span
-                                    class="text-xs uppercase tracking-widest text-surface-variant">{{ app()->getLocale() === 'en' ? 'Support Coverage' : 'Cakupan Dukungan' }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-surface p-unit-xl rounded-2xl border-4 border-on-secondary-fixed shadow-2xl relative">
-                        <div
-                            class="absolute -top-4 -left-4 bg-primary px-unit-md py-unit-xs rounded text-[10px] font-bold uppercase tracking-widest text-white">
-                            {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</div>
-                        <img alt="Romulus Digital Logo" class="h-16 w-auto object-contain opacity-90"
-                            src="{{ asset('assets/romulus-hitam.png') }}" />
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Partner Badge Section -->
+        @include('partials.partner-badge')
     </main>
     <!-- Footer -->
     @include('partials.footer')

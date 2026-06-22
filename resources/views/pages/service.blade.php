@@ -263,19 +263,7 @@
 </div>
 </section>
 <!-- Partner Badge Section -->
-<section class="py-unit-lg bg-on-secondary-fixed">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter opacity-80 hover:opacity-100 transition-opacity">
-<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}</div>
-<div class="bg-white/10 px-8 py-4 rounded-lg border border-white/20 flex items-center gap-4">
-<img class="h-9 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
-<div class="h-6 w-px bg-white/20"></div>
-<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Strategic Partner' }}</div>
-</div>
-<div class="hidden md:block text-surface-variant font-body-md italic text-sm text-right">
-                Combining Indonesian insight <br/> with Singaporean tech standards.
-            </div>
-</div>
-</section>
+@include('partials.partner-badge')
 <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
 <section class="py-unit-xl overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">

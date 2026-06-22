@@ -320,36 +320,8 @@
                 </div>
             </div>
         </section>
-        <!-- Romulus Strategic Partner Badge -->
-        <section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
-            <!-- Decorative gradient -->
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
-
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
-                <div class="text-center md:text-right">
-                    <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Strategic Partner Ecosystem' : 'Ekosistem Mitra Strategis' }}
-                    </span>
-                    <span class="font-label-sm text-white/50 tracking-[0.15em] uppercase text-[10px]">Trust Layer</span>
-                    <p class="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
-                        {{ app()->getLocale() === 'en'
-                            ? 'Nakala Digital remains primary. Romulus Digital reinforces regional confidence.'
-                            : 'Nakala Digital tetap primary. Romulus Digital memperkuat kepercayaan regional.' }}
-                    </p>
-                </div>
-
-                <!-- Desktop Divider Line -->
-                <div class="hidden md:block w-px h-10 md:h-12 bg-white/20"></div>
-
-                <!-- Logo Area -->
-                <div class="flex items-center justify-center group">
-                    <img alt="Romulus Digital Logo"
-                        class="h-12 md:h-14 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                        style="filter: brightness(0) invert(1);"
-                        src="{{ asset('assets/romulus-hitam.png') }}" />
-                </div>
-            </div>
-        </section>
+        <!-- Partner Badge Section -->
+        @include('partials.partner-badge')
     </main>
     <!-- Footer -->
     @include('partials.footer')

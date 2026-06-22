@@ -488,26 +488,8 @@
                 </div>
             </div>
         </section>
-        <!-- Partner Banner -->
-        <section class="py-unit-lg bg-white border-b border-outline-variant">
-            <div
-                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-unit-md">
-                <div class="flex items-center gap-4">
-                    <span class="text-on-surface-variant font-label-sm uppercase tracking-widest">
-                        {{ app()->getLocale() === 'en' ? 'Our Strategic Partner' : 'Mitra Strategis Kami' }}</span>
-                    <div class="h-8 w-px bg-outline-variant hidden md:block"></div>
-                </div>
-                <div class="flex items-center bg-on-background px-6 py-4 rounded-lg">
-                    <div class="bg-white px-4 py-2 rounded-md"><img class="h-9 w-auto object-contain"
-                            src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital"></div>
-                    <span
-                        class="text-outline-variant ml-4 font-body-md">{{ app()->getLocale() === 'en' ? 'Regional Excellence Alliance' : 'Aliansi Keunggulan Regional' }}</span>
-                </div>
-                <div class="text-on-surface-variant font-body-md italic">
-                    "{{ app()->getLocale() === 'en' ? 'Bridging Local Delivery with Regional Capability' : 'Menjembatani Delivery Lokal dengan Kapabilitas Regional' }}"
-                </div>
-            </div>
-        </section>
+        <!-- Partner Badge Section -->
+        @include('partials.partner-badge')
     </main>
     <!-- Footer -->
     @include('partials.footer')

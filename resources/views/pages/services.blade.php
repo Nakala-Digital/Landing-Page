@@ -284,19 +284,7 @@
 </div>
 </section>
 <!-- Partner Badge Section -->
-<section class="py-unit-lg bg-on-secondary-fixed">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter opacity-80 hover:opacity-100 transition-opacity">
-<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ $locale === 'id' ? 'Capability Reference' : 'Capability Reference' }}</div>
-<div class="bg-white/10 px-8 py-4 rounded-lg border border-white/20 flex items-center gap-4">
-<div class="text-white font-bold text-xl tracking-tighter">Romulus <span class="text-primary-fixed-dim">Digital</span></div>
-<div class="h-6 w-px bg-white/20"></div>
-<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">{{ $locale === 'id' ? 'Strategic Partner' : 'Strategic Partner' }}</div>
-</div>
-<div class="hidden md:block text-surface-variant font-body-md italic text-sm text-right">
-                {{ $locale === 'id' ? 'Menggabungkan wawasan Indonesia' : 'Combining Indonesian insight' }} <br/> {{ $locale === 'id' ? 'dengan standar teknologi Singapura.' : 'with Singaporean tech standards.' }}
-            </div>
-</div>
-</section>
+@include('partials.partner-badge')
 <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
 <section class="py-unit-xl overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">

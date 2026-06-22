@@ -277,19 +277,8 @@
 </div>
 </div>
 </section>
-<!-- Strategic Partner Reference -->
-<section class="bg-inverse-surface py-unit-md overflow-hidden">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-center gap-unit-md">
-<span class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</span>
-<div class="h-6 w-px bg-white/20 hidden md:block"></div>
-<div class="flex items-center gap-2">
-<div class="bg-white/10 rounded-md px-3 py-1.5">
-<img class="h-7 w-auto object-contain opacity-60" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
-</div>
-<span class="text-white/50 text-xs font-body-md uppercase tracking-widest">Romulus Digital</span>
-</div>
-</div>
-</section>
+<!-- Partner Badge Section -->
+@include('partials.partner-badge')
 <!-- CTA Section -->
 <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
 <h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">Ready to build your <span class="text-primary">next success story?</span></h2>

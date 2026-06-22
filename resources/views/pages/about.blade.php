@@ -219,36 +219,8 @@
                 </div>
             </div>
         </header>
-        <!-- Strategic Partner Section -->
-        <section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
-            <!-- Decorative gradient -->
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
-
-            <div
-                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
-
-                <!-- Text Area -->
-                <div class="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
-                     <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
-                         {{ app()->getLocale() === 'en' ? 'Official Strategic Partner' : 'Mitra Strategis Resmi' }}
-                     </span>
-                     <span class="text-white/80 font-body-md text-sm">
-                         {{ app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional' }}
-                     </span>
-                </div>
-
-                <!-- Desktop Divider Line -->
-                <div class="hidden md:block w-px h-14 md:h-16 bg-white/20"></div>
-
-                <!-- Logo Area -->
-                <div class="flex items-center justify-center group">
-                    <img alt="Romulus Digital Logo"
-                        class="h-14 md:h-16 object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                        style="filter: brightness(0) invert(1);"
-                        src="{{ asset('assets/romulus-hitam.png') }}" />
-                </div>
-            </div>
-        </section>
+        <!-- Partner Badge Section -->
+        @include('partials.partner-badge')
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">

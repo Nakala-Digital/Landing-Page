@@ -219,14 +219,7 @@ Global Reach
 </div>
 </div>
 </div>
-<!-- Strategic Partner Badge -->
-            <div class="p-unit-md bg-midnight-navy text-white rounded-lg flex items-center justify-between">
-                    <div>
-                        <p class="text-[10px] uppercase tracking-widest text-surface-variant">Strategic Partner</p>
-                        <p class="opacity-70 text-sm">Regional Partner</p>
-                    </div>
-                    <img class="h-8 w-auto object-contain opacity-70" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
-                </div>
+
                 <!-- WhatsApp CTA -->
                 <div class="p-unit-md bg-tertiary-fixed text-on-tertiary-fixed rounded-lg flex items-center justify-between">
                     <div>
@@ -312,6 +305,8 @@ Global Reach
 </div>
 </div>
 </section>
+<!-- Partner Badge Section -->
+@include('partials.partner-badge')
 
 </main>
 <!-- Footer -->
