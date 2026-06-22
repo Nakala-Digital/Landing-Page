@@ -3,9 +3,10 @@
 return [
     'hero_badge' => 'Regional Tech Capability',
     'hero_title' => 'AI, Software Development & Digital Solutions Partner for Business Growth',
-    'hero_desc' => 'Local delivery with enterprise standards and regional backing. We bridge Indonesian business needs with world-class technical execution.',
-    'cta_button' => 'Ready to Build Solutions?',
-    'portfolio_button' => 'View Portfolio',
+    'hero_desc' => 'Bringing together local expertise and regional capability to deliver enterprise-grade digital solutions for your business.',
+    'hero_support_line' => 'Local Delivery, Regional Capability.',
+    'cta_button' => 'Discuss Your Project',
+    'portfolio_button' => 'View Our Services',
     
     // Metrics
     'metric_projects' => 'Enterprise Projects',
@@ -34,7 +35,9 @@ return [
     'who_iso' => 'ISO Aligned Standards',
     
     // Final CTA
-    'final_cta_title' => 'Ready to build cleaner, faster, and more impactful digital solutions?',
-    'final_cta_desc' => 'Start your free consultation today and discover your business\'s digital potential.',
+    'insights_nav' => 'Insights',
+    
+    'final_cta_title' => 'Ready to start your digital transformation journey?',
+    'final_cta_desc' => 'Schedule a discovery session with our team and explore how we can help your organisation grow.',
     'final_cta_btn' => 'Discuss Your Project',
 ];

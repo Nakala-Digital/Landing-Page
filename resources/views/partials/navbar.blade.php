@@ -8,6 +8,7 @@
         ['label' => $locale === 'en' ? 'Team' : 'Tim', 'route' => 'team'],
         ['label' => $locale === 'en' ? 'Services' : 'Layanan', 'route' => 'services'],
         ['label' => $locale === 'en' ? 'Solutions' : 'Solusi', 'route' => 'solutions'],
+        ['label' => $locale === 'en' ? 'Insights' : 'Insight', 'route' => 'insights'],
         ['label' => $locale === 'en' ? 'Delivery' : 'Metodologi', 'route' => 'delivery'],
         ['label' => $locale === 'en' ? 'Portfolio' : 'Portofolio', 'route' => 'portfolio'],
         ['label' => $locale === 'en' ? 'Contact' : 'Kontak', 'route' => 'contact'],
@@ -73,7 +74,7 @@
             {{-- CTA (Desktop only) --}}
             <a class="hidden lg:inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
                 href="{{ route('contact' . $localeSuffix) }}">
-                {{ $locale === 'en' ? 'Discuss Project' : 'Konsultasi' }}
+                {{ $locale === 'en' ? 'Discuss Project' : 'Diskusi Proyek' }}
             </a>
 
             {{-- Mobile Hamburger --}}
@@ -111,7 +112,7 @@
                     <div class="mt-2 pt-2 border-t border-slate-100">
                         <a class="block text-center rounded-lg px-4 py-2.5 bg-primary text-white font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
                             href="{{ route('contact' . $localeSuffix) }}">
-                            {{ $locale === 'en' ? 'Discuss Project' : 'Konsultasi' }}
+                            {{ $locale === 'en' ? 'Discuss Project' : 'Diskusi Proyek' }}
                         </a>
                     </div>
                 </div>

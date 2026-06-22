@@ -25,7 +25,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -36,7 +36,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -50,7 +50,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -137,7 +137,7 @@
 <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
 <div class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
-<span>Selected Works</span>
+<span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}</span>
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
                     Portfolio dan studi kasus <span class="text-primary">solusi digital.</span>
@@ -165,10 +165,10 @@
 <div>
 <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Public Sector</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">PPDB Online System</h3>
-<p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Scaling for millions of simultaneous applications while ensuring zero-data loss and fair admission logic.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Building a reliable digital admission system that handles high-volume registration, document verification, and transparent selection processes.' : 'Membangun sistem penerimaan digital yang andal untuk menangani registrasi volume tinggi, verifikasi dokumen, dan proses seleksi yang transparan.' }}</p>
 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
 <p class="text-label-sm uppercase font-bold text-outline">Impact</p>
-<p class="text-primary font-bold">99.9% Uptime | 2M+ Students Enrolled</p>
+<p class="text-primary font-bold">{{ app()->getLocale() === 'en' ? 'High-availability platform with scalable admission processing.' : 'Platform dengan ketersediaan tinggi dan pemrosesan pendaftaran yang skalabel.' }}</p>
 </div>
 </div>
 <button class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">View Details <span class="material-symbols-outlined">arrow_forward</span></button>
@@ -181,7 +181,7 @@
 <!-- 2. HRMS -->
 <div class="md:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
 <div>
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Enterprise</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Capability Reference</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
 <p class="text-on-surface-variant text-body-md mb-unit-md">Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.</p>
 </div>
@@ -197,7 +197,7 @@
 <p class="text-surface-variant text-body-md">Digitizing workplace safety reports and real-time hazard monitoring for mining operations.</p>
 <div class="flex items-center gap-unit-sm mt-auto">
 <span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
-<span class="font-bold">Zero Accident Milestone</span>
+<span class="font-bold">{{ app()->getLocale() === 'en' ? 'Proactive Safety Management' : 'Manajemen Keselamatan Proaktif' }}</span>
 </div>
 </div>
 <!-- 4. WargaKas -->
@@ -207,7 +207,7 @@
 <div>
 <span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">Community Fintech</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">WargaKas Mobile</h3>
-<p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Building financial trust in neighborhood communities through transparent cash management.</p>
+<p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Enabling transparent financial management for community-based organizations with digital payment integration.' : 'Memungkinkan pengelolaan keuangan yang transparan untuk organisasi berbasis komunitas dengan integrasi pembayaran digital.' }}</p>
 <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
 <p class="text-label-sm uppercase font-bold text-outline">Solution</p>
 <p class="text-on-surface">Integrated QRIS payments &amp; real-time ledger.</p>
@@ -226,22 +226,16 @@
 <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
 <span class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-full font-label-sm uppercase">AI Powered</span>
 </div>
-<p class="text-on-surface-variant text-body-md mb-unit-lg">Revolutionizing recruitment by automating screening of 10,000+ CVs with custom NLP models trained on regional professional context.</p>
-<div class="grid grid-cols-2 gap-unit-md">
-<div class="border-l-2 border-primary pl-unit-md">
-<p class="text-label-sm text-outline">Time Saved</p>
-<p class="font-headline-h3 text-primary">70%</p>
-</div>
-<div class="border-l-2 border-primary pl-unit-md">
-<p class="text-label-sm text-outline">Accuracy</p>
-<p class="font-headline-h3 text-primary">94%</p>
-</div>
+<p class="text-on-surface-variant text-body-md mb-unit-lg">{{ app()->getLocale() === 'en' ? 'Automating candidate screening and matching using custom AI models trained on industry-specific requirements.' : 'Mengotomatiskan screening dan pencocokan kandidat menggunakan model AI kustom yang dilatih pada kebutuhan industri spesifik.' }}</p>
+<div class="bg-surface-container p-unit-md rounded border border-outline-variant">
+<p class="font-label-sm uppercase text-primary">{{ app()->getLocale() === 'en' ? 'Business Value' : 'Nilai Bisnis' }}</p>
+<p class="text-body-md">{{ app()->getLocale() === 'en' ? 'Streamlined recruitment process with AI-powered candidate screening and matching.' : 'Proses rekrutmen yang efisien dengan screening dan pencocokan kandidat berbasis AI.' }}</p>
 </div>
 </div>
 <!-- 6. AI Coach -->
 <div class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
 <div class="relative z-10">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">EdTech</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">Solution Highlight</span>
 <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Personalized AI Coach</h3>
 <p class="text-on-surface-variant text-body-md mb-unit-md">Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.</p>
 <div class="flex gap-unit-sm">
@@ -262,7 +256,7 @@
 <p class="text-on-surface-variant text-body-md mb-unit-lg">Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.</p>
 <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
 <p class="font-label-sm uppercase">Regional Capability</p>
-<p class="text-body-md font-bold">Zero downtime migration achieved.</p>
+<p class="text-body-md font-bold">{{ app()->getLocale() === 'en' ? 'Managed D365 support with regional capability.' : 'Dukungan D365 terkelola dengan kapabilitas regional.' }}</p>
 </div>
 </div>
 <!-- 8. 360 Customer Engagement -->
@@ -283,17 +277,16 @@
 </div>
 </div>
 </section>
-<!-- Partner Section -->
-<section class="bg-inverse-surface py-unit-lg overflow-hidden">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-unit-lg">
-<div class="text-center md:text-left">
-<p class="text-surface-variant font-label-sm uppercase tracking-widest">Strategic Regional Partner</p>
-<p class="text-white font-headline-h3">Romulus Digital Partnership</p>
+<!-- Strategic Partner Reference -->
+<section class="bg-inverse-surface py-unit-md overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-center gap-unit-md">
+<span class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</span>
+<div class="h-6 w-px bg-white/20 hidden md:block"></div>
+<div class="flex items-center gap-2">
+<div class="bg-white/10 rounded-md px-3 py-1.5">
+<img class="h-7 w-auto object-contain opacity-60" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
 </div>
-<div class="bg-white/10 p-unit-lg rounded-xl border border-white/20 backdrop-blur-sm">
-<div class="flex items-center gap-unit-md">
-<div class="bg-white rounded-md p-3"><img class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital"></div>
-</div>
+<span class="text-white/50 text-xs font-body-md uppercase tracking-widest">Romulus Digital</span>
 </div>
 </div>
 </section>
@@ -301,8 +294,8 @@
 <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
 <h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">Ready to build your <span class="text-primary">next success story?</span></h2>
 <div class="flex flex-col md:flex-row gap-unit-md justify-center">
-<button class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform">Start a Project</button>
-<button class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors">Download Case Studies</button>
+        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}</a>
+                <a href="{{ route('services' . (app()->getLocale() === 'en' ? '.en' : '')) }}" class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
 </div>
 </section>
 </main>

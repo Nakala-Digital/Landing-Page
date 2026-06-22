@@ -27,6 +27,7 @@ function registerCompanyProfileRoutes($suffix = '')
     Route::view('/team', 'pages.team')->name('team' . $suffix);
     Route::view('/team-leadership', 'pages.team')->name('team.leadership' . $suffix);
     Route::view('/faq', 'pages.faq')->name('faq' . $suffix);
+    Route::view('/insights', 'pages.insights')->name('insights' . $suffix);
     Route::view('/contact', 'pages.contact')->name('contact' . $suffix);
 }
 

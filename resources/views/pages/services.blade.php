@@ -25,7 +25,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -36,7 +36,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -50,7 +50,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -155,7 +155,7 @@
 <div class="z-10">
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-{{ $locale === 'id' ? 'Keunggulan Regional' : 'Regional Excellence' }}
+{{ $locale === 'id' ? 'Service Pillar' : 'Service Pillar' }}
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ $locale === 'id' ? 'Layanan teknologi untuk' : 'Technology services for' }} <span class="text-primary">{{ $locale === 'id' ? 'kebutuhan bisnis modern.' : 'modern business needs.' }}</span>
@@ -164,10 +164,10 @@
                         {{ $locale === 'id' ? 'Menjembatani konteks lokal Indonesia dengan keahlian pengembangan perangkat lunak regional untuk mempercepat perjalanan transformasi digital Anda.' : 'Bridging local Indonesian context with regional software development expertise to accelerate your digital transformation journey.' }}
                     </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest flex items-center gap-2">
+<a href="{{ $locale === 'id' ? route('solutions') : route('solutions.en') }}" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest flex items-center gap-2">
                             {{ $locale === 'id' ? 'Jelajahi Solusi' : 'Explore Solutions' }}
                             <span class="material-symbols-outlined">arrow_forward</span>
-</button>
+</a>
 </div>
 </div>
 <div class="relative mt-12 lg:mt-0">
@@ -198,9 +198,9 @@
 <h3 class="font-headline-h3 text-headline-h3 mb-4">{{ $pillar['title'] ?? '' }}</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">{{ $pillar['body'] ?? '' }}</p>
 <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> LLM Customization</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Predictive Analytics</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> AI Governance</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Kustomisasi Model AI' : 'Custom AI Model Development' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Otomasi Proses Bisnis' : 'Business Process Automation' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Analitik Prediktif' : 'Predictive Analytics' }}</li>
 </ul>
 </div>
 @elseif ($idx === 2)
@@ -211,10 +211,10 @@
 <h3 class="font-headline-h3 text-headline-h3 mb-4">{{ $pillar['title'] ?? '' }}</h3>
 <p class="font-body-md text-body-md text-surface-variant mb-6">{{ $pillar['body'] ?? '' }}</p>
 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Microservices Architecture</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Enterprise Applications</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Legacy Modernization</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Cloud-Native Build</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Aplikasi Enterprise' : 'Enterprise Applications' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Sistem Terukur' : 'Scalable Platform Architecture' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Modernisasi Sistem' : 'System Modernization' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ $locale === 'id' ? 'Integrasi Cloud' : 'Cloud Integration' }}</li>
 </ul>
 </div>
 <div class="w-full md:w-1/3 bg-white/5 rounded-lg overflow-hidden border border-white/10 hidden lg:block">
@@ -270,8 +270,8 @@
 </div>
 </div>
 <div class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-xl flex flex-col justify-center items-center text-center text-white">
-<div class="text-4xl font-bold mb-2">99.9%</div>
-<div class="text-sm font-label-sm uppercase tracking-widest opacity-80">{{ $locale === 'id' ? 'SLA Terjamin' : 'SLA Guaranteed' }}</div>
+<div class="text-4xl font-bold mb-2">{{ $locale === 'id' ? 'SLA' : 'SLA' }}</div>
+<div class="text-sm font-label-sm uppercase tracking-widest opacity-80">{{ $locale === 'id' ? 'SLA Fleksibel' : 'Flexible SLAs' }}</div>
 </div>
 </div>
 @endif
@@ -286,11 +286,11 @@
 <!-- Partner Badge Section -->
 <section class="py-unit-lg bg-on-secondary-fixed">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter opacity-80 hover:opacity-100 transition-opacity">
-<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ $locale === 'id' ? 'Mitra Kapabilitas Strategis' : 'Strategic Capability Partner' }}</div>
+<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ $locale === 'id' ? 'Capability Reference' : 'Capability Reference' }}</div>
 <div class="bg-white/10 px-8 py-4 rounded-lg border border-white/20 flex items-center gap-4">
 <div class="text-white font-bold text-xl tracking-tighter">Romulus <span class="text-primary-fixed-dim">Digital</span></div>
 <div class="h-6 w-px bg-white/20"></div>
-<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">{{ $locale === 'id' ? 'Keunggulan Regional' : 'Regional Excellence' }}</div>
+<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">{{ $locale === 'id' ? 'Strategic Partner' : 'Strategic Partner' }}</div>
 </div>
 <div class="hidden md:block text-surface-variant font-body-md italic text-sm text-right">
                 {{ $locale === 'id' ? 'Menggabungkan wawasan Indonesia' : 'Combining Indonesian insight' }} <br/> {{ $locale === 'id' ? 'dengan standar teknologi Singapura.' : 'with Singaporean tech standards.' }}

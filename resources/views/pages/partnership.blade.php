@@ -25,7 +25,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -36,7 +36,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -50,7 +50,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -137,13 +137,13 @@
                         Bridging local execution with regional excellence. Nakala Digital serves as the primary gateway for Romulus Digital's enterprise-grade solutions in the Indonesian market.
                     </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
+<a href="{{ route('contact') }}" class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
                             Bicara dengan Tim Nakala
                             <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<button class="border-2 border-surface-variant text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
+</a>
+<a href="{{ route('contact.en') }}" class="border-2 border-surface-variant text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
                             Talk to Nakala Team
-                        </button>
+                        </a>
 </div>
 </div>
 <div class="relative group">
@@ -297,9 +297,9 @@
 <div class="text-sm font-bold uppercase text-outline tracking-wider">Sourcing Speed</div>
 </div>
 </div>
-<button class="bg-midnight-navy text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
+<a href="{{ route('solutions.en') }}" class="bg-midnight-navy text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
                                 View Solutions
-                            </button>
+                            </a>
 </div>
 </div>
 </div>

@@ -3,9 +3,10 @@
 return [
     'hero_badge' => 'Kemampuan Teknologi Regional',
     'hero_title' => 'Mitra AI, Pengembangan Perangkat Lunak & Solusi Digital untuk Pertumbuhan Bisnis',
-    'hero_desc' => 'Pengiriman lokal dengan standar perusahaan dan dukungan regional. Kami menjembatani kebutuhan bisnis Indonesia dengan eksekusi teknis kelas dunia.',
-    'cta_button' => 'Siap Membangun Solusi?',
-    'portfolio_button' => 'Lihat Portofolio',
+    'hero_desc' => 'Menggabungkan keahlian lokal dengan kapabilitas regional untuk menghadirkan solusi digital enterprise-grade bagi bisnis Anda.',
+    'hero_support_line' => 'Pengiriman Lokal, Kemampuan Regional.',
+    'cta_button' => 'Diskusikan Proyek Anda',
+    'portfolio_button' => 'Lihat Layanan',
     
     // Metrics
     'metric_projects' => 'Proyek Perusahaan',
@@ -34,7 +35,9 @@ return [
     'who_iso' => 'Standar Selaras ISO',
     
     // Final CTA
-    'final_cta_title' => 'Siap membangun solusi digital yang lebih rapi, cepat, dan berdampak?',
-    'final_cta_desc' => 'Mulai konsultasi gratis hari ini dan temukan potensi digital bisnis Anda.',
+    'insights_nav' => 'Insight',
+
+    'final_cta_title' => 'Siap memulai perjalanan transformasi digital Anda?',
+    'final_cta_desc' => 'Jadwalkan sesi diskusi dengan tim kami dan jelajahi bagaimana kami dapat membantu organisasi Anda berkembang.',
     'final_cta_btn' => 'Diskusikan Proyek Anda',
 ];

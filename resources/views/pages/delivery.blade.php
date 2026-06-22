@@ -41,7 +41,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -52,7 +52,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -66,7 +66,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -166,8 +166,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5fafd;
-            color: #031A44;
+            background-color: #F7FAFC;
+            color: #334155;
         }
 
         .material-symbols-outlined {
@@ -235,150 +235,145 @@
                 </div>
             </div>
         </section>
-        <!-- Delivery Steps (7 Steps) -->
+        <!-- Delivery Approach: End-to-End Lifecycle -->
         <section class="py-unit-xl bg-surface">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg text-center max-w-2xl mx-auto">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Delivery Approach</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-4">
-                        {{ app()->getLocale() === 'en' ? 'Our End-to-End Lifecycle' : 'Lifecycle End-to-End Kami' }}
+                        {{ app()->getLocale() === 'en' ? 'End-to-End Delivery Lifecycle' : 'Siklus Delivery End-to-End' }}
                     </h2>
                     <p class="font-body-md text-body-md text-on-surface-variant">
                         {{ app()->getLocale() === 'en'
-                            ? 'Seven critical stages of refinement to ensure your digital product meets institutional standards from day one.'
-                            : 'Tujuh tahap penting untuk memastikan produk digital Anda memenuhi standar institusional sejak hari pertama.' }}
+                            ? 'From discovery to growth, every phase is designed for transparency, quality, and measurable progress.'
+                            : 'Dari discovery hingga growth, setiap fase dirancang untuk transparansi, kualitas, dan kemajuan yang terukur.' }}
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-unit-md">
-                    <!-- Step 1 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <!-- Step 1: Discovery & Scoping -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">01</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Discovery' : 'Penggalian Kebutuhan' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Discovery & Scoping' : 'Discovery & Scoping' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'In-depth stakeholder workshops to define product vision and technical feasibility.'
-                                : 'Workshop mendalam bersama stakeholder untuk menetapkan visi produk dan kelayakan teknis.' }}
+                                ? 'Stakeholder workshops, requirement gathering, feasibility study, and project roadmap definition.'
+                                : 'Workshop stakeholder, pengumpulan kebutuhan, studi kelayakan, dan definisi roadmap proyek.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">description</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: PRD & Product Roadmap' : 'Output: PRD & Roadmap Produk' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: PRD & Project Charter' : 'Output: PRD & Project Charter' }}
                         </div>
                     </div>
-                    <!-- Step 2 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <!-- Step 2: Design & Architecture -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">02</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Planning' : 'Perencanaan' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Design & Architecture' : 'Design & Architecture' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'Resource allocation, sprint scheduling, and architectural design patterns.'
-                                : 'Alokasi resource, penjadwalan sprint, dan rancangan pola arsitektur.' }}
+                                ? 'System architecture design, technology stack selection, UX/UI prototyping, and technical specification.'
+                                : 'Desain arsitektur sistem, pemilihan tech stack, prototyping UX/UI, dan spesifikasi teknis.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">account_tree</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: Technical Design Doc' : 'Output: Dokumen Desain Teknis' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: Technical Design Doc & Prototype' : 'Output: Dokumen Desain Teknis & Prototype' }}
                         </div>
                     </div>
-                    <!-- Step 3 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <!-- Step 3: Agile Development & QA -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">03</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Design' : 'Desain' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'High-fidelity UI mockups and UX prototyping with iterative feedback loops.'
-                                : 'Mockup UI high-fidelity dan prototyping UX dengan siklus feedback iteratif.' }}
-                        </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
-                            <span class="material-symbols-outlined text-sm">palette</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: Interactive Prototype' : 'Output: Prototype Interaktif' }}
-                        </div>
-                    </div>
-                    <!-- Step 4 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
-                        <div class="text-primary-container font-headline-h2 mb-2">04</div>
-                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Development' : 'Pengembangan' }}</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
-                            {{ app()->getLocale() === 'en'
-                                ? 'Clean code execution using industry-leading stacks and security best practices.'
-                                : 'Eksekusi clean code menggunakan stack terdepan dan praktik keamanan terbaik.' }}
+                                ? 'Sprint-based development with continuous integration, automated testing, and code review processes.'
+                                : 'Pengembangan berbasis sprint dengan integrasi berkelanjutan, automated testing, dan proses code review.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">code</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: Source Code (Git)' : 'Output: Source Code (Git)' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: Source Code & Unit Tests' : 'Output: Source Code & Unit Tests' }}
                         </div>
                     </div>
-                    <!-- Step 5 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
-                        <div class="text-primary-container font-headline-h2 mb-2">05</div>
+                    <!-- Step 4: SIT / UAT -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        <div class="text-primary-container font-headline-h2 mb-2">04</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'QA Testing' : 'Testing QA' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'SIT / UAT' : 'SIT / UAT' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'Rigorous SIT and UAT phases to identify and resolve blockers before launch.'
-                                : 'Tahap SIT dan UAT yang ketat untuk menemukan dan menyelesaikan hambatan sebelum rilis.' }}
+                                ? 'System Integration Testing and User Acceptance Testing to validate functionality, performance, and business readiness.'
+                                : 'System Integration Testing dan User Acceptance Testing untuk memvalidasi fungsionalitas, performa, dan kesiapan bisnis.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">bug_report</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: QA & SIT Report' : 'Output: Laporan QA & SIT' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: SIT/UAT Sign-off' : 'Output: SIT/UAT Sign-off' }}
                         </div>
                     </div>
-                    <!-- Step 6 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
-                        <div class="text-primary-container font-headline-h2 mb-2">06</div>
+                    <!-- Step 5: Deployment & Go-Live -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        <div class="text-primary-container font-headline-h2 mb-2">05</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Deployment' : 'Rilis' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Deployment & Go-Live' : 'Deployment & Go-Live' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'Phased rollout to production environments with CI/CD automation.'
-                                : 'Rollout bertahap ke production environment dengan otomasi CI/CD.' }}
+                                ? 'Release readiness check, CI/CD pipeline execution, production deployment, and go-live verification.'
+                                : 'Pemeriksaan kesiapan rilis, eksekusi pipeline CI/CD, deployment produksi, dan verifikasi go-live.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">rocket_launch</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: Live Production Site' : 'Output: Situs Production Aktif' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: Live Production Release' : 'Output: Rilis Produksi Aktif' }}
                         </div>
                     </div>
-                    <!-- Step 7 -->
-                    <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group col-span-1 md:col-span-2">
-                        <div class="text-primary-container font-headline-h2 mb-2">07</div>
+                    <!-- Step 6: Handover -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        <div class="text-primary-container font-headline-h2 mb-2">06</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Improvement' : 'Peningkatan' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Handover' : 'Handover' }}</h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
-                                ? 'Post-launch monitoring, performance tuning, and ongoing feature updates based on real user data.'
-                                : 'Monitoring pasca-rilis, tuning performa, dan pembaruan fitur berkelanjutan berdasarkan data pengguna nyata.' }}
+                                ? 'BAST (Berita Acara Serah Terima), operational documentation, knowledge transfer, and user training.'
+                                : 'BAST (Berita Acara Serah Terima), dokumentasi operasional, transfer pengetahuan, dan pelatihan pengguna.' }}
+                        </p>
+                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">handshake</span>
+                            {{ app()->getLocale() === 'en' ? 'Output: BAST & Operations Manual' : 'Output: BAST & Manual Operasional' }}
+                        </div>
+                    </div>
+                    <!-- Step 7: Support & Growth -->
+                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group col-span-1 md:col-span-2">
+                        <div class="text-primary-container font-headline-h2 mb-2">07</div>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
+                            {{ app()->getLocale() === 'en' ? 'Support & Growth' : 'Support & Growth' }}</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Ongoing maintenance, performance monitoring, feature enhancements, and continuous improvement based on user feedback and business needs.'
+                                : 'Maintenance berkelanjutan, monitoring performa, peningkatan fitur, dan perbaikan berkelanjutan berdasarkan feedback pengguna dan kebutuhan bisnis.' }}
                         </p>
                         <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">trending_up</span>
-                            {{ app()->getLocale() === 'en' ? 'Output: Optimization Backlog' : 'Output: Backlog Optimasi' }}
+                            {{ app()->getLocale() === 'en' ? 'Output: Growth Roadmap & SLA Reports' : 'Output: Growth Roadmap & Laporan SLA' }}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- QA Governance & Artifacts (Bento Layout) -->
+        <!-- QA Governance -->
         <section class="py-unit-xl bg-surface-container-low border-y border-outline-variant">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">QA Governance</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background">
-                        {{ app()->getLocale() === 'en' ? 'QA Governance & Deliverables' : 'Tata Kelola QA & Deliverable' }}
+                        {{ app()->getLocale() === 'en' ? 'Quality Assurance as a Delivery Discipline' : 'Quality Assurance sebagai Disiplin Delivery' }}
                     </h2>
                     <p class="text-on-surface-variant max-w-xl">
                         {{ app()->getLocale() === 'en'
-                            ? 'We do not just build; we certify. Every project follows a strict governance framework that produces tangible technical artifacts.'
-                            : 'Kami tidak hanya membangun; kami memvalidasi. Setiap proyek mengikuti framework tata kelola ketat yang menghasilkan artefak teknis nyata.' }}
+                            ? 'Our QA framework ensures every deliverable meets institutional standards before reaching your users. This is not an afterthought; it is embedded in every phase.'
+                            : 'Framework QA kami memastikan setiap deliverable memenuhi standar institusional sebelum mencapai pengguna Anda. Ini bukan tambahan; ini tertanam di setiap fase.' }}
                     </p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
-                    <!-- Governance Column -->
+                    <!-- Governance Grid -->
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                         <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
@@ -388,8 +383,8 @@
                             </div>
                             <p class="text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Validation of functional and non-functional requirements before development starts.'
-                                    : 'Validasi kebutuhan fungsional dan non-fungsional sebelum pengembangan dimulai.' }}
+                                    ? 'Validation of functional and non-functional requirements before development begins, ensuring clarity and completeness.'
+                                    : 'Validasi kebutuhan fungsional dan non-fungsional sebelum pengembangan dimulai, memastikan kejelasan dan kelengkapan.' }}
                             </p>
                         </div>
                         <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
@@ -400,20 +395,32 @@
                             </div>
                             <p class="text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Strategic SIT (System Integration Testing) and UAT (User Acceptance Testing) protocols.'
-                                    : 'Protokol SIT (System Integration Testing) dan UAT (User Acceptance Testing) yang terstruktur.' }}
+                                    ? 'Strategic SIT (System Integration Testing) and UAT (User Acceptance Testing) protocols with defined test cases and success criteria.'
+                                    : 'Protokol SIT (System Integration Testing) dan UAT (User Acceptance Testing) yang strategis dengan test case dan kriteria sukses yang terdefinisi.' }}
                             </p>
                         </div>
                         <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
-                                <span class="material-symbols-outlined text-primary">security_update_warning</span>
+                                <span class="material-symbols-outlined text-primary">bug_report</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
                                     {{ app()->getLocale() === 'en' ? 'Bug Tracking' : 'Pelacakan Bug' }}</h4>
                             </div>
                             <p class="text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Centralized tracking of issues with priority-based resolution workflows.'
-                                    : 'Pelacakan isu terpusat dengan alur penyelesaian berbasis prioritas.' }}
+                                    ? 'Centralized issue tracking with priority-based resolution workflows and regular status reporting.'
+                                    : 'Pelacakan isu terpusat dengan alur penyelesaian berbasis prioritas dan pelaporan status berkala.' }}
+                            </p>
+                        </div>
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-primary">checklist</span>
+                                <h4 class="font-headline-h3 text-headline-h3 text-on-background">
+                                    {{ app()->getLocale() === 'en' ? 'Release Readiness' : 'Kesiapan Rilis' }}</h4>
+                            </div>
+                            <p class="text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Pre-deployment checklist including regression testing, performance benchmarking, and security validation before go-live.'
+                                    : 'Checklist pra-deployment mencakup regression testing, benchmarking performa, dan validasi keamanan sebelum go-live.' }}
                             </p>
                         </div>
                         <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
@@ -424,50 +431,57 @@
                             </div>
                             <p class="text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Final certification and official handover with complete operational documentation.'
-                                    : 'Sertifikasi akhir dan serah terima resmi dengan dokumentasi operasional lengkap.' }}
+                                    ? 'Formal handover with Berita Acara Serah Terima (BAST), complete operational documentation, and user training.'
+                                    : 'Serah terima resmi dengan Berita Acara Serah Terima (BAST), dokumentasi operasional lengkap, dan pelatihan pengguna.' }}
+                            </p>
+                        </div>
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-primary">verified</span>
+                                <h4 class="font-headline-h3 text-headline-h3 text-on-background">
+                                    {{ app()->getLocale() === 'en' ? 'Warranty' : 'Garansi' }}</h4>
+                            </div>
+                            <p class="text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Post-launch warranty period covering defect resolution, performance monitoring, and priority support for identified issues.'
+                                    : 'Periode garansi pasca-luncuran mencakup resolusi defect, monitoring performa, dan dukungan prioritas untuk isu yang teridentifikasi.' }}
                             </p>
                         </div>
                     </div>
                     <!-- Artifacts List -->
                     <div class="bg-on-background p-unit-md rounded-lg text-white">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md text-primary-fixed-dim">
-                            {{ app()->getLocale() === 'en' ? 'Project Artifacts' : 'Artefak Proyek' }}</h4>
+                            {{ app()->getLocale() === 'en' ? 'QA Artifacts' : 'Artefak QA' }}</h4>
                         <ul class="space-y-4">
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">list_alt</span>
                                 </div>
-                                <span
-                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Comprehensive Backlog' : 'Backlog Komprehensif' }}</span>
+                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Requirement Traceability Matrix' : 'Matriks Traceability Kebutuhan' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">draw</span>
                                 </div>
-                                <span
-                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'UI Mockups & Flowcharts' : 'Mockup UI & Flowchart' }}</span>
+                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Test Cases & SIT/UAT Reports' : 'Test Case & Laporan SIT/UAT' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">terminal</span>
                                 </div>
-                                <span
-                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Technical Test Cases' : 'Skenario Test Teknis' }}</span>
+                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Automated Test Suites' : 'Suite Test Otomatis' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">menu_book</span>
                                 </div>
-                                <span
-                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Operations Manual (SOP)' : 'Panduan Operasional (SOP)' }}</span>
+                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Release Readiness Checklist' : 'Checklist Kesiapan Rilis' }}</span>
                             </li>
                             <li class="flex items-center gap-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
                                 </div>
-                                <span
-                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'SIT/UAT Sign-off Documents' : 'Dokumen Sign-off SIT/UAT' }}</span>
+                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'BAST & Warranty Certificate' : 'BAST & Sertifikat Garansi' }}</span>
                             </li>
                         </ul>
                     </div>

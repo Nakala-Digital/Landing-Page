@@ -31,7 +31,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -42,7 +42,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -56,7 +56,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -141,7 +141,7 @@
 <div class="z-10">
 <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
 <span class="material-symbols-outlined text-[16px]">bolt</span>
-{{ app()->getLocale() === 'en' ? 'Regional Excellence' : 'Keunggulan Regional' }}
+{{ app()->getLocale() === 'en' ? 'Service Pillar' : 'Service Pillar' }}
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ app()->getLocale() === 'en' ? 'Technology services for' : 'Layanan teknologi untuk' }} <span class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs.' : 'kebutuhan bisnis modern.' }}</span>
@@ -188,9 +188,9 @@
 <h3 class="font-headline-h3 text-headline-h3 mb-4">AI &amp; GenAI</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.</p>
 <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> LLM Customization</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Predictive Analytics</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> AI Governance</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Custom AI Model Development' : 'Kustomisasi Model AI' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Business Process Automation' : 'Otomasi Proses Bisnis' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</li>
 </ul>
 </div>
 <!-- 2. Custom Software Dev -->
@@ -200,10 +200,10 @@
 <h3 class="font-headline-h3 text-headline-h3 mb-4">Custom Software Dev</h3>
 <p class="font-body-md text-body-md text-surface-variant mb-6">Bespoke software solutions crafted for unique business processes and high-performance requirements.</p>
 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Microservices Architecture</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Enterprise Applications</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Legacy Modernization</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> Cloud-Native Build</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Enterprise Applications' : 'Aplikasi Enterprise' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Scalable Platform Architecture' : 'Sistem Terukur' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'System Modernization' : 'Modernisasi Sistem' }}</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined scale-75">check_circle</span> {{ app()->getLocale() === 'en' ? 'Cloud Integration' : 'Integrasi Cloud' }}</li>
 </ul>
 </div>
 <div class="w-full md:w-1/3 bg-white/5 rounded-lg overflow-hidden border border-white/10 hidden lg:block">
@@ -255,8 +255,8 @@
 </div>
 </div>
 <div class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-xl flex flex-col justify-center items-center text-center text-white">
-<div class="text-4xl font-bold mb-2">99.9%</div>
-<div class="text-sm font-label-sm uppercase tracking-widest opacity-80">SLA Guaranteed</div>
+<div class="text-4xl font-bold mb-2">{{ app()->getLocale() === 'en' ? 'SLA' : 'SLA' }}</div>
+<div class="text-sm font-label-sm uppercase tracking-widest opacity-80">{{ app()->getLocale() === 'en' ? 'Flexible SLAs' : 'SLA Fleksibel' }}</div>
 </div>
 </div>
 </div>
@@ -265,11 +265,11 @@
 <!-- Partner Badge Section -->
 <section class="py-unit-lg bg-on-secondary-fixed">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-gutter opacity-80 hover:opacity-100 transition-opacity">
-<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">Strategic Capability Partner</div>
+<div class="text-surface-variant font-label-sm text-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}</div>
 <div class="bg-white/10 px-8 py-4 rounded-lg border border-white/20 flex items-center gap-4">
 <img class="h-9 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
 <div class="h-6 w-px bg-white/20"></div>
-<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">Regional Excellence</div>
+<div class="text-xs text-white/60 font-body-md uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Strategic Partner' }}</div>
 </div>
 <div class="hidden md:block text-surface-variant font-body-md italic text-sm text-right">
                 Combining Indonesian insight <br/> with Singaporean tech standards.

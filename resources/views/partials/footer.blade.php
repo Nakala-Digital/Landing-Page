@@ -86,6 +86,9 @@
                             href="{{ route('portfolio' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Project Portfolio' : 'Portofolio Projek' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
+                            href="{{ route('insights' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Insights' : 'Insight' }}</a>
+                    </li>
+                    <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
                             href="{{ route('contact' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Contact' : 'Kontak' }}</a>
                     </li>
                 </ul>
@@ -115,11 +118,11 @@
             <div class="lg:col-span-2 space-y-4 flex flex-col items-start lg:items-center">
                 <h4 class="font-label-sm text-white uppercase tracking-widest lg:text-center">
                     {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</h4>
-                <div class="bg-white/10 p-4 rounded-lg border border-white/20 inline-flex flex-col items-center text-center">
-                    <img alt="Romulus Digital" class="h-10 w-auto object-contain"
+                <div class="bg-white/10 p-3 rounded-lg border border-white/20 inline-flex flex-col items-center text-center">
+                    <img alt="Romulus Digital" class="h-8 w-auto object-contain opacity-70"
                         src="{{ asset('assets/romulus-putih.png') }}" />
-                    <p class="text-[10px] text-white/70 mt-2 uppercase tracking-wider">
-                        {{ app()->getLocale() === 'en' ? 'Official Regional Partner' : 'Mitra Regional Resmi' }}
+                    <p class="text-[9px] text-white/60 mt-2 uppercase tracking-wider">
+                        {{ app()->getLocale() === 'en' ? 'Regional Partner' : 'Mitra Regional' }}
                     </p>
                 </div>
             </div>

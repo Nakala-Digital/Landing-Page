@@ -45,7 +45,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -56,7 +56,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -70,7 +70,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -217,15 +217,19 @@
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
                         {{ __('messages.hero_desc') }}
                     </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <span class="h-px w-10 bg-primary"></span>
+                        <span class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
+                    </div>
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            {{ __('messages.cta_button') }}
+                            {{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}
                         </a>
-                        <a href="{{ route('portfolio' . $localeSuffix) }}"
+                        <a href="{{ route('services' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
-                            {{ __('messages.portfolio_button') }}
+                            {{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}
                         </a>
                     </div>
                 </div>
@@ -301,8 +305,8 @@
         <section class="py-unit-xl bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="mb-unit-xl max-w-2xl">
-                    <h2
-                        class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Capability Reference</span>
+                    <h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">
                         {{ __('messages.cap_title') }}</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">{{ __('messages.cap_desc') }}</p>
                 </div>
@@ -382,8 +386,7 @@
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O" />
                 </div>
                 <div class="order-1 lg:order-2 space-y-unit-lg">
-                    <span
-                        class="font-label-sm text-primary uppercase tracking-[0.3em]">{{ __('messages.who_badge') }}</span>
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em]">Solution Highlight</span>
                     <h2
                         class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">
                         {{ __('messages.who_title') }}</h2>
@@ -427,7 +430,7 @@
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        {{ __('messages.final_cta_btn') }}
+                        {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
                     </a>
                 </div>
             </div>

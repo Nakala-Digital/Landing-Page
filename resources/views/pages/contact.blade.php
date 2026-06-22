@@ -31,7 +31,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -42,7 +42,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -56,7 +56,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -148,10 +148,10 @@
 Global Reach
 </div>
 <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md">
-                    Mari bangun masa depan digital bersama.
+                    {{ app()->getLocale() === 'en' ? "Let's build the digital future together." : 'Mari bangun masa depan digital bersama.' }}
                 </h1>
 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
-                    Let us build the digital future together. Nakala Digital provides regional capability with a local touch.
+                    {{ app()->getLocale() === 'en' ? 'Nakala Digital brings regional capability with a local touch. Tell us about your project.' : 'Nakala Digital menghadirkan kapabilitas regional dengan sentuhan lokal. Ceritakan tentang proyek Anda.' }}
                 </p>
 </div>
 </section>
@@ -182,10 +182,17 @@ Global Reach
 <div>
 <p class="font-label-sm uppercase text-on-surface-variant">Office</p>
 <p class="font-body-lg">Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum,<br/>Bandung Wetan, Bandung City, West Java 40115</p>
-</div>
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+                    <div class="flex items-start gap-unit-md">
+                        <span class="material-symbols-outlined text-electric-cyan" data-icon="calendar_month">calendar_month</span>
+                        <div>
+                            <p class="font-label-sm uppercase text-on-surface-variant">{{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}</p>
+                            <p class="font-body-lg">{{ app()->getLocale() === 'en' ? 'Schedule a free consultation' : 'Jadwalkan konsultasi gratis' }}</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
 <!-- Engagement Model -->
 <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
 <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">Our Model</h4>
@@ -213,16 +220,27 @@ Global Reach
 </div>
 </div>
 <!-- Strategic Partner Badge -->
-<div class="p-unit-md bg-midnight-navy text-white rounded-lg flex items-center justify-between">
-<div>
-<p class="text-[10px] uppercase tracking-widest text-surface-variant">Strategic Partner</p>
-<p class="font-bold text-lg">Romulus Digital</p>
-</div>
-<img class="h-10 w-auto object-contain" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
-</div>
-</div>
-<!-- Contact Form (Right) -->
-<div class="lg:col-span-8">
+            <div class="p-unit-md bg-midnight-navy text-white rounded-lg flex items-center justify-between">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-surface-variant">Strategic Partner</p>
+                        <p class="opacity-70 text-sm">Regional Partner</p>
+                    </div>
+                    <img class="h-8 w-auto object-contain opacity-70" src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital">
+                </div>
+                <!-- WhatsApp CTA -->
+                <div class="p-unit-md bg-tertiary-fixed text-on-tertiary-fixed rounded-lg flex items-center justify-between">
+                    <div>
+                        <p class="font-label-sm uppercase tracking-widest">{{ app()->getLocale() === 'en' ? 'Quick Response' : 'Respons Cepat' }}</p>
+                        <p class="font-bold text-lg">{{ app()->getLocale() === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp' }}</p>
+                    </div>
+                    <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer" class="bg-on-tertiary-fixed text-tertiary-fixed px-4 py-2 rounded-lg font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
+                    </a>
+                </div>
+            </div>
+            <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block lg:col-span-8">Contact Form</span>
+            <!-- Contact Form (Right) -->
+            <div class="lg:col-span-8">
 <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm">
 <form class="space-y-unit-md" id="contactForm">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
@@ -286,7 +304,7 @@ Global Reach
 </div>
 <div class="pt-unit-md">
 <button class="w-full md:w-auto bg-electric-cyan text-white font-button text-button uppercase px-12 py-4 rounded hover:bg-primary transition-all shadow-md" type="submit">
-                                    Submit Inquiry
+                                    {{ app()->getLocale() === 'en' ? 'Submit Inquiry' : 'Kirim Pertanyaan' }}
                                 </button>
 </div>
 </form>
@@ -299,29 +317,36 @@ Global Reach
 <!-- Footer -->
 @include('partials.footer')
 <script>
-        // Micro-interactions
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
+            const f = e.target;
+            const inputs = f.querySelectorAll('input, select, textarea');
+            const data = {};
+            inputs.forEach(el => {
+                const label = el.closest('.space-y-1')?.querySelector('label')?.innerText || el.placeholder;
+                data[label] = el.value;
+            });
+
+            const btn = f.querySelector('button');
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Sending...';
+            btn.innerHTML = 'Opening Email...';
             btn.disabled = true;
-            
+
+            const subject = encodeURIComponent('Project Inquiry | Nakala Digital');
+            const body = encodeURIComponent(
+                Object.entries(data)
+                    .filter(([k, v]) => v)
+                    .map(([k, v]) => `${k}: ${v}`)
+                    .join('\n')
+            );
+            window.location.href = `mailto:contact@nakala.digital?subject=${subject}&body=${body}`;
+
             setTimeout(() => {
-                btn.innerHTML = 'Message Sent';
-                btn.classList.replace('bg-electric-cyan', 'bg-impact-lime');
-                btn.classList.replace('text-white', 'text-midnight-navy');
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.replace('bg-impact-lime', 'bg-electric-cyan');
-                    btn.classList.replace('text-midnight-navy', 'text-white');
-                    btn.disabled = false;
-                    e.target.reset();
-                }, 3000);
-            }, 1500);
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 3000);
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header.fixed');
             if (window.scrollY > 50) {

@@ -39,7 +39,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -50,7 +50,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -64,7 +64,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -164,8 +164,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5fafd;
-            color: #031A44;
+            background-color: #F7FAFC;
+            color: #334155;
         }
 
         .material-symbols-outlined {
@@ -252,6 +252,7 @@
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Solution Highlight</span>
                 <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                     {{ app()->getLocale() === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}</h2>
                 <div class="h-1.5 w-24 bg-primary-container mt-unit-sm"></div>
@@ -272,8 +273,8 @@
                                 <strong>professional, meaningful, and impactful</strong> digital solutions for
                                 organizational growth in Indonesia and the regional market.
                             @else
-                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital yang
-                                <strong>profesional, bermakna, dan berdampak</strong> untuk pertumbuhan organisasi di
+                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital
+                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi di
                                 Indonesia dan pasar regional.
                             @endif
                         </p>
@@ -337,6 +338,7 @@
         <section class="bg-surface-container-highest py-unit-xl">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="text-center mb-unit-xl">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Capability Reference</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
                     <p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">
@@ -448,8 +450,8 @@
                         </div>
                         <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Proprietary frameworks that allow us to launch MVPs 30% faster than industry standards.'
-                                : 'Kerangka kerja kepemilikan yang memungkinkan kami meluncurkan MVP 30% lebih cepat daripada standar industri.' }}
+                                ? 'Purpose-built frameworks that help you go from concept to launch with measurable efficiency.'
+                                : 'Kerangka kerja yang dirancang khusus untuk membantu Anda dari konsep hingga peluncuran dengan efisiensi terukur.' }}
                         </p>
                     </div>
                 </div>

@@ -43,7 +43,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -54,7 +54,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -68,7 +68,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -155,7 +155,7 @@
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="max-w-3xl mb-unit-lg">
                 <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">
-                    {{ app()->getLocale() === 'en' ? 'Nakala Primary' : 'Nakala Primary' }}
+                    {{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Capability Reference' }}
                 </span>
                 <h2 class="font-headline-h2 text-headline-h2 text-on-background mt-unit-sm mb-unit-md">
                     {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
@@ -177,7 +177,7 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">CEO</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Executive Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Milzam Zihni</h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -215,7 +215,7 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">CTO</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Technology Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Rinaldy Pasya</h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -249,7 +249,7 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">COO</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Operating Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya Komaran
                         </h3>
                         <div class="space-y-unit-sm">
@@ -300,11 +300,10 @@
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
-                                <div
-                                    class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-5">
+                                <div class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <div class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
                                         <img alt="Romulus Digital"
-                                            class="h-[56px] w-auto max-w-full object-contain"
+                                            class="h-[36px] w-auto max-w-full object-contain opacity-70"
                                             src="{{ asset('assets/romulus-putih.png') }}" />
                                     </div>
                                 </div>
@@ -329,8 +328,9 @@
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
                 <div class="text-center md:text-right">
                     <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
-                        {{ app()->getLocale() === 'en' ? 'Strategic Partner & Trust Layer' : 'Mitra Strategis & Trust Layer' }}
+                        {{ app()->getLocale() === 'en' ? 'Strategic Partner Ecosystem' : 'Ekosistem Mitra Strategis' }}
                     </span>
+                    <span class="font-label-sm text-white/50 tracking-[0.15em] uppercase text-[10px]">Trust Layer</span>
                     <p class="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
                         {{ app()->getLocale() === 'en'
                             ? 'Nakala Digital remains primary. Romulus Digital reinforces regional confidence.'

@@ -26,6 +26,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -43,7 +44,7 @@
                         "tertiary-fixed": "#A7F432",
                         "error": "#A7F432",
                         "on-secondary-container": "#031A44",
-                        "background": "#f5fafd",
+                        "background": "#F7FAFC",
                         "on-secondary": "#ffffff",
                         "surface-container-low": "#eff4f7",
                         "on-tertiary-container": "#031A44",
@@ -54,7 +55,7 @@
                         "surface-container": "#e9eff1",
                         "on-error-container": "#031A44",
                         "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#f5fafd",
+                        "surface-bright": "#F7FAFC",
                         "surface-container-highest": "#dee3e6",
                         "primary-fixed": "#12AED0",
                         "primary-container": "#12AED0",
@@ -68,7 +69,7 @@
                         "tertiary-container": "#A7F432",
                         "on-surface": "#031A44",
                         "tertiary": "#A7F432",
-                        "surface": "#f5fafd",
+                        "surface": "#F7FAFC",
                         "surface-container-lowest": "#ffffff",
                         "on-tertiary": "#031A44",
                         "surface-container-high": "#e4e9ec",
@@ -168,8 +169,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5fafd;
-            color: #031A44;
+            background-color: #F7FAFC;
+            color: #334155;
         }
 
         .material-symbols-outlined {
@@ -179,11 +180,11 @@
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.35s ease-out;
         }
 
         .accordion-item.active .accordion-content {
-            max-height: 500px;
+            max-height: 600px;
         }
 
         .accordion-item.active .toggle-icon {
@@ -201,7 +202,7 @@
             <div class="mb-unit-xl flex flex-col md:flex-row md:items-end justify-between gap-unit-md">
                 <div class="max-w-2xl">
                     <span
-                        class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-sm inline-block">{{ app()->getLocale() === 'en' ? 'Support & Logistics' : 'Dukungan & Logistik' }}</span>
+                        class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-sm inline-block">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Common Queries' : 'Pertanyaan Umum' }}</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -220,102 +221,97 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
                 <!-- Accordion Column 1 -->
                 <div class="space-y-unit-sm">
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the typical project timeframe?' : 'Berapa lama durasi proyek biasanya?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'MVP development typically spans 8-12 weeks. Enterprise-scale solutions require a detailed roadmapping phase, often delivering core modules within 4-6 months using our agile sprint methodology.'
-                                    : 'Pengembangan MVP biasanya berlangsung 8-12 minggu. Solusi skala enterprise membutuhkan fase roadmapping yang detail, dengan modul inti umumnya dikirim dalam 4-6 bulan menggunakan metodologi agile sprint kami.' }}
+                                    ? 'We provide software development, AI and GenAI solutions, technology consulting, web and portal development, QA governance, and managed support for enterprise platforms including Microsoft Dynamics 365. Each service is delivered with local context and regional capability.'
+                                    : 'Kami menyediakan pengembangan perangkat lunak, solusi AI dan GenAI, konsultasi teknologi, pengembangan web dan portal, tata kelola QA, serta dukungan terkelola untuk platform enterprise termasuk Microsoft Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Can you integrate AI into legacy systems?' : 'Apakah AI bisa diintegrasikan ke sistem legacy?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Yes. We specialize in "modernization by integration," building API wrappers and machine learning layers that sit atop your existing infrastructure to unlock new capabilities without total system replacement.'
-                                    : 'Bisa. Kami berpengalaman dalam "modernisasi lewat integrasi", dengan membangun API wrapper dan layer machine learning di atas infrastruktur yang sudah ada sehingga kapabilitas baru bisa aktif tanpa mengganti seluruh sistem.' }}
+                                    ? 'We follow a structured end-to-end lifecycle: Discovery & Scoping, Design & Architecture, Agile Development & QA, SIT/UAT, Deployment & Go-Live, Handover, and Support & Growth. Every stage includes documentation and quality checkpoints so you maintain full visibility throughout the project.'
+                                    : 'Kami mengikuti siklus end-to-end yang terstruktur: Discovery & Scoping, Design & Architecture, Agile Development & QA, SIT/UAT, Deployment & Go-Live, Handover, serta Support & Growth. Setiap tahap mencakup dokumentasi dan checkpoint kualitas sehingga Anda memiliki visibilitas penuh selama proyek berlangsung.' }}
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What maintenance support is provided?' : 'Dukungan maintenance apa yang disediakan?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'We offer three tiers of SLAs, ranging from essential security patching to 24/7 dedicated engineering support with guaranteed 2-hour response times for critical enterprise outages.'
-                                    : 'Kami menyediakan tiga tier SLA, mulai dari patch keamanan dasar sampai dukungan engineering dedicated 24/7 dengan waktu respons 2 jam untuk gangguan enterprise yang kritis.' }}
+                                    ? 'Timelines depend on project scope and complexity. A focused MVP can typically be delivered within 8-12 weeks. Larger enterprise solutions are delivered in phases, with core modules typically available within 4-6 months. We provide a detailed timeline during the Discovery & Scoping phase.'
+                                    : 'Timeline tergantung pada lingkup dan kompleksitas proyek. MVP yang terfokus biasanya dapat selesai dalam 8-12 minggu. Solusi enterprise yang lebih besar dikirimkan secara bertahap, dengan modul inti biasanya tersedia dalam 4-6 bulan. Kami memberikan timeline detail selama fase Discovery & Scoping.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                            <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Yes. We provide ongoing support through flexible SLAs, including system monitoring, maintenance, feature updates, and technical assistance. Our managed support covers L1 to L3 support, ensuring your platform remains stable and up-to-date after launch.'
+                                    : 'Ya. Kami menyediakan dukungan berkelanjutan melalui SLA yang fleksibel, termasuk monitoring sistem, maintenance, pembaruan fitur, dan bantuan teknis. Dukungan terkelola kami mencakup L1 hingga L3, memastikan platform Anda tetap stabil dan terkini setelah peluncuran.' }}
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Accordion Column 2 -->
                 <div class="space-y-unit-sm">
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How do you handle enterprise security?' : 'Bagaimana Nakala menangani keamanan enterprise?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Our codebases undergo rigorous SOC2 compliance checks. We implement end-to-end encryption, role-based access controls (RBAC), and conduct regular third-party penetration testing.'
-                                    : 'Codebase kami melalui pemeriksaan compliance yang ketat. Kami menerapkan end-to-end encryption, role-based access control (RBAC), dan penetration testing pihak ketiga secara berkala.' }}
+                                    ? 'Nakala Digital remains the primary delivery partner for every client engagement. Romulus Digital serves as a strategic trust layer and regional capability partner, providing additional technical depth, reference, and capacity when projects require larger scale or specialised expertise. This means you get local responsiveness with regional backing.'
+                                    : 'Nakala Digital tetap menjadi mitra pengiriman utama untuk setiap engagement klien. Romulus Digital berperan sebagai trust layer strategis dan mitra kapabilitas regional, memberikan kedalaman teknis tambahan, referensi, dan kapasitas saat proyek membutuhkan skala lebih besar atau keahlian khusus. Ini berarti Anda mendapatkan respons lokal dengan dukungan regional.' }}
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What tech stack do you recommend?' : 'Tech stack apa yang direkomendasikan?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'While we are tech-agnostic, we often leverage React/Next.js for interfaces, Python/Go for backends, and AWS or Azure for scalable cloud infrastructure to ensure long-term stability.'
-                                    : 'Kami tech-agnostic, tetapi sering menggunakan React/Next.js untuk interface, Python/Go untuk backend, serta AWS atau Azure untuk infrastruktur cloud yang scalable dan stabil jangka panjang.' }}
+                                    ? 'We follow industry-standard security practices including role-based access control (RBAC), data encryption, and secure development lifecycle. Our QA governance framework includes security review checkpoints at every stage. For specific compliance requirements, we work with clients to align with their existing security policies and standards.'
+                                    : 'Kami mengikuti praktik keamanan standar industri termasuk role-based access control (RBAC), enkripsi data, dan siklus pengembangan yang aman. Framework tata kelola QA kami mencakup checkpoint review keamanan di setiap tahap. Untuk kebutuhan kepatuhan spesifik, kami bekerja sama dengan klien untuk menyelaraskan dengan kebijakan keamanan yang sudah ada.' }}
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left"
-                            onclick="toggleAccordion(this)">
-                            <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Are your engagement models flexible?' : 'Apakah model kerja samanya fleksibel?' }}</span>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Absolutely. We offer Fixed-Price for well-defined scopes, Time & Materials for evolving R&D, and Dedicated Team models for long-term product evolution.'
-                                    : 'Fleksibel. Kami menyediakan Fixed-Price untuk scope yang jelas, Time & Materials untuk R&D yang berkembang, dan Dedicated Team untuk evolusi produk jangka panjang.' }}
+                                    ? 'You can reach us via email at contact@nakala.digital, by phone at +62 822-9570-6304, or through the contact form on our website. We typically respond within one business day. For project discussions, we offer a free discovery session to understand your needs and provide initial recommendations.'
+                                    : 'Anda dapat menghubungi kami melalui email di contact@nakala.digital, melalui telepon di +62 822-9570-6304, atau melalui form kontak di website kami. Kami biasanya merespon dalam satu hari kerja. Untuk diskusi proyek, kami menawarkan sesi discovery gratis untuk memahami kebutuhan Anda dan memberikan rekomendasi awal.' }}
                             </p>
                         </div>
                     </div>
@@ -326,6 +322,7 @@
         <section class="py-unit-xl bg-surface-container-low">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="text-center mb-unit-xl">
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Solution Highlight</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Engineering Insights' : 'Insight Engineering' }}
                     </h2>
@@ -350,7 +347,7 @@
                                     <span
                                         class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                                     <span class="text-outline text-label-sm">&middot;</span>
-                                    <span class="text-outline text-label-sm">May 12, 2024</span>
+                                    <span class="text-outline text-label-sm">{{ app()->getLocale() === 'en' ? 'Latest Insight' : 'Insight Terbaru' }}</span>
                                 </div>
                                 <h3
                                     class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
@@ -362,7 +359,7 @@
                                         : 'Pelajari bagaimana bisnis lokal memanfaatkan model machine learning yang disesuaikan untuk bersaing dengan pemain global tanpa biaya yang berlebihan.' }}
                                 </p>
                                 <a class="inline-flex items-center gap-unit-xs text-primary font-button text-button group"
-                                    href="#">
+                                    href="{{ route('insights' . $localeSuffix) }}">
                                     {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
                                     <span
                                         class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
@@ -446,6 +443,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="text-center mt-unit-xl pt-unit-md">
+                    <a href="{{ route('insights' . $localeSuffix) }}"
+                        class="inline-flex items-center gap-unit-xs text-primary font-button text-button group hover:underline">
+                        <span class="material-symbols-outlined text-sm">visibility</span>
+                        {{ app()->getLocale() === 'en' ? 'View All Insights' : 'Lihat Semua Insight' }}
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </section>
