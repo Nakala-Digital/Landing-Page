@@ -42,7 +42,7 @@
         </div>
 
         {{-- Center: Desktop Nav --}}
-        <div class="hidden lg:flex items-center justify-center gap-4 xl:gap-6 flex-1">
+        <div class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 flex-1">
             @foreach ($navItems as $item)
                 @php
                     $active =
