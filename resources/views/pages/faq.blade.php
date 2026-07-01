@@ -6,17 +6,17 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        {{ app()->getLocale() === 'en' ? 'FAQ & Engineering Insights | Nakala Digital' : 'FAQ & Insight Engineering | Nakala Digital' }}
+        {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions | Nakala Digital' : 'Pertanyaan Umum (FAQ) | Nakala Digital' }}
     </title>
     @include('partials.seo', [
         'title' =>
             app()->getLocale() === 'en'
-                ? 'FAQ & Engineering Insights | Nakala Digital'
-                : 'FAQ & Insight Engineering | Nakala Digital',
+                ? 'Frequently Asked Questions | Nakala Digital'
+                : 'Pertanyaan Umum (FAQ) | Nakala Digital',
         'description' =>
             app()->getLocale() === 'en'
-                ? 'Find common questions, engagement details, and engineering insights from Nakala Digital.'
-                : 'Temukan pertanyaan umum, detail kerja sama, dan insight engineering dari Nakala Digital.',
+                ? 'Find answers to frequently asked questions about Nakala Digital software development, AI solutions, technology consulting, and how we partner with businesses in Indonesia.'
+                : 'Temukan jawaban atas pertanyaan umum tentang layanan pengembangan software, solusi AI, konsultasi teknologi Nakala Digital, dan cara kami bermitra dengan bisnis di Indonesia.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -212,10 +212,10 @@
                     </p>
                 </div>
                 <div class="hidden md:block">
-                    <button
-                        class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-sm rounded font-button text-button hover:bg-on-secondary-fixed hover:text-white transition-all">
-                        {{ app()->getLocale() === 'en' ? 'View Documentation' : 'Lihat Dokumentasi' }}
-                    </button>
+                    <a href="{{ route('contact' . $localeSuffix) }}"
+                        class="inline-block border-2 border-primary text-primary px-unit-lg py-unit-sm rounded font-button text-button hover:bg-primary hover:text-white transition-all">
+                        {{ app()->getLocale() === 'en' ? 'Start a Project' : 'Mulai Proyek' }}
+                    </a>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -231,6 +231,19 @@
                                 {{ app()->getLocale() === 'en'
                                     ? 'We provide software development, AI and GenAI solutions, technology consulting, web and portal development, QA governance, and managed support for enterprise platforms including Microsoft Dynamics 365. Each service is delivered with local context and regional capability.'
                                     : 'Kami menyediakan pengembangan perangkat lunak, solusi AI dan GenAI, konsultasi teknologi, pengembangan web dan portal, tata kelola QA, serta dukungan terkelola untuk platform enterprise termasuk Microsoft Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What industries does Nakala Digital serve?' : 'Industri apa saja yang dilayani Nakala Digital?' }}</span>
+                            <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'We serve a wide range of industries including education, enterprise resource planning, human resources, financial technology, occupational health and safety, and AI-powered recruitment. Each solution is tailored to the specific operational needs and challenges of the sector.'
+                                    : 'Kami melayani berbagai industri termasuk pendidikan, perencanaan sumber daya perusahaan, SDM, teknologi finansial, kesehatan dan keselamatan kerja, serta rekrutmen berbasis AI. Setiap solusi disesuaikan dengan kebutuhan operasional dan tantangan spesifik sektor tersebut.' }}
                             </p>
                         </div>
                     </div>
@@ -286,6 +299,19 @@
                                 {{ app()->getLocale() === 'en'
                                     ? 'Nakala Digital remains the primary delivery partner for every client engagement. Romulus Digital serves as a strategic trust layer and regional capability partner, providing additional technical depth, reference, and capacity when projects require larger scale or specialised expertise. This means you get local responsiveness with regional backing.'
                                     : 'Nakala Digital tetap menjadi mitra pengiriman utama untuk setiap engagement klien. Romulus Digital berperan sebagai trust layer strategis dan mitra kapabilitas regional, memberikan kedalaman teknis tambahan, referensi, dan kapasitas saat proyek membutuhkan skala lebih besar atau keahlian khusus. Ini berarti Anda mendapatkan respons lokal dengan dukungan regional.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What engagement models are available?' : 'Apa saja model kerja sama yang tersedia?' }}</span>
+                            <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'We offer flexible engagement models including fixed-scope projects, retainer and managed support, Resource-as-a-Service (RaaS) for dedicated team augmentation, and strategic advisory for digital transformation planning. We recommend the best model based on your needs during the discovery session.'
+                                    : 'Kami menawarkan model kerja sama yang fleksibel termasuk proyek fixed-scope, retainer dan managed support, Resource-as-a-Service (RaaS) untuk augmentasi tim khusus, dan advisory strategis untuk perencanaan transformasi digital. Model terbaik akan direkomendasikan berdasarkan kebutuhan Anda selama sesi discovery.' }}
                             </p>
                         </div>
                     </div>

@@ -500,6 +500,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-unit-lg">
+                    <a href="{{ route('faq' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                        class="inline-flex items-center gap-unit-xs text-primary font-button text-button hover:underline">
+                        {{ app()->getLocale() === 'en' ? 'View All FAQ' : 'Lihat Semua FAQ' }}
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
             </div>
         </section>
         <!-- Final CTA -->
