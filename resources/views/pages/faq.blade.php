@@ -9,14 +9,14 @@
         {{ app()->getLocale() === 'en' ? 'FAQ & Engineering Insights | Nakala Digital' : 'FAQ & Insight Engineering | Nakala Digital' }}
     </title>
     @include('partials.seo', [
-        'title' =>
-            app()->getLocale() === 'en'
-                ? 'FAQ & Engineering Insights | Nakala Digital'
-                : 'FAQ & Insight Engineering | Nakala Digital',
-        'description' =>
-            app()->getLocale() === 'en'
-                ? 'Find common questions, engagement details, and engineering insights from Nakala Digital.'
-                : 'Temukan pertanyaan umum, detail kerja sama, dan insight engineering dari Nakala Digital.',
+    'title' =>
+    app()->getLocale() === 'en'
+    ? 'FAQ & Engineering Insights | Nakala Digital'
+    : 'FAQ & Insight Engineering | Nakala Digital',
+    'description' =>
+    app()->getLocale() === 'en'
+    ? 'Find common questions, engagement details, and engineering insights from Nakala Digital.'
+    : 'Temukan pertanyaan umum, detail kerja sama, dan insight engineering dari Nakala Digital.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -28,168 +28,168 @@
         rel="stylesheet" />
     @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "electric-cyan": "#12AED0",
-                        "midnight-navy": "#031A44",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1-mobile": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "body-lg": ["Poppins"],
-                        "headline-h2-mobile": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "display-lg": ["Poppins"],
-                        "label-sm": ["Poppins"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["48px", {
-                            "lineHeight": "1.1",
-                            "fontWeight": "700"
-                        }],
-                        "body-md": ["16px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "button": ["15px", {
-                            "lineHeight": "1.0",
-                            "letterSpacing": "0.05em",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1-mobile": ["36px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h2": ["40px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "body-lg": ["18px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "headline-h2-mobile": ["28px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1": ["56px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h3": ["24px", {
-                            "lineHeight": "1.4",
-                            "fontWeight": "600"
-                        }],
-                        "display-lg": ["72px", {
-                            "lineHeight": "1.1",
-                            "letterSpacing": "-0.02em",
-                            "fontWeight": "700"
-                        }],
-                        "label-sm": ["12px", {
-                            "lineHeight": "1.0",
-                            "fontWeight": "700"
-                        }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0",
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432",
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44",
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432"
                 },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg-mobile": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1-mobile": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "body-lg": ["Poppins"],
+                    "headline-h2-mobile": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "display-lg": ["Poppins"],
+                    "label-sm": ["Poppins"]
+                },
+                "fontSize": {
+                    "display-lg-mobile": ["48px", {
+                        "lineHeight": "1.1",
+                        "fontWeight": "700"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "button": ["15px", {
+                        "lineHeight": "1.0",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1-mobile": ["36px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h2": ["40px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "headline-h2-mobile": ["28px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1": ["56px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h3": ["24px", {
+                        "lineHeight": "1.4",
+                        "fontWeight": "600"
+                    }],
+                    "display-lg": ["72px", {
+                        "lineHeight": "1.1",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "label-sm": ["12px", {
+                        "lineHeight": "1.0",
+                        "fontWeight": "700"
+                    }]
+                }
             },
-        }
+        },
+    }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F7FAFC;
-            color: #334155;
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #F7FAFC;
+        color: #334155;
+    }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
 
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease-out;
-        }
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+    }
 
-        .accordion-item.active .accordion-content {
-            max-height: 600px;
-        }
+    .accordion-item.active .accordion-content {
+        max-height: 600px;
+    }
 
-        .accordion-item.active .toggle-icon {
-            transform: rotate(180deg);
-        }
+    .accordion-item.active .toggle-icon {
+        transform: rotate(180deg);
+    }
     </style>
 </head>
 
@@ -221,9 +221,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
                 <!-- Accordion Column 1 -->
                 <div class="space-y-unit-sm">
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -234,9 +237,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -247,9 +253,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -260,9 +269,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -276,9 +288,12 @@
                 </div>
                 <!-- Accordion Column 2 -->
                 <div class="space-y-unit-sm">
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -289,9 +304,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -302,9 +320,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -322,7 +343,8 @@
         <section class="py-unit-xl bg-surface-container-low">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Engineering Insights' : 'Insight Engineering' }}
                     </h2>
@@ -347,7 +369,8 @@
                                     <span
                                         class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                                     <span class="text-outline text-label-sm">&middot;</span>
-                                    <span class="text-outline text-label-sm">{{ app()->getLocale() === 'en' ? 'Latest Insight' : 'Insight Terbaru' }}</span>
+                                    <span
+                                        class="text-outline text-label-sm">{{ app()->getLocale() === 'en' ? 'Latest Insight' : 'Insight Terbaru' }}</span>
                                 </div>
                                 <h3
                                     class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
@@ -449,7 +472,8 @@
                         class="inline-flex items-center gap-unit-xs text-primary font-button text-button group hover:underline">
                         <span class="material-symbols-outlined text-sm">visibility</span>
                         {{ app()->getLocale() === 'en' ? 'View All Insights' : 'Lihat Semua Insight' }}
-                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                     </a>
                 </div>
             </div>
@@ -458,26 +482,26 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        function toggleAccordion(button) {
-            const item = button.closest('.accordion-item');
-            const isActive = item.classList.contains('active');
+    function toggleAccordion(button) {
+        const item = button.closest('.accordion-item');
+        const isActive = item.classList.contains('active');
 
-            // Close all items
-            document.querySelectorAll('.accordion-item').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // Toggle clicked item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        }
-
-        // Initialize first FAQ as open
-        document.addEventListener('DOMContentLoaded', () => {
-            const firstItem = document.querySelector('.accordion-item');
-            if (firstItem) firstItem.classList.add('active');
+        // Close all items
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('active');
         });
+
+        // Toggle clicked item
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+
+    // Initialize first FAQ as open
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstItem = document.querySelector('.accordion-item');
+        if (firstItem) firstItem.classList.add('active');
+    });
     </script>
 </body>
 

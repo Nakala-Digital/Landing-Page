@@ -9,14 +9,16 @@
         {{ app()->getLocale() === 'en' ? 'Team & Partnership | Nakala Digital' : 'Tim & Kemitraan | Nakala Digital' }}
     </title>
     @include('partials.seo', [
-        'title' =>
-            app()->getLocale() === 'en'
-                ? 'Team & Partnership | Nakala Digital'
-                : 'Tim & Kemitraan | Nakala Digital',
-        'description' =>
-            app()->getLocale() === 'en'
-                ? "Meet Nakala Digital's core team, with Romulus Digital as a strategic partner and trust layer for regional capability."
-                : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas regional.',
+    'title' =>
+    app()->getLocale() === 'en'
+    ? 'Team & Partnership | Nakala Digital'
+    : 'Tim & Kemitraan | Nakala Digital',
+    'description' =>
+    app()->getLocale() === 'en'
+    ? "Meet Nakala Digital's core team, with Romulus Digital as a strategic partner and trust layer for regional
+    capability."
+    : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas
+    regional.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -27,100 +29,100 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "electric-cyan": "#12AED0",
-                        "midnight-navy": "#031A44",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "label-sm": ["Poppins"]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0", //Electric Cyan
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432", //Impact Lime
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44", //Midnight Navy
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "label-sm": ["Poppins"]
                 }
             }
         }
+    }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
     </style>
 </head>
 
@@ -153,9 +155,10 @@
         </section>
         <!-- Team Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
+            <div class="mb-unit-xl">
+                <span
+                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
                     {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -175,7 +178,8 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Executive Officer</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                            Executive Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Milzam Zihni</h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -213,7 +217,8 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Technology Officer</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                            Technology Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Rinaldy Pasya</h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -247,7 +252,8 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Operating Officer</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                            Operating Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya Komaran
                         </h3>
                         <div class="space-y-unit-sm">
@@ -292,14 +298,16 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
                                 <div
                                     class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
-                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
-                                        <img alt="Nakala Digital"
-                                            class="h-[56px] w-auto max-w-full object-contain"
+                                    <div
+                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
+                                        <img alt="Nakala Digital" class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
-                                <div class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <div class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
+                                <div
+                                    class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <div
+                                        class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
                                         <img alt="Romulus Digital"
                                             class="h-[36px] w-auto max-w-full object-contain opacity-70"
                                             src="{{ asset('assets/romulus-putih.png') }}" />
@@ -324,19 +332,19 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        // Micro-interaction for scroll effects
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
+    // Micro-interaction for scroll effects
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 50) {
+            header.classList.add('py-2', 'shadow-md', 'h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('py-2', 'shadow-md', 'h-16');
+            header.classList.add('h-20');
+        }
+    });
 
-        // Hover animation for team cards handled by Tailwind group-hover
+    // Hover animation for team cards handled by Tailwind group-hover
     </script>
 </body>
 
