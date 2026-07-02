@@ -9,140 +9,150 @@
         {{ app()->getLocale() === 'en' ? 'Team & Partnership | Nakala Digital' : 'Tim & Kemitraan | Nakala Digital' }}
     </title>
     @include('partials.seo', [
-        'title' =>
-            app()->getLocale() === 'en'
-                ? 'Team & Partnership | Nakala Digital'
-                : 'Tim & Kemitraan | Nakala Digital',
-        'description' =>
-            app()->getLocale() === 'en'
-                ? "Meet Nakala Digital's core team, with Romulus Digital as a strategic partner and trust layer for regional capability."
-                : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas regional.',
+    'title' =>
+    app()->getLocale() === 'en'
+    ? 'Team & Partnership | Nakala Digital'
+    : 'Tim & Kemitraan | Nakala Digital',
+    'description' =>
+    app()->getLocale() === 'en'
+    ? "Meet Nakala Digital's core team, with Romulus Digital as a strategic partner and trust layer for regional
+    capability."
+    : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas
+    regional.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "electric-cyan": "#12AED0",
-                        "midnight-navy": "#031A44",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "label-sm": ["Poppins"],
-                        "body-lg": ["Poppins"]
-                    },
-                    "fontSize": {
-                        "button": ["15px", {
-                            "lineHeight": "1.0",
-                            "letterSpacing": "0.05em",
-                            "fontWeight": "600"
-                        }],
-                        "body-md": ["16px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "body-lg": ["18px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "headline-h1": ["56px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h2": ["40px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h3": ["24px", {
-                            "lineHeight": "1.4",
-                            "fontWeight": "600"
-                        }],
-                        "display-lg": ["72px", {
-                            "lineHeight": "1.1",
-                            "letterSpacing": "-0.02em",
-                            "fontWeight": "700"
-                        }],
-                        "label-sm": ["12px", {
-                            "lineHeight": "1.0",
-                            "fontWeight": "700"
-                        }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0",
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432",
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44",
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "label-sm": ["Poppins"],
+                    "body-lg": ["Poppins"]
+                },
+                "fontSize": {
+                    "button": ["15px", {
+                        "lineHeight": "1.0",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "headline-h1": ["56px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h2": ["40px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h3": ["24px", {
+                        "lineHeight": "1.4",
+                        "fontWeight": "600"
+                    }],
+                    "display-lg": ["72px", {
+                        "lineHeight": "1.1",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "label-sm": ["12px", {
+                        "lineHeight": "1.0",
+                        "fontWeight": "700"
+                    }]
                 }
             }
         }
+    },
     </script>
+    <style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
     </style>
 </head>
 
@@ -224,7 +234,48 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- CTO -->
+                <div
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="aspect-square relative overflow-hidden">
+                        <div
+                            class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
+                            <div
+                                class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
+                                <span class="material-symbols-outlined text-5xl">person</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+                    </div>
+                    <div class="p-unit-lg">
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">
+                            Chief
+                            Technology Officer</p>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Rinaldy Pasya
+                        </h3>
+                        <div class="space-y-unit-sm">
+                            <div
+                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">architecture</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Tech Architecture' : 'Arsitektur Teknologi' }}</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">terminal</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'Engineering Excellence' : 'Keunggulan Engineering' }}</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
+                                <span class="material-symbols-outlined text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">speed</span>
+                                <span>{{ app()->getLocale() === 'en' ? 'System Scalability' : 'Skalabilitas Sistem' }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                >>>>>>> 2803b4f (Hacker-Style Wording, Validate Brand Color,Why Nakala)
                 <!-- COO -->
                 <div
                     class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl md:w-[calc(50%-12px)] max-w-md">
@@ -235,9 +286,11 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">
+                            Chief
                             Operating Officer</p>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya Komaran
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya
+                            Komaran
                         </h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -316,17 +369,30 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        // Micro-interaction for scroll effects
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
+    // Micro-interaction for scroll effects
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 50) {
+            header.classList.add('py-2', 'shadow-md', 'h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('py-2', 'shadow-md', 'h-16');
+            header.classList.add('h-20');
+        }
+    });
+    // Micro-interaction for scroll effects
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 50) {
+            header.classList.add('py-2', 'shadow-md', 'h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('py-2', 'shadow-md', 'h-16');
+            header.classList.add('h-20');
+        }
+    });
+
+    // Hover animation for team cards handled by Tailwind group-hover
     </script>
 </body>
 

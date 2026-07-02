@@ -7,168 +7,175 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>{{ app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital' }}</title>
     @include('partials.seo', [
-        'title' => app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital',
-        'description' =>
-            app()->getLocale() === 'en'
-                ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
-                : 'Hubungi Nakala Digital untuk mendiskusikan projek software, AI, atau transformasi digital Anda selanjutnya.',
+    'title' => app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital',
+    'description' => app()->getLocale() === 'en'
+    ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
+    : 'Hubungi Nakala Digital untuk mendiskusikan projek software, AI, atau transformasi digital Anda selanjutnya.'
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "midnight-navy": "#031A44",
-                        "electric-cyan": "#12AED0",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "4px",
-                        "lg": "4px",
-                        "xl": "8px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1-mobile": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "body-lg": ["Poppins"],
-                        "headline-h2-mobile": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "display-lg": ["Poppins"],
-                        "label-sm": ["Poppins"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["48px", {
-                            "lineHeight": "1.1",
-                            "fontWeight": "700"
-                        }],
-                        "body-md": ["16px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "button": ["15px", {
-                            "lineHeight": "1.0",
-                            "letterSpacing": "0.05em",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1-mobile": ["36px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h2": ["40px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "body-lg": ["18px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "headline-h2-mobile": ["28px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1": ["56px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h3": ["24px", {
-                            "lineHeight": "1.4",
-                            "fontWeight": "600"
-                        }],
-                        "display-lg": ["72px", {
-                            "lineHeight": "1.1",
-                            "letterSpacing": "-0.02em",
-                            "fontWeight": "700"
-                        }],
-                        "label-sm": ["12px", {
-                            "lineHeight": "1.0",
-                            "fontWeight": "700"
-                        }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0",
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432",
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44",
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "midnight-navy": "#031A44",
+                    "electric-cyan": "#12AED0",
+                    "impact-lime": "#A7F432"
                 },
+                "borderRadius": {
+                    "DEFAULT": "4px",
+                    "lg": "4px",
+                    "xl": "8px",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg-mobile": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1-mobile": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "body-lg": ["Poppins"],
+                    "headline-h2-mobile": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "display-lg": ["Poppins"],
+                    "label-sm": ["Poppins"]
+                },
+                "fontSize": {
+                    "display-lg-mobile": ["48px", {
+                        "lineHeight": "1.1",
+                        "fontWeight": "700"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "button": ["15px", {
+                        "lineHeight": "1.0",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1-mobile": ["36px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h2": ["40px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "headline-h2-mobile": ["28px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1": ["56px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h3": ["24px", {
+                        "lineHeight": "1.4",
+                        "fontWeight": "600"
+                    }],
+                    "display-lg": ["72px", {
+                        "lineHeight": "1.1",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "label-sm": ["12px", {
+                        "lineHeight": "1.0",
+                        "fontWeight": "700"
+                    }]
+                }
             },
-        }
+        },
+    }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
 
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+    }
 
-        .form-input-focus:focus {
-            border-color: #12AED0;
-            border-width: 2px;
-            ring-color: transparent;
-        }
+    .form-input-focus:focus {
+        border-color: #12AED0;
+        border-width: 2px;
+        ring-color: transparent;
+    }
     </style>
 </head>
 
@@ -185,8 +192,8 @@
             <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-lg">
                 <div
                     class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-md">
-                    <span class="material-symbols-outlined text-[16px]">public</span>
-                    {{ app()->getLocale() === 'en' ? 'Local & Regional' : 'Lokal & Regional' }}
+                    <span class="material-symbols-outlined text-[16px]">bolt</span>
+                    Global Reach
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md">
@@ -239,10 +246,9 @@
                                     data-icon="calendar_month">calendar_month</span>
                                 <div>
                                     <p class="font-label-sm uppercase text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}
-                                    </p>
+                                        {{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}</p>
                                     <p class="font-body-lg">
-                                        {{ app()->getLocale() === 'en' ? 'Free strategy consultation' : 'Konsultasi strategi gratis' }}
+                                        {{ app()->getLocale() === 'en' ? 'Schedule a free consultation' : 'Jadwalkan konsultasi gratis' }}
                                     </p>
                                 </div>
                             </div>
@@ -278,30 +284,30 @@
                         <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">01. Discovery &amp; Scoping</p>
+                                <p class="font-button text-button text-primary">01. Discovery</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Defining project goals, scope, and solution proposal.' : 'Menentukan tujuan proyek, ruang lingkup, dan proposal solusi.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Defining goals and scope.' : 'Mendefinisikan tujuan dan ruang lingkup.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">02. Design &amp; Architecture</p>
+                                <p class="font-button text-button text-primary">02. Design</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Wireframes, system design, and delivery plan.' : 'Wireframes, desain sistem, dan rencana pengiriman.' }}
+                                    {{ app()->getLocale() === 'en' ? 'UX research and UI drafting.' : 'Riset UX dan pembuatan draf UI.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">03. Agile Dev &amp; QA</p>
+                                <p class="font-button text-button text-primary">03. Agile Dev</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Sprint-based development with QA testing.' : 'Pengembangan berbasis Sprint dengan pengujian QA.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Sprint-based high-quality code.' : 'Kode berkualitas tinggi berbasis Sprint.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">04. Handover &amp; Support</p>
+                                <p class="font-button text-button text-primary">04. Handover</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Formal handover, SLA support, and growth roadmap.' : 'Serah terima formal, dukungan SLA, dan peta jalan.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Deployment and maintenance.' : 'Penyebaran dan pemeliharaan.' }}
                                 </p>
                             </div>
                         </div>
@@ -361,12 +367,17 @@
                                         class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Project Type' : 'Jenis Proyek' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>{{ app()->getLocale() === 'en' ? 'Website / Portal' : 'Website / Portal' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Mobile Application' : 'Aplikasi Mobile' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'AI / Automation Solution' : 'Solusi AI / Otomatisasi' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Custom Business System' : 'Sistem Bisnis Kustom' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'QA / Software Testing' : 'QA / Pengujian Software' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Other / Not Sure Yet' : 'Lainnya / Belum Yakin' }}</option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Enterprise Web App' : 'Aplikasi Web Enterprise' }}
+                                        </option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Mobile App (iOS/Android)' : 'Aplikasi Mobile (iOS/Android)' }}
+                                        </option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}
+                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'AI/ML Solutions' : 'Solusi AI/ML' }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -376,12 +387,11 @@
                                         class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Budget Range' : 'Rentang Anggaran' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>{{ app()->getLocale() === 'en' ? '< Rp 50 Million' : '< Rp 50 Juta' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 50 - 200 Million' : 'Rp 50 - 200 Juta' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 200 - 500 Million' : 'Rp 200 - 500 Juta' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 500 Million - 1 Billion' : 'Rp 500 Juta - 1 Miliar' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? '> Rp 1 Billion' : '> Rp 1 Miliar' }}</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Not Sure Yet' : 'Belum Yakin' }}</option>
+                                        <option>$10k - $25k</option>
+                                        <option>$25k - $50k</option>
+                                        <option>$50k+</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Not sure yet' : 'Belum yakin' }}
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="space-y-1">
@@ -403,7 +413,8 @@
                             <div class="space-y-1">
                                 <label
                                     class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Message / Project Details' : 'Pesan / Detail Proyek' }}</label>
-                                <textarea class="w-full border-outline-variant rounded p-3 min-h-[120px] form-input-focus bg-surface-container-lowest"
+                                <textarea
+                                    class="w-full border-outline-variant rounded p-3 min-h-[120px] form-input-focus bg-surface-container-lowest"
                                     placeholder="{{ app()->getLocale() === 'en' ? 'Tell us about your technical challenges...' : 'Ceritakan tentang tantangan teknis Anda...' }}"></textarea>
                             </div>
                             <div class="pt-unit-md">
@@ -425,49 +436,49 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const f = e.target;
-            const inputs = f.querySelectorAll('input, select, textarea');
-            const data = {};
-            inputs.forEach(el => {
-                const label = el.closest('.space-y-1')?.querySelector('label')?.innerText || el.placeholder;
-                data[label] = el.value;
-            });
-
-            const btn = f.querySelector('button');
-            const originalText = btn.innerHTML;
-            const isEn = window.location.pathname.startsWith('/en');
-            btn.innerHTML = isEn ? 'Opening Email...' : 'Membuka Email...';
-            btn.disabled = true;
-
-            const subjectText = isEn ? 'Project Inquiry | Nakala Digital' : 'Pertanyaan Projek | Nakala Digital';
-            const subject = encodeURIComponent(subjectText);
-            const body = encodeURIComponent(
-                Object.entries(data)
-                .filter(([k, v]) => v)
-                .map(([k, v]) => `${k}: ${v}`)
-                .join('\n')
-            );
-            window.location.href = `mailto:contact@nakala.digital?subject=${subject}&body=${body}`;
-
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 3000);
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const inputs = f.querySelectorAll('input, select, textarea');
+        const data = {};
+        inputs.forEach(el => {
+            const label = el.closest('.space-y-1')?.querySelector('label')?.innerText || el.placeholder;
+            data[label] = el.value;
         });
 
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
+        const btn = f.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'Opening Email...';
+        btn.disabled = true;
+
+        const subject = encodeURIComponent('Project Inquiry | Nakala Digital');
+        const body = encodeURIComponent(
+            Object.entries(data)
+            .filter(([k, v]) => v)
+            .map(([k, v]) => `${k}: ${v}`)
+            .join('\n')
+        );
+        window.location.href = `mailto:contact@nakala.digital?subject=${subject}&body=${body}`;
+
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }, 3000);
+    });
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 50) {
+            header.classList.add('py-2', 'h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('py-2', 'h-16');
+            header.classList.add('h-20');
+        }
+    });
     </script>
 </body>
+
+</html>
 
 </html>

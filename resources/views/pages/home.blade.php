@@ -9,190 +9,191 @@
         {{ app()->getLocale() === 'en' ? 'Nakala Digital | Local Delivery, Regional Capability' : 'Nakala Digital | Layanan Lokal, Kemampuan Regional' }}
     </title>
     @include('partials.seo', [
-        'title' =>
-            app()->getLocale() === 'en'
-                ? 'Nakala Digital | Local Delivery, Regional Capability'
-                : 'Nakala Digital | Layanan Lokal, Kemampuan Regional',
-        'description' =>
-            app()->getLocale() === 'en'
-                ? 'AI, Software Development & Digital Solutions Partner for Business Growth. Your strategic partner in Indonesia with regional expertise.'
-                : 'Mitra Solusi Digital, Pengembangan Perangkat Lunak & AI untuk Pertumbuhan Bisnis Anda.',
+    'title' =>
+    app()->getLocale() === 'en'
+    ? 'Nakala Digital | Local Delivery, Regional Capability'
+    : 'Nakala Digital | Layanan Lokal, Kemampuan Regional',
+    'description' =>
+    app()->getLocale() === 'en'
+    ? 'AI, Software Development & Digital Solutions Partner for Business Growth. Your strategic partner in Indonesia
+    with regional expertise.'
+    : 'Mitra Solusi Digital, Pengembangan Perangkat Lunak & AI untuk Pertumbuhan Bisnis Anda.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "electric-cyan": "#12AED0",
-                        "midnight-navy": "#031A44",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1-mobile": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "body-lg": ["Poppins"],
-                        "headline-h2-mobile": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "display-lg": ["Poppins"],
-                        "label-sm": ["Poppins"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["48px", {
-                            "lineHeight": "1.1",
-                            "fontWeight": "700"
-                        }],
-                        "body-md": ["16px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "button": ["15px", {
-                            "lineHeight": "1.0",
-                            "letterSpacing": "0.05em",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1-mobile": ["36px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h2": ["40px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "body-lg": ["18px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "headline-h2-mobile": ["28px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1": ["56px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h3": ["24px", {
-                            "lineHeight": "1.4",
-                            "fontWeight": "600"
-                        }],
-                        "display-lg": ["72px", {
-                            "lineHeight": "1.1",
-                            "letterSpacing": "-0.02em",
-                            "fontWeight": "700"
-                        }],
-                        "label-sm": ["12px", {
-                            "lineHeight": "1.0",
-                            "fontWeight": "700"
-                        }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0",
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432",
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44",
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg-mobile": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1-mobile": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "body-lg": ["Poppins"],
+                    "headline-h2-mobile": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "display-lg": ["Poppins"],
+                    "label-sm": ["Poppins"]
+                },
+                "fontSize": {
+                    "display-lg-mobile": ["48px", {
+                        "lineHeight": "1.1",
+                        "fontWeight": "700"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "button": ["15px", {
+                        "lineHeight": "1.0",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1-mobile": ["36px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h2": ["40px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "headline-h2-mobile": ["28px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1": ["56px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h3": ["24px", {
+                        "lineHeight": "1.4",
+                        "fontWeight": "600"
+                    }],
+                    "display-lg": ["72px", {
+                        "lineHeight": "1.1",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "label-sm": ["12px", {
+                        "lineHeight": "1.0",
+                        "fontWeight": "700"
+                    }]
                 }
             }
         }
+    }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+    }
 
-        .bento-item {
-            border: 1px solid #12AED0;
-            transition: all 0.3s ease;
-        }
+    .bento-item {
+        border: 1px solid #12AED0;
+        transition: all 0.3s ease;
+    }
 
-        .bento-item:hover {
-            border-color: #12AED0;
-        }
+    .bento-item:hover {
+        border-color: #12AED0;
+    }
 
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease-out;
-        }
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out;
+    }
 
-        .accordion-item.active .accordion-content {
-            max-height: 600px;
-        }
+    .accordion-item.active .accordion-content {
+        max-height: 600px;
+    }
 
-        .accordion-item.active .toggle-icon {
-            transform: rotate(180deg);
-        }
+    .accordion-item.active .toggle-icon {
+        transform: rotate(180deg);
+    }
     </style>
 </head>
 
@@ -212,11 +213,12 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
-                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis'; @endphp
+                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis';
+                        @endphp
                         {!! str_replace(
-                            $heroHighlight,
-                            '<span class="text-primary">' . $heroHighlight . '</span>',
-                            __('messages.hero_title'),
+                        $heroHighlight,
+                        '<span class="text-primary">' . $heroHighlight . '</span>',
+                        __('messages.hero_title'),
                         ) !!}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
@@ -240,7 +242,7 @@
                 </div>
                 <div class="relative group">
                     <div
-                        class="absolute -inset-4 bg-primary/10 rounded-xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity">
+                        class="absolute -inset-4 bg-surface rounded-xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity">
                     </div>
                     <img alt="AI Dashboard Visualization"
                         class="relative rounded-lg shadow-2xl border-4 border-surface-container-high w-full"
@@ -258,22 +260,26 @@
                     <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
                         <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">8+</div>
                         <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_projects') }}</div>
+                            {{ __('messages.metric_projects') }}
+                        </div>
                     </div>
                     <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
                         <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3+</div>
                         <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_expertise') }}</div>
+                            {{ __('messages.metric_expertise') }}
+                        </div>
                     </div>
                     <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
                         <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3</div>
                         <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_hubs') }}</div>
+                            {{ __('messages.metric_hubs') }}
+                        </div>
                     </div>
                     <div class="text-center p-unit-lg">
                         <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">24/7</div>
                         <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_support') }}</div>
+                            {{ __('messages.metric_support') }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -298,22 +304,27 @@
                                 data-weight="fill">settings_suggest</span>
                             <h3 class="font-headline-h3 text-headline-h3">{{ __('messages.cap_software') }}</h3>
                             <p class="font-body-md text-on-surface-variant max-w-md">
-                                {{ __('messages.cap_software_desc') }}</p>
+                                {{ __('messages.cap_software_desc') }}
+                            </p>
                         </div>
                         <div class="mt-unit-lg">
                             <ul class="grid grid-cols-2 gap-unit-sm">
                                 <li class="flex items-center gap-unit-xs text-on-surface-variant"><span
                                         class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    {{ app()->getLocale() === 'en' ? 'Web Apps' : 'Aplikasi Web' }}</li>
+                                    {{ app()->getLocale() === 'en' ? 'Web Apps' : 'Aplikasi Web' }}
+                                </li>
                                 <li class="flex items-center gap-unit-xs text-on-surface-variant"><span
                                         class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    {{ app()->getLocale() === 'en' ? 'Mobile Native' : 'Mobile Native' }}</li>
+                                    {{ app()->getLocale() === 'en' ? 'Mobile Native' : 'Mobile Native' }}
+                                </li>
                                 <li class="flex items-center gap-unit-xs text-on-surface-variant"><span
                                         class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    {{ app()->getLocale() === 'en' ? 'API Integration' : 'Integrasi API' }}</li>
+                                    {{ app()->getLocale() === 'en' ? 'API Integration' : 'Integrasi API' }}
+                                </li>
                                 <li class="flex items-center gap-unit-xs text-on-surface-variant"><span
                                         class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    {{ app()->getLocale() === 'en' ? 'Legacy Migration' : 'Migrasi Sistem' }}</li>
+                                    {{ app()->getLocale() === 'en' ? 'Legacy Migration' : 'Migrasi Sistem' }}
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -334,8 +345,8 @@
                     </div>
                     <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
-                        <span class="material-symbols-outlined text-[#031A44] text-4xl mb-unit-md">query_stats</span>
+                        class="md:col-span-4 bg-tertiary p-unit-lg rounded-lg text-on-tertiary border border-outline-variant group hover:opacity-90 transition-all">
+                        <span class="material-symbols-outlined text-secondary text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
                         <p class="font-body-md opacity-90">{{ __('messages.cap_consulting_desc') }}</p>
@@ -345,7 +356,7 @@
                         class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
                         <div class="z-10 space-y-unit-md">
                             <h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
-                            <p class="font-body-lg text-white/90 max-w-lg">{{ __('messages.cap_local_desc') }}</p>
+                            <p class="font-body-lg text-surface max-w-lg">{{ __('messages.cap_local_desc') }}</p>
                         </div>
                         <div class="absolute right-[-10%] top-[-10%] opacity-10">
                             <span class="material-symbols-outlined text-[300px]">language</span>
@@ -369,7 +380,8 @@
                         class="font-label-sm text-primary uppercase tracking-[0.3em]">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                     <h2
                         class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">
-                        {{ __('messages.who_title') }}</h2>
+                        {{ __('messages.who_title') }}
+                    </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
                         {{ __('messages.who_desc1') }}
                     </p>
@@ -546,8 +558,9 @@
             </div>
             <div class="max-w-2xl mx-auto px-margin-mobile relative z-10 space-y-unit-lg">
                 <h2 class="font-headline-h1-mobile text-headline-h1-mobile text-white">
-                    {{ __('messages.final_cta_title') }}</h2>
-                <p class="font-body-lg text-white/90">{{ __('messages.final_cta_desc') }}</p>
+                    {{ __('messages.final_cta_title') }}
+                </h2>
+                <p class="font-body-lg text-surface">{{ __('messages.final_cta_desc') }}</p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
@@ -560,39 +573,39 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        // Simple scroll header effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('h-16');
-                header.classList.add('h-20');
-            }
-        });
-
-        // FAQ Accordion functionality
-        function toggleAccordion(button) {
-            const item = button.closest('.accordion-item');
-            const isActive = item.classList.contains('active');
-
-            // Close all items
-            document.querySelectorAll('.accordion-item').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // Toggle clicked item
-            if (!isActive) {
-                item.classList.add('active');
-            }
+    // Simple scroll header effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 20) {
+            header.classList.add('h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('h-16');
+            header.classList.add('h-20');
         }
+    });
 
-        // Initialize first FAQ as open
-        document.addEventListener('DOMContentLoaded', () => {
-            const firstItem = document.querySelector('.accordion-item');
-            if (firstItem) firstItem.classList.add('active');
+    // FAQ Accordion functionality
+    function toggleAccordion(button) {
+        const item = button.closest('.accordion-item');
+        const isActive = item.classList.contains('active');
+
+        // Close all items
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('active');
         });
+
+        // Toggle clicked item
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    }
+
+    // Initialize first FAQ as open
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstItem = document.querySelector('.accordion-item');
+        if (firstItem) firstItem.classList.add('active');
+    });
     </script>
 </body>
 
