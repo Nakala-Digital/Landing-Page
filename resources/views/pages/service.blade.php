@@ -7,174 +7,166 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>{{ app()->getLocale() === 'en' ? 'Services | Nakala Digital' : 'Layanan | Nakala Digital' }}</title>
     @include('partials.seo', [
-    'title' => app()->getLocale() === 'en' ? 'Services | Nakala Digital' : 'Layanan | Nakala Digital',
-    'description' => app()->getLocale() === 'en'
-    ? 'Discover our high-tier software development, custom AI models, cloud infrastructure, and tech advisory services.'
-    : 'Temukan pengembangan perangkat lunak tingkat tinggi, model AI kustom, infrastruktur cloud, dan layanan penasihat
-    teknologi kami.'
+        'title' => app()->getLocale() === 'en' ? 'Services | Nakala Digital' : 'Layanan | Nakala Digital',
+        'description' =>
+            app()->getLocale() === 'en'
+                ? 'Discover our high-tier software development, custom AI models, cloud infrastructure, and tech advisory services.'
+                : 'Temukan pengembangan perangkat lunak tingkat tinggi, model AI kustom, infrastruktur cloud, dan layanan penasihat teknologi kami.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "surface-tint": "#12AED0",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#12AED0",
-                    "on-tertiary-fixed": "#031A44",
-                    "on-secondary-fixed": "#031A44",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#12AED0",
-                    "primary-fixed-dim": "#12AED0",
-                    "tertiary-fixed": "#A7F432",
-                    "error": "#A7F432",
-                    "on-secondary-container": "#031A44",
-                    "background": "#F7FAFC",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#031A44",
-                    "on-primary-fixed": "#031A44",
-                    "on-primary": "#ffffff",
-                    "outline": "#12AED0",
-                    "inverse-primary": "#12AED0",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#031A44",
-                    "secondary-fixed-dim": "#12AED0",
-                    "surface-bright": "#F7FAFC",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#12AED0",
-                    "primary-container": "#12AED0",
-                    "primary": "#12AED0",
-                    "on-primary-container": "#031A44",
-                    "on-surface-variant": "#031A44",
-                    "on-primary-fixed-variant": "#031A44",
-                    "on-tertiary-fixed-variant": "#031A44",
-                    "on-background": "#031A44",
-                    "on-secondary-fixed-variant": "#031A44",
-                    "tertiary-container": "#A7F432",
-                    "on-surface": "#031A44",
-                    "tertiary": "#A7F432",
-                    "surface": "#F7FAFC",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#031A44",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#12AED0",
-                    "error-container": "#A7F432",
-                    "inverse-surface": "#031A44",
-                    "tertiary-fixed-dim": "#A7F432",
-                    "secondary": "#031A44",
-                    "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6",
-                    "electric-cyan": "#12AED0",
-                    "midnight-navy": "#031A44",
-                    "impact-lime": "#A7F432"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#12AED0",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
+                        "surface-dim": "#d5dbdd",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
+                        "background": "#F7FAFC",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#eff4f7",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
+                        "on-primary": "#ffffff",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
+                        "surface-container": "#e9eff1",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
+                        "surface-bright": "#F7FAFC",
+                        "surface-container-highest": "#dee3e6",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
+                        "surface": "#F7FAFC",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#031A44",
+                        "surface-container-high": "#e4e9ec",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
+                        "inverse-on-surface": "#ecf1f4",
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit-xl": "64px",
+                        "unit-lg": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit-xs": "4px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "button": ["Poppins"],
+                        "headline-h1-mobile": ["Poppins"],
+                        "headline-h2": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "headline-h2-mobile": ["Poppins"],
+                        "headline-h1": ["Poppins"],
+                        "headline-h3": ["Poppins"],
+                        "display-lg": ["Poppins"],
+                        "label-sm": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {
+                            "lineHeight": "1.1",
+                            "fontWeight": "700"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "button": ["15px", {
+                            "lineHeight": "1.0",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1-mobile": ["36px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h2": ["40px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "headline-h2-mobile": ["28px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1": ["56px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h3": ["24px", {
+                            "lineHeight": "1.4",
+                            "fontWeight": "600"
+                        }],
+                        "display-lg": ["72px", {
+                            "lineHeight": "1.1",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "label-sm": ["12px", {
+                            "lineHeight": "1.0",
+                            "fontWeight": "700"
+                        }]
+                    }
                 },
-                "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                "spacing": {
-                    "gutter": "24px",
-                    "unit-xl": "64px",
-                    "unit-lg": "32px",
-                    "margin-mobile": "20px",
-                    "margin-desktop": "80px",
-                    "unit-xs": "4px",
-                    "container-max": "1280px",
-                    "unit-md": "16px",
-                    "unit-sm": "8px"
-                },
-                "fontFamily": {
-                    "display-lg-mobile": ["Poppins"],
-                    "body-md": ["Poppins"],
-                    "button": ["Poppins"],
-                    "headline-h1-mobile": ["Poppins"],
-                    "headline-h2": ["Poppins"],
-                    "body-lg": ["Poppins"],
-                    "headline-h2-mobile": ["Poppins"],
-                    "headline-h1": ["Poppins"],
-                    "headline-h3": ["Poppins"],
-                    "display-lg": ["Poppins"],
-                    "label-sm": ["Poppins"]
-                },
-                "fontSize": {
-                    "display-lg-mobile": ["48px", {
-                        "lineHeight": "1.1",
-                        "fontWeight": "700"
-                    }],
-                    "body-md": ["16px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "button": ["15px", {
-                        "lineHeight": "1.0",
-                        "letterSpacing": "0.05em",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1-mobile": ["36px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h2": ["40px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "body-lg": ["18px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "headline-h2-mobile": ["28px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1": ["56px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h3": ["24px", {
-                        "lineHeight": "1.4",
-                        "fontWeight": "600"
-                    }],
-                    "display-lg": ["72px", {
-                        "lineHeight": "1.1",
-                        "letterSpacing": "-0.02em",
-                        "fontWeight": "700"
-                    }],
-                    "label-sm": ["12px", {
-                        "lineHeight": "1.0",
-                        "fontWeight": "700"
-                    }]
-                }
             },
-        },
-    }
+        }
     </script>
     <style>
-    .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 24px;
-    }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
 
-    .service-card {
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
+        .service-card {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-    .service-card:hover {
-        transform: translateY(-8px);
-    }
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
     </style>
 </head>
 
@@ -194,7 +186,7 @@
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ app()->getLocale() === 'en' ? 'Technology services for' : 'Layanan teknologi untuk' }} <span
-                            class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs' : 'kebutuhan bisnis modern' }}</span>
+                            class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs.' : 'kebutuhan bisnis modern.' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
                         {{ app()->getLocale() === 'en'
@@ -231,8 +223,8 @@
                 <div class="w-24 h-1.5 bg-primary mx-auto mb-6"></div>
                 <p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
                     {{ app()->getLocale() === 'en'
-        ? 'Comprehensive technical capabilities designed for enterprise scale and local agility.'
-        : 'Kemampuan teknis komprehensif yang dirancang untuk skala perusahaan dan kelincahan lokal.' }}
+                        ? 'Comprehensive technical capabilities designed for enterprise scale and local agility.'
+                        : 'Kemampuan teknis komprehensif yang dirancang untuk skala perusahaan dan kelincahan lokal.' }}
                 </p>
             </div>
             <!-- Bento Grid Services -->
@@ -245,7 +237,7 @@
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
                         {{ app()->getLocale() === 'en' ? 'AI & GenAI' : 'AI & GenAI' }}</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.' : 'Menerapkan AI Generatif canggih untuk efisiensi operasional dan keterlibatan pelanggan otomatis.' }}
+                        {{ app()->getLocale() === 'en' ? 'GenAI solutions for operational efficiency and automated customer engagement.' : 'Solusi GenAI untuk efisiensi operasional dan keterlibatan pelanggan otomatis.' }}
                     </p>
                     <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
                         <li class="flex items-center gap-2"><span
@@ -271,7 +263,7 @@
                             {{ app()->getLocale() === 'en' ? 'Custom Software Dev' : 'Pengembangan Software Kustom' }}
                         </h3>
                         <p class="font-body-md text-body-md text-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'Bespoke software solutions crafted for unique business processes and high-performance requirements.' : 'Solusi perangkat lunak khusus yang dirancang untuk proses bisnis unik dan persyaratan performa tinggi.' }}
+                            {{ app()->getLocale() === 'en' ? 'Bespoke software tailored for unique business processes and high-performance requirements.' : 'Software khusus untuk proses bisnis unik dan kebutuhan performa tinggi.' }}
                         </p>
                         <ul
                             class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
@@ -303,13 +295,13 @@
                     <div class="flex items-start justify-between mb-6">
                         <span class="material-symbols-outlined text-primary text-5xl"
                             data-icon="query_stats">query_stats</span>
-                        <!-- <span
-                            class="bg-primary-container/10 text-primary px-3 py-1 rounded font-label-sm text-label-sm">{{ app()->getLocale() === 'en' ? 'CONSULTANCY' : 'KONSULTANSI' }}</span> -->
+                        <span
+                            class="bg-primary-container/10 text-primary px-3 py-1 rounded font-label-sm text-label-sm">{{ app()->getLocale() === 'en' ? 'CONSULTANCY' : 'KONSULTANSI' }}</span>
                     </div>
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
                         {{ app()->getLocale() === 'en' ? 'Tech Consulting' : 'Konsultasi Teknologi' }}</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Strategic consulting to align technology investment with business growth and regional market expansion.' : 'Konsultasi strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar regional.' }}
+                        {{ app()->getLocale() === 'en' ? 'Strategic advisory to align technology investments with business growth and market expansion.' : 'Advisory strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar.' }}
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-4 bg-surface-container rounded-lg">
@@ -335,7 +327,7 @@
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
                         {{ app()->getLocale() === 'en' ? 'Web & Portal' : 'Web & Portal' }}</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Engaging digital interfaces and high-traffic portals for B2B and B2C segments.' : 'Antarmuka digital yang menarik dan portal trafik tinggi untuk segmen B2B dan B2C.' }}
+                        {{ app()->getLocale() === 'en' ? 'High-traffic portals and digital interfaces for B2B and B2C audiences.' : 'Portal trafik tinggi dan antarmuka digital untuk audiens B2B dan B2C.' }}
                     </p>
                 </div>
                 <!-- 5. QA Governance -->
@@ -346,7 +338,7 @@
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
                         {{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Ensuring zero-defect deployment with automated testing frameworks and standards.' : 'Memastikan penerapan tanpa cacat dengan kerangka pengujian dan standar otomatis.' }}
+                        {{ app()->getLocale() === 'en' ? 'Zero-defect deployment through automated testing and rigorous quality standards.' : 'Deployment zero-defect melalui pengujian otomatis dan standar kualitas ketat.' }}
                     </p>
                 </div>
                 <!-- 6. Managed Support & D365 -->
@@ -359,11 +351,11 @@
                             {{ app()->getLocale() === 'en' ? 'Managed Support & Dynamics 365' : 'Managed Support & Dynamics 365' }}
                         </h3>
                         <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'Microsoft Dynamics 365 services with 24/7 technical support to keep business operations running optimally..' : 'Layanan Microsoft Dynamics 365 dengan dukungan teknis 24/7 untuk menjaga operasional bisnis tetap berjalan optimal.' }}
+                            {{ app()->getLocale() === 'en' ? 'End-to-end Microsoft D365 ecosystem management with 24/7 technical support.' : 'Manajemen ekosistem Microsoft D365 end-to-end dengan dukungan teknis 24/7.' }}
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'Tiered Technical Supports' : 'Dukungan Teknis Berjenjang' }}</span>
+                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'L1/L2/L3 Support' : 'Dukungan L1/L2/L3' }}</span>
                             <span
                                 class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded uppercase">{{ app()->getLocale() === 'en' ? 'D365 Implementation' : 'Implementasi D365' }}</span>
                             <span
@@ -376,8 +368,7 @@
                         class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-xl flex flex-col justify-center items-center text-center text-white">
                         <div class="text-4xl font-bold mb-2">{{ app()->getLocale() === 'en' ? 'SLA' : 'SLA' }}</div>
                         <div class="text-sm font-label-sm uppercase tracking-widest opacity-80">
-                            {{ app()->getLocale() === 'en' ? 'Flexible Service Standards' : 'Standar Layanan Fleksibel' }}
-                        </div>
+                            {{ app()->getLocale() === 'en' ? 'Flexible SLAs' : 'SLA Fleksibel' }}</div>
                     </div>
                 </div>
             </div>
@@ -390,36 +381,42 @@
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <h2 class="font-headline-h2 mb-unit-lg">
                 {{ app()->getLocale() === 'en' ? 'Regional Service Excellence' : 'Keunggulan Layanan Regional' }}</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch">
+                <div class="flex flex-col">
                     <h4 class="font-headline-h3 border-l-4 border-primary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Custom AI Models' : 'Model AI Kustom' }}</h4>
-                    <p class="text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Building proprietary neural networks tailored to Indonesian linguistic nuances and consumer behavior patterns.' : 'Membangun jaringan saraf tiruan proprietary yang disesuaikan dengan nuansa linguistik Indonesia dan pola perilaku konsumen.' }}
+                    <p class="text-on-surface-variant mb-6">
+                        {{ app()->getLocale() === 'en' ? 'Custom AI applications for Indonesia\'s linguistic and consumer landscape.' : 'Aplikasi AI kustom untuk lanskap linguistik dan konsumen Indonesia.' }}
                     </p>
-                    <img class="w-full rounded-lg"
-                        data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines. The background is a crisp, sterile white, reflecting a light-mode modern aesthetic. Tiny particles of impact lime energy orbit the brain, symbolizing active generative AI and neural processing. The overall mood is sophisticated, technical, and visionary."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
+                    <div class="mt-auto">
+                        <img class="w-full rounded-lg"
+                            data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines. The background is a crisp, sterile white, reflecting a light-mode modern aesthetic. Tiny particles of impact lime energy orbit the brain, symbolizing active generative AI and neural processing. The overall mood is sophisticated, technical, and visionary."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
+                    </div>
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col">
                     <h4 class="font-headline-h3 border-l-4 border-tertiary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Enterprise Portals' : 'Portal Perusahaan' }}</h4>
-                    <p class="text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Secure, scalable, and localized portals for regional logistics and distribution networks across Southeast Asia.' : 'Portal yang aman, skalabel, dan terlokalisasi untuk jaringan logistik dan distribusi regional di seluruh Asia Tenggara.' }}
+                    <p class="text-on-surface-variant mb-6">
+                        {{ app()->getLocale() === 'en' ? 'Secure, scalable, localized portals for regional logistics and distribution networks.' : 'Portal yang aman, skalabel, dan terlokalisasi untuk jaringan logistik dan distribusi regional.' }}
                     </p>
-                    <img class="w-full rounded-lg"
-                        data-alt="An isometric technical illustration of a global logistics network with interconnected shipping nodes and digital data streams. The design uses a bold, high-contrast palette of impact lime and midnight navy. Glowing lines connect various stylized cityscapes, representing regional delivery capabilities and digital connectivity in a professional corporate environment."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-AXleTxxk8ZxGeWyDmtGbin_jeBfaYYtL7Wcn_Sed-H_MlzBcd0nfRfkVN1tLvUXOj259b0w__xuNiznSt5qU2HrVuv-5wkvki-blo_4dadmHDZkw8mAo0QJW59snMpIcWYRp49NWYI2zX-vjpP0YDf03Huzn9lWfNGa84P7CZO05bq4d6HdD2PClw54CU1LYpG2btXA7zZ7Jwn6J7CiQMW0BVdbhzJyPX9TlTmw0n9LPDImoXXFYhxtLkfDlYPWefMAaJagYDVX" />
+                    <div class="mt-auto">
+                        <img class="w-full rounded-lg"
+                            data-alt="An isometric technical illustration of a global logistics network with interconnected shipping nodes and digital data streams. The design uses a bold, high-contrast palette of impact lime and midnight navy. Glowing lines connect various stylized cityscapes, representing regional delivery capabilities and digital connectivity in a professional corporate environment."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-AXleTxxk8ZxGeWyDmtGbin_jeBfaYYtL7Wcn_Sed-H_MlzBcd0nfRfkVN1tLvUXOj259b0w__xuNiznSt5qU2HrVuv-5wkvki-blo_4dadmHDZkw8mAo0QJW59snMpIcWYRp49NWYI2zX-vjpP0YDf03Huzn9lWfNGa84P7CZO05bq4d6HdD2PClw54CU1LYpG2btXA7zZ7Jwn6J7CiQMW0BVdbhzJyPX9TlTmw0n9LPDImoXXFYhxtLkfDlYPWefMAaJagYDVX" />
+                    </div>
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col">
                     <h4 class="font-headline-h3 border-l-4 border-secondary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Legacy Overhaul' : 'Perombakan Sistem Lama' }}</h4>
-                    <p class="text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Seamlessly transitioning monolithic systems to agile microservices without disrupting local operations.' : 'Transisi mulus dari sistem monolitik ke microservices yang lincah tanpa mengganggu operasi lokal.' }}
+                    <p class="text-on-surface-variant mb-6">
+                        {{ app()->getLocale() === 'en' ? 'Upgrading legacy systems to modern, scalable platforms with zero business disruption.' : 'Meng-upgrade sistem lama ke platform modern dan scalable tanpa gangguan operasional.' }}
                     </p>
-                    <img class="w-full rounded-lg"
-                        data-alt="A conceptual visualization of digital transformation showing a crumbling grey stone structure being replaced by vibrant, glowing cyan geometric cubes. The lighting is high-key with soft shadows on a light grey background. The image represents the transition from legacy systems to modern, cloud-native architecture with a focus on technical reliability and modern corporate aesthetics."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOKFDTr6_voBBypZAFlVCxl67lbWO_ePQbX9a5bzWzPiT4fArb1YcGWOAIRZ6bKLN4lphcP0pYATRd6GTPm15fU31NqK04GavdGbvXYPwg6m7lEAldkmFPPrmLBMOFp3KZSpZClOMQdFdhCNK3iXoQb6OPXxXNwiaIVm-xo5IgrVMWJSlw5zzFfu4h5ixORnphUHULOTnyOF5TLHT5Ahp_1i0ky1gqOU5aVDFftYMNqdQIM11yROe0oVCY0PBazdhzkjWveX3deKd" />
+                    <div class="mt-auto">
+                        <img class="w-full rounded-lg"
+                            data-alt="A conceptual visualization of digital transformation showing a crumbling grey stone structure being replaced by vibrant, glowing cyan geometric cubes. The lighting is high-key with soft shadows on a light grey background. The image represents the transition from legacy systems to modern, cloud-native architecture with a focus on technical reliability and modern corporate aesthetics."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOKFDTr6_voBBypZAFlVCxl67lbWO_ePQbX9a5bzWzPiT4fArb1YcGWOAIRZ6bKLN4lphcP0pYATRd6GTPm15fU31NqK04GavdGbvXYPwg6m7lEAldkmFPPrmLBMOFp3KZSpZClOMQdFdhCNK3iXoQb6OPXxXNwiaIVm-xo5IgrVMWJSlw5zzFfu4h5ixORnphUHULOTnyOF5TLHT5Ahp_1i0ky1gqOU5aVDFftYMNqdQIM11yROe0oVCY0PBazdhzkjWveX3deKd" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -427,34 +424,34 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-    // Micro-interactions
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            const icon = card.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.style.transform = 'scale(1.1) rotate(5deg)';
-                icon.style.transition = 'transform 0.3s ease';
-            }
+        // Micro-interactions
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'scale(1.1) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
         });
-        card.addEventListener('mouseleave', () => {
-            const icon = card.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.style.transform = 'scale(1) rotate(0deg)';
-            }
-        });
-    });
 
-    // Simple scroll behavior for Navbar
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header.fixed');
-        if (window.scrollY > 50) {
-            header.classList.add('py-2', 'shadow-md', 'h-16');
-            header.classList.remove('h-20');
-        } else {
-            header.classList.remove('py-2', 'shadow-md', 'h-16');
-            header.classList.add('h-20');
-        }
-    });
+        // Simple scroll behavior for Navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('py-2', 'shadow-md', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
     </script>
 </body>
 

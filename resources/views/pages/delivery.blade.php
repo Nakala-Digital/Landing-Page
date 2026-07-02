@@ -8,188 +8,168 @@
     <title>{{ app()->getLocale() === 'en' ? 'Delivery Model | Nakala Digital' : 'Model Delivery | Nakala Digital' }}
     </title>
     @include('partials.seo', [
-    'title' =>
-    app()->getLocale() === 'en' ? 'Delivery Model | Nakala Digital' : 'Model Delivery | Nakala Digital',
-    'description' =>
-    app()->getLocale() === 'en'
-    ? 'Learn how Nakala Digital delivers software projects through discovery, planning, design, development, QA,
-    deployment, and continuous improvement.'
-    : 'Pelajari cara Nakala Digital menjalankan proyek software melalui discovery, perencanaan, desain, pengembangan,
-    QA, deployment, dan peningkatan berkelanjutan.',
+        'title' =>
+            app()->getLocale() === 'en' ? 'Delivery Model | Nakala Digital' : 'Model Delivery | Nakala Digital',
+        'description' =>
+            app()->getLocale() === 'en'
+                ? 'Learn how Nakala Digital delivers software projects through discovery, planning, design, development, QA, deployment, and continuous improvement.'
+                : 'Pelajari cara Nakala Digital menjalankan proyek software melalui discovery, perencanaan, desain, pengembangan, QA, deployment, dan peningkatan berkelanjutan.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "surface-tint": "#12AED0",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#12AED0",
-                    "on-tertiary-fixed": "#031A44",
-                    "on-secondary-fixed": "#031A44",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#12AED0",
-                    "primary-fixed-dim": "#12AED0",
-                    "tertiary-fixed": "#A7F432",
-                    "error": "#A7F432",
-                    "on-secondary-container": "#031A44",
-                    "background": "#F7FAFC",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#031A44",
-                    "on-primary-fixed": "#031A44",
-                    "on-primary": "#ffffff",
-                    "outline": "#12AED0",
-                    "inverse-primary": "#12AED0",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#031A44",
-                    "secondary-fixed-dim": "#12AED0",
-                    "surface-bright": "#F7FAFC",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#12AED0",
-                    "primary-container": "#12AED0",
-                    "primary": "#12AED0",
-                    "on-primary-container": "#031A44",
-                    "on-surface-variant": "#031A44",
-                    "on-primary-fixed-variant": "#031A44",
-                    "on-tertiary-fixed-variant": "#031A44",
-                    "on-background": "#031A44",
-                    "on-secondary-fixed-variant": "#031A44",
-                    "tertiary-container": "#A7F432",
-                    "on-surface": "#031A44",
-                    "tertiary": "#A7F432",
-                    "surface": "#F7FAFC",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#031A44",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#12AED0",
-                    "error-container": "#A7F432",
-                    "inverse-surface": "#031A44",
-                    "tertiary-fixed-dim": "#A7F432",
-                    "secondary": "#031A44",
-                    "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6",
-                    "electric-cyan": "#12AED0",
-                    "midnight-navy": "#031A44",
-                    "impact-lime": "#A7F432"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#12AED0",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
+                        "surface-dim": "#d5dbdd",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
+                        "background": "#F7FAFC",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#eff4f7",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
+                        "on-primary": "#ffffff",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
+                        "surface-container": "#e9eff1",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
+                        "surface-bright": "#F7FAFC",
+                        "surface-container-highest": "#dee3e6",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
+                        "surface": "#F7FAFC",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#031A44",
+                        "surface-container-high": "#e4e9ec",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
+                        "inverse-on-surface": "#ecf1f4",
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit-xl": "64px",
+                        "unit-lg": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit-xs": "4px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "button": ["Poppins"],
+                        "headline-h1-mobile": ["Poppins"],
+                        "headline-h2": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "headline-h2-mobile": ["Poppins"],
+                        "headline-h1": ["Poppins"],
+                        "headline-h3": ["Poppins"],
+                        "display-lg": ["Poppins"],
+                        "label-sm": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {
+                            "lineHeight": "1.1",
+                            "fontWeight": "700"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "button": ["15px", {
+                            "lineHeight": "1.0",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1-mobile": ["36px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h2": ["40px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "headline-h2-mobile": ["28px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1": ["56px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h3": ["24px", {
+                            "lineHeight": "1.4",
+                            "fontWeight": "600"
+                        }],
+                        "display-lg": ["72px", {
+                            "lineHeight": "1.1",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "label-sm": ["12px", {
+                            "lineHeight": "1.0",
+                            "fontWeight": "700"
+                        }]
+                    }
                 },
-                "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                "spacing": {
-                    "gutter": "24px",
-                    "unit-xl": "64px",
-                    "unit-lg": "32px",
-                    "margin-mobile": "20px",
-                    "margin-desktop": "80px",
-                    "unit-xs": "4px",
-                    "container-max": "1280px",
-                    "unit-md": "16px",
-                    "unit-sm": "8px"
-                },
-                "fontFamily": {
-                    "display-lg-mobile": ["Poppins"],
-                    "body-md": ["Poppins"],
-                    "button": ["Poppins"],
-                    "headline-h1-mobile": ["Poppins"],
-                    "headline-h2": ["Poppins"],
-                    "body-lg": ["Poppins"],
-                    "headline-h2-mobile": ["Poppins"],
-                    "headline-h1": ["Poppins"],
-                    "headline-h3": ["Poppins"],
-                    "display-lg": ["Poppins"],
-                    "label-sm": ["Poppins"]
-                },
-                "fontSize": {
-                    "display-lg-mobile": ["48px", {
-                        "lineHeight": "1.1",
-                        "fontWeight": "700"
-                    }],
-                    "body-md": ["16px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "button": ["15px", {
-                        "lineHeight": "1.0",
-                        "letterSpacing": "0.05em",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1-mobile": ["36px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h2": ["40px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "body-lg": ["18px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "headline-h2-mobile": ["28px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1": ["56px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h3": ["24px", {
-                        "lineHeight": "1.4",
-                        "fontWeight": "600"
-                    }],
-                    "display-lg": ["72px", {
-                        "lineHeight": "1.1",
-                        "letterSpacing": "-0.02em",
-                        "fontWeight": "700"
-                    }],
-                    "label-sm": ["12px", {
-                        "lineHeight": "1.0",
-                        "fontWeight": "700"
-                    }]
-                }
             },
-        },
-    }
+        }
     </script>
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #F7FAFC;
-        color: #334155;
-    }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
 
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
-    }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
 
-    .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 24px;
-    }
-
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
@@ -212,12 +192,12 @@
                         </div>
                         <h1
                             class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control' : 'Agile delivery dengan quality control yang jelas' }}
+                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control.' : 'Agile delivery dengan quality control yang jelas.' }}
                         </h1>
                         <p class="font-body-lg text-body-lg text-outline-variant mb-unit-lg max-w-xl">
                             {{ app()->getLocale() === 'en'
-                                ? 'A systematic approach that combines local response with high quality standards, ensuring that each stage of development is carried out with strict quality control.'
-                                : 'Pendekatan sistematis yang menggabungkan respons lokal dengan standar kualitas tinggi, memastikan setiap tahapan pengembangan berjalan dengan pengawasan kualitas yang ketat.' }}
+                                ? 'Our systematic approach bridges local responsiveness with regional quality standards, ensuring every technical milestone is backed by rigorous QA governance.'
+                                : 'Pendekatan sistematis kami menghubungkan respons lokal dengan standar kualitas regional, memastikan setiap milestone teknis didukung tata kelola QA yang ketat.' }}
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <button
@@ -290,7 +270,8 @@
                         class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">03</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}
+                        </h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
                                 ? 'Sprint-based development with continuous integration, automated testing, and code review processes.'
@@ -510,27 +491,27 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-    // Subtle scroll animation for header
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header.fixed');
-        if (window.scrollY > 50) {
-            header.classList.add('py-2', 'h-16');
-            header.classList.remove('h-20');
-        } else {
-            header.classList.remove('py-2', 'h-16');
-            header.classList.add('h-20');
-        }
-    });
+        // Subtle scroll animation for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('py-2', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
 
-    // Simple smooth scroll fallback
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        // Simple smooth scroll fallback
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
     </script>
 </body>
 

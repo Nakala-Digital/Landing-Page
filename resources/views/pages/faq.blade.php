@@ -6,190 +6,173 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-        {{ app()->getLocale() === 'en' ? 'FAQ & Engineering Insights | Nakala Digital' : 'FAQ & Insight Engineering | Nakala Digital' }}
+        {{ app()->getLocale() === 'en' ? 'Frequently Asked Questions | Nakala Digital' : 'Pertanyaan Umum (FAQ) | Nakala Digital' }}
     </title>
     @include('partials.seo', [
-    'title' =>
-    app()->getLocale() === 'en'
-    ? 'FAQ & Engineering Insights | Nakala Digital'
-    : 'FAQ & Insight Engineering | Nakala Digital',
-    'description' =>
-    app()->getLocale() === 'en'
-    ? 'Find common questions, engagement details, and engineering insights from Nakala Digital.'
-    : 'Temukan pertanyaan umum, detail kerja sama, dan insight engineering dari Nakala Digital.',
+        'title' =>
+            app()->getLocale() === 'en'
+                ? 'Frequently Asked Questions | Nakala Digital'
+                : 'Pertanyaan Umum (FAQ) | Nakala Digital',
+        'description' =>
+            app()->getLocale() === 'en'
+                ? 'Find answers to frequently asked questions about Nakala Digital software development, AI solutions, technology consulting, and how we partner with businesses in Indonesia.'
+                : 'Temukan jawaban atas pertanyaan umum tentang layanan pengembangan software, solusi AI, konsultasi teknologi Nakala Digital, dan cara kami bermitra dengan bisnis di Indonesia.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
     <script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                "colors": {
-                    "surface-tint": "#12AED0",
-                    "on-error": "#ffffff",
-                    "outline-variant": "#12AED0",
-                    "on-tertiary-fixed": "#031A44",
-                    "on-secondary-fixed": "#031A44",
-                    "surface-dim": "#d5dbdd",
-                    "secondary-container": "#12AED0",
-                    "primary-fixed-dim": "#12AED0",
-                    "tertiary-fixed": "#A7F432",
-                    "error": "#A7F432",
-                    "on-secondary-container": "#031A44",
-                    "background": "#F7FAFC",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#eff4f7",
-                    "on-tertiary-container": "#031A44",
-                    "on-primary-fixed": "#031A44",
-                    "on-primary": "#ffffff",
-                    "outline": "#12AED0",
-                    "inverse-primary": "#12AED0",
-                    "surface-container": "#e9eff1",
-                    "on-error-container": "#031A44",
-                    "secondary-fixed-dim": "#12AED0",
-                    "surface-bright": "#F7FAFC",
-                    "surface-container-highest": "#dee3e6",
-                    "primary-fixed": "#12AED0",
-                    "primary-container": "#12AED0",
-                    "primary": "#12AED0",
-                    "on-primary-container": "#031A44",
-                    "on-surface-variant": "#031A44",
-                    "on-primary-fixed-variant": "#031A44",
-                    "on-tertiary-fixed-variant": "#031A44",
-                    "on-background": "#031A44",
-                    "on-secondary-fixed-variant": "#031A44",
-                    "tertiary-container": "#A7F432",
-                    "on-surface": "#031A44",
-                    "tertiary": "#A7F432",
-                    "surface": "#F7FAFC",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#031A44",
-                    "surface-container-high": "#e4e9ec",
-                    "secondary-fixed": "#12AED0",
-                    "error-container": "#A7F432",
-                    "inverse-surface": "#031A44",
-                    "tertiary-fixed-dim": "#A7F432",
-                    "secondary": "#031A44",
-                    "inverse-on-surface": "#ecf1f4",
-                    "surface-variant": "#dee3e6",
-                    "electric-cyan": "#12AED0",
-                    "midnight-navy": "#031A44",
-                    "impact-lime": "#A7F432"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#12AED0",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#12AED0",
+                        "on-tertiary-fixed": "#031A44",
+                        "on-secondary-fixed": "#031A44",
+                        "surface-dim": "#d5dbdd",
+                        "secondary-container": "#12AED0",
+                        "primary-fixed-dim": "#12AED0",
+                        "tertiary-fixed": "#A7F432",
+                        "error": "#A7F432",
+                        "on-secondary-container": "#031A44",
+                        "background": "#F7FAFC",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#eff4f7",
+                        "on-tertiary-container": "#031A44",
+                        "on-primary-fixed": "#031A44",
+                        "on-primary": "#ffffff",
+                        "outline": "#12AED0",
+                        "inverse-primary": "#12AED0",
+                        "surface-container": "#e9eff1",
+                        "on-error-container": "#031A44",
+                        "secondary-fixed-dim": "#12AED0",
+                        "surface-bright": "#F7FAFC",
+                        "surface-container-highest": "#dee3e6",
+                        "primary-fixed": "#12AED0",
+                        "primary-container": "#12AED0",
+                        "primary": "#12AED0",
+                        "on-primary-container": "#031A44",
+                        "on-surface-variant": "#031A44",
+                        "on-primary-fixed-variant": "#031A44",
+                        "on-tertiary-fixed-variant": "#031A44",
+                        "on-background": "#031A44",
+                        "on-secondary-fixed-variant": "#031A44",
+                        "tertiary-container": "#A7F432",
+                        "on-surface": "#031A44",
+                        "tertiary": "#A7F432",
+                        "surface": "#F7FAFC",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#031A44",
+                        "surface-container-high": "#e4e9ec",
+                        "secondary-fixed": "#12AED0",
+                        "error-container": "#A7F432",
+                        "inverse-surface": "#031A44",
+                        "tertiary-fixed-dim": "#A7F432",
+                        "secondary": "#031A44",
+                        "inverse-on-surface": "#ecf1f4",
+                        "surface-variant": "#dee3e6",
+                        "electric-cyan": "#12AED0",
+                        "midnight-navy": "#031A44",
+                        "impact-lime": "#A7F432"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit-xl": "64px",
+                        "unit-lg": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit-xs": "4px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "button": ["Poppins"],
+                        "headline-h1-mobile": ["Poppins"],
+                        "headline-h2": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "headline-h2-mobile": ["Poppins"],
+                        "headline-h1": ["Poppins"],
+                        "headline-h3": ["Poppins"],
+                        "display-lg": ["Poppins"],
+                        "label-sm": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {
+                            "lineHeight": "1.1",
+                            "fontWeight": "700"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "button": ["15px", {
+                            "lineHeight": "1.0",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1-mobile": ["36px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h2": ["40px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "headline-h2-mobile": ["28px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h1": ["56px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h3": ["24px", {
+                            "lineHeight": "1.4",
+                            "fontWeight": "600"
+                        }],
+                        "display-lg": ["72px", {
+                            "lineHeight": "1.1",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "label-sm": ["12px", {
+                            "lineHeight": "1.0",
+                            "fontWeight": "700"
+                        }]
+                    }
                 },
-                "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-                },
-                "spacing": {
-                    "gutter": "24px",
-                    "unit-xl": "64px",
-                    "unit-lg": "32px",
-                    "margin-mobile": "20px",
-                    "margin-desktop": "80px",
-                    "unit-xs": "4px",
-                    "container-max": "1280px",
-                    "unit-md": "16px",
-                    "unit-sm": "8px"
-                },
-                "fontFamily": {
-                    "display-lg-mobile": ["Poppins"],
-                    "body-md": ["Poppins"],
-                    "button": ["Poppins"],
-                    "headline-h1-mobile": ["Poppins"],
-                    "headline-h2": ["Poppins"],
-                    "body-lg": ["Poppins"],
-                    "headline-h2-mobile": ["Poppins"],
-                    "headline-h1": ["Poppins"],
-                    "headline-h3": ["Poppins"],
-                    "display-lg": ["Poppins"],
-                    "label-sm": ["Poppins"]
-                },
-                "fontSize": {
-                    "display-lg-mobile": ["48px", {
-                        "lineHeight": "1.1",
-                        "fontWeight": "700"
-                    }],
-                    "body-md": ["16px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "button": ["15px", {
-                        "lineHeight": "1.0",
-                        "letterSpacing": "0.05em",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1-mobile": ["36px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h2": ["40px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "body-lg": ["18px", {
-                        "lineHeight": "1.6",
-                        "fontWeight": "400"
-                    }],
-                    "headline-h2-mobile": ["28px", {
-                        "lineHeight": "1.3",
-                        "fontWeight": "600"
-                    }],
-                    "headline-h1": ["56px", {
-                        "lineHeight": "1.2",
-                        "fontWeight": "700"
-                    }],
-                    "headline-h3": ["24px", {
-                        "lineHeight": "1.4",
-                        "fontWeight": "600"
-                    }],
-                    "display-lg": ["72px", {
-                        "lineHeight": "1.1",
-                        "letterSpacing": "-0.02em",
-                        "fontWeight": "700"
-                    }],
-                    "label-sm": ["12px", {
-                        "lineHeight": "1.0",
-                        "fontWeight": "700"
-                    }]
-                }
             },
-        },
-    }
+        }
     </script>
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #F7FAFC;
-        color: #334155;
-    }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out;
+        }
 
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
-    }
+        .accordion-item.active .accordion-content {
+            max-height: 600px;
+        }
 
-    .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease-out;
-    }
-
-    .accordion-item.active .accordion-content {
-        max-height: 600px;
-    }
-
-    .accordion-item.active .toggle-icon {
-        transform: rotate(180deg);
-    }
+        .accordion-item.active .toggle-icon {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 
@@ -212,10 +195,10 @@
                     </p>
                 </div>
                 <div class="hidden md:block">
-                    <button
-                        class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-sm rounded font-button text-button hover:bg-on-secondary-fixed hover:text-white transition-all">
-                        {{ app()->getLocale() === 'en' ? 'View Documentation' : 'Lihat Dokumentasi' }}
-                    </button>
+                    <a href="{{ route('contact' . $localeSuffix) }}"
+                        class="inline-block border-2 border-primary text-primary px-unit-lg py-unit-sm rounded font-button text-button hover:bg-primary hover:text-white transition-all">
+                        {{ app()->getLocale() === 'en' ? 'Start a Project' : 'Mulai Proyek' }}
+                    </a>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -234,6 +217,19 @@
                                 {{ app()->getLocale() === 'en'
                                     ? 'We provide software development, AI and GenAI solutions, technology consulting, web and portal development, QA governance, and managed support for enterprise platforms including Microsoft Dynamics 365. Each service is delivered with local context and regional capability.'
                                     : 'Kami menyediakan pengembangan perangkat lunak, solusi AI dan GenAI, konsultasi teknologi, pengembangan web dan portal, tata kelola QA, serta dukungan terkelola untuk platform enterprise termasuk Microsoft Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What industries does Nakala Digital serve?' : 'Industri apa saja yang dilayani Nakala Digital?' }}</span>
+                            <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'We serve a wide range of industries including education, enterprise resource planning, human resources, financial technology, occupational health and safety, and AI-powered recruitment. Each solution is tailored to the specific operational needs and challenges of the sector.'
+                                    : 'Kami melayani berbagai industri termasuk pendidikan, perencanaan sumber daya perusahaan, SDM, teknologi finansial, kesehatan dan keselamatan kerja, serta rekrutmen berbasis AI. Setiap solusi disesuaikan dengan kebutuhan operasional dan tantangan spesifik sektor tersebut.' }}
                             </p>
                         </div>
                     </div>
@@ -301,6 +297,19 @@
                                 {{ app()->getLocale() === 'en'
                                     ? 'Nakala Digital remains the primary delivery partner for every client engagement. Romulus Digital serves as a strategic trust layer and regional capability partner, providing additional technical depth, reference, and capacity when projects require larger scale or specialised expertise. This means you get local responsiveness with regional backing.'
                                     : 'Nakala Digital tetap menjadi mitra pengiriman utama untuk setiap engagement klien. Romulus Digital berperan sebagai trust layer strategis dan mitra kapabilitas regional, memberikan kedalaman teknis tambahan, referensi, dan kapasitas saat proyek membutuhkan skala lebih besar atau keahlian khusus. Ini berarti Anda mendapatkan respons lokal dengan dukungan regional.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
+                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What engagement models are available?' : 'Apa saja model kerja sama yang tersedia?' }}</span>
+                            <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'We offer flexible engagement models including fixed-scope projects, retainer and managed support, Resource-as-a-Service (RaaS) for dedicated team augmentation, and strategic advisory for digital transformation planning. We recommend the best model based on your needs during the discovery session.'
+                                    : 'Kami menawarkan model kerja sama yang fleksibel termasuk proyek fixed-scope, retainer dan managed support, Resource-as-a-Service (RaaS) untuk augmentasi tim khusus, dan advisory strategis untuk perencanaan transformasi digital. Model terbaik akan direkomendasikan berdasarkan kebutuhan Anda selama sesi discovery.' }}
                             </p>
                         </div>
                     </div>
@@ -482,26 +491,26 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-    function toggleAccordion(button) {
-        const item = button.closest('.accordion-item');
-        const isActive = item.classList.contains('active');
+        function toggleAccordion(button) {
+            const item = button.closest('.accordion-item');
+            const isActive = item.classList.contains('active');
 
-        // Close all items
-        document.querySelectorAll('.accordion-item').forEach(el => {
-            el.classList.remove('active');
-        });
+            // Close all items
+            document.querySelectorAll('.accordion-item').forEach(el => {
+                el.classList.remove('active');
+            });
 
-        // Toggle clicked item
-        if (!isActive) {
-            item.classList.add('active');
+            // Toggle clicked item
+            if (!isActive) {
+                item.classList.add('active');
+            }
         }
-    }
 
-    // Initialize first FAQ as open
-    document.addEventListener('DOMContentLoaded', () => {
-        const firstItem = document.querySelector('.accordion-item');
-        if (firstItem) firstItem.classList.add('active');
-    });
+        // Initialize first FAQ as open
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstItem = document.querySelector('.accordion-item');
+            if (firstItem) firstItem.classList.add('active');
+        });
     </script>
 </body>
 
