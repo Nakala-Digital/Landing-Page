@@ -19,13 +19,6 @@
                 : 'Temukan pertanyaan umum, detail kerja sama, dan insight engineering dari Nakala Digital.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
     <script id="tailwind-config">
         tailwind.config = {
@@ -167,16 +160,6 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F7FAFC;
-            color: #334155;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -221,9 +204,12 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
                 <!-- Accordion Column 1 -->
                 <div class="space-y-unit-sm">
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -234,9 +220,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -247,9 +236,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -260,9 +252,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -276,9 +271,12 @@
                 </div>
                 <!-- Accordion Column 2 -->
                 <div class="space-y-unit-sm">
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -289,9 +287,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -302,9 +303,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
+                    <div
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded transition-all hover:border-primary">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -322,7 +326,8 @@
         <section class="py-unit-xl bg-surface-container-low">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Engineering Insights' : 'Insight Engineering' }}
                     </h2>
@@ -347,7 +352,8 @@
                                     <span
                                         class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                                     <span class="text-outline text-label-sm">&middot;</span>
-                                    <span class="text-outline text-label-sm">{{ app()->getLocale() === 'en' ? 'Latest Insight' : 'Insight Terbaru' }}</span>
+                                    <span
+                                        class="text-outline text-label-sm">{{ app()->getLocale() === 'en' ? 'Latest Insight' : 'Insight Terbaru' }}</span>
                                 </div>
                                 <h3
                                     class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
@@ -449,7 +455,8 @@
                         class="inline-flex items-center gap-unit-xs text-primary font-button text-button group hover:underline">
                         <span class="material-symbols-outlined text-sm">visibility</span>
                         {{ app()->getLocale() === 'en' ? 'View All Insights' : 'Lihat Semua Insight' }}
-                        <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
                     </a>
                 </div>
             </div>
