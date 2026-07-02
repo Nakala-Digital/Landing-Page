@@ -228,10 +228,9 @@
                                 <strong>professional, meaningful, and impactful</strong> digital solutions for
                                 organizational growth in Indonesia and the regional market.
                             @else
-                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital
-                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi
-                                di
-                                Indonesia dan pasar regional.
+                                Menjadi mitra teknologi strategis yang menghasilkan solusi digital
+                                <strong>profesional, bermakna, dan berdampak</strong> bagi pertumbuhan organisasi di
+                                Indonesia serta pasar regional.
                             @endif
                         </p>
                     </div>
@@ -265,7 +264,7 @@
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
                                 ? 'Enable AI-powered automation and data-driven workflows for measurable business impact.'
-                                : 'Mengaktifkan otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
+                                : 'Mendorong otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
                         </p>
                     </div>
                     <div
@@ -273,7 +272,7 @@
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
-                                ? 'Create long-term partnerships within clients, partners, and technology ecosystems.'
+                                ? 'Create long-term partnerships with clients, partners, and technology ecosystems.'
                                 : 'Menciptakan kemitraan jangka panjang dengan klien, partner, dan ekosistem teknologi.' }}
                         </p>
                     </div>
@@ -284,8 +283,6 @@
                             {{ app()->getLocale() === 'en'
                                 ? 'Grow people, capability, and sustainable digital maturity across organizations.'
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
-                            : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh
-                            organisasi.' }}
                         </p>
                     </div>
                 </div>

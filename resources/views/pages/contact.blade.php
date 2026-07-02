@@ -185,8 +185,8 @@
             <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-lg">
                 <div
                     class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-md">
-                    <span class="material-symbols-outlined text-[16px]">bolt</span>
-                    Global Reach
+                    <span class="material-symbols-outlined text-[16px]">public</span>
+                    {{ app()->getLocale() === 'en' ? 'Local & Regional' : 'Lokal & Regional' }}
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md">
@@ -239,10 +239,10 @@
                                     data-icon="calendar_month">calendar_month</span>
                                 <div>
                                     <p class="font-label-sm uppercase text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Consultation Session' : 'Sesi Konsultasi' }}
+                                        {{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}
                                     </p>
                                     <p class="font-body-lg">
-                                        {{ app()->getLocale() === 'en' ? 'Schedule a free consultation' : 'Jadwalkan konsultasi gratis' }}
+                                        {{ app()->getLocale() === 'en' ? 'Free strategy consultation' : 'Konsultasi strategi gratis' }}
                                     </p>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                         </div>
                         <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer"
                             class="mt-2 w-full flex items-center justify-center gap-2 text-center bg-primary text-white px-6 py-3 rounded font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
-                            {{ app()->getLocale() === 'en' ? 'Consult via WhatsApp' : 'Konsultasi via WhatsApp' }}
+                            {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
@@ -278,30 +278,30 @@
                         <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">01. Discovery</p>
+                                <p class="font-button text-button text-primary">01. Discovery &amp; Scoping</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Defining goals and scope.' : 'Mendefinisikan tujuan dan ruang lingkup.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Defining project goals, scope, and solution proposal.' : 'Menentukan tujuan proyek, ruang lingkup, dan proposal solusi.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">02. Design</p>
+                                <p class="font-button text-button text-primary">02. Design &amp; Architecture</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'UX research and UI drafting.' : 'Riset UX dan pembuatan draf UI.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Wireframes, system design, and delivery plan.' : 'Wireframes, desain sistem, dan rencana pengiriman.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">03. Agile Dev</p>
+                                <p class="font-button text-button text-primary">03. Agile Dev &amp; QA</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Sprint-based high-quality code.' : 'Kode berkualitas tinggi berbasis Sprint.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Sprint-based development with QA testing.' : 'Pengembangan berbasis Sprint dengan pengujian QA.' }}
                                 </p>
                             </div>
                             <div class="relative">
                                 <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
-                                <p class="font-button text-button text-primary">04. Handover</p>
+                                <p class="font-button text-button text-primary">04. Handover &amp; Support</p>
                                 <p class="text-on-surface-variant text-sm">
-                                    {{ app()->getLocale() === 'en' ? 'Deployment and maintenance.' : 'Penyebaran dan pemeliharaan.' }}
+                                    {{ app()->getLocale() === 'en' ? 'Formal handover, SLA support, and growth roadmap.' : 'Serah terima formal, dukungan SLA, dan peta jalan.' }}
                                 </p>
                             </div>
                         </div>
@@ -361,17 +361,12 @@
                                         class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Project Type' : 'Jenis Proyek' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>
-                                            {{ app()->getLocale() === 'en' ? 'Enterprise Web App' : 'Aplikasi Web Enterprise' }}
-                                        </option>
-                                        <option>
-                                            {{ app()->getLocale() === 'en' ? 'Mobile App (iOS/Android)' : 'Aplikasi Mobile (iOS/Android)' }}
-                                        </option>
-                                        <option>
-                                            {{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}
-                                        </option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'AI/ML Solutions' : 'Solusi AI/ML' }}
-                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Website / Portal' : 'Website / Portal' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Mobile Application' : 'Aplikasi Mobile' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'AI / Automation Solution' : 'Solusi AI / Otomatisasi' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Custom Business System' : 'Sistem Bisnis Kustom' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'QA / Software Testing' : 'QA / Pengujian Software' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Other / Not Sure Yet' : 'Lainnya / Belum Yakin' }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -381,11 +376,12 @@
                                         class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Budget Range' : 'Rentang Anggaran' }}</label>
                                     <select
                                         class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
-                                        <option>$10k - $25k</option>
-                                        <option>$25k - $50k</option>
-                                        <option>$50k+</option>
-                                        <option>{{ app()->getLocale() === 'en' ? 'Not sure yet' : 'Belum yakin' }}
-                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? '< Rp 50 Million' : '< Rp 50 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 50 - 200 Million' : 'Rp 50 - 200 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 200 - 500 Million' : 'Rp 200 - 500 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 500 Million - 1 Billion' : 'Rp 500 Juta - 1 Miliar' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? '> Rp 1 Billion' : '> Rp 1 Miliar' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Not Sure Yet' : 'Belum Yakin' }}</option>
                                     </select>
                                 </div>
                                 <div class="space-y-1">
@@ -414,7 +410,7 @@
                                 <button
                                     class="bg-primary text-white px-8 py-4 rounded font-button text-button uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
                                     type="submit">
-                                    {{ app()->getLocale() === 'en' ? 'Submit Request Now' : 'Ajukan Permintaan Sekarang' }}
+                                    {{ app()->getLocale() === 'en' ? 'Submit Inquiry' : 'Kirim Pertanyaan' }}
                                 </button>
                             </div>
                         </form>
@@ -441,10 +437,12 @@
 
             const btn = f.querySelector('button');
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Opening Email...';
+            const isEn = window.location.pathname.startsWith('/en');
+            btn.innerHTML = isEn ? 'Opening Email...' : 'Membuka Email...';
             btn.disabled = true;
 
-            const subject = encodeURIComponent('Project Inquiry | Nakala Digital');
+            const subjectText = isEn ? 'Project Inquiry | Nakala Digital' : 'Pertanyaan Projek | Nakala Digital';
+            const subject = encodeURIComponent(subjectText);
             const body = encodeURIComponent(
                 Object.entries(data)
                 .filter(([k, v]) => v)
