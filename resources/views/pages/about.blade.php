@@ -14,14 +14,6 @@
                 : 'Pelajari lebih lanjut tentang Nakala Digital, visi, misi, dan kemitraan regional strategis kami bersama Romulus Digital.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -162,16 +154,6 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F7FAFC;
-            color: #334155;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
         .active-nav {
             border-bottom: 2px solid #12AED0;
             padding-bottom: 4px;
@@ -205,7 +187,7 @@
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                             class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Work With Us' : 'Bekerja Bersama Kami' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                     </div>
                 </div>
@@ -224,7 +206,8 @@
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
-                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                <span
+                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                 <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                     {{ app()->getLocale() === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}</h2>
                 <div class="h-1.5 w-24 bg-primary-container mt-unit-sm"></div>
@@ -246,7 +229,8 @@
                                 organizational growth in Indonesia and the regional market.
                             @else
                                 Menjadi mitra teknologi strategis yang menghadirkan solusi digital
-                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi di
+                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi
+                                di
                                 Indonesia dan pasar regional.
                             @endif
                         </p>
@@ -300,7 +284,8 @@
                             {{ app()->getLocale() === 'en'
                                 ? 'Grow people, capability, and sustainable digital maturity across organizations.'
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
-                                : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
+                            : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh
+                            organisasi.' }}
                         </p>
                     </div>
                 </div>
@@ -311,7 +296,8 @@
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <!-- Value Proposition -->
                 <div class="mb-unit-lg text-center max-w-3xl mx-auto">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
                     <p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">

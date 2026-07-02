@@ -16,14 +16,6 @@
                 : 'Pelajari cara Nakala Digital menjalankan proyek software melalui discovery, perencanaan, desain, pengembangan, QA, deployment, dan peningkatan berkelanjutan.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -164,16 +156,6 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #F7FAFC;
-            color: #334155;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -239,7 +221,8 @@
         <section class="py-unit-xl bg-surface">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg text-center max-w-2xl mx-auto">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Delivery Approach</span>
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Delivery
+                        Approach</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-4">
                         {{ app()->getLocale() === 'en' ? 'End-to-End Delivery Lifecycle' : 'Siklus Delivery End-to-End' }}
                     </h2>
@@ -251,7 +234,8 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-unit-md">
                     <!-- Step 1: Discovery & Scoping -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">01</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Discovery & Scoping' : 'Discovery & Scoping' }}</h3>
@@ -266,7 +250,8 @@
                         </div>
                     </div>
                     <!-- Step 2: Design & Architecture -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">02</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Design & Architecture' : 'Design & Architecture' }}</h3>
@@ -281,10 +266,12 @@
                         </div>
                     </div>
                     <!-- Step 3: Agile Development & QA -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">03</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
-                            {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}</h3>
+                            {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}
+                        </h3>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-4">
                             {{ app()->getLocale() === 'en'
                                 ? 'Sprint-based development with continuous integration, automated testing, and code review processes.'
@@ -296,7 +283,8 @@
                         </div>
                     </div>
                     <!-- Step 4: SIT / UAT -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">04</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'SIT / UAT' : 'SIT / UAT' }}</h3>
@@ -311,7 +299,8 @@
                         </div>
                     </div>
                     <!-- Step 5: Deployment & Go-Live -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">05</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Deployment & Go-Live' : 'Deployment & Go-Live' }}</h3>
@@ -326,7 +315,8 @@
                         </div>
                     </div>
                     <!-- Step 6: Handover -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">06</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Handover' : 'Handover' }}</h3>
@@ -341,7 +331,8 @@
                         </div>
                     </div>
                     <!-- Step 7: Support & Growth -->
-                    <div class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group col-span-1 md:col-span-2">
+                    <div
+                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group col-span-1 md:col-span-2">
                         <div class="text-primary-container font-headline-h2 mb-2">07</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Support & Growth' : 'Support & Growth' }}</h3>
@@ -362,7 +353,8 @@
         <section class="py-unit-xl bg-surface-container-low border-y border-outline-variant">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">QA Governance</span>
+                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">QA
+                        Governance</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background">
                         {{ app()->getLocale() === 'en' ? 'Quality Assurance as a Delivery Discipline' : 'Quality Assurance sebagai Disiplin Delivery' }}
                     </h2>
@@ -457,31 +449,36 @@
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">list_alt</span>
                                 </div>
-                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Requirement Traceability Matrix' : 'Matriks Traceability Kebutuhan' }}</span>
+                                <span
+                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Requirement Traceability Matrix' : 'Matriks Traceability Kebutuhan' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">draw</span>
                                 </div>
-                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Test Cases & SIT/UAT Reports' : 'Test Case & Laporan SIT/UAT' }}</span>
+                                <span
+                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Test Cases & SIT/UAT Reports' : 'Test Case & Laporan SIT/UAT' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">terminal</span>
                                 </div>
-                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Automated Test Suites' : 'Suite Test Otomatis' }}</span>
+                                <span
+                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Automated Test Suites' : 'Suite Test Otomatis' }}</span>
                             </li>
                             <li class="flex items-center gap-4 border-b border-white/10 pb-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">menu_book</span>
                                 </div>
-                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'Release Readiness Checklist' : 'Checklist Kesiapan Rilis' }}</span>
+                                <span
+                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'Release Readiness Checklist' : 'Checklist Kesiapan Rilis' }}</span>
                             </li>
                             <li class="flex items-center gap-4">
                                 <div class="w-10 h-10 rounded bg-white/5 flex items-center justify-center">
                                     <span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
                                 </div>
-                                <span class="font-body-md">{{ app()->getLocale() === 'en' ? 'BAST & Warranty Certificate' : 'BAST & Sertifikat Garansi' }}</span>
+                                <span
+                                    class="font-body-md">{{ app()->getLocale() === 'en' ? 'BAST & Warranty Certificate' : 'BAST & Sertifikat Garansi' }}</span>
                             </li>
                         </ul>
                     </div>

@@ -19,13 +19,6 @@
                 : 'Kenali tim inti Nakala Digital, dengan Romulus Digital sebagai mitra strategis dan trust layer untuk kapabilitas regional.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -107,20 +100,49 @@
                         "headline-h1": ["Poppins"],
                         "headline-h2": ["Poppins"],
                         "headline-h3": ["Poppins"],
-                        "label-sm": ["Poppins"]
+                        "label-sm": ["Poppins"],
+                        "body-lg": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "button": ["15px", {
+                            "lineHeight": "1.0",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "1.6",
+                            "fontWeight": "400"
+                        }],
+                        "headline-h1": ["56px", {
+                            "lineHeight": "1.2",
+                            "fontWeight": "700"
+                        }],
+                        "headline-h2": ["40px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "600"
+                        }],
+                        "headline-h3": ["24px", {
+                            "lineHeight": "1.4",
+                            "fontWeight": "600"
+                        }],
+                        "display-lg": ["72px", {
+                            "lineHeight": "1.1",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "label-sm": ["12px", {
+                            "lineHeight": "1.0",
+                            "fontWeight": "700"
+                        }]
                     }
                 }
             }
         }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
     </style>
 </head>
 
@@ -153,9 +175,10 @@
         </section>
         <!-- Team Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
+            <div class="mb-unit-xl">
+                <span
+                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
                     {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -164,10 +187,11 @@
                         : 'Setiap proyek dipimpin oleh Nakala Digital sebagai tim utama yang akuntabel dan berhadapan langsung dengan klien. Mitra strategis kami memperkuat keyakinan di belakang layar tanpa mengubah siapa yang memegang relasi utama.' }}
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div class="flex flex-wrap justify-center gap-gutter">
+
                 <!-- CEO -->
                 <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl w-full md:w[calc(50%-12px)] max-w-md">
                     <div class="aspect-square relative overflow-hidden">
                         <img alt="Milzam Zihni"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -175,7 +199,8 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Executive Officer</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                            Executive Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Milzam Zihni</h3>
                         <div class="space-y-unit-sm">
                             <div
@@ -199,47 +224,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- CTO -->
-                <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <div class="aspect-square relative overflow-hidden">
-                        <div
-                            class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
-                            <div
-                                class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
-                                <span class="material-symbols-outlined text-5xl">person</span>
-                            </div>
-                        </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
-                    </div>
-                    <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Technology Officer</p>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Rinaldy Pasya</h3>
-                        <div class="space-y-unit-sm">
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">architecture</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Tech Architecture' : 'Arsitektur Teknologi' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">terminal</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Engineering Excellence' : 'Keunggulan Engineering' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">speed</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'System Scalability' : 'Skalabilitas Sistem' }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- COO -->
                 <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl md:w-[calc(50%-12px)] max-w-md">
                     <div class="aspect-square relative overflow-hidden">
                         <img alt="Raul Mahya Komaran"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -247,7 +235,8 @@
                         <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
                     </div>
                     <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Operating Officer</p>
+                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief
+                            Operating Officer</p>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya Komaran
                         </h3>
                         <div class="space-y-unit-sm">
@@ -274,6 +263,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Scalable Team Model Section -->
         <section class="py-unit-xl bg-inverse-surface text-surface">
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
@@ -292,14 +282,16 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
                                 <div
                                     class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
-                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
-                                        <img alt="Nakala Digital"
-                                            class="h-[56px] w-auto max-w-full object-contain"
+                                    <div
+                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
+                                        <img alt="Nakala Digital" class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
-                                <div class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <div class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
+                                <div
+                                    class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <div
+                                        class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
                                         <img alt="Romulus Digital"
                                             class="h-[36px] w-auto max-w-full object-contain opacity-70"
                                             src="{{ asset('assets/romulus-putih.png') }}" />
@@ -335,8 +327,6 @@
                 header.classList.add('h-20');
             }
         });
-
-        // Hover animation for team cards handled by Tailwind group-hover
     </script>
 </body>
 

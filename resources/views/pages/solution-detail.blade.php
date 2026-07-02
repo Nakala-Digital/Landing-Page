@@ -17,10 +17,6 @@
         'description' => $case['summary'][$locale],
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -134,14 +130,6 @@
             }
         }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
     </style>
 </head>
 
@@ -168,15 +156,27 @@
                             {{ $case['title'][$locale] }}
                         </h1>
                         <p class="text-lg leading-relaxed text-inverse-on-surface max-w-3xl">
-                            {{ $case['summary'][$locale] }}
+                            {{ $case['headline'][$locale] }} {{ $case['summary'][$locale] }}
                         </p>
                     </div>
 
-                    <aside class="lg:col-span-4 border-l-4 border-primary bg-white/10 p-unit-lg rounded-xl">
-                        <p class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed mb-unit-sm">
-                            {{ $locale === 'en' ? 'Relevant Capability' : 'Kapabilitas Relevan' }}
-                        </p>
-                        <p class="text-inverse-on-surface leading-relaxed">{{ $case['capability'] }}</p>
+                    <aside class="lg:col-span-4 space-y-unit-md">
+                        <div class="border-l-4 border-primary bg-white/10 p-unit-lg rounded-xl">
+                            <p class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed mb-unit-sm">
+                                {{ $locale === 'en' ? 'Who It Helps' : 'Untuk Siapa' }}
+                            </p>
+                            <p class="text-inverse-on-surface leading-relaxed">
+                                {{ implode(' · ', $case['who_it_helps'][$locale]) }}
+                            </p>
+                        </div>
+                        <div class="border-l-4 border-tertiary-fixed bg-white/10 p-unit-lg rounded-xl">
+                            <p class="text-xs font-bold uppercase tracking-widest text-tertiary-fixed mb-unit-sm">
+                                {{ $locale === 'en' ? 'Business Impact' : 'Dampak Bisnis' }}
+                            </p>
+                            <p class="text-inverse-on-surface leading-relaxed">
+                                {{ $case['business_value'][$locale] }}
+                            </p>
+                        </div>
                     </aside>
                 </div>
             </div>
@@ -186,7 +186,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-lg">
                 <div class="lg:col-span-4">
                     <div class="lg:sticky lg:top-28">
-                        <span class="material-symbols-outlined text-primary text-5xl mb-unit-md">{{ $case['icon'] }}</span>
+                        <span
+                            class="material-symbols-outlined text-primary text-5xl mb-unit-md">{{ $case['icon'] }}</span>
                         <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-unit-xs">
                             {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
                         </p>
@@ -235,7 +236,8 @@
                         <ul class="space-y-3">
                             @foreach ($case['features'][$locale] as $feature)
                                 <li class="flex gap-3 text-on-surface-variant">
-                                    <span class="material-symbols-outlined text-primary text-[18px] mt-1">check_circle</span>
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[18px] mt-1">check_circle</span>
                                     <span>{{ $feature }}</span>
                                 </li>
                             @endforeach
@@ -265,7 +267,8 @@
         </section>
 
         <section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-unit-xl">
-            <div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-unit-lg items-start lg:items-center justify-between">
+            <div
+                class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-unit-lg items-start lg:items-center justify-between">
                 <div class="max-w-3xl">
                     <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-unit-sm">
                         {{ $locale === 'en' ? 'Next Step' : 'Langkah Berikutnya' }}
@@ -281,7 +284,7 @@
                 </div>
                 <a class="inline-flex items-center justify-center gap-2 bg-primary text-white px-unit-lg py-unit-md rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
                     href="{{ route('contact' . $localeSuffix) }}">
-                    {{ $locale === 'en' ? 'Start Consultation' : 'Mulai Konsultasi' }}
+                    {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                     <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </a>
             </div>

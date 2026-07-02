@@ -118,11 +118,12 @@
             <div class="lg:col-span-2 space-y-4 flex flex-col items-start lg:items-center">
                 <h4 class="font-label-sm text-white uppercase tracking-widest lg:text-center">
                     {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</h4>
-                <div class="bg-white/10 p-3 rounded-lg border border-white/20 inline-flex flex-col items-center text-center">
+                <div
+                    class="bg-white/10 p-3 rounded-lg border border-white/20 inline-flex flex-col items-center text-center">
                     <img alt="Romulus Digital" class="h-8 w-auto object-contain opacity-70"
                         src="{{ asset('assets/romulus-putih.png') }}" />
                     <p class="text-[9px] text-white/60 mt-2 uppercase tracking-wider">
-                        {{ app()->getLocale() === 'en' ? 'Regional Partner' : 'Mitra Regional' }}
+                        {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}
                     </p>
                 </div>
             </div>

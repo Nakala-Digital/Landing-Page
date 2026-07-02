@@ -19,15 +19,6 @@
                 : 'Mitra Solusi Digital, Pengembangan Perangkat Lunak & AI untuk Pertumbuhan Bisnis Anda.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -232,13 +223,14 @@
                         {{ __('messages.hero_desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <span class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
+                        <span
+                            class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
@@ -290,8 +282,10 @@
         <section class="py-unit-xl bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="mb-unit-xl max-w-2xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                    <h2 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                    <h2
+                        class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-md">
                         {{ __('messages.cap_title') }}</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">{{ __('messages.cap_desc') }}</p>
                 </div>
@@ -371,7 +365,8 @@
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O" />
                 </div>
                 <div class="order-1 lg:order-2 space-y-unit-lg">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em]">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em]">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                     <h2
                         class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background">
                         {{ __('messages.who_title') }}</h2>
@@ -408,10 +403,14 @@
                     </p>
                 </div>
                 <div class="space-y-4">
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'What services does Nakala Digital provide?' : 'Layanan apa saja yang disediakan Nakala Digital?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -421,10 +420,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -434,10 +437,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'What is the estimated project timeline?' : 'Berapa estimasi timeline pengerjaan?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -447,10 +454,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -460,10 +471,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the partnership with Romulus Digital work?' : 'Bagaimana model partnership dengan Romulus Digital?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -473,10 +488,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How is data security handled?' : 'Bagaimana aspek data/security ditangani?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -486,10 +505,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
-                        <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
-                            <span class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
-                            <span class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
+                    <div
+                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        <button class="w-full flex justify-between items-center text-left"
+                            onclick="toggleAccordion(this)">
+                            <span
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How can I contact the Nakala team?' : 'Bagaimana cara menghubungi tim Nakala?' }}</span>
+                            <span
+                                class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
@@ -521,7 +544,7 @@
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
+                        {{ app()->getLocale() === 'en' ? 'Schedule a Free Consultation' : 'Jadwalkan Konsultasi Gratis' }}
                     </a>
                 </div>
             </div>

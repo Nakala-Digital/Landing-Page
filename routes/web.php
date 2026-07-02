@@ -29,6 +29,34 @@ function registerCompanyProfileRoutes($suffix = '')
     Route::view('/faq', 'pages.faq')->name('faq' . $suffix);
     Route::view('/insights', 'pages.insights')->name('insights' . $suffix);
     Route::view('/contact', 'pages.contact')->name('contact' . $suffix);
+
+    /* BLOG INSIGHT*/
+    Route::get('/insights/{slug}', function ($slug) {
+
+        $files = [
+            'PPDB',
+            'D365'
+        ];
+
+        $article = null;
+        $portal = null;
+
+        foreach ($files as $p) {
+
+            $data = require config_path("insights/{$p}.php");
+
+            $article = collect($data['articles'])->firstWhere('slug', $slug);
+
+            if ($article) {
+                $portal = $p;
+                break;
+            }
+        }
+
+        abort_unless($article, 404);
+
+        return view('pages.insight-detail', compact('article', 'portal'));
+    })->name('insights.detail' . $suffix);
 }
 
 // English prefix
