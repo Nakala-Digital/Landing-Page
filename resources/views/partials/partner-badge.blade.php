@@ -1,5 +1,5 @@
 <!-- Partner Badge Section -->
-<section class="bg-secondary py-unit-lg border-y border-white/10 relative overflow-hidden">
+<section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
     <!-- Decorative gradient -->
     <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
 
@@ -19,7 +19,7 @@
 
         <!-- Text Area -->
         <div class="flex flex-col gap-1 items-center text-center order-3">
-            <span class="font-label-sm text-tertiary tracking-[0.2em] uppercase">
+            <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
                 {{ app()->getLocale() === 'en' ? 'Official Representative &' : 'Perwakilan Resmi &' }}
             </span>
             <span class="text-white/80 font-body-md text-sm">
