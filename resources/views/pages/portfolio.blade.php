@@ -6,169 +6,172 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portfolio | Nakala Digital</title>
-    @include('partials.seo', [
-        'title' => 'Portfolio | Nakala Digital',
-        'description' =>
-            'Explore our portfolio of software development, AI, and digital solutions projects delivered with regional capability.',
-    ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
-                        "electric-cyan": "#12AED0",
-                        "midnight-navy": "#031A44",
-                        "impact-lime": "#A7F432"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1-mobile": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "body-lg": ["Poppins"],
-                        "headline-h2-mobile": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "display-lg": ["Poppins"],
-                        "label-sm": ["Poppins"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["48px", {
-                            "lineHeight": "1.1",
-                            "fontWeight": "700"
-                        }],
-                        "body-md": ["16px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "button": ["15px", {
-                            "lineHeight": "1.0",
-                            "letterSpacing": "0.05em",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1-mobile": ["36px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h2": ["40px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "body-lg": ["18px", {
-                            "lineHeight": "1.6",
-                            "fontWeight": "400"
-                        }],
-                        "headline-h2-mobile": ["28px", {
-                            "lineHeight": "1.3",
-                            "fontWeight": "600"
-                        }],
-                        "headline-h1": ["56px", {
-                            "lineHeight": "1.2",
-                            "fontWeight": "700"
-                        }],
-                        "headline-h3": ["24px", {
-                            "lineHeight": "1.4",
-                            "fontWeight": "600"
-                        }],
-                        "display-lg": ["72px", {
-                            "lineHeight": "1.1",
-                            "letterSpacing": "-0.02em",
-                            "fontWeight": "700"
-                        }],
-                        "label-sm": ["12px", {
-                            "lineHeight": "1.0",
-                            "fontWeight": "700"
-                        }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-tint": "#12AED0",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#12AED0",
+                    "on-tertiary-fixed": "#031A44",
+                    "on-secondary-fixed": "#031A44",
+                    "surface-dim": "#d5dbdd",
+                    "secondary-container": "#12AED0",
+                    "primary-fixed-dim": "#12AED0",
+                    "tertiary-fixed": "#A7F432",
+                    "error": "#A7F432",
+                    "on-secondary-container": "#031A44",
+                    "background": "#F7FAFC",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#eff4f7",
+                    "on-tertiary-container": "#031A44",
+                    "on-primary-fixed": "#031A44",
+                    "on-primary": "#ffffff",
+                    "outline": "#12AED0",
+                    "inverse-primary": "#12AED0",
+                    "surface-container": "#e9eff1",
+                    "on-error-container": "#031A44",
+                    "secondary-fixed-dim": "#12AED0",
+                    "surface-bright": "#F7FAFC",
+                    "surface-container-highest": "#dee3e6",
+                    "primary-fixed": "#12AED0",
+                    "primary-container": "#12AED0",
+                    "primary": "#12AED0",
+                    "on-primary-container": "#031A44",
+                    "on-surface-variant": "#031A44",
+                    "on-primary-fixed-variant": "#031A44",
+                    "on-tertiary-fixed-variant": "#031A44",
+                    "on-background": "#031A44",
+                    "on-secondary-fixed-variant": "#031A44",
+                    "tertiary-container": "#A7F432",
+                    "on-surface": "#031A44",
+                    "tertiary": "#A7F432",
+                    "surface": "#F7FAFC",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#031A44",
+                    "surface-container-high": "#e4e9ec",
+                    "secondary-fixed": "#12AED0",
+                    "error-container": "#A7F432",
+                    "inverse-surface": "#031A44",
+                    "tertiary-fixed-dim": "#A7F432",
+                    "secondary": "#031A44",
+                    "inverse-on-surface": "#ecf1f4",
+                    "surface-variant": "#dee3e6",
+                    "electric-cyan": "#12AED0",
+                    "midnight-navy": "#031A44",
+                    "impact-lime": "#A7F432"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "unit-xl": "64px",
+                    "unit-lg": "32px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "unit-xs": "4px",
+                    "container-max": "1280px",
+                    "unit-md": "16px",
+                    "unit-sm": "8px"
+                },
+                "fontFamily": {
+                    "display-lg-mobile": ["Poppins"],
+                    "body-md": ["Poppins"],
+                    "button": ["Poppins"],
+                    "headline-h1-mobile": ["Poppins"],
+                    "headline-h2": ["Poppins"],
+                    "body-lg": ["Poppins"],
+                    "headline-h2-mobile": ["Poppins"],
+                    "headline-h1": ["Poppins"],
+                    "headline-h3": ["Poppins"],
+                    "display-lg": ["Poppins"],
+                    "label-sm": ["Poppins"]
+                },
+                "fontSize": {
+                    "display-lg-mobile": ["48px", {
+                        "lineHeight": "1.1",
+                        "fontWeight": "700"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "button": ["15px", {
+                        "lineHeight": "1.0",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1-mobile": ["36px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h2": ["40px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "1.6",
+                        "fontWeight": "400"
+                    }],
+                    "headline-h2-mobile": ["28px", {
+                        "lineHeight": "1.3",
+                        "fontWeight": "600"
+                    }],
+                    "headline-h1": ["56px", {
+                        "lineHeight": "1.2",
+                        "fontWeight": "700"
+                    }],
+                    "headline-h3": ["24px", {
+                        "lineHeight": "1.4",
+                        "fontWeight": "600"
+                    }],
+                    "display-lg": ["72px", {
+                        "lineHeight": "1.1",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "label-sm": ["12px", {
+                        "lineHeight": "1.0",
+                        "fontWeight": "700"
+                    }]
                 }
             }
         }
+    }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
 
-        .bento-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    .bento-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-        .bento-card:hover {
-            transform: translateY(-4px);
-            border-color: #12AED0;
-        }
+    .bento-card:hover {
+        transform: translateY(-4px);
+        border-color: #12AED0;
+    }
 
-        .glass-header {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
+    .glass-header {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
     </style>
 </head>
 
@@ -178,7 +181,8 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
+        <section
+            class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
             <div
                 class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
                 <div
@@ -188,9 +192,9 @@
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
-                    {!! app()->getLocale() === 'en'
-                        ? 'Portfolio and case studies of <span class="text-primary">digital solutions.</span>'
-                        : 'Portofolio dan studi kasus <span class="text-primary">solusi digital.</span>' !!}
+                    {!! app()->getLocale() === 'en' ? 'Portfolio and case studies of <span class="text-primary">digital
+                        solutions</span>' : 'Portofolio dan studi kasus <span class="text-primary">solusi
+                        digital</span>' !!}
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
@@ -199,10 +203,10 @@
             <!-- Decorative Elements -->
             <div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none">
                 <svg class="w-full h-full text-primary fill-current" viewbox="0 0 100 100">
-                    <rect fill="none" height="80" stroke="currentColor" stroke-width="0.5" width="80" x="10"
-                        y="10"></rect>
-                    <rect fill="none" height="60" stroke="currentColor" stroke-width="0.5" width="60" x="20"
-                        y="20"></rect>
+                    <rect fill="none" height="80" stroke="currentColor" stroke-width="0.5" width="80" x="10" y="10">
+                    </rect>
+                    <rect fill="none" height="60" stroke="currentColor" stroke-width="0.5" width="60" x="20" y="20">
+                    </rect>
                     <path d="M0 50 L100 50 M50 0 L50 100" stroke="currentColor" stroke-width="0.2"></path>
                 </svg>
             </div>
@@ -341,13 +345,15 @@
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Personalized AI Coach</h3>
                         <p class="text-on-surface-variant text-body-md mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.' : 'Jalur pembelajaran adaptif untuk reskilling perusahaan, memanfaatkan LLM untuk umpan balik real-time.' }}
+                            {{ app()->getLocale() === 'en' ? 'AI-based adaptive learning to help companies upskill teams more effectively.' : 'Pembelajaran adaptif berbasis AI untuk membantu perusahaan meningkatkan keterampilan tim secara lebih efektif.' }}
                         </p>
                         <div class="flex gap-unit-sm">
                             <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">smart_toy</span></div>
+                                <span class="material-symbols-outlined text-sm">smart_toy</span>
+                            </div>
                             <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">school</span></div>
+                                <span class="material-symbols-outlined text-sm">school</span>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -364,7 +370,7 @@
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
                     </div>
                     <p class="text-on-surface-variant text-body-md mb-unit-lg">
-                        {{ app()->getLocale() === 'en' ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.' : 'Tantangan: Mengintegrasikan data legacy kompleks ke dalam ekosistem MS Dynamics modern untuk konglomerat regional.' }}
+                        {{ app()->getLocale() === 'en' ? 'Integrate data from legacy systems into Microsoft Dynamics 365 to support more integrated business operations.' : 'Mengintegrasikan data dari sistem lama ke Microsoft Dynamics 365 untuk mendukung operasional bisnis yang lebih terintegrasi.' }}
                     </p>
                     <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
                         <p class="font-label-sm uppercase">
@@ -382,7 +388,7 @@
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360° Customer Engagement</h3>
                         <p class="text-on-surface-variant text-body-md mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.' : 'Dasbor terpadu yang menghubungkan penjualan online, sentimen media sosial, dan lalu lintas toko fisik untuk pemasaran berbasis data.' }}
+                            {{ app()->getLocale() === 'en' ? 'an integrated dashboard that connects online sales, social media insights, and physical store activity to support a more effective marketing strategy.' : 'Dasbor terpadu yang menghubungkan penjualan online, insight media sosial, dan aktivitas toko fisik untuk mendukung strategi pemasaran yang lebih efektif.' }}
                         </p>
                         <div class="flex flex-wrap gap-unit-sm">
                             <span
@@ -408,12 +414,12 @@
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
             <h2
                 class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">
-                {!! app()->getLocale() === 'en'
-                    ? 'Ready to build your <span class="text-primary">next success story?</span>'
-                    : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>' !!}</h2>
+                {!! app()->getLocale() === 'en' ? 'Ready to build your <span class="text-primary">next success
+                    story?</span>' : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>'
+                !!}</h2>
             <div class="flex flex-col md:flex-row gap-unit-md justify-center">
                 <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
+                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}</a>
                 <a href="{{ route('services' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                     class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
             </div>
@@ -422,24 +428,24 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        // Micro-interactions
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Potential for lightweight JS effects if needed
-            });
+    // Micro-interactions
+    document.querySelectorAll('.bento-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Potential for lightweight JS effects if needed
         });
+    });
 
-        // Simple scroll spy for header opacity
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
+    // Simple scroll spy for header opacity
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header.fixed');
+        if (window.scrollY > 20) {
+            header.classList.add('shadow-md', 'h-16');
+            header.classList.remove('h-20');
+        } else {
+            header.classList.remove('shadow-md', 'h-16');
+            header.classList.add('h-20');
+        }
+    });
     </script>
 </body>
 
