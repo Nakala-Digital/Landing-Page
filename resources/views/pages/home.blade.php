@@ -212,7 +212,7 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
-                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis'; @endphp
+                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional'; @endphp
                         {!! str_replace(
                             $heroHighlight,
                             '<span class="text-primary">' . $heroHighlight . '</span>',
@@ -223,14 +223,20 @@
                         {{ __('messages.hero_desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <span
-                            class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
+                        <div
+                            class="inline-flex items-center gap-2 border border-outline-variant bg-surface-container px-4 py-2 rounded-full">
+                            <img alt="Romulus Digital" class="h-4 object-contain"
+                                src="{{ asset('assets/romulus-birumuda.png') }}" />
+                            <span class="font-label-sm text-on-surface-variant text-xs tracking-[0.12em] uppercase">
+                                {{ __('messages.hero_support_line') }}
+                            </span>
+                        </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                            {{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
@@ -278,6 +284,38 @@
                 </div>
             </div>
         </section>
+
+        <section
+            class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
+            <div
+                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
+                <div
+                    class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-xs">book</span>
+                    <span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                </div>
+                <h1
+                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
+                    {!! app()->getLocale() === 'en'
+                        ? 'Portfolio and case studies of <span class="text-primary">digital solutions.</span>'
+                        : 'Portofolio dan studi kasus <span class="text-primary">solusi digital.</span>' !!}
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
+                </p>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none">
+                <svg class="w-full h-full text-primary fill-current" viewbox="0 0 100 100">
+                    <rect fill="none" height="80" stroke="currentColor" stroke-width="0.5" width="80" x="10"
+                        y="10"></rect>
+                    <rect fill="none" height="60" stroke="currentColor" stroke-width="0.5" width="60" x="20"
+                        y="20"></rect>
+                    <path d="M0 50 L100 50 M50 0 L50 100" stroke="currentColor" stroke-width="0.2"></path>
+                </svg>
+            </div>
+        </section>
+
         <!-- Capabilities Bento Grid -->
         <section class="py-unit-xl bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -353,7 +391,78 @@
                     </div>
                 </div>
             </div>
+            <!-- Portfolio Section: Capability Reference -->
+        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+                <!-- 1. PPDB -->
+                <div
+                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant/30 ring-1 ring-outline-variant/10 overflow-hidden rounded-2xl">
+                    <div class="accent-strip bg-primary"></div>
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
+                            <div>
+                                <span
+                                    class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary/10 px-unit-sm py-1 rounded-full mb-unit-md">{{ app()->getLocale() === 'en' ? 'Public Sector' : 'Sektor Publik' }}</span>
+                                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">PPDB Online System</h3>
+                                <p class="text-on-surface-variant text-body-md mb-unit-lg">
+                                    {{ app()->getLocale() === 'en' ? 'Building a reliable digital admission system that handles high-volume registration, document verification, and transparent selection processes.' : 'Membangun sistem penerimaan digital yang andal untuk menangani registrasi volume tinggi, verifikasi dokumen, dan proses seleksi yang transparan.' }}
+                                </p>
+                                <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
+                                    <p class="text-label-sm uppercase font-bold text-outline">
+                                        {{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}</p>
+                                    <p class="text-primary font-bold">
+                                        {{ app()->getLocale() === 'en' ? 'High-availability platform with scalable admission processing.' : 'Platform dengan ketersediaan tinggi dan pemrosesan pendaftaran yang skalabel.' }}
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+                        </div>
+                        <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
+                            <img class="portfolio-img absolute inset-0 w-full h-full object-cover"
+                                data-alt="A high-fidelity software mockup of a modern Indonesian public school admission dashboard. The UI is clean, using Nakala Digital's brand blue and white palette. In the background, a soft-focused modern school building is visible under bright daylight. The lighting is high-key, communicating transparency and institutional trust. Professional corporate high-contrast style with sharp edges."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-midnight-navy/40 via-transparent to-transparent md:bg-gradient-to-l">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. HRMS -->
+                <div
+                    class="md:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant/30 ring-1 ring-outline-variant/10 rounded-2xl p-unit-lg flex flex-col justify-between overflow-hidden">
+                    <div class="accent-strip bg-tertiary"></div>
+                    <div class="mb-unit-xl">
+                        <span
+                            class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-widest bg-primary/10 px-unit-sm py-1 rounded-full mb-unit-md">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
+                        <p class="text-on-surface-variant text-body-md mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.' : 'Memsentralisasi penggajian, kehadiran, dan kinerja untuk tenaga kerja terdistribusi di Asia Tenggara.' }}
+                        </p>
+                    </div>
+                    <div>
+                        <div class="bg-surface p-unit-md rounded-lg border-t-4 border-primary mb-unit-md">
+                            <p class="font-label-sm text-outline uppercase mb-1">
+                                {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
+                            <p class="text-body-md">
+                                {{ app()->getLocale() === 'en' ? 'Automated compliance & tax localization.' : 'Kepatuhan & lokalisasi pajak otomatis.' }}
+                            </p>
+                        </div>
+                        <a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- /Portfolio Section: Capability Reference -->
+        </section>
+
+
         <!-- About / Narrative Section -->
         <section class="py-unit-xl bg-surface-container-lowest">
             <div
@@ -523,13 +632,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-unit-lg">
-                    <a href="{{ route('faq' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-flex items-center gap-unit-xs text-primary font-button text-button hover:underline">
-                        {{ app()->getLocale() === 'en' ? 'View All FAQ' : 'Lihat Semua FAQ' }}
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                </div>
             </div>
         </section>
         <!-- Final CTA -->
@@ -551,7 +653,7 @@
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        {{ app()->getLocale() === 'en' ? 'Schedule a Free Consultation' : 'Jadwalkan Konsultasi Gratis' }}
+                        {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
                     </a>
                 </div>
             </div>

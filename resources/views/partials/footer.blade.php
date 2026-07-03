@@ -2,10 +2,10 @@
     <div class="absolute inset-x-0 top-0 h-1 bg-[#A7F432]"></div>
 
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 py-12 border-b border-white/20">
+        <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-8 py-12 border-b border-white/20">
 
             {{-- Brand Column --}}
-            <div class="lg:col-span-3 flex flex-col gap-6">
+            <div class="md:col-span-3 lg:col-span-3 flex flex-col gap-6">
                 <div
                     class="inline-flex w-fit items-center rounded-lg bg-white px-4 py-3 ring-1 ring-[#12AED0]/30 shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
                     <img class="h-12 md:h-14 w-auto object-contain" src="{{ asset('assets/logo-nakala.png') }}"
@@ -19,23 +19,32 @@
 
                 {{-- Contact Info --}}
                 <div class="space-y-3">
-                    <div class="relative pl-8">
-                        <span
-                            class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">location_on</span>
-                        <span class="font-body-md text-white/75 text-sm leading-relaxed">Pointlab Coworking
-                            Space, Graha Pos
-                            Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum, Bandung Wetan, Bandung City, West Java
-                            40115</span>
-                    </div>
-                    <div class="relative pl-8">
-                        <span
-                            class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">mail</span>
-                        <span class="font-body-md text-white/75 text-sm">contact@nakala.digital</span>
-                    </div>
-                    <div class="relative pl-8">
-                        <span
-                            class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">phone</span>
-                        <span class="font-body-md text-white/75 text-sm">0822-9570-6304</span>
+                    <div class="space-y-3">
+                        <a href="https://maps.google.com/?q=Pointlab+Coworking+Space,+Graha+Pos+Indonesia,+Jl.+Banda+No.30+Lantai+2+Blok+C,+Citarum,+Bandung+Wetan,+Bandung+City,+West+Java+40115"
+                            target="_blank" rel="noopener noreferrer" class="relative pl-8 flex group">
+                            <span
+                                class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">location_on</span>
+                            <span
+                                class="font-body-md text-white/75 group-hover:text-[#A7F432] transition-colors text-sm leading-relaxed">Pointlab
+                                Coworking
+                                Space, Graha Pos
+                                Indonesia, Jl. Banda No.30 Lantai 2 Blok C, Citarum, Bandung Wetan, Bandung City, West
+                                Java
+                                40115</span>
+                        </a>
+                        <a href="mailto:contact@nakala.digital" class="relative pl-8 flex group">
+                            <span
+                                class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">mail</span>
+                            <span
+                                class="font-body-md text-white/75 group-hover:text-[#A7F432] transition-colors text-sm">contact@nakala.digital</span>
+                        </a>
+                        <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer"
+                            class="relative pl-8 flex group">
+                            <span
+                                class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">phone</span>
+                            <span
+                                class="font-body-md text-white/75 group-hover:text-[#A7F432] transition-colors text-sm">0822-9570-6304</span>
+                        </a>
                     </div>
                 </div>
 
@@ -66,7 +75,7 @@
             @php
                 $localeSuffix = app()->getLocale() === 'en' ? '.en' : '';
             @endphp
-            <div class="lg:col-span-2 space-y-4">
+            <div class="md:col-span-3 lg:col-span-2 space-y-4">
                 <h4 class="font-label-sm text-white uppercase tracking-widest">
                     {{ app()->getLocale() === 'en' ? 'Sitemap' : 'Peta Situs' }}</h4>
                 <ul class="space-y-3">
@@ -95,7 +104,7 @@
             </div>
 
             {{-- Capabilities --}}
-            <div class="lg:col-span-2 space-y-4">
+            <div class="md:col-span-2 lg:col-span-2 space-y-4">
                 <h4 class="font-label-sm text-white uppercase tracking-widest">
                     {{ app()->getLocale() === 'en' ? 'Capabilities' : 'Kapabilitas' }}</h4>
                 <ul class="space-y-3">
@@ -115,8 +124,8 @@
             </div>
 
             {{-- Strategic Partner --}}
-            <div class="lg:col-span-2 space-y-4 flex flex-col items-start lg:items-center">
-                <h4 class="font-label-sm text-white uppercase tracking-widest lg:text-center">
+            <div class="md:col-span-2 lg:col-span-2 space-y-4 flex flex-col items-start md:items-center">
+                <h4 class="font-label-sm text-white uppercase tracking-widest md:text-center">
                     {{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</h4>
                 <div
                     class="bg-white/10 p-3 rounded-lg border border-white/20 inline-flex flex-col items-center text-center">
@@ -129,7 +138,7 @@
             </div>
 
             {{-- Maps Column --}}
-            <div class="lg:col-span-3 flex flex-col gap-4">
+            <div class="md:col-span-2 lg:col-span-3 flex flex-col gap-4">
                 <h4 class="font-label-sm text-white uppercase tracking-widest">
                     {{ app()->getLocale() === 'en' ? 'Find Us' : 'Temukan Kami' }}</h4>
                 <div class="h-[180px] rounded-lg overflow-hidden border border-white/20 ring-1 ring-[#12AED0]/20">
