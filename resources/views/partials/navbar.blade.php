@@ -34,7 +34,8 @@
 
         {{-- Left: Logo --}}
         <div class="flex items-center shrink-0">
-            <a class="flex items-center gap-2" href="{{ route('home' . $localeSuffix) }}" aria-label="Nakala Digital home">
+            <a class="flex items-center gap-2" href="{{ route('home' . $localeSuffix) }}"
+                aria-label="Nakala Digital home">
                 <img class="h-10 md:h-11 w-auto object-contain" src="{{ asset('assets/logo-nakala.png') }}"
                     alt="Nakala Digital">
             </a>
@@ -64,7 +65,7 @@
         <div class="flex items-center justify-end gap-3 xl:gap-4 shrink-0">
             {{-- Language Switcher (Desktop/Tablet) --}}
             <div
-                class="hidden md:flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
+                class="hidden md:flex items-center bg-tertiary text-secondary rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
                 <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                     class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                 <span class="mx-2 opacity-40">|</span>
@@ -75,7 +76,7 @@
             {{-- CTA (Desktop only) --}}
             <a class="hidden lg:inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
                 href="{{ route('contact' . $localeSuffix) }}">
-                {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                {{ $locale === 'en' ? 'Discuss Project' : 'Diskusi Proyek' }}
             </a>
 
             {{-- Mobile Hamburger --}}
@@ -92,8 +93,7 @@
                                 ($item['route'] === 'solutions' &&
                                     request()->routeIs('solutions.detail' . $localeSuffix)) ||
                                 ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix)) ||
-                                ($item['route'] === 'insights' &&
-                                    request()->routeIs('insights.detail' . $localeSuffix));
+                                ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                         @endphp
                         <a class="block rounded-lg px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
                             href="{{ route($item['route'] . $localeSuffix) }}">
@@ -106,7 +106,7 @@
                         <span
                             class="text-on-surface-variant font-normal text-sm">{{ app()->getLocale() === 'en' ? 'Language:' : 'Bahasa:' }}</span>
                         <div
-                            class="flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
+                            class="flex items-center bg-tertiary text-secondary rounded-lg px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
                             <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                                 class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                             <span class="mx-2 opacity-40">|</span>
@@ -118,7 +118,7 @@
                     <div class="mt-2 pt-2 border-t border-slate-100">
                         <a class="block text-center rounded-lg px-4 py-2.5 bg-primary text-white font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
                             href="{{ route('contact' . $localeSuffix) }}">
-                            {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                            {{ $locale === 'en' ? 'Discuss Project' : 'Diskusi Proyek' }}
                         </a>
                     </div>
                 </div>

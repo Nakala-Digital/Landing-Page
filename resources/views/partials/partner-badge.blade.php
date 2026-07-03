@@ -1,5 +1,5 @@
 <!-- Partner Badge Section -->
-<section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
+<section class="bg-secondary py-unit-lg border-y border-white/10 relative overflow-hidden">
     <!-- Decorative accent (solid, no gradient) -->
     <div class="absolute inset-0 bg-primary/10"></div>
     <div class="absolute inset-y-0 left-0 w-1.5 bg-primary"></div>
@@ -9,7 +9,7 @@
 
         <!-- Text Area -->
         <div class="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
-            <span class="font-label-sm text-[#A7F432] tracking-[0.2em] uppercase">
+            <span class="font-label-sm text-tertiary tracking-[0.2em] uppercase">
                 {{ app()->getLocale() === 'en' ? 'Official Representative &' : 'Perwakilan Resmi &' }}
             </span>
             <span class="text-white/80 font-body-md text-sm">
