@@ -212,7 +212,7 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
-                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Pengiriman Lokal, Kemampuan Regional'; @endphp
+                        @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis'; @endphp
                         {!! str_replace(
                             $heroHighlight,
                             '<span class="text-primary">' . $heroHighlight . '</span>',
@@ -236,7 +236,7 @@
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
@@ -632,6 +632,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-unit-lg">
+                    <a href="{{ route('faq' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                        class="inline-flex items-center gap-unit-xs text-primary font-button text-button hover:underline">
+                        {{ app()->getLocale() === 'en' ? 'View All FAQ' : 'Lihat Semua FAQ' }}
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
             </div>
         </section>
         <!-- Final CTA -->
@@ -653,7 +660,7 @@
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
+                        {{ app()->getLocale() === 'en' ? 'Schedule a Free Consultation' : 'Jadwalkan Konsultasi Gratis' }}
                     </a>
                 </div>
             </div>
