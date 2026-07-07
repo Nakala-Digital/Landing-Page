@@ -3,9 +3,10 @@
     $localeSuffix = $locale === 'en' ? '.en' : '';
     $data = $article;
 
-    $heroClass = $article['slug'] === 'ppdb-al-azhar'
-        ? 'max-h-[300px] w-auto float-left mr-6 mb-4'
-        : 'w-full max-w-4xl';
+    $heroClass =
+        $article['slug'] === 'ppdb-al-azhar'
+            ? 'w-full h-auto mx-auto md:float-left md:mr-6 mb-4 md:max-h-[300px] md:w-auto'
+            : 'w-full max-w-4xl';
 @endphp
 
 <!DOCTYPE html>
@@ -238,6 +239,21 @@
             border-color: #12AED0;
             margin: 32px 0;
         }
+
+        @media (max-width: 640px) {
+            .article-content h2 {
+                font-size: 20px;
+            }
+
+            .article-content p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .article-content li {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
@@ -247,7 +263,7 @@
     <main class="pt-20">
 
         {{-- Article Content --}}
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-lg md:py-unit-xl">
 
             {{-- Back Button --}}
             <a class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary hover:text-on-background transition-colors mb-unit-lg"
@@ -276,29 +292,20 @@
                     <span class="material-symbols-outlined text-[16px]">calendar_today</span>
                     {{ \Carbon\Carbon::parse($article['date'])->locale($locale)->isoFormat('D MMMM YYYY') }}
                 </span>
-
-                <span class="text-on-surface-variant/40">|</span>
-
-                <span class="flex items-center gap-1">
-                    <span class="material-symbols-outlined text-[16px]">person</span>
-                    {{ $locale === 'en' ? 'By' : 'Oleh' }} {{ $article['author']['name'] }}
-                </span>
             </div>
 
             {{-- Hero Image --}}
-            <img class="{{ $heroClass }} rounded-3xl mb-unit-md"
-                src="{{ $article['image'] }}" alt="{{ $article['title'][$locale] }}" />
+            <img class="{{ $heroClass }} rounded-3xl mb-unit-md" src="{{ $article['image'] }}"
+                alt="{{ $article['title'][$locale] }}" />
 
             {{-- Article --}}
             <div class="article-content max-w-4xl">
                 {!! $article['content'][$locale] !!}
             </div>
-            </article>
 
             {{-- RIGHT: Sidebar --}}
             <aside class="lg:col-span-4 space-y-unit-lg">
             </aside>
-        </div>
         </div>
 
         {{-- CTA Section --}}

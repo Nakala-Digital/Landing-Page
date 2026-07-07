@@ -115,8 +115,8 @@
                             "letterSpacing": "0.05em",
                             "fontWeight": "600"
                         }],
-                        "headline-h1-mobile": ["64px", {
-                            "lineHeight": "1.2",
+                        "headline-h1-mobile": ["28px", {
+                            "lineHeight": "1.3",
                             "fontWeight": "700"
                         }],
                         "headline-h2": ["40px", {
@@ -162,6 +162,35 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
+        /* MOBILE (< 768px) */
+        @media (max-width: 767px) {
+            .hero-title {
+                font-size: 22px !important;
+                line-height: 1.3 !important;
+            }
+
+            .hero-title + p {
+                font-size: 15px !important;
+            }
+        }
+
+        /* TABLET (768px - 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .hero-title {
+                font-size: 36px !important;
+                line-height: 1.2 !important;
+            }
+
+            .hero-title + p {
+                font-size: 16px !important;
+            }
+
+            .hero-image-wrap {
+                align-self: flex-start;
+                margin-top: 56px;
+            }
+        }
     </style>
 </head>
 
@@ -180,7 +209,7 @@
                         {{ app()->getLocale() === 'en' ? 'Tailored Digital Excellence' : 'Keunggulan Digital yang Disesuaikan' }}
                     </div>
                     <h1
-                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-unit-md leading-tight">
+                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-unit-md leading-tight hero-title">
                         {{ app()->getLocale() === 'en' ? 'Digital solutions' : 'Solusi digital' }} <span
                             class="text-primary">{{ app()->getLocale() === 'en' ? 'tailored' : 'yang disesuaikan' }}</span>
                         {{ app()->getLocale() === 'en' ? 'to business needs.' : 'dengan kebutuhan bisnis.' }}
@@ -192,16 +221,16 @@
                             : 'Solusi digital yang siap disesuaikan dengan kebutuhan bisnis Anda, meningkatkan efisiensi operasional dan pertumbuhan berkelanjutan.' }}
                     </p>
                     <div class="flex flex-wrap gap-unit-md">
-                        <button
-                            class="bg-primary text-on-primary px-unit-lg py-unit-md rounded-lg font-button text-button">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</button>
-                        <button
-                            class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-lg font-button text-button">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</button>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                            class="flex-1 bg-primary text-on-primary px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</a>
+                        <a href="{{ route('portfolio' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                            class="flex-1 border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</a>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative hero-image-wrap">
                     <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
                     <img alt="Platform Mockup"
-                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 w-full object-cover h-[400px]"
+                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 w-full object-cover h-[400px] hero-image"
                         data-alt="A high-fidelity digital dashboard mockup shown on a clean white laptop screen, positioned at an elegant angle. The interface features complex data visualizations, sleek navigation menus, and clean enterprise aesthetics in a professional light-mode setting. Soft daylight illuminates the scene from the side, creating subtle shadows and a premium, corporate tech-focused atmosphere. The overall composition is minimalist and authoritative."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFPWsSqZB8hiKpSGVy_jWZ7eEnJr7EoYxNuzzHplwocf1eYr5cwAoKX5T-P5RJtbVCsEMouFek11870Wr_jvct94bNTnwXnvYLGXjZdX9oFZlppC0yur0ddxU6aTXprqINg9_hiu_opgd9Z8APaLpqliC3kHbpZUK9TWErcf_Br2WV8h6XCOaNfwHxNbTe6Vds4dyKn5bO4IetclTUlApRCpMNNAWu6wFswHjcwQts3eZ4ejMzcP0dEnrHXbYrhYQlDOsTIE-5cIJA" />
                     <div
@@ -300,29 +329,30 @@
                 {{ app()->getLocale() === 'en' ? 'Local Delivery, Regional Capability' : 'Delivery Lokal, Kapabilitas Regional' }}
             </p>
             <nav class="flex-grow space-y-unit-sm">
+                @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                 <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors"
-                    href="#">
+                    href="{{ route('home' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">home</span>
                     {{ app()->getLocale() === 'en' ? 'Home' : 'Beranda' }}
                 </a>
                 <a class="flex items-center gap-unit-md p-unit-sm bg-primary-container text-on-primary-container font-bold rounded-lg transition-colors"
-                    href="#">
+                    href="{{ route('solutions' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">lightbulb</span>
                     {{ app()->getLocale() === 'en' ? 'Solutions' : 'Solusi' }}
                 </a>
                 <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors"
-                    href="#">
+                    href="{{ route('portfolio' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">work</span>
                     {{ app()->getLocale() === 'en' ? 'Portfolio' : 'Portofolio' }}
                 </a>
                 <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors"
-                    href="#">
+                    href="{{ route('contact' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">mail</span>
                     {{ app()->getLocale() === 'en' ? 'Contact' : 'Kontak' }}
                 </a>
             </nav>
-            <button
-                class="bg-primary text-on-primary w-full py-unit-md rounded-lg font-button text-button mt-auto">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</button>
+            <a href="{{ route('contact' . $localeSuffix) }}"
+                class="bg-primary text-on-primary w-full py-unit-md rounded-lg font-button text-button mt-auto block text-center">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
         </div>
     </div>
     <script>

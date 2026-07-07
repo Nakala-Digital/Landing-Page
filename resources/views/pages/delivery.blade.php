@@ -216,11 +216,11 @@
                                 : 'Pendekatan sistematis kami menghubungkan respons lokal dengan standar kualitas regional, memastikan setiap milestone teknis didukung tata kelola QA yang ketat.' }}
                         </p>
                         <div class="flex flex-wrap gap-4">
-                            <button
+                            <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                                 class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-lg flex items-center gap-2 hover:gap-3 transition-all duration-300">
                                 {{ app()->getLocale() === 'en' ? 'View Methodology' : 'Lihat Metodologi' }} <span
                                     class="material-symbols-outlined">arrow_forward</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="hidden lg:block relative">
@@ -235,7 +235,7 @@
         </section>
         <!-- Delivery Approach: End-to-End Lifecycle -->
         <section class="py-unit-xl bg-surface" id="delivery-flow">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg text-center max-w-2xl mx-auto">
                     <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Delivery
                         Approach</span>

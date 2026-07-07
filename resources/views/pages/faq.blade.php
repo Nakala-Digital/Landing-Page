@@ -194,10 +194,14 @@
                             : 'Semua yang perlu Anda ketahui tentang kerja sama dengan Nakala Digital untuk inisiatif enterprise berikutnya.' }}
                     </p>
                 </div>
-                <div class="hidden md:block">
+                <div class="hidden md:flex flex-wrap gap-unit-sm">
                     <a href="{{ route('contact' . $localeSuffix) }}"
                         class="inline-block border-2 border-primary text-primary px-unit-lg py-unit-sm rounded font-button text-button hover:bg-primary hover:text-white transition-all">
                         {{ app()->getLocale() === 'en' ? 'Start a Project' : 'Mulai Proyek' }}
+                    </a>
+                    <a href="{{ route('insights' . $localeSuffix) }}"
+                        class="inline-block border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-sm rounded font-button text-button hover:bg-on-secondary-fixed hover:text-white transition-all">
+                        {{ app()->getLocale() === 'en' ? 'View Insights' : 'Lihat Insight' }}
                     </a>
                 </div>
             </div>
@@ -339,9 +343,9 @@
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'You can reach us via email at contact@nakala.digital, by phone at +62 822-9570-6304, or through the contact form on our website. We typically respond within one business day. For project discussions, we offer a free discovery session to understand your needs and provide initial recommendations.'
-                                    : 'Anda dapat menghubungi kami melalui email di contact@nakala.digital, melalui telepon di +62 822-9570-6304, atau melalui form kontak di website kami. Kami biasanya merespon dalam satu hari kerja. Untuk diskusi proyek, kami menawarkan sesi discovery gratis untuk memahami kebutuhan Anda dan memberikan rekomendasi awal.' }}
+                                {!! app()->getLocale() === 'en'
+                                    ? 'You can reach us via email at <a href="mailto:contact@nakala.digital" class="underline hover:text-primary transition-colors">contact@nakala.digital</a>, by phone at <a href="tel:+6282295706304" class="underline hover:text-primary transition-colors">+62 822-9570-6304</a>, or through the contact form on our website. We typically respond within one business day. For project discussions, we offer a free discovery session to understand your needs and provide initial recommendations.'
+                                    : 'Anda dapat menghubungi kami melalui email di <a href="mailto:contact@nakala.digital" class="underline hover:text-primary transition-colors">contact@nakala.digital</a>, melalui telepon di <a href="tel:+6282295706304" class="underline hover:text-primary transition-colors">+62 822-9570-6304</a>, atau melalui form kontak di website kami. Kami biasanya merespon dalam satu hari kerja. Untuk diskusi proyek, kami menawarkan sesi discovery gratis untuk memahami kebutuhan Anda dan memberikan rekomendasi awal.' !!}
                             </p>
                         </div>
                     </div>

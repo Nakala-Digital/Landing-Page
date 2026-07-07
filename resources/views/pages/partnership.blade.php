@@ -434,14 +434,14 @@
                             technical capabilities in the Indonesian market.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button
+                            <a href="{{ route('contact') }}"
                                 class="bg-impact-lime text-midnight-navy px-10 py-5 rounded-lg font-headline-h3 text-headline-h3 hover:scale-105 transition-transform shadow-xl">
                                 Bicara dengan Tim Nakala
-                            </button>
-                            <button
+                            </a>
+                            <a href="{{ route('contact.en') }}"
                                 class="bg-midnight-navy text-white px-10 py-5 rounded-lg font-headline-h3 text-headline-h3 hover:bg-midnight-navy/90 transition-colors">
                                 Talk to Nakala Team
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
