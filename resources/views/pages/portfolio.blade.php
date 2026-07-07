@@ -208,11 +208,11 @@
             </div>
         </section>
         <!-- Bento Grid Portfolio Section -->
-        <section class="py-unit-xl px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <section class="py-unit-xl px-margin-mobile md:px-8 xl:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-gutter">
                 <!-- 1. PPDB -->
                 <div
-                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
+                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
                     <div class="flex flex-col md:flex-row h-full">
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
@@ -244,7 +244,7 @@
                 </div>
                 <!-- 2. HRMS -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
+                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
                     <div class="mb-unit-xl">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
@@ -269,7 +269,7 @@
                 </div>
                 <!-- 3. HSE -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
+                    class="md:col-span-1 xl:col-span-4 group bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
                     <span
                         class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
                     <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
@@ -287,7 +287,7 @@
                 </div>
                 <!-- 4. WargaKas -->
                 <div
-                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
+                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
                     <div class="flex flex-col md:flex-row-reverse h-full">
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
@@ -318,7 +318,7 @@
                 </div>
                 <!-- 5. AI Hiring -->
                 <div
-                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-1 xl:col-span-6 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
                     <div class="flex justify-between items-start mb-unit-lg">
                         <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
                         <span
@@ -341,7 +341,7 @@
                 </div>
                 <!-- 6. AI Coach -->
                 <div
-                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
+                    class="md:col-span-1 xl:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
                     <div class="mb-unit-xl text-center md:text-left">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
@@ -369,7 +369,7 @@
                 </div>
                 <!-- 7. D365 Support -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-2 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
                     <div class="flex items-center gap-unit-sm mb-unit-md">
                         <span class="material-symbols-outlined text-primary">hub</span>
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
@@ -390,7 +390,7 @@
                 </div>
                 <!-- 8. 360 Customer Engagement -->
                 <div
-                    class="md:col-span-8 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
+                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
                     <div class="flex-1">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
