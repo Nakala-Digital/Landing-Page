@@ -120,8 +120,8 @@
                             "letterSpacing": "0.05em",
                             "fontWeight": "600"
                         }],
-                        "headline-h1-mobile": ["36px", {
-                            "lineHeight": "1.2",
+                        "headline-h1-mobile": ["28px", {
+                            "lineHeight": "1.3",
                             "fontWeight": "700"
                         }],
                         "headline-h2": ["40px", {
@@ -193,6 +193,104 @@
         .accordion-item.active .toggle-icon {
             transform: rotate(180deg);
         }
+
+        /* --- SOCIAL PROOF STATS: EDIT SESUAI KEBUTUHAN --- */
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-weight: 700;
+            color: #12AED0;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #031A44;
+            line-height: 1.2;
+        }
+
+        /* MOBILE (< 768px) */
+        @media (max-width: 767px) {
+            .stat-card {
+                padding: 24px 16px;
+                border-bottom: 1px solid #12AED0;
+            }
+
+            .stat-card:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+
+            .stat-number {
+                font-size: 36px;
+                margin-bottom: 4px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+        }
+
+        /* TABLET (768px - 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .stat-card {
+                padding: 16px;
+            }
+
+            .stat-card:not(:last-child) {
+                border-right: 1px solid #12AED0;
+            }
+
+            .stat-number {
+                font-size: 48px;
+                margin-bottom: 6px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+        }
+
+        /* DESKTOP (> 1024px) */
+        @media (min-width: 1025px) {
+            .stat-card {
+                padding: 24px 16px;
+            }
+
+            .stat-card:not(:last-child) {
+                border-right: 1px solid #12AED0;
+            }
+
+            .stat-number {
+                font-size: 64px;
+                margin-bottom: 8px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+        }
+
+        /* SMALL MOBILE (≤400px) — Hero readability fix */
+        @media (max-width: 400px) {
+            .hero-heading {
+                font-size: 22px !important;
+                line-height: 1.3 !important;
+            }
+            .hero-desc {
+                font-size: 15px !important;
+            }
+            .hero-btn {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+                font-size: 14px !important;
+            }
+        }
     </style>
 </head>
 
@@ -211,7 +309,7 @@
                         {{ __('messages.hero_badge') }}
                     </div>
                     <h1
-                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl">
+                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-2xl hero-heading">
                         @php $heroHighlight = app()->getLocale() === 'en' ? 'Business Growth' : 'Pertumbuhan Bisnis'; @endphp
                         {!! str_replace(
                             $heroHighlight,
@@ -219,7 +317,7 @@
                             __('messages.hero_title'),
                         ) !!}
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl hero-desc">
                         {{ __('messages.hero_desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-2">
@@ -229,11 +327,11 @@
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
+                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform hero-btn">
                             {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
+                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors hero-btn">
                             {{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}
                         </a>
                     </div>
@@ -249,35 +347,34 @@
                 </div>
             </div>
         </section>
+
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
+
         <!-- Social Proof Metrics -->
         <section class="py-unit-xl bg-surface">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-                    <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
-                        <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">8+</div>
-                        <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_projects') }}</div>
+                    <div class="stat-card">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">{{ __('messages.metric_projects') }}</div>
                     </div>
-                    <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
-                        <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3+</div>
-                        <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_expertise') }}</div>
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">{{ __('messages.metric_expertise') }}</div>
                     </div>
-                    <div class="text-center p-unit-lg border-r border-outline-variant last:border-0">
-                        <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">3</div>
-                        <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_hubs') }}</div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">{{ __('messages.metric_hubs') }}</div>
                     </div>
-                    <div class="text-center p-unit-lg">
-                        <div class="font-display-lg-mobile md:text-[64px] font-bold text-primary mb-unit-xs">24/7</div>
-                        <div class="font-label-sm text-on-surface-variant uppercase tracking-widest">
-                            {{ __('messages.metric_support') }}</div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">{{ __('messages.metric_support') }}</div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Capabilities Bento Grid -->
         <section class="py-unit-xl bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -317,6 +414,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <!-- Bento Item 2 -->
                     <div
                         class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-lg text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
@@ -332,6 +430,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Bento Item 3 -->
                     <div
                         class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
@@ -516,9 +615,9 @@
                         </button>
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
-                                {{ app()->getLocale() === 'en'
-                                    ? 'You can reach us via email at contact@nakala.digital, by phone at +62 822-9570-6304, or through the contact form on our website. We typically respond within one business day. For project discussions, we offer a free discovery session to understand your needs and provide initial recommendations.'
-                                    : 'Anda dapat menghubungi kami melalui email di contact@nakala.digital, melalui telepon di +62 822-9570-6304, atau melalui form kontak di website kami. Kami biasanya merespon dalam satu hari kerja. Untuk diskusi proyek, kami menawarkan sesi discovery gratis untuk memahami kebutuhan Anda dan memberikan rekomendasi awal.' }}
+                                {!! app()->getLocale() === 'en'
+                                    ? 'You can reach us via email at <a href="mailto:contact@nakala.digital" class="underline hover:text-primary transition-colors">contact@nakala.digital</a>, by phone at <a href="tel:+6282295706304" class="underline hover:text-primary transition-colors">+62 822-9570-6304</a>, or through the contact form on our website. We typically respond within one business day. For project discussions, we offer a free discovery session to understand your needs and provide initial recommendations.'
+                                    : 'Anda dapat menghubungi kami melalui email di <a href="mailto:contact@nakala.digital" class="underline hover:text-primary transition-colors">contact@nakala.digital</a>, melalui telepon di <a href="tel:+6282295706304" class="underline hover:text-primary transition-colors">+62 822-9570-6304</a>, atau melalui form kontak di website kami. Kami biasanya merespon dalam satu hari kerja. Untuk diskusi proyek, kami menawarkan sesi discovery gratis untuk memahami kebutuhan Anda dan memberikan rekomendasi awal.' !!}
                             </p>
                         </div>
                     </div>

@@ -30,12 +30,12 @@
                     <div class="relative pl-8">
                         <span
                             class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">mail</span>
-                        <span class="font-body-md text-white/75 text-sm">contact@nakala.digital</span>
+                        <a href="mailto:contact@nakala.digital" class="font-body-md text-white/75 text-sm hover:text-[#A7F432] transition-colors">contact@nakala.digital</a>
                     </div>
                     <div class="relative pl-8">
                         <span
                             class="material-symbols-outlined absolute left-0 top-1 text-[#12AED0] text-[18px] w-5 text-center leading-none">phone</span>
-                        <span class="font-body-md text-white/75 text-sm">0822-9570-6304</span>
+                        <a href="tel:+6282295706304" class="font-body-md text-white/75 text-sm hover:text-[#A7F432] transition-colors">0822-9570-6304</a>
                     </div>
                 </div>
 
@@ -100,16 +100,16 @@
                     {{ app()->getLocale() === 'en' ? 'Capabilities' : 'Kapabilitas' }}</h4>
                 <ul class="space-y-3">
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="#">{{ app()->getLocale() === 'en' ? 'Software Development' : 'Pengembangan Software' }}</a>
+                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Software Development' : 'Pengembangan Software' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="#">{{ app()->getLocale() === 'en' ? 'AI & Data Analytics' : 'AI & Analitik Data' }}</a>
+                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'AI & Data Analytics' : 'AI & Analitik Data' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="#">{{ app()->getLocale() === 'en' ? 'Tech Advisory' : 'Konsultasi Teknologi' }}</a>
+                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Tech Advisory' : 'Konsultasi Teknologi' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="#">{{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}</a>
+                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Cloud Infrastructure' : 'Infrastruktur Cloud' }}</a>
                     </li>
                 </ul>
             </div>

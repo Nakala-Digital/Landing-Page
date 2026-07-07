@@ -162,7 +162,7 @@
 
         <!-- Hero -->
         <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
                 <div
                     class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
                     <span class="material-symbols-outlined text-[16px]">bolt</span>
@@ -181,27 +181,27 @@
         </section>
 
         <!-- Featured Insight -->
-        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <section class="py-unit-xl px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
                 <span
                     class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}</span>
             </div>
             <div
-                class="group cursor-pointer bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-1/2 aspect-video md:aspect-auto overflow-hidden">
+                class="group cursor-pointer bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         data-alt="A sophisticated data visualization dashboard displayed on multiple high-resolution monitors in a sleek, dimly lit command center."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR535vuudX7lTS7e4rlJh7a9-gVx5AUk-xOXNnnCSBtfb5s7pPif-MixNqR0pMjjojGO_pBwl-VJfRc7i9aneEF3eIqu__3s4_IH1bqYRQmOL9gQCYRooxu7z0_FSjKu97jX8mCvGQzUKtFn12bVzeHbWzoKYiF8rv_pyukmlVamh3S8_Hhyj6uYihaF8rR1ZHEW7QbcWv5lNaab6a7LRWDZ_DRm5-olpTDLSAecUuoW7Top-3b5NwJmCEQZJYjM5nHV33VJnRxhhU" />
                 </div>
                 <div
-                    class="md:w-1/2 p-unit-lg flex flex-col justify-between border-t-4 md:border-t-0 md:border-l-4 border-primary">
+                    class="lg:w-1/2 p-unit-lg flex flex-col justify-between border-t-4 lg:border-t-0 lg:border-l-4 border-primary">
                     <div>
                         <div class="flex items-center gap-unit-sm mb-unit-sm">
                             <span
                                 class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                         </div>
                         <h2
-                            class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
+                            class="font-headline-h2 text-headline-h2-mobile lg:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
                             {{ app()->getLocale() === 'en' ? 'Bridging the Gap: AI Implementation for Regional Enterprises' : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
                         </h2>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">
@@ -211,7 +211,7 @@
                         </p>
                     </div>
                     <a class="inline-flex items-center gap-unit-xs text-primary font-button text-button group"
-                        href="#">
+                        href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'ppdb-al-azhar') }}">
                         {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
                         <span
                             class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
@@ -222,7 +222,7 @@
 
         <!-- Draft Topics Grid -->
         <section class="py-unit-xl bg-surface-container-low">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-xl max-w-3xl">
                     <span
                         class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
@@ -230,9 +230,9 @@
                         {{ app()->getLocale() === 'en' ? 'Explore by Topic' : 'Jelajahi berdasarkan Topik' }}
                     </h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-                    <div class="md:col-span-9">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+                    <div class="lg:col-span-9">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
                             <!-- Topic 1: PPDB Al-Azhar -->
                             <a href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'ppdb-al-azhar') }}"
@@ -582,7 +582,7 @@
                                 class="font-body-md text-body-md text-secondary cursor-pointer hover:underline disabled:text-on-surface-variant disabled:cursor-not-allowed select-none">{{ app()->getLocale() === 'en' ? 'Next' : 'Selanjutnya' }}</span>
                         </div>
                     </div>
-                    <div class="md:col-span-3">
+                    <div class="lg:col-span-3">
 
                         {{-- Category Card --}}
                         <div class="border border-outline-variant rounded-xl p-unit-md">

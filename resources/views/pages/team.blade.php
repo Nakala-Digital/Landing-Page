@@ -98,6 +98,7 @@
                         "body-md": ["Poppins"],
                         "button": ["Poppins"],
                         "headline-h1": ["Poppins"],
+                        "headline-h1-mobile": ["Poppins"],
                         "headline-h2": ["Poppins"],
                         "headline-h3": ["Poppins"],
                         "label-sm": ["Poppins"],
@@ -116,6 +117,10 @@
                         "body-lg": ["18px", {
                             "lineHeight": "1.6",
                             "fontWeight": "400"
+                        }],
+                        "headline-h1-mobile": ["28px", {
+                            "lineHeight": "1.3",
+                            "fontWeight": "700"
                         }],
                         "headline-h1": ["56px", {
                             "lineHeight": "1.2",
@@ -143,6 +148,23 @@
             }
         }
     </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* SMALL MOBILE (≤400px) — Hero readability fix */
+        @media (max-width: 400px) {
+            .hero-heading {
+                font-size: 22px !important;
+                line-height: 1.3 !important;
+            }
+            .hero-desc {
+                font-size: 15px !important;
+            }
+        }
     </style>
 </head>
 
@@ -150,7 +172,7 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative h-[614px] flex items-center overflow-hidden bg-on-background">
+        <section class="relative min-h-[500px] md:h-[614px] flex items-center overflow-hidden bg-on-background">
             <div class="absolute inset-0 z-0">
                 <img class="w-full h-full object-cover opacity-30 grayscale"
                     data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office. The lighting is crisp and natural, emphasizing a high-contrast aesthetic with deep shadows and brilliant highlights. The scene conveys an atmosphere of technical rigor and authoritative stability, utilizing the brand's primary cyan and midnight navy tones in the environment."
@@ -160,12 +182,12 @@
                 <div class="max-w-3xl">
                     <span
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-sm font-label-sm text-label-sm uppercase mb-unit-md">{{ app()->getLocale() === 'en' ? 'Team & Partnership' : 'Tim & Kemitraan' }}</span>
-                    <h1 class="font-headline-h1 text-headline-h1 text-on-primary mb-unit-lg leading-tight">
+                    <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-primary mb-unit-lg leading-tight hero-heading">
                         {{ app()->getLocale() === 'en' ? 'Core Team Nakala,' : 'Tim inti Nakala,' }}
                         <span
                             class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'strengthened by Romulus Digital.' : 'diperkuat oleh Romulus Digital.' }}</span>
                     </h1>
-                    <p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+                    <p class="font-body-lg text-body-lg text-surface-variant max-w-xl hero-desc">
                         {{ app()->getLocale() === 'en'
                             ? 'Nakala remains the primary delivery partner for every client engagement. Romulus Digital supports as a strategic trust layer, bringing regional credibility, reference, and capability when the work needs additional scale.'
                             : 'Nakala tetap menjadi partner utama dalam setiap engagement klien. Romulus Digital mendukung sebagai trust layer strategis yang memberi kredibilitas, referensi, dan kapabilitas regional saat pekerjaan membutuhkan skala tambahan.' }}
@@ -227,7 +249,7 @@
 
                 <!-- COO -->
                 <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl md:w-[calc(50%-12px)] max-w-md">
+                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl w-full max-w-md">
                     <div class="aspect-square relative overflow-hidden">
                         <img alt="Raul Mahya Komaran"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

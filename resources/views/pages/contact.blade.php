@@ -1,8 +1,26 @@
 <!DOCTYPE html>
+<!--
+  ============================================================
+  CONTACT PAGE – Nakala Digital
+  ============================================================
+  File        : contact.blade.php
+  Route       : /contact (ID) | /en/contact (EN)
+  Purpose     : Main contact/inquiry page with hero, info panel,
+                contact form, WhatsApp CTA, and engagement model.
+  Dependencies: tailwindcss (CDN), Material Symbols, Poppins (Google Fonts)
+  ============================================================
+-->
 
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
 <head>
+    <!--
+      ========================================================
+      META & SEO
+      ========================================================
+      - Dynamic title based on locale.
+      - Includes SEO partial for og:tags / meta description.
+    -->
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>{{ app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital' }}</title>
@@ -13,6 +31,15 @@
                 ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
                 : 'Hubungi Nakala Digital untuk mendiskusikan projek software, AI, atau transformasi digital Anda selanjutnya.',
     ])
+
+    <!--
+      ========================================================
+      Tailwind CSS (CDN) – v4 with forms & container-queries
+      ========================================================
+      - Tailwind config is embedded below with custom design tokens:
+        colors, spacing, fontFamily, fontSize, borderRadius.
+      - All tokens follow Nakala Digital's design system.
+    -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -153,6 +180,15 @@
             },
         }
     </script>
+
+    <!--
+      ========================================================
+      CUSTOM STYLES
+      ========================================================
+      - .material-symbols-outlined : icon font settings.
+      - .bento-grid               : 12-column grid helper.
+      - .form-input-focus         : focus ring override for form fields.
+    -->
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -173,9 +209,26 @@
 </head>
 
 <body class="bg-background text-on-background font-body-md">
+
+    <!--
+      ========================================================
+      NAVBAR (partial)
+      ========================================================
+      Fixed top navigation with logo, desktop nav links, language
+      switcher, CTA button, and mobile hamburger menu.
+    -->
     @include('partials.navbar')
+
     <main class="pt-20">
-        <!-- Hero Section -->
+
+        <!--
+          ======================================================
+          HERO SECTION
+          ======================================================
+          - Full-width midnight navy background with overlay image.
+          - Tagline badge + headline + description.
+          - Content is constrained by max-w-container-max.
+        -->
         <section class="relative bg-midnight-navy text-white py-unit-xl overflow-hidden">
             <div class="absolute inset-0 opacity-10">
                 <img class="w-full h-full object-cover"
@@ -197,15 +250,38 @@
                 </p>
             </div>
         </section>
-        <!-- Content & Form Section -->
+
+        <!--
+          ======================================================
+          CONTENT & FORM SECTION
+          ======================================================
+          12-column grid layout:
+          - LEFT (lg:col-span-4) : Contact info, WhatsApp CTA,
+            engagement model timeline.
+          - RIGHT (lg:col-span-8): Contact form with name, company,
+            position, email, phone, project type, budget, timeline,
+            and message textarea.
+        -->
         <section class="py-unit-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-                <!-- Info Panel (Left) -->
+
+                <!--
+                  ====================================================
+                  LEFT PANEL — Contact Information
+                  ====================================================
+                  Card with border-t-4 in electric-cyan containing:
+                  - Email    (contact@nakala.digital)
+                  - Phone    (+6282295706304)
+                  - Office   (Pointlab Coworking, Bandung)
+                  - Consultation session CTA
+                -->
                 <div class="lg:col-span-4 space-y-unit-lg">
                     <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
                             {{ app()->getLocale() === 'en' ? 'Contact Information' : 'Informasi Kontak' }}</h3>
                         <div class="space-y-unit-md">
+
+                            <!-- Email -->
                             <div class="flex items-start gap-unit-md">
                                 <span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
                                 <div>
@@ -214,6 +290,8 @@
                                     <p class="font-body-lg">contact@nakala.digital</p>
                                 </div>
                             </div>
+
+                            <!-- Phone -->
                             <div class="flex items-start gap-unit-md">
                                 <span class="material-symbols-outlined text-electric-cyan"
                                     data-icon="phone">phone</span>
@@ -223,6 +301,8 @@
                                     <p class="font-body-lg">+6282295706304</p>
                                 </div>
                             </div>
+
+                            <!-- Office Address -->
                             <div class="flex items-start gap-unit-md">
                                 <span class="material-symbols-outlined text-electric-cyan"
                                     data-icon="location_on">location_on</span>
@@ -234,6 +314,8 @@
                                     </p>
                                 </div>
                             </div>
+
+                            <!-- Consultation Session -->
                             <div class="flex items-start gap-unit-md">
                                 <span class="material-symbols-outlined text-electric-cyan"
                                     data-icon="calendar_month">calendar_month</span>
@@ -249,7 +331,14 @@
                         </div>
                     </div>
 
-                    <!-- WhatsApp CTA -->
+                    <!--
+                      ====================================================
+                      WHATSAPP CTA
+                      ====================================================
+                      - Quick-response card with chat icon.
+                      - Button opens wa.me link in new tab.
+                      - Uses rel="noopener noreferrer" for security.
+                    -->
                     <div
                         class="p-unit-lg bg-white border border-outline-variant shadow-sm border-l-4 border-l-primary flex flex-col gap-unit-md">
                         <div class="flex items-center gap-unit-md">
@@ -271,7 +360,14 @@
                         </a>
                     </div>
 
-                    <!-- Engagement Model -->
+                    <!--
+                      ====================================================
+                      ENGAGEMENT MODEL
+                      ====================================================
+                      Timeline with vertical line and dots showing the
+                      4-step delivery process:
+                      01. Discovery → 02. Design → 03. Agile Dev → 04. Handover
+                    -->
                     <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
                             {{ app()->getLocale() === 'en' ? 'Our Model' : 'Model Kami' }}</h4>
@@ -307,12 +403,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- Contact Form (Right) -->
+
+                <!--
+                  ====================================================
+                  RIGHT PANEL — Contact Form
+                  ====================================================
+                  Form fields:
+                  - Row 1: Full Name + Company
+                  - Row 2: Position + Email
+                  - Row 3: Phone + Project Type (dropdown)
+                  - Row 4: Budget Range (dropdown) + Timeline (dropdown)
+                  - Row 5: Message / Project Details (textarea)
+                  - Submit button
+                  On submit, sends data via mailto: link.
+                -->
                 <div class="lg:col-span-8 flex flex-col gap-unit-xs">
                     <span
                         class="font-label-sm text-primary uppercase tracking-[0.3em] block">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'Formulir Kontak' }}</span>
                     <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm">
                         <form class="space-y-unit-md" id="contactForm">
+
+                            <!-- Row 1: Full Name + Company -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
                                     <label
@@ -331,6 +442,8 @@
                                         type="text" />
                                 </div>
                             </div>
+
+                            <!-- Row 2: Position + Email -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
                                     <label
@@ -348,6 +461,8 @@
                                         placeholder="john@company.com" type="email" />
                                 </div>
                             </div>
+
+                            <!-- Row 3: Phone + Project Type -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
                                     <label
@@ -375,6 +490,8 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <!-- Row 4: Budget + Timeline -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
                                 <div class="space-y-1">
                                     <label
@@ -404,12 +521,16 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <!-- Row 5: Message -->
                             <div class="space-y-1">
                                 <label
                                     class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Message / Project Details' : 'Pesan / Detail Proyek' }}</label>
                                 <textarea class="w-full border-outline-variant rounded p-3 min-h-[120px] form-input-focus bg-surface-container-lowest"
                                     placeholder="{{ app()->getLocale() === 'en' ? 'Tell us about your technical challenges...' : 'Ceritakan tentang tantangan teknis Anda...' }}"></textarea>
                             </div>
+
+                            <!-- Submit -->
                             <div class="pt-unit-md">
                                 <button
                                     class="bg-primary text-white px-8 py-4 rounded font-button text-button uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
@@ -422,12 +543,23 @@
                 </div>
             </div>
         </section>
+
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
 
     </main>
+
     <!-- Footer -->
     @include('partials.footer')
+
+    <!--
+      ========================================================
+      JAVASCRIPT
+      ========================================================
+      - Contact form handler: collects all field values,
+        serializes them, and opens mailto: link.
+      - Scroll header handler: shrinks navbar on scroll.
+    -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
@@ -459,6 +591,9 @@
             }, 3000);
         });
 
+        /*
+         * Scroll header: toggle shadow & height on scroll > 50px.
+         */
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header.fixed');
             if (window.scrollY > 50) {

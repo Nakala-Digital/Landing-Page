@@ -208,7 +208,7 @@
             </div>
         </section>
         <!-- Bento Grid Portfolio Section -->
-        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <section class="py-unit-xl px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
                 <!-- 1. PPDB -->
                 <div
@@ -244,7 +244,7 @@
                 </div>
                 <!-- 2. HRMS -->
                 <div
-                    class="md:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
+                    class="md:col-span-6 lg:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
                     <div class="mb-unit-xl">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
@@ -269,7 +269,7 @@
                 </div>
                 <!-- 3. HSE -->
                 <div
-                    class="md:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
+                    class="md:col-span-6 lg:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
                     <span
                         class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
                     <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
@@ -345,9 +345,11 @@
                         </p>
                         <div class="flex gap-unit-sm">
                             <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">smart_toy</span></div>
+                                <span class="material-symbols-outlined text-sm">smart_toy</span>
+                            </div>
                             <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined text-sm">school</span></div>
+                                <span class="material-symbols-outlined text-sm">school</span>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -358,7 +360,7 @@
                 </div>
                 <!-- 7. D365 Support -->
                 <div
-                    class="md:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-6 lg:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
                     <div class="flex items-center gap-unit-sm mb-unit-md">
                         <span class="material-symbols-outlined text-primary">hub</span>
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>

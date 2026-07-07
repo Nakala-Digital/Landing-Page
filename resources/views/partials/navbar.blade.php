@@ -30,7 +30,7 @@
 <header
     class="fixed top-0 inset-x-0 z-50 h-20 bg-white/95 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.06)] transition-all duration-300">
     <nav
-        class="max-w-container-max mx-auto h-full px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-4 xl:gap-6">
+        class="max-w-container-max mx-auto h-full px-margin-mobile md:px-8 xl:px-16 2xl:px-margin-desktop flex items-center justify-between gap-4 xl:gap-6">
 
         {{-- Left: Logo --}}
         <div class="flex items-center shrink-0">
@@ -41,7 +41,7 @@
         </div>
 
         {{-- Center: Desktop Nav --}}
-        <div class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 flex-1">
+        <div class="hidden min-[1281px]:flex items-center justify-center gap-3 xl:gap-4 flex-1">
             @foreach ($navItems as $item)
                 @php
                     $active =
@@ -50,7 +50,7 @@
                         ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix)) ||
                         ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                 @endphp
-                <a class="relative whitespace-nowrap font-button text-button uppercase tracking-wide xl:tracking-wider transition-colors pb-0.5
+                <a class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
                         {{ $active
                             ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full'
                             : 'text-on-surface-variant hover:text-primary' }}"
@@ -62,6 +62,7 @@
 
         {{-- Right: CTA, Language Switcher, and Mobile Hamburger --}}
         <div class="flex items-center justify-end gap-3 xl:gap-4 shrink-0">
+
             {{-- Language Switcher (Desktop/Tablet) --}}
             <div
                 class="hidden md:flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
@@ -73,13 +74,13 @@
             </div>
 
             {{-- CTA (Desktop only) --}}
-            <a class="hidden lg:inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
+            <a class="hidden min-[1281px]:inline-flex items-center justify-center bg-primary text-white px-4 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
                 href="{{ route('contact' . $localeSuffix) }}">
                 {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
             </a>
 
             {{-- Mobile Hamburger --}}
-            <details class="lg:hidden relative">
+            <details class="min-[1281px]:hidden relative">
                 <summary
                     class="list-none cursor-pointer inline-flex h-10 w-10 items-center justify-center rounded-lg text-primary hover:bg-slate-100 transition-colors">
                     <span class="material-symbols-outlined">menu</span>
