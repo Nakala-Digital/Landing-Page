@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -200,15 +200,19 @@
                         for Romulus Digital's enterprise-grade solutions in the Indonesian market.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
+                        @if(app()->getLocale() === 'en')
+                        <a href="{{ route('contact.en') }}"
+                            class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
+                            Talk to Nakala Team
+                            <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                        @else
                         <a href="{{ route('contact') }}"
                             class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
                             Bicara dengan Tim Nakala
                             <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
                         </a>
-                        <a href="{{ route('contact.en') }}"
-                            class="border-2 border-surface-variant text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
-                            Talk to Nakala Team
-                        </a>
+                        @endif
                     </div>
                 </div>
                 <div class="relative group">
@@ -434,14 +438,17 @@
                             technical capabilities in the Indonesian market.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            @if(app()->getLocale() === 'en')
+                            <a href="{{ route('contact.en') }}"
+                                class="bg-impact-lime text-midnight-navy px-10 py-5 rounded-lg font-headline-h3 text-headline-h3 hover:scale-105 transition-transform shadow-xl">
+                                Talk to Nakala Team
+                            </a>
+                            @else
                             <a href="{{ route('contact') }}"
                                 class="bg-impact-lime text-midnight-navy px-10 py-5 rounded-lg font-headline-h3 text-headline-h3 hover:scale-105 transition-transform shadow-xl">
                                 Bicara dengan Tim Nakala
                             </a>
-                            <a href="{{ route('contact.en') }}"
-                                class="bg-midnight-navy text-white px-10 py-5 rounded-lg font-headline-h3 text-headline-h3 hover:bg-midnight-navy/90 transition-colors">
-                                Talk to Nakala Team
-                            </a>
+                            @endif
                         </div>
                     </div>
                 </div>
