@@ -30,7 +30,7 @@
 <header
     class="fixed top-0 inset-x-0 z-50 h-20 bg-white/95 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.06)] transition-all duration-300">
     <nav
-        class="max-w-container-max mx-auto h-full px-margin-mobile md:px-8 xl:px-16 2xl:px-margin-desktop flex items-center justify-between gap-4 xl:gap-6">
+        class="w-full max-w-[1480px] mx-auto h-full px-margin-mobile md:px-8 xl:px-10 2xl:px-12 grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 xl:gap-8">
 
         {{-- Left: Logo --}}
         <div class="flex items-center shrink-0">
@@ -41,7 +41,7 @@
         </div>
 
         {{-- Center: Desktop Nav --}}
-        <div class="hidden min-[1281px]:flex items-center justify-center gap-3 xl:gap-4 flex-1">
+        <div class="hidden min-[1281px]:flex items-center justify-center gap-3 xl:gap-4 min-[1536px]:gap-5 min-w-0">
             @foreach ($navItems as $item)
                 @php
                     $active =
