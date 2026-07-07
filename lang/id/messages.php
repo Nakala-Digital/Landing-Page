@@ -38,6 +38,6 @@ return [
     'insights_nav' => 'Insight',
 
     'final_cta_title' => 'Siap memulai perjalanan transformasi digital Anda?',
-    'final_cta_desc' => 'Jadwalkan sesi diskusi dengan tim kami dan jelajahi bagaimana kami dapat membantu organisasi Anda berkembang.',
+    'final_cta_desc' => 'Jadwalkan Sesi Discovery bersama tim kami dan jelajahi bagaimana kami dapat membantu organisasi Anda berkembang.',
     'final_cta_btn' => 'Diskusikan Proyek Anda',
 ];

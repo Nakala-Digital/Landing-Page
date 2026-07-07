@@ -11,7 +11,7 @@
         'description' =>
             app()->getLocale() === 'en'
                 ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
-                : 'Hubungi Nakala Digital untuk mendiskusikan projek software, AI, atau transformasi digital Anda selanjutnya.',
+                : 'Hubungi Nakala Digital untuk mendiskusikan proyek software, AI, atau transformasi digital Anda selanjutnya.',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -242,7 +242,7 @@
                                         {{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}
                                     </p>
                                     <p class="font-body-lg">
-                                        {{ app()->getLocale() === 'en' ? 'Free strategy consultation' : 'Konsultasi strategi gratis' }}
+                                        {{ app()->getLocale() === 'en' ? 'Free Discovery Session' : 'Sesi Discovery Gratis' }}
                                     </p>
                                 </div>
                             </div>
@@ -441,7 +441,7 @@
             btn.innerHTML = isEn ? 'Opening Email...' : 'Membuka Email...';
             btn.disabled = true;
 
-            const subjectText = isEn ? 'Project Inquiry | Nakala Digital' : 'Pertanyaan Projek | Nakala Digital';
+            const subjectText = isEn ? 'Project Inquiry | Nakala Digital' : 'Pertanyaan Proyek | Nakala Digital';
             const subject = encodeURIComponent(subjectText);
             const body = encodeURIComponent(
                 Object.entries(data)

@@ -38,6 +38,6 @@ return [
     'insights_nav' => 'Insights',
 
     'final_cta_title' => 'Ready to start your digital transformation journey?',
-    'final_cta_desc' => 'Schedule a discovery session with our team and explore how we can help your organisation grow.',
+    'final_cta_desc' => 'Schedule a Discovery Session with our team and explore how we can help your organisation grow.',
     'final_cta_btn' => 'Discuss Your Project',
 ];

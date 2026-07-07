@@ -83,7 +83,7 @@
                             href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Our Services' : 'Layanan Kami' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-tertiary transition-colors text-sm"
-                            href="{{ route('portfolio' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Project Portfolio' : 'Portofolio Projek' }}</a>
+                            href="{{ route('portfolio' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Project Portfolio' : 'Portofolio Proyek' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-tertiary transition-colors text-sm"
                             href="{{ route('insights' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Insights' : 'Insight' }}</a>
