@@ -187,7 +187,7 @@
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                             class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
                                 ? 'Build meaningful digital products that solve real operational and business pain points.'
-                                : 'Membangun produk digital bermakna yang menyelesaikan pain point operasional dan bisnis yang nyata.' }}
+                                : 'Membangun produk digital bermakna yang menyelesaikan masalah operasional dan bisnis yang nyata.' }}
                         </p>
                     </div>
                     <div
@@ -330,7 +330,7 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
                             </div>
                             <h4 class="font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'AI Mindset' }}</h4>
                         </div>
                         <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
@@ -402,7 +402,7 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
                             </div>
                             <h4 class="font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Deployment Cepat' }}</h4>
                         </div>
                         <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'

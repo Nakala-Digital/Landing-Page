@@ -230,7 +230,7 @@
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
                             class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors">
@@ -425,7 +425,7 @@
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
-                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses keterlibatan proyek?' }}</span>
                             <span
                                 class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
@@ -459,7 +459,7 @@
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
-                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                                class="font-headline-h3 text-lg text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia dukungan setelah go-live?' }}</span>
                             <span
                                 class="material-symbols-outlined toggle-icon transition-transform text-outline">expand_more</span>
                         </button>
@@ -467,7 +467,7 @@
                             <p class="pt-4 font-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
                                     ? 'Yes. We provide ongoing support through flexible SLAs, including system monitoring, maintenance, feature updates, and technical assistance. Our managed support covers L1 to L3 support, ensuring your platform remains stable and up-to-date after launch.'
-                                    : 'Ya. Kami menyediakan dukungan berkelanjutan melalui SLA yang fleksibel, termasuk monitoring sistem, maintenance, pembaruan fitur, dan bantuan teknis. Dukungan terkelola kami mencakup L1 hingga L3, memastikan platform Anda tetap stabil dan terkini setelah peluncuran.' }}
+                                    : 'Ya. Kami menyediakan dukungan berkelanjutan melalui SLA yang fleksibel, termasuk pemantauan sistem, pemeliharaan, pembaruan fitur, dan bantuan teknis. Dukungan terkelola kami mencakup L1 hingga L3, memastikan platform Anda tetap stabil dan terkini setelah peluncuran.' }}
                             </p>
                         </div>
                     </div>
@@ -551,7 +551,7 @@
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                         class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
-                        {{ app()->getLocale() === 'en' ? 'Schedule a Free Consultation' : 'Jadwalkan Konsultasi Gratis' }}
+                        {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
                     </a>
                 </div>
             </div>

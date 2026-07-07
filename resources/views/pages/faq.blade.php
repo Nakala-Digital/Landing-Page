@@ -238,7 +238,7 @@
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses engagement project?' }}</span>
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'How does the project engagement process work?' : 'Bagaimana proses keterlibatan proyek?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
@@ -270,14 +270,14 @@
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
-                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia support setelah go-live?' }}</span>
+                                class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'Is post-launch support available?' : 'Apakah tersedia dukungan setelah go-live?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
                         </button>
                         <div class="accordion-content">
                             <p class="pt-unit-md font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
                                     ? 'Yes. We provide ongoing support through flexible SLAs, including system monitoring, maintenance, feature updates, and technical assistance. Our managed support covers L1 to L3 support, ensuring your platform remains stable and up-to-date after launch.'
-                                    : 'Ya. Kami menyediakan dukungan berkelanjutan melalui SLA yang fleksibel, termasuk monitoring sistem, maintenance, pembaruan fitur, dan bantuan teknis. Dukungan terkelola kami mencakup L1 hingga L3, memastikan platform Anda tetap stabil dan terkini setelah peluncuran.' }}
+                                    : 'Ya. Kami menyediakan dukungan berkelanjutan melalui SLA yang fleksibel, termasuk pemantauan sistem, pemeliharaan, pembaruan fitur, dan bantuan teknis. Dukungan terkelola kami mencakup L1 hingga L3, memastikan platform Anda tetap stabil dan terkini setelah peluncuran.' }}
                             </p>
                         </div>
                     </div>
