@@ -185,7 +185,7 @@
                     <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-primary mb-unit-lg leading-tight hero-heading">
                         {{ app()->getLocale() === 'en' ? 'Core Team Nakala,' : 'Tim inti Nakala,' }}
                         <span
-                            class="text-primary-fixed-dim">{{ app()->getLocale() === 'en' ? 'strengthened by Romulus Digital.' : 'diperkuat oleh Romulus Digital.' }}</span>
+                            class="text-primary">{{ app()->getLocale() === 'en' ? 'strengthened by Romulus Digital' : 'diperkuat oleh Romulus Digital' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-surface-variant max-w-xl hero-desc">
                         {{ app()->getLocale() === 'en'
@@ -293,8 +293,8 @@
                     <div class="w-full lg:w-1/2">
                         <div
                             class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-xl backdrop-blur-sm">
-                            <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-primary-fixed-dim">
-                                {{ app()->getLocale() === 'en' ? 'Nakala leads delivery. Romulus strengthens trust.' : 'Nakala memimpin delivery. Romulus memperkuat trust.' }}
+                            <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-white">
+                                {{ app()->getLocale() === 'en' ? 'Nakala leads delivery, Romulus strengthens trust' : 'Nakala memimpin delivery, Romulus memperkuat trust' }}
                             </h2>
                             <p class="font-body-lg text-body-lg text-surface-variant mb-unit-lg">
                                 {{ app()->getLocale() === 'en'

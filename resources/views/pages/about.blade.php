@@ -199,7 +199,7 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
-                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions.' : 'Mitra lokal untuk AI, software, dan solusi digital.' }}
+                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions' : 'Mitra lokal untuk AI, software, dan solusi digital' }}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
                         {{ app()->getLocale() === 'en'
@@ -325,7 +325,7 @@
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
                     <p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">
-                        {{ app()->getLocale() === 'en' ? 'Why Nakala: Delivering Excellence through 6 Core Pillars' : 'Mengapa Nakala: Memberikan Keunggulan melalui 6 Pilar Utama' }}
+                        {{ app()->getLocale() === 'en' ? 'Six strengths that underpin every digital solution we build' : 'Enam keunggulan yang mendukung setiap solusi digital yang kami bangun' }}
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -340,12 +340,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Local & Regional Services' : 'Layanan Lokal & Regional' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'On-the-ground support with deep understanding of the Indonesian market landscape.'
-                                : 'Dukungan langsung di lapangan dengan pemahaman mendalam tentang lanskap pasar Indonesia.' }}
+                                ? 'Based in Indonesia and supported by Romulus Digital\'s regional network, we deliver solutions that are relevant to local business needs and supported by regional-scale capabilities.'
+                                : 'Berbasis di Indonesia dan didukung jaringan regional Romulus Digital, kami menghadirkan solusi yang relevan dengan kebutuhan bisnis lokal serta didukung kapabilitas berskala regional.' }}
                         </p>
                     </div>
 
@@ -359,12 +359,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'AI Mindset' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'AI-Based Mindset' : 'Pola Pikir Berbasis AI' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Every solution we build is future-proofed with AI-readiness from the architectural level.'
-                                : 'Setiap solusi yang kami bangun terjamin masa depannya dengan kesiapan AI sejak tingkat arsitektur.' }}
+                                ? 'We integrate AI and intelligent automation into every solution to help improve operational efficiency and deliver added value to businesses.'
+                                : 'Kami mengintegrasikan AI dan otomatisasi cerdas ke dalam setiap solusi untuk membantu meningkatkan efisiensi operasional dan memberikan nilai tambah bagi bisnis.' }}
                         </p>
                     </div>
 
@@ -378,12 +378,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Pengembangan Agile & QA' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Iterative development with rigorous automated testing to ensure rock-solid stability.'
-                                : 'Pengembangan iteratif dengan pengujian otomatis yang ketat untuk memastikan stabilitas yang kokoh.' }}
+                                ? 'We implement Agile methods with a structured development process, supported by thorough testing and clear documentation to ensure the quality of each release.'
+                                : 'Kami menerapkan metode Agile dengan proses pengembangan yang terstruktur, didukung pengujian menyeluruh dan dokumentasi yang jelas untuk memastikan setiap rilis berkualitas.' }}
                         </p>
                     </div>
 
@@ -397,12 +397,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'User-Centered Design' : 'Desain Berpusat pada Pengguna' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.'
-                                : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
+                                ? 'We design solutions based on user needs and business processes to create digital experiences that are easy to use, effective, and provide value to the organization.'
+                                : 'Kami merancang solusi berdasarkan kebutuhan pengguna dan proses bisnis agar menghasilkan pengalaman digital yang mudah digunakan, efektif, dan memberikan nilai bagi organisasi.' }}
                         </p>
                     </div>
 
@@ -416,12 +416,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Practical and Impactful Solutions' : 'Solusi Praktis dan Berdampak' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.'
-                                : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
+                                ? 'Each solution is designed to be practical, easy to develop, and deliver a real impact on operational efficiency and business growth.'
+                                : 'Setiap solusi dirancang agar praktis, mudah dikembangkan, dan memberikan dampak nyata bagi efisiensi operasional serta pertumbuhan bisnis.' }}
                         </p>
                     </div>
 
@@ -435,12 +435,12 @@
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Deployment Cepat' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Strategic Partner Network' : 'Jaringan Mitra Strategis' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Purpose-built frameworks that help you go from concept to launch with measurable efficiency.'
-                                : 'Kerangka kerja yang dirancang khusus untuk membantu Anda dari konsep hingga peluncuran dengan efisiensi terukur.' }}
+                                ? 'Together with Romulus Digital\'s regional network, we bring the right expertise and resources to support each project\'s needs.'
+                                : 'Bersama jaringan regional Romulus Digital, kami menghadirkan keahlian dan sumber daya yang tepat untuk mendukung kebutuhan setiap proyek.' }}
                         </p>
                     </div>
                 </div>

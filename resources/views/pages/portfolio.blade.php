@@ -189,8 +189,8 @@
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
                     {!! app()->getLocale() === 'en'
-                        ? 'Portfolio and case studies of <span class="text-primary">digital solutions.</span>'
-                        : 'Portofolio dan studi kasus <span class="text-primary">solusi digital.</span>' !!}
+                        ? 'Portfolio and case studies of <span class="text-primary">digital solutions</span>'
+                        : 'Portofolio dan studi kasus <span class="text-primary">solusi digital</span>' !!}
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
@@ -424,7 +424,7 @@
         <!-- CTA Section -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
             <h2
-                class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">
+                class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-lg">
                 {!! app()->getLocale() === 'en'
                     ? 'Ready to build your <span class="text-primary">next success story?</span>'
                     : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>' !!}</h2>

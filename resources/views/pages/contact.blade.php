@@ -242,8 +242,8 @@
                     {{ app()->getLocale() === 'en' ? 'Local & Regional' : 'Lokal & Regional' }}
                 </div>
                 <h1
-                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md">
-                    {{ app()->getLocale() === 'en' ? "Let's build the digital future together." : 'Mari bangun masa depan digital bersama.' }}
+                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white max-w-3xl mb-unit-md">
+                    {{ app()->getLocale() === 'en' ? "Let's build the digital future together" : 'Mari bangun masa depan digital bersama' }}
                 </h1>
                 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
                     {{ app()->getLocale() === 'en' ? 'Nakala Digital brings regional capability with a local touch. Tell us about your project.' : 'Nakala Digital menghadirkan kapabilitas regional dengan sentuhan lokal. Ceritakan tentang proyek Anda.' }}
