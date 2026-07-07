@@ -172,7 +172,7 @@
         <!-- Hero Section -->
         <section
             class="pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
-            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-gutter items-center">
                 <div class="relative z-10">
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-lg">
@@ -185,7 +185,8 @@
                             class="text-primary">{{ app()->getLocale() === 'en' ? 'tailored' : 'yang disesuaikan' }}</span>
                         {{ app()->getLocale() === 'en' ? 'to business needs.' : 'dengan kebutuhan bisnis.' }}
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
+                    <p
+                        class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl lg:max-w-2xl leading-relaxed text-balance">
                         {{ app()->getLocale() === 'en'
                             ? 'Digital solutions ready to adapt to your business needs, improving operational efficiency and sustainable growth.'
                             : 'Solusi digital yang siap disesuaikan dengan kebutuhan bisnis Anda, meningkatkan efisiensi operasional dan pertumbuhan berkelanjutan.' }}

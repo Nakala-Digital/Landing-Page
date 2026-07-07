@@ -223,8 +223,14 @@
                         {{ __('messages.hero_desc') }}
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <span
-                            class="font-label-sm text-primary uppercase tracking-[0.2em] font-semibold">{{ __('messages.hero_support_line') }}</span>
+                        <div
+                            class="inline-flex items-center gap-2 border border-outline-variant bg-surface-container px-4 py-2 rounded-full">
+                            <img alt="Romulus Digital" class="h-4 object-contain"
+                                src="{{ asset('assets/romulus-birumuda.png') }}" />
+                            <span class="font-label-sm text-on-surface-variant text-xs tracking-[0.12em] uppercase">
+                                {{ __('messages.hero_support_line') }}
+                            </span>
+                        </div>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
@@ -377,8 +383,7 @@
                         {{ __('messages.who_desc2') }}
                     </p>
                     <div class="grid grid-cols-2 gap-unit-md border-l-4 border-primary pl-unit-md">
-                        <div>
-                            <span class="block font-headline-h3 text-on-background">100%</span>
+                        <div class="flex items-center h-full">
                             <span
                                 class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_local_commit') }}</span>
                         </div>

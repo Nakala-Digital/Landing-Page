@@ -230,7 +230,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <a href="https://slategray-manatee-487981.hostingersite.com/" target="_blank"
+                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer"
                                 class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
                                 <span class="material-symbols-outlined">arrow_forward</span></a>
@@ -281,6 +281,9 @@
                         <span
                             class="font-bold">{{ app()->getLocale() === 'en' ? 'Proactive Safety Management' : 'Manajemen Keselamatan Proaktif' }}</span>
                     </div>
+                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=hse-safety-tracker"
+                        class="mt-unit-md text-tertiary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
                 <!-- 4. WargaKas -->
                 <div
@@ -302,9 +305,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <button
-                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'Case Study' : 'Studi Kasus' }}
-                                <span class="material-symbols-outlined">chevron_right</span></button>
+                            <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=wargakas-mobile"
+                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                         </div>
                         <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
                             <img class="absolute inset-0 w-full h-full object-cover"
@@ -332,6 +335,9 @@
                             {{ app()->getLocale() === 'en' ? 'Streamlined recruitment process with AI-powered candidate screening and matching.' : 'Proses rekrutmen yang efisien dengan screening dan pencocokan kandidat berbasis AI.' }}
                         </p>
                     </div>
+                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=ai-hiring-assistant"
+                        class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
                 <!-- 6. AI Coach -->
                 <div
@@ -355,6 +361,9 @@
                         <span class="material-symbols-outlined text-[160px]"
                             style="font-variation-settings: 'FILL' 1;">psychology</span>
                     </div>
+                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=personalized-ai-coach"
+                        class="relative z-10 mt-auto text-primary font-button flex items-center justify-center md:justify-start gap-unit-xs group-hover:gap-unit-sm transition-all w-fit mx-auto md:mx-0">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
                 <!-- 7. D365 Support -->
                 <div
@@ -373,6 +382,9 @@
                             {{ app()->getLocale() === 'en' ? 'Managed D365 support with regional capability.' : 'Dukungan D365 terkelola dengan kapabilitas regional.' }}
                         </p>
                     </div>
+                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=dynamics-365-support"
+                        class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
                 <!-- 8. 360 Customer Engagement -->
                 <div
@@ -380,7 +392,7 @@
                     <div class="flex-1">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360° Customer Engagement</h3>
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360&deg; Customer Engagement</h3>
                         <p class="text-on-surface-variant text-body-md mb-unit-md">
                             {{ app()->getLocale() === 'en' ? 'A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.' : 'Dasbor terpadu yang menghubungkan penjualan online, sentimen media sosial, dan lalu lintas toko fisik untuk pemasaran berbasis data.' }}
                         </p>
@@ -392,6 +404,9 @@
                             <span
                                 class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</span>
                         </div>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=360-customer-engagement"
+                            class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                     </div>
                     <div
                         class="w-full md:w-64 h-48 bg-surface rounded-xl border border-outline-variant overflow-hidden">

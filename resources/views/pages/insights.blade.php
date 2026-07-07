@@ -166,7 +166,7 @@
                 <div
                     class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
                     <span class="material-symbols-outlined text-[16px]">bolt</span>
-                    {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
+                    {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}
                 </div>
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
@@ -201,7 +201,7 @@
                                 class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                         </div>
                         <h2
-                            class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
+                            class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 leading-tight text-[clamp(1.75rem,4vw,3rem)] mb-unit-sm group-hover:text-primary transition-colors">
                             {{ app()->getLocale() === 'en' ? 'Bridging the Gap: AI Implementation for Regional Enterprises' : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
                         </h2>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">

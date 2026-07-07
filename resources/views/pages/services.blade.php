@@ -202,7 +202,7 @@
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
-                        {{ $locale === 'id' ? 'Service Pillar' : 'Service Pillar' }}
+                        {{ $locale === 'id' ? 'Pilar Layanan' : 'Service Pillar' }}
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
