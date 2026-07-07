@@ -183,7 +183,7 @@
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-unit-md leading-tight">
                         {{ app()->getLocale() === 'en' ? 'Digital solutions' : 'Solusi digital' }} <span
                             class="text-primary">{{ app()->getLocale() === 'en' ? 'tailored' : 'yang disesuaikan' }}</span>
-                        {{ app()->getLocale() === 'en' ? 'to business needs.' : 'dengan kebutuhan bisnis.' }}
+                        {{ app()->getLocale() === 'en' ? 'to business needs' : 'dengan kebutuhan bisnis' }}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
                         {{ app()->getLocale() === 'en'

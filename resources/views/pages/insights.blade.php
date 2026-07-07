@@ -201,7 +201,7 @@
                                 class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
                         </div>
                         <h2
-                            class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
+                            class="font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-sm group-hover:text-primary transition-colors">
                             {{ app()->getLocale() === 'en' ? 'Bridging the Gap: AI Implementation for Regional Enterprises' : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
                         </h2>
                         <p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">

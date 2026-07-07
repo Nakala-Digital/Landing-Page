@@ -181,12 +181,12 @@
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
-                        {{ app()->getLocale() === 'en' ? 'Service Pillar' : 'pilar layanan' }}
+                        {{ app()->getLocale() === 'en' ? 'Service Pillar' : 'Pilar Layanan' }}
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ app()->getLocale() === 'en' ? 'Technology services for' : 'Layanan teknologi untuk' }} <span
-                            class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs.' : 'kebutuhan bisnis modern.' }}</span>
+                            class="text-primary">{{ app()->getLocale() === 'en' ? 'modern business needs' : 'kebutuhan bisnis modern' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
                         {{ app()->getLocale() === 'en'
@@ -218,7 +218,7 @@
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="text-center mb-unit-xl">
                 <h2
-                    class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-4">
+                    class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-4">
                     {{ app()->getLocale() === 'en' ? 'Our Service Pillars' : 'Pilar Layanan Kami' }}</h2>
                 <div class="w-24 h-1.5 bg-primary mx-auto mb-6"></div>
                 <p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
@@ -379,7 +379,7 @@
     <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
     <section class="py-unit-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <h2 class="font-headline-h2 mb-unit-lg">
+            <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-lg">
                 {{ app()->getLocale() === 'en' ? 'Regional Service Excellence' : 'Keunggulan Layanan Regional' }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch">
                 <div class="flex flex-col">

@@ -191,8 +191,8 @@
                 <h1
                     class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
                     {!! app()->getLocale() === 'en'
-                        ? 'Capability references for <span class="text-primary">digital solutions.</span>'
-                        : 'Referensi kapabilitas untuk <span class="text-primary">solusi digital.</span>' !!}
+                        ? 'Capability references for <span class="text-primary">digital solutions</span>'
+                        : 'Referensi kapabilitas untuk <span class="text-primary">solusi digital</span>' !!}
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     {{ app()->getLocale() === 'en' ? 'Client-neutral solution highlights prepared to support sales conversations, focused on capability, problem context, solution approach, and business value.' : 'Sorotan solusi yang netral untuk mendukung percakapan sales, berfokus pada kapabilitas, konteks problem, pendekatan solusi, dan value bisnis.' }}
@@ -398,7 +398,7 @@
         <!-- CTA Section -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
             <h2
-                class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-unit-lg">
+                class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-lg">
                 {!! app()->getLocale() === 'en'
                     ? 'Ready to discuss your <span class="text-primary">solution needs?</span>'
                     : 'Siap mendiskusikan <span class="text-primary">kebutuhan solusi Anda?</span>' !!}</h2>

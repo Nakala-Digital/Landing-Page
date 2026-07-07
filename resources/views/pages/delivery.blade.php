@@ -190,7 +190,7 @@
                         </div>
                         <h1
                             class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control.' : 'Agile delivery dengan quality control yang jelas' }}
+                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control' : 'Agile delivery dengan quality control yang jelas' }}
                         </h1>
                         <p class="font-body-lg text-body-lg text-outline-variant mb-unit-lg max-w-xl">
                             {{ app()->getLocale() === 'en'

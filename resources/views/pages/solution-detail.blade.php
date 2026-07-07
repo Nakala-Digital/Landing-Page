@@ -152,7 +152,7 @@
                             <span class="material-symbols-outlined text-[18px]">{{ $case['icon'] }}</span>
                             {{ $case['category'][$locale] }}
                         </div>
-                        <h1 class="font-headline-h1 text-4xl md:text-headline-h1 leading-tight mb-unit-md">
+                        <h1 class="font-headline-h1 text-4xl md:text-headline-h1 text-white leading-tight mb-unit-md">
                             {{ $case['title'][$locale] }}
                         </h1>
                         <p class="text-lg leading-relaxed text-inverse-on-surface max-w-3xl">
@@ -192,7 +192,7 @@
                             {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
                         </p>
                         <h2 class="font-headline-h2 text-3xl md:text-headline-h2 text-on-background mb-unit-md">
-                            {{ $locale === 'en' ? 'Context-specific implementation view.' : 'Tampilan implementasi sesuai konteks.' }}
+                            {{ $locale === 'en' ? 'Context-specific implementation view' : 'Tampilan implementasi sesuai konteks' }}
                         </h2>
                         <p class="text-on-surface-variant">
                             {{ $locale === 'en'
@@ -274,7 +274,7 @@
                         {{ $locale === 'en' ? 'Next Step' : 'Langkah Berikutnya' }}
                     </p>
                     <h2 class="font-headline-h2 text-3xl md:text-headline-h2 text-on-background mb-unit-sm">
-                        {{ $locale === 'en' ? 'Discuss how this solution fits your operation.' : 'Diskusikan bagaimana solusi ini cocok untuk operasional Anda.' }}
+                        {{ $locale === 'en' ? 'Discuss how this solution fits your operation' : 'Diskusikan bagaimana solusi ini cocok untuk operasional Anda' }}
                     </h2>
                     <p class="text-on-surface-variant">
                         {{ $locale === 'en'

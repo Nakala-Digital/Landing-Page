@@ -177,7 +177,7 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
-                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions.' : 'Mitra lokal untuk AI, software, dan solusi digital.' }}
+                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions' : 'Mitra lokal untuk AI, software, dan solusi digital' }}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
                         {{ app()->getLocale() === 'en'

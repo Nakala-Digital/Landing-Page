@@ -202,12 +202,12 @@
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
-                        {{ $locale === 'id' ? 'pilar layanan' : 'Service Pillar' }}
+                        {{ $locale === 'id' ? 'Pilar Layanan' : 'Service Pillar' }}
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background mb-6 leading-tight">
                         {{ $locale === 'id' ? 'Layanan teknologi untuk' : 'Technology services for' }} <span
-                            class="text-primary">{{ $locale === 'id' ? 'kebutuhan bisnis modern.' : 'modern business needs.' }}</span>
+                            class="text-primary">{{ $locale === 'id' ? 'kebutuhan bisnis modern' : 'modern business needs' }}</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant mb-unit-lg max-w-xl">
                         {{ $locale === 'id' ? 'Menjembatani konteks lokal Indonesia dengan keahlian pengembangan perangkat lunak regional untuk mempercepat perjalanan transformasi digital Anda.' : 'Bridging local Indonesian context with regional software development expertise to accelerate your digital transformation journey.' }}
@@ -236,7 +236,7 @@
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="text-center mb-unit-xl">
                 <h2
-                    class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 mb-4">
+                    class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-4">
                     {{ $locale === 'id' ? 'Pilar Layanan Kami' : 'Our Service Pillars' }}</h2>
                 <div class="w-24 h-1.5 bg-primary mx-auto mb-6"></div>
                 <p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
@@ -396,7 +396,7 @@
     <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
     <section class="py-unit-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <h2 class="font-headline-h2 mb-unit-lg">
+            <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-lg">
                 {{ $locale === 'id' ? 'Keunggulan Layanan Regional' : 'Regional Service Excellence' }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <div class="space-y-6">
