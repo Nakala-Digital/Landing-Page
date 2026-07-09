@@ -4,12 +4,9 @@
 
     $navItems = [
         ['label' => $locale === 'en' ? 'Home' : 'Beranda', 'route' => 'home'],
-        ['label' => $locale === 'en' ? 'About' : 'Tentang Kami', 'route' => 'about'],
-        ['label' => $locale === 'en' ? 'Team' : 'Tim', 'route' => 'team'],
-        ['label' => $locale === 'en' ? 'Services' : 'Layanan', 'route' => 'services'],
-        ['label' => $locale === 'en' ? 'Solutions' : 'Solusi', 'route' => 'solutions'],
+        ['label' => $locale === 'en' ? 'Company Profile' : 'Profil Perusahaan', 'route' => 'company-profile'],
+        ['label' => $locale === 'en' ? 'Services & Solutions' : 'Layanan & Solusi', 'route' => 'services'],
         ['label' => $locale === 'en' ? 'Insights' : 'Insight', 'route' => 'insights'],
-        ['label' => $locale === 'en' ? 'Delivery' : 'Metodologi', 'route' => 'delivery'],
         ['label' => $locale === 'en' ? 'Portfolio' : 'Portofolio', 'route' => 'portfolio'],
         ['label' => $locale === 'en' ? 'Contact' : 'Kontak', 'route' => 'contact'],
     ];
@@ -46,8 +43,17 @@
                 @php
                     $active =
                         request()->routeIs($item['route'] . $localeSuffix) ||
-                        ($item['route'] === 'solutions' && request()->routeIs('solutions.detail' . $localeSuffix)) ||
-                        ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix)) ||
+                        ($item['route'] === 'company-profile' && request()->routeIs(
+                            'about' . $localeSuffix,
+                            'team' . $localeSuffix,
+                            'delivery' . $localeSuffix,
+                            'team.leadership' . $localeSuffix
+                        )) ||
+                        ($item['route'] === 'services' && request()->routeIs(
+                            'service' . $localeSuffix,
+                            'solutions' . $localeSuffix,
+                            'solutions.detail' . $localeSuffix
+                        )) ||
                         ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                 @endphp
                 <a class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
@@ -90,9 +96,17 @@
                         @php
                             $active =
                                 request()->routeIs($item['route'] . $localeSuffix) ||
-                                ($item['route'] === 'solutions' &&
-                                    request()->routeIs('solutions.detail' . $localeSuffix)) ||
-                                ($item['route'] === 'services' && request()->routeIs('service' . $localeSuffix)) ||
+                                ($item['route'] === 'company-profile' && request()->routeIs(
+                                    'about' . $localeSuffix,
+                                    'team' . $localeSuffix,
+                                    'delivery' . $localeSuffix,
+                                    'team.leadership' . $localeSuffix
+                                )) ||
+                                ($item['route'] === 'services' && request()->routeIs(
+                                    'service' . $localeSuffix,
+                                    'solutions' . $localeSuffix,
+                                    'solutions.detail' . $localeSuffix
+                                )) ||
                                 ($item['route'] === 'insights' &&
                                     request()->routeIs('insights.detail' . $localeSuffix));
                         @endphp

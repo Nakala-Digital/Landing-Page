@@ -84,13 +84,10 @@
                             href="{{ route('home' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Home' : 'Beranda' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="{{ route('about' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}</a>
+                            href="{{ route('company-profile' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Company Profile' : 'Profil Perusahaan' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="{{ route('team' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Team & Partnership' : 'Tim & Kemitraan' }}</a>
-                    </li>
-                    <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Our Services' : 'Layanan Kami' }}</a>
+                            href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Services & Solutions' : 'Layanan & Solusi' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
                             href="{{ route('portfolio' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Project Portfolio' : 'Portofolio Proyek' }}</a>
