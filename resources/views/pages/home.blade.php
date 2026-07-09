@@ -519,8 +519,8 @@
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'We provide software development, AI and GenAI solutions, technology consulting, web and portal development, QA governance, and managed support for enterprise platforms including Microsoft Dynamics 365. Each service is delivered with local context and regional capability.'
-                                    : 'Kami menyediakan pengembangan perangkat lunak, solusi AI dan GenAI, konsultasi teknologi, pengembangan web dan portal, tata kelola QA, serta dukungan terkelola untuk platform enterprise termasuk Microsoft Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
+                                    ? 'We provide Custom Software Dev, AI & GenAI, Tech Consulting, Web & Portal, QA Governance, and Managed Support & Dynamics 365. Each service is delivered with local context and regional capability.'
+                                    : 'Kami menyediakan Pengembangan Software Kustom, AI & GenAI, Konsultasi Teknologi, Web & Portal, Tata Kelola QA, serta Managed Support & Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
                             </p>
                         </div>
                     </div>
