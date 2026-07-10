@@ -391,24 +391,6 @@
                                 : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
                         </p>
                     </div>
-                    <!-- Reason 5 -->
-                    <div
-                        class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
-                        <div class="flex items-center gap-4 mb-unit-md">
-                            <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
-                                <span
-                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
-                            </div>
-                            <h4 class="font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
-                        </div>
-                        <p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">
-                            {{ app()->getLocale() === 'en'
-                                ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.'
-                                : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
-                        </p>
-                    </div>
                     <!-- Reason 6 -->
                     <div
                         class="bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">

@@ -197,40 +197,67 @@
 
         <!-- Featured Insight -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="mb-unit-lg">
-                <span
-                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}</span>
+            <div class="mb-unit-lg flex items-center gap-4">
+                <!-- Menambahkan garis dekoratif kecil di samping tulisan 'Featured' -->
+                <span class="h-[2px] w-8 bg-primary rounded-full hidden sm:block"></span>
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] block">
+                    {{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}
+                </span>
             </div>
+
+            <!-- Menambahkan transisi shadow, posisi transform, dan menghapus border kaku -->
             <div
-                class="group cursor-pointer bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-1/2 aspect-video md:aspect-auto overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                class="group cursor-pointer bg-gradient-to-br from-white to-slate-50 shadow-md hover:shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 transform hover:-translate-y-1">
+
+                <!-- Area Gambar dengan Overlay -->
+                <div class="md:w-1/2 aspect-video md:aspect-auto overflow-hidden relative">
+                    <div
+                        class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10">
+                    </div>
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                         data-alt="A sophisticated data visualization dashboard displayed on multiple high-resolution monitors in a sleek, dimly lit command center."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR535vuudX7lTS7e4rlJh7a9-gVx5AUk-xOXNnnCSBtfb5s7pPif-MixNqR0pMjjojGO_pBwl-VJfRc7i9aneEF3eIqu__3s4_IH1bqYRQmOL9gQCYRooxu7z0_FSjKu97jX8mCvGQzUKtFn12bVzeHbWzoKYiF8rv_pyukmlVamh3S8_Hhyj6uYihaF8rR1ZHEW7QbcWv5lNaab6a7LRWDZ_DRm5-olpTDLSAecUuoW7Top-3b5NwJmCEQZJYjM5nHV33VJnRxhhU" />
                 </div>
+
+                <!-- Area Teks dengan Border Kiri/Atas yang Lebih Smooth -->
                 <div
-                    class="md:w-1/2 p-unit-lg flex flex-col justify-between border-t-4 md:border-t-0 md:border-l-4 border-primary">
+                    class="md:w-1/2 p-unit-lg md:p-12 flex flex-col justify-between border-t-4 md:border-t-0 md:border-l-4 border-primary/80 group-hover:border-primary transition-colors duration-300">
                     <div>
+                        <!-- Badge Kategori -->
                         <div class="flex items-center gap-unit-sm mb-unit-sm">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
+                                class="text-primary bg-primary/10 px-3 py-1 rounded-full font-label-sm text-xs uppercase tracking-wider">
+                                {{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}
+                            </span>
                         </div>
-                        <h2 class="font-bold leading-tight mb-unit-sm group-hover:text-primary transition-colors text-[clamp(1.75rem,4vw,3rem)]">
+
+                        <!-- Judul Utama -->
+                        <h2
+                            class="font-bold leading-tight mb-unit-sm text-slate-800 group-hover:text-primary transition-colors duration-300 text-[clamp(1.5rem,3.5vw,2.5rem)]">
                             {{ app()->getLocale() === 'en'
                                 ? 'Bridging the Gap: AI Implementation for Regional Enterprises'
                                 : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
                         </h2>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">
+
+                        <!-- Deskripsi -->
+                        <p class="font-body-md text-body-md text-slate-600 mb-unit-lg leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'How local businesses can leverage tailored AI solutions to compete at a regional level without enterprise-scale investment.'
                                 : 'Bagaimana bisnis lokal dapat memanfaatkan solusi AI yang disesuaikan untuk bersaing di tingkat regional tanpa investasi skala enterprise.' }}
                         </p>
                     </div>
-                    <a class="inline-flex items-center gap-unit-xs text-primary font-button text-button group"
+
+                    <!-- Link Tombol / CTA -->
+                    <a class="inline-flex items-center gap-2 text-primary font-button text-button group/btn font-semibold"
                         href="#">
-                        {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
                         <span
-                            class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 group-hover/btn:after:w-full after:bg-primary after:transition-all after:duration-300 pb-0.5">
+                            {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
+                        </span>
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover/btn:translate-x-1.5">
+                            arrow_forward
+                        </span>
                     </a>
                 </div>
             </div>
@@ -247,112 +274,184 @@
                     </h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                    <!-- Topic 1: PPDB -->
-                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer">
-                        <div class="aspect-video overflow-hidden">
+                    <!-- Topic 0a: EventGate (Konser.com) -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="A modern school building entrance with digital registration kiosks, symbolizing digital transformation in education."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs" />
+                                data-alt="EventGate digital ticketing and event management platform asset preview."
+                                src="{{ asset('assets/eventgate-2.png') }}" />
                         </div>
                         <div class="p-unit-md">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Event Technology' : 'Teknologi Event' }}</span>
                             <h3
                                 class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
-                                {{ app()->getLocale() === 'en' ? 'How to Plan a School PPDB Portal' : 'Cara Merencanakan Portal PPDB Sekolah' }}
+                                {{ app()->getLocale() === 'en' ? 'EventGate: One Platform for Every Event Need' : 'EventGate: Semua Kebutuhan Acara dalam Satu Platform' }}
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                            <p class="font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Key considerations for educational institutions planning a digital admission portal, from requirement gathering to deployment and handover.'
-                                    : 'Pertimbangan utama bagi institusi pendidikan yang merencanakan portal penerimaan digital, dari pengumpulan kebutuhan hingga deployment dan serah terima.' }}
+                                    ? 'Platform by Konser.com centralising event discovery, digital ticketing, and QR check-in.'
+                                    : 'Platform dari Konser.com untuk pencarian event, tiket digital, dan check-in QR terpusat.' }}
                             </p>
                         </div>
                     </div>
 
-                    <!-- Topic 2: QA Governance -->
-                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer">
-                        <div class="aspect-video overflow-hidden">
+                    <!-- Topic 0b: WilayahFlow -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="Close-up of a high-end mechanical keyboard with glowing cyan backlighting, reflected on a polished desk surface."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42NUAKFSOMS26jXpuJVh1JdCeoMsY6VlRi_rrdM3ac3mhzY3P6z5HsOK5J8me2172qL97zy7cfirniG15cfFYrQvf-XXvRmsud-wmufmobzUv09P4mVKdj5Omi4erlQpHlUmGEM6AmrEdeO3jSTBz3MGV2yPiAN2IlOrdU0AsHO6t7tCbxhHgp1WH4oL27xLiZ8bSM4em19RqG4mJR-UcUbGFfHxQDyNXfMQpHyeYVh5vgZ4CKxo7xJHgCsF1cQa8WQZJyrgo4aDE" />
+                                data-alt="WilayahFlow administration and reporting platform asset preview."
+                                src="{{ asset('assets/wilayahflow-2.png') }}" />
                         </div>
                         <div class="p-unit-md">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</span>
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Regional Administration' : 'Administrasi Wilayah' }}</span>
                             <h3
                                 class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
-                                {{ app()->getLocale() === 'en' ? 'Why QA Governance Matters in Software Projects' : 'Mengapa Tata Kelola QA Penting dalam Proyek Software' }}
+                                {{ app()->getLocale() === 'en' ? 'WilayahFlow: Tidying Up RT/RW Reporting' : 'WilayahFlow: Merapikan Pelaporan RT/RW' }}
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                            <p class="font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Why quality assurance should be treated as a delivery discipline, not an afterthought, and how structured QA governance reduces project risk.'
-                                    : 'Mengapa quality assurance harus diperlakukan sebagai disiplin delivery, bukan tambahan, dan bagaimana tata kelola QA yang terstruktur mengurangi risiko proyek.' }}
+                                    ? 'Reporting and administration assistant for RT/RW with automatic recaps and digital archiving.'
+                                    : 'Asisten pelaporan dan administrasi RT/RW dengan rekap otomatis dan arsip digital.' }}
                             </p>
                         </div>
                     </div>
 
-                    <!-- Topic 3: Agile Delivery -->
-                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer">
-                        <div class="aspect-video overflow-hidden">
+                    <!-- Topic 0c: DesaHub -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="A clean, minimalist white-walled boardroom with a large central wooden table and vibrant lime-colored chairs."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHjqI828y2RenV7xxVuKk-UgJK6MXYJzvugZkYSpw0etLVxb622NLRTGwc_PmoQe6cHx-uzsmMVn8xS09hzuija3wEFSqrN0BnKB_7GCgAdrmholipris-ll-9R1_43rVo55P9oZ7q93cXsToQ6t1T5G7ulD9B4u3vxenKqLjgl3B55nT8JwuxyfUiAG7PafzeoNW2A8uvZMJ3ymWVCmk6apSAUjeYGcdhQ2Q3oUFooYTrHWKU5TSUKsUBgEjBeEhxf0P9IBINHGl" />
+                                data-alt="DesaHub marketplace and village economy digital system platform asset preview."
+                                src="{{ asset('assets/desahub-2.png') }}" />
                         </div>
                         <div class="p-unit-md">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Delivery Approach' : 'Pendekatan Delivery' }}</span>
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Village Economy' : 'Ekonomi Desa' }}</span>
                             <h3
                                 class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
-                                {{ app()->getLocale() === 'en' ? 'Agile Delivery for Digital Solutions' : 'Agile Delivery untuk Solusi Digital' }}
+                                {{ app()->getLocale() === 'en' ? 'DesaHub: Connecting the Village Economy' : 'DesaHub: Menghubungkan Ekonomi Desa' }}
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                            <p class="font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'How Agile methodology enables faster time-to-market, better quality, and stronger alignment between business goals and technical execution.'
-                                    : 'Bagaimana metodologi Agile memungkinkan time-to-market yang lebih cepat, kualitas yang lebih baik, dan keselarasan yang lebih kuat antara tujuan bisnis dan eksekusi teknis.' }}
+                                    ? 'Integrated marketplace platform connecting local products, UMKM, and BUMDes.'
+                                    : 'Platform marketplace terintegrasi yang menghubungkan produk lokal, UMKM, dan BUMDes.' }}
                             </p>
                         </div>
                     </div>
 
-                    <!-- Topic 4: AI Use Cases -->
-                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer">
-                        <div class="aspect-video overflow-hidden">
+                    <!-- Kick Off Al Azhar Syifa Budi Parahyangan -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
+                                data-alt="Kick off Al Azhar Syifa Budi Parahyangan digital school portal preparation project documentation."
+                                src="{{ asset('assets/al-azhar.png') }}" />
                         </div>
                         <div class="p-unit-md">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'AI Technology' : 'Teknologi AI' }}</span>
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'First Project' : 'Project Pertama' }}</span>
                             <h3
                                 class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
-                                {{ app()->getLocale() === 'en' ? 'AI Use Cases for Business Operations' : 'Use Case AI untuk Operasional Bisnis' }}
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Al Azhar Syifa Budi Parahyangan' : 'Kick Off Al Azhar Syifa Budi Parahyangan' }}
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                            <p class="font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'Practical applications of AI across finance, HR, customer service, and operations, from document intelligence to predictive analytics.'
-                                    : 'Aplikasi praktis AI di bidang keuangan, SDM, layanan pelanggan, dan operasional, dari document intelligence hingga analitik prediktif.' }}
+                                    ? 'The first digital solution project successfully developed and executed by Nakala Digital.'
+                                    : 'Project solusi digital pertama yang sukses dikembangkan dan dikerjakan di Nakala Digital.' }}
                             </p>
                         </div>
                     </div>
 
-                    <!-- Topic 5: Choosing Partner -->
-                    <div class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer">
-                        <div class="aspect-video overflow-hidden">
+                    <!-- Kick Off Universitas Widyatama -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
                             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
+                                data-alt="Kick Off Universitas Widyatama collaborative project launch preview."
+                                src="{{ asset('assets/widyatama-2.png') }}" />
                         </div>
                         <div class="p-unit-md">
                             <span
-                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Partnership' : 'Kemitraan' }}</span>
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
                             <h3
                                 class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
-                                {{ app()->getLocale() === 'en' ? 'Choosing the Right Technology Partner' : 'Memilih Mitra Teknologi yang Tepat' }}
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Universitas Widyatama' : 'Kick Off Universitas Widyatama' }}
                             </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                            <p class="font-body-md text-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'A practical guide for organisations evaluating technology partners, covering capability assessment, cultural fit, and governance standards.'
-                                    : 'Panduan praktis bagi organisasi yang mengevaluasi mitra teknologi, mencakup penilaian kapabilitas, kesesuaian budaya, dan standar tata kelola.' }}
+                                    ? 'Collaboration and implementation of internship programs for students from Universitas Widyatama.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Universitas Widyatama.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Universitas Komputer (Unikom) -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Universitas Komputer digital transformation initiation asset preview."
+                                src="{{ asset('assets/unikom.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Universitas Komputer' : 'Kick Off Universitas Komputer' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Universitas Komputer.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Universitas Komputer.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Polban -->
+                    <div
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Politeknik Negeri Bandung project launch asset."
+                                src="{{ asset('assets/polban.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Politeknik Negeri Bandung' : 'Kick Off Politeknik Negeri Bandung' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Politeknik Negeri Bandung.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Politeknik Negeri Bandung.' }}
                             </p>
                         </div>
                     </div>
