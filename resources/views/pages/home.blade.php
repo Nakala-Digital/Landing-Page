@@ -77,10 +77,11 @@
                         "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
                     },
                     "spacing": {
                         "gutter": "24px",
@@ -213,6 +214,10 @@
             line-height: 1.2;
         }
 
+        .stat-card {
+            border-radius: 0.75rem;
+        }
+
         /* MOBILE (< 768px) */
         @media (max-width: 767px) {
             .stat-card {
@@ -333,21 +338,21 @@
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform hero-btn">
+                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-xl font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform hero-btn">
                             {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors hero-btn">
+                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-xl font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors hero-btn">
                             {{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}
                         </a>
                     </div>
                 </div>
                 <div class="relative group">
                     <div
-                        class="absolute -inset-4 bg-primary/10 rounded-xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity">
+                        class="absolute -inset-4 bg-primary/10 rounded-2xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity">
                     </div>
                     <img alt="AI Dashboard Visualization"
-                        class="relative rounded-lg shadow-2xl border-4 border-surface-container-high w-full"
+                        class="relative rounded-xl shadow-2xl border-4 border-surface-container-high w-full"
                         data-alt="A sophisticated dark-themed AI technology dashboard with complex data visualizations, glowing cyan line graphs, and hexagonal grid patterns. The UI is clean and modern, representing enterprise-level analytics. Soft volumetric lighting highlights the depth of the interface against a deep midnight navy background, conveying precision and high-tier technical capability."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAJsV3r7YbZ2WLV8HysYxDcgC09shBxz2HJ-L9ziBmit0_beLik2uLipeqEcSm9h5oRtYrp81qEN_Ihx3sqMZADJzKvtHVNv0gwnsDYOnW4nBjc_-sTG4TVEJCTAlXHoJsQV3QrgUh8sBOeWXG09W_itrv5BDyw2rdaHr9mRe8JORt7XcJ6e0gZQBFvbLPG09QhqnaRAvX1m85IW87-9UQUK60uuGFvPTkf7qufJinQhj0LLnucDKM7bkS1DbWzrEDTjwN9agOJnZ" />
                 </div>
@@ -395,7 +400,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
                     <!-- Bento Item 1 -->
                     <div
-                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-lg border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
+                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-xl border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
                         <div class="space-y-unit-md">
                             <span class="material-symbols-outlined text-primary text-4xl"
                                 data-weight="fill">settings_suggest</span>
@@ -423,7 +428,7 @@
 
                     <!-- Bento Item 2 -->
                     <div
-                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-lg text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
+                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-xl text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
                         <div class="h-full flex flex-col justify-between">
                             <div class="space-y-unit-md">
                                 <span class="material-symbols-outlined text-tertiary-fixed text-4xl">psychology</span>
@@ -439,7 +444,7 @@
 
                     <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
+                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-xl border border-outline-variant group hover:opacity-90 transition-all">
                         <span class="material-symbols-outlined text-[#031A44] text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
@@ -447,7 +452,7 @@
                     </div>
                     <!-- Bento Item 4 -->
                     <div
-                        class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
+                        class="md:col-span-8 bg-primary p-unit-lg rounded-xl text-white relative overflow-hidden flex items-center">
                         <div class="z-10 space-y-unit-md">
                             <h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
                             <p class="font-body-lg text-white/90 max-w-lg">{{ __('messages.cap_local_desc') }}</p>
@@ -465,7 +470,7 @@
                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
                 <div class="order-2 lg:order-1">
                     <img alt="Nakala Digital Team Collaboration"
-                        class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
+                        class="rounded-xl shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
                         data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O" />
                 </div>
@@ -508,7 +513,7 @@
                 </div>
                 <div class="space-y-4">
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -525,7 +530,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -542,7 +547,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -559,7 +564,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -576,7 +581,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -593,7 +598,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -610,7 +615,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-2xl p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -654,7 +659,7 @@
                 <p class="font-body-lg text-white/90">{{ __('messages.final_cta_desc') }}</p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-xl font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
                     </a>
                 </div>
