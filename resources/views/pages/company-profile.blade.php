@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>{{ app()->getLocale() === 'en' ? 'Company Profile | Nakala Digital' : 'Profil Perusahaan | Nakala Digital' }}</title>
+    <title>{{ app()->getLocale() === 'en' ? 'About Us | Nakala Digital' : 'Tentang Kami | Nakala Digital' }}</title>
     @include('partials.seo', [
-        'title' => app()->getLocale() === 'en' ? 'Company Profile | Nakala Digital' : 'Profil Perusahaan | Nakala Digital',
+        'title' => app()->getLocale() === 'en' ? 'About Us | Nakala Digital' : 'Tentang Kami | Nakala Digital',
         'description' =>
             app()->getLocale() === 'en'
                 ? 'Learn about Nakala Digital — our vision, mission, team, and delivery methodology for enterprise digital solutions.'
@@ -160,6 +160,10 @@
             color: #12AED0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* TAB (768px - 1024px) */
         @media (min-width: 768px) and (max-width: 1024px) {
             .reason-card {
@@ -206,7 +210,7 @@
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
                         <span class="material-symbols-outlined text-[16px]">business</span>
-                        {{ app()->getLocale() === 'en' ? 'Company Profile' : 'Profil Perusahaan' }}
+                        {{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
@@ -234,9 +238,6 @@
                 </div>
             </div>
         </header>
-
-        <!-- Sticky Sub-Navigation (appears on scroll) -->
-        @include('partials.company-profile-nav')
 
         <!-- ============================================================ -->
         <!-- Section 2: Vision & Mission (Bento Grid)                     -->

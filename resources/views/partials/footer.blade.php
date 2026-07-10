@@ -1,5 +1,4 @@
 <footer class="relative overflow-hidden bg-[#031A44] text-white border-t-4 border-[#12AED0]">
-    <div class="absolute inset-x-0 top-0 h-1 bg-[#A7F432]"></div>
 
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 py-12 border-b border-white/20">
@@ -84,7 +83,7 @@
                             href="{{ route('home' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Home' : 'Beranda' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
-                            href="{{ route('company-profile' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Company Profile' : 'Profil Perusahaan' }}</a>
+                            href="{{ route('company-profile' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}</a>
                     </li>
                     <li><a class="font-body-md text-white/75 hover:text-[#A7F432] transition-colors text-sm"
                             href="{{ route('services' . $localeSuffix) }}">{{ app()->getLocale() === 'en' ? 'Services & Solutions' : 'Layanan & Solusi' }}</a>
