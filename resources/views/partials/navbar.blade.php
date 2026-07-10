@@ -75,25 +75,25 @@
                         opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
                     <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
                         role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
                         <span class="material-symbols-outlined text-lg text-primary shrink-0">visibility</span>
                         {{ $locale === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}
                     </a>
                     <a href="{{ route('company-profile' . $localeSuffix) . '#why-nakala' }}"
                         role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
                         <span class="material-symbols-outlined text-lg text-primary shrink-0">star</span>
                         {{ $locale === 'en' ? 'Why Nakala' : 'Mengapa Nakala' }}
                     </a>
                     <a href="{{ route('company-profile' . $localeSuffix) . '#team' }}"
                         role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
                         <span class="material-symbols-outlined text-lg text-primary shrink-0">groups</span>
                         {{ $locale === 'en' ? 'Team' : 'Tim' }}
                     </a>
                     <a href="{{ route('company-profile' . $localeSuffix) . '#methodology' }}"
                         role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
                         <span class="material-symbols-outlined text-lg text-primary shrink-0">account_tree</span>
                         {{ $locale === 'en' ? 'Methodology' : 'Metodologi' }}
                     </a>
@@ -126,7 +126,7 @@
 
             {{-- Language Switcher (Desktop/Tablet) --}}
             <div
-                class="hidden md:flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
+                class="hidden md:flex items-center bg-[#A7F432] text-[#031A44] rounded-xl px-3 py-2 text-sm font-button tracking-wider uppercase shadow-sm transition-colors hover:opacity-90">
                 <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                     class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                 <span class="mx-2 opacity-40">|</span>
@@ -135,7 +135,7 @@
             </div>
 
             {{-- CTA (Desktop only) --}}
-            <a class="hidden min-[1281px]:inline-flex items-center justify-center bg-primary text-white px-4 py-2.5 rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
+            <a class="hidden min-[1281px]:inline-flex items-center justify-center bg-primary text-white px-4 py-2.5 rounded-xl font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
                 href="{{ route('contact' . $localeSuffix) }}">
                 {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
             </a>
@@ -143,12 +143,12 @@
             {{-- Mobile Hamburger --}}
             <details class="min-[1281px]:hidden relative">
                 <summary
-                    class="list-none cursor-pointer inline-flex h-10 w-10 items-center justify-center rounded-lg text-primary hover:bg-slate-100 transition-colors">
+                    class="list-none cursor-pointer inline-flex h-10 w-10 items-center justify-center rounded-xl text-primary hover:bg-slate-100 transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </summary>
                 <div class="absolute right-0 mt-3 w-56 rounded-xl bg-white shadow-lg ring-1 ring-black/5 p-2">
                     {{-- Home (mobile) --}}
-                    <a class="block rounded-lg px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors
+                    <a class="block rounded-xl px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors
                             {{ request()->routeIs('home' . $localeSuffix) ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
                         href="{{ route('home' . $localeSuffix) }}">
                         {{ $locale === 'en' ? 'Home' : 'Beranda' }}
@@ -156,7 +156,7 @@
 
                     {{-- About Us (mobile sub-menu) --}}
                     <div class="relative" data-dropdown="about-mobile">
-                        <div class="flex items-center justify-between rounded-lg px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors
+                        <div class="flex items-center justify-between rounded-xl px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors
                             {{ $isAboutActive ? 'bg-primary/10 text-primary' : 'text-on-surface-variant' }}">
                             <a href="{{ route('company-profile' . $localeSuffix) }}"
                                 class="flex-1 {{ $isAboutActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary' }}">
@@ -172,25 +172,25 @@
                                 opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out origin-top">
                             <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
                                 role="menuitem"
-                                class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
+                                class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
                                 <span class="material-symbols-outlined text-lg text-primary shrink-0">visibility</span>
                                 {{ $locale === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}
                             </a>
                             <a href="{{ route('company-profile' . $localeSuffix) . '#why-nakala' }}"
                                 role="menuitem"
-                                class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
+                                class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
                                 <span class="material-symbols-outlined text-lg text-primary shrink-0">star</span>
                                 {{ $locale === 'en' ? 'Why Nakala' : 'Mengapa Nakala' }}
                             </a>
                             <a href="{{ route('company-profile' . $localeSuffix) . '#team' }}"
                                 role="menuitem"
-                                class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
+                                class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
                                 <span class="material-symbols-outlined text-lg text-primary shrink-0">groups</span>
                                 {{ $locale === 'en' ? 'Team' : 'Tim' }}
                             </a>
                             <a href="{{ route('company-profile' . $localeSuffix) . '#methodology' }}"
                                 role="menuitem"
-                                class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
+                                class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
                                 <span class="material-symbols-outlined text-lg text-primary shrink-0">account_tree</span>
                                 {{ $locale === 'en' ? 'Methodology' : 'Metodologi' }}
                             </a>
@@ -209,7 +209,7 @@
                                 ($item['route'] === 'insights' &&
                                     request()->routeIs('insights.detail' . $localeSuffix));
                         @endphp
-                        <a class="block rounded-lg px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
+                        <a class="block rounded-xl px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
                             href="{{ route($item['route'] . $localeSuffix) }}">
                             {{ $item['label'] }}
                         </a>
@@ -220,7 +220,7 @@
                         <span
                             class="text-on-surface-variant font-normal text-sm">{{ app()->getLocale() === 'en' ? 'Language:' : 'Bahasa:' }}</span>
                         <div
-                            class="flex items-center bg-[#A7F432] text-[#031A44] rounded-lg px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
+                            class="flex items-center bg-[#A7F432] text-[#031A44] rounded-xl px-3 py-1.5 text-sm font-button tracking-wider uppercase shadow-sm">
                             <a href="{{ $locale === 'id' ? '#' : $targetUrl }}"
                                 class="{{ $locale === 'id' ? 'font-bold' : 'opacity-70 hover:opacity-100 transition-opacity' }}">ID</a>
                             <span class="mx-2 opacity-40">|</span>
@@ -230,7 +230,7 @@
                     </div>
 
                     <div class="mt-2 pt-2 border-t border-slate-100">
-                        <a class="block text-center rounded-lg px-4 py-2.5 bg-primary text-white font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
+                        <a class="block text-center rounded-xl px-4 py-2.5 bg-primary text-white font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
                             href="{{ route('contact' . $localeSuffix) }}">
                             {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>

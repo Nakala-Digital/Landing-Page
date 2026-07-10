@@ -72,10 +72,11 @@
                         "impact-lime": "#A7F432"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
                     },
                     "spacing": {
                         "gutter": "24px",
@@ -223,7 +224,7 @@
                     </p>
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
+                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-xl shadow-lg hover:scale-105 transition-transform">
                             {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                     </div>
@@ -232,7 +233,7 @@
                     <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl">
                     </div>
                     <img alt="Software Development Workflow"
-                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]"
+                        class="rounded-2xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]"
                         data-alt="A group of professional software engineers..."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
                 </div>
@@ -254,7 +255,7 @@
 
                 <!-- Vision -->
                 <div
-                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-xl flex flex-col justify-between border-t-4 border-primary-fixed">
+                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-2xl flex flex-col justify-between border-t-4 border-primary-fixed">
                     <div class="space-y-unit-md">
                         <span class="material-symbols-outlined text-4xl"
                             style="font-variation-settings: 'FILL' 1;">visibility</span>
@@ -281,7 +282,7 @@
                         {{ app()->getLocale() === 'en' ? 'Our Mission' : 'Misi Kami' }}
                     </h3>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-xl">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -290,7 +291,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-xl">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -299,7 +300,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-xl">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -308,7 +309,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-xl">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -317,7 +318,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-xl">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -348,10 +349,10 @@
 
                     <!-- Reason 1: Local Delivery -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
                             </div>
@@ -367,10 +368,10 @@
 
                     <!-- Reason 2: AI Mindset -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
                             </div>
@@ -386,10 +387,10 @@
 
                     <!-- Reason 3: Agile/QA Focused -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
                             </div>
@@ -405,10 +406,10 @@
 
                     <!-- Reason 4: Regional Capability -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
                             </div>
@@ -424,10 +425,10 @@
 
                     <!-- Reason 5: Enterprise Security -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
                             </div>
@@ -443,10 +444,10 @@
 
                     <!-- Reason 6: Rapid Deployment -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-2xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-xl group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
                             </div>
@@ -485,7 +486,7 @@
 
                     <!-- CEO -->
                     <div
-                        class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl w-full md:w[calc(50%-12px)] max-w-md">
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl w-full md:w[calc(50%-12px)] max-w-md">
                         <div class="aspect-square relative overflow-hidden">
                             <img alt="Milzam Zihni"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -521,7 +522,7 @@
 
                     <!-- COO -->
                     <div
-                        class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl w-full max-w-md">
+                        class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl w-full max-w-md">
                         <div class="aspect-square relative overflow-hidden">
                             <img alt="Raul Mahya Komaran"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -564,7 +565,7 @@
                     <div class="flex flex-col lg:flex-row items-center gap-unit-xl">
                         <div class="w-full lg:w-1/2">
                             <div
-                                class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-xl backdrop-blur-sm">
+                                class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-2xl backdrop-blur-sm">
                                 <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-primary-fixed-dim">
                                     {{ app()->getLocale() === 'en' ? 'Nakala leads delivery. Romulus strengthens trust.' : 'Nakala memimpin delivery. Romulus memperkuat trust.' }}
                                 </h2>
@@ -577,7 +578,7 @@
                                     <div
                                         class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
                                         <div
-                                            class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
+                                            class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-xl bg-white px-5 ring-1 ring-white/20">
                                             <img alt="Nakala Digital" class="h-[56px] w-auto max-w-full object-contain"
                                                 src="{{ asset('assets/logo-nakala.png') }}" />
                                         </div>
@@ -585,7 +586,7 @@
                                     <div
                                         class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
                                         <div
-                                            class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
+                                            class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-xl border border-white/35 bg-white/5 px-4">
                                             <img alt="Romulus Digital"
                                                 class="h-[36px] w-auto max-w-full object-contain opacity-70"
                                                 src="{{ asset('assets/romulus-putih.png') }}" />
@@ -595,7 +596,7 @@
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2">
-                            <div class="relative rounded-lg overflow-hidden border border-outline shadow-2xl">
+                            <div class="relative rounded-xl overflow-hidden border border-outline shadow-2xl">
                                 <img class="w-full h-full object-cover"
                                     alt="Network of interconnected nodes across a regional map of Southeast Asia"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuB47IQhwnQ_73ET9EOURjZQvNJ6YnkHUzF_sJxGQ1KPmB0cGMLjojD0IAAJtGTSYs0xl_qcmH3TyKZGCKPcEJfGBMzNxWAYWEdHIac5t0Bp8X0BKRcIpQmRrsna6yksO6lUeUut8hBTV7RVhzO6XCRLlbyk1YJvbAGz2rXdlqp7XkQ2oZCpDwRfSBImRmxU_WeiI9UCRO850c-OkCRV_blyiudN1Bji8I3z3EROaS2bMQg0Wee6O9acOQjf0XHwF_glAuUyttJDVCmh" />
@@ -636,7 +637,7 @@
                                 01
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Planning' : 'Perencanaan' }}
@@ -666,7 +667,7 @@
                                 02
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Planning' : 'Perencanaan' }}
@@ -696,7 +697,7 @@
                                 03
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Build & QA' : 'Build & QA' }}
@@ -726,7 +727,7 @@
                                 04
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Build & QA' : 'Build & QA' }}
@@ -755,7 +756,7 @@
                                 05
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Release' : 'Rilis' }}
@@ -785,7 +786,7 @@
                                 06
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Release' : 'Rilis' }}
@@ -814,7 +815,7 @@
                                 07
                             </div>
                             <div
-                                class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                                class="bg-white p-unit-md border border-outline-variant rounded-xl hover:border-primary transition-colors group">
                                 <span
                                     class="inline-block text-[11px] font-bold uppercase tracking-wider text-primary bg-surface px-2 py-0.5 rounded mb-2">
                                     {{ app()->getLocale() === 'en' ? 'Ongoing' : 'Berkelanjutan' }}
@@ -855,11 +856,11 @@
                                 : 'Di Nakala Digital, komitmen kami tidak berhenti saat kode selesai ditulis. Kami menerapkan QA Governance yang ketat untuk memastikan setiap solusi digital yang kami rilis berjalan dengan stabil, aman, dan siap pakai.' }}
                         </p>
                     </div>
-                    <div class="bg-white rounded-xl shadow-sm border border-outline-variant p-unit-lg">
+                    <div class="bg-white rounded-2xl shadow-sm border border-outline-variant p-unit-lg">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-unit-lg items-start">
                             <div class="lg:col-span-1">
                                 <div
-                                    class="p-3 bg-primary/10 text-primary rounded-lg inline-flex items-center justify-center mb-unit-sm">
+                                    class="p-3 bg-primary/10 text-primary rounded-xl inline-flex items-center justify-center mb-unit-sm">
                                     <span class="material-symbols-outlined text-3xl">verified_user</span>
                                 </div>
                                 <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-unit-sm">
@@ -872,7 +873,7 @@
                                 </p>
                             </div>
                             <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                                <div class="bg-surface-container-low p-unit-md rounded border-l-4 border-primary">
+                                <div class="bg-surface-container-low p-unit-md rounded-lg border-l-4 border-primary">
                                     <h4 class="font-body-md font-semibold text-on-background mb-1">
                                         {{ app()->getLocale() === 'en' ? '1. Solid Analysis & Planning' : '1. Analisis & Perencanaan Matang' }}
                                     </h4>
@@ -882,7 +883,7 @@
                                             : 'Melakukan peninjauan kebutuhan bisnis sejak awal (Requirement Review) serta menyusun rencana pengujian (Test Planning) yang komprehensif.' }}
                                     </p>
                                 </div>
-                                <div class="bg-surface-container-low p-unit-md rounded border-l-4 border-primary">
+                                <div class="bg-surface-container-low p-unit-md rounded-lg border-l-4 border-primary">
                                     <h4 class="font-body-md font-semibold text-on-background mb-1">
                                         {{ app()->getLocale() === 'en' ? '2. System & User Validation (SIT/UAT)' : '2. Validasi Sistem & Pengguna (SIT/UAT)' }}
                                     </h4>
@@ -892,7 +893,7 @@
                                             : 'Melalui tahap System Integration Testing (SIT) dan User Acceptance Testing (UAT) untuk memastikan sistem berjalan sesuai ekspektasi bisnis Anda.' }}
                                     </p>
                                 </div>
-                                <div class="bg-surface-container-low p-unit-md rounded border-l-4 border-primary">
+                                <div class="bg-surface-container-low p-unit-md rounded-lg border-l-4 border-primary">
                                     <h4 class="font-body-md font-semibold text-on-background mb-1">
                                         {{ app()->getLocale() === 'en' ? '3. Issue Management & Release Readiness' : '3. Manajemen Isu & Kesiapan Rilis' }}
                                     </h4>
@@ -902,7 +903,7 @@
                                             : 'Pelacakan error yang transparan (Bug Tracking) guna memastikan seluruh sistem berada pada status Release Readiness (siap diluncurkan) tanpa kendala.' }}
                                     </p>
                                 </div>
-                                <div class="bg-surface-container-low p-unit-md rounded border-l-4 border-primary">
+                                <div class="bg-surface-container-low p-unit-md rounded-lg border-l-4 border-primary">
                                     <h4 class="font-body-md font-semibold text-on-background mb-1">
                                         {{ app()->getLocale() === 'en' ? '4. Handover & Warranty' : '4. Serah Terima & Garansi' }}
                                     </h4>
@@ -915,7 +916,7 @@
                             </div>
                         </div>
                         <!-- Artifacts List -->
-                        <div class="bg-on-background p-unit-md rounded-lg text-white mt-unit-lg">
+                        <div class="bg-on-background p-unit-md rounded-xl text-white mt-unit-lg">
                             <h4 class="font-headline-h3 text-headline-h3 mb-unit-md text-primary-fixed-dim">
                                 {{ app()->getLocale() === 'en' ? 'QA Artifacts' : 'Artefak QA' }}</h4>
                             <ul class="space-y-4">
