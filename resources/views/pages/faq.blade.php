@@ -186,7 +186,7 @@
             <div class="mb-unit-xl flex flex-col md:flex-row md:items-end justify-between gap-unit-md">
                 <div class="max-w-2xl">
                     <span
-                        class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-full font-label-sm text-label-sm uppercase mb-unit-sm inline-block">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</span>
+                        class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-sm py-1 rounded-[20px] font-label-sm text-label-sm uppercase mb-unit-sm inline-block">{{ app()->getLocale() === 'en' ? 'FAQ' : 'FAQ' }}</span>
                     <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Common Queries' : 'Pertanyaan Umum' }}</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -197,11 +197,11 @@
                 </div>
                 <div class="hidden md:flex flex-wrap gap-unit-sm">
                     <a href="{{ route('contact' . $localeSuffix) }}"
-                        class="inline-block border-2 border-primary text-primary px-unit-lg py-unit-sm rounded-xl font-button text-button hover:bg-primary hover:text-white transition-all">
+                        class="inline-block border-2 border-primary text-primary px-unit-lg py-unit-sm rounded-[20px] font-button text-button hover:bg-primary hover:text-white transition-all">
                         {{ app()->getLocale() === 'en' ? 'Start a Project' : 'Mulai Proyek' }}
                     </a>
                     <a href="{{ route('insights' . $localeSuffix) }}"
-                        class="inline-block border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-sm rounded-xl font-button text-button hover:bg-on-secondary-fixed hover:text-white transition-all">
+                        class="inline-block border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-sm rounded-[20px] font-button text-button hover:bg-on-secondary-fixed hover:text-white transition-all">
                         {{ app()->getLocale() === 'en' ? 'View Insights' : 'Lihat Insight' }}
                     </a>
                 </div>
@@ -210,7 +210,7 @@
                 <!-- Accordion Column 1 -->
                 <div class="space-y-unit-sm">
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -225,7 +225,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
                             <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What industries does Nakala Digital serve?' : 'Industri apa saja yang dilayani Nakala Digital?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
@@ -239,7 +239,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -255,7 +255,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -271,7 +271,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -290,7 +290,7 @@
                 <!-- Accordion Column 2 -->
                 <div class="space-y-unit-sm">
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -305,7 +305,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                    <div class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left" onclick="toggleAccordion(this)">
                             <span class="font-headline-h3 text-headline-h3 text-on-surface">{{ app()->getLocale() === 'en' ? 'What engagement models are available?' : 'Apa saja model kerja sama yang tersedia?' }}</span>
                             <span class="material-symbols-outlined toggle-icon transition-transform">expand_more</span>
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -335,7 +335,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-xl transition-all hover:border-primary">
+                        class="accordion-item border border-outline-variant bg-surface-container-lowest p-unit-md rounded-[20px] transition-all hover:border-primary">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -372,7 +372,7 @@
                     <!-- Featured Post -->
                     <div class="md:col-span-8 group cursor-pointer">
                         <div
-                            class="relative overflow-hidden bg-white border border-outline-variant rounded-xl h-full flex flex-col">
+                            class="relative overflow-hidden bg-white border border-outline-variant rounded-[20px] h-full flex flex-col">
                             <div class="aspect-video overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     data-alt="A sophisticated data visualization dashboard displayed on multiple high-resolution monitors in a sleek, dimly lit command center. The lighting is dominated by Electric Cyan and Midnight Navy tones, creating a high-tech corporate atmosphere. The scene captures the essence of enterprise AI and digital intelligence, with a clean, sharp focus on technical rigor and regional capability."
@@ -407,7 +407,7 @@
                     <!-- Side Post 1 -->
                     <div class="md:col-span-4 group cursor-pointer">
                         <div
-                            class="bg-white border border-outline-variant rounded-xl overflow-hidden h-full flex flex-col">
+                            class="bg-white border border-outline-variant rounded-[20px] overflow-hidden h-full flex flex-col">
                             <div class="aspect-square overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     data-alt="Close-up of a high-end mechanical keyboard with glowing cyan backlighting, reflected on a polished desk surface. Beside it, a tablet displays a complex line of code with green and white accents. The mood is precise, orderly, and professional, emphasizing the meticulous nature of quality assurance and technical development."
@@ -433,7 +433,7 @@
                     <!-- Side Post 2 -->
                     <div class="md:col-span-4 group cursor-pointer">
                         <div
-                            class="bg-white border border-outline-variant rounded-xl overflow-hidden h-full flex flex-col">
+                            class="bg-white border border-outline-variant rounded-[20px] overflow-hidden h-full flex flex-col">
                             <div class="aspect-square overflow-hidden">
                                 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     data-alt="A clean, minimalist white-walled boardroom with a large central wooden table and vibrant lime-colored chairs. High-contrast natural sunlight streams through large windows, illuminating a wall of colorful sticky notes used for agile planning. The aesthetic is modern corporate, balancing energy with structured professionalism."
@@ -458,7 +458,7 @@
                     </div>
                     <!-- Partner Callout (Style Guidance: Strategic Partner Badge) -->
                     <div
-                        class="md:col-span-8 bg-on-secondary-fixed text-white rounded-xl p-unit-lg flex flex-col md:flex-row items-center justify-between gap-unit-lg">
+                        class="md:col-span-8 bg-on-secondary-fixed text-white rounded-[20px] p-unit-lg flex flex-col md:flex-row items-center justify-between gap-unit-lg">
                         <div class="text-center md:text-left">
                             <h3 class="font-headline-h2 text-headline-h3 text-primary-fixed mb-unit-xs">
                                 {{ app()->getLocale() === 'en' ? 'Collaborate with the Best' : 'Berkolaborasi dengan yang Terbaik' }}
@@ -470,12 +470,12 @@
                             </p>
                         </div>
                         <div
-                            class="flex-shrink-0 bg-white/10 backdrop-blur-md p-unit-md rounded-xl border border-white/20">
+                            class="flex-shrink-0 bg-white/10 backdrop-blur-md p-unit-md rounded-[20px] border border-white/20">
                             <!-- Visualizing the Romulus Digital strategic partner badge as requested in Style Guidance -->
                             <div class="flex flex-col items-center">
                                 <span
                                     class="text-[10px] uppercase tracking-widest text-primary-fixed mb-1">{{ app()->getLocale() === 'en' ? 'Strategic Partner' : 'Mitra Strategis' }}</span>
-                                <div class="bg-white rounded-xl px-4 py-2"><img class="h-9 w-auto object-contain"
+                                <div class="bg-white rounded-[20px] px-4 py-2"><img class="h-9 w-auto object-contain"
                                         src="{{ asset('assets/romulus-hitam.png') }}" alt="Romulus Digital"></div>
                             </div>
                         </div>
