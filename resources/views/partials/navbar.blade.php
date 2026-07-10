@@ -72,7 +72,7 @@
                 </div>
                 <div data-dropdown-menu role="menu"
                     class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg ring-1 ring-black/5 p-2 
-                        opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
+                        max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
                     <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
                         role="menuitem"
                         class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
@@ -169,7 +169,7 @@
                         </div>
                         <div data-dropdown-menu role="menu"
                             class="ml-3 mt-1 space-y-1 border-l-2 border-primary/20 pl-2
-                                opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out origin-top">
+                                max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out origin-top">
                             <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
                                 role="menuitem"
                                 class="flex items-center gap-3 rounded-xl px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
@@ -248,8 +248,8 @@
         var chevron = container.querySelector('[data-chevron]');
         var trigger = container.querySelector('[data-dropdown-trigger]');
         if (menu) {
-            menu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-            menu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+            menu.classList.remove('max-h-0', 'overflow-hidden', 'opacity-0', 'scale-95', 'pointer-events-none');
+            menu.classList.add('max-h-screen', 'opacity-100', 'scale-100', 'pointer-events-auto');
         }
         if (chevron) chevron.classList.add('rotate-180');
         if (trigger) trigger.setAttribute('aria-expanded', 'true');
@@ -260,8 +260,8 @@
         var chevron = container.querySelector('[data-chevron]');
         var trigger = container.querySelector('[data-dropdown-trigger]');
         if (menu) {
-            menu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
-            menu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+            menu.classList.remove('max-h-screen', 'opacity-100', 'scale-100', 'pointer-events-auto');
+            menu.classList.add('max-h-0', 'overflow-hidden', 'opacity-0', 'scale-95', 'pointer-events-none');
         }
         if (chevron) chevron.classList.remove('rotate-180');
         if (trigger) trigger.setAttribute('aria-expanded', 'false');
