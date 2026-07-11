@@ -184,8 +184,12 @@
     class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
     @include('partials.navbar')
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-unit-xl overflow-hidden">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <header class="relative pt-32 pb-unit-xl overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5">
+        <div class="hero-grid-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        <div class="hero-orb pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div class="hero-orb hero-orb-delay pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-primary/20 blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid lg:grid-cols-2 gap-gutter items-center">
                 <div class="z-10">
                     <div
@@ -213,12 +217,48 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-12 lg:mt-0">
-                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <div class="relative rounded-[20px] overflow-hidden border-2 border-outline-variant shadow-2xl">
-                        <img alt="Strategic Roadmap" class="w-full h-auto object-cover"
-                            data-alt="A professional enterprise dashboard interface showing complex digital transformation roadmaps and technical architectures. The visual style is high-contrast with a midnight navy background and vibrant impact lime accents. The interface includes interactive gantt charts, KPI metrics, and system health status indicators, glowing softly against a dark, minimalist digital workspace background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtRUftF0rI-CVIPCyxjoSYszWuTSBLLg6xy-DYz4UO-0utBeXCW0m8_qqBw30K3sdSaJ4lhUd_rFYcG7SUOsyXI3JSfuj3d-g_Bwjohi07wdbzEz0xZJUM4ZPnF8G7BS1-NRXLEq0UnATqZ6ZVx5Dxss6tdRWtFWD0LMczPvS6B9E9zBKmXxlSiDQjoiqpMPUf1WfmfwX0lFtE1i8cKdHiz0Kce57z3MUFe6RYmqeHH4LXCHch1gM7uEM3nvECcGNTpuQxRyVC9Eyq" />
+                <div class="relative mt-12 lg:mt-0 group min-h-[500px] flex items-center justify-center" id="hero-interactive-container" style="perspective: 1000px;">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/40 transition-colors duration-700"></div>
+                    
+                    <!-- Center Anchor Image -->
+                    <div id="hero-center-img" class="relative z-10 rounded-[20px] shadow-2xl transition-all duration-300 transform" style="transform-style: preserve-3d; will-change: transform; max-width: 320px;">
+                        <img alt="Technology Professional" class="w-full h-auto object-cover pointer-events-none rounded-[20px]" src="{{ asset('assets/hero_center_person.png') }}" />
+                    </div>
+
+                    <!-- Floating Card 1: AI & GenAI -->
+                    <div class="hero-floating-card absolute z-20 -top-8 -left-8 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.5" data-direction="-1,-1">
+                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">AI & GenAI</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 2: Custom Software -->
+                    <div class="hero-floating-card absolute z-20 top-1/4 -right-12 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="2" data-direction="1,-0.5">
+                        <span class="material-symbols-outlined text-tertiary text-2xl" data-icon="code" style="font-variation-settings: 'FILL' 1;">code</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Custom Software</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 3: Web Portals -->
+                    <div class="hero-floating-card absolute z-20 bottom-1/4 -left-12 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.2" data-direction="-1,1">
+                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Web & Portals</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 4: Data Engineering -->
+                    <div class="hero-floating-card absolute z-20 -bottom-8 right-0 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.8" data-direction="1,1">
+                        <span class="material-symbols-outlined text-tertiary text-2xl" data-icon="database" style="font-variation-settings: 'FILL' 1;">database</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Data Engineering</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -951,6 +991,98 @@
             } else {
                 header.classList.remove('py-2', 'shadow-md', 'h-16');
                 header.classList.add('h-20');
+            }
+        });
+
+        // Interactive Hero Floating Cards
+        const heroContainer = document.getElementById('hero-interactive-container');
+        const centerImg = document.getElementById('hero-center-img');
+        const floatingCards = document.querySelectorAll('.hero-floating-card');
+
+        if (heroContainer) {
+            // 1. Hover Parallax Effect
+            heroContainer.addEventListener('mousemove', (e) => {
+                const rect = heroContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                
+                // Tilt the center image slightly
+                if(centerImg) {
+                    centerImg.style.transform = `scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                }
+
+                // Parallax the floating cards slightly
+                floatingCards.forEach(card => {
+                    const speed = parseFloat(card.getAttribute('data-speed')) || 1;
+                    const moveX = ((x - centerX) / centerX) * (15 * speed);
+                    const moveY = ((y - centerY) / centerY) * (15 * speed);
+                    
+                    // We preserve the scroll-based transform by using a CSS variable or directly applying it.
+                    // For simplicity, we just add hover translation on top of whatever current state it has.
+                    // Wait, combining scroll and hover transforms manually can be tricky. 
+                    // Let's store the base transform from scroll.
+                    card.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+                });
+            });
+
+            heroContainer.addEventListener('mouseleave', () => {
+                if(centerImg) {
+                    centerImg.style.transform = 'scale(1) rotateX(0) rotateY(0)';
+                }
+                floatingCards.forEach(card => {
+                    // Reset to just the scroll position (handled by the scroll listener)
+                    // For mouseleave, just trigger a scroll event to recalculate
+                    window.dispatchEvent(new Event('scroll'));
+                });
+            });
+        }
+
+        // 2. Scroll-Driven Disappearance Animation (Suck into iPad)
+        window.addEventListener('scroll', () => {
+            if (!heroContainer) return;
+            
+            const scrollY = window.scrollY;
+            const heroHeight = document.querySelector('header').offsetHeight;
+            
+            // Calculate progress (0 at top, 1 at bottom of hero)
+            let progress = Math.min(scrollY / (heroHeight * 0.8), 1);
+            
+            floatingCards.forEach((card, index) => {
+                const speed = parseFloat(card.getAttribute('data-speed')) || 1;
+                const [dirX, dirY] = (card.getAttribute('data-direction') || '1,1').split(',').map(Number);
+                
+                // Add staggered effect so they disappear one by one
+                const staggerDelay = index * 0.15;
+                let cardProgress = Math.max(0, (progress - staggerDelay) * (1 / (1 - staggerDelay)));
+                cardProgress = Math.min(cardProgress, 1);
+                
+                // Calculate movement TOWARDS the center (iPad)
+                // We reverse dirX and dirY because they represent the outward direction
+                const moveX = -dirX * cardProgress * 300 * speed;
+                
+                // Add a slight positive Y offset so they converge lower down (where the iPad is held)
+                const moveY = -dirY * cardProgress * 300 * speed + (cardProgress * 150); 
+                
+                // Shrink as it goes into the iPad
+                const scale = 1 - (cardProgress * 0.8); 
+                const opacity = 1 - (cardProgress * 1.5); // Fade out
+                
+                card.style.transform = `translate(${moveX}px, ${moveY}px) scale(${scale})`;
+                card.style.opacity = Math.max(0, opacity);
+            });
+            
+            // Optionally fade out the center image too, but keep it visible slightly longer
+            if (centerImg) {
+                const centerOpacity = 1 - (progress * 1.5);
+                const centerScale = 1 - (progress * 0.1);
+                centerImg.style.opacity = Math.max(0, centerOpacity);
+                centerImg.style.transform = `scale(${centerScale})`;
             }
         });
     </script>
