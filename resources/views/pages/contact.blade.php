@@ -11,7 +11,7 @@
   ============================================================
 -->
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <!--
@@ -276,7 +276,7 @@
                   - Consultation session CTA
                 -->
                 <div class="lg:col-span-4 space-y-unit-lg">
-                    <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
+                    <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan rounded-[20px]">
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
                             {{ app()->getLocale() === 'en' ? 'Contact Information' : 'Informasi Kontak' }}</h3>
                         <div class="space-y-unit-md">
@@ -340,7 +340,7 @@
                       - Uses rel="noopener noreferrer" for security.
                     -->
                     <div
-                        class="p-unit-lg bg-white border border-outline-variant shadow-sm border-l-4 border-l-primary flex flex-col gap-unit-md">
+                        class="p-unit-lg bg-white border border-outline-variant shadow-sm border-l-4 border-l-primary flex flex-col gap-unit-md rounded-[20px]">
                         <div class="flex items-center gap-unit-md">
                             <div
                                 class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center shrink-0">
@@ -368,7 +368,7 @@
                       4-step delivery process:
                       01. Discovery → 02. Design → 03. Agile Dev → 04. Handover
                     -->
-                    <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
+                    <div class="p-unit-lg bg-surface-container-low border border-outline-variant rounded-[20px]">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
                             {{ app()->getLocale() === 'en' ? 'Our Model' : 'Model Kami' }}</h4>
                         <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
@@ -420,7 +420,7 @@
                 <div class="lg:col-span-8 flex flex-col gap-unit-xs">
                     <span
                         class="font-label-sm text-primary uppercase tracking-[0.3em] block">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'Formulir Kontak' }}</span>
-                    <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm">
+                    <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm rounded-[20px]">
                         <form class="space-y-unit-md" id="contactForm">
 
                             <!-- Row 1: Full Name + Company -->
@@ -591,20 +591,8 @@
             }, 3000);
         });
 
-        /*
-         * Scroll header: toggle shadow & height on scroll > 50px.
-         */
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
     </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

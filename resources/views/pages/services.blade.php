@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -192,15 +192,17 @@
 
 <body
     class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
     <!-- TopNavBar -->
     @include('partials.navbar')
+
     <!-- Hero Section -->
     <header class="relative pt-32 pb-unit-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid lg:grid-cols-2 gap-gutter items-center">
                 <div class="z-10">
                     <div
-                        class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-6">
+                        class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-[20px] font-label-sm text-label-sm uppercase tracking-widest mb-6">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
                         {{ $locale === 'id' ? 'Service Pillar' : 'Service Pillar' }}
                     </div>
@@ -214,23 +216,24 @@
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="{{ $locale === 'id' ? route('solutions') : route('solutions.en') }}"
-                            class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest flex items-center gap-2">
+                            class="bg-primary text-on-primary px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-widest flex items-center gap-2">
                             {{ $locale === 'id' ? 'Jelajahi Solusi' : 'Explore Solutions' }}
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </a>
                     </div>
                 </div>
                 <div class="relative mt-12 lg:mt-0">
-                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <div class="relative rounded-xl overflow-hidden border-2 border-outline-variant shadow-2xl">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-[20px] blur-3xl"></div>
+                    <div class="relative rounded-[20px] overflow-hidden border-2 border-outline-variant shadow-2xl">
                         <img alt="Strategic Roadmap" class="w-full h-auto object-cover"
                             data-alt="A professional enterprise dashboard interface showing complex digital transformation roadmaps and technical architectures. The visual style is high-contrast with a midnight navy background and vibrant impact lime accents. The interface includes interactive gantt charts, KPI metrics, and system health status indicators, glowing softly against a dark, minimalist digital workspace background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtRUftF0rI-CVIPCyxjoSYszWuTSBLLg6xy-DYz4UO-0utBeXCW0m8_qqBw30K3sdSaJ4lhUd_rFYcG7SUOsyXI3JSfuj3d-g_Bwjohi07wdbzEz0xZJUM4ZPnF8G7BS1-NRXLEq0UnATqZ6ZVx5Dxss6tdRWtFWD0LMczPvS6B9E9zBKmXxlSiDQjoiqpMPUf1WfmfwX0lFtE1i8cKdHiz0Kce57z3MUFe6RYmqeHH4LXCHch1gM7uEM3nvECcGNTpuQxRyVC9Eyq" />
+                            src="https://lh3.googleusercontent.com/pw/AP1GczNubL9NQs074jAvbscxBEmdKebq874eHqtE_peAFqtb8MJQqgCKsgDtWOkm557onPnMy-JYBI5XmlsFsxSi7VVfd_Ism5VekqedFPByehVSa-qbaTgR" />
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Service Pillars Section -->
     <section class="py-unit-xl bg-surface-container-lowest">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -434,6 +437,7 @@
     </section>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Micro-interactions
         document.querySelectorAll('.service-card').forEach(card => {
@@ -450,18 +454,6 @@
                     icon.style.transform = 'scale(1) rotate(0deg)';
                 }
             });
-        });
-
-        // Simple scroll behavior for Navbar
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
         });
     </script>
 </body>

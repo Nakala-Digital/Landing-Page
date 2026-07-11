@@ -30,7 +30,7 @@ function registerCompanyProfileRoutes($suffix = '')
     Route::view('/insights', 'pages.insights')->name('insights' . $suffix);
     Route::view('/contact', 'pages.contact')->name('contact' . $suffix);
 
-    /* BLOG INSIGHT*/
+    /* Blog Insight */
     Route::get('/insights/{slug}', function ($slug) {
 
         $files = [

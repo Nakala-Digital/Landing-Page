@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -161,22 +161,25 @@
     <main class="pt-20">
 
         <!-- Hero -->
-        <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
-            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
-                <div
-                    class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
-                    <span class="material-symbols-outlined text-[16px]">bolt</span>
-                    {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
+        <section class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background border-b border-outline-variant">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUTION%20HIGHLIGHT%20ND.png" referrerpolicy="no-referrer" />
+            </div>
+            <div class="relative z-10 px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto w-full">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
+                        <span class="material-symbols-outlined text-[16px]">bolt</span>
+                        {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
+                    </div>
+                    <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Perspectives on software excellence, AI adoption, QA governance, and digital transformation from the Nakala Digital team.'
+                            : 'Perspektif tentang keunggulan software, adopsi AI, tata kelola QA, dan transformasi digital dari tim Nakala Digital.' }}
+                    </p>
                 </div>
-                <h1
-                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
-                    {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    {{ app()->getLocale() === 'en'
-                        ? 'Perspectives on software excellence, AI adoption, QA governance, and digital transformation from the Nakala Digital team.'
-                        : 'Perspektif tentang keunggulan software, adopsi AI, tata kelola QA, dan transformasi digital dari tim Nakala Digital.' }}
-                </p>
             </div>
         </section>
 
@@ -187,11 +190,11 @@
                     class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}</span>
             </div>
             <div
-                class="group cursor-pointer bg-white border border-outline-variant rounded-xl overflow-hidden flex flex-col lg:flex-row">
+                class="group cursor-pointer bg-white border border-outline-variant rounded-[20px] overflow-hidden flex flex-col lg:flex-row">
                 <div class="lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden">
                     <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         data-alt="A sophisticated data visualization dashboard displayed on multiple high-resolution monitors in a sleek, dimly lit command center."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR535vuudX7lTS7e4rlJh7a9-gVx5AUk-xOXNnnCSBtfb5s7pPif-MixNqR0pMjjojGO_pBwl-VJfRc7i9aneEF3eIqu__3s4_IH1bqYRQmOL9gQCYRooxu7z0_FSjKu97jX8mCvGQzUKtFn12bVzeHbWzoKYiF8rv_pyukmlVamh3S8_Hhyj6uYihaF8rR1ZHEW7QbcWv5lNaab6a7LRWDZ_DRm5-olpTDLSAecUuoW7Top-3b5NwJmCEQZJYjM5nHV33VJnRxhhU" />
+                        src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/STRATEGI%20AI%20ND.png" />
                 </div>
                 <div
                     class="lg:w-1/2 p-unit-lg flex flex-col justify-between border-t-4 lg:border-t-0 lg:border-l-4 border-primary">
@@ -238,7 +241,7 @@
                             <a href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'ppdb-al-azhar') }}"
                                 class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -264,7 +267,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="tata-kelola-qa">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="Close-up of a high-end mechanical keyboard with glowing cyan backlighting, reflected on a polished desk surface."
@@ -290,7 +293,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="pendekatan-delivery">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A clean, minimalist white-walled boardroom with a large central wooden table and vibrant lime-colored chairs."
@@ -316,7 +319,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="teknologi-ai">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines."
@@ -342,7 +345,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="kemitraan">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -368,7 +371,7 @@
                             <a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -394,7 +397,7 @@
                             <a href="https://share.google/1GabxEEzxl7HExZBK" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -420,7 +423,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -446,7 +449,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -472,7 +475,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="transformasi-digital">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -498,7 +501,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="teknologi-ai">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -524,7 +527,7 @@
                             <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
                                 rel="noopener noreferrer" class="block" data-category="teknologi-ai">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -550,7 +553,7 @@
                             <a href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'd365-finance-automating-bank-reconciliation') }}"
                                 class="block" data-category="teknologi-ai">
                                 <div
-                                    class="bg-white border border-outline-variant rounded-xl overflow-hidden group cursor-pointer flex flex-col h-full">
+                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
                                     <div class="aspect-[2/1] overflow-hidden">
                                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                             data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
@@ -585,7 +588,7 @@
                     <div class="lg:col-span-3">
 
                         {{-- Category Card --}}
-                        <div class="border border-outline-variant rounded-xl p-unit-md">
+                        <div class="border border-outline-variant rounded-[20px] p-unit-md">
                             <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
                                 {{ app()->getLocale() === 'en' ? 'Categories' : 'Kategori' }}
                             </h3>
@@ -629,7 +632,7 @@
                 </p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ app()->getLocale() === 'en' ? 'Free Consultation' : 'Konsultasi Gratis' }}
                     </a>
                 </div>
@@ -639,18 +642,8 @@
 
     @include('partials.partner-badge')
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-
         const perPage = 12;
         const cards = document.querySelectorAll('[data-category]');
 

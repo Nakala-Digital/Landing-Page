@@ -170,7 +170,7 @@
                 line-height: 1.3 !important;
             }
 
-            .hero-title + p {
+            .hero-title+p {
                 font-size: 15px !important;
             }
         }
@@ -182,13 +182,15 @@
                 line-height: 1.2 !important;
             }
 
-            .hero-title + p {
+            .hero-title+p {
                 font-size: 16px !important;
             }
 
             .hero-image-wrap {
-                align-self: flex-start;
-                margin-top: 56px;
+                align-self: stretch;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
             }
         }
     </style>
@@ -201,7 +203,7 @@
         <!-- Hero Section -->
         <section
             class="pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
-            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
                 <div class="relative z-10">
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-lg">
@@ -221,17 +223,16 @@
                     </p>
                     <div class="flex flex-wrap gap-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="flex-1 bg-primary text-on-primary px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</a>
+                            class="flex-1 bg-primary text-on-primary px-unit-lg py-unit-md rounded-[20px] font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</a>
                         <a href="{{ route('portfolio' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="flex-1 border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</a>
+                            class="flex-1 border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-[20px] font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</a>
                     </div>
                 </div>
                 <div class="relative hero-image-wrap">
-                    <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
                     <img alt="Platform Mockup"
-                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 w-full object-cover h-[400px] hero-image"
+                        class="rounded-[20px] shadow-2xl border border-outline-variant relative z-10 w-4/5 h-auto max-h-full object-cover hero-image"
                         data-alt="A high-fidelity digital dashboard mockup shown on a clean white laptop screen, positioned at an elegant angle. The interface features complex data visualizations, sleek navigation menus, and clean enterprise aesthetics in a professional light-mode setting. Soft daylight illuminates the scene from the side, creating subtle shadows and a premium, corporate tech-focused atmosphere. The overall composition is minimalist and authoritative."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFPWsSqZB8hiKpSGVy_jWZ7eEnJr7EoYxNuzzHplwocf1eYr5cwAoKX5T-P5RJtbVCsEMouFek11870Wr_jvct94bNTnwXnvYLGXjZdX9oFZlppC0yur0ddxU6aTXprqINg9_hiu_opgd9Z8APaLpqliC3kHbpZUK9TWErcf_Br2WV8h6XCOaNfwHxNbTe6Vds4dyKn5bO4IetclTUlApRCpMNNAWu6wFswHjcwQts3eZ4ejMzcP0dEnrHXbYrhYQlDOsTIE-5cIJA" />
+                        src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUSI%20DIGITAL%20ND.png" />
                     <div
                         class="absolute bottom-unit-md left-unit-md z-20 hidden md:flex items-center gap-unit-sm rounded-lg border border-primary/40 bg-midnight-navy/95 px-unit-md py-unit-sm shadow-xl backdrop-blur">
                         <div
@@ -244,6 +245,7 @@
                             </p>
                             <span
                                 class="font-bold text-white">{{ app()->getLocale() === 'en' ? '+45% Efficiency' : '+45% Efisiensi' }}</span>
+
                         </div>
                     </div>
                 </div>
@@ -279,7 +281,7 @@
                         $linkClass = $isDark ? 'text-tertiary-fixed' : 'text-primary';
                     @endphp
                     <article
-                        class="{{ $case['span'] }} {{ $cardClass }} rounded-xl p-unit-lg solution-card transition-all {{ $case['featured'] ?? false ? 'border-t-4 border-t-primary' : '' }}">
+                        class="{{ $case['span'] }} {{ $cardClass }} rounded-[20px] p-unit-lg solution-card transition-all {{ $case['featured'] ?? false ? 'border-t-4 border-t-primary' : '' }}">
                         <div class="flex h-full flex-col">
                             <span
                                 class="material-symbols-outlined {{ $linkClass }} text-4xl mb-unit-sm">{{ $case['icon'] }}</span>
@@ -295,7 +297,7 @@
                                 {{ $case['headline'][$locale] }} {{ $case['summary'][$locale] }}
                             </p>
                             <div
-                                class="{{ $isDark ? 'bg-white/10 border-white/20' : 'bg-surface-container-highest/30 border-outline-variant/50' }} p-unit-sm rounded border mb-unit-md">
+                                class="{{ $isDark ? 'bg-white/10 border-white/20' : 'bg-surface-container-highest/30 border-outline-variant/50' }} p-unit-sm rounded-[20px] border mb-unit-md">
                                 <p class="text-xs">
                                     <strong>{{ $locale === 'en' ? 'For' : 'Untuk' }}:</strong>
                                     {{ implode(' · ', $case['who_it_helps'][$locale]) }}
@@ -329,12 +331,12 @@
             </p>
             <nav class="flex-grow space-y-unit-sm">
                 @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
-                <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors"
+                <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-[20px] transition-colors"
                     href="{{ route('home' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">home</span>
                     {{ app()->getLocale() === 'en' ? 'Home' : 'Beranda' }}
                 </a>
-                <a class="flex items-center gap-unit-md p-unit-sm bg-primary-container text-on-primary-container font-bold rounded-lg transition-colors"
+                <a class="flex items-center gap-unit-md p-unit-sm bg-primary-container text-on-primary-container font-bold rounded-[20px] transition-colors"
                     href="{{ route('solutions' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">lightbulb</span>
                     {{ app()->getLocale() === 'en' ? 'Solutions' : 'Solusi' }}
@@ -344,29 +346,17 @@
                     <span class="material-symbols-outlined">work</span>
                     {{ app()->getLocale() === 'en' ? 'Portfolio' : 'Portofolio' }}
                 </a>
-                <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors"
+                <a class="flex items-center gap-unit-md p-unit-sm text-on-surface-variant hover:bg-surface-container-high rounded-[20px] transition-colors"
                     href="{{ route('contact' . $localeSuffix) }}">
                     <span class="material-symbols-outlined">mail</span>
                     {{ app()->getLocale() === 'en' ? 'Contact' : 'Kontak' }}
                 </a>
             </nav>
             <a href="{{ route('contact' . $localeSuffix) }}"
-                class="bg-primary text-on-primary w-full py-unit-md rounded-lg font-button text-button mt-auto block text-center">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
+                class="bg-primary text-on-primary w-full py-unit-md rounded-[20px] font-button text-button mt-auto block text-center">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
         </div>
     </div>
-    <script>
-        // Simple scroll behavior for Navbar
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

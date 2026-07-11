@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -194,22 +194,14 @@
             transform: rotate(180deg);
         }
 
-        /* --- SOCIAL PROOF STATS: EDIT SESUAI KEBUTUHAN --- */
+        /* SOCIAL PROOF STATS - Nakala Slogans */
         .stat-card {
             text-align: center;
         }
 
-        .stat-number {
+        .stat-slogan {
             font-weight: 700;
             color: #12AED0;
-            line-height: 1.1;
-        }
-
-        .stat-label {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: #031A44;
             line-height: 1.2;
         }
 
@@ -220,17 +212,12 @@
                 border-bottom: 1px solid #12AED0;
             }
 
-            .stat-card:nth-last-child(-n+2) {
+            .stat-card:last-child {
                 border-bottom: none;
             }
 
-            .stat-number {
-                font-size: 36px;
-                margin-bottom: 4px;
-            }
-
-            .stat-label {
-                font-size: 11px;
+            .stat-slogan {
+                font-size: 18px;
             }
         }
 
@@ -244,13 +231,8 @@
                 border-right: 1px solid #12AED0;
             }
 
-            .stat-number {
-                font-size: 48px;
-                margin-bottom: 6px;
-            }
-
-            .stat-label {
-                font-size: 11px;
+            .stat-slogan {
+                font-size: 20px;
             }
         }
 
@@ -264,13 +246,8 @@
                 border-right: 1px solid #12AED0;
             }
 
-            .stat-number {
-                font-size: 64px;
-                margin-bottom: 8px;
-            }
-
-            .stat-label {
-                font-size: 12px;
+            .stat-slogan {
+                font-size: 22px;
             }
         }
 
@@ -280,9 +257,11 @@
                 font-size: 22px !important;
                 line-height: 1.3 !important;
             }
+
             .hero-desc {
                 font-size: 15px !important;
             }
+
             .hero-btn {
                 padding-left: 1.5rem !important;
                 padding-right: 1.5rem !important;
@@ -291,17 +270,35 @@
                 font-size: 14px !important;
             }
         }
+
+        /* SOCIAL PROOF - Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
     </style>
 </head>
 
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
     @include('partials.navbar')
     <main class="pt-20">
+
         <!-- Hero Section -->
         <section
             class="relative overflow-hidden bg-surface-container-lowest pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 border-b border-outline-variant">
             <div
-                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-start">
                 <div class="space-y-unit-lg z-10">
                     <div
                         class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest">
@@ -327,23 +324,25 @@
                     <div class="flex flex-col sm:flex-row gap-unit-md pt-unit-md">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('contact' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform hero-btn">
+                            class="inline-flex items-center justify-center text-center bg-primary-container text-on-primary-container px-10 py-5 rounded-[20px] font-button text-lg uppercase tracking-widest shadow-lg hover:translate-y-[-2px] transition-transform hero-btn">
                             {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                         <a href="{{ route('services' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-lg font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors hero-btn">
+                            class="inline-flex items-center justify-center text-center border-2 border-on-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-[20px] font-button text-lg uppercase tracking-widest hover:bg-surface-container-high transition-colors hero-btn">
                             {{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}
                         </a>
                     </div>
                 </div>
                 <div class="relative group">
+                    <div class="absolute -inset-4 bg-primary/10 rounded-[20px] blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0"></div>
                     <div
-                        class="absolute -inset-4 bg-primary/10 rounded-xl blur-3xl opacity-50 group-hover:opacity-75 transition-opacity">
+                        class="relative overflow-hidden rounded-[20px] shadow-2xl border-4 border-white/10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary z-10">
+                        <img alt="Nakala Digital Team Photo"
+                            class="relative w-full rounded-[20px] transition-all duration-700 ease-out group-hover:scale-105"
+                            referrerpolicy="no-referrer"
+                            data-alt="Nakala Digital team photo showcasing collaborative work environment"
+                            src="https://lh3.googleusercontent.com/pw/AP1GczONjKoKyHeit5LqhDcuNS5vcyLu-2jQcLuSAGAXWKR2NCmTpWIkWZT7KNtFsSOSR9kPtBbHSueE97kPS5FrzU0AJpaDWgUalzXGu5OWuL-ih4o8xcYi" />
                     </div>
-                    <img alt="AI Dashboard Visualization"
-                        class="relative rounded-lg shadow-2xl border-4 border-surface-container-high w-full"
-                        data-alt="A sophisticated dark-themed AI technology dashboard with complex data visualizations, glowing cyan line graphs, and hexagonal grid patterns. The UI is clean and modern, representing enterprise-level analytics. Soft volumetric lighting highlights the depth of the interface against a deep midnight navy background, conveying precision and high-tier technical capability."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAJsV3r7YbZ2WLV8HysYxDcgC09shBxz2HJ-L9ziBmit0_beLik2uLipeqEcSm9h5oRtYrp81qEN_Ihx3sqMZADJzKvtHVNv0gwnsDYOnW4nBjc_-sTG4TVEJCTAlXHoJsQV3QrgUh8sBOeWXG09W_itrv5BDyw2rdaHr9mRe8JORt7XcJ6e0gZQBFvbLPG09QhqnaRAvX1m85IW87-9UQUK60uuGFvPTkf7qufJinQhj0LLnucDKM7bkS1DbWzrEDTjwN9agOJnZ" />
                 </div>
             </div>
         </section>
@@ -354,22 +353,15 @@
         <!-- Social Proof Metrics -->
         <section class="py-unit-xl bg-surface">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-                    <div class="stat-card">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">{{ __('messages.metric_projects') }}</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <div class="stat-card opacity-0 translate-y-8" style="--delay: 0s">
+                        <div class="stat-slogan">󠁯Professional Delivery</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">{{ __('messages.metric_expertise') }}</div>
+                    <div class="stat-card opacity-0 translate-y-8" style="--delay: 0.15s">
+                        <div class="stat-slogan">󠁯Meaningful Solutions</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">{{ __('messages.metric_hubs') }}</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">{{ __('messages.metric_support') }}</div>
+                    <div class="stat-card opacity-0 translate-y-8" style="--delay: 0.3s">
+                        <div class="stat-slogan">Impactful Growth</div>
                     </div>
                 </div>
             </div>
@@ -387,9 +379,10 @@
                     <p class="font-body-lg text-body-lg text-on-surface-variant">{{ __('messages.cap_desc') }}</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
                     <!-- Bento Item 1 -->
                     <div
-                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-lg border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
+                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-[20px] border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
                         <div class="space-y-unit-md">
                             <span class="material-symbols-outlined text-primary text-4xl"
                                 data-weight="fill">settings_suggest</span>
@@ -417,7 +410,7 @@
 
                     <!-- Bento Item 2 -->
                     <div
-                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-lg text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
+                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-[20px] text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
                         <div class="h-full flex flex-col justify-between">
                             <div class="space-y-unit-md">
                                 <span class="material-symbols-outlined text-tertiary-fixed text-4xl">psychology</span>
@@ -433,15 +426,16 @@
 
                     <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
+                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-[20px] border border-outline-variant group hover:opacity-90 transition-all">
                         <span class="material-symbols-outlined text-[#031A44] text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
                         <p class="font-body-md opacity-90">{{ __('messages.cap_consulting_desc') }}</p>
                     </div>
+
                     <!-- Bento Item 4 -->
                     <div
-                        class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
+                        class="md:col-span-8 bg-primary p-unit-lg rounded-[20px] text-white relative overflow-hidden flex items-center">
                         <div class="z-10 space-y-unit-md">
                             <h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
                             <p class="font-body-lg text-white/90 max-w-lg">{{ __('messages.cap_local_desc') }}</p>
@@ -453,15 +447,111 @@
                 </div>
             </div>
         </section>
+
+        {{-- Solusi Berdasarkan Industri --}}
+        <section class="py-unit-xl bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-unit-xl">
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'By Industry' : 'Berdasarkan Industri' }}</span>
+                    <h2
+                        class="font-headline-h2-mobile md:font-headline-h2 text-headline-h2-mobile md:text-headline-h2 text-on-background mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Solutions for Every Industry' : 'Solusi yang Tepat untuk Setiap Industri' }}
+                    </h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto">
+                        {{ app()->getLocale() === 'en' ? 'From education to manufacturing — we deliver digital solutions tailored to the specific needs of your industry.' : 'Dari pendidikan hingga manufaktur kami menghadirkan solusi digital yang sesuai dengan kebutuhan spesifik industri Anda.' }}
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    @php
+                        $locale = app()->getLocale();
+                        $detailRoute = $locale === 'en' ? 'solutions.detail.en' : 'solutions.detail';
+                        $solutionsRoute = 'solutions' . ($locale === 'en' ? '.en' : '');
+                        $industries = [
+                            [
+                                'icon' => 'school',
+                                'name_en' => 'Education & Academic',
+                                'name_id' => 'Pendidikan & Akademik',
+                                'desc_en' =>
+                                    'School portals, digital PPDB admissions, and AI-powered learning platforms.',
+                                'desc_id' => 'Portal sekolah, PPDB digital, dan platform pembelajaran berbasis AI.',
+                                'route_id' => 'ppdb-school',
+                            ],
+                            [
+                                'icon' => 'account_balance',
+                                'name_en' => 'Financial Services & Enterprise',
+                                'name_id' => 'Keuangan & Enterprise',
+                                'desc_en' => 'D365 Finance, ERP systems, and financial management solutions.',
+                                'desc_id' => 'D365 Finance, sistem ERP, dan solusi manajemen keuangan.',
+                                'route_id' => 'd365-support',
+                            ],
+                            [
+                                'icon' => 'badge',
+                                'name_en' => 'HR & Talent Management',
+                                'name_id' => 'SDM & Pengembangan Talenta',
+                                'desc_en' => 'AI-powered hiring, HRMS platforms, and talent development tools.',
+                                'desc_id' => 'Rekrutmen berbasis AI, platform HRMS, dan alat pengembangan talenta.',
+                                'route_id' => 'hrms-mahya',
+                            ],
+                            [
+                                'icon' => 'precision_manufacturing',
+                                'name_en' => 'Energy, Manufacturing & Operations',
+                                'name_id' => 'Energi, Manufaktur & Operasi',
+                                'desc_en' => 'HSE digitalization, operational automation, and compliance systems.',
+                                'desc_id' => 'Digitalisasi HSE, otomasi operasional, dan sistem kepatuhan.',
+                                'route_id' => 'hse-operations',
+                            ],
+                            [
+                                'icon' => 'apartment',
+                                'name_en' => 'Property & Community',
+                                'name_id' => 'Properti & Komunitas',
+                                'desc_en' => 'Community cash management, billing, and resident engagement platforms.',
+                                'desc_id' => 'Manajemen kas komunitas, billing, dan platform keterlibatan warga.',
+                                'route_id' => 'wargakas',
+                            ],
+                            [
+                                'icon' => 'cloud',
+                                'name_en' => 'Technology & SaaS',
+                                'name_id' => 'Teknologi & SaaS',
+                                'desc_en' => 'Custom SaaS platforms, AI automation, and end-to-end digital consulting.',
+                                'desc_id' => 'Platform SaaS kustom, otomasi AI, dan konsultasi digital end-to-end.',
+                                'route_id' => 'ai-automation',
+                            ],
+                        ];
+                    @endphp
+                    @foreach ($industries as $ind)
+                        <article
+                            class="bg-surface-container-lowest rounded-[20px] p-unit-lg border border-outline-variant hover:border-primary transition-all group flex flex-col">
+                            <span
+                                class="material-symbols-outlined text-primary text-4xl mb-unit-sm block">{{ $ind['icon'] }}</span>
+                            <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-unit-xs">
+                                {{ $locale === 'en' ? $ind['name_en'] : $ind['name_id'] }}</h3>
+                            <p class="text-on-surface-variant text-sm mb-unit-md">
+                                {{ $locale === 'en' ? $ind['desc_en'] : $ind['desc_id'] }}</p>
+                            <a href="{{ $ind['route_id'] ? route($detailRoute, $ind['route_id']) : route($solutionsRoute) }}"
+                                class="text-primary font-bold text-sm inline-flex items-center gap-1 mt-auto group-hover:gap-2 transition-all">
+                                {{ app()->getLocale() === 'en' ? 'View Solutions' : 'Lihat Solusi' }}
+                                <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                            </a>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
         <!-- About / Narrative Section -->
         <section class="py-unit-xl bg-surface-container-lowest">
             <div
                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
-                <div class="order-2 lg:order-1">
-                    <img alt="Nakala Digital Team Collaboration"
-                        class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
-                        data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O" />
+                <div class="order-2 lg:order-1 relative group">
+                    <div class="absolute -inset-4 bg-primary/10 rounded-[20px] blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0"></div>
+                    <div
+                        class="relative overflow-hidden rounded-[20px] shadow-2xl border-4 border-white/10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary z-10">
+                        <img alt="Nakala Digital Team Collaboration"
+                            class="relative w-full h-full object-cover rounded-[20px] transition-all duration-700 ease-out group-hover:scale-105"
+                            data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents."
+                            src="https://lh3.googleusercontent.com/pw/AP1GczPcLunXXRXpVzMYzap_WnPtRXnR2Jo4NuQPPUzVg8-vrx0EsyVyp6xNfw5SiwvUOFNn-0Gh09GGJ-XXv4hrLPtGXYmvPJqHKkNtw412R7dZAsqVjBG-" />
+                    </div>
                 </div>
                 <div class="order-1 lg:order-2 space-y-unit-lg">
                     <span
@@ -490,6 +580,7 @@
                 </div>
             </div>
         </section>
+
         <!-- FAQ Section -->
         <section class="py-unit-xl bg-surface">
             <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
@@ -503,7 +594,7 @@
                 </div>
                 <div class="space-y-4">
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -520,7 +611,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -537,7 +628,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -554,7 +645,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -571,7 +662,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -588,7 +679,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -605,7 +696,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -624,6 +715,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Final CTA -->
         <section class="py-unit-xl bg-primary text-center relative overflow-hidden">
             <div class="absolute inset-0 opacity-10">
@@ -642,28 +734,18 @@
                 <p class="font-body-lg text-white/90">{{ __('messages.final_cta_desc') }}</p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ app()->getLocale() === 'en' ? 'Schedule a Free Consultation' : 'Jadwalkan Konsultasi Gratis' }}
                     </a>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
-        // Simple scroll header effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('h-16');
-                header.classList.add('h-20');
-            }
-        });
-
         // FAQ Accordion functionality
         function toggleAccordion(button) {
             const item = button.closest('.accordion-item');
@@ -685,6 +767,21 @@
             const firstItem = document.querySelector('.accordion-item');
             if (firstItem) firstItem.classList.add('active');
         });
+    </script>
+
+    <script>
+        (function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = entry.target.style.getPropertyValue('--delay');
+                        entry.target.classList.add('animate-fade-in-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            document.querySelectorAll('.stat-card').forEach(el => observer.observe(el));
+        })();
     </script>
 </body>
 

@@ -208,24 +208,29 @@
                     </p>
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
+                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-[20px] shadow-lg hover:scale-105 transition-transform">
                             {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-unit-lg md:mt-0">
-                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl">
+
+                {{-- Card Image --}}
+                <div class="relative mt-unit-lg md:mt-0" style="transform: translateX(24px)">
+                    <div class="absolute -inset-4 bg-primary/10 rounded-[20px] blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0"></div>
+                    <div
+                        class="group relative overflow-hidden rounded-[20px] shadow-2xl border-4 border-white/10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary z-10">
+                        <img alt="Software Development Workflow"
+                            class="relative w-full h-[400px] object-cover rounded-[20px] transition-all duration-700 ease-out group-hover:scale-105"
+                            data-alt="A group of professional software engineers"
+                            src="https://lh3.googleusercontent.com/pw/AP1GczOxIU5Ny7yPiB4k3Q5rtl2FfIR9h3IoNNdH-HFgnnVh-mOW0OL_ktNN24ClL9YkUDRfH3WDJ_XQ-nvSoEE4nmPoS-TBRe4832P-n3gVRVSp4zD57cYe" />
                     </div>
-                    <img alt="Software Development Workflow"
-                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]"
-                        data-alt="A group of professional software engineers..."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
                 </div>
             </div>
         </header>
 
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
+
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
@@ -239,7 +244,7 @@
 
                 <!-- Vision -->
                 <div
-                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-xl flex flex-col justify-between border-t-4 border-primary-fixed">
+                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-[20px] flex flex-col justify-between border-t-4 border-primary-fixed">
                     <div class="space-y-unit-md">
                         <span class="material-symbols-outlined text-4xl"
                             style="font-variation-settings: 'FILL' 1;">visibility</span>
@@ -267,7 +272,7 @@
                         {{ app()->getLocale() === 'en' ? 'Our Mission' : 'Misi Kami' }}
                     </h3>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -276,7 +281,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -285,7 +290,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -294,7 +299,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -303,7 +308,7 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -335,10 +340,10 @@
 
                     <!-- Reason 1 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
                             </div>
@@ -354,10 +359,10 @@
 
                     <!-- Reason 2 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
                             </div>
@@ -373,10 +378,10 @@
 
                     <!-- Reason 3 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
                             </div>
@@ -392,10 +397,10 @@
 
                     <!-- Reason 4 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
                             </div>
@@ -411,10 +416,10 @@
 
                     <!-- Reason 5 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
                             </div>
@@ -430,10 +435,10 @@
 
                     <!-- Reason 6 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
                             </div>
@@ -450,22 +455,10 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Footer -->
     @include('partials.footer')
-    <script>
-        // Simple scroll behavior for Navbar
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

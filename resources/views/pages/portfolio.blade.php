@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -174,13 +174,19 @@
 
 <body
     class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+
     <!-- TopNavBar -->
     @include('partials.navbar')
     <main class="pt-20">
+
         <!-- Hero Section -->
-        <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
+        <section class="relative min-h-[300px] md:aspect-[2560/941] overflow-hidden bg-surface-container-lowest border-b border-outline-variant">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/PORTOFOLIO%20ND.png" referrerpolicy="no-referrer" />
+            </div>
             <div
-                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
+                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-unit-xl pb-unit-xl relative z-10">
+                <div class="max-w-3xl flex flex-col items-start gap-unit-md">
                 <div
                     class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
                     <span class="material-symbols-outlined text-xs">book</span>
@@ -195,7 +201,9 @@
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                     {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
                 </p>
+                </div>
             </div>
+
             <!-- Decorative Elements -->
             <div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none">
                 <svg class="w-full h-full text-primary fill-current" viewbox="0 0 100 100">
@@ -207,12 +215,14 @@
                 </svg>
             </div>
         </section>
+
         <!-- Bento Grid Portfolio Section -->
         <section class="py-unit-xl px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
                 <!-- 1. PPDB -->
                 <div
-                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
+                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-[20px]">
                     <div class="flex flex-col md:flex-row h-full">
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
@@ -242,9 +252,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 2. HRMS -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
+                    class="md:col-span-6 lg:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col justify-between">
                     <div class="mb-unit-xl">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
@@ -267,11 +278,12 @@
                             <span class="material-symbols-outlined">arrow_forward</span></a>
                     </div>
                 </div>
+
                 <!-- 3. HSE -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
+                    class="md:col-span-6 lg:col-span-4 bento-card bg-inverse-surface text-inverse-on-surface rounded-[20px] p-unit-lg flex flex-col items-start gap-unit-md">
                     <span
-                        class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
+                        class="bg-primary px-unit-md py-1 rounded-[20px] font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
                     <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
                     <p class="text-surface-variant text-body-md">
                         {{ app()->getLocale() === 'en' ? 'Digitizing workplace safety reports and real-time hazard monitoring for mining operations.' : 'Mendigitalisasi laporan keselamatan kerja dan pemantauan bahaya secara real-time untuk operasi pertambangan.' }}
@@ -282,9 +294,10 @@
                             class="font-bold">{{ app()->getLocale() === 'en' ? 'Proactive Safety Management' : 'Manajemen Keselamatan Proaktif' }}</span>
                     </div>
                 </div>
+
                 <!-- 4. WargaKas -->
                 <div
-                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
+                    class="md:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-[20px]">
                     <div class="flex flex-col md:flex-row-reverse h-full">
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
@@ -313,19 +326,20 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 5. AI Hiring -->
                 <div
-                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg">
                     <div class="flex justify-between items-start mb-unit-lg">
                         <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
                         <span
-                            class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-full font-label-sm uppercase">AI
+                            class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-[20px] font-label-sm uppercase">AI
                             Powered</span>
                     </div>
                     <p class="text-on-surface-variant text-body-md mb-unit-lg">
                         {{ app()->getLocale() === 'en' ? 'Automating candidate screening and matching using custom AI models trained on industry-specific requirements.' : 'Mengotomatiskan screening dan pencocokan kandidat menggunakan model AI kustom yang dilatih pada kebutuhan industri spesifik.' }}
                     </p>
-                    <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
+                    <div class="bg-surface-container p-unit-md rounded-[20px] border border-outline-variant">
                         <p class="font-label-sm uppercase text-primary">
                             {{ app()->getLocale() === 'en' ? 'Business Value' : 'Nilai Bisnis' }}</p>
                         <p class="text-body-md">
@@ -333,9 +347,10 @@
                         </p>
                     </div>
                 </div>
+
                 <!-- 6. AI Coach -->
                 <div
-                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
+                    class="md:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg overflow-hidden relative group">
                     <div class="mb-unit-xl text-center md:text-left">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
@@ -344,10 +359,10 @@
                             {{ app()->getLocale() === 'en' ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.' : 'Jalur pembelajaran adaptif untuk reskilling perusahaan, memanfaatkan LLM untuk umpan balik real-time.' }}
                         </p>
                         <div class="flex gap-unit-sm">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                            <div class="w-8 h-8 rounded-[20px] bg-primary flex items-center justify-center text-white">
                                 <span class="material-symbols-outlined text-sm">smart_toy</span>
                             </div>
-                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <div class="w-8 h-8 rounded-[20px] bg-secondary flex items-center justify-center text-white">
                                 <span class="material-symbols-outlined text-sm">school</span>
                             </div>
                         </div>
@@ -358,9 +373,10 @@
                             style="font-variation-settings: 'FILL' 1;">psychology</span>
                     </div>
                 </div>
+
                 <!-- 7. D365 Support -->
                 <div
-                    class="md:col-span-6 lg:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-6 lg:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg">
                     <div class="flex items-center gap-unit-sm mb-unit-md">
                         <span class="material-symbols-outlined text-primary">hub</span>
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
@@ -368,7 +384,7 @@
                     <p class="text-on-surface-variant text-body-md mb-unit-lg">
                         {{ app()->getLocale() === 'en' ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.' : 'Tantangan: Mengintegrasikan data legacy kompleks ke dalam ekosistem MS Dynamics modern untuk konglomerat regional.' }}
                     </p>
-                    <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
+                    <div class="bg-surface-container p-unit-md rounded-[20px] border border-outline-variant">
                         <p class="font-label-sm uppercase">
                             {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kapabilitas Regional' }}</p>
                         <p class="text-body-md font-bold">
@@ -376,9 +392,10 @@
                         </p>
                     </div>
                 </div>
+
                 <!-- 8. 360 Customer Engagement -->
                 <div
-                    class="md:col-span-8 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
+                    class="md:col-span-8 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
                     <div class="flex-1">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
@@ -396,7 +413,7 @@
                         </div>
                     </div>
                     <div
-                        class="w-full md:w-64 h-48 bg-surface rounded-xl border border-outline-variant overflow-hidden">
+                        class="w-full md:w-64 h-48 bg-surface rounded-[20px] border border-outline-variant overflow-hidden">
                         <img class="w-full h-full object-cover"
                             data-alt="A sophisticated data visualization dashboard showing multiple charts, world maps, and real-time metric counters. The color scheme is professional, featuring deep navy and electric cyan highlights. The workspace is high-end, with a glimpse of a clean glass desk and minimalist office decor. The mood is analytical and authoritative, representing regional technical capability."
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZEGho0ZXWrYACNka0PrjLxslCBfj6LJo_mRI11PKgIGzp7ZdJx9giE7_K1sBpy2rF1Fw3Mq2nm5HF_OmUXqzEfuv3hKFoiEn7bVmO_zDOTQ2q-I8jkbO3sTTAB9fDGG9MX8IicOtokZ7m-9U9TCCti7Bv_U6Q93v0a212AnnU4Ge19za8WEH5UWl0L4yLu9SR16ctsrQmu9wRkJHNcYVMWQdduV5oBVHKKk3_amJXnevYkcLQfRkr-P0Wk3dPrLxMZB8J8nirVrlu" />
@@ -404,8 +421,10 @@
                 </div>
             </div>
         </section>
+
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
+
         <!-- CTA Section -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
             <h2
@@ -415,34 +434,16 @@
                     : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>' !!}</h2>
             <div class="flex flex-col md:flex-row gap-unit-md justify-center">
                 <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
+                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-[20px] font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
                 <a href="{{ route('services' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
+                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-[20px] font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
             </div>
         </section>
     </main>
+    
     <!-- Footer -->
     @include('partials.footer')
-    <script>
-        // Micro-interactions
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Potential for lightweight JS effects if needed
-            });
-        });
-
-        // Simple scroll spy for header opacity
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

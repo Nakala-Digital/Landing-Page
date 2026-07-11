@@ -171,12 +171,14 @@
 <body class="bg-background text-on-background">
     @include('partials.navbar')
     <main class="pt-20">
+
         <!-- Hero Section -->
-        <section class="relative min-h-[500px] md:h-[614px] flex items-center overflow-hidden bg-on-background">
+        <section class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover opacity-30 grayscale"
-                    data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office. The lighting is crisp and natural, emphasizing a high-contrast aesthetic with deep shadows and brilliant highlights. The scene conveys an atmosphere of technical rigor and authoritative stability, utilizing the brand's primary cyan and midnight navy tones in the environment."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYiQ6EWSs-v_Koo9kKVlSZqFcZHkDo9PGRA2PVOm0bs7Fw3FYndqUib3o2t1vn2_8JgWwLq6uy-bjjfqX6n5Mzy2XXC80XGnlaXgk-50WavX-yq4gIwuZzOKp_tjtOW6hmD_OpaItlNrgkDgXJN8ME4IyOb8m4hTRkSADs134S1S7x7AoscAEYgSeLBezN82-rYCJLQ9wIQDwQkNVuRSBX71QkKRT4CZDC42SE-CJBVDMI21bMCNmplDs4M1KqPqjPIzgNAtPu7Q1T" />
+                <img class="w-full h-full object-cover"
+                    data-alt="Meeting Team Internal Nakala Digital"
+                    src="https://lh3.googleusercontent.com/pw/AP1GczNwauLa_1-ITEr5hkMDa21IbnhlaqgvbOY6g-ZUushZh3QoyySAvxb87NOJX2I8n7dsAtxp9Med436OrrJ5sxGyjYlZpQUNc_yG7ggNXFVWwEgoVEWN=s0"
+                    referrerpolicy="no-referrer" />
             </div>
             <div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
                 <div class="max-w-3xl">
@@ -292,7 +294,7 @@
                 <div class="flex flex-col lg:flex-row items-center gap-unit-xl">
                     <div class="w-full lg:w-1/2">
                         <div
-                            class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-xl backdrop-blur-sm">
+                            class="bg-surface-container-lowest/10 p-unit-lg border border-surface-variant/20 rounded-[20px] backdrop-blur-sm">
                             <h2 class="font-headline-h2 text-headline-h2 mb-unit-lg text-primary-fixed-dim">
                                 {{ app()->getLocale() === 'en' ? 'Nakala leads delivery. Romulus strengthens trust.' : 'Nakala memimpin delivery. Romulus memperkuat trust.' }}
                             </h2>
@@ -303,19 +305,19 @@
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
                                 <div
-                                    class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
+                                    class="flex min-h-[132px] items-center justify-center rounded-[20px] bg-surface/5 p-unit-md border-l-4 border-tertiary">
                                     <div
-                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
+                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-[20px] bg-white px-5 ring-1 ring-white/20">
                                         <img alt="Nakala Digital" class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
                                 <div
-                                    class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    class="flex min-h-[132px] items-center justify-center rounded-[20px] bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
                                     <div
-                                        class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
+                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-[20px] border border-white/35 bg-white/5 px-4">
                                         <img alt="Romulus Digital"
-                                            class="h-[36px] w-auto max-w-full object-contain opacity-70"
+                                            class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/romulus-putih.png') }}" />
                                     </div>
                                 </div>
@@ -323,10 +325,19 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2">
-                        <div class="relative rounded-lg overflow-hidden border border-outline shadow-2xl">
-                            <img class="w-full h-full object-cover"
+                        <div
+                            class="group relative overflow-hidden rounded-[20px] shadow-2xl border border-outline-variant transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary">
+                            <div
+                                class="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0">
+                            </div>
+                            <img alt="Team Collaboration Network"
+                                class="relative z-10 object-cover w-full h-[400px] transition-all duration-700 ease-out group-hover:scale-105"
+                                referrerpolicy="no-referrer"
                                 data-alt="A clean, minimalist abstract visualization representing a network of interconnected nodes across a regional map of Southeast Asia. The design uses high-contrast white lines on a deep navy background, with Electric Cyan highlights marking key hubs. The overall aesthetic is professional, technical, and modern, reflecting a scalable corporate resource model."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB47IQhwnQ_73ET9EOURjZQvNJ6YnkHUzF_sJxGQ1KPmB0cGMLjojD0IAAJtGTSYs0xl_qcmH3TyKZGCKPcEJfGBMzNxWAYWEdHIac5t0Bp8X0BKRcIpQmRrsna6yksO6lUeUut8hBTV7RVhzO6XCRLlbyk1YJvbAGz2rXdlqp7XkQ2oZCpDwRfSBImRmxU_WeiI9UCRO850c-OkCRV_blyiudN1Bji8I3z3EROaS2bMQg0Wee6O9acOQjf0XHwF_glAuUyttJDVCmh" />
+                                src="https://lh3.googleusercontent.com/pw/AP1GczOS1cf78Hm8X7d_vn2xltHqpp15NLpgrKWP18XLVlbNaqYpbraYGoBO-FzB-GgIzSJmtkquKAxDNjBPVs6C-CpSldf3yMFtxKtKT9EdZtkhdICNqvsd" />
+                            <div
+                                class="absolute inset-0 z-20 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-unit-md">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -337,19 +348,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
-    <script>
-        // Micro-interaction for scroll effects
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

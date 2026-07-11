@@ -332,20 +332,7 @@
     @include('partials.partner-badge')
     @include('partials.footer')
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (header) {
-                if (window.scrollY > 50) {
-                    header.classList.add('shadow-md', 'h-16');
-                    header.classList.remove('h-20');
-                } else {
-                    header.classList.remove('shadow-md', 'h-16');
-                    header.classList.add('h-20');
-                }
-            }
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>

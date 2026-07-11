@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -173,6 +173,7 @@
 <body
     class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
     @include('partials.navbar')
+
     <!-- Hero Section -->
     <header class="relative pt-32 pb-unit-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -196,23 +197,33 @@
                     <div class="flex flex-wrap gap-4">
                         @php $localeSuffix = app()->getLocale() === 'en' ? '.en' : ''; @endphp
                         <a href="{{ route('solutions' . $localeSuffix) }}"
-                            class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-widest gap-2">
+                            class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-widest gap-2">
                             {{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-12 lg:mt-0">
+                <div class="relative mt-12 lg:mt-0 lg:self-stretch">
                     <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <div class="relative rounded-xl overflow-hidden border-2 border-outline-variant shadow-2xl">
-                        <img alt="Strategic Roadmap" class="w-full h-auto object-cover"
+                    <div
+                        class="group relative rounded-[20px] overflow-hidden border-2 border-outline-variant shadow-2xl transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary">
+                        <div
+                            class="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0">
+                        </div>
+                        <img alt="Strategic Roadmap"
+                            class="relative z-10 w-full h-auto object-contain transition-all duration-700 ease-out group-hover:scale-105"
+                            referrerpolicy="no-referrer"
                             data-alt="A professional enterprise dashboard interface showing complex digital transformation roadmaps and technical architectures. The visual style is high-contrast with a midnight navy background and vibrant impact lime accents. The interface includes interactive gantt charts, KPI metrics, and system health status indicators, glowing softly against a dark, minimalist digital workspace background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtRUftF0rI-CVIPCyxjoSYszWuTSBLLg6xy-DYz4UO-0utBeXCW0m8_qqBw30K3sdSaJ4lhUd_rFYcG7SUOsyXI3JSfuj3d-g_Bwjohi07wdbzEz0xZJUM4ZPnF8G7BS1-NRXLEq0UnATqZ6ZVx5Dxss6tdRWtFWD0LMczPvS6B9E9zBKmXxlSiDQjoiqpMPUf1WfmfwX0lFtE1i8cKdHiz0Kce57z3MUFe6RYmqeHH4LXCHch1gM7uEM3nvECcGNTpuQxRyVC9Eyq" />
+                            src="https://lh3.googleusercontent.com/pw/AP1GczNLhNWABbs0vDX9uNtrsHSmwlsXOURCg4jpoMZbeHwPmsvlOj8rPH9S8Og7ZBZnpLId6Otlr7VomsYCl2uhrLh908C555DFxMjqf_yDiJBkO1jfZ9Wi" />
+                        <div
+                            class="absolute inset-0 z-20 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-unit-md">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Service Pillars Section -->
     <section class="py-unit-xl bg-surface-container-lowest">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -227,11 +238,13 @@
                         : 'Kemampuan teknis komprehensif yang dirancang untuk skala perusahaan dan kelincahan lokal.' }}
                 </p>
             </div>
+
             <!-- Bento Grid Services -->
             <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">
+
                 <!-- 1. AI & GenAI -->
                 <div
-                    class="md:col-span-3 lg:col-span-4 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary">
+                    class="md:col-span-3 lg:col-span-4 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px]">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="psychology"
                         style="font-variation-settings: 'FILL' 1;">psychology</span>
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
@@ -253,9 +266,10 @@
                             {{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</li>
                     </ul>
                 </div>
+
                 <!-- 2. Custom Software Dev -->
                 <div
-                    class="md:col-span-3 lg:col-span-8 bg-on-secondary-fixed text-white p-unit-lg service-card flex flex-col md:flex-row gap-gutter">
+                    class="md:col-span-3 lg:col-span-8 bg-on-secondary-fixed text-white p-unit-lg service-card flex flex-col md:flex-row gap-gutter rounded-[20px]">
                     <div class="flex-1">
                         <span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6"
                             data-icon="code">code</span>
@@ -284,14 +298,16 @@
                         </ul>
                     </div>
                     <div
-                        class="w-full md:w-1/3 bg-white/5 rounded-lg overflow-hidden border border-white/10 hidden lg:block">
+                        class="w-full md:w-1/3 bg-white/5 rounded-[20px] overflow-hidden border border-white/10 hidden lg:block">
                         <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all"
                             data-alt="A futuristic software development environment with multiple high-resolution monitors displaying complex lines of code and dark-themed UI mockups. The room is dimly lit with a professional midnight navy ambiance and neon blue accents highlighting the workspace. A high-tier workstation sits at the center, symbolizing technical rigor and precision craftsmanship in modern corporate software engineering."
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYS2YWTvwWHj4QFP28CssIPWEpvrgnPcgAF9hFVibVwA-gh3A3L5RgeltvRgoBStWyfvtsLZ3XtJ0uotY0jjB25-_bjmLmt3p_8It06RMYUzopoC0UeaxvL9LqmeTiBR8nc0YFFK3JifErMagfxj1EkMH8DhaJiuf154Ed4kp0XwEQ3Up1zBXkshsOLsYIOnBz9BI6SIwZegE5C8GqkZIkJp5cvTOwSaJC9Y_CdAgP_PH-DXqN3_Ui-zxqY-5HFoFOmltnkTKu1kf" />
                     </div>
                 </div>
+
                 <!-- 3. Tech Consulting -->
-                <div class="md:col-span-6 lg:col-span-6 bg-white border border-outline-variant p-unit-lg service-card">
+                <div
+                    class="md:col-span-6 lg:col-span-6 bg-white border border-outline-variant p-unit-lg service-card rounded-[20px]">
                     <div class="flex items-start justify-between mb-6">
                         <span class="material-symbols-outlined text-primary text-5xl"
                             data-icon="query_stats">query_stats</span>
@@ -304,14 +320,14 @@
                         {{ app()->getLocale() === 'en' ? 'Strategic advice to align technology investment with business growth and regional market expansion.' : 'Nasihat strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar regional.' }}
                     </p>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 bg-surface-container rounded-lg">
+                        <div class="p-4 bg-surface-container rounded-[20px]">
                             <h4 class="font-bold text-on-surface mb-1">
                                 {{ app()->getLocale() === 'en' ? 'Architecture Review' : 'Tinjauan Arsitektur' }}</h4>
                             <p class="text-xs text-on-surface-variant">
                                 {{ app()->getLocale() === 'en' ? 'System audits and scalability assessments.' : 'Audit sistem dan penilaian skalabilitas.' }}
                             </p>
                         </div>
-                        <div class="p-4 bg-surface-container rounded-lg">
+                        <div class="p-4 bg-surface-container rounded-[20px]">
                             <h4 class="font-bold text-on-surface mb-1">
                                 {{ app()->getLocale() === 'en' ? 'Digital Roadmap' : 'Peta Jalan Digital' }}</h4>
                             <p class="text-xs text-on-surface-variant">
@@ -320,9 +336,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- 4. Web & Portal -->
                 <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-tertiary">
+                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-tertiary rounded-[20px]">
                     <span class="material-symbols-outlined text-tertiary text-5xl mb-6" data-icon="web">web</span>
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
                         {{ app()->getLocale() === 'en' ? 'Web & Portal' : 'Web & Portal' }}</h3>
@@ -330,9 +347,10 @@
                         {{ app()->getLocale() === 'en' ? 'Engaging digital interfaces and high-traffic portals for B2B and B2C segments.' : 'Antarmuka digital yang menarik dan portal trafik tinggi untuk segmen B2B dan B2C.' }}
                     </p>
                 </div>
+
                 <!-- 5. QA Governance -->
                 <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary">
+                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px]">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="verified_user"
                         style="font-variation-settings: 'FILL' 1;">verified_user</span>
                     <h3 class="font-headline-h3 text-headline-h3 mb-4">
@@ -341,9 +359,10 @@
                         {{ app()->getLocale() === 'en' ? 'Ensuring zero-defect deployment with automated testing frameworks and standards.' : 'Memastikan penerapan tanpa cacat dengan kerangka pengujian dan standar otomatis.' }}
                     </p>
                 </div>
+
                 <!-- 6. Managed Support & D365 -->
                 <div
-                    class="md:col-span-6 lg:col-span-12 bg-surface-container-highest border border-outline-variant p-unit-lg service-card flex flex-col md:flex-row items-center gap-unit-lg">
+                    class="md:col-span-6 lg:col-span-12 bg-surface-container-highest border border-outline-variant p-unit-lg service-card flex flex-col md:flex-row items-center gap-unit-lg rounded-[20px]">
                     <div class="flex-1">
                         <span class="material-symbols-outlined text-primary text-5xl mb-6"
                             data-icon="support_agent">support_agent</span>
@@ -374,8 +393,10 @@
             </div>
         </div>
     </section>
+
     <!-- Partner Badge Section -->
     @include('partials.partner-badge')
+
     <!-- Detailed Deliverables (Horizontal Scroll / Grid) -->
     <section class="py-unit-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -415,8 +436,10 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Micro-interactions
         document.querySelectorAll('.service-card').forEach(card => {
@@ -433,18 +456,6 @@
                     icon.style.transform = 'scale(1) rotate(0deg)';
                 }
             });
-        });
-
-        // Simple scroll behavior for Navbar
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
         });
     </script>
 </body>

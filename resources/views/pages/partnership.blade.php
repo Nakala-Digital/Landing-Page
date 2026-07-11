@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -450,19 +450,8 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
-        // Micro-interactions for header shadow on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-
         // Hover effects for bento cards
         const bentoCards = document.querySelectorAll('.bento-card');
         bentoCards.forEach(card => {

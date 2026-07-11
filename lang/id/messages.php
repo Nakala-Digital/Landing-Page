@@ -34,6 +34,24 @@ return [
     'who_local_commit' => 'Komitmen Lokal 100%',
     'who_iso' => 'Standar Selaras ISO',
 
+    // Industries
+    'industry_badge' => 'Berdasarkan Industri',
+    'industry_title' => 'Solusi yang Tepat untuk Setiap Industri',
+    'industry_desc' => 'Dari pendidikan hingga manufaktur kami menghadirkan solusi digital yang sesuai dengan kebutuhan spesifik industri Anda.',
+    'industry_edu' => 'Pendidikan & Akademik',
+    'industry_edu_desc' => 'Portal sekolah, PPDB digital, dan platform pembelajaran berbasis AI.',
+    'industry_finance' => 'Keuangan & Enterprise',
+    'industry_finance_desc' => 'D365 Finance, sistem ERP, dan solusi manajemen keuangan.',
+    'industry_hr' => 'SDM & Pengembangan Talenta',
+    'industry_hr_desc' => 'Rekrutmen berbasis AI, platform HRMS, dan alat pengembangan talenta.',
+    'industry_energy' => 'Energi, Manufaktur & Operasi',
+    'industry_energy_desc' => 'Digitalisasi HSE, otomasi operasional, dan sistem kepatuhan.',
+    'industry_property' => 'Properti & Komunitas',
+    'industry_property_desc' => 'Manajemen kas komunitas, billing, dan platform keterlibatan warga.',
+    'industry_tech' => 'Teknologi & SaaS',
+    'industry_tech_desc' => 'Platform SaaS kustom, otomasi AI, dan konsultasi digital end-to-end.',
+    'industry_cta' => 'Lihat Semua Solusi',
+
     // Final CTA
     'insights_nav' => 'Insight',
 

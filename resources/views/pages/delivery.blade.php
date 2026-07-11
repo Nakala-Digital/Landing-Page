@@ -174,9 +174,11 @@
 </head>
 
 <body class="bg-surface text-on-surface">
+
     <!-- TopNavBar -->
     @include('partials.navbar')
     <main class="pt-20">
+
         <!-- Hero Section -->
         <section class="relative overflow-hidden bg-on-background pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32">
             <div
@@ -201,22 +203,25 @@
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-lg flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-[20px] flex items-center gap-2 hover:gap-3 transition-all duration-300">
                                 {{ app()->getLocale() === 'en' ? 'View Methodology' : 'Lihat Metodologi' }} <span
                                     class="material-symbols-outlined">arrow_forward</span>
                             </a>
                         </div>
                     </div>
-                    <div class="hidden lg:block relative">
-                        <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                        <img alt="QA Governance Dashboard"
-                            class="relative rounded-xl border-4 border-white/10 shadow-2xl"
-                            data-alt="A sophisticated digital dashboard interface showing software quality metrics and delivery progress. The layout features high-contrast charts in Electric Cyan and Midnight Navy against a dark, professional background. Glowing status indicators and real-time data visualizations create a sense of technical rigor and modern corporate excellence. The lighting is focused and clean, emphasizing precision and transparency in the development process."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzcZP03Ya1ef3majVmO-lJeRWePM77IQ9jRrA2pSjclh3eb-GHlGJrhHwpD8AArV5Ooa-HJcVULWBmb_HZXxYbB_09s4MGFZrwpNWDviVxFyg30lmdFdYMvosQNthDXNUV5iMbvLhQ-QT0xq2xjRFUpv4mtEhjTseIqBZqDUyNGDD2DmyRhm6QKAuOxuE59wmeUwLILRpm47ewMnBnPQLjPxcnMULq8VtaXkI64b--vlsECInlvzedoyRAceIVkinP_SSsn27tTxzR" />
+                    <div class="hidden lg:block relative group">
+                        <div class="absolute -inset-4 bg-primary/10 rounded-[20px] blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0"></div>
+                        <div class="relative overflow-hidden rounded-[20px] shadow-2xl border-4 border-white/10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary z-10">
+                            <img alt="QA Governance Dashboard"
+                                class="relative w-full h-auto rounded-[20px] transition-all duration-700 ease-out group-hover:scale-105"
+                                data-alt="A sophisticated digital dashboard interface showing software quality metrics and delivery progress. The layout features high-contrast charts in Electric Cyan and Midnight Navy against a dark, professional background. Glowing status indicators and real-time data visualizations create a sense of technical rigor and modern corporate excellence. The lighting is focused and clean, emphasizing precision and transparency in the development process."
+                                src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/METODOLOGI%20ND.png" />
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Delivery Approach: End-to-End Lifecycle -->
         <section class="py-unit-xl bg-surface">
             <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
@@ -233,9 +238,10 @@
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-unit-md">
+
                     <!-- Step 1: Discovery & Scoping -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">01</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Discovery & Scoping' : 'Discovery & Scoping' }}</h3>
@@ -244,14 +250,14 @@
                                 ? 'Stakeholder workshops, requirement gathering, feasibility study, and project roadmap definition.'
                                 : 'Workshop stakeholder, pengumpulan kebutuhan, studi kelayakan, dan definisi roadmap proyek.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">description</span>
                             {{ app()->getLocale() === 'en' ? 'Output: PRD & Project Charter' : 'Output: PRD & Project Charter' }}
                         </div>
                     </div>
                     <!-- Step 2: Design & Architecture -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">02</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Design & Architecture' : 'Design & Architecture' }}</h3>
@@ -260,14 +266,14 @@
                                 ? 'System architecture design, technology stack selection, UX/UI prototyping, and technical specification.'
                                 : 'Desain arsitektur sistem, pemilihan tech stack, prototyping UX/UI, dan spesifikasi teknis.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">account_tree</span>
                             {{ app()->getLocale() === 'en' ? 'Output: Technical Design Doc & Prototype' : 'Output: Dokumen Desain Teknis & Prototype' }}
                         </div>
                     </div>
                     <!-- Step 3: Agile Development & QA -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">03</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Agile Development & QA' }}
@@ -277,14 +283,14 @@
                                 ? 'Sprint-based development with continuous integration, automated testing, and code review processes.'
                                 : 'Pengembangan berbasis sprint dengan integrasi berkelanjutan, automated testing, dan proses code review.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">code</span>
                             {{ app()->getLocale() === 'en' ? 'Output: Source Code & Unit Tests' : 'Output: Source Code & Unit Tests' }}
                         </div>
                     </div>
                     <!-- Step 4: SIT / UAT -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">04</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'SIT / UAT' : 'SIT / UAT' }}</h3>
@@ -293,14 +299,14 @@
                                 ? 'System Integration Testing and User Acceptance Testing to validate functionality, performance, and business readiness.'
                                 : 'System Integration Testing dan User Acceptance Testing untuk memvalidasi fungsionalitas, performa, dan kesiapan bisnis.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">bug_report</span>
                             {{ app()->getLocale() === 'en' ? 'Output: SIT/UAT Sign-off' : 'Output: SIT/UAT Sign-off' }}
                         </div>
                     </div>
                     <!-- Step 5: Deployment & Go-Live -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">05</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Deployment & Go-Live' : 'Deployment & Go-Live' }}</h3>
@@ -309,14 +315,14 @@
                                 ? 'Release readiness check, CI/CD pipeline execution, production deployment, and go-live verification.'
                                 : 'Pemeriksaan kesiapan rilis, eksekusi pipeline CI/CD, deployment produksi, dan verifikasi go-live.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">rocket_launch</span>
                             {{ app()->getLocale() === 'en' ? 'Output: Live Production Release' : 'Output: Rilis Produksi Aktif' }}
                         </div>
                     </div>
                     <!-- Step 6: Handover -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group">
                         <div class="text-primary-container font-headline-h2 mb-2">06</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Handover' : 'Handover' }}</h3>
@@ -325,14 +331,14 @@
                                 ? 'BAST (Berita Acara Serah Terima), operational documentation, knowledge transfer, and user training.'
                                 : 'BAST (Berita Acara Serah Terima), dokumentasi operasional, transfer pengetahuan, dan pelatihan pengguna.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">handshake</span>
                             {{ app()->getLocale() === 'en' ? 'Output: BAST & Operations Manual' : 'Output: BAST & Manual Operasional' }}
                         </div>
                     </div>
                     <!-- Step 7: Support & Growth -->
                     <div
-                        class="bg-white p-unit-md border border-outline-variant rounded-lg hover:border-primary transition-colors group col-span-1 md:col-span-2">
+                        class="bg-white p-unit-md border border-outline-variant rounded-[20px] hover:border-primary transition-colors group col-span-1 md:col-span-2">
                         <div class="text-primary-container font-headline-h2 mb-2">07</div>
                         <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-2">
                             {{ app()->getLocale() === 'en' ? 'Support & Growth' : 'Support & Growth' }}</h3>
@@ -341,7 +347,7 @@
                                 ? 'Ongoing maintenance, performance monitoring, feature enhancements, and continuous improvement based on user feedback and business needs.'
                                 : 'Maintenance berkelanjutan, monitoring performa, peningkatan fitur, dan perbaikan berkelanjutan berdasarkan feedback pengguna dan kebutuhan bisnis.' }}
                         </p>
-                        <div class="bg-surface p-2 rounded text-xs font-bold text-primary flex items-center gap-2">
+                        <div class="bg-surface p-2 rounded-[20px] text-xs font-bold text-primary flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">trending_up</span>
                             {{ app()->getLocale() === 'en' ? 'Output: Growth Roadmap & SLA Reports' : 'Output: Growth Roadmap & Laporan SLA' }}
                         </div>
@@ -367,7 +373,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
                     <!-- Governance Grid -->
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">fact_check</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -379,7 +385,7 @@
                                     : 'Validasi kebutuhan fungsional dan non-fungsional sebelum pengembangan dimulai, memastikan kejelasan dan kelengkapan.' }}
                             </p>
                         </div>
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">assignment</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -391,7 +397,7 @@
                                     : 'Protokol SIT (System Integration Testing) dan UAT (User Acceptance Testing) yang strategis dengan test case dan kriteria sukses yang terdefinisi.' }}
                             </p>
                         </div>
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">bug_report</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -403,7 +409,7 @@
                                     : 'Pelacakan isu terpusat dengan alur penyelesaian berbasis prioritas dan pelaporan status berkala.' }}
                             </p>
                         </div>
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">checklist</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -415,7 +421,7 @@
                                     : 'Checklist pra-deployment mencakup regression testing, benchmarking performa, dan validasi keamanan sebelum go-live.' }}
                             </p>
                         </div>
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">handshake</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -427,7 +433,7 @@
                                     : 'Serah terima resmi dengan Berita Acara Serah Terima (BAST), dokumentasi operasional lengkap, dan pelatihan pengguna.' }}
                             </p>
                         </div>
-                        <div class="bg-white border-l-4 border-primary p-unit-md rounded shadow-sm">
+                        <div class="bg-white border-l-4 border-primary p-unit-md rounded-[20px] shadow-sm">
                             <div class="flex items-center gap-3 mb-2">
                                 <span class="material-symbols-outlined text-primary">verified</span>
                                 <h4 class="font-headline-h3 text-headline-h3 text-on-background">
@@ -440,8 +446,9 @@
                             </p>
                         </div>
                     </div>
+
                     <!-- Artifacts List -->
-                    <div class="bg-on-background p-unit-md rounded-lg text-white">
+                    <div class="bg-on-background p-unit-md rounded-[20px] text-white">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md text-primary-fixed-dim">
                             {{ app()->getLocale() === 'en' ? 'QA Artifacts' : 'Artefak QA' }}</h4>
                         <ul class="space-y-4">
@@ -485,34 +492,14 @@
                 </div>
             </div>
         </section>
+
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
     </main>
+
     <!-- Footer -->
     @include('partials.footer')
-    <script>
-        // Subtle scroll animation for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('py-2', 'h-16');
-                header.classList.add('h-20');
-            }
-        });
-
-        // Simple smooth scroll fallback
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    @include('partials.lenis-scroll')
 </body>
 
 </html>
