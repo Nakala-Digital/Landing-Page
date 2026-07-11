@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
@@ -199,22 +199,14 @@
             transform: rotate(180deg);
         }
 
-        /* --- SOCIAL PROOF STATS: EDIT SESUAI KEBUTUHAN --- */
+        /* SOCIAL PROOF STATS - Nakala Slogans */
         .stat-card {
             text-align: center;
         }
 
-        .stat-number {
+        .stat-slogan {
             font-weight: 700;
             color: #12AED0;
-            line-height: 1.1;
-        }
-
-        .stat-label {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: #031A44;
             line-height: 1.2;
         }
 
@@ -225,17 +217,12 @@
                 border-bottom: 1px solid #12AED0;
             }
 
-            .stat-card:nth-last-child(-n+2) {
+            .stat-card:last-child {
                 border-bottom: none;
             }
 
-            .stat-number {
-                font-size: 36px;
-                margin-bottom: 4px;
-            }
-
-            .stat-label {
-                font-size: 11px;
+            .stat-slogan {
+                font-size: 18px;
             }
         }
 
@@ -245,17 +232,8 @@
                 padding: 16px;
             }
 
-            .stat-card:not(:last-child) {
-                border-right: 1px solid #12AED0;
-            }
-
-            .stat-number {
-                font-size: 48px;
-                margin-bottom: 6px;
-            }
-
-            .stat-label {
-                font-size: 11px;
+            .stat-slogan {
+                font-size: 20px;
             }
         }
 
@@ -265,18 +243,19 @@
                 padding: 24px 16px;
             }
 
-            .stat-card:not(:last-child) {
-                border-right: 1px solid #12AED0;
+            .stat-slogan {
+                font-size: 22px;
             }
+        }
 
-            .stat-number {
-                font-size: 64px;
-                margin-bottom: 8px;
-            }
+        /* SOCIAL PROOF - Scroll Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
 
-            .stat-label {
-                font-size: 12px;
-            }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
         }
 
         /* SMALL MOBILE (Ã¢â€°Â¤400px) Ã¢â‚¬â€ Hero readability fix */
@@ -603,24 +582,31 @@
 
         @include('partials.partner-badge')
 
-        <section class="py-unit-xl bg-surface">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+        <!-- Social Proof Metrics -->
+        <section class="py-unit-lg bg-surface overflow-hidden">
+            <div class="flex w-[200%] md:w-[150%] lg:w-[120%] animate-marquee">
+                <!-- Group 1 -->
+                <div class="flex-1 flex justify-around items-center min-w-[50%]">
                     <div class="stat-card">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">{{ __('messages.metric_projects') }}</div>
+                        <div class="stat-slogan">󠁯Professional Delivery</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">{{ __('messages.metric_expertise') }}</div>
+                        <div class="stat-slogan">󠁯Meaningful Solutions</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">{{ __('messages.metric_hubs') }}</div>
+                        <div class="stat-slogan">Impactful Growth</div>
+                    </div>
+                </div>
+                <!-- Group 2 (Duplicate for smooth infinite scroll) -->
+                <div class="flex-1 flex justify-around items-center min-w-[50%]">
+                    <div class="stat-card">
+                        <div class="stat-slogan">󠁯Professional Delivery</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">{{ __('messages.metric_support') }}</div>
+                        <div class="stat-slogan">󠁯Meaningful Solutions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-slogan">Impactful Growth</div>
                     </div>
                 </div>
             </div>
@@ -1307,42 +1293,3 @@
 </body>
 
 </html>
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        inViewport = entry.isIntersecting;
-                        if (inViewport && !document.hidden) {
-                            startAuto();
-                        } else {
-                            stopAuto();
-                        }
-                    });
-                }, {
-                    threshold: 0.05
-                });
-                observer.observe(section);
-            }
-
-            startAuto();
-        })();
-
-        // carousel
-        document.addEventListener('DOMContentLoaded', () => {
-        const swiper = new Swiper('.heroSwiper', {
-            loop: true,
-            className: 'swiper-container',
-            slidesPerView: 'auto',       // Membuat lebar slide mengikuti class CSS (!w-[75%])
-            centeredSlides: true,        // Slide aktif otomatis berada di tengah frame
-            spaceBetween: 20,            // Jarak antar slide gambar
-            grabCursor: true,            // Kursor tangan saat di-drag
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-        });
-    });
-    </script>
-</body>
-
-</html>
-
