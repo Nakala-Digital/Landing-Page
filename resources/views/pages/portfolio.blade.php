@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -162,7 +162,8 @@
 
         .bento-card:hover {
             transform: translateY(-4px);
-            border-color: #12AED0;
+            box-shadow: 0 10px 40px -10px rgba(18, 174, 208, 0.15);
+            border-color: rgba(18, 174, 208, 0.5);
         }
 
         .glass-header {
@@ -212,7 +213,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-gutter">
                 <!-- 1. PPDB -->
                 <div
-                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
+                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-[20px]">
                     <div class="flex flex-col md:flex-row h-full">
                         <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
                             <div>
@@ -244,7 +245,7 @@
                 </div>
                 <!-- 2. HRMS -->
                 <div
-                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col justify-between">
+                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col justify-between">
                     <div class="mb-unit-xl">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
@@ -254,7 +255,7 @@
                         </p>
                     </div>
                     <div>
-                        <div class="bg-surface p-unit-md border-t-4 border-primary mb-unit-md">
+                        <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30 mb-unit-md">
                             <p class="font-label-sm text-outline uppercase mb-1">
                                 {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
                             <p class="text-body-md">
@@ -269,11 +270,12 @@
                 </div>
                 <!-- 3. HSE -->
                 <div
-                    class="md:col-span-1 xl:col-span-4 group bento-card bg-inverse-surface text-inverse-on-surface rounded-xl p-unit-lg flex flex-col items-start gap-unit-md">
+                    class="md:col-span-1 xl:col-span-4 group bento-card bg-gradient-to-br from-[#031A44] to-[#0A3D73] text-white rounded-[20px] p-unit-lg flex flex-col items-start gap-unit-md border-0 relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
                     <span
-                        class="bg-primary px-unit-md py-1 rounded font-label-sm text-white">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
-                    <h3 class="font-headline-h3 text-headline-h3">HSE Safety Tracker</h3>
-                    <p class="text-surface-variant text-body-md">
+                        class="bg-primary/20 text-primary-fixed border border-primary/30 px-unit-md py-1 rounded-full font-label-sm">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
+                    <h3 class="font-headline-h3 text-headline-h3 relative z-10">HSE Safety Tracker</h3>
+                    <p class="text-surface-variant text-body-md relative z-10">
                         {{ app()->getLocale() === 'en' ? 'Digitizing workplace safety reports and real-time hazard monitoring for mining operations.' : 'Mendigitalisasi laporan keselamatan kerja dan pemantauan bahaya secara real-time untuk operasi pertambangan.' }}
                     </p>
                     <div class="flex items-center gap-unit-sm mt-auto">
@@ -285,40 +287,9 @@
                         class="mt-unit-md text-tertiary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
                         <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
-                <!-- 4. WargaKas -->
-                <div
-                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-xl">
-                    <div class="flex flex-col md:flex-row-reverse h-full">
-                        <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
-                            <div>
-                                <span
-                                    class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Community Fintech' : 'Fintech Komunitas' }}</span>
-                                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">WargaKas Mobile</h3>
-                                <p class="text-on-surface-variant text-body-md mb-unit-lg">
-                                    {{ app()->getLocale() === 'en' ? 'Enabling transparent financial management for community-based organizations with digital payment integration.' : 'Memungkinkan pengelolaan keuangan yang transparan untuk organisasi berbasis komunitas dengan integrasi pembayaran digital.' }}
-                                </p>
-                                <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-                                    <p class="text-label-sm uppercase font-bold text-outline">
-                                        {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
-                                    <p class="text-on-surface">
-                                        {{ app()->getLocale() === 'en' ? 'Integrated QRIS payments & real-time ledger.' : 'Pembayaran QRIS terintegrasi & buku besar real-time.' }}
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=wargakas-mobile"
-                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                                <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
-                        </div>
-                        <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
-                            <img class="absolute inset-0 w-full h-full object-cover"
-                                data-alt="A close-up shot of a smartphone displaying a sleek fintech application interface with bright lime green accents. The phone is held by a person in a modern urban workspace in Jakarta, with city lights blurred in the background. The lighting is vibrant and energetic, reflecting a tech-forward society. The UI design follows a rigid grid system and high-contrast color blocks."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm2M0616JH6aYKMatKLlBn00XRFjy4muiu-AVHkmEZ4mquHBJyzTCnQv2hU8dpPeQy5zaZNyvF-cdieQKwEP-94c7rEDufUZ2V4UpOgBaSoSz-Uhzl77W8KZddcIgMsuRvxigMf-6eUAh2Bl7I9W_1pHTebLZIuPnf_TBOnz5I3AZJTd9IIw10cDh-RZD4Z5jgBiw2psnyRQHORyLQ63m97Fp3aIIFvzqCDQFwRcv7Mo3lPB-YWwYVDI2jZzLGSUMR6axa51Nr_cQa" />
-                        </div>
-                    </div>
-                </div>
                 <!-- 5. AI Hiring -->
                 <div
-                    class="md:col-span-1 xl:col-span-6 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col justify-between">
                     <div class="flex justify-between items-start mb-unit-lg">
                         <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
                         <span
@@ -328,8 +299,8 @@
                     <p class="text-on-surface-variant text-body-md mb-unit-lg">
                         {{ app()->getLocale() === 'en' ? 'Automating candidate screening and matching using custom AI models trained on industry-specific requirements.' : 'Mengotomatiskan screening dan pencocokan kandidat menggunakan model AI kustom yang dilatih pada kebutuhan industri spesifik.' }}
                     </p>
-                    <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
-                        <p class="font-label-sm uppercase text-primary">
+                    <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30">
+                        <p class="font-label-sm uppercase text-primary mb-1">
                             {{ app()->getLocale() === 'en' ? 'Business Value' : 'Nilai Bisnis' }}</p>
                         <p class="text-body-md">
                             {{ app()->getLocale() === 'en' ? 'Streamlined recruitment process with AI-powered candidate screening and matching.' : 'Proses rekrutmen yang efisien dengan screening dan pencocokan kandidat berbasis AI.' }}
@@ -341,7 +312,7 @@
                 </div>
                 <!-- 6. AI Coach -->
                 <div
-                    class="md:col-span-1 xl:col-span-6 bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg overflow-hidden relative group">
+                    class="md:col-span-1 xl:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg overflow-hidden relative group flex flex-col justify-between">
                     <div class="mb-unit-xl text-center md:text-left">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
@@ -350,17 +321,17 @@
                             {{ app()->getLocale() === 'en' ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.' : 'Jalur pembelajaran adaptif untuk reskilling perusahaan, memanfaatkan LLM untuk umpan balik real-time.' }}
                         </p>
                         <div class="flex gap-unit-sm">
-                            <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                                 <span class="material-symbols-outlined text-sm">smart_toy</span>
                             </div>
-                            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
                                 <span class="material-symbols-outlined text-sm">school</span>
                             </div>
                         </div>
                     </div>
                     <div
-                        class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-500">
-                        <span class="material-symbols-outlined text-[160px]"
+                        class="absolute -right-6 -bottom-6 opacity-[0.03] group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 pointer-events-none">
+                        <span class="material-symbols-outlined text-[200px]"
                             style="font-variation-settings: 'FILL' 1;">psychology</span>
                     </div>
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=personalized-ai-coach"
@@ -369,7 +340,7 @@
                 </div>
                 <!-- 7. D365 Support -->
                 <div
-                    class="md:col-span-2 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg">
+                    class="md:col-span-2 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg">
                     <div class="flex items-center gap-unit-sm mb-unit-md">
                         <span class="material-symbols-outlined text-primary">hub</span>
                         <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
@@ -377,8 +348,8 @@
                     <p class="text-on-surface-variant text-body-md mb-unit-lg">
                         {{ app()->getLocale() === 'en' ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.' : 'Tantangan: Mengintegrasikan data legacy kompleks ke dalam ekosistem MS Dynamics modern untuk konglomerat regional.' }}
                     </p>
-                    <div class="bg-surface-container p-unit-md rounded border border-outline-variant">
-                        <p class="font-label-sm uppercase">
+                    <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30">
+                        <p class="font-label-sm uppercase mb-1">
                             {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kapabilitas Regional' }}</p>
                         <p class="text-body-md font-bold">
                             {{ app()->getLocale() === 'en' ? 'Managed D365 support with regional capability.' : 'Dukungan D365 terkelola dengan kapabilitas regional.' }}
@@ -390,7 +361,7 @@
                 </div>
                 <!-- 8. 360 Customer Engagement -->
                 <div
-                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant rounded-xl p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
+                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
                     <div class="flex-1">
                         <span
                             class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
@@ -411,7 +382,7 @@
                             <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                     </div>
                     <div
-                        class="w-full md:w-64 h-48 bg-surface rounded-xl border border-outline-variant overflow-hidden">
+                        class="w-full md:w-64 h-48 bg-surface rounded-[20px] border border-outline-variant overflow-hidden">
                         <img class="w-full h-full object-cover"
                             data-alt="A sophisticated data visualization dashboard showing multiple charts, world maps, and real-time metric counters. The color scheme is professional, featuring deep navy and electric cyan highlights. The workspace is high-end, with a glimpse of a clean glass desk and minimalist office decor. The mood is analytical and authoritative, representing regional technical capability."
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZEGho0ZXWrYACNka0PrjLxslCBfj6LJo_mRI11PKgIGzp7ZdJx9giE7_K1sBpy2rF1Fw3Mq2nm5HF_OmUXqzEfuv3hKFoiEn7bVmO_zDOTQ2q-I8jkbO3sTTAB9fDGG9MX8IicOtokZ7m-9U9TCCti7Bv_U6Q93v0a212AnnU4Ge19za8WEH5UWl0L4yLu9SR16ctsrQmu9wRkJHNcYVMWQdduV5oBVHKKk3_amJXnevYkcLQfRkr-P0Wk3dPrLxMZB8J8nirVrlu" />
@@ -461,4 +432,5 @@
 </body>
 
 </html>
+
 

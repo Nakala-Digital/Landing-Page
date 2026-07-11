@@ -260,13 +260,37 @@
                 </div>
                 
                 <!-- Category Filters -->
-                <div class="flex flex-wrap gap-4 mb-unit-lg">
-                    <button class="category-filter font-bold text-primary font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="all">{{ app()->getLocale() === 'en' ? 'All' : 'Semua' }}</button>
-                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="event">{{ app()->getLocale() === 'en' ? 'Event' : 'Acara' }}</button>
-                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="administration">{{ app()->getLocale() === 'en' ? 'Administration' : 'Administrasi' }}</button>
-                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="economy">{{ app()->getLocale() === 'en' ? 'Economy' : 'Ekonomi' }}</button>
-                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="project">{{ app()->getLocale() === 'en' ? 'Project' : 'Proyek' }}</button>
-                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="internship">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</button>
+                <div class="mb-unit-lg flex justify-start md:justify-end">
+                    <div class="relative w-full md:w-64" data-dropdown="category-filter">
+                        <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
+                            class="w-full flex items-center justify-between bg-white border border-outline-variant text-on-surface-variant font-button text-sm px-4 py-3 rounded-[20px] focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer shadow-sm">
+                            <span id="selected-category-label">{{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}</span>
+                            <span class="material-symbols-outlined text-base transition-transform" data-chevron>expand_more</span>
+                        </button>
+                        <div data-dropdown-menu role="menu"
+                            class="absolute z-50 top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2 
+                                max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
+                            
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="all">
+                                {{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="event">
+                                {{ app()->getLocale() === 'en' ? 'Event' : 'Acara' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="administration">
+                                {{ app()->getLocale() === 'en' ? 'Administration' : 'Administrasi' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="economy">
+                                {{ app()->getLocale() === 'en' ? 'Economy' : 'Ekonomi' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="project">
+                                {{ app()->getLocale() === 'en' ? 'Project' : 'Proyek' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="internship">
+                                {{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -498,17 +522,15 @@
             }
         });
 
-        const perPage = 12;
+        const perPage = 6;
         const cards = document.querySelectorAll('[data-category]');
+        let currentFilter = 'all';
 
         // Pagination & filter
         function filterAndPaginate() {
-            const active = document.querySelector('.category-filter.font-bold');
-            const filter = active ? active.dataset.filter : 'all';
-
             const filtered = [];
             cards.forEach(c => {
-                if (filter === 'all' || c.dataset.category === filter) {
+                if (currentFilter === 'all' || c.dataset.category === currentFilter) {
                     filtered.push(c);
                 }
             });
@@ -543,11 +565,15 @@
             }
         }
 
-        document.querySelectorAll('.category-filter').forEach(item => {
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.category-filter').forEach(el => el.classList.remove(
-                    'font-bold'));
-                this.classList.add('font-bold');
+        const categoryOptions = document.querySelectorAll('.category-option');
+        categoryOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                currentFilter = this.dataset.filter;
+                document.getElementById('selected-category-label').innerText = this.innerText;
+                const dropdownContainer = this.closest('[data-dropdown]');
+                if (dropdownContainer && typeof closeDropdown === 'function') {
+                    closeDropdown(dropdownContainer);
+                }
                 window.currentPage = 1;
                 filterAndPaginate();
             });
@@ -561,9 +587,7 @@
         });
 
         document.getElementById('next-page').addEventListener('click', function() {
-            const active = document.querySelector('.category-filter.font-bold');
-            const filter = active ? active.dataset.filter : 'all';
-            const count = [...cards].filter(c => filter === 'all' || c.dataset.category === filter).length;
+            const count = [...cards].filter(c => currentFilter === 'all' || c.dataset.category === currentFilter).length;
             if (window.currentPage < Math.ceil(count / perPage)) {
                 window.currentPage++;
                 filterAndPaginate();
