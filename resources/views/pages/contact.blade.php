@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
   ============================================================
-  CONTACT PAGE – Nakala Digital
+  CONTACT PAGE â€“ Nakala Digital
   ============================================================
   File        : contact.blade.php
   Route       : /contact (ID) | /en/contact (EN)
@@ -34,7 +34,7 @@
 
     <!--
       ========================================================
-      Tailwind CSS (CDN) – v4 with forms & container-queries
+      Tailwind CSS (CDN) â€“ v4 with forms & container-queries
       ========================================================
       - Tailwind config is embedded below with custom design tokens:
         colors, spacing, fontFamily, fontSize, borderRadius.
@@ -267,7 +267,7 @@
 
                 <!--
                   ====================================================
-                  LEFT PANEL — Contact Information
+                  LEFT PANEL â€” Contact Information
                   ====================================================
                   Card with border-t-4 in electric-cyan containing:
                   - Email    (contact@nakala.digital)
@@ -354,7 +354,7 @@
                             </div>
                         </div>
                         <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer"
-                            class="mt-2 w-full flex items-center justify-center gap-2 text-center bg-primary text-white px-6 py-3 rounded font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
+                            class="mt-2 w-full flex items-center justify-center gap-2 text-center bg-primary text-white px-6 py-3 rounded-[20px] font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
                             {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
                             <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
@@ -366,7 +366,7 @@
                       ====================================================
                       Timeline with vertical line and dots showing the
                       4-step delivery process:
-                      01. Discovery → 02. Design → 03. Agile Dev → 04. Handover
+                      01. Discovery â†’ 02. Design â†’ 03. Agile Dev â†’ 04. Handover
                     -->
                     <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
@@ -406,7 +406,7 @@
 
                 <!--
                   ====================================================
-                  RIGHT PANEL — Contact Form
+                  RIGHT PANEL â€” Contact Form
                   ====================================================
                   Form fields:
                   - Row 1: Full Name + Company
@@ -529,7 +529,7 @@
                             <!-- Submit -->
                             <div class="pt-unit-md">
                                 <button
-                                    class="bg-primary text-white px-8 py-4 rounded font-button text-button uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
+                                    class="bg-primary text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
                                     type="submit">
                                     {{ app()->getLocale() === 'en' ? 'Submit Inquiry' : 'Kirim Pertanyaan' }}
                                 </button>
@@ -606,3 +606,4 @@
 </body>
 
 </html>
+

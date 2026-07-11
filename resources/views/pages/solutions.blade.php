@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="{{ app()->getLocale() }}">
 
@@ -222,9 +222,9 @@
                     </p>
                     <div class="flex flex-wrap gap-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="flex-1 bg-primary text-on-primary px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</a>
+                            class="flex-1 bg-primary text-on-primary px-unit-lg py-unit-md rounded-[20px] font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'Explore Solutions' : 'Jelajahi Solusi' }}</a>
                         <a href="{{ route('portfolio' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="flex-1 border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-lg font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</a>
+                            class="flex-1 border-2 border-on-secondary-fixed text-on-secondary-fixed px-unit-lg py-unit-md rounded-[20px] font-button text-button md:leading-relaxed inline-flex items-center justify-center">{{ app()->getLocale() === 'en' ? 'View Case Studies' : 'Lihat Studi Kasus' }}</a>
                     </div>
                 </div>
                 <div class="relative hero-image-wrap">
@@ -265,7 +265,7 @@
                 </h2>
                 <p class="text-on-surface-variant max-w-2xl mx-auto">
                     {{ $locale === 'en'
-                        ? 'From HR to finance to education — practical digital solutions that solve real operational problems and drive measurable impact.'
+                        ? 'From HR to finance to education â€” practical digital solutions that solve real operational problems and drive measurable impact.'
                         : 'Dari HR hingga keuangan hingga pendidikan solusi digital praktis yang memecahkan masalah operasional nyata dan memberikan dampak terukur.' }}
                 </p>
             </div>
@@ -299,7 +299,7 @@
                                 class="{{ $isDark ? 'bg-white/10 border-white/20' : 'bg-surface-container-highest/30 border-outline-variant/50' }} p-unit-sm rounded border mb-unit-md">
                                 <p class="text-xs">
                                     <strong>{{ $locale === 'en' ? 'For' : 'Untuk' }}:</strong>
-                                    {{ implode(' · ', $case['who_it_helps'][$locale]) }}
+                                    {{ implode(' Â· ', $case['who_it_helps'][$locale]) }}
                                 </p>
                             </div>
                             <a class="{{ $linkClass }} font-bold text-sm inline-flex items-center gap-1 mt-auto"
@@ -352,7 +352,7 @@
                 </a>
             </nav>
             <a href="{{ route('contact' . $localeSuffix) }}"
-                class="bg-primary text-on-primary w-full py-unit-md rounded-lg font-button text-button mt-auto block text-center">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
+                class="bg-primary text-on-primary w-full py-unit-md rounded-[20px] font-button text-button mt-auto block text-center">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
         </div>
     </div>
     <script>
@@ -371,3 +371,4 @@
 </body>
 
 </html>
+

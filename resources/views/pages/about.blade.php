@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="{{ app()->getLocale() }}">
 
@@ -208,7 +208,7 @@
                     </p>
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-lg shadow-lg hover:scale-105 transition-transform">
+                            class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-[20px] shadow-lg hover:scale-105 transition-transform">
                             {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                     </div>
@@ -446,3 +446,4 @@
 </body>
 
 </html>
+

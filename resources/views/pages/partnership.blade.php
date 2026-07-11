@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -201,12 +201,12 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="{{ route('contact') }}"
-                            class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
+                            class="bg-electric-cyan text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
                             Bicara dengan Tim Nakala
                             <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
                         </a>
                         <a href="{{ route('contact.en') }}"
-                            class="border-2 border-surface-variant text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
+                            class="border-2 border-surface-variant text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
                             Talk to Nakala Team
                         </a>
                     </div>
@@ -412,7 +412,7 @@
                                 </div>
                             </div>
                             <a href="{{ route('solutions.en') }}"
-                                class="bg-midnight-navy text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
+                                class="bg-midnight-navy text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
                                 View Solutions
                             </a>
                         </div>
@@ -477,3 +477,4 @@
 </body>
 
 </html>
+

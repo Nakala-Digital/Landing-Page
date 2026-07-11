@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
@@ -456,7 +456,7 @@
                 </p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ app()->getLocale() === 'en' ? 'Free Consultation' : 'Konsultasi Gratis' }}
                     </a>
                 </div>
@@ -555,3 +555,4 @@
 </body>
 
 </html>
+

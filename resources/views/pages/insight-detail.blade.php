@@ -1,4 +1,4 @@
-@php
+﻿@php
     $locale = app()->getLocale();
     $localeSuffix = $locale === 'en' ? '.en' : '';
     $data = $article;
@@ -321,7 +321,7 @@
                 </p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . $localeSuffix) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ $locale === 'en' ? 'Free Consultation' : 'Konsultasi Gratis' }}
                     </a>
                 </div>
@@ -349,3 +349,4 @@
 </body>
 
 </html>
+

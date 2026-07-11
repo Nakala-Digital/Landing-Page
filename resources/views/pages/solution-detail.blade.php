@@ -1,4 +1,4 @@
-@php
+﻿@php
     $locale = app()->getLocale();
     $localeSuffix = $locale === 'en' ? '.en' : '';
     $case = $solutionCase;
@@ -166,7 +166,7 @@
                                 {{ $locale === 'en' ? 'Who It Helps' : 'Untuk Siapa' }}
                             </p>
                             <p class="text-inverse-on-surface leading-relaxed">
-                                {{ implode(' · ', $case['who_it_helps'][$locale]) }}
+                                {{ implode(' Â· ', $case['who_it_helps'][$locale]) }}
                             </p>
                         </div>
                         <div class="border-l-4 border-tertiary-fixed bg-white/10 p-unit-lg rounded-xl">
@@ -282,7 +282,7 @@
                             : 'Nakala tetap menjadi primary untuk delivery lokal, dengan Romulus Digital sebagai trust layer untuk kapabilitas regional.' }}
                     </p>
                 </div>
-                <a class="inline-flex items-center justify-center gap-2 bg-primary text-white px-unit-lg py-unit-md rounded-lg font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
+                <a class="inline-flex items-center justify-center gap-2 bg-primary text-white px-unit-lg py-unit-md rounded-[20px] font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
                     href="{{ route('contact' . $localeSuffix) }}">
                     {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
                     <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -313,3 +313,4 @@
 </body>
 
 </html>
+

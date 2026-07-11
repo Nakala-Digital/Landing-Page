@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="{{ app()->getLocale() }}">
 
@@ -217,7 +217,7 @@
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-lg flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-[20px] flex items-center gap-2 hover:gap-3 transition-all duration-300">
                                 {{ app()->getLocale() === 'en' ? 'View Methodology' : 'Lihat Metodologi' }} <span
                                     class="material-symbols-outlined">arrow_forward</span>
                             </a>
@@ -615,3 +615,4 @@
 </body>
 
 </html>
+

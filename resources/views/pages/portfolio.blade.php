@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -430,9 +430,9 @@
                     : 'Siap membangun <span class="text-primary">kisah sukses Anda selanjutnya?</span>' !!}</h2>
             <div class="flex flex-col md:flex-row gap-unit-md justify-center">
                 <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-lg font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
+                    class="bg-primary text-on-primary px-unit-xl py-unit-md rounded-[20px] font-button uppercase hover:scale-105 transition-transform inline-block">{{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}</a>
                 <a href="{{ route('services' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-lg font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
+                    class="border-2 border-on-background text-on-background px-unit-xl py-unit-md rounded-[20px] font-button uppercase hover:bg-on-background hover:text-surface transition-colors inline-block">{{ app()->getLocale() === 'en' ? 'View Our Services' : 'Lihat Layanan' }}</a>
             </div>
         </section>
     </main>
@@ -461,3 +461,4 @@
 </body>
 
 </html>
+

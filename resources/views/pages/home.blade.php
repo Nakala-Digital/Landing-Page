@@ -279,7 +279,7 @@
             }
         }
 
-        /* SMALL MOBILE (â‰¤400px) â€” Hero readability fix */
+        /* SMALL MOBILE (Ã¢â€°Â¤400px) Ã¢â‚¬â€ Hero readability fix */
         @media (max-width: 400px) {
             .hero-heading {
                 font-size: 22px !important;
@@ -473,23 +473,7 @@
         <section id="hero"
             class="relative overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5 pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 border-b border-outline-variant">
             {{-- IT / digital-transformation themed background --}}
-            <div id="hero-carousel" class="hero-carousel pointer-events-none" aria-hidden="true">
-                <div class="hero-carousel-slide slide-ai is-active">
-                    <span class="material-symbols-outlined slide-icon">smart_toy</span>
-                </div>
-                <div class="hero-carousel-slide slide-cloud">
-                    <span class="material-symbols-outlined slide-icon">cloud</span>
-                </div>
-                <div class="hero-carousel-slide slide-data">
-                    <span class="material-symbols-outlined slide-icon">monitoring</span>
-                </div>
-                <div class="hero-carousel-slide slide-digital">
-                    <span class="material-symbols-outlined slide-icon">hub</span>
-                </div>
-                <div class="hero-carousel-slide slide-security">
-                    <span class="material-symbols-outlined slide-icon">encrypted</span>
-                </div>
-            </div>
+
             <div class="hero-grid-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
             <canvas id="hero-network" class="absolute inset-0 h-full w-full pointer-events-none"
                 aria-hidden="true"></canvas>
@@ -566,7 +550,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         AI & GenAI</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Solutions
-                                        â†—</p>
+                                        Ã¢â€ â€”</p>
                                 </div>
                             </div>
 
@@ -580,7 +564,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Software Dev</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Development â†—</p>
+                                        Development Ã¢â€ â€”</p>
                                 </div>
                             </div>
 
@@ -594,7 +578,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Cyber Security</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Protection â†—</p>
+                                        Protection Ã¢â€ â€”</p>
                                 </div>
                             </div>
 
@@ -608,7 +592,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Data Infrastructure</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Analytics
-                                        â†—</p>
+                                        Ã¢â€ â€”</p>
                                 </div>
                             </div>
 
@@ -917,7 +901,7 @@
                 <p class="font-body-lg text-white/90">{{ __('messages.final_cta_desc') }}</p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl rounded-[20px] uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl rounded-[20px] uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ app()->getLocale() === 'en' ? 'Schedule a Discovery Session' : 'Jadwalkan Sesi Discovery' }}
                     </a>
                 </div>
@@ -1014,7 +998,7 @@
             });
         })();
     
-        // Hero Section â€” animated / interactive IT network background.
+        // Hero Section Ã¢â‚¬â€ animated / interactive IT network background.
         // Lightweight canvas particle-network (represents connectivity, data & AI)
         // that stays behind the headline/CTA and never blocks pointer events.
         (function() {
@@ -1194,7 +1178,7 @@
             }
         })();
 
-        // Hero Section â€” background theme carousel (AI / Cloud / Data / Digital
+        // Hero Section Ã¢â‚¬â€ background theme carousel (AI / Cloud / Data / Digital
         // Transformation / Cybersecurity). Auto-advances, but stays fully
         // controllable via the dot indicators and pauses whenever the hero
         // isn't the thing the user is actually looking at.
@@ -1325,3 +1309,4 @@
 </body>
 
 </html>
+
