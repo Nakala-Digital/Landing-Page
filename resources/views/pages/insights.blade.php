@@ -161,22 +161,25 @@
     <main class="pt-20">
 
         <!-- Hero -->
-        <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
-            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
-                <div
-                    class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
-                    <span class="material-symbols-outlined text-[16px]">bolt</span>
-                    {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}
+        <section class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background border-b border-outline-variant">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUTION%20HIGHLIGHT%20ND.png" referrerpolicy="no-referrer" />
+            </div>
+            <div class="relative z-10 px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto w-full">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
+                        <span class="material-symbols-outlined text-[16px]">bolt</span>
+                        {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
+                    </div>
+                    <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Perspectives on software excellence, AI adoption, QA governance, and digital transformation from the Nakala Digital team.'
+                            : 'Perspektif tentang keunggulan software, adopsi AI, tata kelola QA, dan transformasi digital dari tim Nakala Digital.' }}
+                    </p>
                 </div>
-                <h1
-                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
-                    {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    {{ app()->getLocale() === 'en'
-                        ? 'Perspectives on software excellence, AI adoption, QA governance, and digital transformation from the Nakala Digital team.'
-                        : 'Perspektif tentang keunggulan software, adopsi AI, tata kelola QA, dan transformasi digital dari tim Nakala Digital.' }}
-                </p>
             </div>
         </section>
 
