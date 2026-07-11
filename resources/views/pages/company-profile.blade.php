@@ -165,6 +165,70 @@
             scroll-behavior: smooth;
         }
 
+        .hero-grid-pattern {
+            background-image:
+                linear-gradient(rgba(18, 174, 208, 0.10) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(18, 174, 208, 0.10) 1px, transparent 1px);
+            background-size: 44px 44px;
+            -webkit-mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
+            mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
+        }
+        
+        .hero-orb {
+            animation: hero-orb-float 14s ease-in-out infinite;
+        }
+
+        .hero-orb-delay {
+            animation-delay: -7s;
+        }
+
+        @keyframes hero-orb-float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Robust Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-on-scroll.is-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* SVG / Icon Pop Animation */
+        @keyframes icon-pop {
+            0% { transform: scale(0) rotate(-45deg); opacity: 0; }
+            60% { transform: scale(1.4) rotate(15deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .reveal-on-scroll .material-symbols-outlined {
+            opacity: 0;
+            display: inline-block;
+        }
+
+        .reveal-on-scroll.is-revealed .material-symbols-outlined {
+            animation: icon-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation-delay: 0.3s; /* Delay icon pop until parent card is almost fully visible */
+        }
+
         /* TAB (768px - 1024px) */
         @media (min-width: 768px) and (max-width: 1024px) {
             .reason-card {
@@ -204,7 +268,11 @@
         <!-- ============================================================ -->
         <!-- Section 1: Hero                                              -->
         <!-- ============================================================ -->
-        <header id="company-hero" class="relative bg-surface overflow-hidden">
+        <header id="company-hero" class="relative bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5 border-b border-outline-variant overflow-hidden">
+            <div class="hero-grid-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+            <canvas id="company-hero-network" class="absolute inset-0 h-full w-full pointer-events-none" aria-hidden="true"></canvas>
+            <div class="hero-orb pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="hero-orb hero-orb-delay pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-primary/20 blur-3xl"></div>
             <div
                 class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-unit-lg pb-unit-xl lg:pt-unit-xl lg:pb-32 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
                 <div class="space-y-unit-md z-10">
@@ -229,13 +297,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-unit-lg md:mt-0">
-                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl">
+                <div class="relative mt-unit-lg md:mt-0 w-full h-[400px] flex items-center justify-center group" id="premium-parallax-container" style="perspective: 1200px;">
+                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-primary-fixed opacity-30 rounded-full blur-[80px] transition-all duration-700 group-hover:opacity-60 group-hover:scale-110"></div>
+                    
+                    <div class="relative z-10 w-full h-full animate-[float_6s_ease-in-out_infinite]">
+                        <img id="interactive-profile-img" alt="Digital Partnership Globe"
+                            class="rounded-3xl shadow-2xl border border-outline-variant/50 object-cover w-full h-full transition-shadow duration-300 group-hover:shadow-[0_20px_60px_-15px_rgba(18,174,208,0.5)]"
+                            src="{{ asset('assets/company_profile_hero.png') }}" style="transform-style: preserve-3d; will-change: transform;" />
                     </div>
-                    <img alt="Software Development Workflow"
-                        class="rounded-[20px] shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]"
-                        data-alt="A group of professional software engineers..."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
                 </div>
             </div>
         </header>
@@ -972,7 +1041,178 @@
     <!-- Footer -->
     @include('partials.footer')
 
+    <canvas id="company-hero-network" class="absolute inset-0 z-0 pointer-events-none"></canvas>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentYear = new Date().getFullYear();
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = currentYear;
+            }
+
+            // Hero Network Animation
+            const canvas = document.getElementById('company-hero-network');
+            const section = document.getElementById('company-hero');
+            if (canvas && section) {
+                const ctx = canvas.getContext('2d', { alpha: true });
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                const NODE_COLORS = ['18, 174, 208', '167, 244, 50']; // brand cyan / lime
+                const LINE_COLOR = '18, 174, 208';
+
+                let width = 0;
+                let height = 0;
+                let dpr = 1;
+                let nodes = [];
+                let animationId = null;
+                let inViewport = true;
+                let mouse = { x: null, y: null, radius: 110 };
+                let resizeTimer = null;
+
+                function nodeCountFor(w, h) {
+                    const area = w * h;
+                    const base = Math.floor(area / 24000);
+                    return Math.max(14, Math.min(50, base));
+                }
+
+                function buildNodes() {
+                    const count = nodeCountFor(width, height);
+                    nodes = Array.from({ length: count }, () => ({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.22,
+                        vy: (Math.random() - 0.5) * 0.22,
+                        r: Math.random() * 1.4 + 1,
+                        color: Math.random() > 0.78 ? NODE_COLORS[1] : NODE_COLORS[0],
+                    }));
+                }
+
+                function resize() {
+                    const rect = section.getBoundingClientRect();
+                    width = rect.width;
+                    height = rect.height;
+                    dpr = Math.min(window.devicePixelRatio || 1, 2);
+                    canvas.width = Math.round(width * dpr);
+                    canvas.height = Math.round(height * dpr);
+                    canvas.style.width = width + 'px';
+                    canvas.style.height = height + 'px';
+                    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                    buildNodes();
+                }
+
+                function drawFrame() {
+                    ctx.clearRect(0, 0, width, height);
+                    const linkDistance = Math.min(150, width * 0.15);
+
+                    for (const n of nodes) {
+                        ctx.beginPath();
+                        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(${n.color}, 0.5)`;
+                        ctx.fill();
+                    }
+
+                    for (let i = 0; i < nodes.length; i++) {
+                        for (let j = i + 1; j < nodes.length; j++) {
+                            const a = nodes[i];
+                            const b = nodes[j];
+                            const dx = a.x - b.x;
+                            const dy = a.y - b.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < linkDistance) {
+                                const opacity = (1 - dist / linkDistance) * 0.18;
+                                ctx.beginPath();
+                                ctx.moveTo(a.x, a.y);
+                                ctx.lineTo(b.x, b.y);
+                                ctx.strokeStyle = `rgba(${LINE_COLOR}, ${opacity})`;
+                                ctx.lineWidth = 1;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+
+                function step() {
+                    for (const n of nodes) {
+                        n.x += n.vx;
+                        n.y += n.vy;
+
+                        if (n.x <= 0 || n.x >= width) n.vx *= -1;
+                        if (n.y <= 0 || n.y >= height) n.vy *= -1;
+
+                        if (mouse.x !== null) {
+                            const dx = n.x - mouse.x;
+                            const dy = n.y - mouse.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < mouse.radius && dist > 0.01) {
+                                const force = (mouse.radius - dist) / mouse.radius;
+                                n.x += (dx / dist) * force * 1.1;
+                                n.y += (dy / dist) * force * 1.1;
+                            }
+                        }
+                    }
+
+                    drawFrame();
+                    animationId = requestAnimationFrame(step);
+                }
+
+                function start() {
+                    if (animationId || prefersReducedMotion) return;
+                    animationId = requestAnimationFrame(step);
+                }
+
+                function stop() {
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                    }
+                }
+
+                section.addEventListener('mousemove', (e) => {
+                    const rect = section.getBoundingClientRect();
+                    mouse.x = e.clientX - rect.left;
+                    mouse.y = e.clientY - rect.top;
+                });
+                section.addEventListener('mouseleave', () => {
+                    mouse.x = null;
+                    mouse.y = null;
+                });
+
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        resize();
+                        if (prefersReducedMotion) drawFrame();
+                    }, 150);
+                });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) stop();
+                    else if (inViewport) start();
+                });
+
+                // Intersection Observer to pause when scrolled out of view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            inViewport = true;
+                            start();
+                        } else {
+                            inViewport = false;
+                            stop();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(section);
+
+                // Initialize
+                resize();
+                if (!prefersReducedMotion) {
+                    start();
+                } else {
+                    drawFrame();
+                }
+            }
+        });
+
         // Simple scroll behavior for Navbar
         window.addEventListener('scroll', function () {
             var header = document.querySelector('header.fixed');
@@ -998,6 +1238,71 @@
                     });
                 }
             });
+        });
+
+        // 3D Interactive Tilt for Profile Image
+        const profileImg = document.getElementById('interactive-profile-img');
+        const profileContainer = document.getElementById('premium-parallax-container');
+
+        if (profileImg && profileContainer) {
+            profileContainer.addEventListener('mousemove', (e) => {
+                const rect = profileContainer.getBoundingClientRect();
+                
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -12;
+                const rotateY = ((x - centerX) / centerX) * 12;
+                
+                profileImg.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                profileImg.style.transition = 'none';
+            });
+
+            profileContainer.addEventListener('mouseleave', () => {
+                profileImg.style.transform = 'scale(1) rotateX(0) rotateY(0)';
+                profileImg.style.transition = 'transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            });
+        }
+
+        // Robust Scroll Reveal Animation with Auto-Stagger
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            let delay = 0;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('is-revealed');
+                    }, delay);
+                    delay += 150; // Stagger elements that enter viewport simultaneously
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Select specific elements to animate, NOT the giant wrapper sections
+        const revealElements = document.querySelectorAll(
+            '#vision-mission .bg-primary, ' +
+            '#vision-mission .bg-surface-container-low, ' +
+            '#why-nakala .reason-card, ' +
+            '#why-nakala .mb-unit-lg, ' +
+            '#team .grid > div, ' +
+            '#methodology .grid > div, ' +
+            '#methodology .flex-col, ' +
+            '.cta-banner'
+        );
+        
+        // Add the base class to them
+        revealElements.forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            revealObserver.observe(el);
         });
     </script>
 
