@@ -405,26 +405,6 @@
                                 : 'Kami merancang solusi berdasarkan kebutuhan pengguna dan proses bisnis agar menghasilkan pengalaman digital yang mudah digunakan, efektif, dan memberikan nilai bagi organisasi.' }}
                         </p>
                     </div>
-
-                    <!-- Reason 5 -->
-                    <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
-                        <div class="reason-header flex items-center gap-4 mb-unit-md">
-                            <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
-                                <span
-                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
-                            </div>
-                            <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Practical and Impactful Solutions' : 'Solusi Praktis dan Berdampak' }}</h4>
-                        </div>
-                        <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
-                            {{ app()->getLocale() === 'en'
-                                ? 'Each solution is designed to be practical, easy to develop, and deliver a real impact on operational efficiency and business growth.'
-                                : 'Setiap solusi dirancang agar praktis, mudah dikembangkan, dan memberikan dampak nyata bagi efisiensi operasional serta pertumbuhan bisnis.' }}
-                        </p>
-                    </div>
-
                     <!-- Reason 6 -->
                     <div
                         class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
