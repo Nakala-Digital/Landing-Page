@@ -6,7 +6,7 @@ return [
             'id' => 'ai-hiring',
             'icon' => 'psychology',
             'featured' => true,
-            'span' => 'md:col-span-8',
+            'span' => 'md:col-span-4',
             'title' => [
                 'en' => 'AI Hiring & GenAI Recruitment',
                 'id' => 'AI Hiring & Rekrutmen GenAI',
@@ -140,53 +140,6 @@ return [
                 'id' => ['Respons insiden lebih cepat lewat pelaporan real-time', 'Visibilitas kepatuhan HSE jelas untuk manajemen', 'Risiko insiden tak terlapor berkurang', 'Dokumentasi dan trail siap audit'],
             ],
             'capability' => 'Operational Systems, Custom Software Development, QA Governance',
-        ],
-        [
-            'id' => 'wargakas',
-            'icon' => 'payments',
-            'dark' => true,
-            'span' => 'md:col-span-4',
-            'title' => [
-                'en' => 'Wargakas',
-                'id' => 'Wargakas',
-            ],
-            'headline' => [
-                'en' => 'Transparent community finance build trust with every transaction.',
-                'id' => 'Keuangan komunitas transparan bangun kepercayaan di setiap transaksi.',
-            ],
-            'category' => [
-                'en' => 'Residential Cash Management Platform',
-                'id' => 'Platform Manajemen Kas Lingkungan',
-            ],
-            'summary' => [
-                'en' => 'Stop chasing monthly dues with manual records. Wargakas digitizes billing, payment tracking, and financial reporting for residential communities.',
-                'id' => 'Berhenti mengejar iuran bulanan dengan catatan manual. Wargakas mendigitalkan billing, tracking pembayaran, dan laporan keuangan untuk komunitas hunian.',
-            ],
-            'who_it_helps' => [
-                'en' => ['Residential Community Managers', 'Building Administrators', 'RT/RW Administrators'],
-                'id' => ['Pengelola Komunitas Hunian', 'Administrator Gedung', 'Pengurus RT/RW'],
-            ],
-            'business_value' => [
-                'en' => 'Transparent finances, reduced collection effort, improved resident trust, and scalable for multiple clusters or buildings.',
-                'id' => 'Keuangan transparan, upaya penagihan berkurang, kepercayaan warga meningkat, dan skalabel untuk banyak cluster atau gedung.',
-            ],
-            'challenge' => [
-                'en' => 'Residential communities manage monthly dues, facility fees, and expenses through manual collection and informal records causing distrust and administrative headaches.',
-                'id' => 'Komunitas hunian mengelola iuran, biaya fasilitas, dan pengeluaran lewat penagihan manual dan catatan informal menimbulkan ketidakpercayaan dan sakit kepala administrasi.',
-            ],
-            'solution' => [
-                'en' => 'Wargakas provides transparent digital billing, payment tracking, financial dashboards, and a resident portal so everyone stays informed.',
-                'id' => 'Wargakas menyediakan billing digital transparan, tracking pembayaran, dashboard finansial, dan portal warga agar semua pihak tetap terinformasi.',
-            ],
-            'features' => [
-                'en' => ['Resident billing and invoicing', 'Payment tracking and expense management', 'Financial dashboard', 'Resident portal and admin reporting'],
-                'id' => ['Billing dan invoice warga', 'Tracking pembayaran dan manajemen pengeluaran', 'Dashboard finansial', 'Portal warga dan laporan admin'],
-            ],
-            'impact' => [
-                'en' => ['Transparent and auditable community finances', 'Reduced manual collection effort', 'Improved resident trust through real-time visibility', 'Scalable for multiple residential clusters'],
-                'id' => ['Keuangan komunitas transparan dan auditable', 'Beban penagihan manual berkurang', 'Kepercayaan warga meningkat lewat visibilitas real-time', 'Skalabel untuk banyak cluster hunian'],
-            ],
-            'capability' => 'Custom Software Development, Web & Portal Development, SaaS Platform',
         ],
         [
             'id' => 'ppdb-school',

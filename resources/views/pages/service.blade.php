@@ -397,7 +397,7 @@
                 [
                     'id' => 'ai-hiring',
                     'icon' => 'psychology',
-                    'span' => 'md:col-span-8',
+                    'span' => 'md:col-span-4',
                     'featured' => true,
                     'title' => [
                         'en' => 'AI Hiring / GenAI Recruitment',
@@ -574,67 +574,6 @@
                         ],
                     ],
                     'capability' => 'Operational Systems, Custom Software Development, QA Governance',
-                ],
-                [
-                    'id' => 'wargakas',
-                    'icon' => 'payments',
-                    'span' => 'md:col-span-4',
-                    'dark' => true,
-                    'title' => [
-                        'en' => 'Wargakas',
-                        'id' => 'Wargakas',
-                    ],
-                    'category' => [
-                        'en' => 'Residential Cash Management Platform',
-                        'id' => 'Platform Manajemen Kas Lingkungan',
-                    ],
-                    'summary' => [
-                        'en' =>
-                            'Digital cash management platform for residential communities covering billing, payment tracking, finance dashboards, and resident portals.',
-                        'id' =>
-                            'Platform manajemen kas digital untuk lingkungan hunian dengan billing, tracking pembayaran, dashboard finansial, dan portal warga.',
-                    ],
-                    'challenge' => [
-                        'en' =>
-                            'Residential communities manage monthly dues, facility fees, and cash flow through manual collection and informal records.',
-                        'id' =>
-                            'Komunitas hunian mengelola iuran bulanan, biaya fasilitas, dan arus kas lewat penagihan manual dan catatan informal.',
-                    ],
-                    'solution' => [
-                        'en' =>
-                            'Wargakas enables transparent billing, payment tracking, financial reporting, and resident-facing visibility.',
-                        'id' =>
-                            'Wargakas menghadirkan billing transparan, tracking pembayaran, laporan finansial, dan visibilitas untuk warga.',
-                    ],
-                    'features' => [
-                        'en' => [
-                            'Resident billing and invoicing',
-                            'Payment tracking and expense management',
-                            'Financial dashboard',
-                            'Resident portal and admin reporting',
-                        ],
-                        'id' => [
-                            'Billing dan invoice warga',
-                            'Tracking pembayaran dan manajemen pengeluaran',
-                            'Dashboard finansial',
-                            'Portal warga dan laporan admin',
-                        ],
-                    ],
-                    'impact' => [
-                        'en' => [
-                            'Transparent and auditable community finance',
-                            'Reduced manual collection effort',
-                            'Improved resident trust through real-time visibility',
-                            'Scalable for multiple residential clusters',
-                        ],
-                        'id' => [
-                            'Keuangan komunitas lebih transparan dan auditable',
-                            'Beban penagihan manual berkurang',
-                            'Kepercayaan warga naik lewat visibilitas real-time',
-                            'Skalabel untuk banyak cluster hunian',
-                        ],
-                    ],
-                    'capability' => 'Custom Software Development, Web & Portal Development, SaaS Platform',
                 ],
                 [
                     'id' => 'ppdb-school',
@@ -950,33 +889,33 @@
             <h2 class="font-headline-h2 mb-unit-lg">
                 {{ app()->getLocale() === 'en' ? 'Regional Service Excellence' : 'Keunggulan Layanan Regional' }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-primary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Custom AI Models' : 'Model AI Kustom' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Building proprietary neural networks tailored to Indonesian linguistic nuances and consumer behavior patterns.' : 'Membangun jaringan saraf tiruan proprietary yang disesuaikan dengan nuansa linguistik Indonesia dan pola perilaku konsumen.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines. The background is a crisp, sterile white, reflecting a light-mode modern aesthetic. Tiny particles of impact lime energy orbit the brain, symbolizing active generative AI and neural processing. The overall mood is sophisticated, technical, and visionary."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-tertiary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Enterprise Portals' : 'Portal Perusahaan' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Secure, scalable, and localized portals for regional logistics and distribution networks across Southeast Asia.' : 'Portal yang aman, skalabel, dan terlokalisasi untuk jaringan logistik dan distribusi regional di seluruh Asia Tenggara.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="An isometric technical illustration of a global logistics network with interconnected shipping nodes and digital data streams. The design uses a bold, high-contrast palette of impact lime and midnight navy. Glowing lines connect various stylized cityscapes, representing regional delivery capabilities and digital connectivity in a professional corporate environment."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-AXleTxxk8ZxGeWyDmtGbin_jeBfaYYtL7Wcn_Sed-H_MlzBcd0nfRfkVN1tLvUXOj259b0w__xuNiznSt5qU2HrVuv-5wkvki-blo_4dadmHDZkw8mAo0QJW59snMpIcWYRp49NWYI2zX-vjpP0YDf03Huzn9lWfNGa84P7CZO05bq4d6HdD2PClw54CU1LYpG2btXA7zZ7Jwn6J7CiQMW0BVdbhzJyPX9TlTmw0n9LPDImoXXFYhxtLkfDlYPWefMAaJagYDVX" />
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-secondary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Legacy Overhaul' : 'Perombakan Sistem Lama' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Seamlessly transitioning monolithic systems to agile microservices without disrupting local operations.' : 'Transisi mulus dari sistem monolitik ke microservices yang lincah tanpa mengganggu operasi lokal.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="A conceptual visualization of digital transformation showing a crumbling grey stone structure being replaced by vibrant, glowing cyan geometric cubes. The lighting is high-key with soft shadows on a light grey background. The image represents the transition from legacy systems to modern, cloud-native architecture with a focus on technical reliability and modern corporate aesthetics."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOKFDTr6_voBBypZAFlVCxl67lbWO_ePQbX9a5bzWzPiT4fArb1YcGWOAIRZ6bKLN4lphcP0pYATRd6GTPm15fU31NqK04GavdGbvXYPwg6m7lEAldkmFPPrmLBMOFp3KZSpZClOMQdFdhCNK3iXoQb6OPXxXNwiaIVm-xo5IgrVMWJSlw5zzFfu4h5ixORnphUHULOTnyOF5TLHT5Ahp_1i0ky1gqOU5aVDFftYMNqdQIM11yROe0oVCY0PBazdhzkjWveX3deKd" />
                 </div>
