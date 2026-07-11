@@ -549,8 +549,7 @@
                                     <h3
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         AI & GenAI</h3>
-                                    <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Solutions
-                                        Ã¢â€ â€”</p>
+                                    <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Solutions</p>
                                 </div>
                             </div>
 
@@ -564,7 +563,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Software Dev</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Development Ã¢â€ â€”</p>
+                                        Development</p>
                                 </div>
                             </div>
 
@@ -578,7 +577,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Cyber Security</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Protection Ã¢â€ â€”</p>
+                                        Protection</p>
                                 </div>
                             </div>
 
@@ -591,8 +590,7 @@
                                     <h3
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Data Infrastructure</h3>
-                                    <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Analytics
-                                        Ã¢â€ â€”</p>
+                                    <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Analytics”</p>
                                 </div>
                             </div>
 
@@ -1272,6 +1270,44 @@
             });
 
             if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        inViewport = entry.isIntersecting;
+                        if (inViewport && !document.hidden) {
+                            startAuto();
+                        } else {
+                            stopAuto();
+                        }
+                    });
+                }, {
+                    threshold: 0.05
+                });
+                observer.observe(section);
+            }
+
+            startAuto();
+        })();
+
+        // carousel
+        document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.heroSwiper', {
+            loop: true,
+            className: 'swiper-container',
+            slidesPerView: 'auto',       // Membuat lebar slide mengikuti class CSS (!w-[75%])
+            centeredSlides: true,        // Slide aktif otomatis berada di tengah frame
+            spaceBetween: 20,            // Jarak antar slide gambar
+            grabCursor: true,            // Kursor tangan saat di-drag
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    });
+    </script>
+</body>
+
+</html>
+
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
                         inViewport = entry.isIntersecting;
