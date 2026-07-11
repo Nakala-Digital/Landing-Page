@@ -337,6 +337,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Micro-interaction for scroll effects
         window.addEventListener('scroll', () => {

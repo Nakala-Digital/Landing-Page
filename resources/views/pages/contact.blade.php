@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
   ============================================================
-  CONTACT PAGE â€“ Nakala Digital
+  CONTACT PAGE – Nakala Digital
   ============================================================
   File        : contact.blade.php
   Route       : /contact (ID) | /en/contact (EN)
@@ -11,7 +11,7 @@
   ============================================================
 -->
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <!--
@@ -34,7 +34,7 @@
 
     <!--
       ========================================================
-      Tailwind CSS (CDN) â€“ v4 with forms & container-queries
+      Tailwind CSS (CDN) – v4 with forms & container-queries
       ========================================================
       - Tailwind config is embedded below with custom design tokens:
         colors, spacing, fontFamily, fontSize, borderRadius.
@@ -267,7 +267,7 @@
 
                 <!--
                   ====================================================
-                  LEFT PANEL â€” Contact Information
+                  LEFT PANEL — Contact Information
                   ====================================================
                   Card with border-t-4 in electric-cyan containing:
                   - Email    (contact@nakala.digital)
@@ -366,7 +366,7 @@
                       ====================================================
                       Timeline with vertical line and dots showing the
                       4-step delivery process:
-                      01. Discovery â†’ 02. Design â†’ 03. Agile Dev â†’ 04. Handover
+                      01. Discovery → 02. Design → 03. Agile Dev → 04. Handover
                     -->
                     <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
                         <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
@@ -406,7 +406,7 @@
 
                 <!--
                   ====================================================
-                  RIGHT PANEL â€” Contact Form
+                  RIGHT PANEL — Contact Form
                   ====================================================
                   Form fields:
                   - Row 1: Full Name + Company
@@ -547,6 +547,7 @@
 
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
 
     <!--
       ========================================================

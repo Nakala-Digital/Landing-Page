@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -513,6 +513,7 @@
 
     @include('partials.partner-badge')
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header.fixed');

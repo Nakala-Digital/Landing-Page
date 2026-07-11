@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="{{ app()->getLocale() }}">
 
@@ -589,6 +589,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Subtle scroll animation for header
         window.addEventListener('scroll', () => {

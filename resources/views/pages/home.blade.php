@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -893,6 +893,7 @@
         </section>
     </main>
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Simple scroll header effect
         window.addEventListener('scroll', () => {

@@ -1,6 +1,6 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -450,6 +450,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Micro-interactions for header shadow on scroll
         window.addEventListener('scroll', () => {

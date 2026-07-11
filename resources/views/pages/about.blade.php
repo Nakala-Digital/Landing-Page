@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="light" lang="{{ app()->getLocale() }}">
 
@@ -430,6 +430,7 @@
 
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Simple scroll behavior for Navbar
         window.addEventListener('scroll', () => {

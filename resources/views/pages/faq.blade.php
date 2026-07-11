@@ -495,6 +495,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         function toggleAccordion(button) {
             const item = button.closest('.accordion-item');

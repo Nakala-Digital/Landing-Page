@@ -1040,6 +1040,7 @@
 
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
 
     <canvas id="company-hero-network" class="absolute inset-0 z-0 pointer-events-none"></canvas>
     <script>

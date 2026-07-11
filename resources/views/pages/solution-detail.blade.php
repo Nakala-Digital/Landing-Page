@@ -381,6 +381,7 @@
     </main>
 
     @include('partials.footer')
+    @include('partials.lenis-scroll')
 
     <script>
         window.addEventListener('scroll', () => {

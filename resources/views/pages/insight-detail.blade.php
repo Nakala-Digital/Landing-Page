@@ -1,4 +1,4 @@
-﻿@php
+@php
     $locale = app()->getLocale();
     $localeSuffix = $locale === 'en' ? '.en' : '';
     $data = $article;
@@ -331,6 +331,7 @@
 
     @include('partials.partner-badge')
     @include('partials.footer')
+    @include('partials.lenis-scroll')
 
     <script>
         window.addEventListener('scroll', () => {
