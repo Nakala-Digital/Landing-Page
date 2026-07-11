@@ -54,9 +54,9 @@
                 {{ $locale === 'en' ? 'Home' : 'Beranda' }}
             </a>
 
-            {{-- About Us Dropdown (split: label = link, chevron = toggle) --}}
-            <div class="relative" data-dropdown="about">
-                <div class="flex items-center gap-0.5">
+            {{-- About Us Dropdown (Hover on Desktop) --}}
+            <div class="relative group" data-dropdown="about">
+                <div class="flex items-center gap-0.5 py-4 -my-4">
                     <a href="{{ route('company-profile' . $localeSuffix) }}"
                         class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
                             {{ $isAboutActive
@@ -64,14 +64,17 @@
                                 : 'text-on-surface-variant hover:text-primary' }}">
                         {{ $locale === 'en' ? 'About Us' : 'Tentang Kami' }}
                     </a>
-                    <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
+                    <button aria-expanded="false" data-dropdown-trigger
                         class="flex items-center justify-center w-5 h-5 text-on-surface-variant hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base transition-transform" data-chevron>expand_more</span>
+                        <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180" data-chevron>expand_more</span>
                     </button>
                 </div>
+                {{-- Invisible bridge to prevent hover loss --}}
+                <div class="absolute top-full left-0 w-full h-4"></div>
                 <div data-dropdown-menu role="menu"
-                    class="absolute top-full left-0 mt-2 w-56 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2 
-                        max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
+                    class="absolute top-[calc(100%+0.5rem)] left-0 w-56 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2 
+                        max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out
+                        group-hover:max-h-screen group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto group-hover:overflow-visible">
                     <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
                         role="menuitem"
                         class="flex items-center gap-3 px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
