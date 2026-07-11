@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
@@ -279,7 +279,7 @@
             }
         }
 
-        /* SMALL MOBILE (≤400px) — Hero readability fix */
+        /* SMALL MOBILE (â‰¤400px) â€” Hero readability fix */
         @media (max-width: 400px) {
             .hero-heading {
                 font-size: 22px !important;
@@ -566,7 +566,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         AI & GenAI</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Solutions
-                                        ↗</p>
+                                        â†—</p>
                                 </div>
                             </div>
 
@@ -580,7 +580,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Software Dev</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Development ↗</p>
+                                        Development â†—</p>
                                 </div>
                             </div>
 
@@ -594,7 +594,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Cyber Security</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">
-                                        Protection ↗</p>
+                                        Protection â†—</p>
                                 </div>
                             </div>
 
@@ -608,7 +608,7 @@
                                         class="text-white text-xl md:text-2xl font-semibold tracking-widest uppercase mb-1">
                                         Data Infrastructure</h3>
                                     <p class="text-electric-cyan text-xs tracking-wider uppercase font-medium">Analytics
-                                        ↗</p>
+                                        â†—</p>
                                 </div>
                             </div>
 
@@ -644,6 +644,7 @@
             </div>
         </section>
 
+        <!-- Capabilities Bento Grid -->
         <section class="py-unit-xl bg-surface-container-low">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="mb-unit-xl max-w-2xl">
@@ -655,8 +656,9 @@
                     <p class="font-body-lg text-body-lg text-on-surface-variant">{{ __('messages.cap_desc') }}</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <!-- Bento Item 1 -->
                     <div
-                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-lg border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
+                        class="md:col-span-8 bg-surface-container-lowest p-unit-lg rounded-[20px] border border-outline-variant flex flex-col justify-between group hover:border-primary-container transition-all">
                         <div class="space-y-unit-md">
                             <span class="material-symbols-outlined text-primary text-4xl"
                                 data-weight="fill">settings_suggest</span>
@@ -682,8 +684,9 @@
                         </div>
                     </div>
 
+                    <!-- Bento Item 2 -->
                     <div
-                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-lg text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
+                        class="md:col-span-4 bg-on-secondary-fixed p-unit-lg rounded-[20px] text-on-secondary border border-transparent hover:border-primary-fixed-dim transition-all">
                         <div class="h-full flex flex-col justify-between">
                             <div class="space-y-unit-md">
                                 <span class="material-symbols-outlined text-tertiary-fixed text-4xl">psychology</span>
@@ -697,15 +700,17 @@
                         </div>
                     </div>
 
+                    <!-- Bento Item 3 -->
                     <div
-                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-lg border border-outline-variant group hover:opacity-90 transition-all">
+                        class="md:col-span-4 bg-[#A7F432] text-[#031A44] p-unit-lg rounded-[20px] border border-outline-variant group hover:opacity-90 transition-all">
                         <span class="material-symbols-outlined text-[#031A44] text-4xl mb-unit-md">query_stats</span>
                         <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">{{ __('messages.cap_consulting') }}
                         </h3>
                         <p class="font-body-md opacity-90">{{ __('messages.cap_consulting_desc') }}</p>
                     </div>
+                    <!-- Bento Item 4 -->
                     <div
-                        class="md:col-span-8 bg-primary p-unit-lg rounded-lg text-white relative overflow-hidden flex items-center">
+                        class="md:col-span-8 bg-primary p-unit-lg rounded-[20px] text-white relative overflow-hidden flex items-center">
                         <div class="z-10 space-y-unit-md">
                             <h3 class="font-headline-h2-mobile text-white">{{ __('messages.cap_local_title') }}</h3>
                             <p class="font-body-lg text-white/90 max-w-lg">{{ __('messages.cap_local_desc') }}</p>
@@ -717,12 +722,13 @@
                 </div>
             </div>
         </section>
+        <!-- About / Narrative Section -->
         <section class="py-unit-xl bg-surface-container-lowest">
             <div
                 class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-unit-xl items-center">
                 <div class="order-2 lg:order-1">
                     <img alt="Nakala Digital Team Collaboration"
-                        class="rounded-lg shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
+                        class="rounded-[20px] shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
                         data-alt="A diverse group of professional software engineers and digital consultants collaborating in a sleek, minimalist office environment with floor-to-ceiling glass windows. The lighting is crisp and natural, emphasizing a bright, light-mode corporate aesthetic. They are working around a large table with modern laptops, reflecting a mood of technical rigor and collaborative problem-solving. The scene uses a palette of whites, cool greys, and subtle electric cyan accents."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkKof9jfTV3ZLWx_WT91Cn9j9BwU7L7iRjUW8s1_CpNFUfxi-TxWpYXf4MN9di_-4rUJf_qv_npecCOhWJGdWvG-oJ9ed48cN99fs4UaCdjYRQmYsUgEjNPeA54mlQTk71PJzoRl54GfT46lqT1VAFHs063ifm6xPl595wy6lf2epw0d4JJRnhAVc7P-QdGRxKrS_qvU4NK1q6jvMKydHVH4hwGa-RIzInomT87uNg9wwwpDupaYwgxaNy0SKFyD7MXIVWIGO_g8O" />
                 </div>
@@ -738,13 +744,21 @@
                     <p class="font-body-md text-body-md text-on-surface-variant">
                         {{ __('messages.who_desc2') }}
                     </p>
-                    <div class="border-l-4 border-primary pl-unit-md">
-                        <span
-                            class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_local_commit') }}</span>
+                    <div class="grid grid-cols-2 gap-unit-md border-l-4 border-primary pl-unit-md">
+                        <div class="flex items-center h-full">
+                            <span
+                                class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_local_commit') }}</span>
+                        </div>
+                        <div>
+                            <span class="block font-headline-h3 text-on-background">ISO</span>
+                            <span
+                                class="font-label-sm text-on-surface-variant uppercase">{{ __('messages.who_iso') }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- FAQ Section -->
         <section class="py-unit-xl bg-surface">
             <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-unit-lg">
@@ -757,7 +771,7 @@
                 </div>
                 <div class="space-y-4">
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -768,13 +782,13 @@
                         <div class="accordion-content">
                             <p class="pt-4 font-body-md text-on-surface-variant">
                                 {{ app()->getLocale() === 'en'
-                                    ? 'We provide software development, AI and GenAI solutions, technology consulting, web and portal development, QA governance, and managed support for enterprise platforms including Microsoft Dynamics 365. Each service is delivered with local context and regional capability.'
-                                    : 'Kami menyediakan pengembangan perangkat lunak, solusi AI dan GenAI, konsultasi teknologi, pengembangan web dan portal, tata kelola QA, serta dukungan terkelola untuk platform enterprise termasuk Microsoft Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
+                                    ? 'We provide Custom Software Dev, AI & GenAI, Tech Consulting, Web & Portal, QA Governance, and Managed Support & Dynamics 365. Each service is delivered with local context and regional capability.'
+                                    : 'Kami menyediakan Pengembangan Software Kustom, AI & GenAI, Konsultasi Teknologi, Web & Portal, Tata Kelola QA, serta Managed Support & Dynamics 365. Setiap layanan diberikan dengan konteks lokal dan kapabilitas regional.' }}
                             </p>
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -791,7 +805,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -808,7 +822,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -825,7 +839,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -842,7 +856,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -859,7 +873,7 @@
                         </div>
                     </div>
                     <div
-                        class="accordion-item bg-white border border-outline-variant rounded-xl p-5 transition-all hover:border-primary shadow-sm">
+                        class="accordion-item bg-white border border-outline-variant rounded-[20px] p-5 transition-all hover:border-primary shadow-sm">
                         <button class="w-full flex justify-between items-center text-left"
                             onclick="toggleAccordion(this)">
                             <span
@@ -885,6 +899,7 @@
                 </div>
             </div>
         </section>
+        <!-- Final CTA -->
         <section class="py-unit-xl bg-primary text-center relative overflow-hidden">
             <div class="absolute inset-0 opacity-10">
                 <div class="grid grid-cols-6 h-full">
@@ -999,7 +1014,7 @@
             });
         })();
     
-        // Hero Section — animated / interactive IT network background.
+        // Hero Section â€” animated / interactive IT network background.
         // Lightweight canvas particle-network (represents connectivity, data & AI)
         // that stays behind the headline/CTA and never blocks pointer events.
         (function() {
@@ -1179,7 +1194,7 @@
             }
         })();
 
-        // Hero Section — background theme carousel (AI / Cloud / Data / Digital
+        // Hero Section â€” background theme carousel (AI / Cloud / Data / Digital
         // Transformation / Cybersecurity). Auto-advances, but stays fully
         // controllable via the dot indicators and pauses whenever the hero
         // isn't the thing the user is actually looking at.
