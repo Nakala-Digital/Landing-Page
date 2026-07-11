@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
@@ -258,9 +258,20 @@
                         {{ app()->getLocale() === 'en' ? 'Explore by Topic' : 'Jelajahi berdasarkan Topik' }}
                     </h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-4 mb-unit-lg">
+                    <button class="category-filter font-bold text-primary font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="all">{{ app()->getLocale() === 'en' ? 'All' : 'Semua' }}</button>
+                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="event">{{ app()->getLocale() === 'en' ? 'Event' : 'Acara' }}</button>
+                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="administration">{{ app()->getLocale() === 'en' ? 'Administration' : 'Administrasi' }}</button>
+                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="economy">{{ app()->getLocale() === 'en' ? 'Economy' : 'Ekonomi' }}</button>
+                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="project">{{ app()->getLocale() === 'en' ? 'Project' : 'Proyek' }}</button>
+                    <button class="category-filter text-on-surface-variant font-button uppercase tracking-wider px-4 py-2 border border-outline-variant rounded-[20px] hover:bg-primary/10 transition-colors" data-filter="internship">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
                     <!-- Topic 0a: EventGate (Konser.com) -->
-                    <div
+                    <div data-category="event"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -284,10 +295,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="lg:col-span-3">
-
                     <!-- Topic 0b: WilayahFlow -->
-                    <div
+                    <div data-category="administration"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -313,7 +322,7 @@
                     </div>
 
                     <!-- Topic 0c: DesaHub -->
-                    <div
+                    <div data-category="economy"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -339,7 +348,7 @@
                     </div>
 
                     <!-- Kick Off Al Azhar Syifa Budi Parahyangan -->
-                    <div
+                    <div data-category="project"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -365,7 +374,7 @@
                     </div>
 
                     <!-- Kick Off Universitas Widyatama -->
-                    <div
+                    <div data-category="internship"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -391,7 +400,7 @@
                     </div>
 
                     <!-- Kick Off Universitas Komputer (Unikom) -->
-                    <div
+                    <div data-category="internship"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -417,7 +426,7 @@
                     </div>
 
                     <!-- Kick Off Polban -->
-                    <div
+                    <div data-category="internship"
                         class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
                         <div class="h-48 w-full relative overflow-hidden bg-surface-container">
                             <div
@@ -441,6 +450,17 @@
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Pagination UI -->
+                <div class="mt-12 flex items-center justify-center gap-4">
+                    <button id="prev-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                    </button>
+                    <div id="page-numbers" class="flex gap-3"></div>
+                    <button id="next-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                    </button>
                 </div>
             </div>
         </section>
