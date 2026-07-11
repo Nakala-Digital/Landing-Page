@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -179,33 +179,35 @@
     @include('partials.navbar')
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative bg-surface-container-lowest overflow-hidden py-unit-xl border-b border-outline-variant">
-            <div
-                class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10">
-                <div
-                    class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest">
-                    <span class="material-symbols-outlined text-xs">book</span>
-                    <span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                </div>
-                <h1
-                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl leading-tight">
-                    {!! app()->getLocale() === 'en'
-                        ? 'Portfolio and case studies of <span class="text-primary">digital solutions</span>'
-                        : 'Portofolio dan studi kasus <span class="text-primary">solusi digital</span>' !!}
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
-                </p>
+        <section class="relative min-h-[400px] md:min-h-[500px] overflow-hidden bg-[#eef8fb] border-b border-outline-variant flex items-center">
+            
+            <!-- Right Aligned Cropped Background Image -->
+            <div class="absolute inset-y-0 right-0 w-full md:w-[65%] z-0">
+                <!-- Object-right keeps the right side (graphic) visible and crops the left side (text) -->
+                <img class="w-full h-full object-cover object-right" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/PORTOFOLIO%20ND.png" referrerpolicy="no-referrer" />
+                <!-- Gradient to smoothly blend the image with the solid background color on the left -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#eef8fb] via-[#eef8fb]/50 to-transparent hidden md:block"></div>
+                <!-- Overlay for mobile readability -->
+                <div class="absolute inset-0 bg-[#eef8fb]/80 md:hidden"></div>
             </div>
-            <!-- Decorative Elements -->
-            <div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none">
-                <svg class="w-full h-full text-primary fill-current" viewbox="0 0 100 100">
-                    <rect fill="none" height="80" stroke="currentColor" stroke-width="0.5" width="80" x="10"
-                        y="10"></rect>
-                    <rect fill="none" height="60" stroke="currentColor" stroke-width="0.5" width="60" x="20"
-                        y="20"></rect>
-                    <path d="M0 50 L100 50 M50 0 L50 100" stroke="currentColor" stroke-width="0.2"></path>
-                </svg>
+
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start gap-unit-md relative z-10 w-full py-unit-xl">
+                <div class="max-w-3xl flex flex-col items-start gap-unit-md relative">
+                    <div
+                        class="inline-flex items-center gap-unit-sm bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-unit-xs rounded-full font-label-sm text-label-sm uppercase tracking-widest shadow-sm">
+                        <span class="material-symbols-outlined text-xs">book</span>
+                        <span>{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                    </div>
+                    <h1
+                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-slate-900 max-w-3xl leading-tight">
+                        {!! app()->getLocale() === 'en'
+                            ? 'Portfolio and case studies of <span class="text-primary">digital solutions</span>'
+                            : 'Portofolio dan studi kasus <span class="text-primary">solusi digital</span>' !!}
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-slate-700 max-w-2xl">
+                        {{ app()->getLocale() === 'en' ? 'Nakala Digital bridging local delivery with regional capability. Explore how we\'ve empowered institutions and enterprises across Indonesia with technical rigor and high-impact software solutions.' : 'Nakala Digital menjembatani delivery lokal dengan kapabilitas regional. Jelajahi bagaimana kami telah memberdayakan institusi dan perusahaan di seluruh Indonesia dengan ketelitian teknis dan solusi perangkat lunak berdampak tinggi.' }}
+                    </p>
+                </div>
             </div>
         </section>
         <!-- Grid Portfolio Section -->
