@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 
@@ -208,186 +208,165 @@
                 </svg>
             </div>
         </section>
-        <!-- Bento Grid Portfolio Section -->
+        <!-- Grid Portfolio Section -->
         <section class="py-unit-xl px-margin-mobile md:px-8 xl:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-gutter">
+            <!-- Category Filters -->
+            <div class="mb-unit-lg flex justify-start md:justify-end">
+                <div class="relative w-full md:w-64" data-dropdown="category-filter">
+                    <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
+                        class="w-full flex items-center justify-between bg-white border border-outline-variant text-on-surface-variant font-button text-sm px-4 py-3 rounded-[20px] focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer shadow-sm">
+                        <span id="selected-category-label">{{ app()->getLocale() === 'en' ? 'All Portfolio' : 'Semua Portofolio' }}</span>
+                        <span class="material-symbols-outlined text-base transition-transform" data-chevron>expand_more</span>
+                    </button>
+                    <div data-dropdown-menu role="menu"
+                        class="absolute z-50 top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2 
+                            max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
+                        <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="all">
+                            {{ app()->getLocale() === 'en' ? 'All Portfolio' : 'Semua Portofolio' }}
+                        </button>
+                        <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="enterprise">
+                            Enterprise
+                        </button>
+                        <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="digital">
+                            Digital
+                        </button>
+                        <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="creative">
+                            {{ app()->getLocale() === 'en' ? 'Creative' : 'Kreatif' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. PPDB -->
-                <div
-                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant overflow-hidden rounded-[20px]">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <div class="w-full md:w-1/2 p-unit-lg flex flex-col justify-between">
-                            <div>
-                                <span
-                                    class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Public Sector' : 'Sektor Publik' }}</span>
-                                <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">PPDB Online System</h3>
-                                <p class="text-on-surface-variant text-body-md mb-unit-lg">
-                                    {{ app()->getLocale() === 'en' ? 'Building a reliable digital admission system that handles high-volume registration, document verification, and transparent selection processes.' : 'Membangun sistem penerimaan digital yang andal untuk menangani registrasi volume tinggi, verifikasi dokumen, dan proses seleksi yang transparan.' }}
-                                </p>
-                                <div class="space-y-unit-sm border-t border-outline-variant pt-unit-md">
-                                    <p class="text-label-sm uppercase font-bold text-outline">
-                                        {{ app()->getLocale() === 'en' ? 'Impact' : 'Dampak' }}</p>
-                                    <p class="text-primary font-bold">
-                                        {{ app()->getLocale() === 'en' ? 'High-availability platform with scalable admission processing.' : 'Platform dengan ketersediaan tinggi dan pemrosesan pendaftaran yang skalabel.' }}
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="mt-unit-lg text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                                <span class="material-symbols-outlined">arrow_forward</span></a>
-                        </div>
-                        <div class="w-full md:w-1/2 relative bg-surface-container h-64 md:h-auto overflow-hidden">
-                            <img class="absolute inset-0 w-full h-full object-cover"
-                                data-alt="A high-fidelity software mockup of a modern Indonesian public school admission dashboard. The UI is clean, using Nakala Digital's brand blue and white palette. In the background, a soft-focused modern school building is visible under bright daylight. The lighting is high-key, communicating transparency and institutional trust. Professional corporate high-contrast style with sharp edges."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs" />
-                        </div>
+                <div data-category="enterprise" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDjYUTUCC8m9pWJV1Nh4-wfC7b_EnyzOndB687zN9tswDCzugWKa7flgq88mWrxhsuTqXISszLc4vHwwmIJDodtShYhudRKPZTlsxnZSUGE7R86SczAsnAtxagjJwT_-ljISfkY062sdTH4SzslCEMqZjvPJEfTvP6lir7632rS6vTPThWJtCw6Lqzpu5iOuEMPxZDLqkSE5-23lqGK_g3TZf4N4FoCijbLArqzIk7JBB5PCJBnbvvOCaYl_PkFj2uCyqa06v7khIs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="PPDB" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">Enterprise</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">PPDB Online System</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'Developing a highly scalable digital admission platform engineered to process high-volume registrations with secure document verification and real-time transparency.' : 'Mengembangkan platform penerimaan digital dengan skalabilitas tinggi yang dirancang khusus untuk memproses pendaftaran bervolume besar, dilengkapi verifikasi dokumen yang aman dan transparansi real-time.' }}
+                        </p>
+                        <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank" rel="noopener noreferrer" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
                 </div>
+
                 <!-- 2. HRMS -->
-                <div
-                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col justify-between">
-                    <div class="mb-unit-xl">
-                        <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Cloud HRMS</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Centralizing payroll, attendance, and performance for distributed workforces in SE Asia.' : 'Memsentralisasi penggajian, kehadiran, dan kinerja untuk tenaga kerja terdistribusi di Asia Tenggara.' }}
-                        </p>
+                <div data-category="enterprise" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HRMS" />
                     </div>
-                    <div>
-                        <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30 mb-unit-md">
-                            <p class="font-label-sm text-outline uppercase mb-1">
-                                {{ app()->getLocale() === 'en' ? 'Solution' : 'Solusi' }}</p>
-                            <p class="text-body-md">
-                                {{ app()->getLocale() === 'en' ? 'Automated compliance & tax localization.' : 'Kepatuhan & lokalisasi pajak otomatis.' }}
-                            </p>
-                        </div>
-                        <a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-primary font-button flex items-center gap-unit-xs group-hover:translate-x-2 transition-transform">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                            <span class="material-symbols-outlined">arrow_forward</span></a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">Enterprise</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">Cloud HRMS</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'An enterprise-grade Human Resource Management System designed to centralize payroll, automate attendance tracking, and optimize workforce performance at scale.' : 'Sistem Manajemen Sumber Daya Manusia (HRMS) skala enterprise yang dirancang untuk mensentralisasi penggajian, melacak kehadiran secara otomatis, dan mengoptimalkan performa karyawan.' }}
+                        </p>
+                        <a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank" rel="noopener noreferrer" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
                 </div>
+
                 <!-- 3. HSE -->
-                <div
-                    class="md:col-span-1 xl:col-span-4 group bento-card bg-gradient-to-br from-[#031A44] to-[#0A3D73] text-white rounded-[20px] p-unit-lg flex flex-col items-start gap-unit-md border-0 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-                    <span
-                        class="bg-primary/20 text-primary-fixed border border-primary/30 px-unit-md py-1 rounded-full font-label-sm">{{ app()->getLocale() === 'en' ? 'Industrial' : 'Industri' }}</span>
-                    <h3 class="font-headline-h3 text-headline-h3 relative z-10">HSE Safety Tracker</h3>
-                    <p class="text-surface-variant text-body-md relative z-10">
-                        {{ app()->getLocale() === 'en' ? 'Digitizing workplace safety reports and real-time hazard monitoring for mining operations.' : 'Mendigitalisasi laporan keselamatan kerja dan pemantauan bahaya secara real-time untuk operasi pertambangan.' }}
-                    </p>
-                    <div class="flex items-center gap-unit-sm mt-auto">
-                        <span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
-                        <span
-                            class="font-bold">{{ app()->getLocale() === 'en' ? 'Proactive Safety Management' : 'Manajemen Keselamatan Proaktif' }}</span>
+                <div data-category="enterprise" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="HSE" />
                     </div>
-                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=hse-safety-tracker"
-                        class="mt-unit-md text-tertiary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
-                </div>
-                <!-- 5. AI Hiring -->
-                <div
-                    class="md:col-span-1 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col justify-between">
-                    <div class="flex justify-between items-start mb-unit-lg">
-                        <h3 class="font-headline-h3 text-headline-h3">AI Hiring Assistant</h3>
-                        <span
-                            class="bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-1 rounded-full font-label-sm uppercase">AI
-                            Powered</span>
-                    </div>
-                    <p class="text-on-surface-variant text-body-md mb-unit-lg">
-                        {{ app()->getLocale() === 'en' ? 'Automating candidate screening and matching using custom AI models trained on industry-specific requirements.' : 'Mengotomatiskan screening dan pencocokan kandidat menggunakan model AI kustom yang dilatih pada kebutuhan industri spesifik.' }}
-                    </p>
-                    <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30">
-                        <p class="font-label-sm uppercase text-primary mb-1">
-                            {{ app()->getLocale() === 'en' ? 'Business Value' : 'Nilai Bisnis' }}</p>
-                        <p class="text-body-md">
-                            {{ app()->getLocale() === 'en' ? 'Streamlined recruitment process with AI-powered candidate screening and matching.' : 'Proses rekrutmen yang efisien dengan screening dan pencocokan kandidat berbasis AI.' }}
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">Enterprise</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">HSE Safety Tracker</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'A comprehensive occupational health and safety digital solution featuring real-time hazard monitoring and automated compliance reporting for industrial operations.' : 'Solusi digital Kesehatan, Keselamatan, dan Lingkungan (HSE) yang komprehensif, dilengkapi pemantauan bahaya real-time dan pelaporan kepatuhan otomatis untuk operasional industri.' }}
                         </p>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=hse-safety-tracker" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
-                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=ai-hiring-assistant"
-                        class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
-                <!-- 6. AI Coach -->
-                <div
-                    class="md:col-span-1 xl:col-span-4 bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg overflow-hidden relative group flex flex-col justify-between">
-                    <div class="mb-unit-xl text-center md:text-left">
-                        <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">Personalized AI Coach</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Adaptive learning pathways for corporate reskilling, leveraging LLMs for real-time feedback.' : 'Jalur pembelajaran adaptif untuk reskilling perusahaan, memanfaatkan LLM untuk umpan balik real-time.' }}
+
+                <!-- 4. AI Hiring -->
+                <div data-category="digital" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="AI Hiring" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">Digital</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">AI Hiring Assistant</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'An intelligent talent acquisition system leveraging custom AI models to automate candidate screening, scoring, and matching with unparalleled precision.' : 'Sistem akuisisi talenta cerdas yang memanfaatkan model kecerdasan buatan (AI) khusus untuk mengotomatisasi penyaringan dan pencocokan kandidat dengan presisi tinggi.' }}
                         </p>
-                        <div class="flex gap-unit-sm">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined text-sm">smart_toy</span>
-                            </div>
-                            <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                                <span class="material-symbols-outlined text-sm">school</span>
-                            </div>
-                        </div>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=ai-hiring-assistant" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
-                    <div
-                        class="absolute -right-6 -bottom-6 opacity-[0.03] group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 pointer-events-none">
-                        <span class="material-symbols-outlined text-[200px]"
-                            style="font-variation-settings: 'FILL' 1;">psychology</span>
-                    </div>
-                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=personalized-ai-coach"
-                        class="relative z-10 mt-auto text-primary font-button flex items-center justify-center md:justify-start gap-unit-xs group-hover:gap-unit-sm transition-all w-fit mx-auto md:mx-0">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
-                <!-- 7. D365 Support -->
-                <div
-                    class="md:col-span-2 xl:col-span-4 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg">
-                    <div class="flex items-center gap-unit-sm mb-unit-md">
-                        <span class="material-symbols-outlined text-primary">hub</span>
-                        <h3 class="font-headline-h3 text-headline-h3">Dynamics 365 Support</h3>
+
+                <!-- 5. AI Coach -->
+                <div data-category="digital" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="AI Coach" />
                     </div>
-                    <p class="text-on-surface-variant text-body-md mb-unit-lg">
-                        {{ app()->getLocale() === 'en' ? 'Challenge: Integrating complex legacy data into a modern MS Dynamics ecosystem for a regional conglomerate.' : 'Tantangan: Mengintegrasikan data legacy kompleks ke dalam ekosistem MS Dynamics modern untuk konglomerat regional.' }}
-                    </p>
-                    <div class="bg-surface/50 p-unit-md rounded-[16px] border border-outline-variant/30">
-                        <p class="font-label-sm uppercase mb-1">
-                            {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kapabilitas Regional' }}</p>
-                        <p class="text-body-md font-bold">
-                            {{ app()->getLocale() === 'en' ? 'Managed D365 support with regional capability.' : 'Dukungan D365 terkelola dengan kapabilitas regional.' }}
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">Digital</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">Personalized AI Coach</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'A dynamic corporate learning platform utilizing advanced Large Language Models (LLMs) to deliver adaptive reskilling pathways and interactive feedback.' : 'Platform pembelajaran korporat dinamis yang menggunakan Large Language Models (LLMs) tingkat lanjut untuk menghadirkan alur pelatihan adaptif dan umpan balik interaktif.' }}
                         </p>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=personalized-ai-coach" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
-                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=dynamics-365-support"
-                        class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                        <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
                 </div>
-                <!-- 8. 360 Customer Engagement -->
-                <div
-                    class="md:col-span-2 xl:col-span-8 group bento-card bg-surface-container-lowest border border-outline-variant rounded-[20px] p-unit-lg flex flex-col md:flex-row gap-unit-lg items-center">
-                    <div class="flex-1">
-                        <span
-                            class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-unit-sm">{{ app()->getLocale() === 'en' ? 'Retail & Commerce' : 'Ritel & Komersial' }}</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">360&deg; Customer Engagement</h3>
-                        <p class="text-on-surface-variant text-body-md mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'A unified dashboard connecting online sales, social media sentiment, and physical store traffic for data-driven marketing.' : 'Dasbor terpadu yang menghubungkan penjualan online, sentimen media sosial, dan lalu lintas toko fisik untuk pemasaran berbasis data.' }}
+
+                <!-- 6. Dynamics 365 -->
+                <div data-category="creative" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Dynamics 365" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">{{ app()->getLocale() === 'en' ? 'Creative' : 'Kreatif' }}</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">Dynamics 365 Support</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'Seamlessly architecting and migrating complex legacy infrastructures into a unified Microsoft Dynamics 365 ecosystem to drive enterprise transformation.' : 'Merancang dan memigrasikan infrastruktur sistem lama yang kompleks ke dalam ekosistem Microsoft Dynamics 365 terpadu untuk mendorong transformasi perusahaan secara menyeluruh.' }}
                         </p>
-                        <div class="flex flex-wrap gap-unit-sm">
-                            <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Omnichannel' : 'Omnichannel' }}</span>
-                            <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Sentiment Analysis' : 'Analisis Sentimen' }}</span>
-                            <span
-                                class="px-unit-sm py-1 bg-surface-variant text-on-surface-variant text-label-sm rounded">{{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</span>
-                        </div>
-                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=360-customer-engagement"
-                            class="mt-unit-md text-primary font-button flex items-center gap-unit-xs group-hover:gap-unit-sm transition-all w-fit">{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}
-                            <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
-                    </div>
-                    <div
-                        class="w-full md:w-64 h-48 bg-surface rounded-[20px] border border-outline-variant overflow-hidden">
-                        <img class="w-full h-full object-cover"
-                            data-alt="A sophisticated data visualization dashboard showing multiple charts, world maps, and real-time metric counters. The color scheme is professional, featuring deep navy and electric cyan highlights. The workspace is high-end, with a glimpse of a clean glass desk and minimalist office decor. The mood is analytical and authoritative, representing regional technical capability."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZEGho0ZXWrYACNka0PrjLxslCBfj6LJo_mRI11PKgIGzp7ZdJx9giE7_K1sBpy2rF1Fw3Mq2nm5HF_OmUXqzEfuv3hKFoiEn7bVmO_zDOTQ2q-I8jkbO3sTTAB9fDGG9MX8IicOtokZ7m-9U9TCCti7Bv_U6Q93v0a212AnnU4Ge19za8WEH5UWl0L4yLu9SR16ctsrQmu9wRkJHNcYVMWQdduV5oBVHKKk3_amJXnevYkcLQfRkr-P0Wk3dPrLxMZB8J8nirVrlu" />
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=dynamics-365-support" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
                     </div>
                 </div>
+
+                <!-- 7. 360 Customer -->
+                <div data-category="creative" class="portfolio-card group bg-surface-container-lowest border border-outline-variant rounded-[20px] overflow-hidden flex flex-col hover:shadow-lg transition-all duration-300">
+                    <div class="w-full h-56 bg-surface-container relative overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZEGho0ZXWrYACNka0PrjLxslCBfj6LJo_mRI11PKgIGzp7ZdJx9giE7_K1sBpy2rF1Fw3Mq2nm5HF_OmUXqzEfuv3hKFoiEn7bVmO_zDOTQ2q-I8jkbO3sTTAB9fDGG9MX8IicOtokZ7m-9U9TCCti7Bv_U6Q93v0a212AnnU4Ge19za8WEH5UWl0L4yLu9SR16ctsrQmu9wRkJHNcYVMWQdduV5oBVHKKk3_amJXnevYkcLQfRkr-P0Wk3dPrLxMZB8J8nirVrlu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="360 Customer" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="font-label-sm text-primary uppercase tracking-widest mb-3">{{ app()->getLocale() === 'en' ? 'Creative' : 'Kreatif' }}</span>
+                        <h3 class="font-headline-h3 text-headline-h3 text-on-background mb-3">360&deg; Customer Engagement</h3>
+                        <p class="text-body-md text-on-surface-variant mb-8 flex-grow">
+                            {{ app()->getLocale() === 'en' ? 'An omnichannel analytics dashboard orchestrating e-commerce sales, social sentiment, and retail traffic to empower data-driven marketing strategies.' : 'Dasbor analitik omnichannel yang menyinkronkan penjualan e-commerce, sentimen sosial, dan lalu lintas ritel untuk memperkuat strategi pemasaran berbasis data yang akurat.' }}
+                        </p>
+                        <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}?project=360-customer-engagement" class="text-label-sm font-bold uppercase text-on-background tracking-widest flex items-center gap-1 border-b-2 border-outline-variant w-fit pb-1 group-hover:border-primary group-hover:text-primary transition-all">
+                            {{ app()->getLocale() === 'en' ? 'VIEW DETAIL' : 'LIHAT DETAIL' }} <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination UI -->
+            <div id="portfolio-pagination" class="mt-12 flex items-center justify-center gap-4">
+                <button id="prev-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                </button>
+                <div id="page-numbers" class="flex gap-3"></div>
+                <button id="next-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                </button>
             </div>
         </section>
         <!-- Partner Badge Section -->
@@ -410,27 +389,117 @@
     <!-- Footer -->
     @include('partials.footer')
     <script>
-        // Micro-interactions
-        document.querySelectorAll('.bento-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                // Potential for lightweight JS effects if needed
-            });
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const perPage = 6;
+            const cards = document.querySelectorAll('.portfolio-card');
+            let currentFilter = 'all';
 
-        // Simple scroll spy for header opacity
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header.fixed');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md', 'h-16');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.remove('shadow-md', 'h-16');
-                header.classList.add('h-20');
+            function filterAndPaginate() {
+                const filtered = [];
+                cards.forEach(c => {
+                    if (currentFilter === 'all' || c.dataset.category === currentFilter) {
+                        filtered.push(c);
+                    }
+                });
+
+                const totalPages = Math.ceil(filtered.length / perPage) || 1;
+                if (window.currentPage === undefined) window.currentPage = 1;
+                if (window.currentPage > totalPages) window.currentPage = totalPages;
+
+                cards.forEach(c => {
+                    c.style.display = 'none';
+                });
+                const start = (window.currentPage - 1) * perPage;
+                filtered.slice(start, start + perPage).forEach(c => {
+                    c.style.display = 'flex';
+                    c.style.opacity = '0';
+                    setTimeout(() => c.style.opacity = '1', 50);
+                });
+
+                const prevBtn = document.getElementById('prev-page');
+                const nextBtn = document.getElementById('next-page');
+                if(prevBtn) prevBtn.disabled = window.currentPage === 1;
+                if(nextBtn) nextBtn.disabled = window.currentPage === totalPages;
+
+                const numbers = document.getElementById('page-numbers');
+                if (numbers) {
+                    numbers.innerHTML = '';
+                    for (let i = 1; i <= totalPages; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = i;
+                        span.className = 'font-body-md text-body-md cursor-pointer hover:underline select-none ' + 
+                            (i === window.currentPage ? 'font-bold text-primary' : 'text-on-surface-variant');
+                        span.addEventListener('click', function() {
+                            window.currentPage = i;
+                            filterAndPaginate();
+                            const section = document.querySelector('.grid-cols-1').parentElement;
+                            const y = section.getBoundingClientRect().top + window.scrollY - 100;
+                            window.scrollTo({top: y, behavior: 'smooth'});
+                        });
+                        numbers.appendChild(span);
+                    }
+                }
+                
+                const pag = document.getElementById('portfolio-pagination');
+                if (pag) {
+                    pag.style.display = filtered.length > 0 ? 'flex' : 'none';
+                }
+            }
+
+            const categoryOptions = document.querySelectorAll('.category-option');
+            categoryOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    currentFilter = this.dataset.filter;
+                    document.getElementById('selected-category-label').innerText = this.innerText.trim();
+                    const dropdownContainer = this.closest('[data-dropdown]');
+                    if (dropdownContainer && typeof closeDropdown === 'function') {
+                        closeDropdown(dropdownContainer);
+                    }
+                    window.currentPage = 1;
+                    filterAndPaginate();
+                });
+            });
+
+            const btnPrev = document.getElementById('prev-page');
+            const btnNext = document.getElementById('next-page');
+            
+            if(btnPrev) {
+                btnPrev.addEventListener('click', function() {
+                    if (window.currentPage > 1) {
+                        window.currentPage--;
+                        filterAndPaginate();
+                        const section = document.querySelector('.grid-cols-1').parentElement;
+                        const y = section.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                });
+            }
+
+            if(btnNext) {
+                btnNext.addEventListener('click', function() {
+                    const count = [...cards].filter(c => currentFilter === 'all' || c.dataset.category === currentFilter).length;
+                    if (window.currentPage < Math.ceil(count / perPage)) {
+                        window.currentPage++;
+                        filterAndPaginate();
+                        const section = document.querySelector('.grid-cols-1').parentElement;
+                        const y = section.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                });
+            }
+
+            if (cards.length > 0) {
+                filterAndPaginate();
             }
         });
     </script>
+
 </body>
 
 </html>
+
+
+
+
 
 
