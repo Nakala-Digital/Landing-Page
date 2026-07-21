@@ -279,152 +279,17 @@
                 </p>
             </div>
             <!-- Bento Grid Services -->
-            <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">
-                <!-- 1. AI & GenAI -->
-                <div
-                    class="md:col-span-3 lg:col-span-4 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="psychology"
-                        style="font-variation-settings: 'FILL' 1;">psychology</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'AI & GenAI' : 'AI & GenAI' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.' : 'Menerapkan AI Generatif canggih untuk efisiensi operasional dan keterlibatan pelanggan otomatis.' }}
-                    </p>
-                    <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Custom AI Model Development' : 'Kustomisasi Model AI' }}
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Business Process Automation' : 'Otomasi Proses Bisnis' }}
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</li>
-                    </ul>
-                </div>
-                <!-- 2. Custom Software Dev -->
-                <div
-                    class="md:col-span-3 lg:col-span-8 bg-on-secondary-fixed text-white p-unit-lg service-card flex flex-col md:flex-row gap-gutter rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex-1">
-                        <span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6"
-                            data-icon="code">code</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                            {{ app()->getLocale() === 'en' ? 'Custom Software Dev' : 'Pengembangan Software Kustom' }}
-                        </h3>
-                        <p class="font-body-md text-body-md text-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'Bespoke software solutions crafted for unique business processes and high-performance requirements.' : 'Solusi perangkat lunak khusus yang dirancang untuk proses bisnis unik dan persyaratan performa tinggi.' }}
-                        </p>
-                        <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Enterprise Applications' : 'Aplikasi Enterprise' }}
-                            </li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Scalable Platform Architecture' : 'Sistem Terukur' }}
-                            </li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'System Modernization' : 'Modernisasi Sistem' }}</li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Cloud Integration' : 'Integrasi Cloud' }}</li>
-                        </ul>
-                    </div>
-                    <div
-                        class="w-full md:w-1/3 bg-white/5 rounded-[16px] overflow-hidden border border-white/10 hidden lg:block">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all"
-                            data-alt="A futuristic software development environment with multiple high-resolution monitors displaying complex lines of code and dark-themed UI mockups. The room is dimly lit with a professional midnight navy ambiance and neon blue accents highlighting the workspace. A high-tier workstation sits at the center, symbolizing technical rigor and precision craftsmanship in modern corporate software engineering."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYS2YWTvwWHj4QFP28CssIPWEpvrgnPcgAF9hFVibVwA-gh3A3L5RgeltvRgoBStWyfvtsLZ3XtJ0uotY0jjB25-_bjmLmt3p_8It06RMYUzopoC0UeaxvL9LqmeTiBR8nc0YFFK3JifErMagfxj1EkMH8DhaJiuf154Ed4kp0XwEQ3Up1zBXkshsOLsYIOnBz9BI6SIwZegE5C8GqkZIkJp5cvTOwSaJC9Y_CdAgP_PH-DXqN3_Ui-zxqY-5HFoFOmltnkTKu1kf" />
-                    </div>
-                </div>
-                <!-- 3. Tech Consulting -->
-                <div
-                    class="md:col-span-6 lg:col-span-6 bg-white border border-outline-variant p-unit-lg service-card rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-5xl"
-                            data-icon="query_stats">query_stats</span>
-                        <span
-                            class="bg-primary-container/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">{{ app()->getLocale() === 'en' ? 'CONSULTANCY' : 'KONSULTANSI' }}</span>
-                    </div>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'Tech Consulting' : 'Konsultasi Teknologi' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Strategic advice to align technology investment with business growth and regional market expansion.' : 'Nasihat strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar regional.' }}
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div
-                            class="p-4 bg-surface-container rounded-[14px] hover:bg-surface-container-high transition-colors duration-300">
-                            <h4 class="font-bold text-on-surface mb-1">
-                                {{ app()->getLocale() === 'en' ? 'Architecture Review' : 'Tinjauan Arsitektur' }}</h4>
-                            <p class="text-xs text-on-surface-variant">
-                                {{ app()->getLocale() === 'en' ? 'System audits and scalability assessments.' : 'Audit sistem dan penilaian skalabilitas.' }}
-                            </p>
-                        </div>
-                        <div
-                            class="p-4 bg-surface-container rounded-[14px] hover:bg-surface-container-high transition-colors duration-300">
-                            <h4 class="font-bold text-on-surface mb-1">
-                                {{ app()->getLocale() === 'en' ? 'Digital Roadmap' : 'Peta Jalan Digital' }}</h4>
-                            <p class="text-xs text-on-surface-variant">
-                                {{ app()->getLocale() === 'en' ? 'Phased transformation strategy.' : 'Strategi transformasi bertahap.' }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4. Web & Portal -->
-                <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-tertiary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-tertiary text-5xl mb-6" data-icon="web">web</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'Web & Portal' : 'Web & Portal' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Engaging digital interfaces and high-traffic portals for B2B and B2C segments.' : 'Antarmuka digital yang menarik dan portal trafik tinggi untuk segmen B2B dan B2C.' }}
-                    </p>
-                </div>
-                <!-- 5. QA Governance -->
-                <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="verified_user"
-                        style="font-variation-settings: 'FILL' 1;">verified_user</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Ensuring zero-defect deployment with automated testing frameworks and standards.' : 'Memastikan penerapan tanpa cacat dengan kerangka pengujian dan standar otomatis.' }}
-                    </p>
-                </div>
-                <!-- 6. Managed Support & D365 -->
-                <div
-                    class="md:col-span-6 lg:col-span-12 bg-surface-container-highest border border-outline-variant p-unit-lg service-card flex flex-col md:flex-row items-center gap-unit-lg rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex-1">
-                        <span class="material-symbols-outlined text-primary text-5xl mb-6"
-                            data-icon="support_agent">support_agent</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                            {{ app()->getLocale() === 'en' ? 'Managed Support & Dynamics 365' : 'Managed Support & Dynamics 365' }}
-                        </h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'End-to-end management of Microsoft D365 ecosystems and 24/7 technical support operations.' : 'Manajemen ujung-ke-ujung ekosistem Microsoft D365 dan operasi dukungan teknis 24/7.' }}
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'L1/L2/L3 Support' : 'Dukungan L1/L2/L3' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'D365 Implementation' : 'Implementasi D365' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'Cloud Migration' : 'Migrasi Cloud' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? '24/7 Monitoring' : 'Pemantauan 24/7' }}</span>
-                        </div>
-                    </div>
-                    <div
-                        class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-[20px] flex flex-col justify-center items-center text-center text-white">
-                        <div class="text-4xl font-bold mb-2">{{ app()->getLocale() === 'en' ? 'SLA' : 'SLA' }}</div>
-                        <div class="text-sm font-label-sm uppercase tracking-widest opacity-80">
-                            {{ app()->getLocale() === 'en' ? 'Flexible SLAs' : 'SLA Fleksibel' }}</div>
-                    </div>
-                </div>
+            @php
+                $services = config('service-pillars.pillars');
+                $locale = app()->getLocale();
+            @endphp
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                @foreach ($services as $service)
+                    @include('partials.service-card', [
+                        'service' => $service,
+                        'locale' => $locale,
+                    ])
+                @endforeach
             </div>
         </div>
     </section>
