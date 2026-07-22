@@ -2,64 +2,80 @@
 
 use Illuminate\Support\Facades\Route;
 
-function registerCompanyProfileRoutes($suffix = '')
-{
-    $prefix = $suffix === '.en' ? '/en' : '';
+if (! function_exists('registerCompanyProfileRoutes')) {
+    function registerCompanyProfileRoutes($suffix = '')
+    {
+        $prefix = $suffix === '.en' ? '/en' : '';
 
-    Route::view('/', 'pages.home')->name('home'.$suffix);
-    Route::view('/home', 'pages.home')->name('home.page'.$suffix);
-    Route::view('/company-profile', 'pages.company-profile')->name('company-profile'.$suffix);
-    Route::redirect('/about', $prefix.'/company-profile', 301)->name('about'.$suffix);
-    Route::view('/services', 'pages.service')->name('services'.$suffix);
-    Route::view('/service', 'pages.service')->name('service'.$suffix);
-    Route::view('/solutions', 'pages.solutions')->name('solutions'.$suffix);
-    Route::get('/solutions/{solution}', function (string $solution) {
-        $solutionCase = collect(config('solutions.cases'))->firstWhere('id', $solution);
+        Route::view('/', 'pages.home')->name('home'.$suffix);
+        Route::view('/home', 'pages.home')->name('home.page'.$suffix);
+        Route::view('/company-profile', 'pages.company-profile')->name('company-profile'.$suffix);
+        Route::redirect('/about', $prefix.'/company-profile', 301)->name('about'.$suffix);
+        Route::view('/services', 'pages.service')->name('services'.$suffix);
+        Route::view('/service', 'pages.service')->name('service'.$suffix);
+        Route::get('/services/{service}', function (string $service) {
+            $pillar = collect(config('service-pillars.pillars'))->firstWhere('slug', $service);
+            abort_unless($pillar, 404);
 
-        abort_unless($solutionCase, 404);
+            $caseStudies = collect($pillar['case_studies'] ?? [])
+                ->map(fn ($id) => collect(config('solutions.cases'))->firstWhere('id', $id))
+                ->filter()
+                ->values();
 
-        return view('pages.solution-detail', [
-            'solutionCase' => $solutionCase,
-        ]);
-    })->name('solutions.detail'.$suffix);
-    Route::redirect('/delivery', $prefix.'/company-profile', 301)->name('delivery'.$suffix);
-    Route::view('/portfolio', 'pages.portfolio')->name('portfolio'.$suffix);
-    Route::view('/portopolio', 'pages.portfolio')->name('portopolio'.$suffix);
-    Route::view('/partnership', 'pages.partnership')->name('partnership'.$suffix);
-    Route::view('/patnership', 'pages.partnership')->name('patnership'.$suffix);
-    Route::redirect('/team', $prefix.'/company-profile', 301)->name('team'.$suffix);
-    Route::redirect('/team-leadership', $prefix.'/company-profile', 301)->name('team.leadership'.$suffix);
-    Route::view('/faq', 'pages.faq')->name('faq'.$suffix);
-    Route::view('/insights', 'pages.insights')->name('insights'.$suffix);
-    Route::view('/contact', 'pages.contact')->name('contact'.$suffix);
+            return view('pages.service-detail', [
+                'pillar' => $pillar,
+                'caseStudies' => $caseStudies,
+            ]);
+        })->name('services.detail'.$suffix);
+        Route::view('/solutions', 'pages.solutions')->name('solutions'.$suffix);
+        Route::get('/solutions/{solution}', function (string $solution) {
+            $solutionCase = collect(config('solutions.cases'))->firstWhere('id', $solution);
 
-    /* BLOG INSIGHT */
-    Route::get('/insights/{slug}', function ($slug) {
+            abort_unless($solutionCase, 404);
 
-        $files = [
-            'PPDB',
-            'D365',
-        ];
+            return view('pages.solution-detail', [
+                'solutionCase' => $solutionCase,
+            ]);
+        })->name('solutions.detail'.$suffix);
+        Route::redirect('/delivery', $prefix.'/company-profile', 301)->name('delivery'.$suffix);
+        Route::view('/portfolio', 'pages.portfolio')->name('portfolio'.$suffix);
+        Route::view('/portopolio', 'pages.portfolio')->name('portopolio'.$suffix);
+        Route::view('/partnership', 'pages.partnership')->name('partnership'.$suffix);
+        Route::view('/patnership', 'pages.partnership')->name('patnership'.$suffix);
+        Route::redirect('/team', $prefix.'/company-profile', 301)->name('team'.$suffix);
+        Route::redirect('/team-leadership', $prefix.'/company-profile', 301)->name('team.leadership'.$suffix);
+        Route::view('/faq', 'pages.faq')->name('faq'.$suffix);
+        Route::view('/insights', 'pages.insights')->name('insights'.$suffix);
+        Route::view('/contact', 'pages.contact')->name('contact'.$suffix);
 
-        $article = null;
-        $portal = null;
+        /* BLOG INSIGHT */
+        Route::get('/insights/{slug}', function ($slug) {
 
-        foreach ($files as $p) {
+            $files = [
+                'PPDB',
+                'D365',
+            ];
 
-            $data = require config_path("insights/{$p}.php");
+            $article = null;
+            $portal = null;
 
-            $article = collect($data['articles'])->firstWhere('slug', $slug);
+            foreach ($files as $p) {
 
-            if ($article) {
-                $portal = $p;
-                break;
+                $data = require config_path("insights/{$p}.php");
+
+                $article = collect($data['articles'])->firstWhere('slug', $slug);
+
+                if ($article) {
+                    $portal = $p;
+                    break;
+                }
             }
-        }
 
-        abort_unless($article, 404);
+            abort_unless($article, 404);
 
-        return view('pages.insight-detail', compact('article', 'portal'));
-    })->name('insights.detail'.$suffix);
+            return view('pages.insight-detail', compact('article', 'portal'));
+        })->name('insights.detail'.$suffix);
+    }
 }
 
 // English prefix

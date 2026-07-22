@@ -45,7 +45,7 @@
     $title = $service['title'][$locale] ?? $service['title']['id'];
     $description = $service['description'][$locale] ?? $service['description']['id'];
     $slug = $service['slug'] ?? '#';
-    $localePrefix = app()->getLocale() === 'en' ? '/en' : '';
+    $localeSuffix = app()->getLocale() === 'en' ? '.en' : '';
     // CTA underline: white on cyan bg, cyan (#12AED0) on everything else
     $ctaBorderColor = $service['bgColor'] === 'cyan' ? '#FFFFFF' : '#12AED0';
 @endphp
@@ -59,7 +59,7 @@
         <p class="font-body-md text-body-md {{ $descClass }}">{{ $description }}</p>
     </div>
     <div class="mt-6 flex justify-end">
-        <a href="{{ $localePrefix }}/services/{{ $slug }}"
+        <a href="{{ route('services.detail' . $localeSuffix, ['service' => $slug]) }}"
             class="inline-flex items-center gap-1 text-sm font-normal tracking-wider {{ $textClass }} hover:opacity-80 transition-opacity">
             <span class="border-b-2 pb-0.5" style="border-color: {{ $ctaBorderColor }}">
                 {{ app()->getLocale() === 'en' ? 'Learn More' : 'Pelajari Lebih Lanjut' }}
