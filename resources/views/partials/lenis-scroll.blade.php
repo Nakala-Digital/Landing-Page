@@ -28,6 +28,9 @@
             touchMultiplier: 1.5,
         });
 
+        // Ekspos instance untuk pemanggilan programatik (mis. pagination scroll) //
+        window.lenis = lenis;
+
         // Integrasi Request Animasi Frame //
         function raf(time) {
             lenis.raf(time);
