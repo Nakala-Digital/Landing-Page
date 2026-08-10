@@ -58,4 +58,9 @@ return [
     'final_cta_title' => 'Siap memulai perjalanan transformasi digital Anda?',
     'final_cta_desc' => 'Jadwalkan sesi diskusi dengan tim kami dan jelajahi bagaimana kami dapat membantu organisasi Anda berkembang.',
     'final_cta_btn' => 'Jadwalkan Konsultasi Gratis',
+
+    // CTA Transform
+    'cta_transform_title' => 'Siap Mulai Transformasi Digital?',
+    'cta_transform_desc' => 'Konsultasikan kebutuhan teknologi Anda dengan tim ahli kami dan mulai langkah transformasi digital Anda hari ini.',
+    'cta_transform_btn' => 'Mulai Konsultasi Gratis',
 ];

@@ -191,9 +191,9 @@
                         Strategic Alliance
                     </div>
                     <h1
-                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 mb-6 leading-tight">
-                        Indonesia representative &amp; delivery partner of <span class="text-electric-cyan">Romulus
-                            Digital.</span>
+                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-6 leading-tight">
+                        Indonesia representative &amp; delivery partner of <span class="text-primary">Romulus
+                            Digital</span>
                     </h1>
                     <p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-xl">
                         Bridging local execution with regional excellence. Nakala Digital serves as the primary gateway
@@ -201,12 +201,12 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="{{ route('contact') }}"
-                            class="bg-electric-cyan text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
+                            class="bg-electric-cyan text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:brightness-110 transition-all flex items-center justify-center">
                             Bicara dengan Tim Nakala
                             <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
                         </a>
                         <a href="{{ route('contact.en') }}"
-                            class="border-2 border-surface-variant text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
+                            class="border-2 border-surface-variant text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center">
                             Talk to Nakala Team
                         </a>
                     </div>
@@ -237,7 +237,8 @@
         <section class="py-unit-xl bg-surface">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="mb-unit-lg text-center">
-                    <h2 class="font-headline-h2 text-headline-h2 text-primary mb-4">Local Entry, Regional Standards</h2>
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-4">Local Entry, Regional
+                        Standards</h2>
                     <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
                         Combining Nakala's deep understanding of the Indonesian business landscape with Romulus's
                         world-class engineering methodology.
@@ -321,7 +322,7 @@
         <section class="py-unit-xl bg-white">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="max-w-3xl mb-unit-lg">
-                    <h2 class="font-headline-h2 text-headline-h2 text-midnight-navy mb-4">Roles &amp; Responsibilities
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-4">Roles &amp; Responsibilities
                     </h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
                         Clear separation of concerns ensures project stability and excellence from inception to
@@ -393,7 +394,7 @@
                         <div class="pl-0 lg:pl-12">
                             <span
                                 class="text-electric-cyan font-bold uppercase tracking-widest text-label-sm mb-4 block">{{ app()->getLocale() === 'en' ? 'Case Study' : 'Studi Kasus' }}</span>
-                            <h2 class="font-headline-h2 text-headline-h2 text-midnight-navy mb-6">Regional Power,
+                            <h2 class="font-headline-h2 text-headline-h2 text-on-background mb-6">Regional Power,
                                 Locally Applied</h2>
                             <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
                                 Our flagship collaboration: An AI-Powered Recruitment Platform built on Romulus's core
@@ -412,7 +413,7 @@
                                 </div>
                             </div>
                             <a href="{{ route('solutions.en') }}"
-                                class="bg-midnight-navy text-white px-8 py-4 rounded-lg font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
+                                class="bg-midnight-navy text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-wider hover:bg-midnight-navy/90 transition-all">
                                 View Solutions
                             </a>
                         </div>
@@ -427,7 +428,7 @@
                     <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
                     <div class="relative z-10">
                         <h2
-                            class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 mb-6">
+                            class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-6">
                             Ready to bridge the gap?</h2>
                         <p class="font-body-lg text-body-lg text-primary-fixed mb-10 max-w-2xl mx-auto">
                             Connect with us today to learn how the Nakala-Romulus partnership can transform your
@@ -452,6 +453,18 @@
     @include('partials.footer')
     @include('partials.lenis-scroll')
     <script>
+        // Micro-interactions for header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+
         // Hover effects for bento cards
         const bentoCards = document.querySelectorAll('.bento-card');
         bentoCards.forEach(card => {

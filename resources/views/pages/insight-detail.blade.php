@@ -321,7 +321,7 @@
                 </p>
                 <div class="pt-unit-md">
                     <a href="{{ route('contact' . $localeSuffix) }}"
-                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-lg font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
                         {{ $locale === 'en' ? 'Free Consultation' : 'Konsultasi Gratis' }}
                     </a>
                 </div>
@@ -331,8 +331,22 @@
 
     @include('partials.partner-badge')
     @include('partials.footer')
-
     @include('partials.lenis-scroll')
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md', 'h-16');
+                    header.classList.remove('h-20');
+                } else {
+                    header.classList.remove('shadow-md', 'h-16');
+                    header.classList.add('h-20');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

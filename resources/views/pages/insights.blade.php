@@ -153,7 +153,6 @@
             }
         }
     </script>
-    </style>
 </head>
 
 <body class="bg-background text-on-background font-body-md">
@@ -161,17 +160,22 @@
     <main class="pt-20">
 
         <!-- Hero -->
-        <section class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background border-b border-outline-variant">
+        <section
+            class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background border-b border-outline-variant">
             <div class="absolute inset-0 z-0">
-                <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUTION%20HIGHLIGHT%20ND.png" referrerpolicy="no-referrer" />
+                <img class="w-full h-full object-cover"
+                    src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUTION%20HIGHLIGHT%20ND.png"
+                    referrerpolicy="no-referrer" />
             </div>
             <div class="relative z-10 px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto w-full">
                 <div class="max-w-3xl">
-                    <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
+                    <div
+                        class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
                         <span class="material-symbols-outlined text-[16px]">bolt</span>
                         {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
                     </div>
-                    <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
+                    <h1
+                        class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
                         {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -184,40 +188,68 @@
         </section>
 
         <!-- Featured Insight -->
-        <section class="py-unit-xl px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
-            <div class="mb-unit-lg">
-                <span
-                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}</span>
+        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="mb-unit-lg flex items-center gap-4">
+                <!-- Menambahkan garis dekoratif kecil di samping tulisan 'Featured' -->
+                <span class="h-[2px] w-8 bg-primary rounded-full hidden sm:block"></span>
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] block">
+                    {{ app()->getLocale() === 'en' ? 'Featured' : 'Unggulan' }}
+                </span>
             </div>
+
+            <!-- Menambahkan transisi shadow, posisi transform, dan menghapus border kaku -->
             <div
-                class="group cursor-pointer bg-white border border-outline-variant rounded-[20px] overflow-hidden flex flex-col lg:flex-row">
-                <div class="lg:w-1/2 aspect-video lg:aspect-auto overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                class="group cursor-pointer bg-gradient-to-br from-white to-slate-50 shadow-md hover:shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 transform hover:-translate-y-1">
+
+                <!-- Area Gambar dengan Overlay -->
+                <div class="md:w-1/2 aspect-video md:aspect-auto overflow-hidden relative">
+                    <div
+                        class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10">
+                    </div>
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                         data-alt="A sophisticated data visualization dashboard displayed on multiple high-resolution monitors in a sleek, dimly lit command center."
-                        src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/STRATEGI%20AI%20ND.png" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR535vuudX7lTS7e4rlJh7a9-gVx5AUk-xOXNnnCSBtfb5s7pPif-MixNqR0pMjjojGO_pBwl-VJfRc7i9aneEF3eIqu__3s4_IH1bqYRQmOL9gQCYRooxu7z0_FSjKu97jX8mCvGQzUKtFn12bVzeHbWzoKYiF8rv_pyukmlVamh3S8_Hhyj6uYihaF8rR1ZHEW7QbcWv5lNaab6a7LRWDZ_DRm5-olpTDLSAecUuoW7Top-3b5NwJmCEQZJYjM5nHV33VJnRxhhU" />
                 </div>
+
+                <!-- Area Teks dengan Border Kiri/Atas yang Lebih Smooth -->
                 <div
-                    class="lg:w-1/2 p-unit-lg flex flex-col justify-between border-t-4 lg:border-t-0 lg:border-l-4 border-primary">
+                    class="md:w-1/2 p-unit-lg md:p-12 flex flex-col justify-between border-t-4 md:border-t-0 md:border-l-4 border-primary/80 group-hover:border-primary transition-colors duration-300">
                     <div>
+                        <!-- Badge Kategori -->
                         <div class="flex items-center gap-unit-sm mb-unit-sm">
                             <span
-                                class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}</span>
+                                class="text-primary bg-primary/10 px-3 py-1 rounded-full font-label-sm text-xs uppercase tracking-wider">
+                                {{ app()->getLocale() === 'en' ? 'AI Strategy' : 'Strategi AI' }}
+                            </span>
                         </div>
+
+                        <!-- Judul Utama -->
                         <h2
-                            class="font-headline-h2 text-headline-h2-mobile lg:text-headline-h2 mb-unit-sm group-hover:text-primary transition-colors">
-                            {{ app()->getLocale() === 'en' ? 'Bridging the Gap: AI Implementation for Regional Enterprises' : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
+                            class="font-bold leading-tight mb-unit-sm text-slate-800 group-hover:text-primary transition-colors duration-300 text-[clamp(1.5rem,3.5vw,2.5rem)]">
+                            {{ app()->getLocale() === 'en'
+                                ? 'Bridging the Gap: AI Implementation for Regional Enterprises'
+                                : 'Menjembatani Gap: Implementasi AI untuk Perusahaan Regional' }}
                         </h2>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">
+
+                        <!-- Deskripsi -->
+                        <p class="font-body-md text-body-md text-slate-600 mb-unit-lg leading-relaxed">
                             {{ app()->getLocale() === 'en'
                                 ? 'How local businesses can leverage tailored AI solutions to compete at a regional level without enterprise-scale investment.'
                                 : 'Bagaimana bisnis lokal dapat memanfaatkan solusi AI yang disesuaikan untuk bersaing di tingkat regional tanpa investasi skala enterprise.' }}
                         </p>
                     </div>
-                    <a class="inline-flex items-center gap-unit-xs text-primary font-button text-button group"
-                        href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'ppdb-al-azhar') }}">
-                        {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
+
+                    <!-- Link Tombol / CTA -->
+                    <a class="inline-flex items-center gap-2 text-primary font-button text-button group/btn font-semibold"
+                        href="#">
                         <span
-                            class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                            class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 group-hover/btn:after:w-full after:bg-primary after:transition-all after:duration-300 pb-0.5">
+                            {{ app()->getLocale() === 'en' ? 'Read Full Insight' : 'Baca Insight Lengkap' }}
+                        </span>
+                        <span
+                            class="material-symbols-outlined text-sm transition-transform duration-300 group-hover/btn:translate-x-1.5">
+                            arrow_forward
+                        </span>
                     </a>
                 </div>
             </div>
@@ -233,390 +265,249 @@
                         {{ app()->getLocale() === 'en' ? 'Explore by Topic' : 'Jelajahi berdasarkan Topik' }}
                     </h2>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-                    <div class="lg:col-span-9">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                            <!-- Topic 1: PPDB Al-Azhar -->
-                            <a href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'ppdb-al-azhar') }}"
-                                class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5rmJn_X_gHoAzSSEZnz6ESHa1IXeyHJORAaIHJDh0Qw&s=10" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'How to Plan a School PPDB Portal' : 'Cara Merencanakan Portal PPDB Sekolah' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Key considerations for educational institutions planning a digital admissions portal, from requirements gathering to deployment and handover.'
-                                                : 'Pertimbangan utama bagi institusi pendidikan yang merencanakan portal penerimaan digital, dari pengumpulan kebutuhan hingga deployment dan serah terima.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
+                <!-- Category Filters -->
+                <div class="mb-unit-lg flex justify-start md:justify-end">
+                    <div class="relative w-full md:w-64" data-dropdown="category-filter">
+                        <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
+                            class="w-full flex items-center justify-between bg-white border border-outline-variant text-on-surface-variant font-button text-sm px-4 py-3 rounded-[20px] focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer shadow-sm">
+                            <span
+                                id="selected-category-label">{{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}</span>
+                            <span class="material-symbols-outlined text-base transition-transform"
+                                data-chevron>expand_more</span>
+                        </button>
+                        <div data-dropdown-menu role="menu"
+                            class="absolute z-50 top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2
+                                max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
 
-                            <!-- Topic 2: QA Governance -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="tata-kelola-qa">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="Close-up of a high-end mechanical keyboard with glowing cyan backlighting, reflected on a polished desk surface."
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD42NUAKFSOMS26jXpuJVh1JdCeoMsY6VlRi_rrdM3ac3mhzY3P6z5HsOK5J8me2172qL97zy7cfirniG15cfFYrQvf-XXvRmsud-wmufmobzUv09P4mVKdj5Omi4erlQpHlUmGEM6AmrEdeO3jSTBz3MGV2yPiAN2IlOrdU0AsHO6t7tCbxhHgp1WH4oL27xLiZ8bSM4em19RqG4mJR-UcUbGFfHxQDyNXfMQpHyeYVh5vgZ4CKxo7xJHgCsF1cQa8WQZJyrgo4aDE" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Why QA Governance Matters in Software Projects' : 'Mengapa Tata Kelola QA Penting dalam Proyek Software' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Why quality assurance should be treated as a delivery discipline, not an afterthought, and how structured QA governance reduces project risk.'
-                                                : 'Mengapa quality assurance harus diperlakukan sebagai disiplin delivery, bukan tambahan, dan bagaimana tata kelola QA yang terstruktur mengurangi risiko proyek.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 3: Agile Delivery -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="pendekatan-delivery">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A clean, minimalist white-walled boardroom with a large central wooden table and vibrant lime-colored chairs."
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHjqI828y2RenV7xxVuKk-UgJK6MXYJzvugZkYSpw0etLVxb622NLRTGwc_PmoQe6cHx-uzsmMVn8xS09hzuija3wEFSqrN0BnKB_7GCgAdrmholipris-ll-9R1_43rVo55P9oZ7q93cXsToQ6t1T5G7ulD9B4u3vxenKqLjgl3B55nT8JwuxyfUiAG7PafzeoNW2A8uvZMJ3ymWVCmk6apSAUjeYGcdhQ2Q3oUFooYTrHWKU5TSUKsUBgEjBeEhxf0P9IBINHGl" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Delivery Approach' : 'Pendekatan Delivery' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Agile Delivery for Digital Solutions' : 'Agile Delivery untuk Solusi Digital' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'How Agile methodology enables faster time-to-market, better quality, and stronger alignment between business goals and technical execution.'
-                                                : 'Bagaimana metodologi Agile memungkinkan time-to-market yang lebih cepat, kualitas yang lebih baik, dan keselarasan yang lebih kuat antara tujuan bisnis dan eksekusi teknis.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 4: AI Use Cases -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="teknologi-ai">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines."
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Technology' : 'Teknologi AI' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'AI Use Cases for Business Operations' : 'Use Case AI untuk Operasional Bisnis' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Practical applications of AI across finance, HR, customer service, and operations, from document intelligence to predictive analytics.'
-                                                : 'Aplikasi praktis AI di bidang keuangan, SDM, layanan pelanggan, dan operasional, dari document intelligence hingga analitik prediktif.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 5: Choosing Partner -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="kemitraan">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Partnership' : 'Kemitraan' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Choosing the Right Technology Partner' : 'Memilih Mitra Teknologi yang Tepat' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'A practical guide for organisations evaluating technology partners, covering capability assessment, cultural fit, and governance standards.'
-                                                : 'Panduan praktis bagi organisasi yang mengevaluasi mitra teknologi, mencakup penilaian kapabilitas, kesesuaian budaya, dan standar tata kelola.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 6: Mahya Platform -->
-                            <a href="https://salmon-octopus-221724.hostingersite.com/login" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://berkemah.com/assets/ok.png" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Optimize HR Operations with Mahya Platform' : 'Mengoptimalkan Operasional HR dengan Mahya Platform' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'How digitizing attendance, payroll, and leave management can reduce the burden on HR admin and improve the employee experience through self-service.'
-                                                : 'Bagaimana digitalisasi absensi, payroll, dan manajemen cuti dapat mengurangi beban admin HR dan meningkatkan pengalaman karyawan melalui swalayan.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 7: HSE & Operations Platform -->
-                            <a href="https://share.google/1GabxEEzxl7HExZBK" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://digiprimatera.co.id/uploads/posts/8e260c71175e9b3030ada7ba5d68ee24.webp" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'HSE & Operations Platform' : 'Platform HSE & Operasi' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Transition steps from paper-based HSE reporting to a digital platform for better compliance visibility and faster incident response.'
-                                                : 'Langkah-langkah transisi dari pelaporan HSE berbasis kertas ke platform digital untuk visibilitas kepatuhan yang lebih baik dan respon insiden yang lebih cepat.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 8: WargaKas -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv5Wn9wdtn9RXxZWVAsTrjA6lk3Q37jGuDa8CtQRVAXw&s=10" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Digital Solutions for Housing Cash Management' : 'Solusi Digital untuk Manajemen Kas Perumahan' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Implementation of a digital platform to manage resident contributions, payment tracking, and transparent financial reports for complex administrators.'
-                                                : 'Implementasi platform digital untuk mengelola iuran warga, pelacakan pembayaran, dan laporan keuangan yang transparan bagi pengurus komplek.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 9: Bisa ERP Platform -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwk8NxSCT-9kmE64mKV5PDRHCPxkWOMi9NZil3r19fE_WzhZ5stU7wvUY&s=10" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Integrating Business Workflow with ERP is Possible' : 'Mengintegrasikan Workflow Bisnis dengan ERP BISA' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Building a centralized system for approval automation, asset management, and real-time reporting to accelerate corporate decision-making.'
-                                                : 'Membangun sistem terpusat untuk otomasi persetujuan, manajemen aset, dan laporan real-time guna mempercepat pengambilan keputusan perusahaan.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 10: LMS Berkemah -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="transformasi-digital">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOnAmoiBbKUg2-hwA_Wp_2h0hr1MbH-ofdWQFXOT8HHg&s=10" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Building a Scalable Digital Learning Ecosystem' : 'Membangun Ekosistem Pembelajaran Digital yang Skalabel' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'How LMS platforms combine interactive courses, progress tracking, and certification to improve accessibility and the user learning experience.'
-                                                : 'Bagaimana platform LMS menggabungkan kursus interaktif, tracking progres, dan sertifikasi untuk meningkatkan aksesibilitas serta pengalaman belajar pengguna.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 11: AI Hiring & Recruitment -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="teknologi-ai">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://img.magnific.com/vektor-gratis/latar-belakang-microchip-teknologi-ai-vektor-konsep-transformasi-digital_53876-112222.jpg?semt=ais_hybrid&w=740&q=80" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Technology' : 'Teknologi AI' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'Accelerating Recruitment with AI Automation' : 'Mempercepat Rekrutmen dengan Otomasi AI' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Using AI technology for CV parsing and candidate scoring, it helps recruitment teams work up to 80% faster with consistent evaluation.'
-                                                : 'Menggunakan teknologi AI untuk parsing CV dan scoring kandidat, membantu tim rekrutmen bekerja hingga 80% lebih cepat dengan evaluasi yang konsisten.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <!-- Topic 12: Digital Coaching AI -->
-                            <a href="https://brown-tarsier-106199.hostingersite.com/" target="_blank"
-                                rel="noopener noreferrer" class="block" data-category="teknologi-ai">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIOE9f5Wn8htzv2Z9FCPoecM7KluFEJf_jx07CYlfWQw&s=10" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'AI Technology' : 'Teknologi AI' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'AI Based Personal Training for Your Team' : 'Pelatihan Pribadi Berbasis AI untuk Tim Anda' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'Using AI technology for CV parsing and candidate scoring, it helps recruitment teams work up to 80% faster with consistent evaluation.'
-                                                : 'Menggunakan teknologi AI untuk parsing CV dan scoring kandidat, membantu tim rekrutmen bekerja hingga 80% lebih cepat dengan evaluasi yang konsisten.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            {{-- Topic 13: D365 Finance --}}
-                            <a href="{{ route('insights.detail' . (app()->getLocale() === 'en' ? '.en' : ''), 'd365-finance-automating-bank-reconciliation') }}"
-                                class="block" data-category="teknologi-ai">
-                                <div
-                                    class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group cursor-pointer flex flex-col h-full">
-                                    <div class="aspect-[2/1] overflow-hidden">
-                                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            data-alt="A professional, modern corporate leadership team collaborating in a bright, glass-walled skyscraper office."
-                                            src="https://romulus.digital/wp-content/uploads/al_opt_content/IMAGE/romulus.digital/wp-content/uploads/2025/06/robotic-process-automation-in-finance-3-real-world-use-cases-nividous-1024x446-1.jpg.bv_resized_desktop.jpg.bv.webp?bv_host=romulus.digital" />
-                                    </div>
-                                    <div class="p-unit-md flex flex-col flex-1 gap-unit-sm">
-                                        <span
-                                            class="text-primary font-label-sm font-[600] text-[15px] uppercase">{{ app()->getLocale() === 'en' ? 'D365 Finance' : 'Keuangan D365' }}</span>
-                                        <h3
-                                            class="font-headline-h3 text-headline-h3 group-hover:text-primary transition-colors">
-                                            {{ app()->getLocale() === 'en' ? 'D365 Finance: Automating Bank Reconciliation for Modern Finance' : 'D365 Finance: Mengotomatiskan Rekonsiliasi Bank untuk Keuangan Modern' }}
-                                        </h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                                            {{ app()->getLocale() === 'en'
-                                                ? 'In today’s dynamic financial landscape, the integration of bank reconciliation, automation, and AI-driven tools presents a significant opportunity for finance teams to enhance their operations. Tasks that previously demanded extensive'
-                                                : 'Dalam lanskap keuangan yang dinamis saat ini, integrasi rekonsiliasi bank, otomatisasi, dan alat berbasis AI menghadirkan peluang signifikan bagi tim keuangan untuk meningkatkan operasional mereka. Tugas-tugas yang sebelumnya membutuhkan banyak waktu kini dapat dilakukan dengan lebih efisien.' }}
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        {{-- Pagination --}}
-                        <div class="flex items-center justify-center gap-4 mt-unit-lg" id="pagination">
-                            <span id="prev-page"
-                                class="font-body-md text-body-md text-secondary cursor-pointer hover:underline disabled:text-on-surface-variant disabled:cursor-not-allowed select-none">{{ app()->getLocale() === 'en' ? 'Previous' : 'Sebelumnya' }}</span>
-                            <span id="page-numbers" class="flex items-center gap-2"></span>
-                            <span id="next-page"
-                                class="font-body-md text-body-md text-secondary cursor-pointer hover:underline disabled:text-on-surface-variant disabled:cursor-not-allowed select-none">{{ app()->getLocale() === 'en' ? 'Next' : 'Selanjutnya' }}</span>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="all">
+                                {{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}
+                            </button>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="event">
+                                {{ app()->getLocale() === 'en' ? 'Event' : 'Acara' }}
+                            </button>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="administration">
+                                {{ app()->getLocale() === 'en' ? 'Administration' : 'Administrasi' }}
+                            </button>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="economy">
+                                {{ app()->getLocale() === 'en' ? 'Economy' : 'Ekonomi' }}
+                            </button>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="project">
+                                {{ app()->getLocale() === 'en' ? 'Project' : 'Proyek' }}
+                            </button>
+                            <button
+                                class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm"
+                                data-filter="internship">
+                                {{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}
+                            </button>
                         </div>
                     </div>
-                    <div class="lg:col-span-3">
+                </div>
 
-                        {{-- Category Card --}}
-                        <div class="border border-outline-variant rounded-[20px] p-unit-md">
-                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
-                                {{ app()->getLocale() === 'en' ? 'Categories' : 'Kategori' }}
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Topic 0a: EventGate (Konser.com) -->
+                    <div data-category="event"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="EventGate digital ticketing and event management platform asset preview."
+                                src="{{ asset('assets/eventgate-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Event Technology' : 'Teknologi Event' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'EventGate: One Platform for Every Event Need' : 'EventGate: Semua Kebutuhan Acara dalam Satu Platform' }}
                             </h3>
-                            <ul class="space-y-unit-sm">
-                                <li data-filter="all"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter font-bold">
-                                    {{ app()->getLocale() === 'en' ? 'All' : 'Semua' }}</li>
-                                <li data-filter="transformasi-digital"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter">
-                                    {{ app()->getLocale() === 'en' ? 'Digital Transformation' : 'Transformasi Digital' }}
-                                </li>
-                                <li data-filter="tata-kelola-qa"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter">
-                                    {{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</li>
-                                <li data-filter="teknologi-ai"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter">
-                                    {{ app()->getLocale() === 'en' ? 'AI Technology' : 'Teknologi AI' }}</li>
-                                <li data-filter="pendekatan-delivery"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter">
-                                    {{ app()->getLocale() === 'en' ? 'Delivery Approach' : 'Pendekatan Delivery' }}
-                                </li>
-                                <li data-filter="kemitraan"
-                                    class="font-body-md text-body-md text-primary cursor-pointer hover:underline category-filter">
-                                    {{ app()->getLocale() === 'en' ? 'Partnership' : 'Kemitraan' }}
-                                </li>
-                            </ul>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Platform by Konser.com centralising event discovery, digital ticketing, and QR check-in.'
+                                    : 'Platform dari Konser.com untuk pencarian event, tiket digital, dan check-in QR terpusat.' }}
+                            </p>
                         </div>
                     </div>
+                    <!-- Topic 0b: WilayahFlow -->
+                    <div data-category="administration"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="WilayahFlow administration and reporting platform asset preview."
+                                src="{{ asset('assets/wilayahflow-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Regional Administration' : 'Administrasi Wilayah' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'WilayahFlow: Tidying Up RT/RW Reporting' : 'WilayahFlow: Merapikan Pelaporan RT/RW' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Reporting and administration assistant for RT/RW with automatic recaps and digital archiving.'
+                                    : 'Asisten pelaporan dan administrasi RT/RW dengan rekap otomatis dan arsip digital.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Topic 0c: DesaHub -->
+                    <div data-category="economy"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="DesaHub marketplace and village economy digital system platform asset preview."
+                                src="{{ asset('assets/desahub-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Village Economy' : 'Ekonomi Desa' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'DesaHub: Connecting the Village Economy' : 'DesaHub: Menghubungkan Ekonomi Desa' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Integrated marketplace platform connecting local products, UMKM, and BUMDes.'
+                                    : 'Platform marketplace terintegrasi yang menghubungkan produk lokal, UMKM, dan BUMDes.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Al Azhar Syifa Budi Parahyangan -->
+                    <div data-category="project"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick off Al Azhar Syifa Budi Parahyangan digital school portal preparation project documentation."
+                                src="{{ asset('assets/al-azhar.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'First Project' : 'Project Pertama' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Al Azhar Syifa Budi Parahyangan' : 'Kick Off Al Azhar Syifa Budi Parahyangan' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'The first digital solution project successfully developed and executed by Nakala Digital.'
+                                    : 'Project solusi digital pertama yang sukses dikembangkan dan dikerjakan di Nakala Digital.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Universitas Widyatama -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Universitas Widyatama collaborative project launch preview."
+                                src="{{ asset('assets/widyatama-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Universitas Widyatama' : 'Kick Off Universitas Widyatama' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Universitas Widyatama.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Universitas Widyatama.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Universitas Komputer (Unikom) -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Universitas Komputer digital transformation initiation asset preview."
+                                src="{{ asset('assets/unikom.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Universitas Komputer' : 'Kick Off Universitas Komputer' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Universitas Komputer.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Universitas Komputer.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Kick Off Polban -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Politeknik Negeri Bandung project launch asset."
+                                src="{{ asset('assets/polban.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Politeknik Negeri Bandung' : 'Kick Off Politeknik Negeri Bandung' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Politeknik Negeri Bandung.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Politeknik Negeri Bandung.' }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination UI -->
+                <div class="mt-12 flex items-center justify-center gap-4">
+                    <button id="prev-page"
+                        class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                    </button>
+                    <div id="page-numbers" class="flex gap-3"></div>
+                    <button id="next-page"
+                        class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -644,17 +535,26 @@
     @include('partials.footer')
     @include('partials.lenis-scroll')
     <script>
-        const perPage = 12;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+
+        const perPage = 6;
         const cards = document.querySelectorAll('[data-category]');
+        let currentFilter = 'all';
 
         // Pagination & filter
         function filterAndPaginate() {
-            const active = document.querySelector('.category-filter.font-bold');
-            const filter = active ? active.dataset.filter : 'all';
-
             const filtered = [];
             cards.forEach(c => {
-                if (filter === 'all' || c.dataset.category === filter) {
+                if (currentFilter === 'all' || c.dataset.category === currentFilter) {
                     filtered.push(c);
                 }
             });
@@ -689,11 +589,15 @@
             }
         }
 
-        document.querySelectorAll('.category-filter').forEach(item => {
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.category-filter').forEach(el => el.classList.remove(
-                    'font-bold'));
-                this.classList.add('font-bold');
+        const categoryOptions = document.querySelectorAll('.category-option');
+        categoryOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                currentFilter = this.dataset.filter;
+                document.getElementById('selected-category-label').innerText = this.innerText;
+                const dropdownContainer = this.closest('[data-dropdown]');
+                if (dropdownContainer && typeof closeDropdown === 'function') {
+                    closeDropdown(dropdownContainer);
+                }
                 window.currentPage = 1;
                 filterAndPaginate();
             });
@@ -707,9 +611,8 @@
         });
 
         document.getElementById('next-page').addEventListener('click', function() {
-            const active = document.querySelector('.category-filter.font-bold');
-            const filter = active ? active.dataset.filter : 'all';
-            const count = [...cards].filter(c => filter === 'all' || c.dataset.category === filter).length;
+            const count = [...cards].filter(c => currentFilter === 'all' || c.dataset.category === currentFilter)
+                .length;
             if (window.currentPage < Math.ceil(count / perPage)) {
                 window.currentPage++;
                 filterAndPaginate();

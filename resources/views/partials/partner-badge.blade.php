@@ -1,15 +1,15 @@
 <!-- Partner Badge Section -->
-<section class="bg-[#031A44] py-unit-lg border-y border-white/10 relative overflow-hidden">
+<section class="bg-[#031A44] py-unit-md sm:py-unit-lg border-y border-white/10 relative overflow-hidden">
     <!-- Decorative gradient -->
     <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-30"></div>
 
     <div
-        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-10 relative z-10">
 
         <!-- Nakala Logo -->
         <div class="flex items-center justify-center order-1">
             <div class="bg-white px-4 py-3 rounded-lg ring-1 ring-[#12AED0]/30 shadow-lg">
-                <img alt="Nakala Digital" class="h-10 md:h-12 w-auto object-contain"
+                <img alt="Nakala Digital" class="h-8 sm:h-10 md:h-12 w-auto object-contain"
                     src="{{ asset('assets/logo-nakala.png') }}" />
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div
                 class="border border-white/20 rounded-lg px-4 py-3 ring-1 bg-white/5 transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/30">
                 <img alt="Romulus Digital — Strategic Partner"
-                    class="h-10 md:h-12 object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    class="h-8 sm:h-10 md:h-12 object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                     style="filter: brightness(0) invert(1);" src="{{ asset('assets/romulus-hitam.png') }}" />
             </div>
         </div>

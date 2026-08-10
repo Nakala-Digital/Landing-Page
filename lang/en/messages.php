@@ -58,4 +58,9 @@ return [
     'final_cta_title' => 'Ready to start your digital transformation journey?',
     'final_cta_desc' => 'Schedule a discovery session with our team and explore how we can help your organisation grow.',
     'final_cta_btn' => 'Schedule a Free Consultation',
+
+    // CTA Transform
+    'cta_transform_title' => 'Ready to Start Your Digital Transformation?',
+    'cta_transform_desc' => 'Consult your technology needs with our expert team and start your digital transformation journey today.',
+    'cta_transform_btn' => 'Start Free Consultation',
 ];

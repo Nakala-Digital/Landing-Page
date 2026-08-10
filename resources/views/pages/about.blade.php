@@ -199,7 +199,7 @@
                     </div>
                     <h1
                         class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-surface tracking-tight">
-                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions.' : 'Mitra lokal untuk AI, software, dan solusi digital.' }}
+                        {{ app()->getLocale() === 'en' ? 'Local partner for AI, software, and digital solutions' : 'Mitra AI dan Teknologi untuk Bisnis Anda' }}
                     </h1>
                     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
                         {{ app()->getLocale() === 'en'
@@ -209,28 +209,23 @@
                     <div class="pt-unit-md">
                         <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
                             class="inline-block bg-primary text-on-primary font-button text-button px-unit-lg py-unit-md rounded-[20px] shadow-lg hover:scale-105 transition-transform">
-                            {{ app()->getLocale() === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                            {{ app()->getLocale() === 'en' ? 'Start Discovery Session' : 'Mulai Sesi Discovery' }}
                         </a>
                     </div>
                 </div>
-
-                {{-- Card Image --}}
-                <div class="relative mt-unit-lg md:mt-0" style="transform: translateX(24px)">
-                    <div class="absolute -inset-4 bg-primary/10 rounded-[20px] blur-3xl opacity-0 group-hover:opacity-60 transition-all duration-500 z-0"></div>
-                    <div
-                        class="group relative overflow-hidden rounded-[20px] shadow-2xl border-4 border-white/10 transition-all duration-500 hover:shadow-[0_0_40px_rgba(18,174,208,0.3)] hover:border-primary z-10">
-                        <img alt="Software Development Workflow"
-                            class="relative w-full h-[400px] object-cover rounded-[20px] transition-all duration-700 ease-out group-hover:scale-105"
-                            data-alt="A group of professional software engineers"
-                            src="https://lh3.googleusercontent.com/pw/AP1GczOxIU5Ny7yPiB4k3Q5rtl2FfIR9h3IoNNdH-HFgnnVh-mOW0OL_ktNN24ClL9YkUDRfH3WDJ_XQ-nvSoEE4nmPoS-TBRe4832P-n3gVRVSp4zD57cYe" />
+                <div class="relative mt-unit-lg md:mt-0">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed opacity-20 rounded-full blur-3xl">
                     </div>
+                    <img alt="Software Development Workflow"
+                        class="rounded-xl shadow-2xl border border-outline-variant relative z-10 object-cover w-full h-[400px]"
+                        data-alt="A group of professional software engineers..."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjNPNzkbtHKbzPJa5qHoWQBSs9eF75JXSSBiByw6ao2Np8mzZQTMNZRPe0To39pJI5eHYiWUYDcSVk5dDBOsVqo9co64wiCoq31MqgALZqldSWB_gXG2cvmMZMciEjeRuDhe9-P2E24Schimpsl_ujy1HLub-3wz8RUkB-5VVFU3NwTWBWd83OISeJweefFAsmceqnTC8Vq7JOigcRes6ICW7NG-GgiPD2U3OytBhYDdDVLA15yQ0NWOi4xoRmbZBzm57X2iv2QoO" />
                 </div>
             </div>
         </header>
 
         <!-- Partner Badge Section -->
         @include('partials.partner-badge')
-
         <!-- Mission & Vision Bento Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="mb-unit-lg">
@@ -244,7 +239,7 @@
 
                 <!-- Vision -->
                 <div
-                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-[20px] flex flex-col justify-between border-t-4 border-primary-fixed">
+                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-xl flex flex-col justify-between border-t-4 border-primary-fixed">
                     <div class="space-y-unit-md">
                         <span class="material-symbols-outlined text-4xl"
                             style="font-variation-settings: 'FILL' 1;">visibility</span>
@@ -257,10 +252,9 @@
                                 <strong>professional, meaningful, and impactful</strong> digital solutions for
                                 organizational growth in Indonesia and the regional market.
                             @else
-                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital
-                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi
-                                di
-                                Indonesia dan pasar regional.
+                                Menjadi mitra teknologi strategis yang menghasilkan solusi digital
+                                <strong>profesional, bermakna, dan berdampak</strong> bagi pertumbuhan organisasi di
+                                Indonesia serta pasar regional.
                             @endif
                         </p>
                     </div>
@@ -272,7 +266,7 @@
                         {{ app()->getLocale() === 'en' ? 'Our Mission' : 'Misi Kami' }}
                     </h3>
                     <div
-                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
@@ -281,41 +275,39 @@
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
                                 ? 'Build meaningful digital products that solve real operational and business pain points.'
-                                : 'Membangun produk digital bermakna yang menyelesaikan pain point operasional dan bisnis yang nyata.' }}
+                                : 'Membangun produk digital bermakna yang menyelesaikan masalah operasional dan bisnis yang nyata.' }}
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
                                 ? 'Enable AI-powered automation and data-driven workflows for measurable business impact.'
-                                : 'Mengaktifkan otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
+                                : 'Mendorong otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
-                                ? 'Create long-term partnerships within clients, partners, and technology ecosystems.'
+                                ? 'Create long-term partnerships with clients, partners, and technology ecosystems.'
                                 : 'Menciptakan kemitraan jangka panjang dengan klien, partner, dan ekosistem teknologi.' }}
                         </p>
                     </div>
                     <div
-                        class="bg-surface-container-low rounded-[20px] p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
+                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md">
                         <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
                         <p class="text-on-surface-variant text-body-md">
                             {{ app()->getLocale() === 'en'
                                 ? 'Grow people, capability, and sustainable digital maturity across organizations.'
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
-                            : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh
-                            organisasi.' }}
                         </p>
                     </div>
                 </div>
@@ -333,122 +325,106 @@
                     <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
                         {{ app()->getLocale() === 'en' ? 'Why Nakala Digital?' : 'Mengapa Nakala Digital?' }}</h2>
                     <p class="text-on-surface-variant font-body-lg text-body-lg mt-unit-sm">
-                        {{ app()->getLocale() === 'en' ? 'Why Nakala: Delivering Excellence through 6 Core Pillars' : 'Mengapa Nakala: Memberikan Keunggulan melalui 6 Pilar Utama' }}
+                        {{ app()->getLocale() === 'en' ? 'Six strengths that underpin every digital solution we build' : 'Enam keunggulan yang mendukung setiap solusi digital yang kami bangun' }}
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 
                     <!-- Reason 1 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">local_shipping</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Local Delivery' : 'Pengiriman Lokal' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Local & Regional Services' : 'Layanan Lokal & Regional' }}
+                            </h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'On-the-ground support with deep understanding of the Indonesian market landscape.'
-                                : 'Dukungan langsung di lapangan dengan pemahaman mendalam tentang lanskap pasar Indonesia.' }}
+                                ? 'Based in Indonesia and supported by Romulus Digital\'s regional network, we deliver solutions that are relevant to local business needs and supported by regional-scale capabilities.'
+                                : 'Berbasis di Indonesia dan didukung jaringan regional Romulus Digital, kami menghadirkan solusi yang relevan dengan kebutuhan bisnis lokal serta didukung kapabilitas berskala regional.' }}
                         </p>
                     </div>
 
                     <!-- Reason 2 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">psychology</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'AI Mindset' : 'Pola Pikir AI' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'AI-Based Mindset' : 'Pola Pikir Berbasis AI' }}</h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Every solution we build is future-proofed with AI-readiness from the architectural level.'
-                                : 'Setiap solusi yang kami bangun terjamin masa depannya dengan kesiapan AI sejak tingkat arsitektur.' }}
+                                ? 'We integrate AI and intelligent automation into every solution to help improve operational efficiency and deliver added value to businesses.'
+                                : 'Kami mengintegrasikan AI dan otomatisasi cerdas ke dalam setiap solusi untuk membantu meningkatkan efisiensi operasional dan memberikan nilai tambah bagi bisnis.' }}
                         </p>
                     </div>
 
                     <!-- Reason 3 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">verified</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Agile/QA Focused' : 'Fokus Agile/QA' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Agile Development & QA' : 'Pengembangan Agile & QA' }}
+                            </h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Iterative development with rigorous automated testing to ensure rock-solid stability.'
-                                : 'Pengembangan iteratif dengan pengujian otomatis yang ketat untuk memastikan stabilitas yang kokoh.' }}
+                                ? 'We implement Agile methods with a structured development process, supported by thorough testing and clear documentation to ensure the quality of each release.'
+                                : 'Kami menerapkan metode Agile dengan proses pengembangan yang terstruktur, didukung pengujian menyeluruh dan dokumentasi yang jelas untuk memastikan setiap rilis berkualitas.' }}
                         </p>
                     </div>
 
                     <!-- Reason 4 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">hub</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Regional Capability' : 'Kemampuan Regional' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'User-Centered Design' : 'Desain Berpusat pada Pengguna' }}
+                            </h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Backed by Romulus Digital, giving us the scale and depth of a regional tech giant.'
-                                : 'Didukung oleh Romulus Digital, memberi kami skala dan kedalaman raksasa teknologi regional.' }}
+                                ? 'We design solutions based on user needs and business processes to create digital experiences that are easy to use, effective, and provide value to the organization.'
+                                : 'Kami merancang solusi berdasarkan kebutuhan pengguna dan proses bisnis agar menghasilkan pengalaman digital yang mudah digunakan, efektif, dan memberikan nilai bagi organisasi.' }}
                         </p>
                     </div>
-
-                    <!-- Reason 5 -->
-                    <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
-                        <div class="reason-header flex items-center gap-4 mb-unit-md">
-                            <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
-                                <span
-                                    class="material-symbols-outlined text-primary group-hover:text-on-primary-container">shield</span>
-                            </div>
-                            <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Enterprise Security' : 'Keamanan Perusahaan' }}</h4>
-                        </div>
-                        <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
-                            {{ app()->getLocale() === 'en'
-                                ? 'Adhering to international security standards (ISO/IEC 27001) for all data handling.'
-                                : 'Mematuhi standar keamanan internasional (ISO/IEC 27001) untuk semua penanganan data.' }}
-                        </p>
-                    </div>
-
                     <!-- Reason 6 -->
                     <div
-                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-[20px]">
+                        class="reason-card bg-surface-container-lowest p-unit-lg border border-outline-variant group hover:shadow-xl transition-all rounded-xl">
                         <div class="reason-header flex items-center gap-4 mb-unit-md">
                             <div
-                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-[20px] group-hover:bg-primary-container transition-colors">
+                                class="w-12 h-12 shrink-0 bg-primary-container/10 flex items-center justify-center rounded-lg group-hover:bg-primary-container transition-colors">
                                 <span
                                     class="material-symbols-outlined text-primary group-hover:text-on-primary-container">speed</span>
                             </div>
                             <h4 class="reason-title font-headline-h3 text-headline-h3 m-0">
-                                {{ app()->getLocale() === 'en' ? 'Rapid Deployment' : 'Penyebaran Cepat' }}</h4>
+                                {{ app()->getLocale() === 'en' ? 'Strategic Partner Network' : 'Jaringan Mitra Strategis' }}
+                            </h4>
                         </div>
                         <p class="reason-desc text-on-surface-variant font-body-md text-body-md leading-relaxed">
                             {{ app()->getLocale() === 'en'
-                                ? 'Purpose-built frameworks that help you go from concept to launch with measurable efficiency.'
-                                : 'Kerangka kerja yang dirancang khusus untuk membantu Anda dari konsep hingga peluncuran dengan efisiensi terukur.' }}
+                                ? 'Together with Romulus Digital\'s regional network, we bring the right expertise and resources to support each project\'s needs.'
+                                : 'Bersama jaringan regional Romulus Digital, kami menghadirkan keahlian dan sumber daya yang tepat untuk mendukung kebutuhan setiap proyek.' }}
                         </p>
                     </div>
                 </div>
@@ -459,6 +435,19 @@
     <!-- Footer -->
     @include('partials.footer')
     @include('partials.lenis-scroll')
+    <script>
+        // Simple scroll behavior for Navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('py-2', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+    </script>
 </body>
 
 </html>
