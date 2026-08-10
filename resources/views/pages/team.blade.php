@@ -153,9 +153,79 @@
         </section>
         <!-- Team Grid -->
         <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-                <div class="mb-unit-xl">
-                    <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
-                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
+            @php
+                $teamMembers = [
+                    [
+                        'name' => 'Milzam Zihni',
+                        'role_en' => 'Chief Executive Officer',
+                        'role_id' => 'Chief Executive Officer',
+                        'photo' => asset('assets/team/milzam.jpeg'),
+                        'capabilities' => [
+                            [
+                                'icon' => 'handshake',
+                                'label_en' => 'Client Engagement',
+                                'label_id' => 'Engagement Klien',
+                            ],
+                            [
+                                'icon' => 'verified',
+                                'label_en' => 'Quality Assurance',
+                                'label_id' => 'Quality Assurance',
+                            ],
+                            ['icon' => 'task_alt', 'label_en' => 'Project Delivery', 'label_id' => 'Delivery Proyek'],
+                        ],
+                    ],
+                    [
+                        'name' => 'Rinaldy Pasya',
+                        'role_en' => 'Chief Technology Officer',
+                        'role_id' => 'Chief Technology Officer',
+                        'photo' => null,
+                        'capabilities' => [
+                            [
+                                'icon' => 'architecture',
+                                'label_en' => 'Tech Architecture',
+                                'label_id' => 'Arsitektur Teknologi',
+                            ],
+                            [
+                                'icon' => 'terminal',
+                                'label_en' => 'Engineering Excellence',
+                                'label_id' => 'Keunggulan Engineering',
+                            ],
+                            [
+                                'icon' => 'speed',
+                                'label_en' => 'System Scalability',
+                                'label_id' => 'Skalabilitas Sistem',
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Raul Mahya Komaran',
+                        'role_en' => 'Chief Operating Officer',
+                        'role_id' => 'Chief Operating Officer',
+                        'photo' => asset('assets/team/raul.jpeg'),
+                        'capabilities' => [
+                            [
+                                'icon' => 'settings_suggest',
+                                'label_en' => 'Operational Strategy',
+                                'label_id' => 'Strategi Operasional',
+                            ],
+                            [
+                                'icon' => 'groups_2',
+                                'label_en' => 'Stakeholder Follow-up',
+                                'label_id' => 'Tindak Lanjut Stakeholder',
+                            ],
+                            [
+                                'icon' => 'description',
+                                'label_en' => 'Documentation & Compliance',
+                                'label_id' => 'Dokumentasi & Kepatuhan',
+                            ],
+                        ],
+                    ],
+                ];
+            @endphp
+            <div class="mb-unit-xl text-center max-w-3xl mx-auto">
+                <span
+                    class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}</span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
                     {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -164,114 +234,48 @@
                         : 'Setiap proyek dipimpin oleh Nakala Digital sebagai tim utama yang akuntabel dan berhadapan langsung dengan klien. Mitra strategis kami memperkuat keyakinan di belakang layar tanpa mengubah siapa yang memegang relasi utama.' }}
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                <!-- CEO -->
-                <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <div class="aspect-square relative overflow-hidden">
-                        <img alt="Milzam Zihni"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="{{ asset('assets/team/milzam.jpeg') }}" />
-                        <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
-                    </div>
-                    <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Executive Officer</p>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Milzam Zihni</h3>
-                        <div class="space-y-unit-sm">
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">handshake</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Client Engagement' : 'Engagement Klien' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">verified</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Quality Assurance' : 'Quality Assurance' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">task_alt</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Project Delivery' : 'Delivery Proyek' }}</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                @foreach ($teamMembers as $member)
+                    <div
+                        class="group bg-surface-container-lowest border border-primary rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <div class="aspect-square relative overflow-hidden border-b-2 border-primary">
+                            @if ($member['photo'])
+                                <img src="{{ $member['photo'] }}" alt="{{ $member['name'] }}" loading="lazy"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            @else
+                                <div
+                                    class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
+                                    <div
+                                        class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
+                                        <span class="material-symbols-outlined text-5xl">person</span>
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="p-unit-lg">
+                            <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">
+                                {{ app()->getLocale() === 'en' ? $member['role_en'] : $member['role_id'] }}
+                            </p>
+                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">
+                                {{ $member['name'] }}
+                            </h3>
+                            <div class="space-y-unit-sm">
+                                @foreach ($member['capabilities'] as $capability)
+                                    <div class="flex items-center gap-unit-sm">
+                                        <span
+                                            class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
+                                            <span
+                                                class="material-symbols-outlined text-[14px]">{{ $capability['icon'] }}</span>
+                                        </span>
+                                        <span class="text-on-surface-variant font-body-md text-body-md">
+                                            {{ app()->getLocale() === 'en' ? $capability['label_en'] : $capability['label_id'] }}
+                                        </span>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- CTO -->
-                <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <div class="aspect-square relative overflow-hidden">
-                        <div
-                            class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
-                            <div
-                                class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
-                                <span class="material-symbols-outlined text-5xl">person</span>
-                            </div>
-                        </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
-                    </div>
-                    <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Technology Officer</p>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Rinaldy Pasya</h3>
-                        <div class="space-y-unit-sm">
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">architecture</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Tech Architecture' : 'Arsitektur Teknologi' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">terminal</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Engineering Excellence' : 'Keunggulan Engineering' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">speed</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'System Scalability' : 'Skalabilitas Sistem' }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- COO -->
-                <div
-                    class="group bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <div class="aspect-square relative overflow-hidden">
-                        <img alt="Raul Mahya Komaran"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            src="{{ asset('assets/team/raul.jpeg') }}" />
-                        <div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
-                    </div>
-                    <div class="p-unit-lg">
-                        <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">Chief Operating Officer</p>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">Raul Mahya Komaran
-                        </h3>
-                        <div class="space-y-unit-sm">
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Operational Strategy' : 'Strategi Operasional' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">groups_2</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Stakeholder Follow-up' : 'Tindak Lanjut Stakeholder' }}</span>
-                            </div>
-                            <div
-                                class="flex items-center gap-unit-sm text-on-surface-variant font-body-md text-body-md">
-                                <span class="material-symbols-outlined text-primary"
-                                    style="font-variation-settings: 'FILL' 1;">description</span>
-                                <span>{{ app()->getLocale() === 'en' ? 'Documentation & Compliance' : 'Dokumentasi & Kepatuhan' }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </section>
         <!-- Scalable Team Model Section -->
@@ -292,14 +296,16 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md">
                                 <div
                                     class="flex min-h-[132px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-tertiary">
-                                    <div class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
-                                        <img alt="Nakala Digital"
-                                            class="h-[56px] w-auto max-w-full object-contain"
+                                    <div
+                                        class="flex h-[84px] w-full max-w-[220px] items-center justify-center rounded-lg bg-white px-5 ring-1 ring-white/20">
+                                        <img alt="Nakala Digital" class="h-[56px] w-auto max-w-full object-contain"
                                             src="{{ asset('assets/logo-nakala.png') }}" />
                                     </div>
                                 </div>
-                                <div class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
-                                    <div class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
+                                <div
+                                    class="flex min-h-[100px] items-center justify-center bg-surface/5 p-unit-md border-l-4 border-primary-fixed-dim">
+                                    <div
+                                        class="flex h-[60px] w-full max-w-[160px] items-center justify-center rounded-lg border border-white/35 bg-white/5 px-4">
                                         <img alt="Romulus Digital"
                                             class="h-[36px] w-auto max-w-full object-contain opacity-70"
                                             src="{{ asset('assets/romulus-putih.png') }}" />

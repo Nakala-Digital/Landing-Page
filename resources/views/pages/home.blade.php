@@ -450,7 +450,6 @@
             filter: grayscale(0%) !important;
             opacity: 1 !important;
         }
-
     </style>
 
     <style>
@@ -745,6 +744,203 @@
                 </div>
             </div>
         </section>
+        <!-- Philosophy Cards Section -->
+        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="mb-unit-lg text-center max-w-3xl mx-auto">
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">
+                    {{ app()->getLocale() === 'en' ? 'Core Values' : 'Nilai Inti' }}
+                </span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
+                    {{ app()->getLocale() === 'en' ? 'Philosophy' : 'Filosofi' }}
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-unit-sm">
+                    {{ app()->getLocale() === 'en'
+                        ? 'We believe successful digital transformation is built through professional execution, the right solutions, and sustainable impact.'
+                        : 'Kami percaya bahwa keberhasilan transformasi digital dibangun melalui eksekusi yang profesional, solusi yang tepat, dan dampak yang berkelanjutan.' }}
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Card 1: Foundation -->
+                <div
+                    class="bg-midnight-navy text-on-primary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-white mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Foundation' : 'Foundation' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-white/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+                            src="{{ asset('assets/icon-1.svg') }}" alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Professional Delivery' : 'Professional Delivery' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-white/80 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We work with a structured, transparent, and on-time process to make sure every project runs smoothly and meets expectations.'
+                            : 'Kami bekerja dengan proses yang terstruktur, transparan, dan tepat waktu untuk memastikan setiap proyek berjalan dengan baik dan sesuai harapan.' }}
+                    </p>
+                </div>
+                <!-- Card 2: Purpose -->
+                <div
+                    class="bg-electric-cyan text-on-primary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-white mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Purpose' : 'Purpose' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-white/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+                            src="{{ asset('assets/icon-2.svg') }}" alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Meaningful Solutions' : 'Meaningful Solutions' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-white/90 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We build digital solutions that fit real business needs, deliver real benefits, and help solve the challenges being faced.'
+                            : 'Kami menghadirkan solusi digital yang sesuai dengan kebutuhan bisnis, memberikan manfaat nyata, dan membantu menyelesaikan tantangan yang dihadapi.' }}
+                    </p>
+                </div>
+                <!-- Card 3: Outcome -->
+                <div
+                    class="bg-impact-lime text-on-tertiary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-midnight-navy mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Outcome' : 'Outcome' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-midnight-navy/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+                            src="{{ asset('assets/icon-3.svg') }}" alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Impactful Growth' : 'Impactful Growth' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-midnight-navy/80 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We help businesses grow through technology solutions that deliver real results, improve efficiency, and create sustainable growth.'
+                            : 'Kami membantu bisnis berkembang melalui solusi teknologi yang memberikan hasil nyata, meningkatkan efisiensi, dan menciptakan pertumbuhan yang berkelanjutan.' }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Grid Section -->
+
+        @php
+            $teamLocaleSuffix = app()->getLocale() === 'en' ? '.en' : '';
+
+            $teamMembers = [
+                [
+                    'name' => 'Milzam Zihni',
+                    'role_en' => 'Chief Executive Officer',
+                    'role_id' => 'Chief Executive Officer',
+                    'photo' => asset('assets/team/milzam.jpeg'),
+                    'capabilities' => [
+                        ['icon' => 'handshake', 'label_en' => 'Client Engagement', 'label_id' => 'Engagement Klien'],
+                        ['icon' => 'verified', 'label_en' => 'Quality Assurance', 'label_id' => 'Quality Assurance'],
+                        ['icon' => 'task_alt', 'label_en' => 'Project Delivery', 'label_id' => 'Delivery Proyek'],
+                    ],
+                ],
+                [
+                    'name' => 'Raul Mahya Komaran',
+                    'role_en' => 'Chief Operating Officer',
+                    'role_id' => 'Chief Operating Officer',
+                    'photo' => asset('assets/team/raul.jpeg'),
+                    'capabilities' => [
+                        [
+                            'icon' => 'settings_suggest',
+                            'label_en' => 'Operational Strategy',
+                            'label_id' => 'Strategi Operasional',
+                        ],
+                        [
+                            'icon' => 'groups_2',
+                            'label_en' => 'Stakeholder Follow-up',
+                            'label_id' => 'Tindak Lanjut Stakeholder',
+                        ],
+                        [
+                            'icon' => 'description',
+                            'label_en' => 'Documentation & Compliance',
+                            'label_id' => 'Dokumentasi & Kepatuhan',
+                        ],
+                    ],
+                ],
+            ];
+        @endphp
+        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+            aria-labelledby="team-grid-heading">
+            <div class="mb-unit-xl text-center max-w-3xl mx-auto">
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">
+                    {{ app()->getLocale() === 'en' ? 'Capability Reference' : 'Referensi Kapabilitas' }}
+                </span>
+                <h2 id="team-grid-heading"
+                    class="font-headline-h2 text-headline-h2 text-on-surface mt-unit-sm mb-unit-md">
+                    {{ app()->getLocale() === 'en' ? 'Core Team Nakala' : 'Tim Inti Nakala' }}
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    {{ app()->getLocale() === 'en'
+                        ? 'Every project is led by Nakala Digital as the accountable, client-facing team. Our strategic partner strengthens confidence in the background without changing who owns the relationship.'
+                        : 'Setiap proyek dipimpin oleh Nakala Digital sebagai tim utama yang akuntabel dan berhadapan langsung dengan klien. Mitra strategis kami memperkuat keyakinan di belakang layar tanpa mengubah siapa yang memegang relasi utama.' }}
+                </p>
+            </div>
+
+            <!-- Responsive grid: 1 col mobile, 2 col tablet & desktop, centered -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter max-w-3xl mx-auto">
+                @foreach ($teamMembers as $member)
+                    <div
+                        class="group bg-surface-container-lowest border border-primary rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <div class="aspect-square relative overflow-hidden border-b-2 border-primary">
+                            @if ($member['photo'])
+                                <img src="{{ $member['photo'] }}" alt="{{ $member['name'] }}" loading="lazy"
+                                    class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                            @else
+                                <div
+                                    class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
+                                    <div
+                                        class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
+                                        <span class="material-symbols-outlined text-5xl">person</span>
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="p-unit-lg">
+                            <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">
+                                {{ app()->getLocale() === 'en' ? $member['role_en'] : $member['role_id'] }}
+                            </p>
+                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">
+                                {{ $member['name'] }}
+                            </h3>
+                            <div class="space-y-unit-sm">
+                                @foreach ($member['capabilities'] as $capability)
+                                    <div class="flex items-center gap-unit-sm">
+                                        <span
+                                            class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
+                                            <span
+                                                class="material-symbols-outlined text-[14px]">{{ $capability['icon'] }}</span>
+                                        </span>
+                                        <span class="text-on-surface-variant font-body-md text-body-md">
+                                            {{ app()->getLocale() === 'en' ? $capability['label_en'] : $capability['label_id'] }}
+                                        </span>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="mt-unit-xl text-center">
+                <a href="{{ route('team' . $teamLocaleSuffix) }}"
+                    class="inline-flex items-center gap-2 border border-primary text-primary font-button px-unit-lg py-unit-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    {{ app()->getLocale() === 'en' ? 'Meet the Full Team' : 'Lihat Tim Lengkap' }}
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- FAQ Section -->
         <section class="py-unit-xl bg-surface">
             <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-unit-lg">
@@ -998,7 +1194,7 @@
                 startAutoPlay();
             });
         })();
-    
+
         // Hero Section — animated / interactive IT network background.
         // Lightweight canvas particle-network (represents connectivity, data & AI)
         // that stays behind the headline/CTA and never blocks pointer events.
@@ -1293,19 +1489,19 @@
 
         // carousel
         document.addEventListener('DOMContentLoaded', () => {
-        const swiper = new Swiper('.heroSwiper', {
-            loop: true,
-            className: 'swiper-container',
-            slidesPerView: 'auto',       // Membuat lebar slide mengikuti class CSS (!w-[75%])
-            centeredSlides: true,        // Slide aktif otomatis berada di tengah frame
-            spaceBetween: 20,            // Jarak antar slide gambar
-            grabCursor: true,            // Kursor tangan saat di-drag
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            const swiper = new Swiper('.heroSwiper', {
+                loop: true,
+                className: 'swiper-container',
+                slidesPerView: 'auto', // Membuat lebar slide mengikuti class CSS (!w-[75%])
+                centeredSlides: true, // Slide aktif otomatis berada di tengah frame
+                spaceBetween: 20, // Jarak antar slide gambar
+                grabCursor: true, // Kursor tangan saat di-drag
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+            });
         });
-    });
     </script>
 </body>
 

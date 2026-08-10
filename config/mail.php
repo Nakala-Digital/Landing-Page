@@ -115,4 +115,16 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Form Recipient
+    |--------------------------------------------------------------------------
+    |
+    | The inbox that receives submissions from the public "Hubungi Kami" /
+    | Contact Us form (resources/views/pages/contact.blade.php).
+    |
+    */
+ 
+    'contact_recipient' => env('MAIL_CONTACT_RECIPIENT', 'contact@nakala.digital'),
+
 ];
