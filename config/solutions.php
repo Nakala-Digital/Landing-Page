@@ -1,5 +1,43 @@
 <?php
 
+/*
+|--------------------------------------------------------------------------
+| Solution cases
+|--------------------------------------------------------------------------
+| Each 'cases' entry is one solution-detail instance rendered by
+| pages/solution-detail.blade.php. Text fields are bilingual pairs
+| ['en' => ..., 'id' => ...].
+|
+| 'variant' (optional, default 'desk'): set to 'pilar' for the four
+|   education ecosystem-pillar records (attract-admit, learn-engage,
+|   operate-pay, manage-grow), which render the detail-solusi Figma variant
+|   ("Solusi Detail & Fitur" headline, "Dampak Nyata" stat block, and
+|   "Jadwalkan Sesi Discovery" CTA). Omitted/'desk' records render the
+|   desk-solusi Figma variant (original headline, "Dampak Bisnis" list, and
+|   "Mulai Konsultasi Gratis" CTA).
+| 'impact_stats' (optional): used only by 'pilar' records. Bilingual block
+|   with 'stats' => [['value' => '85%', 'label' => ...], ...] and an optional
+|   'callout' quote. When omitted, the plain 'impact' list renders instead.
+|   Stat values are transcribed verbatim from the Figma exports.
+|   NOTE: 'impact' is fallback-only content — omit it from records that
+|   carry 'impact_stats' in both locales (it never renders for them).
+| 'hero_image' (optional, default 'assets/detail-solusi-hero.webp'): per-record
+|   hero band art for the pilar variant ('pilar' records all share the default
+|   PORTOFOLIO band until per-pillar art is confirmed).
+| 'hero_highlight' (optional): bilingual array of phrases within 'title' that
+|   the hero renders in Electric Cyan per the detail-solusi Figma exports
+|   (e.g. attract-admit: 'Tingkatkan Konversi Pendaftar').
+| 'feature_icons' (optional): Material Symbols names, one per 'features'
+|   entry, transcribed from the per-feature icon set in the detail-solusi
+|   Figma exports. Falls back to 'check_circle' when omitted.
+| 'features_split' (optional): set true to render the feature rows as a
+|   2-column split grid (learn-engage per its Figma export); the last row
+|   spans both columns and centers its content.
+| 'accent_colors' (optional): Tailwind border-color token names without the
+|   'border-' prefix, one per feature row (the cycle repeats for longer
+|   lists). Defaults to ['electric-cyan', 'impact-lime', 'midnight-navy'].
+*/
+
 return [
     'cases' => [
         [
@@ -324,6 +362,264 @@ return [
                 'id' => ['Pekerjaan manual repetitif berkurang lintas tim', 'Decision support operasional lebih baik', 'Peluang otomasi dipetakan lewat AI readiness assessment', 'Kapabilitas AI skalabel untuk workflow enterprise'],
             ],
             'capability' => 'GenAI Applications, Intelligent Automation, Data & Analytics, AI SaaS',
+        ],
+        [
+            'id' => 'attract-admit',
+            'icon' => 'how_to_reg',
+            'featured' => false,
+            'span' => 'md:col-span-4',
+            'variant' => 'pilar',
+            'hero_image' => 'assets/detail-solusi-hero.webp',
+            'variant' => 'pilar',
+            'title' => [
+                'en' => 'Attract & Admit: Boost Applicant Conversion from the First Contact',
+                'id' => 'Attract & Admit: Tingkatkan Konversi Pendaftar Sejak Kontak Pertama',
+            ],
+            'hero_highlight' => [
+                'en' => ['Boost Applicant Conversion'],
+                'id' => ['Tingkatkan Konversi Pendaftar'],
+            ],
+            'headline' => [
+                'en' => 'Build an easy, transparent admission experience from first outreach to official acceptance,',
+                'id' => 'Bangun pengalaman pendaftaran yang mudah dan transparan dari promosi awal hingga siswa/mahasiswa resmi diterima,',
+            ],
+            'category' => [
+                'en' => 'Attract & Admit Solution',
+                'id' => 'Solusi Attract & Admit',
+            ],
+            'summary' => [
+                'en' => 'supported by an AI Assistant that guides prospective applicants at every step.',
+                'id' => 'didukung AI Assistant yang memandu calon pendaftar di setiap langkah.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Admissions Teams (New Student Admission)', 'PPDB Committee (New Student Enrollment)', 'School & Campus Marketing'],
+                'id' => ['Tim Admisi/PMB (Penerimaan Mahasiswa Baru)', 'Panitia PPDB (Penerimaan Peserta Didik Baru)', 'Marketing Sekolah & Kampus'],
+            ],
+            'business_value' => [
+                'en' => 'Increase registration conversion by up to 40% • Cut admin workload by 60% • Respond faster to prospective students',
+                'id' => 'Meningkatkan Konversi Pendaftaran hingga 40% • Mengurangi Kerja Admin sebesar 60% • Mempercepat Respon ke Calon Siswa/Mahasiswa',
+            ],
+            'challenge' => [
+                'en' => 'Manual repetitive tasks drain productivity across teams. Decision-making is slow because data is scattered, and teams lack the tools to automate and analyze efficiently.',
+                'id' => 'Tugas repetitif manual menguras produktivitas tim. Pengambilan keputusan lambat karena data tersebar, dan tim kekurangan alat untuk otomatisasi dan analisis efisien.',
+            ],
+            'solution' => [
+                'en' => 'We design and deploy GenAI workflows, document intelligence, data pipelines, analytics dashboards, and B2B AI SaaS platforms tailored to your operations.',
+                'id' => 'Kami merancang dan membangun workflow GenAI, document intelligence, data pipeline, dashboard analitik, dan platform AI SaaS B2B yang disesuaikan dengan operasional Anda.',
+            ],
+            'features' => [
+                'en' => ['Admission Website & Landing Page', 'PPDB / PMB Online Dashboard', 'Admission CRM & Lead Management', 'Payment Onboarding Integration', 'AI Admission Assistant 24/7'],
+                'id' => ['Website & Landing Page Pendaftaran', 'PPDB / PMB Online Dashboard', 'Admission CRM & Lead Management', 'Payment Onboarding integrasi', 'AI Admission Assistant 24/7'],
+            ],
+            'feature_icons' => ['web', 'event_note', 'contact_phone', 'payments', 'smart_toy'],
+            'impact_stats' => [
+                'en' => [
+                    'stats' => [
+                        ['value' => '85%', 'label' => 'Higher prospective-student satisfaction'],
+                        ['value' => '2.5×', 'label' => 'Faster document verification'],
+                    ],
+                    'callout' => 'Turn admission from a tedious process into a strategic recruitment asset.',
+                ],
+                'id' => [
+                    'stats' => [
+                        ['value' => '85%', 'label' => 'Meningkatkan Kepuasan Calon Siswa'],
+                        ['value' => '2.5×', 'label' => 'Kecepatan Verifikasi Dokumen'],
+                    ],
+                    'callout' => 'Mengubah pendaftaran dari proses yang melelahkan menjadi aset strategis rekrutmen.',
+                ],
+            ],
+            'capability' => 'Web Development, PPDB/PMB Platforms, Admission CRM, AI Technology & GenAI',
+        ],
+        [
+            'id' => 'learn-engage',
+            'icon' => 'menu_book',
+            'featured' => false,
+            'span' => 'md:col-span-4',
+            'variant' => 'pilar',
+            'hero_image' => 'assets/detail-solusi-hero.webp',
+            'variant' => 'pilar',
+            'title' => [
+                'en' => 'Learn & Engage: Deliver Connected Learning Experiences',
+                'id' => 'Learn & Engage: Hadirkan Pengalaman Belajar yang Terhubung',
+            ],
+            'hero_highlight' => [
+                'en' => ['Deliver Connected Learning'],
+                'id' => ['Hadirkan Pengalaman Belajar'],
+            ],
+            'headline' => [
+                'en' => 'Bring learning, communication, and student engagement into one digital ecosystem',
+                'id' => 'Satukan pembelajaran, komunikasi, dan keterlibatan siswa/mahasiswa dalam satu ekosistem yang digital',
+            ],
+            'category' => [
+                'en' => 'Learn & Engage Solution',
+                'id' => 'Solusi Learn & Engage',
+            ],
+            'summary' => [
+                'en' => 'supported by an AI Assistant that helps with everyday learning.',
+                'id' => 'didukung AI Assistant yang membantu proses belajar sehari-hari.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Teachers & Lecturers', 'Students', 'Parents', 'Academic Teams'],
+                'id' => ['Guru & Dosen', 'Siswa & Mahasiswa', 'Orang Tua', 'Tim Akademik'],
+            ],
+            'business_value' => [
+                'en' => 'Create consistent hybrid learning experiences, raise student engagement through collaborative features, and build more transparent communication between the school and parents.',
+                'id' => 'Menciptakan pengalaman belajar hybrid yang konsisten, meningkatkan angka keterlibatan siswa melalui fitur kolaboratif, serta membangun komunikasi yang lebih transparan antara pihak sekolah dan orang tua.',
+            ],
+            'challenge' => [
+                'en' => 'Learning materials, announcements, and parent communication are scattered across separate channels, making information easy to miss and hard to track for all stakeholders.',
+                'id' => 'Materi pembelajaran, pengumuman, dan komunikasi dengan orang tua tersebar di berbagai kanal terpisah, membuat informasi mudah terlewat dan sulit dilacak oleh seluruh pemangku kepentingan.',
+            ],
+            'solution' => [
+                'en' => 'An LMS integrated with student and parent portals, collaboration features, digital attendance tracking, and an AI Assistant that summarizes materials and answers academic questions.',
+                'id' => 'LMS terintegrasi dengan portal siswa/mahasiswa dan orang tua, fitur kolaborasi, tracking kehadiran digital, serta AI Assistant yang membantu merangkum materi dan menjawab pertanyaan akademik.',
+            ],
+            'features' => [
+                'en' => ['Modern LMS', 'Student Portal', 'Parent Portal', 'Communication', 'AI Learning Assistant'],
+                'id' => ['LMS Modern', 'Student Portal', 'Parent Portal', 'Komunikasi', 'AI Learning Assistant'],
+            ],
+            'feature_icons' => ['school', 'manage_search', 'family_restroom', 'chat_bubble_outline', 'smart_toy'],
+            'features_split' => true,
+            'accent_colors' => ['electric-cyan', 'electric-cyan', 'impact-lime', 'impact-lime', 'midnight-navy'],
+            'impact' => [
+                'en' => ['Modern hybrid learning experiences', 'More intuitive student collaboration', 'Accurate automated attendance tracking'],
+                'id' => ['Pengalaman belajar Hybrid modern', 'Kolaborasi siswa lebih intuitif', 'Tracking kehadiran otomatis akurat'],
+            ],
+            'capability' => 'LMS & E-Learning, Portal Development, Assessment Systems, AI Technology & GenAI',
+        ],
+        [
+            'id' => 'operate-pay',
+            'icon' => 'payments',
+            'featured' => false,
+            'span' => 'md:col-span-4',
+            'variant' => 'pilar',
+            'hero_image' => 'assets/detail-solusi-hero.webp',
+            'variant' => 'pilar',
+            'title' => [
+                'en' => 'Operate & Pay: Simplify Institutional Operations and Finance',
+                'id' => 'Operate & Pay: Sederhanakan Operasional dan Keuangan Institusi',
+            ],
+            'hero_highlight' => [
+                'en' => ['Operations', 'Finance'],
+                'id' => ['Operasional', 'Keuangan'],
+            ],
+            'headline' => [
+                'en' => 'Manage billing, payments, HR, and school inventory from one dashboard',
+                'id' => 'Kelola tagihan, pembayaran, SDM, hingga inventory sekolah dalam satu dashboard',
+            ],
+            'category' => [
+                'en' => 'Operate & Pay Solution',
+                'id' => 'Solusi Operate & Pay',
+            ],
+            'summary' => [
+                'en' => 'supported by an AI Assistant that helps with everyday administrative tasks.',
+                'id' => 'didukung AI Assistant yang membantu proses administrasi sehari-hari.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Finance & Tuition Billing Teams', 'HR & School Operations Teams', 'Head of Administration (KTU)'],
+                'id' => ['Tim Keuangan & Penagihan SPP', 'Tim HR & Operasional Sekolah', 'Kepala Tata Usaha (KTU)'],
+            ],
+            'business_value' => [
+                'en' => 'Automated billing & reconciliation • Real-time payment report transparency • Efficient daily HR and operations processes',
+                'id' => 'Otomatisasi Tagihan & Rekonsilasi • Transparansi Laporan Pembayaran real-time • Efisiensi Proses HR dan Operasional Harian',
+            ],
+            'challenge' => [
+                'en' => 'Managing tuition bills, attendance, and HR operations is still manual in spreadsheets, consuming thousands of staff hours a year and prone to costly data-entry errors.',
+                'id' => 'Pengelolaan tagihan SPP, absensi, dan operasional SDM masih manual di spreadsheet, memakan waktu ribuan jam kerja staf per tahun dan rawan kesalahan entri data yang merugikan.',
+            ],
+            'solution' => [
+                'en' => 'Automate tuition billing with payment gateway integration, and manage HRIS and school inventory in one operational dashboard, supported by an AI Assistant that answers administrative questions instantly.',
+                'id' => 'Otomatisasi tagihan SPP dengan integrasi payment gateway, serta pengelolaan HRIS dan inventory sekolah dalam satu dashboard operasional didukung AI Assistant untuk menjawab pertanyaan administratif secara instan.',
+            ],
+            'features' => [
+                'en' => ['Payment Gateway & SPP', 'Help Desk & Administration', 'AI Finance & HR Assistant', 'HRIS & Attendance', 'Inventory Management'],
+                'id' => ['Payment Gateway & SPP', 'Help Desk & Administrasi', 'AI Finance & HR Assistant', 'HRIS & Absensi', 'Inventory Management'],
+            ],
+            'feature_icons' => ['payments', 'support_agent', 'psychology', 'calendar_month', 'inventory_2'],
+            'impact_stats' => [
+                'en' => [
+                    'stats' => [
+                        ['value' => '0%', 'label' => 'Human error in daily school financial reconciliation'],
+                        ['value' => '3%', 'label' => 'Faster processing of HR leave and payroll administration'],
+                        ['value' => '100%', 'label' => 'Real-time transparency of parents\' billing status'],
+                    ],
+                ],
+                'id' => [
+                    'stats' => [
+                        ['value' => '0%', 'label' => 'Human Error dalam rekonsiliasi data keuangan sekolah harian'],
+                        ['value' => '3%', 'label' => 'Lebih cepat dalam memproses administrasi cuti dan payroll SDM'],
+                        ['value' => '100%', 'label' => 'Transparansi status tagihan orang tua murid secara real-time'],
+                    ],
+                ],
+            ],
+            'capability' => 'Financial Systems, Payment Gateway, HRIS & Attendance, Help Desk',
+        ],
+        [
+            'id' => 'manage-grow',
+            'icon' => 'monitoring',
+            'featured' => false,
+            'span' => 'md:col-span-4',
+            'variant' => 'pilar',
+            'hero_image' => 'assets/detail-solusi-hero.webp',
+            'variant' => 'pilar',
+            'title' => [
+                'en' => 'Manage & Grow: Make Data-Driven Decisions',
+                'id' => 'Manage & Grow: Ambil Keputusan Berbasis Data',
+            ],
+            'hero_highlight' => [
+                'en' => ['Data-Driven'],
+                'id' => ['Berbasis Data'],
+            ],
+            'headline' => [
+                'en' => 'Monitor institutional performance in real time and make strategic decisions with an analytics dashboard',
+                'id' => 'Pantau performa institusi secara real-time dan buat keputusan strategis dengan dashboard analitik',
+            ],
+            'category' => [
+                'en' => 'Manage & Grow Solution',
+                'id' => 'Solusi Manage & Grow',
+            ],
+            'summary' => [
+                'en' => 'supported by an AI Assistant that summarizes insights for management.',
+                'id' => 'didukung AI Assistant yang merangkum insight untuk manajemen.',
+            ],
+            'who_it_helps' => [
+                'en' => ['School Principals', 'Foundations (Yayasan)', 'University Rectorate', 'Management Teams'],
+                'id' => ['Kepala Sekolah', 'Yayasan', 'Rektorat', 'Tim Manajemen'],
+            ],
+            'business_value' => [
+                'en' => 'Real-time data visibility • Data-driven decision support • Easier accreditation reporting',
+                'id' => 'Visibilitas Data Real-time • Dukungan Keputusan Berbasis Data • Pelaporan Akreditasi Lebih Mudah',
+            ],
+            'challenge' => [
+                'en' => 'Management often struggles to get a complete picture of institutional performance because data is scattered across separate systems, slowing down strategic decision-making.',
+                'id' => 'Manajemen sering kali kesulitan mendapatkan gambaran menyeluruh soal performa institusi karena data tersebar di berbagai sistem terpisah, mengakibatkan lambatnya pengambilan keputusan strategis.',
+            ],
+            'solution' => [
+                'en' => 'An integrated analytics dashboard with AI Predictive for student retention, plus institutional accreditation reporting in one place, supported by an AI Assistant for quick insights.',
+                'id' => 'Dashboard analytics terintegrasi dengan AI Predictive untuk retensi siswa, serta pengelolaan laporan akreditasi institusi dalam satu tempat didukung AI Assistant untuk insight cepat.',
+            ],
+            'features' => [
+                'en' => ['Analytics Dashboard', 'Management Report', 'AI Predictive Insight', 'Managed Service & Integration'],
+                'id' => ['Analytics Dashboard', 'Management Report', 'AI Predictive Insight', 'Managed Service & Integration'],
+            ],
+            'feature_icons' => ['dashboard', 'edit_note', 'insights', 'integration_instructions'],
+            'impact_stats' => [
+                'en' => [
+                    'stats' => [
+                        ['value' => '90%', 'label' => 'Reduced time to compile accreditation reports'],
+                        ['value' => '2.5×', 'label' => 'Operational visibility without technical barriers'],
+                        ['value' => '95%', 'label' => 'Fast, accurate data-driven decision-making'],
+                    ],
+                ],
+                'id' => [
+                    'stats' => [
+                        ['value' => '90%', 'label' => 'Mengurangi waktu penyusunan laporan akreditasi'],
+                        ['value' => '2.5×', 'label' => 'Visibilitas operasional tanpa hambatan teknis'],
+                        ['value' => '95%', 'label' => 'Cepat untuk mengambil keputusan berbasis data yang akurat'],
+                    ],
+                ],
+            ],
+            'capability' => 'Dashboard & Analytics, Management Reporting, Managed Service, System Integration',
         ],
     ],
 ];

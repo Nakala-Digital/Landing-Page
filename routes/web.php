@@ -28,7 +28,7 @@ if (! function_exists('registerCompanyProfileRoutes')) {
             ]);
         })->name('services.detail'.$suffix);
         Route::view('/solutions', 'pages.solutions')->name('solutions'.$suffix);
-        Route::get('/solutions/{solution}', function (string $solution) {
+        $solutionDetail = function (string $solution) {
             $solutionCase = collect(config('solutions.cases'))->firstWhere('id', $solution);
 
             abort_unless($solutionCase, 404);
@@ -36,7 +36,9 @@ if (! function_exists('registerCompanyProfileRoutes')) {
             return view('pages.solution-detail', [
                 'solutionCase' => $solutionCase,
             ]);
-        })->name('solutions.detail'.$suffix);
+        };
+        Route::get('/solutions/{solution}', $solutionDetail)->name('solutions.detail'.$suffix);
+        Route::get('/solusi-pendidikan/detail/{solution}', $solutionDetail)->name('solusi-pendidikan.detail'.$suffix);
         Route::redirect('/delivery', $prefix.'/company-profile', 301)->name('delivery'.$suffix);
         Route::view('/portfolio', 'pages.portfolio')->name('portfolio'.$suffix);
         Route::view('/portopolio', 'pages.portfolio')->name('portopolio'.$suffix);
