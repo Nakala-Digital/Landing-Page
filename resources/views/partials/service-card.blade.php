@@ -46,11 +46,25 @@
     $description = $service['description'][$locale] ?? $service['description']['id'];
     $slug = $service['slug'] ?? '#';
     $localeSuffix = app()->getLocale() === 'en' ? '.en' : '';
-    // CTA underline: white on cyan bg, cyan (#12AED0) on everything else
-    $ctaBorderColor = $service['bgColor'] === 'cyan' ? '#FFFFFF' : '#12AED0';
+    // CTA text + underline colors per Figma: white card → cyan, lime → navy, navy/cyan → white
+    $ctaTextMap = [
+        'white' => 'text-primary',
+        'lime'  => 'text-on-surface',
+        'navy'  => 'text-white',
+        'cyan'  => 'text-white',
+    ];
+    $ctaHexMap = [
+        'white' => '#12AED0',
+        'lime'  => '#031A44',
+        'navy'  => '#FFFFFF',
+        'cyan'  => '#FFFFFF',
+    ];
+    $ctaTextClass = $ctaTextMap[$service['bgColor']] ?? 'text-primary';
+    $ctaBorderColor = $ctaHexMap[$service['bgColor']] ?? '#12AED0';
+    $borderClass = (($service['bgColor'] ?? 'white') === 'white') ? 'border border-outline-variant/65' : '';
 @endphp
 
-<div class="service-card {{ $bgClass }} border border-outline-variant/65 p-unit-lg rounded-[20px] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
+<div class="service-card {{ $bgClass }} {{ $borderClass }} p-unit-lg rounded-[24px] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between">
     <div>
         <span class="material-symbols-outlined {{ $iconClass }} text-5xl mb-6"
             @if(in_array($service['icon'], ['psychology', 'verified_user'])) style="font-variation-settings: 'FILL' 1;" @endif
@@ -60,7 +74,7 @@
     </div>
     <div class="mt-6 flex justify-end">
         <a href="{{ route('services.detail' . $localeSuffix, ['service' => $slug]) }}"
-            class="inline-flex items-center gap-1 text-sm font-normal tracking-wider {{ $textClass }} hover:opacity-80 transition-opacity">
+            class="inline-flex items-center gap-1 text-sm font-normal tracking-wider {{ $ctaTextClass }} hover:opacity-80 transition-opacity">
             <span class="border-b-2 pb-0.5" style="border-color: {{ $ctaBorderColor }}">
                 {{ app()->getLocale() === 'en' ? 'Learn More' : 'Pelajari Lebih Lanjut' }}
             </span>

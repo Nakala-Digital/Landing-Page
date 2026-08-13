@@ -155,31 +155,54 @@
         <style>
             .hero-grid-pattern {
                 background-image:
-                    linear-gradient(rgba(18, 174, 208, 0.10) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(18, 174, 208, 0.10) 1px, transparent 1px);
-                background-size: 44px 44px;
-                -webkit-mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
-                mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
+                    linear-gradient(rgba(18, 174, 208, 0.15) 2px, transparent 2px),
+                    linear-gradient(90deg, rgba(18, 174, 208, 0.15) 2px, transparent 2px);
+                background-size: 150px 150px;
+            }
+            .hero-fade-mask {
+                -webkit-mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 88%);
+                mask-image: linear-gradient(to bottom, black 0%, black 65%, transparent 88%);
+            }
+            @media (min-width: 1024px) {
+                .hero-band-fade {
+                    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 50%, black 100%);
+                    mask-image: linear-gradient(90deg, transparent 0%, black 50%, black 100%);
+                }
+            }
+            .hero-orb {
+                animation: hero-orb-float 14s ease-in-out infinite;
+            }
+            .hero-orb-delay {
+                animation-delay: -7s;
+            }
+            @keyframes hero-orb-float {
+                0%,
+                100% {
+                    transform: translate(0, 0) scale(1);
+                }
+                50% {
+                    transform: translate(24px, -24px) scale(1.05);
+                }
             }
             #hero-network {
                 display: block;
             }
         </style>
         
-        <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5 pt-unit-xl pb-unit-xl z-0">
-            <!-- Dynamic Background -->
-            <div class="hero-grid-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        <section id="hero" class="relative overflow-x-clip bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5 pt-unit-xl pb-unit-xl z-0">
+            <!-- Dynamic Background (grid + orbs fade to white together) -->
+            <div class="hero-fade-mask absolute inset-x-0 top-0 -bottom-40 pointer-events-none" aria-hidden="true">
+                <div class="hero-grid-pattern absolute inset-0"></div>
+                <div class="hero-orb z-10 absolute top-[240px] -right-[180px] h-96 w-96 rounded-full bg-[rgba(18,174,208,0.37)] blur-[160px]"></div>
+                <div class="hero-orb hero-orb-delay z-10 absolute top-[640px] -left-24 h-96 w-96 rounded-full bg-[rgba(18,174,208,0.48)] blur-[160px]"></div>
+            </div>
             <canvas id="hero-network" class="absolute inset-0 h-full w-full pointer-events-none" aria-hidden="true"></canvas>
-
-            <!-- Glow Blobs -->
-            <div class="absolute -top-[20%] -left-[10%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-[120px]"></div>
-            <div class="absolute top-[30%] -right-[10%] w-[400px] h-[400px] rounded-full bg-tertiary-fixed/10 blur-[100px]"></div>
 
             @if ($variant === 'pilar')
                 <!-- Figma PORTOFOLIO band: not full-width (starts at ~8%, grid visible on the left), white fade into the section -->
                 <div class="absolute left-[8%] top-0 w-[92%] h-[631px] pointer-events-none" aria-hidden="true">
                     <img src="{{ asset($case['hero_image'] ?? 'assets/detail-solusi-hero.webp') }}" alt=""
-                        class="w-full h-full object-cover object-center">
+                        class="hero-band-fade w-full h-full object-cover object-center">
                     <!-- Mobile: fade from background (left) to transparent (3/4 right) so text stays readable
                          while the visual peeks through on the right. Desktop keeps the Figma band untouched. -->
                     <div class="absolute inset-0 lg:hidden bg-gradient-to-r from-background via-background via-75% to-transparent"></div>
@@ -211,7 +234,7 @@
                     </div>
                 @else
                 <a class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary hover:text-on-background transition-colors mb-unit-lg backdrop-blur-sm bg-white/50 px-4 py-2 rounded-full border border-outline-variant/30"
-                    href="{{ route('solutions' . $localeSuffix) }}">
+                    href="{{ route('solusi-pendidikan' . $localeSuffix) }}">
                     <span class="material-symbols-outlined text-[18px]">arrow_back</span>
                     {{ $locale === 'en' ? 'Back to Solutions' : 'Kembali ke Solusi' }}
                 </a>
@@ -440,7 +463,7 @@
                         <ul class="space-y-3">
                             @foreach ($case['features'][$locale] ?? [] as $feature)
                                 <li
-                                    class="bg-surface-container-low border-l-[5px] border-{{ $accentColors[$loop->index % $accentCount] }} px-unit-md py-[11px] flex items-center gap-3 text-lg text-on-surface-variant">
+                                    class="bg-surface-container-low border-l-[5px] border-{{ $accentColors[$loop->index % $accentCount] ?? 'electric-cyan' }} px-unit-md py-[11px] flex items-center gap-3 text-lg text-on-surface-variant">
                                     <span
                                         class="material-symbols-outlined text-primary text-[24px] shrink-0">{{ $case['feature_icons'][$loop->index] ?? 'check_circle' }}</span>
                                     <span>{{ $feature }}</span>
@@ -580,7 +603,7 @@
         </section>
 
         <section class="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-unit-xl">
-            @php $ctaHub = Route::has('solusi-pendidikan' . $localeSuffix) ? route('solusi-pendidikan' . $localeSuffix) : route('contact' . $localeSuffix); @endphp
+            @php $ctaHub = route('solusi-pendidikan' . $localeSuffix); @endphp
             @if ($variant === 'pilar')
                 <div class="max-w-container-max mx-auto text-center flex flex-col items-center">
                     @php

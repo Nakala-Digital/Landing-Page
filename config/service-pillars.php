@@ -12,7 +12,7 @@ return [
     |
     | Detail page fields:
     |   - hero_description: bilingual hero section text
-    |   - hero_image: URL for hero image (right side)
+    |   - hero_image: local path for hero image (right side)
     |   - capabilities_intro: bilingual intro text for capabilities section
     |   - capabilities: array of capability cards with title + description
     |   - case_studies: array of solution_id strings (looked up from config('solutions.cases'))
@@ -37,7 +37,7 @@ return [
                 'en' => 'Developing AI-based solutions to automate business processes, increase productivity, and support smarter decision-making.',
                 'id' => 'Mengembangkan solusi berbasis kecerdasan buatan untuk mengotomatisasi proses bisnis, meningkatkan produktivitas, dan mendukung pengambilan keputusan yang lebih cerdas.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/ai-genai.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
@@ -96,7 +96,7 @@ return [
                 'en' => 'Building corporate websites, digital portals, CMS, and modern web-based platforms that are responsive and deliver optimal user experience.',
                 'id' => 'Mengembangkan website perusahaan, portal digital, CMS, dan platform berbasis web yang modern, responsif, serta memberikan pengalaman pengguna yang optimal.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/web-portal.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
@@ -147,7 +147,7 @@ return [
                 'en' => 'Building web, mobile, and enterprise applications tailored to business needs with secure, flexible, and scalable technology.',
                 'id' => 'Membangun aplikasi web, mobile, dan sistem enterprise yang dirancang khusus sesuai kebutuhan bisnis dengan teknologi yang aman, fleksibel, dan mudah dikembangkan.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/custom-software.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
@@ -198,7 +198,7 @@ return [
                 'en' => 'Developing operational systems such as HRMS, HSE, cash management, and other industrial solutions to improve organizational efficiency and productivity.',
                 'id' => 'Mengembangkan sistem operasional seperti HRMS, HSE, manajemen kas, dan solusi industri lainnya untuk meningkatkan efisiensi dan produktivitas organisasi.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/operational-systems.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
@@ -249,7 +249,7 @@ return [
                 'en' => 'Ensuring software quality through testing processes, quality assurance, and development governance so systems are ready for optimal use.',
                 'id' => 'Menjamin kualitas perangkat lunak melalui proses pengujian, quality assurance, dan tata kelola pengembangan agar sistem siap digunakan dengan optimal.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/qa-governance.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
@@ -300,7 +300,7 @@ return [
                 'en' => 'Providing support services, system maintenance, and Microsoft Dynamics 365 implementation to ensure business operations run optimally.',
                 'id' => 'Menyediakan layanan dukungan, pemeliharaan sistem, serta implementasi Microsoft Dynamics 365 untuk memastikan operasional bisnis tetap berjalan optimal.',
             ],
-            'hero_image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=100&w=1200&auto=format&fit=crop',
+            'hero_image' => '/images/service-pillars/web-portal.webp',
             'capabilities_intro' => [
                 'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
                 'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',

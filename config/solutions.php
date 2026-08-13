@@ -85,6 +85,11 @@ return [
                 'en' => ['Decreased CV screening time by up to 80%', 'Established consistent, bias-reduced evaluations', 'Accelerated time-to-hire ensuring better candidate experience', 'Seamlessly scalable for high-volume enterprise hiring'],
                 'id' => ['Waktu screening CV berkurang secara dramatis hingga 80%', 'Menciptakan evaluasi yang konsisten dan meminimalisir bias', 'Time-to-hire yang jauh lebih cepat demi pengalaman kandidat terbaik', 'Sangat skalabel untuk rekrutmen skala enterprise bervolume tinggi'],
             ],
+            'blurb' => [
+                'en' => 'AI-based recruitment platform for CV parsing, candidate scoring, automated shortlisting, scheduling, and recruitment analytics.',
+                'id' => 'Platform rekrutmen berbasis AI untuk parsing CV, scoring kandidat, shortlisting otomatis, penjadwalan, dan analitik rekrutmen.',
+            ],
+            'accent' => 'cyan',
             'capability' => 'AI Technology & GenAI, Custom Software Development, SaaS Platform',
         ],
         [
@@ -131,6 +136,11 @@ return [
                 'en' => ['Centralized HR data with real-time visibility', 'Significantly reduced manual HR processing time', 'Improved employee experience with self-service', 'Ready for multi-entity or multi-branch deployment'],
                 'id' => ['Data HR terpusat dengan visibilitas real-time', 'Waktu proses manual HR berkurang signifikan', 'Pengalaman karyawan meningkat dengan self-service', 'Siap untuk deployment multi-entitas atau multi-cabang'],
             ],
+            'blurb' => [
+                'en' => 'Custom HRMS platform for attendance, leave, payroll, employee profiles, manager approval, and HR reporting.',
+                'id' => 'Platform HRMS custom untuk absensi, cuti, payroll, profil karyawan, approval manager, dan pelaporan HR.',
+            ],
+            'accent' => 'lime',
             'capability' => 'Custom Software Development, SaaS Platform, Operational Systems',
         ],
         [
@@ -177,6 +187,11 @@ return [
                 'en' => ['Faster incident response through real-time reporting', 'Clear HSE compliance visibility for management', 'Reduced risk of unreported safety incidents', 'Audit-ready documentation and reporting trail'],
                 'id' => ['Respons insiden lebih cepat lewat pelaporan real-time', 'Visibilitas kepatuhan HSE jelas untuk manajemen', 'Risiko insiden tak terlapor berkurang', 'Dokumentasi dan trail siap audit'],
             ],
+            'blurb' => [
+                'en' => 'Digital platform for incident reporting, safety checklists, compliance dashboards, alerts, audit trail, and role-based access.',
+                'id' => 'Platform digital untuk pelaporan insiden, safety checklist, dashboard kepatuhan, alert, audit trail, dan akses berbasis role',
+            ],
+            'accent' => 'navy',
             'capability' => 'Operational Systems, Custom Software Development, QA Governance',
         ],
         [
@@ -223,6 +238,11 @@ return [
                 'en' => ['More structured and auditable admission process', 'Better parent experience with real-time transparency', 'Reduced admin workload through automated workflows', 'SIT/UAT documentation and BAST handover delivered'],
                 'id' => ['Proses penerimaan lebih terstruktur dan auditable', 'Pengalaman orang tua lebih baik dengan transparansi real-time', 'Beban admin berkurang lewat workflow otomatis', 'Dokumentasi SIT/UAT dan BAST handover tersedia'],
             ],
+            'blurb' => [
+                'en' => 'End-to-end student admission and school portal solution with online registration, document upload, verification workflow, and parent portal.',
+                'id' => 'Solusi penerimaan siswa dan portal sekolah end-to-end dengan registrasi online, upload dokumen, workflow verifikasi, dan portal orang tua.',
+            ],
+            'accent' => 'lime',
             'capability' => 'Web & Portal Development, QA Governance, Agile Delivery',
         ],
         [
@@ -269,6 +289,11 @@ return [
                 'en' => ['Scalable coaching without proportional cost increase', 'Personalized development for every employee', 'Improved learning engagement through AI nudges', 'Real-time performance visibility for managers and HR'],
                 'id' => ['Coaching skalabel tanpa kenaikan biaya proporsional', 'Pengembangan personal untuk setiap karyawan', 'Engagement belajar meningkat lewat nudges AI', 'Visibilitas performa real-time untuk manager dan HR'],
             ],
+            'blurb' => [
+                'en' => 'AI coaching platform for personal learning journeys, goal tracking, progress dashboards, and on-demand conversational coaching.',
+                'id' => 'Platform coaching berbasis AI untuk learning journey personal, tracking target, dashboard progres, dan coaching percakapan on-demand.',
+            ],
+            'accent' => 'navy',
             'capability' => 'AI Technology & GenAI, SaaS Platform Development, Custom Software Development',
         ],
         [
@@ -315,6 +340,11 @@ return [
                 'en' => ['Faster response through dedicated local managed service', 'Bridge between Microsoft enterprise capability and local business needs', 'Flexible project-based or retainer engagement', 'Delivered with Romulus Digital certified Microsoft expertise'],
                 'id' => ['Respons lebih cepat lewat managed service lokal khusus', 'Menjembatani kapabilitas Microsoft enterprise dengan kebutuhan bisnis lokal', 'Engagement fleksibel project-based atau retainer', 'Didukung expertise Microsoft tersertifikasi dari Romulus Digital'],
             ],
+            'blurb' => [
+                'en' => 'Indonesian local support for Microsoft D365 Finance backed by Romulus Digital regional capability.',
+                'id' => 'Dukungan lokal Indonesia untuk Microsoft D365 Finance dengan dukungan kapabilitas regional Romulus Digital.',
+            ],
+            'accent' => 'cyan',
             'capability' => 'Microsoft D365 & Power Platform, Managed Support, Technology Consulting',
         ],
         [
@@ -361,6 +391,11 @@ return [
                 'en' => ['Reduced repetitive manual work across teams', 'Better operational decision support', 'Automation opportunities mapped through AI readiness assessment', 'Scalable AI capability for enterprise workflows'],
                 'id' => ['Pekerjaan manual repetitif berkurang lintas tim', 'Decision support operasional lebih baik', 'Peluang otomasi dipetakan lewat AI readiness assessment', 'Kapabilitas AI skalabel untuk workflow enterprise'],
             ],
+            'blurb' => [
+                'en' => 'AI-based solutions for GenAI applications, document intelligence, intelligent automation, analytics dashboards, and AI SaaS products.',
+                'id' => 'Solusi berbasis AI untuk aplikasi GenAI, document intelligence, intelligent automation, dashboard analytics, dan produk AI SaaS.',
+            ],
+            'accent' => 'navy',
             'capability' => 'GenAI Applications, Intelligent Automation, Data & Analytics, AI SaaS',
         ],
         [

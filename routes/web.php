@@ -27,7 +27,8 @@ if (! function_exists('registerCompanyProfileRoutes')) {
                 'caseStudies' => $caseStudies,
             ]);
         })->name('services.detail'.$suffix);
-        Route::view('/solutions', 'pages.solutions')->name('solutions'.$suffix);
+        Route::view('/solutions', 'pages.solusi-pendidikan')->name('solutions'.$suffix);
+        Route::view('/solusi-pendidikan', 'pages.solusi-pendidikan')->name('solusi-pendidikan'.$suffix);
         $solutionDetail = function (string $solution) {
             $solutionCase = collect(config('solutions.cases'))->firstWhere('id', $solution);
 
