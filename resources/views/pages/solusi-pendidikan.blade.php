@@ -397,50 +397,12 @@
                 </div>
             </div>
 
-            <!-- WhatsApp-style chat mockup -->
+            <!-- Phone mockup with Nakala AI chat -->
             <div class="mt-12 lg:mt-0 max-w-sm mx-auto w-full">
-                <div class="bg-[#020C1E] rounded-[40px] shadow-2xl p-3">
-                    <div class="overflow-hidden rounded-[20px]">
-                        <div class="bg-[#00677E] px-4 py-3 flex items-center gap-3">
-                            <span class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0" aria-hidden="true">
-                                <span class="material-symbols-outlined text-white text-[22px]">smart_toy</span>
-                            </span>
-                            <div class="flex-1">
-                                <p class="text-white font-semibold text-sm">{{ $cfg['ai_assistant']['chat']['contact'][$locale] }}</p>
-                                <p class="text-[10px] text-white/80">{{ $cfg['ai_assistant']['chat']['status'][$locale] }}</p>
-                            </div>
-                        </div>
-                        <div class="bg-[#F8FAFC] p-4 space-y-2.5 min-h-[480px]">
-                            @foreach ($cfg['ai_assistant']['chat']['messages'] as $message)
-                                @if ($message['author'] === 'system')
-                                    <p class="text-center text-[10px] font-bold uppercase tracking-widest bg-[#E8F8C7] text-on-surface rounded-full py-1.5 px-4 w-max mx-auto">
-                                        {{ $message['text'] }}
-                                    </p>
-                                @elseif ($message['author'] === 'user')
-                                    <div class="flex justify-end">
-                                        <p class="bg-[#00677E] text-white text-sm rounded-2xl rounded-tr-md px-3.5 py-2 shadow-sm max-w-[85%]">
-                                            {{ $message['text'][$locale] }}
-                                        </p>
-                                    </div>
-                                @else
-                                    <div class="flex justify-start">
-                                        <p class="bg-[#E2E8F0] text-on-background text-sm rounded-2xl rounded-tl-md px-3.5 py-2 shadow-sm max-w-[85%]">
-                                            {{ $message['text'][$locale] }}
-                                        </p>
-                                    </div>
-                                @endif
-                            @endforeach
-                        </div>
-                        <div class="bg-[#F1F5F9] px-4 py-2.5 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-on-surface-variant/50 text-xl">add_circle</span>
-                            <div class="flex-1 bg-white rounded-full px-4 py-2 text-sm text-on-surface-variant/50">
-                                {{ $locale === 'en' ? 'Type a message' : 'Ketik pesan' }}
-                            </div>
-                            <span class="material-symbols-outlined text-primary text-xl">mic</span>
-                            <span class="material-symbols-outlined bg-[#00677E] text-white text-xl rounded-full p-1">send</span>
-                        </div>
-                    </div>
-                </div>
+                <img src="{{ asset('assets/phone-mockup-chat.png') }}"
+                    alt="{{ $locale === 'en' ? 'Nakala AI chat assistant mockup' : 'Mockup chat asisten AI Nakala' }}"
+                    class="w-full rounded-[40px] shadow-2xl"
+                    loading="lazy">
             </div>
         </div>
     </section>
