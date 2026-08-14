@@ -81,7 +81,7 @@ class NavbarTest extends TestCase
 
     public function test_d2_10_detail_instances_render_in_both_locales(): void
     {
-        $slugs = ['attract-admit', 'learn-engage', 'operate-pay', 'manage-grow', 'ai-hiring', 'hrms-mahya', 'd365-support'];
+        $slugs = ['attract-admit', 'learn-engage', 'operate-pay', 'manage-grow', 'ai-hiring', 'hrms-mahya', 'crm-ai-admissions', 'd365-support'];
 
         foreach ($slugs as $slug) {
             $this->get("/solusi-pendidikan/detail/{$slug}")->assertOk();

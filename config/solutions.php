@@ -41,7 +41,14 @@
 |   'border-' prefix, one per feature row (the cycle repeats for longer
 |   lists). Defaults to ['electric-cyan', 'impact-lime', 'midnight-navy'].
 |
-| SLUG_RECONCILE_PLACEHOLDER
+| SLUG RECONCILIATION (spec D2-10 vs canonical records):
+|   The spec lists instances as `ai-hiring`, `crm-ai-admissions`, `hrms`,
+|   and `d365-managed-support`. Canonical record ids are kept where records
+|   already existed:
+|     - spec `hrms`                  -> canonical record `hrms-mahya`
+|     - spec `d365-managed-support`  -> canonical record `d365-support`
+|   `crm-ai-admissions` was added as a new record (spec slug = record id).
+|   No alias records are registered; links must use the canonical ids.
 |
 */
 
@@ -99,6 +106,52 @@ return [
             ],
             'accent' => 'cyan',
             'capability' => 'AI Technology & GenAI, Custom Software Development, SaaS Platform',
+        ],
+        [
+            'id' => 'crm-ai-admissions',
+            'icon' => 'campaign',
+            'span' => 'md:col-span-4',
+            'title' => [
+                'en' => 'CRM AI Admissions',
+                'id' => 'CRM AI Admissions',
+            ],
+            'headline' => [
+                'en' => 'Turn every admission inquiry into a guided, trackable journey with an AI-assisted CRM.',
+                'id' => 'Ubah setiap pertanyaan pendaftaran menjadi perjalanan yang terpandu dan terlacak dengan CRM berbantuan AI.',
+            ],
+            'category' => [
+                'en' => 'Admission CRM & AI Assistant',
+                'id' => 'CRM Penerimaan & AI Assistant',
+            ],
+            'summary' => [
+                'en' => 'Centralize PMB/PPDB leads, documents, and follow-ups in one admission CRM, with an AI Admission Assistant that answers program, fee, requirement, and status questions around the clock.',
+                'id' => 'Pusatkan lead, dokumen, dan tindak lanjut PMB/PPDB dalam satu CRM penerimaan, dengan AI Admission Assistant yang menjawab pertanyaan program, biaya, persyaratan, dan status kapan saja.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Admission Officers', 'Marketing Teams of Schools & Campuses', 'Prospective Students & Parents'],
+                'id' => ['Petugas Admisi', 'Tim Marketing Sekolah & Kampus', 'Calon Siswa/Mahasiswa & Orang Tua'],
+            ],
+            'business_value' => [
+                'en' => 'Every inquiry answered consistently and instantly, documents tracked to completeness, and follow-ups escalated to admission officers exactly when needed.',
+                'id' => 'Setiap pertanyaan terjawab konsisten dan instan, dokumen terlacak hingga lengkap, dan tindak lanjut naik ke petugas admisi tepat saat dibutuhkan.',
+            ],
+            'challenge' => [
+                'en' => 'Admission inquiries arrive through scattered channels, requirements and documents are checked manually, and slow follow-ups quietly lose prospective students before they enroll.',
+                'id' => 'Pertanyaan pendaftaran datang dari kanal yang tersebar, persyaratan dan dokumen diperiksa manual, dan tindak lanjut yang lambat membuat calon siswa/mahasiswa hilang sebelum mendaftar.',
+            ],
+            'solution' => [
+                'en' => 'We build an admission CRM with lead management, document completeness checks, and an AI Admission Assistant that guides applicants through program, fee, requirement, and status questions — with human handoff for anything that needs an admission officer.',
+                'id' => 'Kami membangun CRM penerimaan dengan manajemen lead, pemeriksaan kelengkapan dokumen, dan AI Admission Assistant yang memandu pendaftar menjawab pertanyaan program, biaya, persyaratan, dan status — dengan eskalasi ke petugas manusia untuk hal yang membutuhkan admisi.',
+            ],
+            'features' => [
+                'en' => ['Admission CRM & lead pipeline management', 'AI Admission Assistant for program, fee, and requirement answers', 'Document status tracking and completeness reminders', 'Human handoff, activity logs, and audit trail', 'Admission funnel dashboard for management insight'],
+                'id' => ['Admission CRM & pengelolaan pipeline lead', 'AI Admission Assistant untuk jawaban program, biaya, dan persyaratan', 'Tracking status dokumen dan reminder kelengkapan', 'Human handoff, log aktivitas, dan audit trail', 'Dashboard funnel penerimaan untuk insight manajemen'],
+            ],
+            'impact' => [
+                'en' => ['Consistent, instant answers on every channel applicants use', 'Admission documents tracked until complete', 'Follow-ups that never slip through the cracks', 'Management visibility into the admission funnel'],
+                'id' => ['Jawaban konsisten dan instan di setiap kanal yang digunakan pendaftar', 'Dokumen pendaftaran terlacak hingga lengkap', 'Tindak lanjut yang tidak pernah terlewat', 'Visibilitas manajemen atas funnel penerimaan'],
+            ],
+            'capability' => 'AI Technology & GenAI, Custom Software Development, Admission CRM',
         ],
         [
             'id' => 'hrms-mahya',
