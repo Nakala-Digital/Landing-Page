@@ -13,8 +13,9 @@ if (! function_exists('registerCompanyProfileRoutes')) {
         Route::redirect('/about', $prefix.'/company-profile', 301)->name('about'.$suffix);
         Route::view('/services', 'pages.service')->name('services'.$suffix);
         Route::view('/service', 'pages.service')->name('service'.$suffix);
-        Route::get('/services/{service}', function (string $service) {
+        $serviceDetail = function (string $service) {
             $pillar = collect(config('service-pillars.pillars'))->firstWhere('slug', $service);
+
             abort_unless($pillar, 404);
 
             $caseStudies = collect($pillar['case_studies'] ?? [])
@@ -26,7 +27,10 @@ if (! function_exists('registerCompanyProfileRoutes')) {
                 'pillar' => $pillar,
                 'caseStudies' => $caseStudies,
             ]);
-        })->name('services.detail'.$suffix);
+        };
+        foreach (['services', 'layanan'] as $base) {
+            Route::get("/{$base}/{service}", $serviceDetail)->name($base.'.detail'.$suffix);
+        }
         Route::view('/solutions', 'pages.solusi-pendidikan')->name('solutions'.$suffix);
         Route::view('/solusi-pendidikan', 'pages.solusi-pendidikan')->name('solusi-pendidikan'.$suffix);
         $solutionDetail = function (string $solution) {

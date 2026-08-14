@@ -24,6 +24,10 @@
 | 'hero_image' (optional, default 'assets/detail-solusi-hero.webp'): per-record
 |   hero band art for the pilar variant ('pilar' records all share the default
 |   PORTOFOLIO band until per-pillar art is confirmed).
+| 'image' (optional): thumbnail used by case-study cards on
+|   pages/service-detail.blade.php. Values reference config('portfolio')
+|   artwork (/images/portfolio/*.webp); cards fall back to a placeholder
+|   icon when omitted.
 | 'hero_highlight' (optional): bilingual array of phrases within 'title' that
 |   the hero renders in Electric Cyan per the detail-solusi Figma exports
 |   (e.g. attract-admit: 'Tingkatkan Konversi Pendaftar').
@@ -36,12 +40,16 @@
 | 'accent_colors' (optional): Tailwind border-color token names without the
 |   'border-' prefix, one per feature row (the cycle repeats for longer
 |   lists). Defaults to ['electric-cyan', 'impact-lime', 'midnight-navy'].
+|
+| SLUG_RECONCILE_PLACEHOLDER
+|
 */
 
 return [
     'cases' => [
         [
             'id' => 'ai-hiring',
+            'image' => '/images/portfolio/ai-hiring.webp',
             'icon' => 'psychology',
             'featured' => true,
             'span' => 'md:col-span-4',
@@ -94,6 +102,7 @@ return [
         ],
         [
             'id' => 'hrms-mahya',
+            'image' => '/images/portfolio/hrms-mahya.webp',
             'icon' => 'badge',
             'span' => 'md:col-span-4',
             'title' => [
@@ -110,7 +119,7 @@ return [
             ],
             'summary' => [
                 'en' => 'Stop juggling spreadsheets. Mahya centralizes attendance, leave, payroll, and employee data into one easy-to-use system with self-service access for everyone.',
-                'id' => 'Berhenti mengelola banyak spreadshe    et. Mahya memusatkan absensi, cuti, payroll, dan data karyawan dalam satu sistem yang mudah digunakan dengan akses self-service.',
+                'id' => 'Berhenti mengelola banyak spreadsheet. Mahya memusatkan absensi, cuti, payroll, dan data karyawan dalam satu sistem yang mudah digunakan dengan akses self-service.',
             ],
             'who_it_helps' => [
                 'en' => ['HR Departments', 'Company Managers', 'Employees'],
@@ -145,6 +154,7 @@ return [
         ],
         [
             'id' => 'hse-operations',
+            'image' => '/images/portfolio/hse-operations.webp',
             'icon' => 'health_and_safety',
             'span' => 'md:col-span-4',
             'title' => [
@@ -196,6 +206,7 @@ return [
         ],
         [
             'id' => 'ppdb-school',
+            'image' => '/images/portfolio/website-ppdb.webp',
             'icon' => 'school',
             'span' => 'md:col-span-4',
             'title' => [
@@ -247,6 +258,7 @@ return [
         ],
         [
             'id' => 'ai-coach',
+            'image' => '/images/portfolio/digital-coaching.webp',
             'icon' => 'smart_toy',
             'span' => 'md:col-span-4',
             'title' => [
@@ -298,6 +310,7 @@ return [
         ],
         [
             'id' => 'd365-support',
+            'image' => '/images/portfolio/d365-finance.webp',
             'icon' => 'account_balance',
             'span' => 'md:col-span-4',
             'title' => [
@@ -397,6 +410,162 @@ return [
             ],
             'accent' => 'navy',
             'capability' => 'GenAI Applications, Intelligent Automation, Data & Analytics, AI SaaS',
+        ],
+        [
+            'id' => 'erp-platform-bisa',
+            'image' => '/images/portfolio/erp-platform.webp',
+            'icon' => 'dashboard_customize',
+            'span' => 'md:col-span-4',
+            'title' => [
+                'en' => 'ERP Platform BISA',
+                'id' => 'ERP Platform BISA',
+            ],
+            'headline' => [
+                'en' => 'Unify workflows, data, and cross-departmental reporting in one integrated ERP platform.',
+                'id' => 'Satukan alur kerja, data, dan pelaporan lintas departemen dalam satu platform ERP terintegrasi.',
+            ],
+            'category' => [
+                'en' => 'Enterprise Resource Planning',
+                'id' => 'Perencanaan Sumber Daya Enterprise',
+            ],
+            'summary' => [
+                'en' => 'An integrated ERP system that unifies workflows, data, and cross-departmental reporting in a single platform.',
+                'id' => 'Sistem ERP terintegrasi yang menyatukan alur kerja, data, dan pelaporan lintas departemen dalam satu platform.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Operations Leaders', 'Finance & Accounting Teams', 'Department Managers'],
+                'id' => ['Pemimpin Operasional', 'Tim Keuangan & Akuntansi', 'Manajer Departemen'],
+            ],
+            'business_value' => [
+                'en' => 'A single source of truth across departments, streamlined cross-functional workflows, and real-time reporting that accelerates decision-making.',
+                'id' => 'Satu sumber data terpercaya lintas departemen, alur kerja lintas fungsi yang lebih ramping, dan pelaporan real-time yang mempercepat pengambilan keputusan.',
+            ],
+            'challenge' => [
+                'en' => 'Departments operate in silos with scattered data and disconnected workflows, making cross-departmental reporting slow and prone to error.',
+                'id' => 'Departemen bekerja dalam silo dengan data yang tersebar dan alur kerja yang tidak terhubung, sehingga pelaporan lintas departemen lambat dan rawan kesalahan.',
+            ],
+            'solution' => [
+                'en' => 'We implement an integrated ERP platform that connects workflows, consolidates data, and delivers unified reporting across the organization.',
+                'id' => 'Kami mengimplementasikan platform ERP terintegrasi yang menghubungkan alur kerja, mengonsolidasikan data, dan menghadirkan pelaporan terpadu di seluruh organisasi.',
+            ],
+            'features' => [
+                'en' => ['Cross-departmental workflow unification', 'Consolidated master data management', 'Real-time reporting and dashboards', 'Role-based access and audit trails'],
+                'id' => ['Penyatuan alur kerja lintas departemen', 'Manajemen data master yang terkonsolidasi', 'Pelaporan real-time dan dashboard', 'Akses berbasis peran dan jejak audit'],
+            ],
+            'impact' => [
+                'en' => ['Faster, more accurate cross-departmental reporting', 'Reduced duplicate data entry across teams', 'Improved operational visibility for leadership', 'Streamlined inter-department handoffs'],
+                'id' => ['Pelaporan lintas departemen lebih cepat dan akurat', 'Pengurangan entri data ganda lintas tim', 'Visibilitas operasional lebih baik bagi pimpinan', 'Koordinasi antar departemen yang lebih lancar'],
+            ],
+            'blurb' => [
+                'en' => 'Integrated ERP platform unifying workflows, data, and cross-departmental reporting.',
+                'id' => 'Platform ERP terintegrasi yang menyatukan alur kerja, data, dan pelaporan lintas departemen.',
+            ],
+            'accent' => 'cyan',
+            'capability' => 'Custom Software Development, Operational Systems, Technology Consulting',
+        ],
+        [
+            'id' => 'lms-berkemah',
+            'image' => '/images/portfolio/lms-berkemah.webp',
+            'icon' => 'school',
+            'span' => 'md:col-span-4',
+            'title' => [
+                'en' => 'LMS Berkemah',
+                'id' => 'LMS Berkemah',
+            ],
+            'headline' => [
+                'en' => 'One digital learning ecosystem for online courses, psychology programs, and membership.',
+                'id' => 'Satu ekosistem pembelajaran digital untuk kursus online, program psikologi, dan membership.',
+            ],
+            'category' => [
+                'en' => 'Learning Management System',
+                'id' => 'Sistem Manajemen Pembelajaran',
+            ],
+            'summary' => [
+                'en' => 'A digital learning platform that combines online courses, psychology programs, and a membership system in one learning ecosystem.',
+                'id' => 'Platform pembelajaran digital yang menggabungkan kursus online, program psikologi, dan sistem membership dalam satu ekosistem belajar.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Training Institutions', 'Course Creators', 'Membership Program Managers'],
+                'id' => ['Lembaga Pelatihan', 'Pembuat Kursus', 'Pengelola Program Membership'],
+            ],
+            'business_value' => [
+                'en' => 'A single ecosystem to deliver courses, manage psychology programs, and grow recurring membership revenue.',
+                'id' => 'Satu ekosistem untuk menyelenggarakan kursus, mengelola program psikologi, dan menumbuhkan pendapatan membership berulang.',
+            ],
+            'challenge' => [
+                'en' => 'Courses, programs, and membership content are scattered across separate tools, fragmenting the learner experience and complicating revenue management.',
+                'id' => 'Kursus, program, dan konten membership tersebar di berbagai alat terpisah, memecah pengalaman belajar dan menyulitkan pengelolaan pendapatan.',
+            ],
+            'solution' => [
+                'en' => 'We build an LMS that unifies online courses, psychology programs, and membership management in one integrated learning ecosystem.',
+                'id' => 'Kami membangun LMS yang menyatukan kursus online, program psikologi, dan manajemen membership dalam satu ekosistem belajar terintegrasi.',
+            ],
+            'features' => [
+                'en' => ['Online course delivery and progress tracking', 'Psychology program management', 'Membership and subscription management', 'Learner portal with payments and certificates'],
+                'id' => ['Penyelenggaraan kursus online dan pelacakan progres', 'Manajemen program psikologi', 'Manajemen membership dan langganan', 'Portal peserta dengan pembayaran dan sertifikat'],
+            ],
+            'impact' => [
+                'en' => ['Unified learner experience across all programs', 'Simplified membership and revenue management', 'Better program completion tracking', 'Scalable course and program delivery'],
+                'id' => ['Pengalaman belajar terpadu di semua program', 'Manajemen membership dan pendapatan lebih sederhana', 'Pelacakan penyelesaian program lebih baik', 'Penyelenggaraan kursus dan program yang skalabel'],
+            ],
+            'blurb' => [
+                'en' => 'Digital learning platform combining online courses, psychology programs, and membership in one ecosystem.',
+                'id' => 'Platform pembelajaran digital yang menggabungkan kursus online, program psikologi, dan membership dalam satu ekosistem.',
+            ],
+            'accent' => 'navy',
+            'capability' => 'Web & Portal Development, Custom Software Development, SaaS Platform',
+        ],
+        [
+            'id' => '360-finance-support',
+            'image' => '/images/portfolio/360-finance.webp',
+            'icon' => 'monitoring',
+            'span' => 'md:col-span-4',
+            'title' => [
+                'en' => '360 Finance Support & Managed Services',
+                'id' => '360 Finance Support & Managed Services',
+            ],
+            'headline' => [
+                'en' => 'An omnichannel analytics dashboard that turns sales, sentiment, and traffic data into accurate marketing strategy.',
+                'id' => 'Dasbor analitik omnichannel yang mengubah data penjualan, sentimen, dan lalu lintas menjadi strategi pemasaran yang akurat.',
+            ],
+            'category' => [
+                'en' => 'Finance & Marketing Analytics',
+                'id' => 'Analitik Keuangan & Pemasaran',
+            ],
+            'summary' => [
+                'en' => 'An omnichannel analytics dashboard that syncs e-commerce sales, social sentiment, and retail traffic to strengthen accurate, data-driven marketing strategies.',
+                'id' => 'Dasbor analitik omnichannel yang menyinkronkan penjualan e-commerce, sentimen sosial, dan lalu lintas ritel untuk memperkuat strategi pemasaran berbasis data yang akurat.',
+            ],
+            'who_it_helps' => [
+                'en' => ['Marketing Leaders', 'Finance Controllers', 'Retail & E-commerce Teams'],
+                'id' => ['Pemimpin Pemasaran', 'Pengendali Keuangan', 'Tim Ritel & E-commerce'],
+            ],
+            'business_value' => [
+                'en' => 'One consolidated view of channel performance, faster campaign adjustments, and marketing spend tied directly to measurable outcomes.',
+                'id' => 'Satu pandangan terpadu atas kinerja kanal, penyesuaian kampanye yang lebih cepat, dan belanja pemasaran yang terhubung langsung dengan hasil terukur.',
+            ],
+            'challenge' => [
+                'en' => 'Sales, sentiment, and traffic data live in separate channels, so marketing decisions rely on delayed, disconnected reports.',
+                'id' => 'Data penjualan, sentimen, dan lalu lintas berada di kanal terpisah, sehingga keputusan pemasaran bergantung pada laporan yang tertunda dan tidak terhubung.',
+            ],
+            'solution' => [
+                'en' => 'We deliver an omnichannel analytics dashboard that synchronizes e-commerce sales, social sentiment, and retail traffic for accurate, data-driven marketing strategy.',
+                'id' => 'Kami menghadirkan dasbor analitik omnichannel yang menyinkronkan penjualan e-commerce, sentimen sosial, dan lalu lintas ritel untuk strategi pemasaran berbasis data yang akurat.',
+            ],
+            'features' => [
+                'en' => ['Omnichannel data synchronization', 'E-commerce sales analytics', 'Social sentiment monitoring', 'Retail traffic and campaign reporting'],
+                'id' => ['Sinkronisasi data omnichannel', 'Analitik penjualan e-commerce', 'Pemantauan sentimen sosial', 'Pelaporan lalu lintas ritel dan kampanye'],
+            ],
+            'impact' => [
+                'en' => ['Consolidated cross-channel performance visibility', 'More accurate, data-driven marketing strategy', 'Faster response to channel trends', 'Marketing spend aligned to measurable outcomes'],
+                'id' => ['Visibilitas kinerja lintas kanal yang terpadu', 'Strategi pemasaran berbasis data yang lebih akurat', 'Respon lebih cepat terhadap tren kanal', 'Belanja pemasaran selaras dengan hasil terukur'],
+            ],
+            'blurb' => [
+                'en' => 'Omnichannel analytics dashboard syncing e-commerce sales, social sentiment, and retail traffic.',
+                'id' => 'Dasbor analitik omnichannel yang menyinkronkan penjualan e-commerce, sentimen sosial, dan lalu lintas ritel.',
+            ],
+            'accent' => 'cyan',
+            'capability' => 'Operational Systems, Data & Analytics, Managed Support',
         ],
         [
             'id' => 'attract-admit',

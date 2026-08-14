@@ -12,10 +12,14 @@ return [
     |
     | Detail page fields:
     |   - hero_description: bilingual hero section text
-    |   - hero_image: local path for hero image (right side)
+    |   - hero_image: shared full-bleed hero background (Figma 'image 22' pattern)
     |   - capabilities_intro: bilingual intro text for capabilities section
     |   - capabilities: array of capability cards with title + description
     |   - case_studies: array of solution_id strings (looked up from config('solutions.cases'))
+    |   - case_studies_label: bilingual uppercase category label shown on the
+    |     case-study cards of the detail page (from the Figma exports, e.g.
+    |     'AI TECHNOLOGY', 'MANAGED SUPPORT'). Falls back to the case's own
+    |     'category' when omitted.
     |
     */
 
@@ -37,10 +41,10 @@ return [
                 'en' => 'Developing AI-based solutions to automate business processes, increase productivity, and support smarter decision-making.',
                 'id' => 'Mengembangkan solusi berbasis kecerdasan buatan untuk mengotomatisasi proses bisnis, meningkatkan produktivitas, dan mendukung pengambilan keputusan yang lebih cerdas.',
             ],
-            'hero_image' => '/images/service-pillars/ai-genai.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -77,6 +81,7 @@ return [
                 ],
             ],
             'case_studies' => ['ai-hiring', 'ai-coach'],
+            'case_studies_label' => ['en' => 'AI TECHNOLOGY', 'id' => 'AI TECHNOLOGY'],
         ],
 
         [
@@ -96,10 +101,10 @@ return [
                 'en' => 'Building corporate websites, digital portals, CMS, and modern web-based platforms that are responsive and deliver optimal user experience.',
                 'id' => 'Mengembangkan website perusahaan, portal digital, CMS, dan platform berbasis web yang modern, responsif, serta memberikan pengalaman pengguna yang optimal.',
             ],
-            'hero_image' => '/images/service-pillars/web-portal.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -127,7 +132,8 @@ return [
                     'description' => ['en' => 'Independent portals for parents/citizens to track status, verify documents, and make payments.', 'id' => 'Portal daring mandiri bagi orang tua/warga untuk tracking status, verifikasi dokumen, dan pembayaran.'],
                 ],
             ],
-            'case_studies' => ['ppdb-school', 'ai-coach'],
+            'case_studies' => ['ppdb-school', 'lms-berkemah'],
+            'case_studies_label' => ['en' => 'SOFTWARE DEVELOPMENT', 'id' => 'SOFTWARE DEVELOPMENT'],
         ],
 
         [
@@ -147,10 +153,10 @@ return [
                 'en' => 'Building web, mobile, and enterprise applications tailored to business needs with secure, flexible, and scalable technology.',
                 'id' => 'Membangun aplikasi web, mobile, dan sistem enterprise yang dirancang khusus sesuai kebutuhan bisnis dengan teknologi yang aman, fleksibel, dan mudah dikembangkan.',
             ],
-            'hero_image' => '/images/service-pillars/custom-software.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -178,7 +184,8 @@ return [
                     'description' => ['en' => 'Interfaces optimized for mobile devices to support field user accessibility.', 'id' => 'Antarmuka yang dioptimalkan untuk perangkat mobile guna mendukung aksesibilitas pengguna di lapangan.'],
                 ],
             ],
-            'case_studies' => ['ai-automation', 'ai-coach'],
+            'case_studies' => ['erp-platform-bisa', 'lms-berkemah'],
+            'case_studies_label' => ['en' => 'SOFTWARE', 'id' => 'SOFTWARE'],
         ],
 
         [
@@ -198,10 +205,10 @@ return [
                 'en' => 'Developing operational systems such as HRMS, HSE, cash management, and other industrial solutions to improve organizational efficiency and productivity.',
                 'id' => 'Mengembangkan sistem operasional seperti HRMS, HSE, manajemen kas, dan solusi industri lainnya untuk meningkatkan efisiensi dan produktivitas organisasi.',
             ],
-            'hero_image' => '/images/service-pillars/operational-systems.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -229,7 +236,8 @@ return [
                     'description' => ['en' => 'Structured approval workflows and self-service access for employees and end users.', 'id' => 'Alur persetujuan yang terstruktur dan akses self-service bagi karyawan maupun pengguna akhir.'],
                 ],
             ],
-            'case_studies' => ['hrms-mahya', 'hse-operations', 'ai-automation'],
+            'case_studies' => ['erp-platform-bisa', 'hrms-mahya', 'hse-operations'],
+            'case_studies_label' => ['en' => 'OPERATIONAL SYSTEMS', 'id' => 'OPERATIONAL SYSTEMS'],
         ],
 
         [
@@ -249,10 +257,10 @@ return [
                 'en' => 'Ensuring software quality through testing processes, quality assurance, and development governance so systems are ready for optimal use.',
                 'id' => 'Menjamin kualitas perangkat lunak melalui proses pengujian, quality assurance, dan tata kelola pengembangan agar sistem siap digunakan dengan optimal.',
             ],
-            'hero_image' => '/images/service-pillars/qa-governance.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -281,6 +289,7 @@ return [
                 ],
             ],
             'case_studies' => ['ppdb-school'],
+            'case_studies_label' => ['en' => 'WEB/PORTAL', 'id' => 'WEB/PORTAL'],
         ],
 
         [
@@ -300,10 +309,10 @@ return [
                 'en' => 'Providing support services, system maintenance, and Microsoft Dynamics 365 implementation to ensure business operations run optimally.',
                 'id' => 'Menyediakan layanan dukungan, pemeliharaan sistem, serta implementasi Microsoft Dynamics 365 untuk memastikan operasional bisnis tetap berjalan optimal.',
             ],
-            'hero_image' => '/images/service-pillars/web-portal.webp',
+            'hero_image' => '/images/service-pillars/hero-detail-layanan.webp',
             'capabilities_intro' => [
-                'en' => 'Each capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
-                'id' => 'Setiap kapabilitas dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
+                'en' => 'Each AI capability is developed to deliver flexible, scalable solutions ready to support digital transformation across various industry sectors.',
+                'id' => 'Setiap kapabilitas AI dikembangkan untuk memberikan solusi yang fleksibel, skalabel, dan siap mendukung transformasi digital di berbagai sektor industri.',
             ],
             'capabilities' => [
                 [
@@ -335,7 +344,8 @@ return [
                     'description' => ['en' => 'AI Builder implementation for intelligent automation needs within the Microsoft ecosystem.', 'id' => 'Penerapan AI Builder untuk kebutuhan otomatisasi cerdas dalam ekosistem Microsoft.'],
                 ],
             ],
-            'case_studies' => ['d365-support', 'ai-automation'],
+            'case_studies' => ['d365-support', '360-finance-support'],
+            'case_studies_label' => ['en' => 'MANAGED SUPPORT', 'id' => 'MANAGED SUPPORT'],
         ],
     ],
 ];

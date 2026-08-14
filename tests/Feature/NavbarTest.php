@@ -60,6 +60,25 @@ class NavbarTest extends TestCase
         $this->assertStringNotContainsString($activeMark.route('solusi-pendidikan').'">', $content);
     }
 
+    public function test_services_item_is_active_on_service_detail_and_layanan_alias(): void
+    {
+        $this->assertTrue(Route::has('layanan.detail'));
+        $this->assertTrue(Route::has('layanan.detail.en'));
+
+        $indent = str_repeat(' ', 20);
+        $activeMark = 'after:bg-primary after:rounded-full"'."\n".$indent.'href="';
+
+        foreach (['/services/ai-genai' => 'services', '/layanan/ai-genai' => 'services', '/en/layanan/ai-genai' => 'services.en'] as $path => $navRoute) {
+            $content = $this->get($path)->assertOk()->getContent();
+
+            $this->assertStringContainsString($activeMark.route($navRoute).'">', $content);
+            $this->assertStringNotContainsString($activeMark.route('solusi-pendidikan').'">', $content);
+        }
+
+        $this->get('/layanan/does-not-exist')->assertNotFound();
+        $this->get('/en/layanan/does-not-exist')->assertNotFound();
+    }
+
     public function test_d2_10_detail_instances_render_in_both_locales(): void
     {
         $slugs = ['attract-admit', 'learn-engage', 'operate-pay', 'manage-grow', 'ai-hiring', 'hrms-mahya', 'd365-support'];
