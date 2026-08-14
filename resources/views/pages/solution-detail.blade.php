@@ -534,7 +534,6 @@
                             : 'Informasi di bawah ini dipetakan dari dokumen portofolio dan kapabilitas menjadi halaman solusi yang lebih jelas.' }}
                     </p>
                 </div>
-                </div>
 
                 {{-- 2x2 cards: Masalah|Fitur Utama / Solusi|Dampak Bisnis (Figma, radius 8) --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
