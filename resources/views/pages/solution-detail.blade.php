@@ -518,23 +518,22 @@
             <div class="grid grid-cols-1 gap-unit-xl">
                 {{-- A: Detail Solusi intro (NOT a card) --}}
                 <div class="max-w-3xl">
-                    <div class="flex items-start gap-unit-md">
+                    <div class="flex items-center gap-2 mb-unit-sm">
                         <span
-                            class="material-symbols-outlined text-primary text-5xl shrink-0 -mt-1">memory</span>
-                        <div>
-                            <p class="text-primary font-semibold text-lg tracking-[0.05em] mb-unit-sm">
-                                {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
-                            </p>
-                            <h2 class="font-headline-h2 font-semibold text-3xl md:text-headline-h2 md:text-[44px] text-on-background mb-unit-sm">
-                                {{ $locale === 'en' ? 'Context-specific implementation view' : 'Tampilan implementasi sesuai konteks' }}
-                            </h2>
-                            <p class="text-on-surface-variant text-lg">
-                                {{ $locale === 'en'
-                                    ? 'The information below is mapped from the portfolio and capabilities document into a clearer solution page.'
-                                    : 'Informasi di bawah ini dipetakan dari dokumen portofolio dan kapabilitas menjadi halaman solusi yang lebih jelas.' }}
-                            </p>
-                        </div>
+                            class="material-symbols-outlined text-primary text-3xl">memory</span>
+                        <p class="text-primary font-semibold text-lg tracking-[0.05em]">
+                            {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
+                        </p>
                     </div>
+                    <h2 class="font-headline-h2 font-semibold text-3xl md:text-headline-h2 md:text-[44px] text-on-background mb-unit-sm">
+                        {{ $locale === 'en' ? 'Context-specific implementation view' : 'Tampilan implementasi sesuai konteks' }}
+                    </h2>
+                    <p class="text-on-surface-variant text-lg">
+                        {{ $locale === 'en'
+                            ? 'The information below is mapped from the portfolio and capabilities document into a clearer solution page.'
+                            : 'Informasi di bawah ini dipetakan dari dokumen portofolio dan kapabilitas menjadi halaman solusi yang lebih jelas.' }}
+                    </p>
+                </div>
                 </div>
 
                 {{-- 2x2 cards: Masalah|Fitur Utama / Solusi|Dampak Bisnis (Figma, radius 8) --}}
