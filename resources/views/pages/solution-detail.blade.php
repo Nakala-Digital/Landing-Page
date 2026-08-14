@@ -242,12 +242,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-xl items-center relative">
                     <!-- Left Column: Content & Cards -->
                     <div class="lg:col-span-6 relative z-20">
-                        <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-2 rounded-lg font-label-sm text-label-sm uppercase tracking-widest mb-unit-md shadow-lg shadow-tertiary-fixed/20">
-                            <span class="material-symbols-outlined text-[18px]">{{ $case['icon'] }}</span>
+<div class="inline-flex items-center bg-tertiary-fixed text-on-tertiary-fixed px-unit-md py-2 rounded-[25px] text-sm font-semibold uppercase tracking-[0.05em] mb-unit-md">
                             {{ $case['category'][$locale] }}
                         </div>
-                        
-                        <h1 class="font-headline-h1 text-4xl md:text-headline-h1 md:text-[52px] md:leading-[1.1] text-on-background leading-tight mb-unit-md">
+
+                        <h1 class="font-headline-h1 font-bold text-4xl md:text-headline-h1 md:text-[60px] md:leading-[1.1] text-on-background leading-tight mb-unit-md">
                             {{ $case['title'][$locale] }}
                         </h1>
                         
@@ -255,24 +254,22 @@
                             {{ $case['headline'][$locale] }} {{ $case['summary'][$locale] }}
                         </p>
 
-                        <!-- Glassmorphism Cards Container (Light Theme) -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-unit-md mt-8">
-                            <!-- Card 1 -->
-                            <div class="border-l-4 border-primary bg-white/70 backdrop-blur-md p-unit-md rounded-xl shadow-lg shadow-primary/5 border-t border-r border-b border-white/50 relative overflow-hidden group hover:bg-white/90 transition-all duration-300">
-                                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-unit-sm relative z-10">
+<!-- Figma Group 33484/33485: Untuk Siapa (210px) narrower than Dampak Bisnis (369px), white, radius 20 -->
+                        <div class="grid grid-cols-5 gap-unit-md mt-8 max-w-2xl">
+                            <div class="col-span-2 bg-white border border-[#BBBBBB]/50 rounded-[20px] p-unit-md">
+                                <p class="text-sm font-semibold tracking-[0.05em] text-primary mb-unit-sm">
                                     {{ $locale === 'en' ? 'Who It Helps' : 'Untuk Siapa' }}
                                 </p>
-                                <p class="text-on-surface-variant text-sm leading-relaxed relative z-10">
+                                <p class="text-on-surface-variant text-base leading-relaxed">
                                     {{ implode(' • ', $case['who_it_helps'][$locale]) }}
                                 </p>
                             </div>
-                            
-                            <!-- Card 2 -->
-                            <div class="border-l-4 border-tertiary-fixed bg-white/70 backdrop-blur-md p-unit-md rounded-xl shadow-lg shadow-tertiary-fixed/5 border-t border-r border-b border-white/50 relative overflow-hidden group hover:bg-white/90 transition-all duration-300">
-                                <p class="text-xs font-bold uppercase tracking-widest text-primary mb-unit-sm relative z-10">
+
+                            <div class="col-span-3 bg-white border border-[#BBBBBB]/50 rounded-[20px] p-unit-md">
+                                <p class="text-sm font-semibold tracking-[0.05em] text-primary mb-unit-sm">
                                     {{ $locale === 'en' ? 'Business Impact' : 'Dampak Bisnis' }}
                                 </p>
-                                <p class="text-on-surface-variant text-sm leading-relaxed relative z-10">
+                                <p class="text-on-surface-variant text-base leading-relaxed">
                                     {{ $case['business_value'][$locale] }}
                                 </p>
                             </div>
@@ -518,30 +515,34 @@
                 </article>
             </div>
             @else
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-unit-lg">
-                <div class="lg:col-span-4">
-                    <div class="lg:sticky lg:top-28">
+            <div class="grid grid-cols-1 gap-unit-xl">
+                {{-- A: Detail Solusi intro (NOT a card) --}}
+                <div class="max-w-3xl">
+                    <div class="flex items-start gap-unit-md">
                         <span
-                            class="material-symbols-outlined text-primary text-5xl mb-unit-md">{{ $case['icon'] }}</span>
-                        <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-unit-xs">
-                            {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
-                        </p>
-                        <h2 class="font-headline-h2 text-3xl md:text-headline-h2 text-on-background mb-unit-md">
-                            {{ $locale === 'en' ? 'Context-specific implementation view' : 'Tampilan implementasi sesuai konteks' }}
-                        </h2>
-                        <p class="text-on-surface-variant">
-                            {{ $locale === 'en'
-                                ? 'The information below is mapped from the portfolio and capabilities document into a clearer solution page.'
-                                : 'Informasi di bawah ini dipetakan dari dokumen portofolio dan kapabilitas menjadi halaman solusi yang lebih jelas.' }}
-                        </p>
+                            class="material-symbols-outlined text-primary text-5xl shrink-0 -mt-1">memory</span>
+                        <div>
+                            <p class="text-primary font-semibold text-lg tracking-[0.05em] mb-unit-sm">
+                                {{ $locale === 'en' ? 'Solution Detail' : 'Detail Solusi' }}
+                            </p>
+                            <h2 class="font-headline-h2 font-semibold text-3xl md:text-headline-h2 md:text-[44px] text-on-background mb-unit-sm">
+                                {{ $locale === 'en' ? 'Context-specific implementation view' : 'Tampilan implementasi sesuai konteks' }}
+                            </h2>
+                            <p class="text-on-surface-variant text-lg">
+                                {{ $locale === 'en'
+                                    ? 'The information below is mapped from the portfolio and capabilities document into a clearer solution page.'
+                                    : 'Informasi di bawah ini dipetakan dari dokumen portofolio dan kapabilitas menjadi halaman solusi yang lebih jelas.' }}
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                    <article class="rounded-xl border border-outline-variant bg-surface-container-low p-unit-lg">
+                {{-- 2x2 cards: Masalah|Fitur Utama / Solusi|Dampak Bisnis (Figma, radius 8) --}}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                    <article class="rounded-[8px] border border-primary bg-surface-container-low p-unit-lg">
                         <div class="flex items-center gap-3 mb-unit-md">
                             <span
-                                class="material-symbols-outlined text-[#031A44] bg-tertiary-fixed rounded-lg p-2 text-[24px]">warning</span>
+                                class="material-symbols-outlined text-[#031A44] bg-tertiary-fixed rounded-[10px] p-2 text-[24px]">warning</span>
                             <h3 class="font-headline-h3 text-headline-h3 text-on-background">
                                 {{ $locale === 'en' ? 'Problem' : 'Masalah' }}
                             </h3>
@@ -549,54 +550,62 @@
                         <p class="text-on-surface-variant leading-relaxed">{{ $case['challenge'][$locale] }}</p>
                     </article>
 
-                    <article class="rounded-xl border border-primary/40 bg-white p-unit-lg">
+                    <article class="rounded-[8px] border border-primary bg-white p-unit-lg">
                         <div class="flex items-center gap-3 mb-unit-md">
                             <span
-                                class="material-symbols-outlined text-white bg-primary rounded-lg p-2 text-[24px]">lightbulb</span>
-                            <h3 class="font-headline-h3 text-headline-h3 text-primary">
-                                {{ $locale === 'en' ? 'Solution' : 'Solusi' }}
-                            </h3>
-                        </div>
-                        <p class="text-on-surface-variant leading-relaxed">{{ $case['solution'][$locale] }}</p>
-                    </article>
-
-                    <article class="rounded-xl border border-outline-variant bg-white p-unit-lg">
-                        <div class="flex items-center gap-3 mb-unit-md">
-                            <span
-                                class="material-symbols-outlined text-white bg-primary rounded-lg p-2 text-[24px]">fact_check</span>
+                                class="material-symbols-outlined text-white bg-primary rounded-[10px] p-2 text-[24px]">fact_check</span>
                             <h3 class="font-headline-h3 text-headline-h3 text-on-background">
                                 {{ $locale === 'en' ? 'Key Features' : 'Fitur Utama' }}
                             </h3>
                         </div>
-                        <ul class="space-y-3">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             @foreach ($case['features'][$locale] ?? [] as $feature)
-                                <li class="flex gap-3 text-on-surface-variant">
+                                <li class="flex gap-2 text-on-surface-variant">
                                     <span
-                                        class="material-symbols-outlined text-primary text-[18px] mt-1">check_circle</span>
+                                        class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
                                     <span>{{ $feature }}</span>
                                 </li>
                             @endforeach
                         </ul>
                     </article>
 
-                    <article class="rounded-xl border border-tertiary/50 bg-tertiary-fixed/10 p-unit-lg">
+                    <article class="rounded-[8px] border border-primary bg-white p-unit-lg">
                         <div class="flex items-center gap-3 mb-unit-md">
                             <span
-                                class="material-symbols-outlined text-[#031A44] bg-tertiary-fixed rounded-lg p-2 text-[24px]">bolt</span>
+                                class="material-symbols-outlined text-white bg-primary rounded-[10px] p-2 text-[24px]">lightbulb</span>
+                            <h3 class="font-headline-h3 text-headline-h3 text-on-background">
+                                {{ $locale === 'en' ? 'Solution' : 'Solusi' }}
+                            </h3>
+                        </div>
+                        <p class="text-on-surface-variant leading-relaxed">{{ $case['solution'][$locale] }}</p>
+                    </article>
+
+                    <article class="rounded-[8px] border border-tertiary/50 bg-tertiary-fixed/10 p-unit-lg">
+                        <div class="flex items-center gap-3 mb-unit-md">
+                            <span
+                                class="material-symbols-outlined text-[#031A44] bg-tertiary-fixed rounded-[10px] p-2 text-[24px]">bolt</span>
                             <h3 class="font-headline-h3 text-headline-h3 text-on-background">
                                 {{ $locale === 'en' ? 'Business Impact' : 'Dampak Bisnis' }}
                             </h3>
                         </div>
-                        <ul class="space-y-3">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             @foreach ($case['impact'][$locale] ?? [] as $impact)
-                                <li class="flex gap-3 text-on-surface-variant">
+                                <li class="flex gap-2 text-on-surface-variant">
                                     <span
-                                        class="material-symbols-outlined text-[#031A44] text-[18px] mt-1">arrow_circle_right</span>
+                                        class="material-symbols-outlined text-[#031A44] text-[18px] mt-0.5">check_circle</span>
                                     <span>{{ $impact }}</span>
                                 </li>
                             @endforeach
                         </ul>
                     </article>
+                </div>
+
+                {{-- Lihat Solusi Lainnya: navy, bottom-right of implementation section (Figma Group 94) --}}
+                <div class="flex justify-end">
+                    <a href="{{ route('solusi-pendidikan' . $localeSuffix) }}"
+                        class="inline-flex items-center justify-center bg-midnight-navy text-white px-unit-lg py-3 rounded-[15px] text-lg font-medium border border-white/50 shadow-[0_1px_4px_rgba(0,0,0,0.25)] hover:opacity-90 transition-opacity">
+                        {{ $locale === 'en' ? 'See Other Solutions' : 'Lihat Solusi Lainnya' }}
+                    </a>
                 </div>
             </div>
             @endif
@@ -628,33 +637,26 @@
                     </div>
                 </div>
             @else
-                <div
-                    class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-unit-lg items-start lg:items-center justify-between">
-                    <div class="max-w-3xl">
-                        <p class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-unit-sm">
-                            {{ $locale === 'en' ? 'Next Step' : 'Langkah Berikutnya' }}
-                        </p>
-                        <h2 class="font-headline-h2 text-3xl md:text-headline-h2 text-on-background mb-unit-sm">
-                            {{ $locale === 'en' ? 'Discuss how this solution fits your operation' : 'Diskusikan bagaimana solusi ini cocok untuk operasional Anda' }}
-                        </h2>
-                        <p class="text-on-surface-variant">
-                            {{ $locale === 'en'
-                                ? 'Nakala stays primary for local delivery, with Romulus Digital as a trust layer for regional capability.'
-                                : 'Nakala tetap menjadi primary untuk delivery lokal, dengan Romulus Digital sebagai trust layer untuk kapabilitas regional.' }}
-                        </p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-unit-md">
-                        <a class="inline-flex items-center justify-center gap-2 bg-primary text-white px-unit-lg py-unit-md rounded-[20px] font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity"
-                            href="{{ route('contact' . $localeSuffix) }}">
-                            {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
-                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </a>
-                        <a class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-unit-lg py-unit-md rounded-[20px] font-button text-button uppercase tracking-wider hover:bg-primary hover:text-white transition-colors"
-                            href="{{ $ctaHub }}">
-                            <span class="material-symbols-outlined text-[18px]">grid_view</span>
-                            {{ $locale === 'en' ? 'See Other Solutions' : 'Lihat Solusi Lainnya' }}
-                        </a>
-                    </div>
+                <div class="max-w-container-max mx-auto text-center flex flex-col items-center">
+                    @php
+                        $ctaTitle = $locale === 'en'
+                            ? 'Discuss how this solution fits your operation'
+                            : 'Diskusikan bagaimana solusi ini cocok untuk Operasional Anda';
+                        $ctaHighlight = $locale === 'en' ? 'your operation' : 'Operasional Anda';
+                        $ctaTitle = str_replace(e($ctaHighlight), '<span class="text-primary">' . e($ctaHighlight) . '</span>', e($ctaTitle));
+                    @endphp
+                    <h2 class="font-headline-h2 font-bold text-3xl md:text-headline-h2 md:text-[44px] text-on-background mb-unit-md max-w-3xl">
+                        {!! $ctaTitle !!}
+                    </h2>
+                    <p class="text-lg text-on-surface-variant max-w-2xl mb-unit-lg">
+                        {{ $locale === 'en'
+                            ? 'Nakala stays primary for local delivery, with Romulus Digital as a trust layer for regional capability.'
+                            : 'Nakala tetap menjadi primary untuk delivery lokal, dengan Romulus Digital sebagai trust layer untuk kapabilitas regional.' }}
+                    </p>
+                    <a class="inline-flex items-center justify-center bg-primary text-white px-unit-lg py-3 rounded-[20px] text-lg font-semibold tracking-[0.03em] hover:opacity-90 transition-opacity"
+                        href="{{ route('contact' . $localeSuffix) }}">
+                        {{ $locale === 'en' ? 'Start Free Consultation' : 'Mulai Konsultasi Gratis' }}
+                    </a>
                 </div>
             @endif
         </section>
