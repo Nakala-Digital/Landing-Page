@@ -9,102 +9,26 @@
     @include('partials.seo', [
         'title' => app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital',
         'description' =>
-            app()->getLocale() === 'en'
-                ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
-                : 'Hubungi Nakala Digital untuk mendiskusikan projek software, AI, atau transformasi digital Anda selanjutnya.',
+            app()->getLocale() === 'en' ? 'Get in touch with Nakala Digital...' : 'Hubungi Nakala Digital...',
     ])
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
+
     <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "surface-tint": "#12AED0",
-                        "on-error": "#ffffff",
-                        "outline-variant": "#12AED0",
-                        "on-tertiary-fixed": "#031A44",
-                        "on-secondary-fixed": "#031A44",
-                        "surface-dim": "#d5dbdd",
-                        "secondary-container": "#12AED0",
-                        "primary-fixed-dim": "#12AED0",
-                        "tertiary-fixed": "#A7F432",
-                        "error": "#A7F432",
-                        "on-secondary-container": "#031A44",
-                        "background": "#F7FAFC",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#eff4f7",
-                        "on-tertiary-container": "#031A44",
-                        "on-primary-fixed": "#031A44",
-                        "on-primary": "#ffffff",
-                        "outline": "#12AED0",
-                        "inverse-primary": "#12AED0",
-                        "surface-container": "#e9eff1",
-                        "on-error-container": "#031A44",
-                        "secondary-fixed-dim": "#12AED0",
-                        "surface-bright": "#F7FAFC",
-                        "surface-container-highest": "#dee3e6",
-                        "primary-fixed": "#12AED0",
-                        "primary-container": "#12AED0",
-                        "primary": "#12AED0",
-                        "on-primary-container": "#031A44",
-                        "on-surface-variant": "#031A44",
-                        "on-primary-fixed-variant": "#031A44",
-                        "on-tertiary-fixed-variant": "#031A44",
-                        "on-background": "#031A44",
-                        "on-secondary-fixed-variant": "#031A44",
-                        "tertiary-container": "#A7F432",
-                        "on-surface": "#031A44",
-                        "tertiary": "#A7F432",
-                        "surface": "#F7FAFC",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary": "#031A44",
-                        "surface-container-high": "#e4e9ec",
-                        "secondary-fixed": "#12AED0",
-                        "error-container": "#A7F432",
-                        "inverse-surface": "#031A44",
-                        "tertiary-fixed-dim": "#A7F432",
-                        "secondary": "#031A44",
-                        "inverse-on-surface": "#ecf1f4",
-                        "surface-variant": "#dee3e6",
+                    colors: {
                         "midnight-navy": "#031A44",
                         "electric-cyan": "#12AED0",
-                        "impact-lime": "#A7F432"
+                        "impact-lime": "#A7F432",
+                        "bg-gray-light": "#F4F7F9"
                     },
-                    "borderRadius": {
-                        "DEFAULT": "4px",
-                        "lg": "4px",
-                        "xl": "8px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "unit-xl": "64px",
-                        "unit-lg": "32px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "80px",
-                        "unit-xs": "4px",
-                        "container-max": "1280px",
-                        "unit-md": "16px",
-                        "unit-sm": "8px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Poppins"],
-                        "body-md": ["Poppins"],
-                        "button": ["Poppins"],
-                        "headline-h1-mobile": ["Poppins"],
-                        "headline-h2": ["Poppins"],
-                        "body-lg": ["Poppins"],
-                        "headline-h2-mobile": ["Poppins"],
-                        "headline-h1": ["Poppins"],
-                        "headline-h3": ["Poppins"],
-                        "display-lg": ["Poppins"],
-                        "label-sm": ["Poppins"]
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
                     }
                 },
             },
@@ -112,321 +36,208 @@
     </script>
     <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
         .form-input-focus:focus {
             border-color: #12AED0;
-            border-width: 2px;
             ring-color: transparent;
         }
 
-        .field-error {
-            border-color: #dc2626 !important;
+        /* State Aktif untuk Pilihan Tanggal & Jam */
+        .cal-day-active {
+            background-color: #12AED0 !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            border-radius: 8px;
         }
 
-        .field-error-message {
-            display: none;
-            color: #dc2626;
-            font-size: 12px;
-            margin-top: 4px;
-        }
-
-        .field-error-message.active {
-            display: block;
-        }
-
-        #formToast {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-            max-width: 380px;
-            transform: translateX(120%);
-            opacity: 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        #formToast.show {
-            transform: translateX(0);
-            opacity: 1;
+        .time-slot-active {
+            background-color: #12AED0 !important;
+            color: #ffffff !important;
+            border-color: #12AED0 !important;
+            font-weight: 700 !important;
         }
     </style>
 </head>
 
-<body class="bg-background text-on-background font-body-md">
+<body class="bg-bg-gray-light text-midnight-navy font-sans">
     @include('partials.navbar')
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="relative bg-midnight-navy text-white py-unit-xl overflow-hidden text-center">
-            <div class="absolute inset-0 opacity-10">
-                <img class="w-full h-full object-cover" alt="Background Office"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-mtSPaRJvm3MMZPT-yRQF923u69JQwGRSDLW7GDzfw2tcz6oO2ynBG2d3_t5zdC_FBhlDRkk-9y3yY0JzS7rFvDQexsa7JZ4DRXeLMKL3t8M_43QD85Q-KSarD1-hJij4pKrrGna1weJMejvO10fBODl8EPk73DVv7OQBLJwQXTl9U_ge9briz4frpYKGM4ClHfPi877YhqVyyUBk63suAmUwBIjUo6e152x2G6-iiaTAIBE4ERjWSwCn8L_S_2obDvQb9129h-Yv" />
-            </div>
-            <div
-                class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-lg flex flex-col items-center">
-                <!-- Badge Disesuaikan dengan Figma (LOKAL & REGIONAL) -->
-                <div
-                    class="inline-flex items-center bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-xs font-bold uppercase tracking-widest mb-unit-md">
-                    LOKAL & REGIONAL
-                </div>
-                <h1
-                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 max-w-3xl mb-unit-md font-bold">
-                    {{ app()->getLocale() === 'en' ? 'Build the digital future together' : 'Mari bangun masa depan Digital bersama' }}
-                </h1>
-                <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
-                    {{ app()->getLocale() === 'en' ? 'Nakala Digital brings regional capability with a local touch. Tell us about your project.' : 'Nakala Digital menghadirkan kapabilitas regional dengan sentuhan lokal. Ceritakan tentang proyek Anda.' }}
-                </p>
-            </div>
-        </section>
 
-        <!-- Content & Form Section -->
-        <section class="py-unit-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <main class="pt-20 bg-[#F8FAFC]">
+        <section class="py-12 max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-                <!-- Form Kontak / Jadwal Sesi Discovery (Kiri di Figma) -->
-                <div class="lg:col-span-7 flex flex-col gap-unit-md">
-                    <div
-                        class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant rounded-xl shadow-sm relative">
-                        <h2 class="font-headline-h3 text-2xl font-bold mb-unit-lg text-on-surface">
-                            {{ app()->getLocale() === 'en' ? 'Contact Form' : 'Form Kontak' }}
-                        </h2>
+                <!-- ================= SEKTOR KIRI (FORM & WHATSAPP) ================= -->
+                <div class="lg:col-span-8 flex flex-col gap-6">
 
-                        <!-- Alert Error Global jika ada -->
-                        @if ($errors->any())
-                            <div class="mb-unit-md p-4 rounded bg-red-50 text-red-700 flex items-start gap-3"
-                                role="alert">
-                                <span class="material-symbols-outlined">error</span>
-                                <div>
-                                    <p class="font-bold">
-                                        {{ app()->getLocale() === 'en' ? 'Please fix the highlighted fields below.' : 'Mohon perbaiki isian form yang salah di bawah ini.' }}
-                                    </p>
-                                </div>
-                            </div>
-                        @endif
+                    <!-- Container Form Kontak -->
+                    <div class="bg-white p-6 md:p-8 border border-[#A5E3F0] rounded-2xl shadow-sm">
+                        <h2 class="text-2xl font-bold mb-6 text-[#031A44]">Form Kontak</h2>
 
-                        <form class="space-y-unit-md" id="contactForm"
-                            action="{{ route('contact.store' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
-                            method="POST">
-                            @csrf
+                        <!-- Alert Box Error Client-side JS -->
+                        <div id="jsErrorAlert" class="hidden mb-6 p-4 text-xs font-semibold text-rose-800 bg-rose-50 border border-rose-200 rounded-xl">
+                            <p class="font-bold mb-1">Periksa kembali inputan Anda:</p>
+                            <ul class="list-disc pl-4" id="jsErrorList"></ul>
+                        </div>
 
-                            <!-- Honeypot Field -->
-                            <div class="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
-                                <label for="website">Website</label>
-                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
-                            </div>
+                        <!-- Form langsung di-handle JS (Tanpa action POST ke route Laravel untuk WhatsApp Instant) -->
+                        <form id="contactForm" class="space-y-6">
+                            <!-- Hidden Inputs untuk Tanggal & Jam Terpilih -->
+                            <input type="hidden" name="selected_date" id="selectedDateInput" value="">
+                            <input type="hidden" name="selected_time" id="selectedTimeInput" value="">
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                            <!-- Input Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                                 <!-- Nama Lengkap -->
-                                <div class="space-y-1">
-                                    <label for="full_name"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Full Name' : 'Nama Lengkap' }}
-                                    </label>
-                                    <input id="full_name" name="full_name"
-                                        class="w-full border @error('full_name') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm"
-                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. John Doe' : 'Contoh: Budi Santoso' }}"
-                                        type="text" value="{{ old('full_name') }}" required />
-                                    @error('full_name')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="full_name" class="text-xs font-semibold text-[#031A44]">Nama Lengkap *</label>
+                                    <input type="text" id="full_name" name="full_name" placeholder="Contoh: Budi Santoso"
+                                        class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none" required>
                                 </div>
-
+                                <!-- Alamat Email -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="email" class="text-xs font-semibold text-[#031A44]">Alamat Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="Alex@Company.com"
+                                        class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none" required>
+                                </div>
                                 <!-- Perusahaan -->
-                                <div class="space-y-1">
-                                    <label for="company"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Company' : 'Perusahaan' }}
-                                    </label>
-                                    <input id="company" name="company"
-                                        class="w-full border @error('company') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm"
-                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. Acme Corp' : 'Contoh: PT. ABC' }}"
-                                        type="text" value="{{ old('company') }}" />
-                                    @error('company')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="company" class="text-xs font-semibold text-[#031A44]">Perusahaan</label>
+                                    <input type="text" id="company" name="company" placeholder="Contoh: PT. ABC"
+                                        class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none">
+                                </div>
+                                <!-- Sistem yang Digunakan -->
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="system_used" class="text-xs font-semibold text-[#031A44]">Sistem yang Digunakan</label>
+                                    <input type="text" id="system_used" name="system_used" placeholder="Contoh: Google"
+                                        class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none">
+                                </div>
+                                <!-- Kebutuhan -->
+                                <div class="flex flex-col gap-1.5 relative">
+                                    <label for="needs" class="text-xs font-semibold text-[#031A44]">Kebutuhan *</label>
+                                    <div class="relative">
+                                        <select id="needs" name="needs"
+                                            class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 pr-10 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none appearance-none cursor-pointer" required>
+                                            <option value="PPDB / PMB & Adminis">PPDB / PMB & Adminis</option>
+                                            <option value="Enterprise Web App">Enterprise Web App</option>
+                                            <option value="Mobile App Development">Mobile App Development</option>
+                                        </select>
+                                        <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">chevron_right</span>
+                                    </div>
+                                </div>
+                                <!-- Target Implementasi -->
+                                <div class="flex flex-col gap-1.5 relative">
+                                    <label for="timeline" class="text-xs font-semibold text-[#031A44]">Target Implementasi *</label>
+                                    <div class="relative">
+                                        <select id="timeline" name="timeline"
+                                            class="w-full bg-[#F3F4F6] text-gray-700 border-none rounded-xl p-3 pr-10 text-xs focus:ring-2 focus:ring-[#12AED0] outline-none appearance-none cursor-pointer" required>
+                                            <option value="Secepatnya (<1 bulan)">Secepatnya (&lt;1 bulan)</option>
+                                            <option value="1 - 3 Bulan">1 - 3 Bulan</option>
+                                            <option value="3 - 6 Bulan">3 - 6 Bulan</option>
+                                        </select>
+                                        <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm pointer-events-none">chevron_right</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                                <!-- Jabatan -->
-                                <div class="space-y-1">
-                                    <label for="position"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Position' : 'Jabatan' }}
-                                    </label>
-                                    <input id="position" name="position"
-                                        class="w-full border @error('position') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm"
-                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. CTO' : 'Contoh: CTO / Direktur' }}"
-                                        type="text" value="{{ old('position') }}" />
-                                    @error('position')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
+                            <!-- Kalender Terintegrasi & Waktu -->
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-4 items-center">
+                                <!-- Kalender Interaktif Dinamis -->
+                                <div class="md:col-span-7 bg-[#EFF3F6] rounded-2xl p-4">
+                                    <div class="flex justify-between items-center mb-3 px-1">
+                                        <span id="calendarMonthYear" class="text-xs font-bold text-[#031A44]"></span>
+                                        <div class="flex gap-2">
+                                            <button type="button" id="prevMonthBtn"
+                                                class="p-1 bg-[#12AED0] text-white rounded-md flex items-center justify-center hover:opacity-80 transition">
+                                                <span class="material-symbols-outlined text-xs font-bold">chevron_left</span>
+                                            </button>
+                                            <button type="button" id="nextMonthBtn"
+                                                class="p-1 bg-[#12AED0] text-white rounded-md flex items-center justify-center hover:opacity-80 transition">
+                                                <span class="material-symbols-outlined text-xs font-bold">chevron_right</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-7 gap-y-2 text-center text-[10px] font-bold text-gray-500 mb-2">
+                                        <div>SUN</div><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div>
+                                    </div>
+                                    <!-- Container Angka Tanggal (JS) -->
+                                    <div class="grid grid-cols-7 gap-y-1 text-center text-xs font-medium text-gray-700" id="calendarDays"></div>
                                 </div>
 
-                                <!-- Email -->
-                                <div class="space-y-1">
-                                    <label for="email"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Email Address' : 'Alamat Email' }}
-                                    </label>
-                                    <input id="email" name="email"
-                                        class="w-full border @error('email') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm"
-                                        placeholder="Alex@company.com" type="email" value="{{ old('email') }}"
-                                        required />
-                                    @error('email')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
+                                <!-- Slot Waktu & Submit -->
+                                <div class="md:col-span-5 flex flex-col justify-between h-full min-h-[160px]">
+                                    <div class="grid grid-cols-2 gap-2 text-center" id="timeSlots">
+                                        @php
+                                            $times = ['07:00', '12:00', '08:00', '13:00', '09:00', '14:00', '10:00', '15:00', '11:00', '16:00'];
+                                        @endphp
+                                        @foreach ($times as $time)
+                                            <button type="button" data-time="{{ $time }}"
+                                                class="time-btn border border-gray-300 rounded-lg py-1.5 text-[11px] text-gray-600 bg-white hover:border-[#12AED0] transition">
+                                                {{ $time }}
+                                            </button>
+                                        @endforeach
+                                    </div>
+
+                                    <button type="submit"
+                                        class="w-full bg-[#12AED0] text-white py-2.5 mt-4 rounded-full font-bold text-[11px] tracking-wider hover:bg-opacity-95 transition uppercase shadow-sm flex items-center justify-center gap-2">
+                                        JADWALKAN SESI DISCOVERY
+                                    </button>
                                 </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                                <!-- Telepon -->
-                                <div class="space-y-1">
-                                    <label for="phone"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Phone Number' : 'Nomor Telephone' }}
-                                    </label>
-                                    <input id="phone" name="phone"
-                                        class="w-full border @error('phone') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm"
-                                        placeholder="+62 811 - 34xx - xxxx" type="tel" value="{{ old('phone') }}"
-                                        required />
-                                    @error('phone')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
-                                </div>
-
-                                <!-- Jenis Proyek -->
-                                <div class="space-y-1">
-                                    <label for="project_type"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Project Type' : 'Jenis Proyek' }}
-                                    </label>
-                                    <select id="project_type" name="project_type"
-                                        class="w-full border @error('project_type') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 form-input-focus bg-gray-50 text-sm text-gray-600"
-                                        required>
-                                        <option value="" disabled {{ old('project_type') ? '' : 'selected' }}>
-                                            Website / Portal
-                                        </option>
-                                        <option value="enterprise_web_app" @selected(old('project_type') === 'enterprise_web_app')>Enterprise Web
-                                            App</option>
-                                        <option value="mobile_app" @selected(old('project_type') === 'mobile_app')>Mobile App
-                                            (iOS/Android)</option>
-                                        <option value="cloud_infrastructure" @selected(old('project_type') === 'cloud_infrastructure')>Cloud
-                                            Infrastructure</option>
-                                        <option value="ai_ml_solutions" @selected(old('project_type') === 'ai_ml_solutions')>AI/ML Solutions
-                                        </option>
-                                    </select>
-                                    @error('project_type')
-                                        <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                    @enderror
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
-                                <!-- Rentang Anggaran -->
-                                <div class="space-y-1">
-                                    <label for="budget_range"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Budget Range' : 'Rentang Anggaran' }}
-                                    </label>
-                                    <select id="budget_range" name="budget_range"
-                                        class="w-full border border-gray-200 rounded-lg p-3 form-input-focus bg-gray-50 text-sm text-gray-600">
-                                        <option value="not_sure" @selected(!old('budget_range') || old('budget_range') === 'not_sure')>
-                                            < Rp 50 Juta </option>
-                                        <option value="10k_25k" @selected(old('budget_range') === '10k_25k')>Rp 50 Juta - Rp 100 Juta
-                                        </option>
-                                        <option value="25k_50k" @selected(old('budget_range') === '25k_50k')>Rp 100 Juta - Rp 250 Juta
-                                        </option>
-                                        <option value="50k_plus" @selected(old('budget_range') === '50k_plus')>> Rp 250 Juta</option>
-                                    </select>
-                                </div>
-
-                                <!-- Lini Masa -->
-                                <div class="space-y-1">
-                                    <label for="timeline"
-                                        class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                        {{ app()->getLocale() === 'en' ? 'Timeline' : 'Lini Masa' }}
-                                    </label>
-                                    <select id="timeline" name="timeline"
-                                        class="w-full border border-gray-200 rounded-lg p-3 form-input-focus bg-gray-50 text-sm text-gray-600">
-                                        <option value="asap" @selected(!old('timeline') || old('timeline') === 'asap')>
-                                            Secepatnya (<1 bulan) </option>
-                                        <option value="1_3_months" @selected(old('timeline') === '1_3_months')>1-3 Bulan</option>
-                                        <option value="3_6_months" @selected(old('timeline') === '3_6_months')>3-6 Bulan</option>
-                                        <option value="ongoing" @selected(old('timeline') === 'ongoing')>Kerjasama Berkelanjutan
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- Pesan -->
-                            <div class="space-y-1">
-                                <label for="message"
-                                    class="font-label-sm text-xs font-semibold text-on-surface-variant">
-                                    {{ app()->getLocale() === 'en' ? 'Message / Project Details' : 'Pesan / Detail Proyek' }}
-                                </label>
-                                <textarea id="message" name="message"
-                                    class="w-full border @error('message') border-red-600 @else border-gray-200 @enderror rounded-lg p-3 min-h-[100px] form-input-focus bg-gray-50 text-sm"
-                                    placeholder="{{ app()->getLocale() === 'en' ? 'Tell us about your technical challenges...' : 'Ceritakan Tentang Tantangan Teknis anda' }}"
-                                    required>{{ old('message') }}</textarea>
-                                @error('message')
-                                    <p class="text-xs text-red-600 mt-1">{{ $message }}</p>
-                                @enderror
-                            </div>
-
-                            <!-- Tombol Submit Native -->
-                            <div class="pt-unit-sm">
-                                <button
-                                    class="bg-electric-cyan text-white px-6 py-3 rounded-md font-button text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-                                    type="submit">
-                                    <span>{{ app()->getLocale() === 'en' ? 'SCHEDULE DISCOVERY SESSION' : 'JADWALKAN SESI DISCOVERY' }}</span>
-                                </button>
                             </div>
                         </form>
                     </div>
+
+                    <!-- Card Chat via WhatsApp -->
+                    <div class="bg-white p-6 border border-[#A5E3F0] rounded-2xl shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-[#E2F7FC] rounded-xl text-[#12AED0] flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl font-bold">chat</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-semibold text-gray-500">Respon Cepat</span>
+                                <h4 class="text-xl font-bold text-[#031A44] tracking-tight">Chat via WhatsApp</h4>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6282295706304" target="_blank"
+                            class="bg-[#12AED0] text-white px-8 py-3 rounded-full text-xs font-bold hover:bg-opacity-95 transition uppercase tracking-wider shadow-sm">
+                            HUBUNGI KAMI
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Info Panel & Model Kami -->
-                <div class="lg:col-span-5 space-y-unit-md">
+                <!-- ================= SEKTOR KANAN (INFO KONTAK & MODEL) ================= -->
+                <div class="lg:col-span-4 flex flex-col gap-6">
                     <!-- Informasi Kontak Card -->
-                    <div class="p-unit-lg bg-white border border-outline-variant rounded-xl shadow-sm space-y-unit-md">
-                        <h3 class="font-headline-h3 text-lg font-bold text-on-surface">
-                            {{ app()->getLocale() === 'en' ? 'Contact Information' : 'Informasi Kontak' }}
-                        </h3>
-                        <div class="space-y-4 text-sm">
-                            <!-- 1. Email -->
-                            <div class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-electric-cyan text-xl mt-0.5">mail</span>
+                    <div class="bg-[#031A44] text-white p-6 md:p-8 rounded-2xl shadow-sm space-y-6">
+                        <h3 class="text-xl font-bold tracking-tight">Informasi Kontak</h3>
+                        <div class="space-y-5 text-xs">
+                            <div class="flex items-start gap-3.5">
+                                <span class="material-symbols-outlined text-[#A7F432] text-xl">mail</span>
                                 <div>
-                                    <p class="font-semibold text-on-surface">Email</p>
-                                    <p class="text-gray-600">contact@nakala.digital</p>
+                                    <p class="text-white font-bold text-sm mb-0.5">Email</p>
+                                    <p class="text-gray-300 font-light">contact@nakala.digital</p>
                                 </div>
                             </div>
-                            <!-- 2. Telepon -->
-                            <div class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-electric-cyan text-xl mt-0.5">call</span>
+                            <div class="flex items-start gap-3.5">
+                                <span class="material-symbols-outlined text-[#A7F432] text-xl">call</span>
                                 <div>
-                                    <p class="font-semibold text-on-surface">Telepon</p>
-                                    <p class="text-gray-600">+6282295706304</p>
+                                    <p class="text-white font-bold text-sm mb-0.5">Telepon</p>
+                                    <p class="text-gray-300 font-light">+6282295706304</p>
                                 </div>
                             </div>
-                            <!-- 3. Sesi Discovery -->
-                            <div class="flex items-start gap-3">
-                                <span
-                                    class="material-symbols-outlined text-electric-cyan text-xl mt-0.5">calendar_today</span>
+                            <div class="flex items-start gap-3.5">
+                                <span class="material-symbols-outlined text-[#A7F432] text-xl">calendar_today</span>
                                 <div>
-                                    <p class="font-semibold text-on-surface">Sesi Discovery</p>
-                                    <p class="text-gray-600">Sesi Discovery Gratis</p>
+                                    <p class="text-white font-bold text-sm mb-0.5">Sesi Discovery</p>
+                                    <p class="text-gray-300 font-light">Sesi Discovery Gratis</p>
                                 </div>
                             </div>
-                            <!-- 4. Kantor -->
-                            <div class="flex items-start gap-3">
-                                <span
-                                    class="material-symbols-outlined text-electric-cyan text-xl mt-0.5">location_on</span>
+                            <div class="flex items-start gap-3.5">
+                                <span class="material-symbols-outlined text-[#A7F432] text-xl">location_on</span>
                                 <div>
-                                    <p class="font-semibold text-on-surface">Kantor</p>
-                                    <p class="text-gray-600 leading-relaxed text-xs">
+                                    <p class="text-white font-bold text-sm mb-0.5">Kantor</p>
+                                    <p class="text-gray-300 font-light leading-relaxed">
                                         Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C,
                                         Citarum, Bandung Wetan, Bandung City, West Java 40115
                                     </p>
@@ -435,43 +246,29 @@
                         </div>
                     </div>
 
-                    <!-- Engagement Model Card (Model Kami) 1-->
-                    <div class="p-unit-lg bg-white border border-outline-variant rounded-xl shadow-sm space-y-unit-md">
-                        <h4 class="font-headline-h3 text-lg font-bold text-on-surface">
-                            {{ app()->getLocale() === 'en' ? 'Our Model' : 'Model Kami' }}
-                        </h4>
-                        <div class="relative pl-6 space-y-5 border-l-2 border-electric-cyan/30 ml-2">
+                    <!-- Model Kami Card -->
+                    <div class="bg-white p-6 md:p-8 border border-[#A5E3F0] rounded-2xl shadow-sm space-y-5">
+                        <h3 class="text-xl font-bold text-[#031A44]">Model Kami</h3>
+                        <div class="relative pl-5 space-y-6 border-l-2 border-[#12AED0] ml-1.5">
                             <div class="relative">
-                                <span
-                                    class="absolute -left-[31px] top-1 bg-electric-cyan w-3.5 h-3.5 rounded-full ring-4 ring-white"></span>
-                                <p class="font-bold text-sm text-electric-cyan">01. Discovery & Scoping</p>
-                                <p class="text-gray-600 text-xs">
-                                    Menentukan tujuan proyek, ruang lingkup, dan proposal solusi.
-                                </p>
+                                <span class="absolute -left-[26px] top-0.5 bg-[#12AED0] w-2.5 h-2.5 rounded-full ring-4 ring-white"></span>
+                                <h4 class="font-bold text-xs text-[#12AED0]">01. Discovery & Scoping</h4>
+                                <p class="text-gray-600 text-[11px] leading-relaxed mt-1">Menentukan tujuan proyek, ruang lingkup, dan proposal solusi.</p>
                             </div>
                             <div class="relative">
-                                <span
-                                    class="absolute -left-[31px] top-1 bg-electric-cyan w-3.5 h-3.5 rounded-full ring-4 ring-white"></span>
-                                <p class="font-bold text-sm text-electric-cyan">02. Design & Architecture</p>
-                                <p class="text-gray-600 text-xs">
-                                    Wireframes, desain sistem, dan rencana pengiriman.
-                                </p>
+                                <span class="absolute -left-[26px] top-0.5 bg-[#12AED0] w-2.5 h-2.5 rounded-full ring-4 ring-white"></span>
+                                <h4 class="font-bold text-xs text-[#12AED0]">02. Design & Architecture</h4>
+                                <p class="text-gray-600 text-[11px] leading-relaxed mt-1">Wireframes, desain sistem, dan rencana pengiriman.</p>
                             </div>
                             <div class="relative">
-                                <span
-                                    class="absolute -left-[31px] top-1 bg-electric-cyan w-3.5 h-3.5 rounded-full ring-4 ring-white"></span>
-                                <p class="font-bold text-sm text-electric-cyan">03. Agile Dev & QA</p>
-                                <p class="text-gray-600 text-xs">
-                                    Pengembangan berbasis Sprint dengan pengujian QA.
-                                </p>
+                                <span class="absolute -left-[26px] top-0.5 bg-[#12AED0] w-2.5 h-2.5 rounded-full ring-4 ring-white"></span>
+                                <h4 class="font-bold text-xs text-[#12AED0]">03. Agile Dev & QA</h4>
+                                <p class="text-gray-600 text-[11px] leading-relaxed mt-1">Pengembangan berbasis Sprint dengan pengujian QA.</p>
                             </div>
                             <div class="relative">
-                                <span
-                                    class="absolute -left-[31px] top-1 bg-electric-cyan w-3.5 h-3.5 rounded-full ring-4 ring-white"></span>
-                                <p class="font-bold text-sm text-electric-cyan">04. Handover & Support</p>
-                                <p class="text-gray-600 text-xs">
-                                    Serah terima formal, dukungan SLA, dan peta jalan.
-                                </p>
+                                <span class="absolute -left-[26px] top-0.5 bg-[#12AED0] w-2.5 h-2.5 rounded-full ring-4 ring-white"></span>
+                                <h4 class="font-bold text-xs text-[#12AED0]">04. Handover & Support</h4>
+                                <p class="text-gray-600 text-[11px] leading-relaxed mt-1">Serah terima formal, dukungan SLA, dan peta jalan.</p>
                             </div>
                         </div>
                     </div>
@@ -479,214 +276,163 @@
 
             </div>
         </section>
-
-        <!-- Partner Badge Section -->
-        @include('partials.partner-badge')
     </main>
 
-    <!-- Footer -->
     @include('partials.footer')
 
+    <!-- ================= SCRIPT UTAMA ================= -->
     <script>
-        (() => {
-            const LOCALE = "{{ app()->getLocale() }}";
-            const MSG = {
-                required: LOCALE === 'en' ? 'This field is required.' : 'Kolom ini wajib diisi.',
-                email: LOCALE === 'en' ? 'Please enter a valid email address.' :
-                    'Masukkan alamat email yang valid.',
-                phone: LOCALE === 'en' ? 'Enter a valid phone number (8-15 digits).' :
-                    'Masukkan nomor telepon yang valid (8-15 digit).',
-                minLength: (n) => LOCALE === 'en' ? `Minimum ${n} characters required.` : `Minimal ${n} karakter.`,
-                generic: LOCALE === 'en' ? 'Something went wrong. Please try again.' :
-                    'Terjadi kesalahan. Silakan coba lagi.',
-                network: LOCALE === 'en' ? 'Network error. Please check your connection and try again.' :
-                    'Gagal terhubung ke server. Periksa koneksi internet Anda dan coba lagi.',
-                success: LOCALE === 'en' ? 'Thank you! Your inquiry has been sent successfully.' :
-                    'Terima kasih! Pesan Anda berhasil dikirim. Tim kami akan segera menghubungi Anda.',
-            };
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('selectedDateInput');
+            const timeInput = document.getElementById('selectedTimeInput');
+            const calendarDays = document.getElementById('calendarDays');
+            const calendarMonthYear = document.getElementById('calendarMonthYear');
+            const prevMonthBtn = document.getElementById('prevMonthBtn');
+            const nextMonthBtn = document.getElementById('nextMonthBtn');
+            const contactForm = document.getElementById('contactForm');
+            const jsErrorAlert = document.getElementById('jsErrorAlert');
+            const jsErrorList = document.getElementById('jsErrorList');
 
-            const form = document.getElementById('contactForm');
-            if (!form) return;
+            // --- REAL TIME INITIALIZATION ---
+            // Secara dinamis memuat Bulan dan Tahun saat ini sesuai waktu asli komputer pengguna
+            let currentDate = new Date();
+            let selectedFormattedDate = formatDate(currentDate);
 
-            const alertBox = document.getElementById('formAlert');
-            const submitBtn = document.getElementById('contactSubmitBtn');
-            const submitLabel = document.getElementById('contactSubmitLabel');
-            const submitSpinner = document.getElementById('contactSubmitSpinner');
-            const originalLabel = submitLabel.textContent;
-            const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
 
-            const fieldRules = {
-                full_name: {
-                    required: true,
-                    minLength: 3
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                phone: {
-                    required: true
-                },
-                project_type: {
-                    required: true
-                },
-                message: {
-                    required: true,
-                    minLength: 10
-                },
-            };
-
-            function showFieldError(name, message) {
-                const input = form.querySelector(`[name="${name}"]`);
-                const errorEl = document.getElementById(`${name}_error`);
-                if (!input) return;
-                input.classList.add('field-error');
-                input.setAttribute('aria-invalid', 'true');
-                if (errorEl) {
-                    if (message) errorEl.textContent = message;
-                    errorEl.classList.add('active');
-                }
+            function formatDate(d) {
+                let year = d.getFullYear();
+                let month = String(d.getMonth() + 1).padStart(2, '0');
+                let day = String(d.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
             }
 
-            function clearFieldError(name) {
-                const input = form.querySelector(`[name="${name}"]`);
-                const errorEl = document.getElementById(`${name}_error`);
-                if (!input) return;
-                input.classList.remove('field-error');
-                input.removeAttribute('aria-invalid');
-                if (errorEl) errorEl.classList.remove('active');
-            }
+            function renderCalendar() {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth();
 
-            function clearAllErrors() {
-                Object.keys(fieldRules).forEach(clearFieldError);
-                ['company', 'position'].forEach(clearFieldError);
-            }
+                calendarMonthYear.innerText = `${monthNames[month]} ${year}`;
 
-            function validateField(name) {
-                const rules = fieldRules[name];
-                if (!rules) return true;
-                const input = form.querySelector(`[name="${name}"]`);
-                if (!input) return true;
-                const value = input.value.trim();
+                const firstDayIndex = new Date(year, month, 1).getDay();
+                const totalDays = new Date(year, month + 1, 0).getDate();
+                const prevLastDay = new Date(year, month, 0).getDate();
 
-                if (rules.required && !value) {
-                    showFieldError(name, MSG.required);
-                    return false;
+                let daysHTML = "";
+
+                // Padding bulan sebelumnya
+                for (let x = firstDayIndex; x > 0; x--) {
+                    daysHTML += `<div class="text-gray-400 py-1 select-none">${prevLastDay - x + 1}</div>`;
                 }
-                if (rules.minLength && value.length < rules.minLength) {
-                    showFieldError(name, MSG.minLength(rules.minLength));
-                    return false;
-                }
-                if (rules.email && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-                    showFieldError(name, MSG.email);
-                    return false;
-                }
-                clearFieldError(name);
-                return true;
-            }
 
-            function validateForm() {
-                let isValid = true;
-                Object.keys(fieldRules).forEach((name) => {
-                    if (!validateField(name)) isValid = false;
+                // Hari aktif
+                for (let i = 1; i <= totalDays; i++) {
+                    let monthStr = String(month + 1).padStart(2, '0');
+                    let dayStr = String(i).padStart(2, '0');
+                    let fullDateStr = `${year}-${monthStr}-${dayStr}`;
+
+                    let isActive = fullDateStr === selectedFormattedDate;
+
+                    daysHTML += `
+                        <button type="button" data-date="${fullDateStr}"
+                            class="cal-day py-1 rounded hover:bg-cyan-100 transition ${isActive ? 'cal-day-active' : ''}">
+                            ${i}
+                        </button>
+                    `;
+                }
+
+                // Padding bulan setelahnya
+                const totalCells = firstDayIndex + totalDays;
+                const nextDays = (7 - (totalCells % 7)) % 7;
+                for (let j = 1; j <= nextDays; j++) {
+                    daysHTML += `<div class="text-gray-400 py-1 select-none">${j}</div>`;
+                }
+
+                calendarDays.innerHTML = daysHTML;
+
+                // Update input tersembunyi
+                dateInput.value = selectedFormattedDate;
+
+                // Listener tombol kalender
+                document.querySelectorAll('.cal-day').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.cal-day').forEach(b => b.classList.remove('cal-day-active'));
+                        btn.classList.add('cal-day-active');
+                        selectedFormattedDate = btn.getAttribute('data-date');
+                        dateInput.value = selectedFormattedDate;
+                    });
                 });
-                return isValid;
             }
 
-            Object.keys(fieldRules).forEach((name) => {
-                const input = form.querySelector(`[name="${name}"]`);
-                if (!input) return;
-                input.addEventListener('blur', () => validateField(name));
-                input.addEventListener('input', () => {
-                    if (input.classList.contains('field-error')) validateField(name);
+            // Navigasi Bulan
+            prevMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                renderCalendar();
+            });
+
+            nextMonthBtn.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                renderCalendar();
+            });
+
+            // Jalankan Kalender Awal
+            renderCalendar();
+
+            // Handle Klik Jam
+            const timeButtons = document.querySelectorAll('.time-btn');
+            timeButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    timeButtons.forEach(b => b.classList.remove('time-slot-active'));
+                    btn.classList.add('time-slot-active');
+                    timeInput.value = btn.getAttribute('data-time');
                 });
             });
 
-            function showAlert(type, message) {
-                alertBox.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'bg-green-50', 'text-green-700');
-                if (type === 'success') {
-                    alertBox.classList.add('bg-green-50', 'text-green-700');
-                    alertBox.innerHTML =
-                        `<span class="material-symbols-outlined">check_circle</span><span>${message}</span>`;
-                } else {
-                    alertBox.classList.add('bg-red-50', 'text-red-700');
-                    alertBox.innerHTML = `<span class="material-symbols-outlined">error</span><span>${message}</span>`;
-                }
-                alertBox.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest'
-                });
-            }
-
-            function hideAlert() {
-                alertBox.classList.add('hidden');
-                alertBox.innerHTML = '';
-            }
-
-            function setLoading(isLoading) {
-                submitBtn.disabled = isLoading;
-                submitSpinner.classList.toggle('hidden', !isLoading);
-                submitSpinner.classList.toggle('animate-spin', isLoading);
-                submitLabel.textContent = isLoading ? (LOCALE === 'en' ? 'Sending...' : 'Mengirim...') : originalLabel;
-            }
-
-            form.addEventListener('submit', async (e) => {
+            // --- LOGIK DIRECT SUBMIT WHATSAPP INSTAN ---
+            contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                hideAlert();
-                clearAllErrors();
+                jsErrorAlert.classList.add('hidden');
+                jsErrorList.innerHTML = "";
 
-                if (!validateForm()) {
-                    const firstError = form.querySelector('.field-error');
-                    if (firstError) firstError.focus({
-                        preventScroll: false
-                    });
-                    showAlert('error', LOCALE === 'en' ?
-                        'Please fix the highlighted fields before submitting.' :
-                        'Mohon lengkapi kolom yang wajib diisi dengan benar.');
+                const fullName = document.getElementById('full_name').value;
+                const email = document.getElementById('email').value;
+                const company = document.getElementById('company').value || '-';
+                const systemUsed = document.getElementById('system_used').value || '-';
+                const needs = document.getElementById('needs').value;
+                const timeline = document.getElementById('timeline').value;
+                const selectedDate = dateInput.value;
+                const selectedTime = timeInput.value;
+
+                // Validasi manual slot waktu sebelum dialihkan
+                if (!selectedTime) {
+                    jsErrorAlert.classList.remove('hidden');
+                    jsErrorList.innerHTML = "<li>Silakan pilih slot waktu pertemuan terlebih dahulu.</li>";
                     return;
                 }
 
-                setLoading(true);
-                const formData = new FormData(form);
+                // Format Teks Pesan WhatsApp yang Indah
+                let message = `*Halo Nakala Digital, saya ingin menjadwalkan Sesi Discovery.*\n\n`;
+                message += `*Detail Profil:*\n`;
+                message += `• Nama Lengkap: ${fullName}\n`;
+                message += `• Email: ${email}\n`;
+                message += `• Perusahaan: ${company}\n`;
+                message += `• Sistem Saat Ini: ${systemUsed}\n\n`;
+                message += `*Kebutuhan Proyek:*\n`;
+                message += `• Kebutuhan: ${needs}\n`;
+                message += `• Target Implementasi: ${timeline}\n\n`;
+                message += `*Jadwal Discovery Terpilih:*\n`;
+                message += `• Tanggal: ${selectedDate}\n`;
+                message += `• Waktu/Jam: ${selectedTime} WIB`;
 
-                try {
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        headers: {
-                            'X-CSRF-TOKEN': csrfToken || '',
-                            'X-Requested-With': 'XMLHttpRequest',
-                            'Accept': 'application/json',
-                        },
-                        body: formData,
-                    });
+                const targetPhone = "628138853493";
+                const waUrl = `https://api.whatsapp.com/send?phone=${targetPhone}&text=${encodeURIComponent(message)}`;
 
-                    let payload = null;
-                    try {
-                        payload = await response.json();
-                    } catch (_) {}
-
-                    if (response.ok) {
-                        form.reset();
-                        clearAllErrors();
-                        showAlert('success', (payload && payload.message) || MSG.success);
-                    } else if (response.status === 422 && payload && payload.errors) {
-                        Object.entries(payload.errors).forEach(([field, messages]) => {
-                            showFieldError(field, Array.isArray(messages) ? messages[0] : messages);
-                        });
-                        showAlert('error', LOCALE === 'en' ?
-                            'Please fix the highlighted fields before submitting.' :
-                            'Mohon lengkapi kolom yang wajib diisi dengan benar.');
-                    } else {
-                        showAlert('error', (payload && payload.message) || MSG.generic);
-                    }
-                } catch (err) {
-                    console.error('Contact form submission failed:', err);
-                    showAlert('error', MSG.network);
-                } finally {
-                    setLoading(false);
-                }
+                // Jalankan Instant Redirect tanpa tertahan blocker browser
+                window.open(waUrl, '_blank');
             });
-        })();
+        });
     </script>
 </body>
 
