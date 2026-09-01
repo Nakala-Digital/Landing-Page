@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     <meta charset="utf-8" />
@@ -184,8 +184,12 @@
     class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
     @include('partials.navbar')
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-unit-xl overflow-hidden">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+    <header class="relative pt-32 pb-unit-xl overflow-hidden bg-gradient-to-br from-surface-container-lowest via-surface to-primary/5">
+        <div class="hero-grid-pattern absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        <div class="hero-orb pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div class="hero-orb hero-orb-delay pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-primary/20 blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div class="grid lg:grid-cols-2 gap-gutter items-center">
                 <div class="z-10">
                     <div
@@ -213,12 +217,48 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-12 lg:mt-0">
-                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <div class="relative rounded-[20px] overflow-hidden border-2 border-outline-variant shadow-2xl">
-                        <img alt="Strategic Roadmap" class="w-full h-auto object-cover"
-                            data-alt="A professional enterprise dashboard interface showing complex digital transformation roadmaps and technical architectures. The visual style is high-contrast with a midnight navy background and vibrant impact lime accents. The interface includes interactive gantt charts, KPI metrics, and system health status indicators, glowing softly against a dark, minimalist digital workspace background."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtRUftF0rI-CVIPCyxjoSYszWuTSBLLg6xy-DYz4UO-0utBeXCW0m8_qqBw30K3sdSaJ4lhUd_rFYcG7SUOsyXI3JSfuj3d-g_Bwjohi07wdbzEz0xZJUM4ZPnF8G7BS1-NRXLEq0UnATqZ6ZVx5Dxss6tdRWtFWD0LMczPvS6B9E9zBKmXxlSiDQjoiqpMPUf1WfmfwX0lFtE1i8cKdHiz0Kce57z3MUFe6RYmqeHH4LXCHch1gM7uEM3nvECcGNTpuQxRyVC9Eyq" />
+                <div class="relative mt-12 lg:mt-0 group min-h-[500px] flex items-center justify-center" id="hero-interactive-container" style="perspective: 1000px;">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/40 transition-colors duration-700"></div>
+                    
+                    <!-- Center Anchor Image -->
+                    <div id="hero-center-img" class="relative z-10 rounded-[20px] shadow-2xl transition-all duration-300 transform" style="transform-style: preserve-3d; will-change: transform; max-width: 320px;">
+                        <img alt="Technology Professional" class="w-full h-auto object-cover pointer-events-none rounded-[20px]" src="{{ asset('assets/hero_center_person.png') }}" />
+                    </div>
+
+                    <!-- Floating Card 1: AI & GenAI -->
+                    <div class="hero-floating-card absolute z-20 -top-8 -left-8 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.5" data-direction="-1,-1">
+                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">AI & GenAI</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 2: Custom Software -->
+                    <div class="hero-floating-card absolute z-20 top-1/4 -right-12 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="2" data-direction="1,-0.5">
+                        <span class="material-symbols-outlined text-tertiary text-2xl" data-icon="code" style="font-variation-settings: 'FILL' 1;">code</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Custom Software</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 3: Web Portals -->
+                    <div class="hero-floating-card absolute z-20 bottom-1/4 -left-12 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.2" data-direction="-1,1">
+                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Web & Portals</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 4: Data Engineering -->
+                    <div class="hero-floating-card absolute z-20 -bottom-8 right-0 bg-white border border-outline-variant rounded-xl p-4 shadow-xl flex items-center gap-3 transition-transform duration-300" data-speed="1.8" data-direction="1,1">
+                        <span class="material-symbols-outlined text-tertiary text-2xl" data-icon="database" style="font-variation-settings: 'FILL' 1;">database</span>
+                        <div>
+                            <p class="font-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">{{ app()->getLocale() === 'en' ? 'Pillar' : 'Pilar' }}</p>
+                            <p class="font-button text-on-background text-sm">Data Engineering</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -239,152 +279,17 @@
                 </p>
             </div>
             <!-- Bento Grid Services -->
-            <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">
-                <!-- 1. AI & GenAI -->
-                <div
-                    class="md:col-span-3 lg:col-span-4 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="psychology"
-                        style="font-variation-settings: 'FILL' 1;">psychology</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'AI & GenAI' : 'AI & GenAI' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Implementing state-of-the-art Generative AI for operational efficiency and automated customer engagement.' : 'Menerapkan AI Generatif canggih untuk efisiensi operasional dan keterlibatan pelanggan otomatis.' }}
-                    </p>
-                    <ul class="space-y-3 font-label-sm text-label-sm text-primary uppercase tracking-wider">
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Custom AI Model Development' : 'Kustomisasi Model AI' }}
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Business Process Automation' : 'Otomasi Proses Bisnis' }}
-                        </li>
-                        <li class="flex items-center gap-2"><span
-                                class="material-symbols-outlined scale-75">check_circle</span>
-                            {{ app()->getLocale() === 'en' ? 'Predictive Analytics' : 'Analitik Prediktif' }}</li>
-                    </ul>
-                </div>
-                <!-- 2. Custom Software Dev -->
-                <div
-                    class="md:col-span-3 lg:col-span-8 bg-on-secondary-fixed text-white p-unit-lg service-card flex flex-col md:flex-row gap-gutter rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex-1">
-                        <span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6"
-                            data-icon="code">code</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                            {{ app()->getLocale() === 'en' ? 'Custom Software Dev' : 'Pengembangan Software Kustom' }}
-                        </h3>
-                        <p class="font-body-md text-body-md text-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'Bespoke software solutions crafted for unique business processes and high-performance requirements.' : 'Solusi perangkat lunak khusus yang dirancang untuk proses bisnis unik dan persyaratan performa tinggi.' }}
-                        </p>
-                        <ul
-                            class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-label-sm text-label-sm text-tertiary-fixed uppercase tracking-wider">
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Enterprise Applications' : 'Aplikasi Enterprise' }}
-                            </li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Scalable Platform Architecture' : 'Sistem Terukur' }}
-                            </li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'System Modernization' : 'Modernisasi Sistem' }}</li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined scale-75">check_circle</span>
-                                {{ app()->getLocale() === 'en' ? 'Cloud Integration' : 'Integrasi Cloud' }}</li>
-                        </ul>
-                    </div>
-                    <div
-                        class="w-full md:w-1/3 bg-white/5 rounded-[16px] overflow-hidden border border-white/10 hidden lg:block">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all"
-                            data-alt="A futuristic software development environment with multiple high-resolution monitors displaying complex lines of code and dark-themed UI mockups. The room is dimly lit with a professional midnight navy ambiance and neon blue accents highlighting the workspace. A high-tier workstation sits at the center, symbolizing technical rigor and precision craftsmanship in modern corporate software engineering."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYS2YWTvwWHj4QFP28CssIPWEpvrgnPcgAF9hFVibVwA-gh3A3L5RgeltvRgoBStWyfvtsLZ3XtJ0uotY0jjB25-_bjmLmt3p_8It06RMYUzopoC0UeaxvL9LqmeTiBR8nc0YFFK3JifErMagfxj1EkMH8DhaJiuf154Ed4kp0XwEQ3Up1zBXkshsOLsYIOnBz9BI6SIwZegE5C8GqkZIkJp5cvTOwSaJC9Y_CdAgP_PH-DXqN3_Ui-zxqY-5HFoFOmltnkTKu1kf" />
-                    </div>
-                </div>
-                <!-- 3. Tech Consulting -->
-                <div
-                    class="md:col-span-6 lg:col-span-6 bg-white border border-outline-variant p-unit-lg service-card rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex items-start justify-between mb-6">
-                        <span class="material-symbols-outlined text-primary text-5xl"
-                            data-icon="query_stats">query_stats</span>
-                        <span
-                            class="bg-primary-container/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">{{ app()->getLocale() === 'en' ? 'CONSULTANCY' : 'KONSULTANSI' }}</span>
-                    </div>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'Tech Consulting' : 'Konsultasi Teknologi' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        {{ app()->getLocale() === 'en' ? 'Strategic advice to align technology investment with business growth and regional market expansion.' : 'Nasihat strategis untuk menyelaraskan investasi teknologi dengan pertumbuhan bisnis dan ekspansi pasar regional.' }}
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div
-                            class="p-4 bg-surface-container rounded-[14px] hover:bg-surface-container-high transition-colors duration-300">
-                            <h4 class="font-bold text-on-surface mb-1">
-                                {{ app()->getLocale() === 'en' ? 'Architecture Review' : 'Tinjauan Arsitektur' }}</h4>
-                            <p class="text-xs text-on-surface-variant">
-                                {{ app()->getLocale() === 'en' ? 'System audits and scalability assessments.' : 'Audit sistem dan penilaian skalabilitas.' }}
-                            </p>
-                        </div>
-                        <div
-                            class="p-4 bg-surface-container rounded-[14px] hover:bg-surface-container-high transition-colors duration-300">
-                            <h4 class="font-bold text-on-surface mb-1">
-                                {{ app()->getLocale() === 'en' ? 'Digital Roadmap' : 'Peta Jalan Digital' }}</h4>
-                            <p class="text-xs text-on-surface-variant">
-                                {{ app()->getLocale() === 'en' ? 'Phased transformation strategy.' : 'Strategi transformasi bertahap.' }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4. Web & Portal -->
-                <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-tertiary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-tertiary text-5xl mb-6" data-icon="web">web</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'Web & Portal' : 'Web & Portal' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Engaging digital interfaces and high-traffic portals for B2B and B2C segments.' : 'Antarmuka digital yang menarik dan portal trafik tinggi untuk segmen B2B dan B2C.' }}
-                    </p>
-                </div>
-                <!-- 5. QA Governance -->
-                <div
-                    class="md:col-span-3 lg:col-span-3 bg-white border border-outline-variant p-unit-lg service-card border-t-4 border-t-primary rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="verified_user"
-                        style="font-variation-settings: 'FILL' 1;">verified_user</span>
-                    <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                        {{ app()->getLocale() === 'en' ? 'QA Governance' : 'Tata Kelola QA' }}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        {{ app()->getLocale() === 'en' ? 'Ensuring zero-defect deployment with automated testing frameworks and standards.' : 'Memastikan penerapan tanpa cacat dengan kerangka pengujian dan standar otomatis.' }}
-                    </p>
-                </div>
-                <!-- 6. Managed Support & D365 -->
-                <div
-                    class="md:col-span-6 lg:col-span-12 bg-surface-container-highest border border-outline-variant p-unit-lg service-card flex flex-col md:flex-row items-center gap-unit-lg rounded-[20px] shadow-sm hover:shadow-2xl">
-                    <div class="flex-1">
-                        <span class="material-symbols-outlined text-primary text-5xl mb-6"
-                            data-icon="support_agent">support_agent</span>
-                        <h3 class="font-headline-h3 text-headline-h3 mb-4">
-                            {{ app()->getLocale() === 'en' ? 'Managed Support & Dynamics 365' : 'Managed Support & Dynamics 365' }}
-                        </h3>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                            {{ app()->getLocale() === 'en' ? 'End-to-end management of Microsoft D365 ecosystems and 24/7 technical support operations.' : 'Manajemen ujung-ke-ujung ekosistem Microsoft D365 dan operasi dukungan teknis 24/7.' }}
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'L1/L2/L3 Support' : 'Dukungan L1/L2/L3' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'D365 Implementation' : 'Implementasi D365' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? 'Cloud Migration' : 'Migrasi Cloud' }}</span>
-                            <span
-                                class="px-4 py-2 bg-white border border-outline-variant font-label-sm text-label-sm rounded-full uppercase">{{ app()->getLocale() === 'en' ? '24/7 Monitoring' : 'Pemantauan 24/7' }}</span>
-                        </div>
-                    </div>
-                    <div
-                        class="w-full md:w-1/4 aspect-square bg-primary p-6 rounded-[20px] flex flex-col justify-center items-center text-center text-white">
-                        <div class="text-4xl font-bold mb-2">{{ app()->getLocale() === 'en' ? 'SLA' : 'SLA' }}</div>
-                        <div class="text-sm font-label-sm uppercase tracking-widest opacity-80">
-                            {{ app()->getLocale() === 'en' ? 'Flexible SLAs' : 'SLA Fleksibel' }}</div>
-                    </div>
-                </div>
+            @php
+                $services = config('service-pillars.pillars');
+                $locale = app()->getLocale();
+            @endphp
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                @foreach ($services as $service)
+                    @include('partials.service-card', [
+                        'service' => $service,
+                        'locale' => $locale,
+                    ])
+                @endforeach
             </div>
         </div>
     </section>
@@ -397,7 +302,7 @@
                 [
                     'id' => 'ai-hiring',
                     'icon' => 'psychology',
-                    'span' => 'md:col-span-8',
+                    'span' => 'md:col-span-4',
                     'featured' => true,
                     'title' => [
                         'en' => 'AI Hiring / GenAI Recruitment',
@@ -574,67 +479,6 @@
                         ],
                     ],
                     'capability' => 'Operational Systems, Custom Software Development, QA Governance',
-                ],
-                [
-                    'id' => 'wargakas',
-                    'icon' => 'payments',
-                    'span' => 'md:col-span-4',
-                    'dark' => true,
-                    'title' => [
-                        'en' => 'Wargakas',
-                        'id' => 'Wargakas',
-                    ],
-                    'category' => [
-                        'en' => 'Residential Cash Management Platform',
-                        'id' => 'Platform Manajemen Kas Lingkungan',
-                    ],
-                    'summary' => [
-                        'en' =>
-                            'Digital cash management platform for residential communities covering billing, payment tracking, finance dashboards, and resident portals.',
-                        'id' =>
-                            'Platform manajemen kas digital untuk lingkungan hunian dengan billing, tracking pembayaran, dashboard finansial, dan portal warga.',
-                    ],
-                    'challenge' => [
-                        'en' =>
-                            'Residential communities manage monthly dues, facility fees, and cash flow through manual collection and informal records.',
-                        'id' =>
-                            'Komunitas hunian mengelola iuran bulanan, biaya fasilitas, dan arus kas lewat penagihan manual dan catatan informal.',
-                    ],
-                    'solution' => [
-                        'en' =>
-                            'Wargakas enables transparent billing, payment tracking, financial reporting, and resident-facing visibility.',
-                        'id' =>
-                            'Wargakas menghadirkan billing transparan, tracking pembayaran, laporan finansial, dan visibilitas untuk warga.',
-                    ],
-                    'features' => [
-                        'en' => [
-                            'Resident billing and invoicing',
-                            'Payment tracking and expense management',
-                            'Financial dashboard',
-                            'Resident portal and admin reporting',
-                        ],
-                        'id' => [
-                            'Billing dan invoice warga',
-                            'Tracking pembayaran dan manajemen pengeluaran',
-                            'Dashboard finansial',
-                            'Portal warga dan laporan admin',
-                        ],
-                    ],
-                    'impact' => [
-                        'en' => [
-                            'Transparent and auditable community finance',
-                            'Reduced manual collection effort',
-                            'Improved resident trust through real-time visibility',
-                            'Scalable for multiple residential clusters',
-                        ],
-                        'id' => [
-                            'Keuangan komunitas lebih transparan dan auditable',
-                            'Beban penagihan manual berkurang',
-                            'Kepercayaan warga naik lewat visibilitas real-time',
-                            'Skalabel untuk banyak cluster hunian',
-                        ],
-                    ],
-                    'capability' => 'Custom Software Development, Web & Portal Development, SaaS Platform',
                 ],
                 [
                     'id' => 'ppdb-school',
@@ -950,33 +794,33 @@
             <h2 class="font-headline-h2 mb-unit-lg">
                 {{ app()->getLocale() === 'en' ? 'Regional Service Excellence' : 'Keunggulan Layanan Regional' }}</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-primary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Custom AI Models' : 'Model AI Kustom' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Building proprietary neural networks tailored to Indonesian linguistic nuances and consumer behavior patterns.' : 'Membangun jaringan saraf tiruan proprietary yang disesuaikan dengan nuansa linguistik Indonesia dan pola perilaku konsumen.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="A clean, minimalist 3D rendering of a human brain silhouette constructed from glowing cyan fiber optic lines. The background is a crisp, sterile white, reflecting a light-mode modern aesthetic. Tiny particles of impact lime energy orbit the brain, symbolizing active generative AI and neural processing. The overall mood is sophisticated, technical, and visionary."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZsssdKLtkzueklGWdgMkw8L8KeHqUg-gs2up5aCh-gt1jvoqkvF_vHFYNm52kSdE_ZevSbKBpTmZKvChiwlxSfgxWcbWQBc4r0URNxka1X4pemelt9wLZFLCKVNEFVaz-F0z8atrHX7BPMv92OesIifP4KZHxihIM6Vh6WP3JcJh-KzYyUVDmN80h2wl1p3v4uzEVUxRorP99-UY1sMMUpI5eYF_HHAB870yoXwOR-lQcSJrCtTI5Z48V_xhcjUt1IewyfDEs-Tq" />
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-tertiary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Enterprise Portals' : 'Portal Perusahaan' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Secure, scalable, and localized portals for regional logistics and distribution networks across Southeast Asia.' : 'Portal yang aman, skalabel, dan terlokalisasi untuk jaringan logistik dan distribusi regional di seluruh Asia Tenggara.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="An isometric technical illustration of a global logistics network with interconnected shipping nodes and digital data streams. The design uses a bold, high-contrast palette of impact lime and midnight navy. Glowing lines connect various stylized cityscapes, representing regional delivery capabilities and digital connectivity in a professional corporate environment."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-AXleTxxk8ZxGeWyDmtGbin_jeBfaYYtL7Wcn_Sed-H_MlzBcd0nfRfkVN1tLvUXOj259b0w__xuNiznSt5qU2HrVuv-5wkvki-blo_4dadmHDZkw8mAo0QJW59snMpIcWYRp49NWYI2zX-vjpP0YDf03Huzn9lWfNGa84P7CZO05bq4d6HdD2PClw54CU1LYpG2btXA7zZ7Jwn6J7CiQMW0BVdbhzJyPX9TlTmw0n9LPDImoXXFYhxtLkfDlYPWefMAaJagYDVX" />
                 </div>
-                <div class="space-y-6">
+                <div class="flex flex-col h-full space-y-6">
                     <h4 class="font-headline-h3 border-l-4 border-secondary pl-4">
                         {{ app()->getLocale() === 'en' ? 'Legacy Overhaul' : 'Perombakan Sistem Lama' }}</h4>
-                    <p class="text-on-surface-variant">
+                    <p class="text-on-surface-variant flex-grow">
                         {{ app()->getLocale() === 'en' ? 'Seamlessly transitioning monolithic systems to agile microservices without disrupting local operations.' : 'Transisi mulus dari sistem monolitik ke microservices yang lincah tanpa mengganggu operasi lokal.' }}
                     </p>
-                    <img class="w-full rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
+                    <img class="w-full aspect-square object-cover mt-auto rounded-[20px] shadow-md hover:shadow-xl transition-shadow duration-300"
                         data-alt="A conceptual visualization of digital transformation showing a crumbling grey stone structure being replaced by vibrant, glowing cyan geometric cubes. The lighting is high-key with soft shadows on a light grey background. The image represents the transition from legacy systems to modern, cloud-native architecture with a focus on technical reliability and modern corporate aesthetics."
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAOKFDTr6_voBBypZAFlVCxl67lbWO_ePQbX9a5bzWzPiT4fArb1YcGWOAIRZ6bKLN4lphcP0pYATRd6GTPm15fU31NqK04GavdGbvXYPwg6m7lEAldkmFPPrmLBMOFp3KZSpZClOMQdFdhCNK3iXoQb6OPXxXNwiaIVm-xo5IgrVMWJSlw5zzFfu4h5ixORnphUHULOTnyOF5TLHT5Ahp_1i0ky1gqOU5aVDFftYMNqdQIM11yROe0oVCY0PBazdhzkjWveX3deKd" />
                 </div>
@@ -985,6 +829,7 @@
     </section>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Micro-interactions
         document.querySelectorAll('.service-card').forEach(card => {
@@ -1012,6 +857,98 @@
             } else {
                 header.classList.remove('py-2', 'shadow-md', 'h-16');
                 header.classList.add('h-20');
+            }
+        });
+
+        // Interactive Hero Floating Cards
+        const heroContainer = document.getElementById('hero-interactive-container');
+        const centerImg = document.getElementById('hero-center-img');
+        const floatingCards = document.querySelectorAll('.hero-floating-card');
+
+        if (heroContainer) {
+            // 1. Hover Parallax Effect
+            heroContainer.addEventListener('mousemove', (e) => {
+                const rect = heroContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                
+                // Tilt the center image slightly
+                if(centerImg) {
+                    centerImg.style.transform = `scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                }
+
+                // Parallax the floating cards slightly
+                floatingCards.forEach(card => {
+                    const speed = parseFloat(card.getAttribute('data-speed')) || 1;
+                    const moveX = ((x - centerX) / centerX) * (15 * speed);
+                    const moveY = ((y - centerY) / centerY) * (15 * speed);
+                    
+                    // We preserve the scroll-based transform by using a CSS variable or directly applying it.
+                    // For simplicity, we just add hover translation on top of whatever current state it has.
+                    // Wait, combining scroll and hover transforms manually can be tricky. 
+                    // Let's store the base transform from scroll.
+                    card.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+                });
+            });
+
+            heroContainer.addEventListener('mouseleave', () => {
+                if(centerImg) {
+                    centerImg.style.transform = 'scale(1) rotateX(0) rotateY(0)';
+                }
+                floatingCards.forEach(card => {
+                    // Reset to just the scroll position (handled by the scroll listener)
+                    // For mouseleave, just trigger a scroll event to recalculate
+                    window.dispatchEvent(new Event('scroll'));
+                });
+            });
+        }
+
+        // 2. Scroll-Driven Disappearance Animation (Suck into iPad)
+        window.addEventListener('scroll', () => {
+            if (!heroContainer) return;
+            
+            const scrollY = window.scrollY;
+            const heroHeight = document.querySelector('header').offsetHeight;
+            
+            // Calculate progress (0 at top, 1 at bottom of hero)
+            let progress = Math.min(scrollY / (heroHeight * 0.8), 1);
+            
+            floatingCards.forEach((card, index) => {
+                const speed = parseFloat(card.getAttribute('data-speed')) || 1;
+                const [dirX, dirY] = (card.getAttribute('data-direction') || '1,1').split(',').map(Number);
+                
+                // Add staggered effect so they disappear one by one
+                const staggerDelay = index * 0.15;
+                let cardProgress = Math.max(0, (progress - staggerDelay) * (1 / (1 - staggerDelay)));
+                cardProgress = Math.min(cardProgress, 1);
+                
+                // Calculate movement TOWARDS the center (iPad)
+                // We reverse dirX and dirY because they represent the outward direction
+                const moveX = -dirX * cardProgress * 300 * speed;
+                
+                // Add a slight positive Y offset so they converge lower down (where the iPad is held)
+                const moveY = -dirY * cardProgress * 300 * speed + (cardProgress * 150); 
+                
+                // Shrink as it goes into the iPad
+                const scale = 1 - (cardProgress * 0.8); 
+                const opacity = 1 - (cardProgress * 1.5); // Fade out
+                
+                card.style.transform = `translate(${moveX}px, ${moveY}px) scale(${scale})`;
+                card.style.opacity = Math.max(0, opacity);
+            });
+            
+            // Optionally fade out the center image too, but keep it visible slightly longer
+            if (centerImg) {
+                const centerOpacity = 1 - (progress * 1.5);
+                const centerScale = 1 - (progress * 0.1);
+                centerImg.style.opacity = Math.max(0, centerOpacity);
+                centerImg.style.transform = `scale(${centerScale})`;
             }
         });
     </script>

@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
+<!--
+  ============================================================
+  CONTACT PAGE – Nakala Digital
+  ============================================================
+  File        : contact.blade.php
+  Route       : /contact (ID) | /en/contact (EN)
+  Purpose     : Main contact/inquiry page with hero, info panel,
+                contact form, WhatsApp CTA, and engagement model.
+  Dependencies: tailwindcss (CDN), Material Symbols, Poppins (Google Fonts)
+  ============================================================
+-->
+
+<html lang="{{ app()->getLocale() }}">
 
 <head>
+    <!--
+      ========================================================
+      META & SEO
+      ========================================================
+      - Dynamic title based on locale.
+      - Includes SEO partial for og:tags / meta description.
+    -->
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -10,7 +30,19 @@
         'title' => app()->getLocale() === 'en' ? 'Contact Us | Nakala Digital' : 'Hubungi Kami | Nakala Digital',
         'description' =>
             app()->getLocale() === 'en' ? 'Get in touch with Nakala Digital...' : 'Hubungi Nakala Digital...',
+            app()->getLocale() === 'en'
+                ? 'Get in touch with Nakala Digital to discuss your next software or AI project.'
+                : 'Hubungi Nakala Digital untuk mendiskusikan proyek software, AI, atau transformasi digital Anda selanjutnya.',
     ])
+
+    <!--
+      ========================================================
+      Tailwind CSS (CDN) – v4 with forms & container-queries
+      ========================================================
+      - Tailwind config is embedded below with custom design tokens:
+        colors, spacing, fontFamily, fontSize, borderRadius.
+      - All tokens follow Nakala Digital's design system.
+    -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -34,6 +66,15 @@
             },
         }
     </script>
+
+    <!--
+      ========================================================
+      CUSTOM STYLES
+      ========================================================
+      - .material-symbols-outlined : icon font settings.
+      - .bento-grid               : 12-column grid helper.
+      - .form-input-focus         : focus ring override for form fields.
+    -->
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -214,6 +255,82 @@
                         <div class="space-y-5 text-xs">
                             <div class="flex items-start gap-3.5">
                                 <span class="material-symbols-outlined text-[#A7F432] text-xl">mail</span>
+<body class="bg-background text-on-background font-body-md">
+
+    <!--
+      ========================================================
+      NAVBAR (partial)
+      ========================================================
+      Fixed top navigation with logo, desktop nav links, language
+      switcher, CTA button, and mobile hamburger menu.
+    -->
+    @include('partials.navbar')
+
+    <main class="pt-20">
+
+        <!--
+          ======================================================
+          HERO SECTION
+          ======================================================
+          - Full-width midnight navy background with overlay image.
+          - Tagline badge + headline + description.
+          - Content is constrained by max-w-container-max.
+        -->
+        <section class="relative bg-midnight-navy text-white py-unit-xl overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img class="w-full h-full object-cover"
+                    data-alt="A sophisticated architectural photograph of a modern high-tech office building at dusk with sharp glass lines and cool blue lighting. The atmosphere is professional and authoritative, reflecting the corporate identity of a premium digital partner. Deep navy shadows contrast with illuminated office windows, creating a sense of scale and technical precision in a minimalist urban setting."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-mtSPaRJvm3MMZPT-yRQF923u69JQwGRSDLW7GDzfw2tcz6oO2ynBG2d3_t5zdC_FBhlDRkk-9y3yY0JzS7rFvDQexsa7JZ4DRXeLMKL3t8M_43QD85Q-KSarD1-hJij4pKrrGna1weJMejvO10fBODl8EPk73DVv7OQBLJwQXTl9U_ge9briz4frpYKGM4ClHfPi877YhqVyyUBk63suAmUwBIjUo6e152x2G6-iiaTAIBE4ERjWSwCn8L_S_2obDvQb9129h-Yv" />
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-lg">
+                <div
+                    class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm text-label-sm uppercase tracking-widest mb-unit-md">
+                    <span class="material-symbols-outlined text-[16px]">public</span>
+                    {{ app()->getLocale() === 'en' ? 'Local & Regional' : 'Lokal & Regional' }}
+                </div>
+                <h1
+                    class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white max-w-3xl mb-unit-md">
+                    {{ app()->getLocale() === 'en' ? "Let's build the digital future together" : 'Mari bangun masa depan digital bersama' }}
+                </h1>
+                <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
+                    {{ app()->getLocale() === 'en' ? 'Nakala Digital brings regional capability with a local touch. Tell us about your project.' : 'Nakala Digital menghadirkan kapabilitas regional dengan sentuhan lokal. Ceritakan tentang proyek Anda.' }}
+                </p>
+            </div>
+        </section>
+
+        <!--
+          ======================================================
+          CONTENT & FORM SECTION
+          ======================================================
+          12-column grid layout:
+          - LEFT (lg:col-span-4) : Contact info, WhatsApp CTA,
+            engagement model timeline.
+          - RIGHT (lg:col-span-8): Contact form with name, company,
+            position, email, phone, project type, budget, timeline,
+            and message textarea.
+        -->
+        <section class="py-unit-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+                <!--
+                  ====================================================
+                  LEFT PANEL — Contact Information
+                  ====================================================
+                  Card with border-t-4 in electric-cyan containing:
+                  - Email    (contact@nakala.digital)
+                  - Phone    (+6282295706304)
+                  - Office   (Pointlab Coworking, Bandung)
+                  - Consultation session CTA
+                -->
+                <div class="lg:col-span-4 space-y-unit-lg">
+                    <div class="p-unit-lg bg-white border border-outline-variant border-t-4 border-t-electric-cyan">
+                        <h3 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Contact Information' : 'Informasi Kontak' }}</h3>
+                        <div class="space-y-unit-md">
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-unit-md">
+                                <span class="material-symbols-outlined text-electric-cyan" data-icon="mail">mail</span>
                                 <div>
                                     <p class="text-white font-bold text-sm mb-0.5">Email</p>
                                     <p class="text-gray-300 font-light">contact@nakala.digital</p>
@@ -221,6 +338,11 @@
                             </div>
                             <div class="flex items-start gap-3.5">
                                 <span class="material-symbols-outlined text-[#A7F432] text-xl">call</span>
+
+                            <!-- Phone -->
+                            <div class="flex items-start gap-unit-md">
+                                <span class="material-symbols-outlined text-electric-cyan"
+                                    data-icon="phone">phone</span>
                                 <div>
                                     <p class="text-white font-bold text-sm mb-0.5">Telepon</p>
                                     <p class="text-gray-300 font-light">+6282295706304</p>
@@ -228,6 +350,11 @@
                             </div>
                             <div class="flex items-start gap-3.5">
                                 <span class="material-symbols-outlined text-[#A7F432] text-xl">calendar_today</span>
+
+                            <!-- Office Address -->
+                            <div class="flex items-start gap-unit-md">
+                                <span class="material-symbols-outlined text-electric-cyan"
+                                    data-icon="location_on">location_on</span>
                                 <div>
                                     <p class="text-white font-bold text-sm mb-0.5">Sesi Discovery</p>
                                     <p class="text-gray-300 font-light">Sesi Discovery Gratis</p>
@@ -240,6 +367,17 @@
                                     <p class="text-gray-300 font-light leading-relaxed">
                                         Pointlab Coworking Space, Graha Pos Indonesia, Jl. Banda No.30 Lantai 2 Blok C,
                                         Citarum, Bandung Wetan, Bandung City, West Java 40115
+
+                            <!-- Consultation Session -->
+                            <div class="flex items-start gap-unit-md">
+                                <span class="material-symbols-outlined text-electric-cyan"
+                                    data-icon="calendar_month">calendar_month</span>
+                                <div>
+                                    <p class="font-label-sm uppercase text-on-surface-variant">
+                                        {{ app()->getLocale() === 'en' ? 'Discovery Session' : 'Sesi Discovery' }}
+                                    </p>
+                                    <p class="font-body-lg">
+                                        {{ app()->getLocale() === 'en' ? 'Free Discovery Session' : 'Sesi Discovery Gratis' }}
                                     </p>
                                 </div>
                             </div>
@@ -269,6 +407,74 @@
                                 <span class="absolute -left-[26px] top-0.5 bg-[#12AED0] w-2.5 h-2.5 rounded-full ring-4 ring-white"></span>
                                 <h4 class="font-bold text-xs text-[#12AED0]">04. Handover & Support</h4>
                                 <p class="text-gray-600 text-[11px] leading-relaxed mt-1">Serah terima formal, dukungan SLA, dan peta jalan.</p>
+                    <!--
+                      ====================================================
+                      WHATSAPP CTA
+                      ====================================================
+                      - Quick-response card with chat icon.
+                      - Button opens wa.me link in new tab.
+                      - Uses rel="noopener noreferrer" for security.
+                    -->
+                    <div
+                        class="p-unit-lg bg-white border border-outline-variant shadow-sm border-l-4 border-l-primary flex flex-col gap-unit-md">
+                        <div class="flex items-center gap-unit-md">
+                            <div
+                                class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[24px]">forum</span>
+                            </div>
+                            <div>
+                                <p class="font-label-sm uppercase tracking-widest text-on-surface-variant mb-1">
+                                    {{ app()->getLocale() === 'en' ? 'Quick Response' : 'Respons Cepat' }}</p>
+                                <p class="font-headline-h3 text-xl font-bold text-on-surface">
+                                    {{ app()->getLocale() === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp' }}</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6282295706304" target="_blank" rel="noopener noreferrer"
+                            class="mt-2 w-full flex items-center justify-center gap-2 text-center bg-primary text-white px-6 py-3 rounded-[20px] font-button text-button uppercase tracking-widest hover:opacity-90 transition-opacity">
+                            {{ app()->getLocale() === 'en' ? 'Message Us' : 'Hubungi Kami' }}
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <!--
+                      ====================================================
+                      ENGAGEMENT MODEL
+                      ====================================================
+                      Timeline with vertical line and dots showing the
+                      4-step delivery process:
+                      01. Discovery → 02. Design → 03. Agile Dev → 04. Handover
+                    -->
+                    <div class="p-unit-lg bg-surface-container-low border border-outline-variant">
+                        <h4 class="font-headline-h3 text-headline-h3 mb-unit-md">
+                            {{ app()->getLocale() === 'en' ? 'Our Model' : 'Model Kami' }}</h4>
+                        <div class="relative pl-6 space-y-unit-lg border-l-2 border-outline-variant">
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                                <p class="font-button text-button text-primary">01. Discovery &amp; Scoping</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Defining project goals, scope, and solution proposal.' : 'Menentukan tujuan proyek, ruang lingkup, dan proposal solusi.' }}
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                                <p class="font-button text-button text-primary">02. Design &amp; Architecture</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Wireframes, system design, and delivery plan.' : 'Wireframes, desain sistem, dan rencana pengiriman.' }}
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                                <p class="font-button text-button text-primary">03. Agile Dev &amp; QA</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Sprint-based development with QA testing.' : 'Pengembangan berbasis Sprint dengan pengujian QA.' }}
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-0 bg-electric-cyan w-4 h-4 rounded-full"></span>
+                                <p class="font-button text-button text-primary">04. Handover &amp; Support</p>
+                                <p class="text-on-surface-variant text-sm">
+                                    {{ app()->getLocale() === 'en' ? 'Formal handover, SLA support, and growth roadmap.' : 'Serah terima formal, dukungan SLA, dan peta jalan.' }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -281,6 +487,159 @@
     @include('partials.footer')
 
     <!-- ================= SCRIPT UTAMA ================= -->
+                <!--
+                  ====================================================
+                  RIGHT PANEL — Contact Form
+                  ====================================================
+                  Form fields:
+                  - Row 1: Full Name + Company
+                  - Row 2: Position + Email
+                  - Row 3: Phone + Project Type (dropdown)
+                  - Row 4: Budget Range (dropdown) + Timeline (dropdown)
+                  - Row 5: Message / Project Details (textarea)
+                  - Submit button
+                  On submit, sends data via mailto: link.
+                -->
+                <div class="lg:col-span-8 flex flex-col gap-unit-xs">
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] block">{{ app()->getLocale() === 'en' ? 'Contact Form' : 'Formulir Kontak' }}</span>
+                    <div class="bg-white p-unit-lg md:p-unit-xl border border-outline-variant shadow-sm">
+                        <form class="space-y-unit-md" id="contactForm">
+
+                            <!-- Row 1: Full Name + Company -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Full Name' : 'Nama Lengkap' }}</label>
+                                    <input
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. John Doe' : 'Contoh: Budi Santoso' }}"
+                                        type="text" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Company' : 'Perusahaan' }}</label>
+                                    <input
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. Acme Corp' : 'Contoh: PT ABC' }}"
+                                        type="text" />
+                                </div>
+                            </div>
+
+                            <!-- Row 2: Position + Email -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Position' : 'Jabatan' }}</label>
+                                    <input
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
+                                        placeholder="{{ app()->getLocale() === 'en' ? 'e.g. CTO' : 'Contoh: CTO / Direktur' }}"
+                                        type="text" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Email Address' : 'Alamat Email' }}</label>
+                                    <input
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
+                                        placeholder="john@company.com" type="email" />
+                                </div>
+                            </div>
+
+                            <!-- Row 3: Phone + Project Type -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Phone Number' : 'Nomor Telepon' }}</label>
+                                    <input
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest"
+                                        placeholder="+62..." type="tel" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Project Type' : 'Jenis Proyek' }}</label>
+                                    <select
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
+                                        <option>{{ app()->getLocale() === 'en' ? 'Website / Portal' : 'Website / Portal' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Mobile Application' : 'Aplikasi Mobile' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'AI / Automation Solution' : 'Solusi AI / Otomatisasi' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Custom Business System' : 'Sistem Bisnis Kustom' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'QA / Software Testing' : 'QA / Pengujian Software' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Other / Not Sure Yet' : 'Lainnya / Belum Yakin' }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Row 4: Budget + Timeline -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-unit-md">
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Budget Range' : 'Rentang Anggaran' }}</label>
+                                    <select
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
+                                        <option>{{ app()->getLocale() === 'en' ? '< Rp 50 Million' : '< Rp 50 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 50 - 200 Million' : 'Rp 50 - 200 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 200 - 500 Million' : 'Rp 200 - 500 Juta' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Rp 500 Million - 1 Billion' : 'Rp 500 Juta - 1 Miliar' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? '> Rp 1 Billion' : '> Rp 1 Miliar' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? 'Not Sure Yet' : 'Belum Yakin' }}</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Timeline' : 'Lini Masa' }}</label>
+                                    <select
+                                        class="w-full border-outline-variant rounded p-3 form-input-focus bg-surface-container-lowest">
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'ASAP (Within 1 mo)' : 'Secepatnya (Dalam 1 bln)' }}
+                                        </option>
+                                        <option>{{ app()->getLocale() === 'en' ? '1-3 Months' : '1-3 Bulan' }}</option>
+                                        <option>{{ app()->getLocale() === 'en' ? '3-6 Months' : '3-6 Bulan' }}</option>
+                                        <option>
+                                            {{ app()->getLocale() === 'en' ? 'Ongoing partnership' : 'Kerjasama Berkelanjutan' }}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Row 5: Message -->
+                            <div class="space-y-1">
+                                <label
+                                    class="font-label-sm text-on-surface-variant uppercase">{{ app()->getLocale() === 'en' ? 'Message / Project Details' : 'Pesan / Detail Proyek' }}</label>
+                                <textarea class="w-full border-outline-variant rounded p-3 min-h-[120px] form-input-focus bg-surface-container-lowest"
+                                    placeholder="{{ app()->getLocale() === 'en' ? 'Tell us about your technical challenges...' : 'Ceritakan tentang tantangan teknis Anda...' }}"></textarea>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="pt-unit-md">
+                                <button
+                                    class="bg-primary text-white px-8 py-4 rounded-[20px] font-button text-button uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
+                                    type="submit">
+                                    {{ app()->getLocale() === 'en' ? 'Submit Inquiry' : 'Kirim Pertanyaan' }}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Badge Section -->
+        @include('partials.partner-badge')
+
+    </main>
+
+    <!-- Footer -->
+    @include('partials.footer')
+    @include('partials.lenis-scroll')
+
+    <!--
+      ========================================================
+      JAVASCRIPT
+      ========================================================
+      - Contact form handler: collects all field values,
+        serializes them, and opens mailto: link.
+      - Scroll header handler: shrinks navbar on scroll.
+    -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const dateInput = document.getElementById('selectedDateInput');
@@ -308,6 +667,39 @@
                 let month = String(d.getMonth() + 1).padStart(2, '0');
                 let day = String(d.getDate()).padStart(2, '0');
                 return `${year}-${month}-${day}`;
+            const btn = f.querySelector('button');
+            const originalText = btn.innerHTML;
+            const isEn = window.location.pathname.startsWith('/en');
+            btn.innerHTML = isEn ? 'Opening Email...' : 'Membuka Email...';
+            btn.disabled = true;
+
+            const subjectText = isEn ? 'Project Inquiry | Nakala Digital' : 'Pertanyaan Proyek | Nakala Digital';
+            const subject = encodeURIComponent(subjectText);
+            const body = encodeURIComponent(
+                Object.entries(data)
+                .filter(([k, v]) => v)
+                .map(([k, v]) => `${k}: ${v}`)
+                .join('\n')
+            );
+            window.location.href = `mailto:contact@nakala.digital?subject=${subject}&body=${body}`;
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 3000);
+        });
+
+        /*
+         * Scroll header: toggle shadow & height on scroll > 50px.
+         */
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('py-2', 'h-16');
+                header.classList.add('h-20');
             }
 
             function renderCalendar() {
@@ -437,3 +829,4 @@
 </body>
 
 </html>
+

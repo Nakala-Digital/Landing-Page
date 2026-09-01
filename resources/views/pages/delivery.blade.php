@@ -208,19 +208,19 @@
                         </div>
                         <h1
                             class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-white mb-unit-md">
-                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control.' : 'Agile delivery dengan quality control yang jelas' }}
+                            {{ app()->getLocale() === 'en' ? 'Agile delivery with clear quality control' : 'Agile delivery dengan quality control yang jelas' }}
                         </h1>
-                        <p class="font-body-lg text-body-lg text-white text-outline-variant mb-unit-lg max-w-xl">
+                        <p class="font-body-lg text-body-lg text-white/80 mb-unit-lg max-w-xl">
                             {{ app()->getLocale() === 'en'
                                 ? 'Our systematic approach bridges local responsiveness with regional quality standards, ensuring every technical milestone is backed by rigorous QA governance.'
                                 : 'Pendekatan sistematis kami menghubungkan respons lokal dengan standar kualitas regional, memastikan setiap milestone teknis didukung tata kelola QA yang ketat.' }}
                         </p>
                         <div class="flex flex-wrap gap-4">
-                            <button
-                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-lg flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                            <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                                class="bg-primary-container text-on-primary-container font-button text-button px-unit-lg py-4 rounded-[20px] flex items-center gap-2 hover:gap-3 transition-all duration-300">
                                 {{ app()->getLocale() === 'en' ? 'View Methodology' : 'Lihat Metodologi' }} <span
                                     class="material-symbols-outlined">arrow_forward</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="hidden lg:block relative">
@@ -235,7 +235,7 @@
         </section>
         <!-- Delivery Approach: End-to-End Lifecycle -->
         <section class="py-unit-xl bg-surface" id="delivery-flow">
-            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
                 <div class="mb-unit-lg text-center max-w-2xl mx-auto">
                     <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">Delivery
                         Approach</span>
@@ -589,6 +589,7 @@
     </main>
     <!-- Footer -->
     @include('partials.footer')
+    @include('partials.lenis-scroll')
     <script>
         // Subtle scroll animation for header
         window.addEventListener('scroll', () => {
@@ -615,3 +616,4 @@
 </body>
 
 </html>
+

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="{{ app()->getLocale() }}">
 
+<html lang="{{ app()->getLocale() }}">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -227,6 +229,27 @@
                 </div>
                 <img src="{{ asset('assets/hero_insights.png') }}" alt="Insights Digital Platform Illustration"
                     class="w-full h-full object-cover object-left-top scale-[1.02] origin-top-left" />
+
+        <!-- Hero -->
+        <section class="relative min-h-[300px] md:aspect-[2560/941] flex items-center overflow-hidden bg-on-background border-b border-outline-variant">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/zhafrannajib31-cmyk/Assets/refs/heads/main/SOLUTION%20HIGHLIGHT%20ND.png" referrerpolicy="no-referrer" />
+            </div>
+            <div class="relative z-10 px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto w-full">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1.5 rounded-full font-label-sm font-[600] text-[15px] uppercase tracking-widest mb-unit-md">
+                        <span class="material-symbols-outlined text-[16px]">bolt</span>
+                        {{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Solution Highlight' }}
+                    </div>
+                    <h1 class="font-headline-h1-mobile md:font-headline-h1 text-headline-h1-mobile md:text-headline-h1 text-on-background max-w-3xl mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Insights & Thought Leadership' : 'Insight & Pemikiran' }}
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        {{ app()->getLocale() === 'en'
+                            ? 'Perspectives on software excellence, AI adoption, QA governance, and digital transformation from the Nakala Digital team.'
+                            : 'Perspektif tentang keunggulan software, adopsi AI, tata kelola QA, dan transformasi digital dari tim Nakala Digital.' }}
+                    </p>
+                </div>
             </div>
 
             <!-- KONTEN UTAMA TEKS -->
@@ -411,6 +434,109 @@
                                         {{ $feat['desc'] }}
                                     </p>
                                 </div>
+        <!-- Draft Topics Grid -->
+        <section class="py-unit-xl bg-surface-container-low">
+            <div class="px-margin-mobile md:px-8 lg:px-margin-desktop max-w-container-max mx-auto">
+                <div class="mb-unit-xl max-w-3xl">
+                    <span
+                        class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">{{ app()->getLocale() === 'en' ? 'Solution Highlight' : 'Sorotan Solusi' }}</span>
+                    <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
+                        {{ app()->getLocale() === 'en' ? 'Explore by Topic' : 'Jelajahi berdasarkan Topik' }}
+                    </h2>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="mb-unit-lg flex justify-start md:justify-end">
+                    <div class="relative w-full md:w-64" data-dropdown="category-filter">
+                        <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
+                            class="w-full flex items-center justify-between bg-white border border-outline-variant text-on-surface-variant font-button text-sm px-4 py-3 rounded-[20px] focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer shadow-sm">
+                            <span id="selected-category-label">{{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}</span>
+                            <span class="material-symbols-outlined text-base transition-transform" data-chevron>expand_more</span>
+                        </button>
+                        <div data-dropdown-menu role="menu"
+                            class="absolute z-50 top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2 
+                                max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out">
+                            
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="all">
+                                {{ app()->getLocale() === 'en' ? 'All Topics' : 'Semua Topik' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="event">
+                                {{ app()->getLocale() === 'en' ? 'Event' : 'Acara' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="administration">
+                                {{ app()->getLocale() === 'en' ? 'Administration' : 'Administrasi' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="economy">
+                                {{ app()->getLocale() === 'en' ? 'Economy' : 'Ekonomi' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="project">
+                                {{ app()->getLocale() === 'en' ? 'Project' : 'Proyek' }}
+                            </button>
+                            <button class="category-option w-full flex items-center px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm" data-filter="internship">
+                                {{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Topic 0a: EventGate (Konser.com) -->
+                    <div data-category="event"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="EventGate digital ticketing and event management platform asset preview."
+                                src="{{ asset('assets/eventgate-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Event Technology' : 'Teknologi Event' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'EventGate: One Platform for Every Event Need' : 'EventGate: Semua Kebutuhan Acara dalam Satu Platform' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Platform by Konser.com centralising event discovery, digital ticketing, and QR check-in.'
+                                    : 'Platform dari Konser.com untuk pencarian event, tiket digital, dan check-in QR terpusat.' }}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Topic 0b: WilayahFlow -->
+                    <div data-category="administration"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="WilayahFlow administration and reporting platform asset preview."
+                                src="{{ asset('assets/wilayahflow-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Regional Administration' : 'Administrasi Wilayah' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'WilayahFlow: Tidying Up RT/RW Reporting' : 'WilayahFlow: Merapikan Pelaporan RT/RW' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Reporting and administration assistant for RT/RW with automatic recaps and digital archiving.'
+                                    : 'Asisten pelaporan dan administrasi RT/RW dengan rekap otomatis dan arsip digital.' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Topic 0c: DesaHub -->
+                    <div data-category="economy"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
                             </div>
 
                             <!-- Button Link -->
@@ -420,6 +546,12 @@
                                     <span>{{ $isEn ? 'Read Article' : 'Baca Artikel' }}</span>
                                     <span class="material-symbols-outlined text-xs">chevron_right</span>
                                 </a>
+                    <!-- Kick Off Al Azhar Syifa Budi Parahyangan -->
+                    <div data-category="project"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
                             </div>
                         </div>
                     @endforeach
@@ -461,6 +593,29 @@
                         <div
                             class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-slate-400">
                             <span class="material-symbols-outlined text-sm font-bold">chevron_right</span>
+                    <!-- Kick Off Universitas Widyatama -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
+                            </div>
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Kick Off Universitas Widyatama collaborative project launch preview."
+                                src="{{ asset('assets/widyatama-2.png') }}" />
+                        </div>
+                        <div class="p-unit-md">
+                            <span
+                                class="text-primary font-label-sm text-label-sm uppercase">{{ app()->getLocale() === 'en' ? 'Internship' : 'Magang' }}</span>
+                            <h3
+                                class="font-headline-h3 text-headline-h3 mt-unit-sm mb-unit-sm group-hover:text-primary transition-colors">
+                                {{ app()->getLocale() === 'en' ? 'Kick Off Universitas Widyatama' : 'Kick Off Universitas Widyatama' }}
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                {{ app()->getLocale() === 'en'
+                                    ? 'Collaboration and implementation of internship programs for students from Universitas Widyatama.'
+                                    : 'Kolaborasi dan pelaksanaan program magang untuk mahasiswa dari Universitas Widyatama.' }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -489,6 +644,12 @@
                                     <p class="text-slate-500 text-xs leading-relaxed line-clamp-3" x-text="item.desc">
                                     </p>
                                 </div>
+                    <!-- Kick Off Universitas Komputer (Unikom) -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
                             </div>
 
                             <div class="px-6 pb-6 pt-2 flex justify-end">
@@ -498,6 +659,12 @@
                                         x-text="item.category === 'magang' ? '{{ app()->getLocale() === 'en' ? 'View Details' : 'Lihat Detail' }}' : '{{ app()->getLocale() === 'en' ? 'Read More' : 'Baca Selengkapnya' }}'"></span>
                                     <span class="material-symbols-outlined text-xs">chevron_right</span>
                                 </a>
+                    <!-- Kick Off Polban -->
+                    <div data-category="internship"
+                        class="bg-white border border-outline-variant rounded-[20px] overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="h-48 w-full relative overflow-hidden bg-surface-container">
+                            <div
+                                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-10">
                             </div>
                         </div>
                     </template>
@@ -537,6 +704,16 @@
                     </button>
                 </div>
 
+                <!-- Pagination UI -->
+                <div class="mt-12 flex items-center justify-center gap-4">
+                    <button id="prev-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                    </button>
+                    <div id="page-numbers" class="flex gap-3"></div>
+                    <button id="next-page" class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -555,11 +732,107 @@
                     class="inline-block bg-electric-cyan text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider shadow-md hover:bg-cyan-600 transition-all hover:scale-105 active:scale-95">
                     {{ app()->getLocale() === 'en' ? 'Discuss Your Project' : 'Diskusikan Proyek Anda' }}
                 </a>
+                <div class="pt-unit-md">
+                    <a href="{{ route('contact' . (app()->getLocale() === 'en' ? '.en' : '')) }}"
+                        class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-12 py-6 rounded-[20px] font-button text-xl uppercase tracking-widest shadow-xl hover:scale-105 transition-transform active:scale-100">
+                        {{ app()->getLocale() === 'en' ? 'Free Consultation' : 'Konsultasi Gratis' }}
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     @include('partials.footer')
+    @include('partials.partner-badge')
+    @include('partials.footer')
+    @include('partials.lenis-scroll')
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header.fixed');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.remove('shadow-md', 'h-16');
+                header.classList.add('h-20');
+            }
+        });
+
+        const perPage = 6;
+        const cards = document.querySelectorAll('[data-category]');
+        let currentFilter = 'all';
+
+        // Pagination & filter
+        function filterAndPaginate() {
+            const filtered = [];
+            cards.forEach(c => {
+                if (currentFilter === 'all' || c.dataset.category === currentFilter) {
+                    filtered.push(c);
+                }
+            });
+
+            const totalPages = Math.ceil(filtered.length / perPage) || 1;
+            if (window.currentPage === undefined) window.currentPage = 1;
+            if (window.currentPage > totalPages) window.currentPage = totalPages;
+
+            cards.forEach(c => {
+                c.style.display = 'none';
+            });
+            const start = (window.currentPage - 1) * perPage;
+            filtered.slice(start, start + perPage).forEach(c => {
+                c.style.display = 'block';
+            });
+
+            document.getElementById('prev-page').classList.toggle('disabled', window.currentPage === 1);
+            document.getElementById('next-page').classList.toggle('disabled', window.currentPage === totalPages);
+
+            const numbers = document.getElementById('page-numbers');
+            numbers.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const span = document.createElement('span');
+                span.textContent = i;
+                span.className = 'font-body-md text-body-md cursor-pointer hover:underline select-none ' + (i === window
+                    .currentPage ? 'font-bold text-primary' : 'text-on-surface-variant');
+                span.addEventListener('click', function() {
+                    window.currentPage = i;
+                    filterAndPaginate();
+                });
+                numbers.appendChild(span);
+            }
+        }
+
+        const categoryOptions = document.querySelectorAll('.category-option');
+        categoryOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                currentFilter = this.dataset.filter;
+                document.getElementById('selected-category-label').innerText = this.innerText;
+                const dropdownContainer = this.closest('[data-dropdown]');
+                if (dropdownContainer && typeof closeDropdown === 'function') {
+                    closeDropdown(dropdownContainer);
+                }
+                window.currentPage = 1;
+                filterAndPaginate();
+            });
+        });
+
+        document.getElementById('prev-page').addEventListener('click', function() {
+            if (window.currentPage > 1) {
+                window.currentPage--;
+                filterAndPaginate();
+            }
+        });
+
+        document.getElementById('next-page').addEventListener('click', function() {
+            const count = [...cards].filter(c => currentFilter === 'all' || c.dataset.category === currentFilter).length;
+            if (window.currentPage < Math.ceil(count / perPage)) {
+                window.currentPage++;
+                filterAndPaginate();
+            }
+        });
+
+        filterAndPaginate();
+    </script>
 </body>
 
 </html>
+
