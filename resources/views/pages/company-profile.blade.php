@@ -173,7 +173,7 @@
             -webkit-mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
             mask-image: radial-gradient(ellipse 85% 65% at 30% 25%, black 30%, transparent 85%);
         }
-        
+
         .hero-orb {
             animation: hero-orb-float 14s ease-in-out infinite;
         }
@@ -299,7 +299,7 @@
                 </div>
                 <div class="relative mt-unit-lg md:mt-0 w-full h-[400px] flex items-center justify-center group" id="premium-parallax-container" style="perspective: 1200px;">
                     <div class="absolute -top-10 -right-10 w-72 h-72 bg-primary-fixed opacity-30 rounded-full blur-[80px] transition-all duration-700 group-hover:opacity-60 group-hover:scale-110"></div>
-                    
+
                     <div class="relative z-10 w-full h-full animate-[float_6s_ease-in-out_infinite]">
                         <img id="interactive-profile-img" alt="Digital Partnership Globe"
                             class="rounded-3xl shadow-2xl border border-outline-variant/50 object-cover w-full h-full transition-shadow duration-300 group-hover:shadow-[0_20px_60px_-15px_rgba(18,174,208,0.5)]"
@@ -324,13 +324,15 @@
 
                 <!-- Vision -->
                 <div
-                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-[20px] flex flex-col justify-between border-t-4 border-primary-fixed">
+                    class="md:col-span-4 bg-primary text-on-primary p-unit-lg rounded-[20px] flex flex-col justify-between">
                     <div class="space-y-unit-md">
-                        <span class="material-symbols-outlined text-4xl"
-                            style="font-variation-settings: 'FILL' 1;">visibility</span>
-                        <h3 class="font-headline-h3 text-headline-h3">
-                            {{ app()->getLocale() === 'en' ? 'Our Vision' : 'Visi Kami' }}
-                        </h3>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-3xl"
+                                style="font-variation-settings: 'FILL' 0;">visibility</span>
+                            <h3 class="font-headline-h3 text-headline-h3">
+                                {{ app()->getLocale() === 'en' ? 'Our Vision' : 'Visi Kami' }}
+                            </h3>
+                        </div>
                         <p class="font-body-md text-body-md opacity-90">
                             @if (app()->getLocale() === 'en')
                                 To become a strategic technology partner that delivers
@@ -346,50 +348,49 @@
                 </div>
 
                 <!-- Mission Points -->
-                <div class="md:col-span-8 space-y-unit-md">
-                    <h3 class="font-headline-h3 text-headline-h3 text-on-surface">
+                <div class="md:col-span-8 bg-on-secondary-fixed text-surface rounded-[20px] p-unit-lg flex flex-col">
+                    <h3 class="font-headline-h3 text-headline-h3 text-white font-semibold pl-10 mb-unit-sm">
                         {{ app()->getLocale() === 'en' ? 'Our Mission' : 'Misi Kami' }}
                     </h3>
-                    <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-[20px]">
-                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
-                        <p class="text-on-surface-variant text-body-md">
+                    <div class="flex gap-unit-md items-start py-unit-sm">
+                        <span class="material-symbols-outlined text-tertiary shrink-0">arrow_forward</span>
+                        <p class="text-surface text-body-md flex-1">
                             {{ app()->getLocale() === 'en'
                                 ? 'Deliver solutions with strong governance, Agile/Scrum delivery, QA discipline, and transparent communication.'
                                 : 'Menghadirkan solusi dengan tata kelola yang kuat, delivery Agile/Scrum, disiplin QA, dan komunikasi yang transparan.' }}
                         </p>
                     </div>
-                    <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-[20px]">
-                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
-                        <p class="text-on-surface-variant text-body-md">
+                    <div class="border-t-2 border-[#526C9C]"></div>
+                    <div class="flex gap-unit-md items-start py-unit-sm">
+                        <span class="material-symbols-outlined text-tertiary shrink-0">arrow_forward</span>
+                        <p class="text-surface text-body-md flex-1">
                             {{ app()->getLocale() === 'en'
                                 ? 'Build meaningful digital products that solve real operational and business pain points.'
                                 : 'Membangun produk digital bermakna yang menyelesaikan masalah operasional dan bisnis yang nyata.' }}
                         </p>
                     </div>
-                    <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-[20px]">
-                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
-                        <p class="text-on-surface-variant text-body-md">
+                    <div class="border-t-2 border-[#526C9C]"></div>
+                    <div class="flex gap-unit-md items-start py-unit-sm">
+                        <span class="material-symbols-outlined text-tertiary shrink-0">arrow_forward</span>
+                        <p class="text-surface text-body-md flex-1">
                             {{ app()->getLocale() === 'en'
                                 ? 'Enable AI-powered automation and data-driven workflows for measurable business impact.'
                                 : 'Mendorong otomasi berbasis AI dan workflow berbasis data untuk dampak bisnis yang terukur.' }}
                         </p>
                     </div>
-                    <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-[20px]">
-                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
-                        <p class="text-on-surface-variant text-body-md">
+                    <div class="border-t-2 border-[#526C9C]"></div>
+                    <div class="flex gap-unit-md items-start py-unit-sm">
+                        <span class="material-symbols-outlined text-tertiary shrink-0">arrow_forward</span>
+                        <p class="text-surface text-body-md flex-1">
                             {{ app()->getLocale() === 'en'
                                 ? 'Create long-term partnerships with clients, partners, and technology ecosystems.'
                                 : 'Menciptakan kemitraan jangka panjang dengan klien, partner, dan ekosistem teknologi.' }}
                         </p>
                     </div>
-                    <div
-                        class="bg-surface-container-low p-unit-md border border-outline-variant hover:border-primary transition-colors flex gap-unit-md rounded-[20px]">
-                        <span class="material-symbols-outlined text-primary shrink-0">arrow_forward</span>
-                        <p class="text-on-surface-variant text-body-md">
+                    <div class="border-t-2 border-[#526C9C]"></div>
+                    <div class="flex gap-unit-md items-start py-unit-sm">
+                        <span class="material-symbols-outlined text-tertiary shrink-0">arrow_forward</span>
+                        <p class="text-surface text-body-md flex-1">
                             {{ app()->getLocale() === 'en'
                                 ? 'Grow people, capability, and sustainable digital maturity across organizations.'
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
@@ -1248,16 +1249,16 @@
         if (profileImg && profileContainer) {
             profileContainer.addEventListener('mousemove', (e) => {
                 const rect = profileContainer.getBoundingClientRect();
-                
+
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
+
                 const rotateX = ((y - centerY) / centerY) * -12;
                 const rotateY = ((x - centerX) / centerX) * 12;
-                
+
                 profileImg.style.transform = `scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
                 profileImg.style.transition = 'none';
             });
@@ -1291,7 +1292,7 @@
         // Select specific elements to animate, NOT the giant wrapper sections
         const revealElements = document.querySelectorAll(
             '#vision-mission .bg-primary, ' +
-            '#vision-mission .bg-surface-container-low, ' +
+            '#vision-mission .bg-on-secondary-fixed, ' +
             '#why-nakala .reason-card, ' +
             '#why-nakala .mb-unit-lg, ' +
             '#team .grid > div, ' +
@@ -1299,7 +1300,7 @@
             '#methodology .flex-col, ' +
             '.cta-banner'
         );
-        
+
         // Add the base class to them
         revealElements.forEach(el => {
             el.classList.add('reveal-on-scroll');

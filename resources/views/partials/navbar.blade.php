@@ -3,6 +3,7 @@
     $localeSuffix = $locale === 'en' ? '.en' : '';
 
     $navItems = [
+        ['label' => $locale === 'en' ? 'Education Solutions' : 'Solusi Pendidikan', 'route' => 'solusi-pendidikan'],
         ['label' => $locale === 'en' ? 'Services & Solutions' : 'Layanan & Solusi', 'route' => 'services'],
         ['label' => $locale === 'en' ? 'Insights' : 'Insight', 'route' => 'insights'],
         ['label' => $locale === 'en' ? 'Portfolio' : 'Portofolio', 'route' => 'portfolio'],
@@ -106,10 +107,15 @@
                 @php
                     $active =
                         request()->routeIs($item['route'] . $localeSuffix) ||
-                        ($item['route'] === 'services' && request()->routeIs(
-                            'service' . $localeSuffix,
+                        ($item['route'] === 'solusi-pendidikan' && request()->routeIs(
+                            'solusi-pendidikan.detail' . $localeSuffix,
                             'solutions' . $localeSuffix,
                             'solutions.detail' . $localeSuffix
+                        )) ||
+                        ($item['route'] === 'services' && request()->routeIs(
+                            'service' . $localeSuffix,
+                            'services.detail' . $localeSuffix,
+                            'layanan.detail' . $localeSuffix
                         )) ||
                         ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                 @endphp
@@ -203,13 +209,17 @@
                         @php
                             $active =
                                 request()->routeIs($item['route'] . $localeSuffix) ||
-                                ($item['route'] === 'services' && request()->routeIs(
-                                    'service' . $localeSuffix,
+                                ($item['route'] === 'solusi-pendidikan' && request()->routeIs(
+                                    'solusi-pendidikan.detail' . $localeSuffix,
                                     'solutions' . $localeSuffix,
                                     'solutions.detail' . $localeSuffix
                                 )) ||
-                                ($item['route'] === 'insights' &&
-                                    request()->routeIs('insights.detail' . $localeSuffix));
+                                ($item['route'] === 'services' && request()->routeIs(
+                                    'service' . $localeSuffix,
+                                    'services.detail' . $localeSuffix,
+                                    'layanan.detail' . $localeSuffix
+                                )) ||
+                                ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                         @endphp
                         <a class="block rounded-[20px] px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
                             href="{{ route($item['route'] . $localeSuffix) }}">
