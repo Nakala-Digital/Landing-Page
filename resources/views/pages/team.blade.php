@@ -209,6 +209,44 @@
                         : 'Setiap proyek dipimpin oleh Nakala Digital sebagai tim utama yang akuntabel dan berhadapan langsung dengan klien. Mitra strategis kami memperkuat keyakinan di belakang layar tanpa mengubah siapa yang memegang relasi utama.' }}
                 </p>
             </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                @foreach ($teamMembers as $member)
+                    <div
+                        class="group bg-surface-container-lowest border border-primary rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                        <div class="aspect-square relative overflow-hidden border-b-2 border-primary">
+                            @if ($member['photo'])
+                                <img src="{{ $member['photo'] }}" alt="{{ $member['name'] }}" loading="lazy"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            @else
+                                <div
+                                    class="flex h-full w-full items-center justify-center bg-surface-container-low text-primary">
+                                    <div
+                                        class="flex h-24 w-24 items-center justify-center rounded-full border border-outline-variant bg-surface-container-lowest">
+                                        <span class="material-symbols-outlined text-5xl">person</span>
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="p-unit-lg">
+                            <p class="text-primary font-label-sm text-label-sm uppercase mb-unit-xs tracking-widest">
+                                {{ app()->getLocale() === 'en' ? $member['role_en'] : $member['role_id'] }}
+                            </p>
+                            <h3 class="font-headline-h3 text-headline-h3 mb-unit-md text-on-background">
+                                {{ $member['name'] }}
+                            </h3>
+                            <div class="space-y-unit-sm">
+                                @foreach ($member['capabilities'] as $capability)
+                                    <div class="flex items-center gap-unit-sm">
+                                        <span
+                                            class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-primary text-primary">
+                                            <span
+                                                class="material-symbols-outlined text-[14px]">{{ $capability['icon'] }}</span>
+                                        </span>
+                                        <span class="text-on-surface-variant font-body-md text-body-md">
+                                            {{ app()->getLocale() === 'en' ? $capability['label_en'] : $capability['label_id'] }}
+                                        </span>
+                                    </div>
+                                @endforeach
             <div class="flex flex-wrap justify-center gap-gutter">
 
                 <!-- CEO -->
@@ -282,7 +320,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </section>
 

@@ -415,7 +415,6 @@
             filter: grayscale(0%) !important;
             opacity: 1 !important;
         }
-
     </style>
 
     <style>
@@ -842,6 +841,8 @@
                 startAutoPlay();
             });
         })();
+
+        // Hero Section — animated / interactive IT network background.
     
         // Hero Section Ã¢â‚¬â€ animated / interactive IT network background.
         // Lightweight canvas particle-network (represents connectivity, data & AI)
@@ -1137,19 +1138,19 @@
 
         // carousel
         document.addEventListener('DOMContentLoaded', () => {
-        const swiper = new Swiper('.heroSwiper', {
-            loop: true,
-            className: 'swiper-container',
-            slidesPerView: 'auto',       // Membuat lebar slide mengikuti class CSS (!w-[75%])
-            centeredSlides: true,        // Slide aktif otomatis berada di tengah frame
-            spaceBetween: 20,            // Jarak antar slide gambar
-            grabCursor: true,            // Kursor tangan saat di-drag
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            const swiper = new Swiper('.heroSwiper', {
+                loop: true,
+                className: 'swiper-container',
+                slidesPerView: 'auto', // Membuat lebar slide mengikuti class CSS (!w-[75%])
+                centeredSlides: true, // Slide aktif otomatis berada di tengah frame
+                spaceBetween: 20, // Jarak antar slide gambar
+                grabCursor: true, // Kursor tangan saat di-drag
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+            });
         });
-    });
     </script>
 </body>
 

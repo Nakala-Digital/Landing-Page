@@ -252,6 +252,10 @@
                                 <strong>professional, meaningful, and impactful</strong> digital solutions for
                                 organizational growth in Indonesia and the regional market.
                             @else
+                                Menjadi mitra teknologi strategis yang menghadirkan solusi digital
+                                <strong>profesional, bermakna, dan berdampak nyata</strong> bagi pertumbuhan organisasi
+                                di
+                                Indonesia dan pasar regional.
                                 Menjadi mitra teknologi strategis yang menghasilkan solusi digital
                                 <strong>profesional, bermakna, dan berdampak</strong> bagi pertumbuhan organisasi di
                                 Indonesia serta pasar regional.
@@ -310,6 +314,87 @@
                                 : 'Menumbuhkan SDM, kapabilitas, dan kematangan digital yang berkelanjutan di seluruh organisasi.' }}
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- Philosophy Cards Section -->
+        <section class="py-unit-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="mb-unit-lg text-center max-w-3xl mx-auto">
+                <span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-unit-sm block">
+                    {{ app()->getLocale() === 'en' ? 'Core Values' : 'Nilai Inti' }}
+                </span>
+                <h2 class="font-headline-h2 text-headline-h2 text-on-surface">
+                    {{ app()->getLocale() === 'en' ? 'Philosophy' : 'Filosofi' }}
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mt-unit-sm">
+                    {{ app()->getLocale() === 'en'
+                        ? 'We believe successful digital transformation is built through professional execution, the right solutions, and sustainable impact.'
+                        : 'Kami percaya bahwa keberhasilan transformasi digital dibangun melalui eksekusi yang profesional, solusi yang tepat, dan dampak yang berkelanjutan.' }}
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Card 1: Foundation -->
+                <div
+                    class="bg-midnight-navy text-on-primary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-white mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Foundation' : 'Foundation' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-white/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" src="{{ asset('assets/icon-1.svg') }}"
+                            alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Professional Delivery' : 'Professional Delivery' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-white/80 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We work with a structured, transparent, and on-time process to make sure every project runs smoothly and meets expectations.'
+                            : 'Kami bekerja dengan proses yang terstruktur, transparan, dan tepat waktu untuk memastikan setiap proyek berjalan dengan baik dan sesuai harapan.' }}
+                    </p>
+                </div>
+                <!-- Card 2: Purpose -->
+                <div
+                    class="bg-electric-cyan text-on-primary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-white mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Purpose' : 'Purpose' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-white/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" src="{{ asset('assets/icon-2.svg') }}"
+                            alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Meaningful Solutions' : 'Meaningful Solutions' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-white/90 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We build digital solutions that fit real business needs, deliver real benefits, and help solve the challenges being faced.'
+                            : 'Kami menghadirkan solusi digital yang sesuai dengan kebutuhan bisnis, memberikan manfaat nyata, dan membantu menyelesaikan tantangan yang dihadapi.' }}
+                    </p>
+                </div>
+                <!-- Card 3: Outcome -->
+                <div
+                    class="bg-impact-lime text-on-tertiary p-unit-lg rounded-[24px] flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-midnight-navy mb-unit-md">
+                        {{ app()->getLocale() === 'en' ? 'Outcome' : 'Outcome' }}
+                    </span>
+                    <div
+                        class="w-16 h-16 rounded-[50%] border border-midnight-navy/50 flex items-center justify-center mb-unit-md">
+                        <img class="w-full h-full" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round" src="{{ asset('assets/icon-3.svg') }}"
+                            alt="Impact Icon" />
+                    </div>
+                    <h3 class="font-headline-h3 text-headline-h3 mb-unit-sm">
+                        {{ app()->getLocale() === 'en' ? 'Impactful Growth' : 'Impactful Growth' }}
+                    </h3>
+                    <p class="font-body-md text-body-md text-midnight-navy/80 leading-relaxed">
+                        {{ app()->getLocale() === 'en'
+                            ? 'We help businesses grow through technology solutions that deliver real results, improve efficiency, and create sustainable growth.'
+                            : 'Kami membantu bisnis berkembang melalui solusi teknologi yang memberikan hasil nyata, meningkatkan efisiensi, dan menciptakan pertumbuhan yang berkelanjutan.' }}
+                    </p>
                 </div>
             </div>
         </section>
