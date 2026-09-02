@@ -2,10 +2,14 @@
     $locale = app()->getLocale();
     $localeSuffix = $locale === 'en' ? '.en' : '';
 
-    $navItems = [
-        ['label' => $locale === 'en' ? 'Services & Solutions' : 'Layanan & Solusi', 'route' => 'services'],
+    $navItemsBefore = [
+        ['label' => $locale === 'en' ? 'Education Solutions' : 'Solusi Pendidikan', 'route' => 'services'],
+        ['label' => 'AI Assistant', 'route' => 'ai-assistant'],
+    ];
+
+    $navItemsAfter = [
         ['label' => $locale === 'en' ? 'Insights' : 'Insight', 'route' => 'insights'],
-        ['label' => $locale === 'en' ? 'Portfolio' : 'Portofolio', 'route' => 'portfolio'],
+        ['label' => $locale === 'en' ? 'Case Studies' : 'Studi Kasus', 'route' => 'portfolio'],
         ['label' => $locale === 'en' ? 'Contact' : 'Kontak', 'route' => 'contact'],
     ];
 
@@ -54,61 +58,45 @@
                 {{ $locale === 'en' ? 'Home' : 'Beranda' }}
             </a>
 
-            {{-- About Us Dropdown (Hover on Desktop) --}}
-            <div class="relative group" data-dropdown="about">
-                <div class="flex items-center gap-0.5 py-4 -my-4">
-                    <a href="{{ route('company-profile' . $localeSuffix) }}"
-                        class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
-                            {{ $isAboutActive
-                                ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full'
-                                : 'text-on-surface-variant hover:text-primary' }}">
-                        {{ $locale === 'en' ? 'About Us' : 'Tentang Kami' }}
-                    </a>
-                    <button aria-expanded="false" data-dropdown-trigger
-                        class="flex items-center justify-center w-5 h-5 text-on-surface-variant hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-base transition-transform group-hover:rotate-180"
-                            data-chevron>expand_more</span>
-                    </button>
-                </div>
-                {{-- Invisible bridge to prevent hover loss --}}
-                <div class="absolute top-full left-0 w-full h-4"></div>
-                <div data-dropdown-menu role="menu"
-                    class="absolute top-[calc(100%+0.5rem)] left-0 w-56 bg-white rounded-[20px] shadow-lg ring-1 ring-black/5 p-2
-                        max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out
-                        group-hover:max-h-screen group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto group-hover:overflow-visible">
-                    <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}" role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
-                        <span class="material-symbols-outlined text-lg text-primary shrink-0">visibility</span>
-                        {{ $locale === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}
-                    </a>
-                    <a href="{{ route('company-profile' . $localeSuffix) . '#why-nakala' }}" role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
-                        <span class="material-symbols-outlined text-lg text-primary shrink-0">star</span>
-                        {{ $locale === 'en' ? 'Why Nakala' : 'Mengapa Nakala' }}
-                    </a>
-                    <a href="{{ route('company-profile' . $localeSuffix) . '#team' }}" role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
-                        <span class="material-symbols-outlined text-lg text-primary shrink-0">groups</span>
-                        {{ $locale === 'en' ? 'Team' : 'Tim' }}
-                    </a>
-                    <a href="{{ route('company-profile' . $localeSuffix) . '#methodology' }}" role="menuitem"
-                        class="flex items-center gap-3 px-3 py-2.5 rounded-[20px] text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors font-button text-sm">
-                        <span class="material-symbols-outlined text-lg text-primary shrink-0">account_tree</span>
-                        {{ $locale === 'en' ? 'Methodology' : 'Metodologi' }}
-                    </a>
-                </div>
-            </div>
-
-            @foreach ($navItems as $item)
+            @foreach ($navItemsBefore as $item)
                 @php
+                    $url = isset($item['anchor'])
+                        ? route($item['route'] . $localeSuffix) . $item['anchor']
+                        : route($item['route'] . $localeSuffix);
                     $active =
-                        request()->routeIs($item['route'] . $localeSuffix) ||
                         ($item['route'] === 'services' &&
                             request()->routeIs(
+                                'services' . $localeSuffix,
                                 'service' . $localeSuffix,
                                 'solutions' . $localeSuffix,
                                 'solutions.detail' . $localeSuffix,
                             )) ||
+                        ($item['route'] === 'ai-assistant' &&
+                            request()->routeIs('ai-assistant' . $localeSuffix)) ||
+                        (isset($item['anchor']) && request()->routeIs('home' . $localeSuffix));
+                @endphp
+                <a class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
+                        {{ $active
+                            ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full'
+                            : 'text-on-surface-variant hover:text-primary' }}"
+                    href="{{ $url }}">
+                    {{ $item['label'] }}
+                </a>
+            @endforeach
+
+            {{-- About Us --}}
+            <a class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
+                    {{ $isAboutActive
+                        ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full'
+                        : 'text-on-surface-variant hover:text-primary' }}"
+                href="{{ route('company-profile' . $localeSuffix) }}">
+                {{ $locale === 'en' ? 'About Us' : 'Tentang Kami' }}
+            </a>
+
+            @foreach ($navItemsAfter as $item)
+                @php
+                    $active =
+                        request()->routeIs($item['route'] . $localeSuffix) ||
                         ($item['route'] === 'insights' && request()->routeIs('insights.detail' . $localeSuffix));
                 @endphp
                 <a class="relative whitespace-nowrap font-button text-button uppercase transition-colors pb-0.5
@@ -154,59 +142,39 @@
                         {{ $locale === 'en' ? 'Home' : 'Beranda' }}
                     </a>
 
-                    {{-- About Us (mobile sub-menu) --}}
-                    <div class="relative" data-dropdown="about-mobile">
-                        <div
-                            class="flex items-center justify-between rounded-[20px] px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors
-                            {{ $isAboutActive ? 'bg-primary/10 text-primary' : 'text-on-surface-variant' }}">
-                            <a href="{{ route('company-profile' . $localeSuffix) }}"
-                                class="flex-1 {{ $isAboutActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary' }}">
-                                {{ $locale === 'en' ? 'About Us' : 'Tentang Kami' }}
-                            </a>
-                            <button onclick="toggleDropdown(this)" aria-expanded="false" data-dropdown-trigger
-                                class="flex items-center justify-center w-6 h-6 text-on-surface-variant hover:text-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm transition-transform"
-                                    data-chevron>expand_more</span>
-                            </button>
-                        </div>
-                        <div data-dropdown-menu role="menu"
-                            class="ml-3 mt-1 space-y-1 border-l-2 border-primary/20 pl-2
-                                max-h-0 overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-out origin-top">
-                            <a href="{{ route('company-profile' . $localeSuffix) . '#vision-mission' }}"
-                                role="menuitem"
-                                class="flex items-center gap-3 rounded-[20px] px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
-                                <span class="material-symbols-outlined text-lg text-primary shrink-0">visibility</span>
-                                {{ $locale === 'en' ? 'Vision & Mission' : 'Visi & Misi' }}
-                            </a>
-                            <a href="{{ route('company-profile' . $localeSuffix) . '#why-nakala' }}" role="menuitem"
-                                class="flex items-center gap-3 rounded-[20px] px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
-                                <span class="material-symbols-outlined text-lg text-primary shrink-0">star</span>
-                                {{ $locale === 'en' ? 'Why Nakala' : 'Mengapa Nakala' }}
-                            </a>
-                            <a href="{{ route('company-profile' . $localeSuffix) . '#team' }}" role="menuitem"
-                                class="flex items-center gap-3 rounded-[20px] px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
-                                <span class="material-symbols-outlined text-lg text-primary shrink-0">groups</span>
-                                {{ $locale === 'en' ? 'Team' : 'Tim' }}
-                            </a>
-                            <a href="{{ route('company-profile' . $localeSuffix) . '#methodology' }}" role="menuitem"
-                                class="flex items-center gap-3 rounded-[20px] px-3 py-2 text-sm font-button transition-colors text-on-surface-variant hover:text-primary hover:bg-slate-50">
-                                <span
-                                    class="material-symbols-outlined text-lg text-primary shrink-0">account_tree</span>
-                                {{ $locale === 'en' ? 'Methodology' : 'Metodologi' }}
-                            </a>
-                        </div>
-                    </div>
-
-                    @foreach ($navItems as $item)
+                    @foreach ($navItemsBefore as $item)
                         @php
+                            $url = isset($item['anchor'])
+                                ? route($item['route'] . $localeSuffix) . $item['anchor']
+                                : route($item['route'] . $localeSuffix);
                             $active =
-                                request()->routeIs($item['route'] . $localeSuffix) ||
                                 ($item['route'] === 'services' &&
                                     request()->routeIs(
+                                        'services' . $localeSuffix,
                                         'service' . $localeSuffix,
                                         'solutions' . $localeSuffix,
                                         'solutions.detail' . $localeSuffix,
                                     )) ||
+                                ($item['route'] === 'ai-assistant' &&
+                                    request()->routeIs('ai-assistant' . $localeSuffix)) ||
+                                (isset($item['anchor']) && request()->routeIs('home' . $localeSuffix));
+                        @endphp
+                        <a class="block rounded-[20px] px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $active ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
+                            href="{{ $url }}">
+                            {{ $item['label'] }}
+                        </a>
+                    @endforeach
+
+                    {{-- About Us (mobile) --}}
+                    <a class="block rounded-[20px] px-4 py-2.5 font-button text-button uppercase tracking-wider transition-colors {{ $isAboutActive ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-slate-50 hover:text-primary' }}"
+                        href="{{ route('company-profile' . $localeSuffix) }}">
+                        {{ $locale === 'en' ? 'About Us' : 'Tentang Kami' }}
+                    </a>
+
+                    @foreach ($navItemsAfter as $item)
+                        @php
+                            $active =
+                                request()->routeIs($item['route'] . $localeSuffix) ||
                                 ($item['route'] === 'insights' &&
                                     request()->routeIs('insights.detail' . $localeSuffix));
                         @endphp

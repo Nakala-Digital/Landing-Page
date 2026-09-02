@@ -38,6 +38,9 @@ function registerCompanyProfileRoutes($suffix = '')
     Route::redirect('/team', $prefix . '/company-profile', 301)->name('team' . $suffix);
     Route::redirect('/team-leadership', $prefix . '/company-profile', 301)->name('team.leadership' . $suffix);
     Route::view('/faq', 'pages.faq')->name('faq' . $suffix);
+    Route::view('/ai-assistant', 'pages.ai-assistant')->name('ai-assistant' . $suffix);
+    Route::view('/sekolah', 'pages.school-detail')->name('sekolah' . $suffix);
+    Route::view('/perguruan-tinggi', 'pages.university-detail')->name('perguruan-tinggi' . $suffix);
     Route::view('/insights', 'pages.insights')->name('insights' . $suffix);
     Route::view('/contact', 'pages.contact')->name('contact' . $suffix);
 

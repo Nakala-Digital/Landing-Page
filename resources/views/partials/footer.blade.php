@@ -89,33 +89,33 @@
                         </a>
                     </li>
                     <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
-                            href="{{ route('about' . $localeSuffix) }}">
-                            <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
-                            {{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}
-                        </a>
-                    </li>
-                    <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
-                            href="{{ route('team' . $localeSuffix) }}">
-                            <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
-                            {{ app()->getLocale() === 'en' ? 'Team & Partnership' : 'Tim & Kemitraan' }}
-                        </a>
-                    </li>
-                    <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
                             href="{{ route('services' . $localeSuffix) }}">
                             <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
-                            {{ app()->getLocale() === 'en' ? 'Our Services' : 'Layanan Kami' }}
+                            {{ app()->getLocale() === 'en' ? 'Education Solutions' : 'Solusi Pendidikan' }}
                         </a>
                     </li>
                     <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
-                            href="{{ route('portfolio' . $localeSuffix) }}">
+                            href="{{ route('ai-assistant' . $localeSuffix) }}">
                             <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
-                            {{ app()->getLocale() === 'en' ? 'Project Portfolio' : 'Portofolio Projek' }}
+                            AI Assistant
+                        </a>
+                    </li>
+                    <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
+                            href="{{ route('company-profile' . $localeSuffix) }}">
+                            <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
+                            {{ app()->getLocale() === 'en' ? 'About Us' : 'Tentang Kami' }}
                         </a>
                     </li>
                     <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
                             href="{{ route('insights' . $localeSuffix) }}">
                             <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
                             {{ app()->getLocale() === 'en' ? 'Insights' : 'Insight' }}
+                        </a>
+                    </li>
+                    <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
+                            href="{{ route('portfolio' . $localeSuffix) }}">
+                            <span class="w-0 h-[1px] bg-[#12AED0] group-hover:w-3 transition-all duration-300"></span>
+                            {{ app()->getLocale() === 'en' ? 'Case Studies' : 'Studi Kasus' }}
                         </a>
                     </li>
                     <li><a class="font-body-md text-white/55 hover:text-[#12AED0] transition-colors duration-300 text-sm inline-flex items-center gap-2 group"
